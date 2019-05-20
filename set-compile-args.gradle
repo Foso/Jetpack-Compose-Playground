@@ -1,0 +1,11 @@
+/**
+ * this
+ */
+
+afterEvaluate {
+    project.tasks.findAll { it.name.matches("compile.*Kotlin") } forEach {
+        it.kotlinOptions.freeCompilerArgs += "-P"
+        it.kotlinOptions.freeCompilerArgs +=
+                "plugin:androidx.compose.plugins.kotlin:syntax=FCS"
+    }
+}
