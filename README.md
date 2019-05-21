@@ -16,6 +16,8 @@
 ## Introduction 🙋‍♂️
 This is an example project that is using an early alpha version of Jetpack Compose https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/
 
+> :information_source: Please be aware that Compose is still experimental and should not be used in a production application. 
+
 # 🏠 Architecture
 
 ## 🛠️ Built With
@@ -35,7 +37,7 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 
 ## ✍️ Feedback
 
-Feel free to send feedback on [Twitter](https://twitter.com/jklingenberg_) or [file an issue](https://github.com/foso/Jetpack-Compose-Playground/issues/new). Feature requests are always welcome.
+If you want to improve Compose, join the [Kotlin Slack](https://slack.kotlinlang.org) and the #compose channel or file a bug at https://issuetracker.google.com/issues?q=componentid:612128
 
 
 ## 📜 License
