@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.setContent
 import androidx.ui.core.CraneWrapper
-import de.jensklingenberg.jetpackcomposeplayground.rally.RallyApp
+
+import de.jensklingenberg.jetpackcomposeplayground.sample.MyApp
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContent {
             CraneWrapper {
 
-                    RallyApp()
+                    MyApp()
 
             }
         }
