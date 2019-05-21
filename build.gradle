@@ -9,9 +9,6 @@ buildscript {
             url "http://dl.bintray.com/kotlin/kotlin-eap"
         }
 
-        maven {
-            url "https://dl.bintray.com/kotlin/kotlin-dev/"
-        }
         mavenLocal()
         google()
         jcenter()
@@ -33,15 +30,11 @@ idea.module {
 
 allprojects {
     repositories {
-        mavenLocal()
-        maven {
-            url "http://dl.bintray.com/kotlin/kotlin-eap"
-        }
+
         maven {
             url "https://dl.bintray.com/kotlin/kotlin-dev/"
         }
         maven { url "$androidx_home/out/ui/build/support_repo/" }
-        maven { url "$androidx_home/prebuilts/androidx/external/" }
 
         mavenLocal()
         google()

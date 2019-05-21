@@ -34,6 +34,7 @@ import androidx.compose.Composable
 import androidx.compose.Model
 import androidx.compose.state
 import androidx.compose.unaryPlus
+import androidx.ui.core.CraneWrapper
 import androidx.ui.material.*
 import androidx.ui.painting.Color
 
@@ -50,44 +51,43 @@ private val customColor3 = Color(0xFF607D8B.toInt())
 
 @Composable
 fun SelectionsControlsDemo() {
+    CraneWrapper {
+        MaterialTheme {
+            val headerStyle = +themeTextStyle { h6 }
+            val padding = EdgeInsets(10.dp)
 
-    val headerStyle = +themeTextStyle { h6 }
-    val padding = EdgeInsets(10.dp)
-
-    Surface {
-        Padding(padding = padding) {
-            Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-                Text(text = "Checkbox", style = headerStyle)
+            Surface {
                 Padding(padding = padding) {
-                    CheckboxDemo()
-                }
-                Text(text = "Switch", style = headerStyle)
-                Padding(padding = padding) {
-                    SwitchDemo()
-                }
-                Text(text = "RadioButton", style = headerStyle)
-                Padding(padding = padding) {
-                    RadioButtonDemo()
-                }
-                Text(text = "Radio group :: Default usage", style = headerStyle)
-                Padding(padding = padding) {
-                    DefaultRadioGroup()
-                }
-                Text(text = "Radio group :: Custom usage", style = headerStyle)
-                Padding(padding = padding) {
-                    CustomRadioGroup()
+                    Column(crossAxisAlignment = CrossAxisAlignment.Start) {
+                        Text(text = "Checkbox", style = headerStyle)
+                        Padding(padding = padding) {
+                            CheckboxDemo()
+                        }
+                        Text(text = "Switch", style = headerStyle)
+                        Padding(padding = padding) {
+                            SwitchDemo()
+                        }
+                        Text(text = "RadioButton", style = headerStyle)
+                        Padding(padding = padding) {
+                            RadioButtonDemo()
+                        }
+                        Text(text = "Radio group :: Default usage", style = headerStyle)
+                        Padding(padding = padding) {
+                            DefaultRadioGroup()
+                        }
+                        Text(text = "Radio group :: Custom usage", style = headerStyle)
+                        Padding(padding = padding) {
+                            CustomRadioGroup()
+                        }
+                    }
                 }
             }
         }
     }
+
 }
 
-@Composable
-fun SelectionsControlPage(){
-    MaterialTheme {
-        SelectionsControlsDemo()
-    }
-}
+
 
 @Composable
 fun DefaultRadioGroup() {

@@ -37,7 +37,12 @@ import androidx.compose.ambient
 import androidx.compose.unaryPlus
 import androidx.ui.painting.Color
 
-// TODO: This is not integrated with the theme
+
+/**
+ * This Activity recreates the Rally Material Study from
+ * https://material.io/design/material-studies/rally.html
+ */
+
 internal val cardInternalColor = Color(0xFF33333D.toInt())
 
 /**
@@ -67,8 +72,7 @@ fun RallyAlertCard() {
                     }
                     inflexible {
                         // TODO: icons still don't work
-//                        <vectorResource res=context.resources
-//                            resId=androidx.ui.material.studies.R.drawable.sort_icon/>
+
                         TransparentButton(text = "Sort", onClick = { })
                     }
                 }

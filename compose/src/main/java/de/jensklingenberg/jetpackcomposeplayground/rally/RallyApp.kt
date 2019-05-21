@@ -18,14 +18,13 @@ package de.jensklingenberg.jetpackcomposeplayground.rally
 
 import androidx.ui.core.Text
 import androidx.ui.core.dp
-import androidx.ui.layout.Column
-import androidx.ui.layout.HeightSpacer
-import androidx.ui.layout.Padding
-import androidx.ui.layout.Row
 
 import androidx.ui.material.themeTextStyle
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
+import androidx.ui.core.CraneWrapper
+import androidx.ui.layout.*
+import de.jensklingenberg.jetpackcomposeplayground.ui.common.Scaffold
 
 /**
  * This Activity recreates the Rally Material Study from
@@ -34,11 +33,16 @@ import androidx.compose.unaryPlus
 
 @Composable
 fun RallyApp() {
-    RallyTheme {
-        Scaffold(appBar = { RallyAppBar() }) {
-            RallyBody()
+    CraneWrapper {
+        RallyTheme {
+            Scaffold(appBar = { RallyAppBar() }) {
+                VerticalScroller {
+                    RallyBody()
+                }
+            }
         }
     }
+
 }
 
 @Composable
@@ -46,11 +50,10 @@ fun RallyAppBar() {
     // TODO: Transform to tabs
     Row {
         // Icon()
-        Text(text = "Overview", style = +themeTextStyle{ h4 })
+        Text(text = "Overview", style = +themeTextStyle { h4 })
         // TODO: Other items
     }
 }
-
 
 
 @Composable

@@ -1,4 +1,5 @@
 package de.jensklingenberg.jetpackcomposeplayground.sample.buttondemo
+
 import android.util.Log
 import androidx.ui.core.Text
 import androidx.ui.core.dp
@@ -18,12 +19,14 @@ import androidx.ui.material.themeTextStyle
 
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
+import androidx.ui.core.CraneWrapper
 
 import androidx.ui.painting.Color
 
 @Composable
 fun ButtonDemo() {
     val onClick: () -> Unit = { Log.e("ButtonDemo", "onClick") }
+    CraneWrapper {
 
         MaterialTheme {
             Center {
@@ -34,7 +37,8 @@ fun ButtonDemo() {
                     Button(
                         onClick = onClick,
                         color = +themeColor { secondary },
-                        text = "SECONDARY COLOR")
+                        text = "SECONDARY COLOR"
+                    )
                     val outlinedShape = +withDensity {
                         RoundedRectangleBorder(
                             side = BorderSide(Color(0xFF888888.toInt())),
@@ -64,5 +68,5 @@ fun ButtonDemo() {
                 }
             }
         }
-
+    }
 }

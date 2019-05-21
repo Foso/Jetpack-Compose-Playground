@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.rally
+package de.jensklingenberg.jetpackcomposeplayground.ui.common
 
 import androidx.ui.layout.FlexColumn
 import androidx.ui.material.surface.Surface
@@ -37,7 +37,7 @@ fun Scaffold(appBar: @Composable() () -> Unit, @Children children: @Composable()
             appBar()
         }
         expanded(flex = 1.0f) {
-            Surface(color = +themeColor{ surface }) {
+            Surface(color = +themeColor { surface }) {
                 children()
             }
         }

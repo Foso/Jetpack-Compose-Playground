@@ -4,12 +4,9 @@ apply plugin: 'com.android.library'
 
 apply plugin: "kotlin-android"
 
-apply from: '../set-compile-args.gradle'
-
 
 repositories {
     maven { url "$androidx_home/out/ui/build/support_repo/" }
-    maven { url "$androidx_home/prebuilts/androidx/external/" }
     google()
     jcenter()
 }
@@ -32,6 +29,9 @@ android {
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
         kotlinOptions {
 //            useIR = true
+           freeCompilerArgs += "-P"
+            freeCompilerArgs +=
+                    "plugin:androidx.compose.plugins.kotlin:syntax=FCS"
         }
     }
 

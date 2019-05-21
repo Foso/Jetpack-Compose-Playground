@@ -34,53 +34,88 @@ val rallyYellow = Color(0xFFFFCF44.toInt())
 val rallyPurple = Color(0xFFB15DFF.toInt())
 val rallyBlue = Color(0xFF72DEFF.toInt())
 
+
+val materialBlue = Color.fromRGBO(33, 150, 243, 1f)
+
+/**
+ * This Activity recreates the Rally Material Study from
+ * https://material.io/design/material-studies/rally.html
+ */
+
+
 @Composable
 fun RallyTheme(@Children children: @Composable() () -> Unit) {
     val colors = MaterialColors(
-        primary = rallyGreen,
+        primary = rallyBlue,
         surface = Color(0xFF26282F.toInt()),
         onSurface = Color(0xFFFFFFFF.toInt())
     )
     val typography = MaterialTypography(
-        h1 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+        h1 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w100,
-            fontSize = 96f),
-        h2 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 96f
+        ),
+        h2 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w100,
-            fontSize = 60f),
-        h3 = TextStyle(fontFamily = FontFamily("Eczar"),
+            fontSize = 60f
+        ),
+        h3 = TextStyle(
+            fontFamily = FontFamily("Eczar"),
             fontWeight = FontWeight.w500,
-            fontSize = 48f),
-        h4 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 48f
+        ),
+        h4 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w700,
-            fontSize = 34f),
-        h5 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 34f
+        ),
+        h5 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w700,
-            fontSize = 24f),
-        h6 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 24f
+        ),
+        h6 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w700,
-            fontSize = 20f),
-        subtitle1 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 20f
+        ),
+        subtitle1 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w700,
-            fontSize = 16f),
-        subtitle2 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 16f
+        ),
+        subtitle2 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w500,
-            fontSize = 14f),
-        body1 = TextStyle(fontFamily = FontFamily("Eczar"),
+            fontSize = 14f
+        ),
+        body1 = TextStyle(
+            fontFamily = FontFamily("Eczar"),
             fontWeight = FontWeight.w700,
-            fontSize = 16f),
-        body2 = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 16f
+        ),
+        body2 = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w200,
-            fontSize = 14f),
-        button = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 14f
+        ),
+        button = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w800,
-            fontSize = 14f),
-        caption = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 14f
+        ),
+        caption = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w500,
-            fontSize = 12f),
-        overline = TextStyle(fontFamily = FontFamily("RobotoCondensed"),
+            fontSize = 12f
+        ),
+        overline = TextStyle(
+            fontFamily = FontFamily("RobotoCondensed"),
             fontWeight = FontWeight.w500,
-            fontSize = 10f)
+            fontSize = 10f
+        )
 
     )
     MaterialTheme(colors = colors, typography = typography) {
