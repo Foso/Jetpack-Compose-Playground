@@ -8,7 +8,7 @@
 
 > A Jetpack Compose Example App
 
-<p align="left">
+<p align="center">
     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/compose.png" height=500 />
  
 </p>
@@ -24,8 +24,14 @@ This is an example project that is using an early alpha version of Jetpack Compo
 
 
 ### Project Structure
+* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 1.0.0-alpha01 and the Compiler Plugin 1.0.0-alpha01
+I compiled this versions from the AndroidX git repo. Because Compose is still in early alpha stage, Google doesn't offer any binaries online. In the AndroidX repo, Compose is used with a special Kotlin compiler "1.3.30-compose-20190503", but i figured out, it is also working with the Kotlin compiler v1.3.40-eap-21. 
+
 * <kbd>app</kbd> - Base android project directory
-* <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains 
+* <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and 
+the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/) 
+Inside the MyComposeApp() you can change the demo page that should be opened
+
 
 ## ✍️ Feedback
 
