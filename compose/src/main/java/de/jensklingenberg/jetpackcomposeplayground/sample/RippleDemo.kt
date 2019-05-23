@@ -32,7 +32,8 @@ import androidx.ui.material.themeTextStyle
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.compose.composer
-import androidx.ui.painting.Color
+import androidx.ui.graphics.Color
+
 
 @Composable
 fun RippleDemo() {

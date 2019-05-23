@@ -16,8 +16,9 @@ import androidx.ui.material.themeTextStyle
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
+import androidx.ui.graphics.Color
 import androidx.ui.material.MaterialTheme
-import androidx.ui.painting.Color
+
 
 @Composable
 fun DividersDemo() {

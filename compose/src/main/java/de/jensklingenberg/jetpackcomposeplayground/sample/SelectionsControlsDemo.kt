@@ -35,8 +35,8 @@ import androidx.compose.Model
 import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
+import androidx.ui.graphics.Color
 import androidx.ui.material.*
-import androidx.ui.painting.Color
 
 @Model
 class CheckboxState(var value: ToggleableState) {

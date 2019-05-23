@@ -38,7 +38,7 @@ fun CounterDemo() {
                         Text(
                             text = "You have pushed the button this many times: " + counterState.value,
                             style = +themeTextStyle { h4 },
-                            textAlign = TextAlign.CENTER
+                            textAlign = TextAlign.Center
                         )
                     }
 

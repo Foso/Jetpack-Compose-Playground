@@ -35,7 +35,7 @@ import androidx.ui.material.themeTextStyle
 import androidx.compose.Composable
 import androidx.compose.ambient
 import androidx.compose.unaryPlus
-import androidx.ui.painting.Color
+import androidx.ui.graphics.Color
 
 
 /**

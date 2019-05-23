@@ -25,7 +25,7 @@ import androidx.ui.material.MaterialTypography
 import androidx.ui.painting.TextStyle
 import androidx.compose.Children
 import androidx.compose.Composable
-import androidx.ui.painting.Color
+import androidx.ui.graphics.Color
 
 val rallyGreen = Color(0xFF1EB980.toInt())
 val rallyDarkGreen = Color(0xFF045D56.toInt())
@@ -35,7 +35,7 @@ val rallyPurple = Color(0xFFB15DFF.toInt())
 val rallyBlue = Color(0xFF72DEFF.toInt())
 
 
-val materialBlue = Color.fromRGBO(33, 150, 243, 1f)
+val materialBlue = Color(0xFF2196F3.toInt())
 
 /**
  * This Activity recreates the Rally Material Study from
