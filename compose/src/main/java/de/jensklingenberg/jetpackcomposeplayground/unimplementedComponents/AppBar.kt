@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui.common
+package de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents
 
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
@@ -10,8 +10,7 @@ import androidx.ui.layout.Row
 import androidx.ui.material.surface.Surface
 import androidx.ui.material.themeTextStyle
 
-import de.jensklingenberg.jetpackcomposeplayground.rally.materialBlue
-import de.jensklingenberg.jetpackcomposeplayground.rally.rallyBlue
+import de.jensklingenberg.jetpackcomposeplayground.samples.rally.materialBlue
 
 @Composable
 fun AppBar(title: String = "") {

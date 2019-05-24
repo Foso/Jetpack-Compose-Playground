@@ -1,30 +1,28 @@
 package de.jensklingenberg.jetpackcomposeplayground
 
 import androidx.compose.Composable
-import androidx.ui.material.Colors
-import de.jensklingenberg.jetpackcomposeplayground.rally.RallyApp
-import de.jensklingenberg.jetpackcomposeplayground.sample.Counter
-import de.jensklingenberg.jetpackcomposeplayground.sample.RippleDemo
-import de.jensklingenberg.jetpackcomposeplayground.sample.SelectionsControlsDemo
-import de.jensklingenberg.jetpackcomposeplayground.sample.buttondemo.ButtonDemo
-import de.jensklingenberg.jetpackcomposeplayground.sample.dividersSpacers.DividersDemo
-import de.jensklingenberg.jetpackcomposeplayground.sample.text.SimpleComposable
-import de.jensklingenberg.jetpackcomposeplayground.ui.CounterDemo
+import de.jensklingenberg.jetpackcomposeplayground.samples.DividersDemo
+import de.jensklingenberg.jetpackcomposeplayground.samples.*
+import de.jensklingenberg.jetpackcomposeplayground.samples.ProgressIndicatorDemo
+import de.jensklingenberg.jetpackcomposeplayground.samples.rally.RallyApp
 
 @Composable
 fun MyComposeApp() {
+    // Change this value to browse the demos
     val page = 0
 
     when (page) {
         0 -> CounterDemo()
-        1 -> SimpleComposable()
+        1 -> TextDemo()
         2 -> ButtonDemo()
         3 -> RippleDemo()
         4 -> SelectionsControlsDemo()
         5 -> RallyApp()
-        6 -> Counter()
-        7-> DividersDemo()
+        6 -> CounterModelDemo()
+        7 -> DividersDemo()
+        8 -> ProgressIndicatorDemo()
     }
 
-
 }
+
+

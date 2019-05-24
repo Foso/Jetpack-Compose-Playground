@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.common
+package de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents
 
 import androidx.ui.layout.FlexColumn
 import androidx.ui.material.surface.Surface

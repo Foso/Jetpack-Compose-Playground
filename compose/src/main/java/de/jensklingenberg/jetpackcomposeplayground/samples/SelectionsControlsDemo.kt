@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.sample
+package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.ui.baseui.selection.ToggleableState
 import androidx.ui.baseui.selection.ToggleableState.Checked
@@ -29,13 +29,12 @@ import androidx.ui.layout.MainAxisSize
 import androidx.ui.layout.Padding
 import androidx.ui.layout.Row
 import androidx.ui.material.surface.Surface
-
+import androidx.ui.graphics.Color
 import androidx.compose.Composable
 import androidx.compose.Model
 import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
-import androidx.ui.graphics.Color
 import androidx.ui.material.*
 
 @Model
@@ -50,44 +49,47 @@ private val customColor2 = Color(0xFFE91E63.toInt())
 private val customColor3 = Color(0xFF607D8B.toInt())
 
 @Composable
-fun SelectionsControlsDemo() {
+fun SelectionsControlsDemo(){
     CraneWrapper {
         MaterialTheme {
-            val headerStyle = +themeTextStyle { h6 }
-            val padding = EdgeInsets(10.dp)
+            SelectionsControls()
+        }
+    }
+}
 
-            Surface {
+@Composable
+fun SelectionsControls() {
+
+    val headerStyle = +themeTextStyle { h6 }
+    val padding = EdgeInsets(10.dp)
+
+    Surface {
+        Padding(padding = padding) {
+            Column(crossAxisAlignment = CrossAxisAlignment.Start) {
+                Text(text = "Checkbox", style = headerStyle)
                 Padding(padding = padding) {
-                    Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-                        Text(text = "Checkbox", style = headerStyle)
-                        Padding(padding = padding) {
-                            CheckboxDemo()
-                        }
-                        Text(text = "Switch", style = headerStyle)
-                        Padding(padding = padding) {
-                            SwitchDemo()
-                        }
-                        Text(text = "RadioButton", style = headerStyle)
-                        Padding(padding = padding) {
-                            RadioButtonDemo()
-                        }
-                        Text(text = "Radio group :: Default usage", style = headerStyle)
-                        Padding(padding = padding) {
-                            DefaultRadioGroup()
-                        }
-                        Text(text = "Radio group :: Custom usage", style = headerStyle)
-                        Padding(padding = padding) {
-                            CustomRadioGroup()
-                        }
-                    }
+                    CheckboxDemo()
+                }
+                Text(text = "Switch", style = headerStyle)
+                Padding(padding = padding) {
+                    SwitchDemo()
+                }
+                Text(text = "RadioButton", style = headerStyle)
+                Padding(padding = padding) {
+                    RadioButtonDemo()
+                }
+                Text(text = "Radio group :: Default usage", style = headerStyle)
+                Padding(padding = padding) {
+                    DefaultRadioGroup()
+                }
+                Text(text = "Radio group :: Custom usage", style = headerStyle)
+                Padding(padding = padding) {
+                    CustomRadioGroup()
                 }
             }
         }
     }
-
 }
-
-
 
 @Composable
 fun DefaultRadioGroup() {

@@ -14,31 +14,43 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.sample.floatingaction
+package de.jensklingenberg.jetpackcomposeplayground.samples
 
-import android.util.Log
+import CircularProgressIndicator
+import LinearProgressIndicator
+import android.os.Handler
 import androidx.ui.core.CraneWrapper
-import androidx.ui.layout.Center
-import androidx.ui.layout.Column
-import androidx.ui.layout.MainAxisAlignment
-import androidx.ui.material.FloatingActionButton
+import androidx.ui.layout.FlexColumn
+import androidx.ui.layout.MainAxisAlignment.Companion.SpaceEvenly
+import androidx.ui.layout.Row
 import androidx.ui.material.MaterialTheme
-import androidx.ui.painting.Image
+import androidx.ui.graphics.Color
 import androidx.compose.Composable
-import androidx.compose.composer
+import androidx.compose.Model
+import androidx.compose.onActive
+import androidx.compose.onDispose
+import androidx.compose.unaryPlus
 
 @Composable
-fun FloatingActionButtonDemo(icon: Image) {
+fun ProgressIndicatorDemo(){
     CraneWrapper {
         MaterialTheme {
-            Center {
-                val onClick: () -> Unit = { Log.e("FABDemo", "onClick") }
-                Column(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
-                    FloatingActionButton(icon = icon, onClick = onClick)
-                    FloatingActionButton(text = "EXTENDED", onClick = onClick)
-                    FloatingActionButton(icon = icon, text = "ADD TO FAVS", onClick = onClick)
-                }
+            ProgressIndicator()
+        }
+    }
+}
+
+@Composable
+private fun ProgressIndicator() {
+
+    FlexColumn {
+        expanded(flex = 1f) {
+            Row(mainAxisAlignment = SpaceEvenly) {
+                // Indeterminate indicators
+                LinearProgressIndicator()
+                CircularProgressIndicator()
             }
         }
     }
 }
+
