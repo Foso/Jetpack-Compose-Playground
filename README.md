@@ -18,6 +18,11 @@ This is an example project that is using an early alpha version of Jetpack Compo
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application. 
 
+
+Check the Wiki:
+
+https://github.com/Foso/Jetpack-Compose-Playground/wiki
+
 # 🏠 Architecture
 
 ## 🛠️ Built With
@@ -40,7 +45,11 @@ Declarative UI Patterns (Google I/O'19)
 
 Links:
 * [Compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)
+
 * [Compose from first Principles ](http://intelligiblebabble.com/compose-from-first-principles/)
+
+
+
 ## ✍️ Feedback
 
 If you want to improve Compose, join the [Kotlin Slack](https://slack.kotlinlang.org) and the #compose channel or file a bug at https://issuetracker.google.com/issues?q=componentid:612128
