@@ -36,7 +36,10 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 
 # What is Jetpack Compose 
 [![](http://img.youtube.com/vi/VsStyq4Lzxo/0.jpg)](http://www.youtube.com/watch?v=VsStyq4Lzxo "")
+Declarative UI Patterns (Google I/O'19)
 
+Links:
+* [Compose from first Principles ](http://intelligiblebabble.com/compose-from-first-principles/)
 ## ✍️ Feedback
 
 If you want to improve Compose, join the [Kotlin Slack](https://slack.kotlinlang.org) and the #compose channel or file a bug at https://issuetracker.google.com/issues?q=componentid:612128
