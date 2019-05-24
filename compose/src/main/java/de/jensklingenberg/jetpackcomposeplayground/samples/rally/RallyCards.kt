@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.rally
+package de.jensklingenberg.jetpackcomposeplayground.samples.rally
 
 import androidx.ui.baseui.ColoredRect
 import androidx.ui.core.Text

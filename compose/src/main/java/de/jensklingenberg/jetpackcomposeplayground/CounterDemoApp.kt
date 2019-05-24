@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui
+package de.jensklingenberg.jetpackcomposeplayground
 
 import androidx.compose.Composable
 import androidx.compose.state
@@ -14,26 +14,24 @@ import androidx.ui.layout.Stack
 import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
-import de.jensklingenberg.jetpackcomposeplayground.rally.RallyTheme
-import de.jensklingenberg.jetpackcomposeplayground.rally.materialBlue
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.Scaffold
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.AppBar
+import de.jensklingenberg.jetpackcomposeplayground.samples.rally.materialBlue
+import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
+import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.AppBar
 
 
-class CounterModel() {
-    val counter = +state { 0 }
-    var header = "Counter demo"
 
-}
 
-//test
 @Composable
 fun CounterDemo() {
     CraneWrapper {
         MaterialTheme {
             val counterState = +state { 0 }
 
-            Scaffold(appBar = { AppBar(title = "Compose Playground") }) {
+            Scaffold(appBar = {
+                AppBar(
+                    title = "Compose Playground"
+                )
+            }) {
                 Stack {
                     aligned(Alignment.Center) {
                         Text(

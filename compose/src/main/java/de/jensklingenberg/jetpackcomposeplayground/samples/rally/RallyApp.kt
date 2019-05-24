@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.rally
+package de.jensklingenberg.jetpackcomposeplayground.samples.rally
 
 import androidx.ui.core.Text
 import androidx.ui.core.dp
@@ -24,7 +24,7 @@ import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
 import androidx.ui.layout.*
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.Scaffold
+import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
 
 /**
  * This Activity recreates the Rally Material Study from

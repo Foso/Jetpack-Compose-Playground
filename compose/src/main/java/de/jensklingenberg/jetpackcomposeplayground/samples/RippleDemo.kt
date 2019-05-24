@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.sample
+package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.dp
@@ -28,12 +28,10 @@ import androidx.ui.material.borders.RoundedRectangleBorder
 import androidx.ui.material.ripple.BoundedRipple
 import androidx.ui.material.surface.Card
 import androidx.ui.material.themeTextStyle
-
+import androidx.ui.graphics.Color
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.compose.composer
-import androidx.ui.graphics.Color
-
 
 @Composable
 fun RippleDemo() {

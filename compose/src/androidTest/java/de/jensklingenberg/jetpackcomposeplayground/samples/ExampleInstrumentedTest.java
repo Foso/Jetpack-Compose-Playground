@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.sample;
+package de.jensklingenberg.jetpackcomposeplayground.samples;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

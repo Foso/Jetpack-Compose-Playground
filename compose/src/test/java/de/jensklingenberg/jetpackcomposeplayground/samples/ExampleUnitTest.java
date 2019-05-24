@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.sample;
+package de.jensklingenberg.jetpackcomposeplayground.samples;
 
 import org.junit.Test;
 
