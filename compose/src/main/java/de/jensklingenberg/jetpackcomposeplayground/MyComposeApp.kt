@@ -4,6 +4,7 @@ import androidx.compose.Composable
 import de.jensklingenberg.jetpackcomposeplayground.samples.DividersDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.*
 import de.jensklingenberg.jetpackcomposeplayground.samples.ProgressIndicatorDemo
+import de.jensklingenberg.jetpackcomposeplayground.samples.layout.VerticalScrollerDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.RallyApp
 
 @Composable
@@ -21,6 +22,9 @@ fun MyComposeApp() {
         6 -> CounterModelDemo()
         7 -> DividersDemo()
         8 -> ProgressIndicatorDemo()
+
+        //Layouts
+        9->VerticalScrollerDemo()
     }
 
 }
