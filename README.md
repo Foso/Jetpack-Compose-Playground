@@ -34,6 +34,8 @@ I compiled this versions from the AndroidX git repo. Because Compose is still in
 the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/) 
 Inside the MyComposeApp() you can change the demo page that should be opened
 
+# What is Jetpack Compose 
+[![](http://img.youtube.com/vi/VsStyq4Lzxo/0.jpg)](http://www.youtube.com/watch?v=VsStyq4Lzxo "")
 
 ## ✍️ Feedback
 
@@ -46,6 +48,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
+
+
+## Known Issues
+- Elevation is not working 
+Because DrawShadow is not implemented https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/material/src/main/java/androidx/ui/material/surface/DrawShadow.kt
 
 License
 -------
