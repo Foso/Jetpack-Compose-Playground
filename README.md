@@ -8,9 +8,10 @@
 
 > A Jetpack Compose Example App
 
-<p align="center">
-    <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/compose.png" height=500 />
- 
+ <p align="left">
+    <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/MainPage.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/counterdemo.png" height=500 />
+
 </p>
 
 ## Introduction 🙋‍♂️
