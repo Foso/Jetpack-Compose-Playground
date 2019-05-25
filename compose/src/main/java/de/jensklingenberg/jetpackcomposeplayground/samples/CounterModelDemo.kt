@@ -1,7 +1,6 @@
 package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.compose.Composable
-import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
@@ -10,12 +9,8 @@ import androidx.ui.layout.Column
 import androidx.ui.material.Button
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
+import de.jensklingenberg.jetpackcomposeplayground.model.CounterModel
 
-
-class CounterModel {
-    val counter = +state { 0 }
-    var header = "Counter demo"
-}
 
 @Composable
 fun CounterModelDemo() {

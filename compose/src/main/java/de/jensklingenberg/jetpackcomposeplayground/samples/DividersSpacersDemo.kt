@@ -16,29 +16,26 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples
 
-import androidx.ui.baseui.ColoredRect
-import androidx.ui.core.Text
-import androidx.ui.core.dp
-import androidx.ui.layout.Column
-import androidx.ui.layout.Container
-import androidx.ui.layout.CrossAxisAlignment
-import androidx.ui.layout.EdgeInsets
-import androidx.ui.layout.HeightSpacer
-import androidx.ui.layout.Row
-import androidx.ui.layout.WidthSpacer
-import androidx.ui.material.Divider
-import androidx.ui.material.themeTextStyle
-import androidx.ui.graphics.Color
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
+import androidx.ui.baseui.ColoredRect
 import androidx.ui.core.CraneWrapper
+import androidx.ui.core.Text
+import androidx.ui.core.dp
+import androidx.ui.graphics.Color
+import androidx.ui.layout.*
+import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
+import androidx.ui.material.themeTextStyle
 
 @Composable
-fun DividersDemo(){
+fun DividersDemo() {
     CraneWrapper {
         MaterialTheme {
-            Dividers()
+            Column {
+                Dividers()
+            }
+
         }
     }
 }

@@ -7,6 +7,7 @@ import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.layout.Column
+import androidx.ui.layout.FlexColumn
 import androidx.ui.layout.VerticalScroller
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
@@ -18,13 +19,20 @@ import androidx.ui.material.themeTextStyle
 fun VerticalScrollerDemo() {
     CraneWrapper {
         MaterialTheme {
-            VerticalScroller {
-                //Only one child is allowed in a VerticalScroller
-                Column {
-                    for (i in 0..6) {
-                        Text(text = "Hello World!", style = +themeTextStyle { h1 })
-                    }
-                }
+            FlexColumn {
+                VerticalScrollerExample()
+            }
+        }
+    }
+}
+
+@Composable
+fun VerticalScrollerExample() {
+    VerticalScroller {
+        //Only one child is allowed in a VerticalScroller
+        Column {
+            for (i in 0..100) {
+                Text(text = "$i Hello World!", style = +themeTextStyle { body1 })
             }
         }
     }
