@@ -11,6 +11,7 @@ import androidx.ui.material.MaterialTheme
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.samples.*
+import de.jensklingenberg.jetpackcomposeplayground.samples.layout.RowDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.layout.VerticalScrollerDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.RallyApp
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.AppBar
@@ -18,7 +19,7 @@ import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaff
 
 @Composable
 fun MyComposeApp(navigation: Navigation) {
-    navigation.setStartPage { MainPage(navigation)}
+    navigation.setStartPage { MainPage(navigation) }
 
     navigation.setPages(mainPagesEntries)
     navigation.navigateToPage(navigation.getPageIndex())
@@ -36,17 +37,20 @@ fun MainPage(navigation: Navigation) {
                     title = "Compose Playground"
                 )
             }) {
-                Column {
-                    mainPagesEntries.forEachIndexed { index, page ->
-                        HeightSpacer(height = 10.dp)
-                        Button(page.title, onClick = {
-                            navigation.setPage(index)
-                        })
-                        HeightSpacer(height = 10.dp)
-                        Divider(color = dividerColor, height = 0.5.dp)
+                VerticalScroller {
+                    Column {
+                        mainPagesEntries.forEachIndexed { index, page ->
+                            HeightSpacer(height = 10.dp)
+                            Button(page.title, onClick = {
+                                navigation.setPage(index)
+                            })
+                            HeightSpacer(height = 10.dp)
+                            Divider(color = dividerColor, height = 0.5.dp)
 
+                        }
                     }
                 }
+
             }
         }
     }
@@ -63,6 +67,7 @@ val mainPagesEntries = listOf(
     Page("DividersDemo") { DividersDemo() },
     Page("ProgressIndicatorDemo") { ProgressIndicatorDemo() },
     Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
-    Page("VerticalScrollerDemo") { VerticalScrollerDemo() }
+    Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
+    Page("Rowdemo") { RowDemo() }
 )
 
