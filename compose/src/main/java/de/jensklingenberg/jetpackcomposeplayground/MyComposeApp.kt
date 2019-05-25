@@ -11,6 +11,7 @@ import androidx.ui.material.MaterialTheme
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.samples.*
+import de.jensklingenberg.jetpackcomposeplayground.samples.layout.ColumnDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.layout.RowDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.layout.VerticalScrollerDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.RallyApp
@@ -68,6 +69,8 @@ val mainPagesEntries = listOf(
     Page("ProgressIndicatorDemo") { ProgressIndicatorDemo() },
     Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
     Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
-    Page("Rowdemo") { RowDemo() }
-)
+    Page("Rowdemo") { RowDemo() },
+    Page("ColumnDemo") { ColumnDemo() }
+
+    )
 
