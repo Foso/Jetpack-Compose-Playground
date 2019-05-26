@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.samples
+package de.jensklingenberg.jetpackcomposeplayground.samples.text
 
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
@@ -8,7 +8,7 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
 
 @Composable
-fun TextDemo() {
+fun SimgpleTextDemo() {
     CraneWrapper {
         MaterialTheme {
             Text(text = "Hello World!", style = +themeTextStyle { h1 })

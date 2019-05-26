@@ -2,14 +2,14 @@ package de.jensklingenberg.jetpackcomposeplayground.model
 
 import androidx.compose.state
 import androidx.compose.unaryPlus
-import de.jensklingenberg.jetpackcomposeplayground.samples.*
+import de.jensklingenberg.jetpackcomposeplayground.samples.text.SimgpleTextDemo
 
 /**
  * Custom navigation class
  */
 class Navigation {
    private val page = +state { -1 }
-    var func = { TextDemo() }
+    var func = { SimgpleTextDemo() }
     var entries: List<Page>? = emptyList()
 
     fun setPages(pages: List<Page>) {

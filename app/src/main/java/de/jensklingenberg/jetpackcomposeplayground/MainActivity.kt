@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.setContent
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
+import de.jensklingenberg.jetpackcomposeplayground.samples.animation.RepeatedRotation
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
             navigation = Navigation()
 
             MyComposeApp(navigation)
+
         }
     }
 

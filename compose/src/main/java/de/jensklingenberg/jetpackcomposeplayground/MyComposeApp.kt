@@ -1,6 +1,7 @@
 package de.jensklingenberg.jetpackcomposeplayground
 
 import androidx.compose.Composable
+import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloGesture
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.dp
 import androidx.ui.graphics.Color
@@ -11,8 +12,12 @@ import androidx.ui.material.MaterialTheme
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.samples.*
+import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloAnimation
+import de.jensklingenberg.jetpackcomposeplayground.samples.animation.RepeatedRotation
+import de.jensklingenberg.jetpackcomposeplayground.samples.animation.StateBasedRippleDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.RallyApp
+import de.jensklingenberg.jetpackcomposeplayground.samples.text.TextDemo
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.AppBar
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
 
@@ -69,8 +74,12 @@ val mainPagesEntries = listOf(
     Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
     Page("Rowdemo") { RowDemo() },
     Page("ColumnDemo") { ColumnDemo() },
-    Page("StackDemo") { StackDemo() }
+    Page("StackDemo") { StackDemo() },
+    Page("Animation") { HelloAnimation() },
+    Page("HelloGesture") { HelloGesture() },
+    Page("RepeatedRotation") { RepeatedRotation() },
+    Page("StateBasedRippleDemo"){StateBasedRippleDemo()}
 
 
-    )
+)
 
