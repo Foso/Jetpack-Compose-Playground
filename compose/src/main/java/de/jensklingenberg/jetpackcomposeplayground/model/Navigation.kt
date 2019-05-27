@@ -8,7 +8,7 @@ import de.jensklingenberg.jetpackcomposeplayground.samples.text.SimgpleTextDemo
  * Custom navigation class
  */
 class Navigation {
-   private val page = +state { -1 }
+    private val page = +state { -1 }
     var func = { SimgpleTextDemo() }
     var entries: List<Page>? = emptyList()
 
@@ -25,7 +25,7 @@ class Navigation {
     }
 
     fun setStartPage(function: () -> Unit) {
-        func=function
+        func = function
     }
 
     fun setPage(value: Int) {

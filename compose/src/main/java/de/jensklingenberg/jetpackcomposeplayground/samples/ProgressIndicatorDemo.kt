@@ -32,7 +32,7 @@ import androidx.compose.onDispose
 import androidx.compose.unaryPlus
 
 @Composable
-fun ProgressIndicatorDemo(){
+fun ProgressIndicatorDemo() {
     CraneWrapper {
         MaterialTheme {
             ProgressIndicator()

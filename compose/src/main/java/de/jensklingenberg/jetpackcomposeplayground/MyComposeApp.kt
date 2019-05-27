@@ -78,7 +78,7 @@ val mainPagesEntries = listOf(
     Page("Animation") { HelloAnimation() },
     Page("HelloGesture") { HelloGesture() },
     Page("RepeatedRotation") { RepeatedRotation() },
-    Page("StateBasedRippleDemo"){StateBasedRippleDemo()}
+    Page("StateBasedRippleDemo") { StateBasedRippleDemo() }
 
 
 )

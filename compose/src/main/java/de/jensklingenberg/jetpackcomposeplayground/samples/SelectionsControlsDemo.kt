@@ -49,7 +49,7 @@ private val customColor2 = Color(0xFFE91E63.toInt())
 private val customColor3 = Color(0xFF607D8B.toInt())
 
 @Composable
-fun SelectionsControlsDemo(){
+fun SelectionsControlsDemo() {
     CraneWrapper {
         MaterialTheme {
             SelectionsControls()

@@ -43,7 +43,6 @@ import androidx.ui.core.withDensity
 import androidx.ui.layout.Container
 
 
-
 @Composable
 fun StateBasedRippleDemo() {
     CraneWrapper {

@@ -43,7 +43,7 @@ import androidx.ui.graphics.Color
  * https://material.io/design/material-studies/rally.html
  */
 
- val cardInternalColor = Color(0xFF33333D.toInt())
+val cardInternalColor = Color(0xFF33333D.toInt())
 
 /**
  * The Alerts card within the Rally Overview screen.

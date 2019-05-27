@@ -51,7 +51,8 @@ fun ButtonDemo() {
                     Button(
                         onClick = onClick,
                         color = +themeColor { secondary },
-                        text = "SECONDARY COLOR")
+                        text = "SECONDARY COLOR"
+                    )
 
                     val outlinedShape = +withDensity {
                         RoundedRectangleBorder(

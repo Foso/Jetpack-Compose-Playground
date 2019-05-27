@@ -19,8 +19,6 @@ import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaff
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.AppBar
 
 
-
-
 @Composable
 fun CounterDemo() {
     CraneWrapper {
