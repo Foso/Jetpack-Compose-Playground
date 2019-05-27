@@ -11,6 +11,7 @@
  <p align="left">
     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/MainPage.png" height=500 />
      <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/counterdemo.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/TextDemo.png" height=500 />
 
 </p>
 
