@@ -19,10 +19,8 @@ This is an example project that is using an early alpha version of Jetpack Compo
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application. 
 
-
-Check the Wiki:
-
-https://github.com/Foso/Jetpack-Compose-Playground/wiki
+## 📙 Docs
+Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 # 🏠 Architecture
 
