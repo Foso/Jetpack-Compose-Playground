@@ -4,6 +4,7 @@ import androidx.compose.Composable
 import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloGesture
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.dp
+import de.jensklingenberg.jetpackcomposeplayground.demos.MultipleCollectTest
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
 import androidx.ui.material.Button
@@ -78,7 +79,8 @@ val mainPagesEntries = listOf(
     Page("Animation") { HelloAnimation() },
     Page("HelloGesture") { HelloGesture() },
     Page("RepeatedRotation") { RepeatedRotation() },
-    Page("StateBasedRippleDemo") { StateBasedRippleDemo() }
+    Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
+    Page("MultipleCollectTest"){ MultipleCollectTest() }
 
 
 )
