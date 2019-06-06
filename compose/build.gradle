@@ -27,12 +27,14 @@ android {
 
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
         kotlinOptions {
+            jvmTarget = "1.8"
 //            useIR = true
            freeCompilerArgs += "-P"
             freeCompilerArgs +=
                     "plugin:androidx.compose.plugins.kotlin:syntax=FCS"
         }
     }
+
 
     buildTypes {
         debug{}

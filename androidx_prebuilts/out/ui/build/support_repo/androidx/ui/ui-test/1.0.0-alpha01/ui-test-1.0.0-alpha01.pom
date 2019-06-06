@@ -28,6 +28,12 @@
   </scm>
   <dependencies>
     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>androidx.ui</groupId>
       <artifactId>ui-core</artifactId>
       <version>1.0.0-alpha01</version>
@@ -69,12 +75,6 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>androidx.test</groupId>
       <artifactId>runner</artifactId>
       <version>1.1.1</version>
@@ -84,6 +84,12 @@
       <groupId>androidx.test</groupId>
       <artifactId>rules</artifactId>
       <version>1.1.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.test.espresso</groupId>
+      <artifactId>espresso-core</artifactId>
+      <version>3.1.0</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>

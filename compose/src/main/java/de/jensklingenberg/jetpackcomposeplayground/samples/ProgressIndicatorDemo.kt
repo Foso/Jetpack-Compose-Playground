@@ -39,12 +39,60 @@ fun ProgressIndicatorDemo() {
         }
     }
 }
-
+@Model
+private class ProgressState {
+    var progress = 0f
+    var cycle = 1
+    fun generateColor(): Color {
+        return when (cycle) {
+            1 -> Color.Red
+            2 -> Color.Green
+            3 -> Color.Blue
+            // unused
+            else -> Color.Black
+        }
+    }
+    fun start() {
+        handler.postDelayed(updateProgress, 400)
+    }
+    fun stop() {
+        handler.removeCallbacks(updateProgress)
+    }
+    var handler = Handler()
+    var updateProgress: Runnable = object : Runnable {
+        override fun run() {
+            if (progress == 1f) {
+                cycle++
+                if (cycle > 3) {
+                    cycle = 1
+                }
+                progress = 0f
+            } else {
+                progress += 0.25f
+            }
+            handler.postDelayed(this, 400)
+        }
+    }
+}
 @Composable
-private fun ProgressIndicator() {
-
+private fun ProgressIndicator(state: ProgressState = ProgressState()) {
+    +onActive { state.start() }
+    +onDispose { state.stop() }
     FlexColumn {
         expanded(flex = 1f) {
+            Row(mainAxisAlignment = SpaceEvenly) {
+                // Determinate indicators
+                LinearProgressIndicator(progress = state.progress)
+                CircularProgressIndicator(progress = state.progress)
+            }
+            Row(mainAxisAlignment = SpaceEvenly) {
+                // Fancy colours!
+                LinearProgressIndicator(progress = (state.progress), color = state.generateColor())
+                CircularProgressIndicator(
+                    progress = (state.progress),
+                    color = state.generateColor()
+                )
+            }
             Row(mainAxisAlignment = SpaceEvenly) {
                 // Indeterminate indicators
                 LinearProgressIndicator()
@@ -53,4 +101,3 @@ private fun ProgressIndicator() {
         }
     }
 }
-

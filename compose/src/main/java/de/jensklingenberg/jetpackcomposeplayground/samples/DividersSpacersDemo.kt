@@ -40,7 +40,6 @@ fun DividersDemo() {
     }
 }
 
-
 @Composable
 fun Dividers() {
     val items = listOf(
@@ -54,26 +53,23 @@ fun Dividers() {
     val dividerColor = Color(0xFFC6C6C6.toInt())
     val blackColor = Color(0xFF000000.toInt())
     Column {
-        Column {
-            items.forEachIndexed { index, text ->
-                Item(text = text, color = color)
-                if (index != items.lastIndex) {
-                    Divider(color = dividerColor, indent = ItemSize)
-                }
+        Column { items.forEachIndexed { index, text ->
+            Item(text = text, color = color)
+            if (index != items.lastIndex) {
+                Divider(color = dividerColor, indent = ItemSize)
             }
+        }
         }
         HeightSpacer(height = 30.dp)
         Divider(height = 2.dp, color = blackColor)
         HeightSpacer(height = 10.dp)
-        Column {
-            items.forEach { text ->
-                Item(text = text)
-                Divider(color = dividerColor, height = 0.5.dp)
-            }
+        Column { items.forEach { text ->
+            Item(text = text)
+            Divider(color = dividerColor, height = 0.5.dp)
+        }
         }
     }
 }
-
 @Composable
 fun Item(text: String, color: Color? = null) {
     val avatarSize = ItemSize - ItemPadding * 2
@@ -84,14 +80,12 @@ fun Item(text: String, color: Color? = null) {
                 ColoredRect(
                     width = avatarSize,
                     height = avatarSize,
-                    color = color
-                )
+                    color = color)
                 WidthSpacer(width = ItemPadding)
             }
             Text(text = text, style = textStyle)
         }
     }
 }
-
 private val ItemSize = 55.dp
 private val ItemPadding = 7.5.dp

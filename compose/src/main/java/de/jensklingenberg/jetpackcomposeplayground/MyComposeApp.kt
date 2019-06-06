@@ -63,6 +63,8 @@ fun MainPage(navigation: Navigation) {
 
 
 val mainPagesEntries = listOf(
+    Page("AppBarDemo") { AppBarDemo() },
+
     Page("TextDemo") { TextDemo() },
     Page("ButtonDemo") { ButtonDemo() },
     Page("RippleDemo") { RippleDemo() },

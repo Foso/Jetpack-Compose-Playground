@@ -37,7 +37,6 @@ import androidx.ui.graphics.Color
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.compose.composer
-
 @Composable
 fun ButtonDemo() {
     val onClick: () -> Unit = { Log.e("ButtonDemo", "onClick") }
@@ -51,9 +50,7 @@ fun ButtonDemo() {
                     Button(
                         onClick = onClick,
                         color = +themeColor { secondary },
-                        text = "SECONDARY COLOR"
-                    )
-
+                        text = "SECONDARY COLOR")
                     val outlinedShape = +withDensity {
                         RoundedRectangleBorder(
                             side = BorderSide(Color(0xFF888888.toInt())),
@@ -65,9 +62,7 @@ fun ButtonDemo() {
                             )
                         )
                     }
-
                     TransparentButton(onClick = onClick, shape = outlinedShape, text = "OUTLINED")
-
                     val customColor = Color(0xFFFFFF00.toInt())
                     Button(
                         onClick = onClick,
@@ -78,7 +73,6 @@ fun ButtonDemo() {
                             Text(text = "CUSTOM BUTTON!")
                         }
                     }
-
                     // TODO(Andrey): Disabled button has wrong bg and text color for now.
                     // Need to figure out where will we store their styling. Not a part of
                     // MaterialColors right now and specs are not clear about this.
