@@ -16,14 +16,13 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples.rally
 
-import androidx.ui.core.Text
-import androidx.ui.core.dp
-
-import androidx.ui.material.themeTextStyle
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
+import androidx.ui.core.Text
+import androidx.ui.core.dp
 import androidx.ui.layout.*
+import androidx.ui.material.themeTextStyle
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
 
 /**
@@ -42,6 +41,9 @@ fun RallyApp() {
             }
         }
     }
+
+
+
 
 }
 

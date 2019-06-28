@@ -8,7 +8,7 @@
   <packaging>aar</packaging>
   <name>AndroidX UI View components</name>
   <description>AndroidX UI View wrappers.</description>
-  <url>http://developer.android.com/tools/extras/support-library.html</url>
+  <url>https://developer.android.com/jetpack/androidx</url>
   <inceptionYear>2019</inceptionYear>
   <licenses>
     <license>

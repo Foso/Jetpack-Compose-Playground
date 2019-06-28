@@ -20,19 +20,13 @@ import androidx.compose.*
 import androidx.ui.baseui.selection.ToggleableState
 import androidx.ui.baseui.selection.ToggleableState.Checked
 import androidx.ui.baseui.selection.ToggleableState.Unchecked
+import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.core.dp
-import androidx.ui.layout.Column
-import androidx.ui.layout.CrossAxisAlignment
-import androidx.ui.layout.EdgeInsets
-import androidx.ui.layout.MainAxisAlignment
-import androidx.ui.layout.MainAxisSize
-import androidx.ui.layout.Padding
-import androidx.ui.layout.Row
-import androidx.ui.material.surface.Surface
 import androidx.ui.graphics.Color
-import androidx.ui.core.CraneWrapper
+import androidx.ui.layout.*
 import androidx.ui.material.*
+import androidx.ui.material.surface.Surface
 
 @Model
 class CheckboxState(var value: ToggleableState) {
@@ -53,10 +47,14 @@ fun SelectionsControlsDemo() {
         }
     }
 }
+
+
 @Composable
 fun SelectionsControls() {
+
     val headerStyle = +themeTextStyle { h6 }
     val padding = EdgeInsets(10.dp)
+
     Surface {
         Padding(padding = padding) {
             Column(crossAxisAlignment = CrossAxisAlignment.Start) {
@@ -84,6 +82,7 @@ fun SelectionsControls() {
         }
     }
 }
+
 @Composable
 fun DefaultRadioGroup() {
     val radioOptions = listOf("Calls", "Missed", "Friends")
@@ -91,25 +90,29 @@ fun DefaultRadioGroup() {
     RadioGroup(
         options = radioOptions,
         selectedOption = selectedOption,
-        onOptionSelected = onOptionSelected,
+        onSelectedChange = onOptionSelected,
         radioColor = customColor2
     )
 }
+
 @Composable
 fun CustomRadioGroup() {
     val radioOptions = listOf("Disagree", "Neutral", "Agree")
     val (selectedOption, onOptionSelected) = +state { radioOptions[0] }
     val textStyle = +themeTextStyle { subtitle1 }
+
     RadioGroup {
         Row(mainAxisSize = MainAxisSize.Min) {
             radioOptions.forEach { text ->
                 val selected = text == selectedOption
                 RadioGroupItem(
                     selected = selected,
-                    onSelected = { onOptionSelected(text) }) {
+                    onSelect = { onOptionSelected(text) }) {
                     Padding(padding = 10.dp) {
                         Column {
-                            RadioButton(selected = selected)
+                            RadioButton(
+                                selected = selected,
+                                onSelect = { onOptionSelected(text) })
                             Text(text = text, style = textStyle)
                         }
                     }
@@ -118,6 +121,7 @@ fun CustomRadioGroup() {
         }
     }
 }
+
 @Composable
 fun CheckboxDemo() {
     Column(crossAxisAlignment = CrossAxisAlignment.Start) {
@@ -148,6 +152,7 @@ fun CheckboxDemo() {
         }
     }
 }
+
 @Composable
 fun SwitchDemo() {
     Row(
@@ -164,15 +169,16 @@ fun SwitchDemo() {
         Switch(checked = checked4, onCheckedChange = onChecked4, color = customColor3)
     }
 }
+
 @Composable
 fun RadioButtonDemo() {
     Row(
         mainAxisAlignment = MainAxisAlignment.SpaceAround,
         mainAxisSize = MainAxisSize.Min
     ) {
-        RadioButton(selected = true)
-        RadioButton(selected = false)
-        RadioButton(selected = true, color = customColor)
-        RadioButton(selected = false, color = customColor)
+        RadioButton(selected = true, onSelect = null)
+        RadioButton(selected = false, onSelect = null)
+        RadioButton(selected = true, color = customColor, onSelect = null)
+        RadioButton(selected = false, color = customColor, onSelect = null)
     }
 }

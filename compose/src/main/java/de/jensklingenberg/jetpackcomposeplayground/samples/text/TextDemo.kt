@@ -16,34 +16,28 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples.text
 
-import androidx.ui.core.CraneWrapper
-import androidx.ui.core.EditableText
-import androidx.ui.core.EditorStyle
-import androidx.ui.core.Selection
-import androidx.ui.core.SelectionContainer
-import androidx.ui.core.Span
-import androidx.ui.core.Text
-import androidx.ui.core.px
-import androidx.ui.engine.geometry.Offset
-import androidx.ui.engine.text.BaselineShift
-import androidx.ui.engine.text.FontStyle
-import androidx.ui.engine.text.FontWeight
-import androidx.ui.engine.text.TextAlign
-import androidx.ui.engine.text.TextDecoration
-import androidx.ui.engine.text.TextDirection
-import androidx.ui.engine.text.font.FontFamily
-import androidx.ui.engine.window.Locale
-import androidx.ui.input.EditorState
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.lerp
-import androidx.ui.painting.Shadow
-import androidx.ui.painting.TextStyle
-import androidx.ui.rendering.paragraph.TextOverflow
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
+import androidx.ui.core.CraneWrapper
+import androidx.ui.core.Span
+import androidx.ui.core.Text
+import androidx.ui.core.px
+import androidx.ui.core.selection.Selection
+import androidx.ui.core.selection.SelectionContainer
+import androidx.ui.core.selection.SelectionMode
+import androidx.ui.engine.geometry.Offset
+import androidx.ui.engine.text.*
+import androidx.ui.engine.text.font.FontFamily
+import androidx.ui.engine.window.Locale
+import androidx.ui.graphics.Color
+import androidx.ui.graphics.lerp
 import androidx.ui.layout.*
 import androidx.ui.material.MaterialTheme
+import androidx.ui.painting.ParagraphStyle
+import androidx.ui.painting.Shadow
+import androidx.ui.painting.TextStyle
+import androidx.ui.rendering.paragraph.TextOverflow
 
 val displayText = "Text Demo"
 val displayTextChinese = "文本演示"
@@ -76,7 +70,7 @@ fun TextDemo() {
                         TextDemoWordSpacing()
                         TagLine(tag = "baselineShift")
                         TextDemoBaselineShift()
-                        TagLine(tag = "height")
+                        TagLine(tag = "lineHeight")
                         TextDemoHeight()
                         TagLine(tag = "background")
                         TextDemoBackground()
@@ -92,12 +86,16 @@ fun TextDemo() {
                         TexDemoTextOverflowFade()
                         TagLine(tag = "shadow")
                         TextDemoShadowEffect()
-                        TagLine(tag = "editing")
-                        EditLine()
                         TagLine(tag = "selection")
                         TextDemoSelection()
+                        TagLine(tag = "selection in 2D Array Vertical")
+                        TextDemoSelection2DArrayVertical()
+                        TagLine(tag = "selection in 2D Array Horizontal")
+                        TextDemoSelection2DArrayHorizontal()
                         TagLine(tag = "composable textspan")
                         TextDemoComposableTextSpan()
+                        TagLine(tag = "fontSizeScale")
+                        TextDemoFontSizeScale()
                     }
                 }
             }
@@ -321,12 +319,15 @@ fun TextDemoHeight() {
                 style = TextStyle(fontSize = fontSize8)
             )
         }
-        Text {
+        Text(
+            paragraphStyle = ParagraphStyle(
+                lineHeight = 2.0f
+            )
+        ) {
             Span(
                 text = "$displayText\n$displayText   ",
                 style = TextStyle(
-                    fontSize = fontSize8,
-                    height = 2.0f
+                    fontSize = fontSize8
                 )
             )
         }
@@ -404,15 +405,15 @@ fun TextDemoTextAlign() {
     }
     Column(crossAxisAlignment = CrossAxisAlignment.Start) {
         SecondTagLine(tag = "textAlign = TextAlign.Left")
-        Text(textAlign = TextAlign.Left) {
+        Text(paragraphStyle = ParagraphStyle(textAlign = TextAlign.Left)) {
             Span(text = displayText, style = TextStyle(fontSize = fontSize8))
         }
         SecondTagLine(tag = "textAlign = TextAlign.Right")
-        Text(textAlign = TextAlign.Right) {
+        Text(paragraphStyle = ParagraphStyle(textAlign = TextAlign.Right)) {
             Span(text = displayText, style = TextStyle(fontSize = fontSize8))
         }
         SecondTagLine(tag = "textAlign = TextAlign.Center")
-        Text(textAlign = TextAlign.Center) {
+        Text(paragraphStyle = ParagraphStyle(textAlign = TextAlign.Center)) {
             Span(text = displayText, style = TextStyle(fontSize = fontSize8))
         }
         SecondTagLine(tag = "textAlign = default and TextAlign.Justify")
@@ -425,7 +426,7 @@ fun TextDemoTextAlign() {
                 )
             )
         }
-        Text(textAlign = TextAlign.Justify) {
+        Text(paragraphStyle = ParagraphStyle(textAlign = TextAlign.Justify)) {
             Span(
                 text = text,
                 style = TextStyle(
@@ -435,19 +436,29 @@ fun TextDemoTextAlign() {
             )
         }
         SecondTagLine(tag = "textAlgin = TextAlign.Start for Ltr")
-        Text(textAlign = TextAlign.Start) {
+        Text(paragraphStyle = ParagraphStyle(textAlign = TextAlign.Start)) {
             Span(text = displayText, style = TextStyle(fontSize = fontSize8))
         }
         SecondTagLine(tag = "textAlgin = TextAlign.Start for Rtl")
-        Text(textDirection = TextDirection.Rtl, textAlign = TextAlign.Start) {
+        Text(
+            paragraphStyle = ParagraphStyle(
+                textDirection = TextDirection.Rtl,
+                textAlign = TextAlign.Start
+            )
+        ) {
             Span(text = displayText, style = TextStyle(fontSize = fontSize8))
         }
         SecondTagLine(tag = "textAlgin = TextAlign.End for Ltr")
-        Text(textAlign = TextAlign.End) {
+        Text(paragraphStyle = ParagraphStyle(textAlign = TextAlign.End)) {
             Span(text = displayText, style = TextStyle(fontSize = fontSize8))
         }
         SecondTagLine(tag = "textAlgin = TextAlign.End for Rtl")
-        Text(textDirection = TextDirection.Rtl, textAlign = TextAlign.End) {
+        Text(
+            paragraphStyle = ParagraphStyle(
+                textDirection = TextDirection.Rtl,
+                textAlign = TextAlign.End
+            )
+        ) {
             Span(text = displayText, style = TextStyle(fontSize = fontSize8))
         }
     }
@@ -534,16 +545,6 @@ fun TextDemoShadowEffect() {
 }
 
 @Composable
-fun EditLine() {
-    val state = +state { EditorState() }
-    EditableText(
-        value = state.value,
-        onValueChange = { state.value = it },
-        editorStyle = EditorStyle(textStyle = TextStyle(fontSize = fontSize8))
-    )
-}
-
-@Composable
 fun TextDemoSelection() {
     val selection = +state<Selection?> { null }
     SelectionContainer(
@@ -583,6 +584,94 @@ fun TextDemoSelection() {
 }
 
 @Composable
+fun TextDemoSelection2DArrayVertical() {
+    var text = ""
+    for (i in 1..3) {
+        text = "$text$displayText" + "\n"
+    }
+
+    val colorList = listOf(
+        Color(0xFFFF0000.toInt()),
+        Color(0xFF00FF00.toInt()),
+        Color(0xFF0000FF.toInt()),
+        Color(0xFF00FFFF.toInt()),
+        Color(0xFFFF00FF.toInt()),
+        Color(0xFFFFFF00.toInt()),
+        Color(0xFF0000FF.toInt()),
+        Color(0xFF00FF00.toInt()),
+        Color(0xFFFF0000.toInt())
+    )
+
+    val selection = +state<Selection?> { null }
+    SelectionContainer(
+        selection = selection.value,
+        onSelectionChange = { selection.value = it }) {
+        Column {
+            for (i in 0..2) {
+                Row {
+                    for (j in 0..2) {
+                        Text {
+                            Span(
+                                text = text,
+                                style = TextStyle(
+                                    color = colorList[i * 3 + j],
+                                    fontSize = fontSize6
+                                )
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun TextDemoSelection2DArrayHorizontal() {
+    var text = ""
+    for (i in 1..3) {
+        text = "$text$displayText" + "\n"
+    }
+
+    val colorList = listOf(
+        Color(0xFFFF0000.toInt()),
+        Color(0xFF00FF00.toInt()),
+        Color(0xFF0000FF.toInt()),
+        Color(0xFF00FFFF.toInt()),
+        Color(0xFFFF00FF.toInt()),
+        Color(0xFFFFFF00.toInt()),
+        Color(0xFF0000FF.toInt()),
+        Color(0xFF00FF00.toInt()),
+        Color(0xFFFF0000.toInt())
+    )
+
+    val selection = +state<Selection?> { null }
+    SelectionContainer(
+        selection = selection.value,
+        onSelectionChange = { selection.value = it },
+        mode = SelectionMode.Horizontal
+    ) {
+        Column {
+            for (i in 0..2) {
+                Row {
+                    for (j in 0..2) {
+                        Text {
+                            Span(
+                                text = text,
+                                style = TextStyle(
+                                    color = colorList[i * 3 + j],
+                                    fontSize = fontSize6
+                                )
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
 fun TextDemoComposableTextSpan() {
     Text {
         Span(text = "This is a ", style = TextStyle(fontSize = fontSize8)) {
@@ -593,6 +682,18 @@ fun TextDemoComposableTextSpan() {
             text.forEachIndexed { index, ch ->
                 val color = lerp(color1, color2, index.toFloat() / text.lastIndex)
                 Span(text = "$ch", style = TextStyle(color = color))
+            }
+        }
+    }
+}
+
+@Composable
+fun TextDemoFontSizeScale() {
+    Text {
+        Span(style = TextStyle(fontSize = fontSize8)) {
+            for (i in 4..12 step 4) {
+                val scale = i * 0.1f
+                Span("fontSizeScale=$scale\n", style = TextStyle(fontSizeScale = scale))
             }
         }
     }

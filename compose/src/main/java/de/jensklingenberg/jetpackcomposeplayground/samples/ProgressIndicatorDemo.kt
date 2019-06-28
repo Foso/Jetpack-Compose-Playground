@@ -16,20 +16,16 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples
 
-import CircularProgressIndicator
-import LinearProgressIndicator
 import android.os.Handler
+import androidx.compose.*
 import androidx.ui.core.CraneWrapper
+import androidx.ui.graphics.Color
 import androidx.ui.layout.FlexColumn
 import androidx.ui.layout.MainAxisAlignment.Companion.SpaceEvenly
 import androidx.ui.layout.Row
+import androidx.ui.material.CircularProgressIndicator
+import androidx.ui.material.LinearProgressIndicator
 import androidx.ui.material.MaterialTheme
-import androidx.ui.graphics.Color
-import androidx.compose.Composable
-import androidx.compose.Model
-import androidx.compose.onActive
-import androidx.compose.onDispose
-import androidx.compose.unaryPlus
 
 @Composable
 fun ProgressIndicatorDemo() {

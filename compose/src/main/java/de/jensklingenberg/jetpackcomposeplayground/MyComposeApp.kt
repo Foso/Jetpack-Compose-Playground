@@ -1,19 +1,21 @@
 package de.jensklingenberg.jetpackcomposeplayground
 
 import androidx.compose.Composable
-import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloGesture
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.dp
-import de.jensklingenberg.jetpackcomposeplayground.demos.MultipleCollectTest
 import androidx.ui.graphics.Color
-import androidx.ui.layout.*
+import androidx.ui.layout.Column
+import androidx.ui.layout.HeightSpacer
+import androidx.ui.layout.VerticalScroller
 import androidx.ui.material.Button
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
+import de.jensklingenberg.jetpackcomposeplayground.demos.MultipleCollectTest
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.samples.*
 import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloAnimation
+import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloGesture
 import de.jensklingenberg.jetpackcomposeplayground.samples.animation.RepeatedRotation
 import de.jensklingenberg.jetpackcomposeplayground.samples.animation.StateBasedRippleDemo
 import de.jensklingenberg.jetpackcomposeplayground.samples.layout.*
@@ -62,9 +64,40 @@ fun MainPage(navigation: Navigation) {
 }
 
 
+@Composable
+fun MainPage2(tt: (Int) -> Unit) {
+    val dividerColor = Color(0xFFC6C6C6.toInt())
+
+    CraneWrapper {
+        MaterialTheme {
+            Scaffold(appBar = {
+                AppBar(
+                    title = "Compose Playground"
+                )
+            }) {
+                VerticalScroller {
+                    Column {
+                        mainPagesEntries.forEachIndexed { index, page ->
+                            HeightSpacer(height = 10.dp)
+                            Button(page.title, onClick = {
+                                tt(index)
+
+                            })
+                            HeightSpacer(height = 10.dp)
+                            Divider(color = dividerColor, height = 0.5.dp)
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
 val mainPagesEntries = listOf(
     Page("AppBarDemo") { AppBarDemo() },
-
     Page("TextDemo") { TextDemo() },
     Page("ButtonDemo") { ButtonDemo() },
     Page("RippleDemo") { RippleDemo() },
@@ -82,7 +115,9 @@ val mainPagesEntries = listOf(
     Page("HelloGesture") { HelloGesture() },
     Page("RepeatedRotation") { RepeatedRotation() },
     Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
-    Page("MultipleCollectTest"){ MultipleCollectTest() }
+    Page("MultipleCollectTest") { MultipleCollectTest() },
+    Page("InputFieldDemo") { InputFieldDemo() },
+    Page("LoadImageDemo") { context -> LoadImageDemo(context) }
 
 
 )

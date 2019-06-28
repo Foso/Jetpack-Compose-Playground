@@ -16,20 +16,14 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples
 
-import android.app.Activity
-import android.graphics.BitmapFactory
-import android.os.Bundle
 import android.util.Log
+import androidx.compose.Composable
 import androidx.ui.core.CraneWrapper
-import androidx.ui.layout.Center
 import androidx.ui.layout.Column
 import androidx.ui.layout.MainAxisAlignment
 import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.MaterialTheme
 import androidx.ui.painting.Image
-import androidx.compose.Composable
-import androidx.compose.composer
-import androidx.compose.setContent
 
 //class FloatingActionButtonActivity : Activity() {
 //
@@ -42,18 +36,16 @@ import androidx.compose.setContent
 
 
 @Composable
-//TODO: make this demo accessible without a parameter
 fun FloatingActionButtonDemo(icon: Image) {
     CraneWrapper {
         MaterialTheme {
-            Center {
-                val onClick: () -> Unit = { Log.e("FABDemo", "onClick") }
-                Column(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
-                    FloatingActionButton(icon = icon, onClick = onClick)
-                    FloatingActionButton(text = "EXTENDED", onClick = onClick)
-                    FloatingActionButton(icon = icon, text = "ADD TO FAVS", onClick = onClick)
-                }
+            val onClick: () -> Unit = { Log.e("FABDemo", "onClick") }
+            Column(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
+                FloatingActionButton(icon = icon, onClick = onClick)
+                FloatingActionButton(text = "EXTENDED", onClick = onClick)
+                FloatingActionButton(icon = icon, text = "ADD TO FAVS", onClick = onClick)
             }
         }
     }
 }
+

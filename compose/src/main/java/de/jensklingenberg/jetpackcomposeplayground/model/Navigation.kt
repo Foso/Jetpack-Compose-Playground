@@ -36,7 +36,7 @@ class Navigation {
         when (value) {
             -1 -> func()
             else -> {
-                entries!![value].function.invoke()
+                // entries!![value].function.invoke()
             }
 
         }

@@ -21,20 +21,16 @@ import android.os.Bundle
 import androidx.animation.ColorPropKey
 import androidx.animation.FloatPropKey
 import androidx.animation.transitionDefinition
-import androidx.ui.animation.Transition
-import androidx.ui.core.CraneWrapper
-import androidx.ui.core.Layout
-import androidx.ui.core.Draw
-import androidx.ui.core.PxPosition
-import androidx.ui.core.gesture.PressGestureDetector
-import androidx.ui.core.min
-import androidx.ui.engine.geometry.Offset
-import androidx.ui.graphics.Color
-import androidx.ui.painting.Paint
 import androidx.compose.Composable
 import androidx.compose.setContent
 import androidx.compose.state
 import androidx.compose.unaryPlus
+import androidx.ui.animation.Transition
+import androidx.ui.core.*
+import androidx.ui.core.gesture.PressGestureDetector
+import androidx.ui.engine.geometry.Offset
+import androidx.ui.graphics.Color
+import androidx.ui.painting.Paint
 
 /* Demo app created to study the interaction of animations, gestures and semantics. */
 class AnimationGestureSemanticsActivity : Activity() {
@@ -216,7 +212,7 @@ class AnimationGestureSemanticsActivity : Activity() {
     fun Circle(color: Color, sizeRatio: Float) {
         Draw { canvas, parentSize ->
             canvas.drawCircle(
-                c = Offset(parentSize.width.value / 2, parentSize.height.value / 2),
+                center = Offset(parentSize.width.value / 2, parentSize.height.value / 2),
                 radius = min(parentSize.height, parentSize.width).value * sizeRatio / 2,
                 paint = Paint().apply { this.color = color })
         }

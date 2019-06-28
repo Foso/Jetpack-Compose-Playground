@@ -5,6 +5,7 @@ import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.layout.Column
+import androidx.ui.layout.Container
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
 
@@ -23,8 +24,11 @@ fun ColumnDemo() {
 
 @Composable
 fun ColumnExample() {
-    Column {
-        Text(text = " Hello World!", style = +themeTextStyle { body1 })
-        Text(text = " Hello World!2", style = +themeTextStyle { body1 })
+    Container{
+        Column {
+            Text(text = " Hello World!", style = +themeTextStyle { body1 })
+            Text(text = " Hello World!2", style = +themeTextStyle { body1 })
+        }
     }
+
 }

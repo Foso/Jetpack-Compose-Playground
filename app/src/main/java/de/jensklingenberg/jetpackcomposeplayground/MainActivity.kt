@@ -4,29 +4,32 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.setContent
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
-import de.jensklingenberg.jetpackcomposeplayground.samples.animation.RepeatedRotation
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var navigation : Navigation
+    var navigation: Navigation? = null
+
+    var index = -1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContent {
-            navigation = Navigation()
 
-            MyComposeApp(navigation)
+        setContent {
+
+
+            MainPage2 { t -> change(t) }
+
 
         }
-    }
 
-    override fun onBackPressed() {
-        navigation.setHome()
 
     }
 
-
+    fun change(index: Int) {
+        startActivity(SecondActivity.getStartIntent(this, index))
+    }
 }
 

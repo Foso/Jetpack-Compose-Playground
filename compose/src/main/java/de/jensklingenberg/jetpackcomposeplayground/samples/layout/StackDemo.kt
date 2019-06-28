@@ -7,12 +7,14 @@ import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.core.dp
 import androidx.ui.engine.text.TextAlign
-import androidx.ui.graphics.Color
-import androidx.ui.layout.*
+import androidx.ui.layout.Alignment
+import androidx.ui.layout.EdgeInsets
+import androidx.ui.layout.Padding
+import androidx.ui.layout.Stack
 import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.MaterialTheme
-
 import androidx.ui.material.themeTextStyle
+import androidx.ui.painting.ParagraphStyle
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.materialBlue
 
 
@@ -35,8 +37,8 @@ fun StackExample() {
         aligned(Alignment.TopCenter) {
             Text(
                 text = "This text is drawed first ",
-                style = +themeTextStyle { h4 },
-                textAlign = TextAlign.Center
+                style = +themeTextStyle { h4 }
+                ,paragraphStyle = ParagraphStyle(textAlign = TextAlign.Center)
             )
         }
 
@@ -58,8 +60,7 @@ fun StackExample() {
         aligned(Alignment.Center) {
             Text(
                 text = "This text is drawed last ",
-                style = +themeTextStyle { h4 },
-                textAlign = TextAlign.Center
+                style = +themeTextStyle { h4 } ,paragraphStyle = ParagraphStyle(textAlign = TextAlign.Center)
             )
         }
 

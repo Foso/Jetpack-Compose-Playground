@@ -8,7 +8,7 @@
   <packaging>aar</packaging>
   <name>AndroidX Text</name>
   <description>Android Specific implementation for Text.</description>
-  <url>http://developer.android.com/tools/extras/support-library.html</url>
+  <url>https://developer.android.com/jetpack/androidx</url>
   <inceptionYear>2018</inceptionYear>
   <licenses>
     <license>

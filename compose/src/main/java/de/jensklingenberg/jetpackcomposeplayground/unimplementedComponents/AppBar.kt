@@ -9,6 +9,7 @@ import androidx.ui.layout.MainAxisAlignment
 import androidx.ui.layout.Row
 import androidx.ui.material.surface.Surface
 import androidx.ui.material.themeTextStyle
+import androidx.ui.painting.ParagraphStyle
 
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.materialBlue
 
@@ -19,7 +20,7 @@ fun AppBar(title: String = "") {
             Text(
                 text = title,
                 style = +themeTextStyle { h4.copy(color = Color(0xFFFFFFFF.toInt())) },
-                textAlign = TextAlign.Center
+               paragraphStyle = ParagraphStyle(textAlign = TextAlign.Center)
             )
         }
     }

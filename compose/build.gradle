@@ -52,20 +52,20 @@ dependencies {
     implementation "androidx.appcompat:appcompat:1.0.2"
     implementation "androidx.core:core-ktx:1.0.2"
 
+    implementation "androidx.compose:compose-compiler-hosted:1.0.0-alpha01"
 
     implementation "androidx.compose:compose-runtime:1.0.0-alpha01"
-    implementation "androidx.ui:ui-framework:1.0.0-alpha01"
-    implementation "androidx.ui:ui-material:1.0.0-alpha01"
-    implementation "androidx.ui:ui-layout:1.0.0-alpha01"
-    implementation "androidx.ui:ui-android-view:1.0.0-alpha01"
-    implementation "androidx.ui:ui-android-view-non-ir:1.0.0-alpha01"
-    implementation "androidx.ui:ui-core:1.0.0-alpha01"
-    implementation "androidx.ui:ui-platform:1.0.0-alpha01"
-    implementation "androidx.ui:ui-android-text:1.0.0-alpha01"
     implementation "androidx.ui:ui-animation:1.0.0-alpha01"
     implementation "androidx.ui:ui-animation-core:1.0.0-alpha01"
-
-
+    implementation "androidx.ui:ui-android-view:1.0.0-alpha01"
+    implementation "androidx.ui:ui-android-view-non-ir:1.0.0-alpha01"
+    implementation "androidx.ui:ui-android-text:1.0.0-alpha01"
+    implementation "androidx.ui:ui-core:1.0.0-alpha01"
+    implementation "androidx.ui:ui-framework:1.0.0-alpha01"
+    implementation "androidx.ui:ui-layout:1.0.0-alpha01"
+    implementation "androidx.ui:ui-material:1.0.0-alpha01"
+    implementation "androidx.ui:ui-platform:1.0.0-alpha01"
+    implementation "androidx.ui:ui-text:1.0.0-alpha01"
 
     androidTestImplementation "androidx.ui:ui-test:1.0.0-alpha01"
     androidTestImplementation "com.google.truth:truth:0.44"

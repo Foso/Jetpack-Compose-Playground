@@ -6,7 +6,6 @@ import androidx.compose.unaryPlus
 import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.core.dp
-import androidx.ui.engine.text.TextAlign
 import androidx.ui.layout.Alignment
 import androidx.ui.layout.EdgeInsets
 import androidx.ui.layout.Padding
@@ -15,8 +14,8 @@ import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.materialBlue
-import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.AppBar
+import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
 
 
 @Composable
@@ -34,8 +33,7 @@ fun CounterDemo() {
                     aligned(Alignment.Center) {
                         Text(
                             text = "You have pushed the button this many times: " + counterState.value,
-                            style = +themeTextStyle { h4 },
-                            textAlign = TextAlign.Center
+                            style = +themeTextStyle { h4 }
                         )
                     }
 
