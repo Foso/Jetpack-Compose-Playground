@@ -1,7 +1,6 @@
 package de.jensklingenberg.jetpackcomposeplayground
 
 import androidx.compose.Composable
-import androidx.ui.core.CraneWrapper
 import androidx.ui.core.dp
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
@@ -37,30 +36,29 @@ fun MyComposeApp(navigation: Navigation) {
 fun MainPage(navigation: Navigation) {
     val dividerColor = Color(0xFFC6C6C6.toInt())
 
-    CraneWrapper {
-        MaterialTheme {
-            Scaffold(appBar = {
-                AppBar(
-                    title = "Compose Playground"
-                )
-            }) {
-                VerticalScroller {
-                    Column {
-                        mainPagesEntries.forEachIndexed { index, page ->
-                            HeightSpacer(height = 10.dp)
-                            Button(page.title, onClick = {
-                                navigation.setPage(index)
-                            })
-                            HeightSpacer(height = 10.dp)
-                            Divider(color = dividerColor, height = 0.5.dp)
+    MaterialTheme {
+        Scaffold(appBar = {
+            AppBar(
+                title = "Compose Playground"
+            )
+        }) {
+            VerticalScroller {
+                Column {
+                    mainPagesEntries.forEachIndexed { index, page ->
+                        HeightSpacer(height = 10.dp)
+                        Button(page.title, onClick = {
+                            navigation.setPage(index)
+                        })
+                        HeightSpacer(height = 10.dp)
+                        Divider(color = dividerColor, height = 0.5.dp)
 
-                        }
                     }
                 }
-
             }
+
         }
     }
+
 }
 
 
@@ -68,39 +66,39 @@ fun MainPage(navigation: Navigation) {
 fun MainPage2(tt: (Int) -> Unit) {
     val dividerColor = Color(0xFFC6C6C6.toInt())
 
-    CraneWrapper {
-        MaterialTheme {
-            Scaffold(appBar = {
-                AppBar(
-                    title = "Compose Playground"
-                )
-            }) {
-                VerticalScroller {
-                    Column {
-                        mainPagesEntries.forEachIndexed { index, page ->
-                            HeightSpacer(height = 10.dp)
-                            Button(page.title, onClick = {
-                                tt(index)
 
-                            })
-                            HeightSpacer(height = 10.dp)
-                            Divider(color = dividerColor, height = 0.5.dp)
+    MaterialTheme {
+        Scaffold(appBar = {
+            AppBar(
+                title = "Compose Playground"
+            )
+        }) {
+            VerticalScroller {
+                Column {
+                    mainPagesEntries.forEachIndexed { index, page ->
+                        HeightSpacer(height = 10.dp)
+                        Button(page.title, onClick = {
+                            tt(index)
 
-                        }
+                        })
+                        HeightSpacer(height = 10.dp)
+                        Divider(color = dividerColor, height = 0.5.dp)
+
                     }
                 }
-
             }
+
         }
     }
+
 }
 
 
 val mainPagesEntries = listOf(
-    Page("AppBarDemo") { AppBarDemo() },
+    // Page("AppBarDemo") { AppBarDemo() },
     Page("TextDemo") { TextDemo() },
     Page("ButtonDemo") { ButtonDemo() },
-    Page("RippleDemo") { RippleDemo() },
+    // Page("RippleDemo") { RippleDemo() },
     Page("CounterDemo") { CounterDemo() },
     Page("RallyApp") { RallyApp() },
     Page("CounterModelDemo") { CounterModelDemo() },

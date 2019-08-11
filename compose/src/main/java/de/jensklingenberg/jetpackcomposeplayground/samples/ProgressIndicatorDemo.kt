@@ -18,10 +18,9 @@ package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import android.os.Handler
 import androidx.compose.*
-import androidx.ui.core.CraneWrapper
 import androidx.ui.graphics.Color
 import androidx.ui.layout.FlexColumn
-import androidx.ui.layout.MainAxisAlignment.Companion.SpaceEvenly
+import androidx.ui.layout.MainAxisAlignment
 import androidx.ui.layout.Row
 import androidx.ui.material.CircularProgressIndicator
 import androidx.ui.material.LinearProgressIndicator
@@ -29,16 +28,16 @@ import androidx.ui.material.MaterialTheme
 
 @Composable
 fun ProgressIndicatorDemo() {
-    CraneWrapper {
         MaterialTheme {
             ProgressIndicator()
         }
-    }
+
 }
 @Model
 private class ProgressState {
     var progress = 0f
     var cycle = 1
+
     fun generateColor(): Color {
         return when (cycle) {
             1 -> Color.Red
@@ -48,12 +47,15 @@ private class ProgressState {
             else -> Color.Black
         }
     }
+
     fun start() {
         handler.postDelayed(updateProgress, 400)
     }
+
     fun stop() {
         handler.removeCallbacks(updateProgress)
     }
+
     var handler = Handler()
     var updateProgress: Runnable = object : Runnable {
         override fun run() {
@@ -70,18 +72,21 @@ private class ProgressState {
         }
     }
 }
+
 @Composable
 private fun ProgressIndicator(state: ProgressState = ProgressState()) {
+
     +onActive { state.start() }
     +onDispose { state.stop() }
+
     FlexColumn {
         expanded(flex = 1f) {
-            Row(mainAxisAlignment = SpaceEvenly) {
+            Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
                 // Determinate indicators
                 LinearProgressIndicator(progress = state.progress)
                 CircularProgressIndicator(progress = state.progress)
             }
-            Row(mainAxisAlignment = SpaceEvenly) {
+            Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
                 // Fancy colours!
                 LinearProgressIndicator(progress = (state.progress), color = state.generateColor())
                 CircularProgressIndicator(
@@ -89,7 +94,7 @@ private fun ProgressIndicator(state: ProgressState = ProgressState()) {
                     color = state.generateColor()
                 )
             }
-            Row(mainAxisAlignment = SpaceEvenly) {
+            Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
                 // Indeterminate indicators
                 LinearProgressIndicator()
                 CircularProgressIndicator()

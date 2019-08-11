@@ -2,7 +2,6 @@ package de.jensklingenberg.jetpackcomposeplayground.samples.layout
 
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
-import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.layout.Row
 import androidx.ui.material.MaterialTheme
@@ -14,11 +13,10 @@ import androidx.ui.material.themeTextStyle
          * @see wiki [https://github.com/Foso/Jetpack-Compose-Playground/wiki/Row]
          */
 fun RowDemo() {
-    CraneWrapper {
         MaterialTheme {
             RowExample()
         }
-    }
+
 }
 
 @Composable

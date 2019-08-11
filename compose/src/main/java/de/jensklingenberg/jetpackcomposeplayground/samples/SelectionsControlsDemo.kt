@@ -17,23 +17,15 @@
 package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.compose.*
-import androidx.ui.baseui.selection.ToggleableState
-import androidx.ui.baseui.selection.ToggleableState.Checked
-import androidx.ui.baseui.selection.ToggleableState.Unchecked
-import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.core.dp
+import androidx.ui.foundation.selection.ToggleableState
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
 import androidx.ui.material.*
 import androidx.ui.material.surface.Surface
 
-@Model
-class CheckboxState(var value: ToggleableState) {
-    fun toggle() {
-        value = if (value == Checked) Unchecked else Checked
-    }
-}
+
 
 private val customColor = Color(0xFFFF5722.toInt())
 private val customColor2 = Color(0xFFE91E63.toInt())
@@ -41,11 +33,10 @@ private val customColor3 = Color(0xFF607D8B.toInt())
 
 @Composable
 fun SelectionsControlsDemo() {
-    CraneWrapper {
         MaterialTheme {
             SelectionsControls()
         }
-    }
+
 }
 
 
@@ -94,7 +85,6 @@ fun DefaultRadioGroup() {
         radioColor = customColor2
     )
 }
-
 @Composable
 fun CustomRadioGroup() {
     val radioOptions = listOf("Disagree", "Neutral", "Agree")
@@ -102,7 +92,7 @@ fun CustomRadioGroup() {
     val textStyle = +themeTextStyle { subtitle1 }
 
     RadioGroup {
-        Row(mainAxisSize = MainAxisSize.Min) {
+        Row(mainAxisSize = FlexSize.Min) {
             radioOptions.forEach { text ->
                 val selected = text == selectedOption
                 RadioGroupItem(
@@ -121,7 +111,6 @@ fun CustomRadioGroup() {
         }
     }
 }
-
 @Composable
 fun CheckboxDemo() {
     Column(crossAxisAlignment = CrossAxisAlignment.Start) {
@@ -134,7 +123,7 @@ fun CheckboxDemo() {
             else ToggleableState.Indeterminate
         }
         val onParentClick = {
-            val s = parentState != Checked
+            val s = parentState != ToggleableState.Checked
             onStateChange(s)
             onStateChange2(s)
             onStateChange3(s)
@@ -152,21 +141,20 @@ fun CheckboxDemo() {
         }
     }
 }
-
 @Composable
 fun SwitchDemo() {
     Row(
         mainAxisAlignment = MainAxisAlignment.SpaceAround,
-        mainAxisSize = MainAxisSize.Min
+        mainAxisSize = FlexSize.Min
     ) {
         val (checked, onChecked) = +state { false }
         val (checked2, onChecked2) = +state { false }
         val (checked3, onChecked3) = +state { true }
-        val (checked4, onChecked4) = +state { true }
+        val (checked4, _) = +state { true }
         Switch(checked = checked, onCheckedChange = onChecked)
         Switch(checked = checked2, onCheckedChange = onChecked2, color = customColor)
         Switch(checked = checked3, onCheckedChange = onChecked3, color = customColor2)
-        Switch(checked = checked4, onCheckedChange = onChecked4, color = customColor3)
+        Switch(checked = checked4, onCheckedChange = {}, color = customColor3)
     }
 }
 
@@ -174,7 +162,7 @@ fun SwitchDemo() {
 fun RadioButtonDemo() {
     Row(
         mainAxisAlignment = MainAxisAlignment.SpaceAround,
-        mainAxisSize = MainAxisSize.Min
+        mainAxisSize = FlexSize.Min
     ) {
         RadioButton(selected = true, onSelect = null)
         RadioButton(selected = false, onSelect = null)

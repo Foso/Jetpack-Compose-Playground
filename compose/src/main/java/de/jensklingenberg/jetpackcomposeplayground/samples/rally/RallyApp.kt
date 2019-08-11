@@ -18,7 +18,6 @@ package de.jensklingenberg.jetpackcomposeplayground.samples.rally
 
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
-import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.core.dp
 import androidx.ui.layout.*
@@ -32,7 +31,7 @@ import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaff
 
 @Composable
 fun RallyApp() {
-    CraneWrapper {
+
         RallyTheme {
             Scaffold(appBar = { RallyAppBar() }) {
                 VerticalScroller {
@@ -40,7 +39,7 @@ fun RallyApp() {
                 }
             }
         }
-    }
+
 
 
 

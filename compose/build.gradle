@@ -1,4 +1,3 @@
-
 apply plugin: 'com.android.library'
 
 apply plugin: "kotlin-android"
@@ -29,7 +28,7 @@ android {
         kotlinOptions {
             jvmTarget = "1.8"
 //            useIR = true
-           freeCompilerArgs += "-P"
+            freeCompilerArgs += "-P"
             freeCompilerArgs +=
                     "plugin:androidx.compose.plugins.kotlin:syntax=FCS"
         }
@@ -37,7 +36,7 @@ android {
 
 
     buildTypes {
-        debug{}
+        debug {}
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -48,7 +47,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.31"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.41"
     implementation "androidx.appcompat:appcompat:1.0.2"
     implementation "androidx.core:core-ktx:1.0.2"
 

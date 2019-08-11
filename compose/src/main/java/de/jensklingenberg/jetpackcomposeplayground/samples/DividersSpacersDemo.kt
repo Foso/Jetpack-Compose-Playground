@@ -17,11 +17,11 @@
 package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.compose.Composable
+import androidx.compose.composer
 import androidx.compose.unaryPlus
-import androidx.ui.baseui.ColoredRect
-import androidx.ui.core.CraneWrapper
 import androidx.ui.core.Text
 import androidx.ui.core.dp
+import androidx.ui.foundation.ColoredRect
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
 import androidx.ui.material.Divider
@@ -30,14 +30,13 @@ import androidx.ui.material.themeTextStyle
 
 @Composable
 fun DividersDemo() {
-    CraneWrapper {
         MaterialTheme {
             FlexColumn {
                 Dividers()
             }
 
         }
-    }
+
 }
 
 @Composable
@@ -51,7 +50,7 @@ fun Dividers() {
     )
     val color = Color(0xFFE91E63.toInt())
     val dividerColor = Color(0xFFC6C6C6.toInt())
-    val blackColor = Color(0xFF000000.toInt())
+    val blackColor = Color.Black
     Column {
         Column {
             items.forEachIndexed { index, text ->
@@ -83,8 +82,7 @@ fun Item(text: String, color: Color? = null) {
                 ColoredRect(
                     width = avatarSize,
                     height = avatarSize,
-                    color = color
-                )
+                    color = color)
                 WidthSpacer(width = ItemPadding)
             }
             Text(text = text, style = textStyle)

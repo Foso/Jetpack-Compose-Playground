@@ -19,25 +19,22 @@ package de.jensklingenberg.jetpackcomposeplayground.samples.animation
 import androidx.animation.ColorPropKey
 import androidx.animation.FloatPropKey
 import androidx.animation.transitionDefinition
+import androidx.compose.Composable
+import androidx.compose.state
+import androidx.compose.unaryPlus
 import androidx.ui.animation.Transition
-import androidx.ui.core.CraneWrapper
-import androidx.ui.core.Layout
+
 import androidx.ui.core.Draw
+import androidx.ui.core.Layout
 import androidx.ui.core.gesture.PressGestureDetector
 import androidx.ui.engine.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.painting.Paint
-import androidx.compose.Composable
-import androidx.compose.state
-import androidx.compose.unaryPlus
 
 
-@Suppress("FunctionName")
 @Composable
 fun HelloGesture() {
-    CraneWrapper {
-        TransitionExample()
-    }
+    TransitionExample()
 }
 
 private enum class ComponentState { Pressed, Released }
@@ -56,7 +53,6 @@ private val definition = transitionDefinition {
     }
 }
 
-@Suppress("FunctionName")
 @Composable
 fun TransitionExample() {
     val toState = +state { ComponentState.Released }
@@ -75,10 +71,9 @@ fun TransitionExample() {
     }
 }
 
-val paint: Paint = Paint()
+private val paint: Paint = Paint()
 const val halfSize = 200f
 
-@Suppress("FunctionName")
 @Composable
 fun DrawScaledRect(scale: Float, color: Color) {
     Draw { canvas, parentSize ->

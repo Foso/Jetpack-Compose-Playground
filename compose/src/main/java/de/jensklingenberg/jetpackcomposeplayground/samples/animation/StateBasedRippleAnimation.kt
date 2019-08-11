@@ -16,41 +16,29 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples.animation
 
-import android.app.Activity
+
 import android.graphics.PointF
-import android.os.Bundle
-import androidx.animation.FloatPropKey
-import androidx.animation.InterruptionHandling
-import androidx.animation.TransitionDefinition
-import androidx.animation.TransitionState
-import androidx.animation.transitionDefinition
+import androidx.animation.*
+import androidx.compose.Composable
+import androidx.compose.memo
+import androidx.compose.state
+import androidx.compose.unaryPlus
 import androidx.ui.animation.Transition
-import androidx.ui.core.CraneWrapper
-import androidx.ui.core.Draw
-import androidx.ui.core.PxPosition
+import androidx.ui.core.*
 import androidx.ui.core.gesture.PressGestureDetector
 import androidx.ui.engine.geometry.Offset
 import androidx.ui.graphics.Color
-import androidx.ui.painting.Paint
-import androidx.compose.Composable
-import androidx.compose.memo
-import androidx.compose.setContent
-import androidx.compose.state
-import androidx.compose.unaryPlus
-import androidx.ui.core.ambientDensity
-import androidx.ui.core.dp
-import androidx.ui.core.withDensity
 import androidx.ui.layout.Container
-
+import androidx.ui.painting.Paint
 
 @Composable
 fun StateBasedRippleDemo() {
-    CraneWrapper {
-        Container(expanded = true) {
-            RippleRect()
-        }
+    Container(expanded = true) {
+        RippleRect()
     }
+
 }
+
 
 @Composable
 fun RippleRect() {
@@ -75,6 +63,9 @@ fun RippleRect() {
     }
 }
 
+private val alpha1 = FloatPropKey()
+
+
 @Composable
 fun RippleRectFromState(state: TransitionState) {
 
@@ -85,7 +76,7 @@ fun RippleRectFromState(state: TransitionState) {
     val paint =
         Paint().apply {
             color = Color(
-                alpha = (state[de.jensklingenberg.jetpackcomposeplayground.samples.animation.alpha] * 255).toInt(),
+                alpha = (state[alpha1] * 255).toInt(),
                 red = 0,
                 green = 235,
                 blue = 224
@@ -109,47 +100,23 @@ private val TargetRadius = 200.dp
 
 private val down = PointF(0f, 0f)
 
-private val alpha = FloatPropKey()
 private val radius = FloatPropKey()
 
 private fun createTransDef(targetRadius: Float): TransitionDefinition<ButtonStatus> {
     return transitionDefinition {
         state(ButtonStatus.Initial) {
-            this[alpha] = 0f
+            this[alpha1] = 0f
             this[radius] = targetRadius * 0.3f
         }
         state(ButtonStatus.Pressed) {
-            this[alpha] = 0.2f
+            this[alpha1] = 0.2f
             this[radius] = targetRadius + 15f
         }
         state(ButtonStatus.Released) {
-            this[alpha] = 0f
+            this[alpha1] = 0f
             this[radius] = targetRadius + 15f
         }
 
-        // Grow the ripple
-        transition(ButtonStatus.Initial to ButtonStatus.Pressed) {
-            alpha using keyframes {
-                duration = 225
-                0f at 0 // optional
-                0.2f at 75
-                0.2f at 225 // optional
-            }
-            radius using tween {
-                duration = 225
-            }
-            interruptionHandling = InterruptionHandling.UNINTERRUPTIBLE
-        }
-
-        // Fade out the ripple
-        transition(ButtonStatus.Pressed to ButtonStatus.Released) {
-            alpha using tween {
-                duration = 200
-            }
-            interruptionHandling = InterruptionHandling.UNINTERRUPTIBLE
-            // switch back to Initial to prepare for the next ripple cycle
-            nextState = ButtonStatus.Initial
-        }
 
         // State switch without animation
         snapTransition(ButtonStatus.Released to ButtonStatus.Initial)

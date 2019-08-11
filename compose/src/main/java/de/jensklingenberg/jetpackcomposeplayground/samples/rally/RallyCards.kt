@@ -16,26 +16,20 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples.rally
 
-import androidx.ui.baseui.ColoredRect
+import androidx.compose.Composable
+import androidx.compose.ambient
+import androidx.compose.unaryPlus
+
 import androidx.ui.core.Text
 import androidx.ui.core.dp
-import androidx.ui.layout.Column
-import androidx.ui.layout.EdgeInsets
-import androidx.ui.layout.FixedSpacer
-import androidx.ui.layout.FlexRow
-import androidx.ui.layout.MainAxisAlignment
-import androidx.ui.layout.Padding
-import androidx.ui.layout.Row
-import androidx.ui.layout.WidthSpacer
+import androidx.ui.graphics.Color
+import androidx.ui.layout.*
 import androidx.ui.material.Colors
 import androidx.ui.material.Divider
 import androidx.ui.material.TransparentButton
 import androidx.ui.material.surface.Card
 import androidx.ui.material.themeTextStyle
-import androidx.compose.Composable
-import androidx.compose.ambient
-import androidx.compose.unaryPlus
-import androidx.ui.graphics.Color
+import de.jensklingenberg.jetpackcomposeplayground.demos.ColoredRect
 
 
 /**
@@ -72,7 +66,8 @@ fun RallyAlertCard() {
                     }
                     inflexible {
                         // TODO: icons still don't work
-
+//                        <vectorResource res=context.resources
+//                            resId=androidx.ui.material.studies.R.drawable.sort_icon/>
                         TransparentButton(text = "Sort", onClick = { })
                     }
                 }
@@ -136,7 +131,7 @@ fun RallyAccountRow(name: String, number: String, amount: String, color: Color) 
             inflexible {
                 AccountIndicator(color = color)
                 WidthSpacer(width = 8.dp)
-                Column(crossAxisAlignment = MainAxisAlignment.Start) {
+                Column(crossAxisAlignment = CrossAxisAlignment.Start) {
                     Text(text = name, style = +themeTextStyle { body1 })
                     Text(text = "•••••$number", style = +themeTextStyle { subtitle1 })
                 }

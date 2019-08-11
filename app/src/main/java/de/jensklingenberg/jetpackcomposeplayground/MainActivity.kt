@@ -2,7 +2,7 @@ package de.jensklingenberg.jetpackcomposeplayground
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.setContent
+import androidx.ui.core.setContent
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
 
 

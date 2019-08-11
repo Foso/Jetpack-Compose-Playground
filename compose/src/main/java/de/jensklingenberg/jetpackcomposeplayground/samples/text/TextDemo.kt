@@ -19,90 +19,90 @@ package de.jensklingenberg.jetpackcomposeplayground.samples.text
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
-import androidx.ui.core.CraneWrapper
-import androidx.ui.core.Span
-import androidx.ui.core.Text
-import androidx.ui.core.px
+import androidx.ui.core.*
 import androidx.ui.core.selection.Selection
 import androidx.ui.core.selection.SelectionContainer
 import androidx.ui.core.selection.SelectionMode
 import androidx.ui.engine.geometry.Offset
-import androidx.ui.engine.text.*
-import androidx.ui.engine.text.font.FontFamily
-import androidx.ui.engine.window.Locale
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.lerp
-import androidx.ui.layout.*
-import androidx.ui.material.MaterialTheme
-import androidx.ui.painting.ParagraphStyle
+import androidx.ui.layout.Column
+import androidx.ui.layout.CrossAxisAlignment
+import androidx.ui.layout.Row
+import androidx.ui.layout.VerticalScroller
 import androidx.ui.painting.Shadow
-import androidx.ui.painting.TextStyle
-import androidx.ui.rendering.paragraph.TextOverflow
+import androidx.ui.text.AnnotatedString
+import androidx.ui.text.Locale
+import androidx.ui.text.ParagraphStyle
+import androidx.ui.text.TextStyle
+import androidx.ui.text.font.FontFamily
+import androidx.ui.text.font.FontStyle
+import androidx.ui.text.font.FontWeight
+import androidx.ui.text.style.*
 
 val displayText = "Text Demo"
 val displayTextChinese = "文本演示"
 val displayTextArabic = "عرض النص"
 val displayTextHindi = "पाठ डेमो"
-val fontSize4: Float = 40.0.toFloat()
-val fontSize6: Float = 60.0.toFloat()
-val fontSize7: Float = 70.0.toFloat()
-val fontSize8: Float = 80.0.toFloat()
-val fontSize10: Float = 100.0.toFloat()
+val fontSize4: Sp = 16.sp
+val fontSize6: Sp = 20.sp
+val fontSize8: Sp = 25.sp
+val fontSize10: Sp = 30.sp
+
 
 @Composable
 fun TextDemo() {
-    CraneWrapper {
-        MaterialTheme {
-            FlexColumn {
-                VerticalScroller {
-                    Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-                        TagLine(tag = "color, fontSize, fontWeight and fontStyle")
-                        TextDemoBasic()
-                        TagLine(tag = "Chinese, Arabic, and Hindi")
-                        TextDemoLanguage()
-                        TagLine(tag = "FontFamily: sans-serif, serif, and monospace")
-                        TextDemoFontFamily()
-                        TagLine(tag = "decoration, decorationColor and decorationStyle")
-                        TextDemoTextDecoration()
-                        TagLine(tag = "letterSpacing")
-                        TextDemoLetterSpacing()
-                        TagLine(tag = "wordSpacing")
-                        TextDemoWordSpacing()
-                        TagLine(tag = "baselineShift")
-                        TextDemoBaselineShift()
-                        TagLine(tag = "lineHeight")
-                        TextDemoHeight()
-                        TagLine(tag = "background")
-                        TextDemoBackground()
-                        TagLine(tag = "Locale: Japanese, Simplified and Traditional Chinese")
-                        TextDemoLocale()
-                        TagLine(tag = "textAlign and textDirection")
-                        TextDemoTextAlign()
-                        TagLine(tag = "softWrap: on and off")
-                        TextDemoSoftWrap()
-                        TagLine(tag = "textScaleFactor: default and 2.0")
-                        TextDemoTextScaleFactor()
-                        TagLine(tag = "TextOverFlow: Fade")
-                        TexDemoTextOverflowFade()
-                        TagLine(tag = "shadow")
-                        TextDemoShadowEffect()
-                        TagLine(tag = "selection")
-                        TextDemoSelection()
-                        TagLine(tag = "selection in 2D Array Vertical")
-                        TextDemoSelection2DArrayVertical()
-                        TagLine(tag = "selection in 2D Array Horizontal")
-                        TextDemoSelection2DArrayHorizontal()
-                        TagLine(tag = "composable textspan")
-                        TextDemoComposableTextSpan()
-                        TagLine(tag = "fontSizeScale")
-                        TextDemoFontSizeScale()
-                    }
-                }
-            }
-
+    VerticalScroller {
+        Column(crossAxisAlignment = CrossAxisAlignment.Start) {
+            TagLine(tag = "color, fontSize, fontWeight and fontStyle")
+            TextDemoBasic()
+            TagLine(tag = "Chinese, Arabic, and Hindi")
+            TextDemoLanguage()
+            TagLine(tag = "FontFamily: sans-serif, serif, and monospace")
+            TextDemoFontFamily()
+            TagLine(tag = "decoration, decorationColor and decorationStyle")
+            TextDemoTextDecoration()
+            TagLine(tag = "letterSpacing")
+            TextDemoLetterSpacing()
+            TagLine(tag = "baselineShift")
+            TextDemoBaselineShift()
+            TagLine(tag = "lineHeight")
+            TextDemoHeight()
+            TagLine(tag = "background")
+            TextDemoBackground()
+            TagLine(tag = "Locale: Japanese, Simplified and Traditional Chinese")
+            TextDemoLocale()
+            TagLine(tag = "textAlign and textDirection")
+            TextDemoTextAlign()
+            TagLine(tag = "softWrap: on and off")
+            TextDemoSoftWrap()
+            TagLine(tag = "TextOverFlow: Fade")
+            TexDemoTextOverflowFade()
+            TagLine(tag = "shadow")
+            TextDemoShadowEffect()
+            TagLine(tag = "selection")
+            TextDemoSelection()
+            TagLine(tag = "selection with string input")
+            TextDemoSelectionWithStringInput()
+            TagLine(tag = "selection in 2D Array Vertical")
+            TextDemoSelection2DArrayVertical()
+            TagLine(tag = "selection in 2D Array Horizontal")
+            TextDemoSelection2DArrayHorizontal()
+            TagLine(tag = "composable textspan")
+            TextDemoComposableTextSpan()
+            TagLine(tag = "fontSizeScale")
+            TextDemoFontSizeScale()
+            TagLine(tag = "multiple paragraphs basic")
+            TextDemoParagraph()
+            TagLine(tag = "multiple paragraphs TextAlign")
+            TextDemoParagraphTextAlign()
+            TagLine(tag = "multiple paragraphs line height")
+            TextDemoParagraphLineHeight()
+            TagLine(tag = "multiple paragraphs TextIndent")
+            TextDemoParagraphIndent()
+            TagLine(tag = "multiple paragraphs TextDirection")
+            TextDemoParagraphTextDirection()
         }
-
-
     }
 }
 
@@ -112,7 +112,10 @@ fun TagLine(tag: String) {
         Span(text = "\n", style = TextStyle(fontSize = fontSize8))
         Span(
             text = tag,
-            style = TextStyle(color = Color(0xFFAAAAAA.toInt()), fontSize = fontSize6)
+            style = TextStyle(
+                color = Color(0xFFAAAAAA.toInt()),
+                fontSize = fontSize6
+            )
         )
     }
 }
@@ -122,7 +125,10 @@ fun SecondTagLine(tag: String) {
     Text {
         Span(
             text = tag,
-            style = TextStyle(color = Color(0xFFAAAAAA.toInt()), fontSize = fontSize4)
+            style = TextStyle(
+                color = Color(0xFFAAAAAA.toInt()),
+                fontSize = fontSize4
+            )
         )
     }
 }
@@ -265,21 +271,10 @@ fun TextDemoLetterSpacing() {
     // This group of text widgets show different letterSpacing.
     Text {
         Span(text = "$displayText   ", style = TextStyle(fontSize = fontSize8))
-        Span(text = displayText, style = TextStyle(fontSize = fontSize8, letterSpacing = 0.5f))
-    }
-}
-
-@Composable
-fun TextDemoWordSpacing() {
-    // This group of text widgets show different wordSpacing.
-    Text {
-        Span(text = "$displayText   ", style = TextStyle(fontSize = fontSize8))
-
         Span(
-            text = displayText,
-            style = TextStyle(
+            text = displayText, style = TextStyle(
                 fontSize = fontSize8,
-                wordSpacing = 100.0f
+                letterSpacing = 0.5f
             )
         )
     }
@@ -471,7 +466,8 @@ fun TextDemoSoftWrap() {
     for (i in 1..10) {
         text = "$text$displayText"
     }
-    val textStyle = TextStyle(fontSize = fontSize8, color = Color(0xFFFF0000.toInt()))
+    val textStyle =
+        TextStyle(fontSize = fontSize8, color = Color(0xFFFF0000.toInt()))
 
     Column(crossAxisAlignment = CrossAxisAlignment.Start) {
         Text {
@@ -484,27 +480,6 @@ fun TextDemoSoftWrap() {
 }
 
 // TODO(Migration/qqd): Impelement text demo for overflow and maxLines.
-@Composable
-fun TextDemoOverflow() {
-}
-
-@Composable
-fun TextDemoMaxLines() {
-}
-
-@Composable
-fun TextDemoTextScaleFactor() {
-    // This group of text widgets show the different textScaleFactor.
-    Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-        Text {
-            Span(text = displayText, style = TextStyle(fontSize = fontSize8))
-        }
-
-        Text(textScaleFactor = 2.0f) {
-            Span(text = displayText, style = TextStyle(fontSize = fontSize8))
-        }
-    }
-}
 
 @Composable
 fun TexDemoTextOverflowFade() {
@@ -512,7 +487,8 @@ fun TexDemoTextOverflowFade() {
     for (i in 1..15) {
         text = text + displayText
     }
-    val textSytle = TextStyle(fontSize = fontSize8, color = Color(0xFFFF0000.toInt()))
+    val textSytle =
+        TextStyle(fontSize = fontSize8, color = Color(0xFFFF0000.toInt()))
     SecondTagLine(tag = "horizontally fading edge")
     Text(
         maxLines = 1,
@@ -580,6 +556,24 @@ fun TextDemoSelection() {
                 )
             }
         }
+    }
+}
+
+@Composable
+fun TextDemoSelectionWithStringInput() {
+    val selection = +state<Selection?> { null }
+    SelectionContainer(
+        selection = selection.value,
+        onSelectionChange = { selection.value = it }) {
+        Text(
+            text = "$displayText    $displayTextChinese    $displayTextHindi",
+            style = TextStyle(
+                color = Color(0xFFFF0000.toInt()),
+                fontSize = fontSize6,
+                fontWeight = FontWeight.w200,
+                fontStyle = FontStyle.Italic
+            )
+        )
     }
 }
 
@@ -673,16 +667,14 @@ fun TextDemoSelection2DArrayHorizontal() {
 
 @Composable
 fun TextDemoComposableTextSpan() {
-    Text {
-        Span(text = "This is a ", style = TextStyle(fontSize = fontSize8)) {
-            Span(text = "composable ", style = TextStyle(fontStyle = FontStyle.Italic))
-            val color1 = Color(0xFFEF50AD.toInt())
-            val color2 = Color(0xFF10AF52.toInt())
-            val text = "TextSpan"
-            text.forEachIndexed { index, ch ->
-                val color = lerp(color1, color2, index.toFloat() / text.lastIndex)
-                Span(text = "$ch", style = TextStyle(color = color))
-            }
+    Text(text = "This is a ", style = TextStyle(fontSize = fontSize8)) {
+        Span(text = "composable ", style = TextStyle(fontStyle = FontStyle.Italic))
+        val color1 = Color(0xFFEF50AD.toInt())
+        val color2 = Color(0xFF10AF52.toInt())
+        val text = "TextSpan"
+        text.forEachIndexed { index, ch ->
+            val color = lerp(color1, color2, index.toFloat() / text.lastIndex)
+            Span(text = "$ch", style = TextStyle(color = color))
         }
     }
 }
@@ -697,4 +689,132 @@ fun TextDemoFontSizeScale() {
             }
         }
     }
+}
+
+@Composable
+fun TextDemoParagraph() {
+    val text1 = "paragraph1 paragraph1 paragraph1 paragraph1 paragraph1"
+    val text2 = "paragraph2 paragraph2 paragraph2 paragraph2 paragraph2"
+    Text(
+        text = AnnotatedString(
+            text = text1 + text2,
+            textStyles = listOf(),
+            paragraphStyles = listOf(
+                AnnotatedString.Item(ParagraphStyle(), text1.length, text1.length)
+            )
+        ),
+        style = TextStyle(fontSize = fontSize8)
+    )
+}
+
+@Composable
+fun TextDemoParagraphTextAlign() {
+    var text = ""
+    val paragraphStyles = mutableListOf<AnnotatedString.Item<ParagraphStyle>>()
+    TextAlign.values().map { textAlign ->
+        val str = List(4) { "TextAlign.$textAlign" }.joinToString(" ")
+        val paragraphStyle = ParagraphStyle(textAlign = textAlign)
+        Pair(str, paragraphStyle)
+    }.forEach { (str, paragraphStyle) ->
+        paragraphStyles.add(
+            AnnotatedString.Item(
+                paragraphStyle,
+                text.length,
+                text.length + str.length
+            )
+        )
+        text += str
+    }
+
+    Text(
+        text = AnnotatedString(
+            text = text,
+            textStyles = listOf(),
+            paragraphStyles = paragraphStyles
+        ),
+        style = TextStyle(fontSize = fontSize8)
+    )
+}
+
+@Composable
+fun TextDemoParagraphLineHeight() {
+    val text1 = "LineHeight=1.0f LineHeight=1.0f LineHeight=1.0f LineHeight=1.0f"
+    val text2 = "LineHeight=1.5f LineHeight=1.5f LineHeight=1.5f LineHeight=1.5f"
+    val text3 = "LineHeight=3.0f LineHeight=3.0f LineHeight=3.0f LineHeight=3.0f"
+
+    Text(
+        text = AnnotatedString(
+            text = text1 + text2 + text3,
+            textStyles = listOf(),
+            paragraphStyles = listOf(
+                AnnotatedString.Item(
+                    ParagraphStyle(lineHeight = 1.0f),
+                    0,
+                    text1.length
+                ),
+                AnnotatedString.Item(
+                    ParagraphStyle(lineHeight = 1.5f),
+                    text1.length,
+                    text1.length + text2.length
+                ),
+                AnnotatedString.Item(
+                    ParagraphStyle(lineHeight = 2f),
+                    text1.length + text2.length,
+                    text1.length + text2.length + text3.length
+                )
+            )
+        ),
+        style = TextStyle(fontSize = fontSize8)
+    )
+}
+
+@Composable
+fun TextDemoParagraphIndent() {
+    val text1 = "TextIndent firstLine TextIndent firstLine TextIndent firstLine"
+    val text2 = "TextIndent restLine TextIndent restLine TextIndent restLine"
+
+    Text(
+        text = AnnotatedString(
+            text = text1 + text2,
+            textStyles = listOf(),
+            paragraphStyles = listOf(
+                AnnotatedString.Item(
+                    ParagraphStyle(textIndent = TextIndent(firstLine = 100.px)),
+                    0,
+                    text1.length
+                ),
+                AnnotatedString.Item(
+                    ParagraphStyle(textIndent = TextIndent(restLine = 100.px)),
+                    text1.length,
+                    text1.length + text2.length
+                )
+            )
+        ),
+        style = TextStyle(fontSize = fontSize8)
+    )
+}
+
+@Composable
+fun TextDemoParagraphTextDirection() {
+    val ltrText = "Hello World! Hello World! Hello World! Hello World! Hello World!"
+    val rtlText = "مرحبا بالعالم مرحبا بالعالم مرحبا بالعالم مرحبا بالعالم مرحبا بالعالم"
+    Text(
+        text = AnnotatedString(
+            text = ltrText + rtlText,
+            textStyles = listOf(),
+            paragraphStyles = listOf(
+                AnnotatedString.Item(
+                    ParagraphStyle(textDirection = TextDirection.Ltr),
+                    0,
+                    ltrText.length
+                ),
+                AnnotatedString.Item(
+                    ParagraphStyle(textDirection = TextDirection.Rtl),
+                    ltrText.length,
+                    ltrText.length + rtlText.length
+                )
+            )
+        ),
+        style = TextStyle(fontSize = fontSize8)
+    )
 }

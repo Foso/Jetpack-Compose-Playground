@@ -19,36 +19,70 @@ package de.jensklingenberg.jetpackcomposeplayground.samples.layout
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
-import androidx.ui.core.CraneWrapper
 import androidx.ui.core.EditorStyle
-import androidx.ui.core.InputField
-import androidx.ui.core.TextRange
-import androidx.ui.input.EditorState
+import androidx.ui.core.TextField
+import androidx.ui.input.EditorModel
+import androidx.ui.input.ImeAction
+import androidx.ui.input.KeyboardType
 import androidx.ui.layout.Column
 import androidx.ui.layout.CrossAxisAlignment
 import androidx.ui.layout.VerticalScroller
-import androidx.ui.painting.TextStyle
 import de.jensklingenberg.jetpackcomposeplayground.samples.text.TagLine
-import de.jensklingenberg.jetpackcomposeplayground.samples.text.fontSize8
+
+val KEYBOARD_TYPES = listOf(
+    Pair(KeyboardType.Text, "Text"),
+    Pair(KeyboardType.Ascii, "Ascii"),
+    Pair(KeyboardType.Number, "Number"),
+    Pair(KeyboardType.Email, "Email"),
+    Pair(KeyboardType.Phone, "Phone"),
+    Pair(KeyboardType.Password, "Password"),
+    Pair(KeyboardType.NumberPassword, "NumberPassword")
+)
+
+val IME_ACTIONS = listOf(
+    Pair(ImeAction.Unspecified, "Unspecified"),
+    Pair(ImeAction.NoAction, "NoAction"),
+    Pair(ImeAction.Go, "Go"),
+    Pair(ImeAction.Search, "Search"),
+    Pair(ImeAction.Send, "Send"),
+    Pair(ImeAction.Next, "Next"),
+    Pair(ImeAction.Done, "Done"),
+    Pair(ImeAction.Previous, "Previous")
+)
 
 @Composable
 fun InputFieldDemo() {
-    CraneWrapper {
-        VerticalScroller {
-            Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-                TagLine(tag = "simple editing")
-                EditLine()
+    VerticalScroller {
+        Column(crossAxisAlignment = CrossAxisAlignment.Start) {
+            TagLine(tag = "simple editing")
+            EditLine()
+            TagLine(tag = "simple editing2")
+            EditLine()
+
+            for ((type, name) in KEYBOARD_TYPES) {
+                TagLine(tag = "Keyboard Type: $name")
+                EditLine(keyboardType = type)
+            }
+
+            for ((action, name) in IME_ACTIONS) {
+                TagLine(tag = "Ime Action: $name")
+                EditLine(imeAction = action)
             }
         }
     }
 }
 
 @Composable
-fun EditLine() {
-    val state = +state { EditorState(text = "Hello, Editor", selection = TextRange(2, 2)) }
-    InputField(
+fun EditLine(
+    keyboardType: KeyboardType = KeyboardType.Text,
+    imeAction: ImeAction = ImeAction.Unspecified
+) {
+    val state = +state { EditorModel() }
+    TextField(
         value = state.value,
+        keyboardType = keyboardType,
+        imeAction = imeAction,
         onValueChange = { state.value = it },
-        editorStyle = EditorStyle(textStyle = TextStyle(fontSize = fontSize8))
+        editorStyle = EditorStyle()
     )
 }

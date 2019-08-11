@@ -43,6 +43,12 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 [![](http://img.youtube.com/vi/VsStyq4Lzxo/0.jpg)](http://www.youtube.com/watch?v=VsStyq4Lzxo "")
 Declarative UI Patterns (Google I/O'19)
 
+[![](http://img.youtube.com/vi/4EFjDSijAZU/0.jpg)](https://www.youtube.com/watch?v=4EFjDSijAZU "")
+Chain React 2019 - Leland Richardson - React, Meet Compose
+
+Android Developer Backstage:  Episode 115: Jetpack Compose 
+http://androidbackstage.blogspot.com/2019/06/episode-115-jetpack-compose.html
+
 Links:
 * [Compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)
 
@@ -62,10 +68,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
-
-## Known Issues
-- Elevation is not working 
-Because DrawShadow is not implemented https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/material/src/main/java/androidx/ui/material/surface/DrawShadow.kt
 
 License
 -------

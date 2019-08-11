@@ -28,6 +28,24 @@
   </scm>
   <dependencies>
     <dependency>
+      <groupId>org.jetbrains.kotlinx</groupId>
+      <artifactId>kotlinx-coroutines-android</artifactId>
+      <version>1.1.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>1.3.41</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.core</groupId>
+      <artifactId>core</artifactId>
+      <version>1.0.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>androidx.compose</groupId>
       <artifactId>compose-runtime</artifactId>
       <version>1.0.0-alpha01</version>
@@ -42,12 +60,6 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.jetbrains.kotlin</groupId>
-      <artifactId>kotlin-stdlib</artifactId>
-      <version>1.3.30-compose-20190503</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>androidx.ui</groupId>
       <artifactId>ui-platform</artifactId>
       <version>1.0.0-alpha01</version>
@@ -55,14 +67,15 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>androidx.core</groupId>
-      <artifactId>core</artifactId>
-      <version>1.0.0</version>
+      <groupId>androidx.ui</groupId>
+      <artifactId>ui-text</artifactId>
+      <version>1.0.0-alpha01</version>
+      <type>aar</type>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>androidx.ui</groupId>
-      <artifactId>ui-text</artifactId>
+      <artifactId>ui-vector</artifactId>
       <version>1.0.0-alpha01</version>
       <type>aar</type>
       <scope>compile</scope>
