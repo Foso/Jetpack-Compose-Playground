@@ -16,13 +16,12 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents
 
+import androidx.compose.Children
+import androidx.compose.Composable
+import androidx.compose.unaryPlus
 import androidx.ui.layout.FlexColumn
 import androidx.ui.material.surface.Surface
 import androidx.ui.material.themeColor
-import androidx.compose.Children
-import androidx.compose.Composable
-import androidx.compose.composer
-import androidx.compose.unaryPlus
 
 /**
  * This file contains Material components that are needed to build the Rally app and not

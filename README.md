@@ -26,7 +26,7 @@ This is an example project that is using an early alpha version of Jetpack Compo
 
 
 ### Project Structure
-* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 1.0.0-alpha01 and the Compiler Plugin 1.0.0-alpha01
+* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev01 and the Compiler Plugin 0.1.0-dev01
 I compiled this versions from the AndroidX git repo. Because Compose is still in early alpha stage, Google doesn't offer any binaries online. In the AndroidX repo, Compose is used with a special Kotlin compiler "1.3.30-compose-20190503", but i figured out, it is also working with the Kotlin compiler v1.3.40-eap-21. 
 
 * <kbd>app</kbd> - Base android project directory

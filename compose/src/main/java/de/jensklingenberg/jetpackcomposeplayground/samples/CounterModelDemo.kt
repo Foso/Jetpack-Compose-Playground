@@ -3,7 +3,7 @@ package de.jensklingenberg.jetpackcomposeplayground.samples
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
-import androidx.ui.core.CraneWrapper
+
 import androidx.ui.core.Text
 import androidx.ui.layout.Center
 import androidx.ui.layout.Column
@@ -19,17 +19,15 @@ class CounterModel {
 
 @Composable
 fun CounterModelDemo() {
-    CraneWrapper {
 
-        MaterialTheme {
-            val countState = CounterModel()
+    MaterialTheme {
+        val countState = CounterModel()
 
-            Center {
-                Column {
-                    CounterHeader(countState)
-                    AddSubtractButtons(countState)
-                    CounterLabel(countState)
-                }
+        Center {
+            Column {
+                CounterHeader(countState)
+                AddSubtractButtons(countState)
+                CounterLabel(countState)
             }
         }
     }

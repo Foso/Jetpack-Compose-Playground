@@ -143,8 +143,8 @@ function ensureComposeAt() {
   copyOption=$2
   idePluginJar="$pluginPath/r4a-ide-plugin.jar"
   compilerPluginJar="$pluginPath/r4a-compiler-plugin.jar"
-  compilerPluginJarOutput="androidx_prebuilts/out/ui/build/support_repo/androidx/compose/compose-plugin-cli/1.0.0-alpha01/compose-plugin-cli-1.0.0-alpha01.jar"
-  idePluginJarOutput="androidx_prebuilts/out/ui/build/support_repo/androidx/compose/compose-plugin-ide/1.0.0-alpha01/compose-plugin-ide-1.0.0-alpha01.jar"
+  compilerPluginJarOutput="androidx_prebuilts/out/ui/build/support_repo/androidx/compose/compose-plugin-cli/0.1.0-dev01/compose-plugin-cli-0.1.0-dev01.jar"
+  idePluginJarOutput="androidx_prebuilts/out/ui/build/support_repo/androidx/compose/compose-plugin-ide/0.1.0-dev01/compose-plugin-ide-0.1.0-dev01.jar"
   if [ ! -e "$idePluginJarOutput" ] || [ ! -e "$compilerPluginJarOutput" ]
   then
     echo "Building compose plugin"

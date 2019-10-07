@@ -16,14 +16,17 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples.rally
 
-import androidx.ui.core.Text
-import androidx.ui.core.dp
-
-import androidx.ui.material.themeTextStyle
 import androidx.compose.Composable
+import androidx.compose.state
 import androidx.compose.unaryPlus
-import androidx.ui.core.CraneWrapper
-import androidx.ui.layout.*
+import androidx.ui.core.dp
+import androidx.ui.foundation.VerticalScroller
+import androidx.ui.layout.Column
+import androidx.ui.layout.HeightSpacer
+import androidx.ui.layout.LayoutSize
+import androidx.ui.layout.padding
+import androidx.ui.material.Tab
+import androidx.ui.material.TabRow
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
 
 /**
@@ -33,39 +36,41 @@ import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaff
 
 @Composable
 fun RallyApp() {
-    CraneWrapper {
-        RallyTheme {
-            Scaffold(appBar = { RallyAppBar() }) {
-                VerticalScroller {
-                    RallyBody()
+    RallyTheme {
+        val allScreens = RallyScreenState.values().toList()
+        var currentScreen by +state { RallyScreenState.Overview }
+        Scaffold(appBar = {
+            TabRow(allScreens, selectedIndex = currentScreen.ordinal) { i, screen ->
+                Tab(text = screen.name, selected = currentScreen.ordinal == i) {
+                    currentScreen = screen
                 }
             }
+        }) {
+            currentScreen.body()
         }
     }
-
 }
-
-@Composable
-fun RallyAppBar() {
-    // TODO: Transform to tabs
-    Row {
-        // Icon()
-        Text(text = "Overview", style = +themeTextStyle { h4 })
-        // TODO: Other items
-    }
-}
-
 
 @Composable
 fun RallyBody() {
-    Padding(padding = 16.dp) {
-        Column {
-            // TODO: scrolling container
+    VerticalScroller {
+        Column(modifier = padding(16.dp), mainAxisSize = LayoutSize.Expand) {
             RallyAlertCard()
             HeightSpacer(height = 10.dp)
-            RallyAccountsCard()
+            RallyAccountsOverviewCard()
             HeightSpacer(height = 10.dp)
-            RallyBillsCard()
+            RallyBillsOverviewCard()
         }
     }
+}
+
+private enum class RallyScreenState {
+    Overview, Accounts, Bills
+}
+
+@Composable
+private fun RallyScreenState.body() = when (this) {
+    RallyScreenState.Overview -> RallyBody()
+    RallyScreenState.Accounts -> RallyAccountsCard()
+    RallyScreenState.Bills -> RallyBillsCard()
 }
