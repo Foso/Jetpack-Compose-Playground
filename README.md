@@ -32,12 +32,12 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.3.40-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.3.50-green.svg)]()
 
 
 ### Project Structure
-* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 1.0.0-alpha01 and the Compiler Plugin 1.0.0-alpha01
-I compiled this versions from the AndroidX git repo. Because Compose is still in early alpha stage, Google doesn't offer any binaries online. In the AndroidX repo, Compose is used with a special Kotlin compiler "1.3.30-compose-20190503", but i figured out, it is also working with the Kotlin compiler v1.3.40-eap-21.
+* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev01 and the Compiler Plugin 0.1.0-dev01
+I compiled this versions from the AndroidX git repo. Because Compose is still in early alpha stage, Google doesn't offer any binaries online.
 
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
@@ -67,10 +67,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
-
-## Known Issues
-- Elevation is not working
-Because DrawShadow is not implemented https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/material/src/main/java/androidx/ui/material/surface/DrawShadow.kt
 
 License
 -------
