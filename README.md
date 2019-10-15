@@ -16,7 +16,7 @@
 </p>
 
 ## Introduction 🙋‍♂️
-This is an example project that is using an early alpha version of Jetpack Compose https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/
+This is an Jetpack Compose 0.1.0-dev02 example project https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
