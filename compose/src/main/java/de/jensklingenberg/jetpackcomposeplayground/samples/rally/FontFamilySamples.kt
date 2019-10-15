@@ -16,10 +16,17 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples.rally
 
+
 import androidx.compose.Composable
 import androidx.ui.core.Text
 import androidx.ui.text.TextStyle
+import androidx.ui.text.font.Font
 import androidx.ui.text.font.FontFamily
+import androidx.ui.text.font.FontStyle
+import androidx.ui.text.font.FontSynthesis
+import androidx.ui.text.font.FontWeight
+
+
 
 
 @Composable
@@ -54,5 +61,35 @@ fun FontFamilyCursiveSample() {
     Text(
         text = "Demo Text cursive",
         style = TextStyle(fontFamily = FontFamily.Cursive)
+    )
+}
+
+
+@Composable
+fun CustomFontFamilySample() {
+    val fontFamily = FontFamily(
+        Font(name = "my_font_400_regular.ttf", weight = FontWeight.W400, style = FontStyle.Normal),
+        Font(name = "my_font_400_italic.ttf", weight = FontWeight.W400, style = FontStyle.Italic)
+    )
+    Text(text = "Demo Text", style = TextStyle(fontFamily = fontFamily))
+}
+
+
+@Composable
+fun FontFamilySynthesisSample() {
+    // The font family contains a single font, with normal weight
+    val fontFamily = FontFamily(
+        Font(name = "myfont.ttf", weight = FontWeight.Normal)
+    )
+    // Configuring the Text composable to be bold
+    // Using FontSynthesis.Weight to have the system render the font bold my making the glyphs
+    // thicker
+    Text(
+        text = "Demo Text",
+        style = TextStyle(
+            fontFamily = fontFamily,
+            fontWeight = FontWeight.Bold,
+            fontSynthesis = FontSynthesis.Weight
+        )
     )
 }

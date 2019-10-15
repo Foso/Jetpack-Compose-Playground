@@ -15,15 +15,14 @@
  */
 package de.jensklingenberg.jetpackcomposeplayground.samples.animation
 
-
 import android.os.Handler
 import android.os.Looper
-import androidx.animation.ColorPropKey
 import androidx.animation.FloatPropKey
 import androidx.animation.TransitionState
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
 import androidx.compose.Recompose
+import androidx.ui.animation.ColorPropKey
 import androidx.ui.animation.Transition
 import androidx.ui.core.Draw
 import androidx.ui.core.Layout

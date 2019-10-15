@@ -14,33 +14,38 @@
  * limitations under the License.
  */
 
-package androidx.ui.text.demos
+package de.jensklingenberg.jetpackcomposeplayground.samples.text
 
 import androidx.compose.Composable
-import androidx.ui.core.*
+import androidx.ui.core.Span
+import androidx.ui.core.Text
+import androidx.ui.core.px
 import androidx.ui.engine.geometry.Offset
-import androidx.ui.foundation.VerticalScroller
+import androidx.ui.text.font.FontStyle
+import androidx.ui.text.font.FontWeight
+import androidx.ui.text.style.TextAlign
+import androidx.ui.text.font.FontFamily
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.Shadow
 import androidx.ui.graphics.lerp
 import androidx.ui.layout.Column
 import androidx.ui.layout.CrossAxisAlignment
 import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.Row
-import androidx.ui.text.LocaleList
+import androidx.ui.foundation.VerticalScroller
 import androidx.ui.text.ParagraphStyle
+import androidx.ui.graphics.Shadow
 import androidx.ui.text.TextStyle
-import androidx.ui.text.font.FontFamily
-import androidx.ui.text.font.FontStyle
-import androidx.ui.text.font.FontWeight
-import androidx.ui.text.style.BaselineShift
-import androidx.ui.text.style.TextAlign
-import androidx.ui.text.style.TextDecoration
 import androidx.ui.text.style.TextOverflow
+import androidx.ui.core.Sp
+import androidx.ui.core.sp
+import androidx.ui.text.LocaleList
+import androidx.ui.text.samples.ParagraphStyleAnnotatedStringsSample
+import androidx.ui.text.samples.ParagraphStyleSample
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.FontFamilyCursiveSample
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.FontFamilyMonospaceSample
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.FontFamilySansSerifSample
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.FontFamilySerifSample
+
 
 val displayText = "Text Demo"
 val displayTextChinese = "文本演示"
@@ -60,6 +65,9 @@ fun TextDemo() {
         ) {
             TagLine(tag = "color, fontSize, fontWeight and fontStyle")
             TextDemoBasic()
+            TagLine(tag = "color, fontSize, fontWeight, fontFamily, fontStyle, letterSpacing, " +
+                    "background, decoration")
+            TextDemoComplexStyling()
             TagLine(tag = "Chinese, Arabic, and Hindi")
             TextDemoLanguage()
             TagLine(tag = "FontFamily generic names")
@@ -90,6 +98,8 @@ fun TextDemo() {
             TextDemoComposableTextSpan()
             TagLine(tag = "fontSizeScale")
             TextDemoFontSizeScale()
+            TagLine(tag = "complex paragraph styling")
+            TextDemoParagraphStyling()
         }
     }
 }
@@ -123,7 +133,7 @@ fun SecondTagLine(tag: String) {
 
 @Composable
 fun TextDemoBasic() {
-    // This group of text widgets show different color, fontSize, fontWeight and fontStyle in
+    // This group of text composables show different color, fontSize, fontWeight and fontStyle in
     // English.
     Text {
         Span(
@@ -131,7 +141,7 @@ fun TextDemoBasic() {
             style = TextStyle(
                 color = Color(0xFFFF0000),
                 fontSize = fontSize6,
-                fontWeight = FontWeight.w200,
+                fontWeight = FontWeight.W200,
                 fontStyle = FontStyle.Italic
             )
         )
@@ -141,7 +151,7 @@ fun TextDemoBasic() {
             style = TextStyle(
                 color = Color(0xFF00FF00),
                 fontSize = fontSize8,
-                fontWeight = FontWeight.w500,
+                fontWeight = FontWeight.W500,
                 fontStyle = FontStyle.Normal
             )
         )
@@ -151,7 +161,7 @@ fun TextDemoBasic() {
             style = TextStyle(
                 color = Color(0xFF0000FF),
                 fontSize = fontSize10,
-                fontWeight = FontWeight.w800,
+                fontWeight = FontWeight.W800,
                 fontStyle = FontStyle.Normal
             )
         )
@@ -159,8 +169,13 @@ fun TextDemoBasic() {
 }
 
 @Composable
+fun TextDemoComplexStyling() {
+    TextStyleSample()
+}
+
+@Composable
 fun TextDemoLanguage() {
-    // This group of text widgets show different color, fontSize, fontWeight and fontStyle in
+    // This group of text composables show different color, fontSize, fontWeight and fontStyle in
     // Chinese, Arabic, and Hindi.
     Text {
         Span(
@@ -168,7 +183,7 @@ fun TextDemoLanguage() {
             style = TextStyle(
                 color = Color(0xFFFF0000),
                 fontSize = fontSize6,
-                fontWeight = FontWeight.w200,
+                fontWeight = FontWeight.W200,
                 fontStyle = FontStyle.Italic
             )
         )
@@ -178,7 +193,7 @@ fun TextDemoLanguage() {
             style = TextStyle(
                 color = Color(0xFF00FF00),
                 fontSize = fontSize8,
-                fontWeight = FontWeight.w500,
+                fontWeight = FontWeight.W500,
                 fontStyle = FontStyle.Normal
             )
         )
@@ -188,7 +203,7 @@ fun TextDemoLanguage() {
             style = TextStyle(
                 color = Color(0xFF0000FF),
                 fontSize = fontSize10,
-                fontWeight = FontWeight.w800,
+                fontWeight = FontWeight.W800,
                 fontStyle = FontStyle.Normal
             )
         )
@@ -197,7 +212,7 @@ fun TextDemoLanguage() {
 
 @Composable
 fun TextDemoFontFamily() {
-    // This group of text widgets show different fontFamilies in English.
+    // This group of text composables show different fontFamilies in English.
     Text {
         Span(
             text = "$displayText sans-serif\n", style = TextStyle(
@@ -224,7 +239,7 @@ fun TextDemoFontFamily() {
 
 @Composable
 fun TextDemoFontFamilyDefaultValues() {
-    // This group of text widgets show the default font families in English.
+    // This group of text composables show the default font families in English.
     FontFamilySerifSample()
     FontFamilySansSerifSample()
     FontFamilyMonospaceSample()
@@ -233,39 +248,15 @@ fun TextDemoFontFamilyDefaultValues() {
 
 @Composable
 fun TextDemoTextDecoration() {
-    // This group of text widgets show different decoration, decorationColor and decorationStyle.
-    Text {
-        Span(
-            text = displayText, style = TextStyle(
-                fontSize = fontSize8,
-                decoration = TextDecoration.LineThrough
-            )
-        )
-
-        Span(
-            text = "$displayText\n", style = TextStyle(
-                fontSize = fontSize8,
-                decoration = TextDecoration.Underline
-            )
-        )
-
-        Span(
-            text = displayText, style = TextStyle(
-                fontSize = fontSize8,
-                decoration = TextDecoration.combine(
-                    listOf(
-                        TextDecoration.Underline,
-                        TextDecoration.LineThrough
-                    )
-                )
-            )
-        )
-    }
+    // This group of text composables show different decoration, decorationColor and decorationStyle.
+    TextDecorationLineThroughSample()
+    TextDecorationUnderlineSample()
+    TextDecorationCombinedSample()
 }
 
 @Composable
 fun TextDemoLetterSpacing() {
-    // This group of text widgets show different letterSpacing.
+    // This group of text composables show different letterSpacing.
     Text {
         Span(text = "$displayText   ", style = TextStyle(fontSize = fontSize8))
         Span(
@@ -280,30 +271,12 @@ fun TextDemoLetterSpacing() {
 
 @Composable
 fun TextDemoBaselineShift() {
-    Text {
-        Span(text = displayText, style = TextStyle(fontSize = fontSize8)) {
-            Span(
-                text = "superscript",
-                style = TextStyle(
-                    baselineShift = BaselineShift.Superscript,
-                    fontSize = fontSize4
-                )
-            ) {
-                Span(
-                    text = "subscript",
-                    style = TextStyle(
-                        baselineShift = BaselineShift.Subscript,
-                        fontSize = fontSize4
-                    )
-                )
-            }
-        }
-    }
+    BaselineShiftSample()
 }
 
 @Composable
 fun TextDemoHeight() {
-    // This group of text widgets show different height.
+    // This group of text composables show different height.
     Row(mainAxisSize = LayoutSize.Expand) {
         Text {
             Span(
@@ -312,9 +285,7 @@ fun TextDemoHeight() {
             )
         }
         Text(
-            paragraphStyle = ParagraphStyle(
-                lineHeight = 2.0f
-            )
+            paragraphStyle = ParagraphStyle(lineHeight = 50.sp)
         ) {
             Span(
                 text = "$displayText\n$displayText   ",
@@ -328,7 +299,7 @@ fun TextDemoHeight() {
 
 @Composable
 fun TextDemoBackground() {
-    // This group of text widgets show different background.
+    // This group of text composables show different background.
     Text {
         Span(
             text = "$displayText   ",
@@ -358,7 +329,7 @@ fun TextDemoBackground() {
 
 @Composable
 fun TextDemoLocale() {
-    // This group of text widgets show different Locales of the same Unicode codepoint.
+    // This group of text composables show different Locales of the same Unicode codepoint.
     val text = "\u82B1"
     Text {
         Span(
@@ -389,7 +360,7 @@ fun TextDemoLocale() {
 
 @Composable
 fun TextDemoTextAlign() {
-    // This group of text widgets show different TextAligns: LEFT, RIGHT, CENTER, JUSTIFY, START for
+    // This group of text composables show different TextAligns: LEFT, RIGHT, CENTER, JUSTIFY, START for
     // LTR and RTL, END for LTR and RTL.
     var text = ""
     for (i in 1..10) {
@@ -459,7 +430,7 @@ fun TextDemoTextAlign() {
 
 @Composable
 fun TextDemoSoftWrap() {
-    // This group of text widgets show difference between softWrap is true and false.
+    // This group of text composables show difference between softWrap is true and false.
     var text = ""
     for (i in 1..10) {
         text = "$text$displayText"
@@ -480,7 +451,7 @@ fun TextDemoSoftWrap() {
     }
 }
 
-// TODO(Migration/qqd): Impelement text demo for overflow and maxLines.
+// TODO(qqd): Impelement text demo for overflow and maxLines.
 
 @Composable
 fun TexDemoTextOverflowFade() {
@@ -545,4 +516,10 @@ fun TextDemoFontSizeScale() {
             }
         }
     }
+}
+
+@Composable
+fun TextDemoParagraphStyling() {
+    ParagraphStyleSample()
+    ParagraphStyleAnnotatedStringsSample()
 }

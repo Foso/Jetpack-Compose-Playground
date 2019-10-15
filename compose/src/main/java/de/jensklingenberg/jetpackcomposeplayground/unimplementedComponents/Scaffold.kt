@@ -16,7 +16,7 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents
 
-import androidx.compose.Children
+
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.layout.FlexColumn
@@ -29,14 +29,15 @@ import androidx.ui.material.themeColor
  * component may look like API wise.
  */
 
+
 @Composable
-fun Scaffold(appBar: @Composable() () -> Unit, @Children children: @Composable() () -> Unit) {
+fun Scaffold(appBar: @Composable() () -> Unit, children: @Composable() () -> Unit) {
     FlexColumn {
         inflexible {
             appBar()
         }
         expanded(flex = 1.0f) {
-            Surface(color = +themeColor { surface }) {
+            Surface(color = +themeColor { background }) {
                 children()
             }
         }

@@ -16,23 +16,21 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.samples.layout
 
+
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
-
 import androidx.ui.core.TextField
-import androidx.ui.foundation.VerticalScroller
-import androidx.ui.input.EditorModel
 import androidx.ui.input.EditorStyle
 import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
 import androidx.ui.layout.Column
 import androidx.ui.layout.CrossAxisAlignment
 import androidx.ui.layout.LayoutSize
+import androidx.ui.foundation.VerticalScroller
 import androidx.ui.text.TextStyle
-import androidx.ui.text.demos.TagLine
-import androidx.ui.text.demos.fontSize8
-
+import de.jensklingenberg.jetpackcomposeplayground.samples.text.TagLine
+import de.jensklingenberg.jetpackcomposeplayground.samples.text.fontSize8
 
 val KEYBOARD_TYPES = listOf(
     Pair(KeyboardType.Text, "Text"),
@@ -85,7 +83,7 @@ fun EditLine(
     keyboardType: KeyboardType = KeyboardType.Text,
     imeAction: ImeAction = ImeAction.Unspecified
 ) {
-    val state = +state { EditorModel() }
+    val state = +state { "" }
     TextField(
         value = state.value,
         keyboardType = keyboardType,

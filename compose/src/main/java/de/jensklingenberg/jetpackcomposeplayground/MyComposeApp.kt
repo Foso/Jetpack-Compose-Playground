@@ -10,7 +10,7 @@ import androidx.ui.layout.HeightSpacer
 import androidx.ui.material.Button
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
-import androidx.ui.text.demos.TextDemo
+import de.jensklingenberg.jetpackcomposeplayground.samples.text.TextDemo
 import de.jensklingenberg.jetpackcomposeplayground.demos.MultipleCollectTest
 import de.jensklingenberg.jetpackcomposeplayground.model.Navigation
 import de.jensklingenberg.jetpackcomposeplayground.model.Page

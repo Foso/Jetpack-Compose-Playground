@@ -16,19 +16,24 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.demos
 
-import androidx.compose.Children
-import androidx.compose.Composable
-import androidx.compose.state
-import androidx.compose.unaryPlus
+
+import androidx.ui.layout.Row
 import androidx.ui.core.PxPosition
 import androidx.ui.core.Text
 import androidx.ui.core.dp
 import androidx.ui.core.gesture.PressGestureDetector
 import androidx.ui.core.px
-import androidx.ui.layout.*
+import androidx.ui.layout.Column
+import androidx.ui.layout.Container
+import androidx.ui.layout.CrossAxisAlignment
+import androidx.ui.layout.LayoutSize
+import androidx.ui.layout.MainAxisAlignment
 import androidx.ui.material.Button
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
+import androidx.compose.Composable
+import androidx.compose.state
+import androidx.compose.unaryPlus
 
 /** A [SemanticProperty] is used to store semantic information about a component.
  *
@@ -139,7 +144,7 @@ fun PressGestureDetectorWithActions(
     onPress: SemanticAction<PxPosition> = SemanticAction(defaultParam = PxPosition.Origin) { },
     onRelease: SemanticAction<Unit> = SemanticAction(defaultParam = Unit) { },
     onCancel: SemanticAction<Unit> = SemanticAction(defaultParam = Unit) { },
-    @Children children: @Composable() () -> Unit
+    children: @Composable() () -> Unit
 ) {
     PressGestureDetector(
         onPress = { onPress.action(ActionParam(ActionCaller.PointerInput, it)) },
@@ -160,9 +165,9 @@ fun PressGestureDetectorWithActions(
 fun Semantics(
     @Suppress("UNUSED_PARAMETER") properties: Set<SemanticProperty<out Any>> = setOf(),
     actions: Set<SemanticAction<out Any?>> = setOf(),
-    @Children children: @Composable() () -> Unit
+    children: @Composable() () -> Unit
 ) {
-    Column {
+    Column(mainAxisSize = LayoutSize.Expand) {
         MaterialTheme {
             Collapsable {
                 InvokeActionsByType(actions)
@@ -172,6 +177,7 @@ fun Semantics(
             }
         }
         Row(
+            mainAxisSize = LayoutSize.Expand,
             mainAxisAlignment = MainAxisAlignment.Center,
             crossAxisAlignment = CrossAxisAlignment.Center
         ) {
@@ -191,7 +197,10 @@ private fun InvokeActionsByType(actions: Set<SemanticAction<out Any?>> = setOf()
     val secondary =
         actions.firstOrNull { it.types.contains(AccessibilityAction.Secondary) }
     Text(text = "Accessibility Actions By Type", style = +themeTextStyle { h6.copy() })
-    Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
+    Row(
+        mainAxisSize = LayoutSize.Expand,
+        mainAxisAlignment = MainAxisAlignment.SpaceEvenly
+    ) {
         Button(
             text = "Primary",
             onClick = { primary?.invoke(ActionCaller.Accessibility) })
@@ -209,7 +218,10 @@ private fun InvokeActionsByPhrase(actions: Set<SemanticAction<out Any?>> = setOf
     Text(
         text = "Accessibility Actions By Phrase",
         style = +themeTextStyle { h6.copy() })
-    Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
+    Row(
+        mainAxisSize = LayoutSize.Expand,
+        mainAxisAlignment = MainAxisAlignment.SpaceEvenly
+    ) {
         actions.forEach {
             Button(
                 text = it.phrase,
@@ -226,7 +238,10 @@ private fun InvokeActionsByAssistantAction(actions: Set<SemanticAction<out Any?>
     val positive = actions.firstOrNull { it.types.contains(PolarityAction.Positive) }
     val negative = actions.firstOrNull { it.types.contains(PolarityAction.Negative) }
     Text(text = "Assistant Actions", style = +themeTextStyle { h6.copy() })
-    Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
+    Row(
+        mainAxisSize = LayoutSize.Expand,
+        mainAxisAlignment = MainAxisAlignment.SpaceEvenly
+    ) {
         Button(
             text = "Negative",
             onClick = { negative?.invoke(ActionCaller.Assistant) })
@@ -250,7 +265,10 @@ private fun InvokeActionsByParameters(actions: Set<SemanticAction<out Any?>> = s
     val unitAction =
         actions.firstOrNull { it.defaultParam is Unit } as SemanticAction<Unit>?
     Text(text = "Actions using Parameters", style = +themeTextStyle { h6.copy() })
-    Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
+    Row(
+        mainAxisSize = LayoutSize.Expand,
+        mainAxisAlignment = MainAxisAlignment.SpaceEvenly
+    ) {
         Button(
             text = "IntAction",
             onClick = { pxPositionAction?.invoke(param = PxPosition(1.px, 1.px)) })
@@ -270,11 +288,14 @@ private enum class CollapseMode { Visible, Collapsed }
  * children or make them visible.
  */
 @Composable
-private fun Collapsable(@Children children: @Composable() () -> Unit) {
+private fun Collapsable(children: @Composable() () -> Unit) {
 
     val collapsedState = +state { CollapseMode.Collapsed }
 
-    Row(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
+    Row(
+        mainAxisSize = LayoutSize.Expand,
+        mainAxisAlignment = MainAxisAlignment.SpaceEvenly
+    ) {
         Button(text = "Show/Hide Actions", onClick = {
             collapsedState.value = when (collapsedState.value) {
                 CollapseMode.Collapsed -> CollapseMode.Visible

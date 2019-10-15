@@ -18,12 +18,13 @@ package de.jensklingenberg.jetpackcomposeplayground.demos
 
 import android.app.Activity
 import android.os.Bundle
-import androidx.animation.ColorPropKey
+
 import androidx.animation.FloatPropKey
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
+import androidx.ui.animation.ColorPropKey
 import androidx.ui.animation.Transition
 import androidx.ui.core.*
 import androidx.ui.core.gesture.PressGestureDetector

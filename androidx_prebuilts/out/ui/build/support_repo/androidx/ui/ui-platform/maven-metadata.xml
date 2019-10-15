@@ -3,10 +3,10 @@
   <groupId>androidx.ui</groupId>
   <artifactId>ui-platform</artifactId>
   <versioning>
-    <release>0.1.0-dev01</release>
+    <release>0.1.0-dev02</release>
     <versions>
-      <version>0.1.0-dev01</version>
+      <version>0.1.0-dev02</version>
     </versions>
-    <lastUpdated>20191007162524</lastUpdated>
+    <lastUpdated>20191015191227</lastUpdated>
   </versioning>
 </metadata>

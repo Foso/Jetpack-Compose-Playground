@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>androidx.compose</groupId>
+  <artifactId>compose-ide-plugin</artifactId>
+  <version>0.1.0-dev02</version>
+  <name>AndroidX Compose IDE Plugin</name>
+  <description>Contains the IDE plugin for Compose</description>
+  <url>https://developer.android.com/jetpack/androidx</url>
+  <inceptionYear>2019</inceptionYear>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>The Android Open Source Project</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:https://android.googlesource.com/platform/frameworks/support</connection>
+    <url>http://source.android.com</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>ui.compose</groupId>
+      <artifactId>compose-compiler-hosted</artifactId>
+      <version>0.1.0-dev02</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>

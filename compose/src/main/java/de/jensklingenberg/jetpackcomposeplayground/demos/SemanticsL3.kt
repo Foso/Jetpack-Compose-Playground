@@ -16,7 +16,7 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.demos
 
-import androidx.compose.Children
+
 import androidx.compose.Composable
 
 /**
@@ -28,7 +28,7 @@ import androidx.compose.Composable
 @Composable
 fun ClickInteraction(
     click: SemanticActionBuilder<Unit>.() -> Unit,
-    @Children children: @Composable() () -> Unit
+    children: @Composable() () -> Unit
 ) {
     val clickAction = SemanticActionBuilder(phrase = "Click", defaultParam = Unit)
         .apply(click)
