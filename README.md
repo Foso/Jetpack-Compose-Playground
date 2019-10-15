@@ -32,11 +32,11 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.3.50-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.3.60-green.svg)]()
 
 
 ### Project Structure
-* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev01 and the Compiler Plugin 0.1.0-dev01
+* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev02 and the Compiler Plugin 0.1.0-dev02
 I compiled this versions from the AndroidX git repo. Because Compose is still in early alpha stage, Google doesn't offer any binaries online.
 
 * <kbd>app</kbd> - Base android project directory
