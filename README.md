@@ -18,7 +18,7 @@
 ## Introduction 🙋‍♂️
 This is an Jetpack Compose 0.1.0-dev02 example project https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/
 
-> :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
+> :information_source: Please be aware that the Android Team said that Compose should not be used in a production application.
 
 
 ### Show some :heart: and star the repo to support the project
