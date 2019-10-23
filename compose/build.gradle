@@ -4,7 +4,7 @@ apply plugin: "kotlin-android"
 
 
 repositories {
-    maven { url "$androidx_home/out/ui/build/support_repo/" }
+   // maven { url "$androidx_home/out/ui/build/support_repo/" }
     google()
     jcenter()
 }

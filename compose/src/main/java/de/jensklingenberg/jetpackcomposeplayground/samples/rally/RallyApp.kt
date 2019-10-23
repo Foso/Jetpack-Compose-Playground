@@ -24,7 +24,7 @@ import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.Column
 import androidx.ui.layout.HeightSpacer
 import androidx.ui.layout.LayoutSize
-import androidx.ui.layout.padding
+import androidx.ui.layout.Padding
 import androidx.ui.material.Tab
 import androidx.ui.material.TabRow
 import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
@@ -54,13 +54,16 @@ fun RallyApp() {
 @Composable
 fun RallyBody() {
     VerticalScroller {
-        Column(modifier = padding(16.dp), mainAxisSize = LayoutSize.Expand) {
-            RallyAlertCard()
-            HeightSpacer(height = 10.dp)
-            RallyAccountsOverviewCard()
-            HeightSpacer(height = 10.dp)
-            RallyBillsOverviewCard()
+        Padding(16.dp){
+            Column( mainAxisSize = LayoutSize.Expand) {
+                RallyAlertCard()
+                HeightSpacer(height = 10.dp)
+                RallyAccountsOverviewCard()
+                HeightSpacer(height = 10.dp)
+                RallyBillsOverviewCard()
+            }
         }
+
     }
 }
 

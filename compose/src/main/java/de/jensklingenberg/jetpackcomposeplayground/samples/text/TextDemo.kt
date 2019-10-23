@@ -29,7 +29,6 @@ import androidx.ui.graphics.Color
 import androidx.ui.graphics.lerp
 import androidx.ui.layout.Column
 import androidx.ui.layout.CrossAxisAlignment
-import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.Row
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.text.ParagraphStyle
@@ -37,10 +36,11 @@ import androidx.ui.graphics.Shadow
 import androidx.ui.text.TextStyle
 import androidx.ui.text.style.TextOverflow
 import androidx.ui.core.Sp
+import androidx.ui.core.em
 import androidx.ui.core.sp
+import androidx.ui.layout.ExpandedHeight
+import androidx.ui.layout.ExpandedWidth
 import androidx.ui.text.LocaleList
-import androidx.ui.text.samples.ParagraphStyleAnnotatedStringsSample
-import androidx.ui.text.samples.ParagraphStyleSample
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.FontFamilyCursiveSample
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.FontFamilyMonospaceSample
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.FontFamilySansSerifSample
@@ -59,10 +59,7 @@ val fontSize10: Sp = 30.sp
 @Composable
 fun TextDemo() {
     VerticalScroller {
-        Column(
-            mainAxisSize = LayoutSize.Expand,
-            crossAxisAlignment = CrossAxisAlignment.Start
-        ) {
+        Column(crossAxisAlignment = CrossAxisAlignment.Start) {
             TagLine(tag = "color, fontSize, fontWeight and fontStyle")
             TextDemoBasic()
             TagLine(tag = "color, fontSize, fontWeight, fontFamily, fontStyle, letterSpacing, " +
@@ -263,7 +260,7 @@ fun TextDemoLetterSpacing() {
             text = displayText,
             style = TextStyle(
                 fontSize = fontSize8,
-                letterSpacing = 0.5f
+                letterSpacing = 0.5.em
             )
         )
     }
@@ -277,7 +274,7 @@ fun TextDemoBaselineShift() {
 @Composable
 fun TextDemoHeight() {
     // This group of text composables show different height.
-    Row(mainAxisSize = LayoutSize.Expand) {
+    Row(ExpandedWidth) {
         Text {
             Span(
                 text = "$displayText\n$displayText   ",
@@ -367,7 +364,7 @@ fun TextDemoTextAlign() {
         text = "$text$displayText "
     }
     Column(
-        mainAxisSize = LayoutSize.Expand,
+        ExpandedHeight,
         crossAxisAlignment = CrossAxisAlignment.Start
     ) {
         SecondTagLine(tag = "textAlign = TextAlign.Left")
@@ -439,7 +436,7 @@ fun TextDemoSoftWrap() {
         TextStyle(fontSize = fontSize8, color = Color(0xFFFF0000))
 
     Column(
-        mainAxisSize = LayoutSize.Expand,
+        ExpandedHeight,
         crossAxisAlignment = CrossAxisAlignment.Start
     ) {
         Text {
