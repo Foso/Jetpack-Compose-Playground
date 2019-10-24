@@ -45,8 +45,8 @@ the demo classes i copied out of the AndroidX repo (https://android.googlesource
 Inside the MyComposeApp() you can change the demo page that should be opened
 
 # What is Jetpack Compose
-[![](http://img.youtube.com/vi/VsStyq4Lzxo/0.jpg)](http://www.youtube.com/watch?v=VsStyq4Lzxo "")
-Declarative UI Patterns (Google I/O'19)
+[![](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd "")
+What's New in Jetpack Compose (Android Dev Summit '19)
 
 Links:
 * [Compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)
