@@ -18,7 +18,7 @@
 ## Introduction 🙋‍♂️
 This is an Jetpack Compose 0.1.0-dev02 example project https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/
 
-> :information_source: Please be aware that the Android Team said that Compose should not be used in a production application.
+> :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
 
 ### Show some :heart: and star the repo to support the project
@@ -36,18 +36,20 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 
 ### Project Structure
-* You need at least Android Studio 4.0 to build this project https://developer.android.com/studio/preview/
+* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev02 and the Compiler Plugin 0.1.0-dev02
+I compiled this versions from the AndroidX git repo. Because Compose is still in early alpha stage, Google doesn't offer any binaries online.
+
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
 the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/)
 Inside the MyComposeApp() you can change the demo page that should be opened
 
 # What is Jetpack Compose
-[![](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd "")
-What's New in Jetpack Compose (Android Dev Summit '19)
+[![](https://img.youtube.com/vi/dtm2h-_sNDQ/0.jpg)](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd&index=8&t=0s "")
+Declarative UI Patterns (Google I/O'19)
 
 Links:
-* [Compose Tutorial](https://developer.android.com/jetpack/compose/tutorial)
+* [Compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)
 
 * [Compose from first Principles ](http://intelligiblebabble.com/compose-from-first-principles/)
 
