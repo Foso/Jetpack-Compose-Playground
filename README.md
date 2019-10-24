@@ -18,7 +18,7 @@
 ## Introduction 🙋‍♂️
 This is an Jetpack Compose 0.1.0-dev02 example project https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/
 
-> :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
+> :information_source: Please be aware that the Android Team said that Compose should not be used in a production application.
 
 
 ### Show some :heart: and star the repo to support the project
@@ -36,9 +36,7 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 
 ### Project Structure
-* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev02 and the Compiler Plugin 0.1.0-dev02
-I compiled this versions from the AndroidX git repo. Because Compose is still in early alpha stage, Google doesn't offer any binaries online.
-
+* You need at least Android Studio 4.0 to build this project https://developer.android.com/studio/preview/
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
 the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/)
@@ -49,7 +47,7 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 What's New in Jetpack Compose (Android Dev Summit '19)
 
 Links:
-* [Compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)
+* [Compose Tutorial](https://developer.android.com/jetpack/compose/tutorial)
 
 * [Compose from first Principles ](http://intelligiblebabble.com/compose-from-first-principles/)
 
