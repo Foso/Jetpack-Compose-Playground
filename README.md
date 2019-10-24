@@ -49,10 +49,11 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 Declarative UI Patterns (Google I/O'19)
 
 Links:
+* [Jetpack Compose Tutorial ](https://developer.android.com/jetpack/compose)
+
 * [Compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)
 
 * [Compose from first Principles ](http://intelligiblebabble.com/compose-from-first-principles/)
-
 
 
 ## ✍️ Feedback
