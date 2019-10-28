@@ -61,6 +61,8 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 - [Jetpack compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/README.md)
 
 ## Conference Talks
+[![](https://img.youtube.com/vi/dtm2h-_sNDQ/0.jpg)](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd&index=8&t=0s "")
+What's New in Jetpack Compose (Android Dev Summit '19)
 - [Google IO19 - Declarative UI patterns](https://youtu.be/VsStyq4Lzxo)
 - [DroidconBerlin - Jetpack Compose — Next Gen Kotlin UI Toolkit for Android](https://www.droidcon.com/media-detail?video=353079951)
 - [DroidconBerlin -  Jumping into Jetpack Compose way too early to see what's inside](https://www.droidcon.com/media-detail?video=352686988)
@@ -97,8 +99,7 @@ Feel free to contribute!
 
 
 # What is Jetpack Compose
-[![](https://img.youtube.com/vi/dtm2h-_sNDQ/0.jpg)](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd&index=8&t=0s "")
-What's New in Jetpack Compose (Android Dev Summit '19)
+
 
 Links:
 * [Jetpack Compose Tutorial ](https://developer.android.com/jetpack/compose)
