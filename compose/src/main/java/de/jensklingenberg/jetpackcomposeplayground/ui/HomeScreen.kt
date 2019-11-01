@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground
+package de.jensklingenberg.jetpackcomposeplayground.ui
 
-import android.view.LayoutInflater
 import androidx.compose.Composable
 import androidx.compose.State
 import androidx.ui.core.dp
@@ -26,6 +25,8 @@ import androidx.ui.layout.Column
 import androidx.ui.layout.HeightSpacer
 import androidx.ui.material.Button
 import androidx.ui.material.Divider
+import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
+
 
 
 @Composable

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents
+package de.jensklingenberg.jetpackcomposeplayground.samples.layout
 
 
 import androidx.compose.Composable

@@ -10,8 +10,7 @@ import androidx.ui.layout.CrossAxisAlignment
 import androidx.ui.layout.FlexColumn
 import androidx.ui.material.*
 import androidx.ui.material.surface.Surface
-import de.jensklingenberg.compocialmedia.lightThemeColors
-import de.jensklingenberg.compocialmedia.themeTypography
+import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
 import de.jensklingenberg.jetpackcomposeplayground.samples.common.MultipleCollectTest
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.samples.*
@@ -23,6 +22,7 @@ import de.jensklingenberg.jetpackcomposeplayground.samples.animation.StateBasedR
 import de.jensklingenberg.jetpackcomposeplayground.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.RallyApp
 import de.jensklingenberg.jetpackcomposeplayground.samples.text.TextDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
 
 
 @Composable
@@ -46,7 +46,11 @@ fun MainPage() {
                 )
             },
             bodyContent = {
-                AppContent({ onDrawerStateChange(DrawerState.Opened) }, pageIndex)
+                AppContent({
+                    onDrawerStateChange(
+                        DrawerState.Opened
+                    )
+                }, pageIndex)
             }
         )
     }
@@ -67,7 +71,9 @@ private fun AppContent(
                     TopAppBar(
                         title = { Text(text = "Jetpack Compose Playground") },
                         navigationIcon = {
-                            VectorImageButton(R.drawable.ic_menu_24px) {
+                            VectorImageButton(
+                                R.drawable.ic_menu_24px
+                            ) {
                                 openDrawer()
                             }
                         }
@@ -76,7 +82,9 @@ private fun AppContent(
                 expanded(1F) {
                     when (pageIndex.value) {
                         -1 -> {
-                            HomeScreen(pageIndex)
+                            HomeScreen(
+                                pageIndex
+                            )
                         }
                         else -> {
                             mainPagesEntries[pageIndex.value].function.invoke()
@@ -92,29 +100,4 @@ private fun AppContent(
     }
 }
 
-
-val mainPagesEntries = listOf(
-    //  Page("AppBarDemo") { AppBarDemo() },
-    Page("TextDemo") { TextDemo() },
-    Page("ButtonDemo") { ButtonDemo() },
-    // Page("RippleDemo") { RippleDemo() },
-    Page("CounterDemo") { CounterDemo() },
-    Page("RallyApp") { RallyApp() },
-    Page("CounterModelDemo") { CounterModelDemo() },
-    Page("DividersDemo") { DividersDemo() },
-    Page("ProgressIndicatorDemo") { ProgressIndicatorDemo() },
-    Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
-    Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
-    Page("Rowdemo") { RowDemo() },
-    Page("ColumnDemo") { ColumnDemo() },
-    Page("StackDemo") { StackDemo() },
-    Page("Animation") { HelloAnimation() },
-    Page("HelloGesture") { HelloGesture() },
-    Page("RepeatedRotation") { RepeatedRotation() },
-    Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
-    Page("MultipleCollectTest") { MultipleCollectTest() },
-    Page("InputFieldDemo") { InputFieldDemo() }
-
-
-)
 

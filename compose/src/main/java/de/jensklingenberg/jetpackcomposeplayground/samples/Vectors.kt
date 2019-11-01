@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground
+package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.annotation.DrawableRes
 import androidx.compose.Composable

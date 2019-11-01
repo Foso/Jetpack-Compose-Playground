@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground
+package de.jensklingenberg.jetpackcomposeplayground.samples.layout
 
 import androidx.annotation.DrawableRes
 import androidx.compose.Composable
@@ -14,6 +14,8 @@ import androidx.ui.material.TextButtonStyle
 import androidx.ui.material.surface.Surface
 import androidx.ui.material.themeColor
 import androidx.ui.material.themeTextStyle
+import de.jensklingenberg.jetpackcomposeplayground.samples.VectorImage
+import de.jensklingenberg.jetpackcomposeplayground.mainPagesEntries
 import de.jensklingenberg.jetpackcomposeplayground.samples.R
 
 

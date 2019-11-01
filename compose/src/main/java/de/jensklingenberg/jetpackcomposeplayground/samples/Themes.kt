@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.compocialmedia
+package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.ui.graphics.Color
 import androidx.ui.material.MaterialColors

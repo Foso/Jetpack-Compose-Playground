@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground
+package de.jensklingenberg.jetpackcomposeplayground.samples
 
 import androidx.compose.Model
 import androidx.compose.frames.ModelList
@@ -30,7 +30,8 @@ sealed class Screen {
 
 @Model
 object JetnewsStatus {
-    var currentScreen: Screen = Screen.Home
+    var currentScreen: Screen =
+        Screen.Home
     val favorites = ModelList<String>()
     val selectedTopics = ModelList<String>()
 }

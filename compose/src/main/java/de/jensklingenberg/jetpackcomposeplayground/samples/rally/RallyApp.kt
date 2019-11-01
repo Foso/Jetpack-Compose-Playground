@@ -27,7 +27,7 @@ import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.Padding
 import androidx.ui.material.Tab
 import androidx.ui.material.TabRow
-import de.jensklingenberg.jetpackcomposeplayground.unimplementedComponents.Scaffold
+import de.jensklingenberg.jetpackcomposeplayground.samples.layout.Scaffold
 
 /**
  * This Activity recreates the Rally Material Study from
@@ -39,13 +39,14 @@ fun RallyApp() {
     RallyTheme {
         val allScreens = RallyScreenState.values().toList()
         var currentScreen by +state { RallyScreenState.Overview }
-        Scaffold(appBar = {
-            TabRow(allScreens, selectedIndex = currentScreen.ordinal) { i, screen ->
-                Tab(text = screen.name, selected = currentScreen.ordinal == i) {
-                    currentScreen = screen
+        Scaffold(
+            appBar = {
+                TabRow(allScreens, selectedIndex = currentScreen.ordinal) { i, screen ->
+                    Tab(text = screen.name, selected = currentScreen.ordinal == i) {
+                        currentScreen = screen
+                    }
                 }
-            }
-        }) {
+            }) {
             currentScreen.body()
         }
     }
