@@ -10,13 +10,13 @@
 
  <p align="left">
     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/MainPage.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/counterdemo.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/selectiondemo.png" height=500 />
      <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/TextDemo.png" height=500 />
 
 </p>
 
 ## Introduction 🙋‍♂️
-This is an Jetpack Compose 0.1.0-dev02 example project https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/
+This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
