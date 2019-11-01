@@ -6,11 +6,11 @@ apply plugin: 'kotlin-android-extensions'
 
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "de.jensklingenberg.jetpackcomposeplayground"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -42,6 +42,7 @@ dependencies {
     implementation "androidx.compose:compose-runtime:$composeVersion"
     implementation "androidx.ui:ui-core:$composeVersion"
     implementation "androidx.ui:ui-framework:$composeVersion"
+    implementation 'androidx.ui:ui-tooling:0.1.0-dev02'
 
 
     testImplementation "junit:junit:4.12"

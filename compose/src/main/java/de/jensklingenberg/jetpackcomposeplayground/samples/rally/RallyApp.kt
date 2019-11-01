@@ -54,8 +54,8 @@ fun RallyApp() {
 @Composable
 fun RallyBody() {
     VerticalScroller {
-        Padding(16.dp){
-            Column( mainAxisSize = LayoutSize.Expand) {
+        Padding(16.dp) {
+            Column(mainAxisSize = LayoutSize.Expand) {
                 RallyAlertCard()
                 HeightSpacer(height = 10.dp)
                 RallyAccountsOverviewCard()

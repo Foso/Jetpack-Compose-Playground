@@ -5,6 +5,10 @@ apply plugin: "kotlin-android"
 
 repositories {
    // maven { url "$androidx_home/out/ui/build/support_repo/" }
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
     google()
     jcenter()
 }
@@ -60,6 +64,7 @@ dependencies {
     implementation "androidx.core:core-ktx:1.1.0"
     implementation "androidx.compose:compose-runtime:0.1.0-dev02"
     api "androidx.ui:ui-core:0.1.0-dev02"
+    implementation 'androidx.ui:ui-tooling:0.1.0-dev02'
 
     implementation "androidx.ui:ui-framework:0.1.0-dev02"
     implementation "androidx.ui:ui-material:0.1.0-dev02"

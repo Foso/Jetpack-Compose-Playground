@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.demos
+package de.jensklingenberg.jetpackcomposeplayground.samples.animation
 
 import android.app.Activity
 import android.os.Bundle
@@ -31,6 +31,7 @@ import androidx.ui.core.gesture.PressGestureDetector
 import androidx.ui.engine.geometry.Offset
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
+import de.jensklingenberg.jetpackcomposeplayground.samples.common.*
 
 /* Demo app created to study the interaction of animations, gestures and semantics. */
 class AnimationGestureSemanticsActivity : Activity() {
@@ -78,8 +79,14 @@ class AnimationGestureSemanticsActivity : Activity() {
     fun WithoutSemanticActions() {
         val animationEndState = +state { ComponentState.Released }
         PressGestureDetector(
-            onPress = { animationEndState.value = ComponentState.Pressed },
-            onRelease = { animationEndState.value = ComponentState.Released }) {
+            onPress = {
+                animationEndState.value =
+                    ComponentState.Pressed
+            },
+            onRelease = {
+                animationEndState.value =
+                    ComponentState.Released
+            }) {
             Animation(animationEndState = animationEndState.value)
         }
     }
@@ -92,22 +99,39 @@ class AnimationGestureSemanticsActivity : Activity() {
     fun Level1Api() {
         val animationEndState = +state { ComponentState.Released }
 
-        val pressedAction = SemanticAction<PxPosition>(
-            phrase = "Pressed",
-            defaultParam = PxPosition.Origin,
-            types = setOf(AccessibilityAction.Primary, PolarityAction.Negative)
-        ) {
-            animationEndState.value = ComponentState.Pressed
-        }
+        val pressedAction =
+            SemanticAction<PxPosition>(
+                phrase = "Pressed",
+                defaultParam = PxPosition.Origin,
+                types = setOf(
+                    AccessibilityAction.Primary,
+                    PolarityAction.Negative
+                )
+            ) {
+                animationEndState.value =
+                    ComponentState.Pressed
+            }
 
-        val releasedAction = SemanticAction<Unit>(
-            phrase = "Released",
-            defaultParam = Unit,
-            types = setOf(AccessibilityAction.Secondary, PolarityAction.Positive)
-        ) { animationEndState.value = ComponentState.Released }
+        val releasedAction =
+            SemanticAction<Unit>(
+                phrase = "Released",
+                defaultParam = Unit,
+                types = setOf(
+                    AccessibilityAction.Secondary,
+                    PolarityAction.Positive
+                )
+            ) {
+                animationEndState.value =
+                    ComponentState.Released
+            }
 
         Semantics(
-            properties = setOf(Label("Animating Circle"), Visibility.Visible),
+            properties = setOf(
+                Label(
+                    "Animating Circle"
+                ),
+                Visibility.Visible
+            ),
             actions = setOf(pressedAction, releasedAction)
         ) {
             PressGestureDetectorWithActions(
@@ -128,13 +152,25 @@ class AnimationGestureSemanticsActivity : Activity() {
         SemanticAction(
             phrase = "Shrink",
             defaultParam = PxPosition.Origin,
-            types = setOf<ActionType>(AccessibilityAction.Primary, PolarityAction.Negative),
-            action = { animationEndState.value = ComponentState.Pressed }) { shrinkAction ->
+            types = setOf<ActionType>(
+                AccessibilityAction.Primary,
+                PolarityAction.Negative
+            ),
+            action = {
+                animationEndState.value =
+                    ComponentState.Pressed
+            }) { shrinkAction ->
             SemanticAction(
                 phrase = "Enlarge",
                 defaultParam = Unit,
-                types = setOf<ActionType>(AccessibilityAction.Secondary, PolarityAction.Positive),
-                action = { animationEndState.value = ComponentState.Released }) { enlargeAction ->
+                types = setOf<ActionType>(
+                    AccessibilityAction.Secondary,
+                    PolarityAction.Positive
+                ),
+                action = {
+                    animationEndState.value =
+                        ComponentState.Released
+                }) { enlargeAction ->
                 SemanticProperties(
                     label = "Animating Circle",
                     visibility = Visibility.Visible,
@@ -181,7 +217,10 @@ class AnimationGestureSemanticsActivity : Activity() {
         ClickInteraction(
             click = {
                 phrase = "Toggle"
-                types = setOf(AccessibilityAction.Primary, PolarityAction.Positive)
+                types = setOf(
+                    AccessibilityAction.Primary,
+                    PolarityAction.Positive
+                )
                 action = {
                     animationEndState.value = when (animationEndState.value) {
                         ComponentState.Released -> ComponentState.Pressed

@@ -32,7 +32,7 @@ class SecondActivity : AppCompatActivity() {
 
         setContent {
 
-            mainPagesEntries[pageIndex].function(this)
+            mainPagesEntries[pageIndex].function()
         }
     }
 

@@ -62,8 +62,10 @@ fun TextDemo() {
         Column(crossAxisAlignment = CrossAxisAlignment.Start) {
             TagLine(tag = "color, fontSize, fontWeight and fontStyle")
             TextDemoBasic()
-            TagLine(tag = "color, fontSize, fontWeight, fontFamily, fontStyle, letterSpacing, " +
-                    "background, decoration")
+            TagLine(
+                tag = "color, fontSize, fontWeight, fontFamily, fontStyle, letterSpacing, " +
+                        "background, decoration"
+            )
             TextDemoComplexStyling()
             TagLine(tag = "Chinese, Arabic, and Hindi")
             TextDemoLanguage()

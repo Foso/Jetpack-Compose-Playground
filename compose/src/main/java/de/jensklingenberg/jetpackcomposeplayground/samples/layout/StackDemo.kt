@@ -13,7 +13,7 @@ import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
 import androidx.ui.text.style.TextAlign
-import de.jensklingenberg.jetpackcomposeplayground.demos.ColoredRect
+import de.jensklingenberg.jetpackcomposeplayground.samples.common.ColoredRect
 import de.jensklingenberg.jetpackcomposeplayground.samples.rally.rallyBlue
 
 

@@ -19,6 +19,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.animation.FloatPropKey
 import androidx.animation.TransitionState
+import androidx.animation.TweenBuilder
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
 import androidx.compose.Recompose
@@ -86,6 +87,7 @@ fun DrawColorRectState(state: TransitionState) {
     val scaleY = state[y]
 
     DrawRectangle(color = color)
+
 
     val paint = Paint().apply {
         this.color = Color(alpha = 255, red = 255, green = 255, blue = 255)

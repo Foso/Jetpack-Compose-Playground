@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.demos
+package de.jensklingenberg.jetpackcomposeplayground.samples.common
 
 
 import androidx.compose.Composable
@@ -30,7 +30,10 @@ fun ClickInteraction(
     click: SemanticActionBuilder<Unit>.() -> Unit,
     children: @Composable() () -> Unit
 ) {
-    val clickAction = SemanticActionBuilder(phrase = "Click", defaultParam = Unit)
+    val clickAction = SemanticActionBuilder(
+        phrase = "Click",
+        defaultParam = Unit
+    )
         .apply(click)
         .also {
             if (it.types.none { type -> type is AccessibilityAction }) {
@@ -38,8 +41,14 @@ fun ClickInteraction(
             }
         }.build()
 
-    Semantics(actions = setOf(clickAction)) {
-        PressGestureDetectorWithActions(onRelease = clickAction) { children() }
+    Semantics(
+        actions = setOf(
+            clickAction
+        )
+    ) {
+        PressGestureDetectorWithActions(
+            onRelease = clickAction
+        ) { children() }
     }
 }
 
@@ -52,5 +61,11 @@ class SemanticActionBuilder<T>(
     var types: Set<ActionType> = setOf(),
     var action: (ActionParam<T>) -> Unit = {}
 ) {
-    fun build() = SemanticAction(phrase, defaultParam, types, action)
+    fun build() =
+        SemanticAction(
+            phrase,
+            defaultParam,
+            types,
+            action
+        )
 }

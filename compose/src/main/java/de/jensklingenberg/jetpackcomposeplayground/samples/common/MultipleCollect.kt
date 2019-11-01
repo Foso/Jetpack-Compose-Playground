@@ -16,7 +16,7 @@
 
 @file:Suppress("PLUGIN_WARNING")
 
-package de.jensklingenberg.jetpackcomposeplayground.demos
+package de.jensklingenberg.jetpackcomposeplayground.samples.common
 
 import androidx.compose.Composable
 import androidx.ui.core.*
@@ -27,7 +27,11 @@ import androidx.ui.graphics.SolidColor
 
 @Composable
 fun ColoredRect(brush: Brush, width: Dp? = null, height: Dp? = null) {
-    Layout(children = { DrawFillRect(brush = brush) }) { _, constraints ->
+    Layout(children = {
+        DrawFillRect(
+            brush = brush
+        )
+    }) { _, constraints ->
         layout(
             width?.toIntPx()?.coerceIn(constraints.minWidth, constraints.maxWidth)
                 ?: constraints.maxWidth,
@@ -39,7 +43,11 @@ fun ColoredRect(brush: Brush, width: Dp? = null, height: Dp? = null) {
 
 @Composable
 fun ColoredRect(color: Color, width: Dp? = null, height: Dp? = null) {
-    ColoredRect(brush = SolidColor(color), width = width, height = height)
+    ColoredRect(
+        brush = SolidColor(
+            color
+        ), width = width, height = height
+    )
 }
 
 @Composable
@@ -88,13 +96,24 @@ fun HeaderFooterLayout(
 @Composable
 fun MultipleCollectTest() {
     val header = @Composable {
-        ColoredRect(color = Color(android.graphics.Color.GRAY))
+        ColoredRect(
+            color = Color(android.graphics.Color.GRAY)
+        )
     }
     val footer = @Composable {
-        ColoredRect(color = Color(android.graphics.Color.BLUE))
+        ColoredRect(
+            color = Color(android.graphics.Color.BLUE)
+        )
     }
-    HeaderFooterLayout(header = header, footer = footer) {
-        ColoredRect(color = Color(android.graphics.Color.GREEN))
-        ColoredRect(color = Color(android.graphics.Color.YELLOW))
+    HeaderFooterLayout(
+        header = header,
+        footer = footer
+    ) {
+        ColoredRect(
+            color = Color(android.graphics.Color.GREEN)
+        )
+        ColoredRect(
+            color = Color(android.graphics.Color.YELLOW)
+        )
     }
 }

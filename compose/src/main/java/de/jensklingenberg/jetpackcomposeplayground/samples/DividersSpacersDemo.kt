@@ -32,7 +32,7 @@ import androidx.ui.layout.WidthSpacer
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.themeTextStyle
-import de.jensklingenberg.jetpackcomposeplayground.demos.ColoredRect
+import de.jensklingenberg.jetpackcomposeplayground.samples.common.ColoredRect
 
 @Composable
 fun DividersDemo() {

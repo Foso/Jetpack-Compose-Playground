@@ -18,6 +18,7 @@ package de.jensklingenberg.jetpackcomposeplayground.samples.animation
 
 import android.app.Activity
 import android.os.Bundle
+import androidx.animation.AnimationBuilder
 import androidx.animation.FloatPropKey
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
@@ -32,11 +33,16 @@ import androidx.ui.core.setContent
 import androidx.ui.engine.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
+import androidx.ui.material.MaterialTheme
+import androidx.ui.vectormath64.Matrix4
 
 
 @Composable
 fun HelloGesture() {
-    TransitionExample()
+    MaterialTheme {
+        TransitionExample()
+
+    }
 }
 
 private enum class ComponentState { Pressed, Released }
@@ -66,7 +72,10 @@ fun TransitionExample() {
             Transition(definition = definition, toState = toState.value) { state ->
                 DrawScaledRect(scale = state[scale], color = state[color])
             }
+
+
         }
+
         Layout(children) { _, constraints ->
             layout(constraints.maxWidth, constraints.maxHeight) {}
         }

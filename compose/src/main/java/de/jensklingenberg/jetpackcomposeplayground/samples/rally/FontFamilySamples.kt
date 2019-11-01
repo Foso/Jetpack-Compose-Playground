@@ -27,8 +27,6 @@ import androidx.ui.text.font.FontSynthesis
 import androidx.ui.text.font.FontWeight
 
 
-
-
 @Composable
 fun FontFamilySansSerifSample() {
     Text(

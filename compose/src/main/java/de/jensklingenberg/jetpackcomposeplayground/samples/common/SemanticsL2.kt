@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.demos
+package de.jensklingenberg.jetpackcomposeplayground.samples.common
 
 
 import androidx.compose.Composable
@@ -32,14 +32,21 @@ fun SemanticProperties(
     val propertySet = mutableSetOf<SemanticProperty<out Any>>()
 
     if (!label.isEmpty()) {
-        propertySet.add(Label(label))
+        propertySet.add(
+            Label(
+                label
+            )
+        )
     }
 
     if (visibility != Visibility.Undefined) {
         propertySet.add(visibility)
     }
 
-    Semantics(properties = propertySet, actions = actions) { children() }
+    Semantics(
+        properties = propertySet,
+        actions = actions
+    ) { children() }
 }
 
 /**
@@ -63,6 +70,12 @@ fun <T> SemanticAction(
     action: (ActionParam<T>) -> Unit,
     block: @Composable() (SemanticAction<T>) -> Unit
 ) {
-    val semanticAction = SemanticAction<T>(phrase, defaultParam, types, action)
+    val semanticAction =
+        SemanticAction<T>(
+            phrase,
+            defaultParam,
+            types,
+            action
+        )
     block.invoke(semanticAction)
 }

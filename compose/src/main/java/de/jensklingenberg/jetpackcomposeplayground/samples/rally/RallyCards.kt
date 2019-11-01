@@ -67,6 +67,7 @@ fun RallyAlertCard() {
         }
     }
 }
+
 /**
  * The Accounts card within the Rally Overview screen.
  */
@@ -106,6 +107,7 @@ fun RallyAccountsOverviewCard() {
         }
     }
 }
+
 /**
  * The Accounts composable used in a separate tab.
  */
@@ -116,8 +118,10 @@ fun RallyAccountsCard() {
             Stack(Spacing(16.dp)) {
                 aligned(Alignment.Center) {
                     val accountsProportion = listOf(0.595f, 0.045f, 0.095f, 0.195f, 0.045f)
-                    val colors = listOf(0xFF1EB980, 0xFF005D57, 0xFF04B97F, 0xFF37EFBA,
-                        0xFFFAFFBF).map { Color(it) }
+                    val colors = listOf(
+                        0xFF1EB980, 0xFF005D57, 0xFF04B97F, 0xFF37EFBA,
+                        0xFFFAFFBF
+                    ).map { Color(it) }
                     Container(height = 300.dp, expanded = true) {
                         DrawAnimatedCircle(accountsProportion, colors)
                     }
@@ -162,6 +166,7 @@ fun RallyAccountsCard() {
         }
     }
 }
+
 /**
  * A row within the Accounts card in the Rally Overview screen.
  */
@@ -184,6 +189,7 @@ fun RallyAccountRow(name: String, number: String, amount: String, color: Color) 
         }
     }
 }
+
 /**
  * A vertical colored line that is used in a [RallyAccountRow] to differentiate accounts.
  */
@@ -191,6 +197,7 @@ fun RallyAccountRow(name: String, number: String, amount: String, color: Color) 
 fun AccountIndicator(color: Color) {
     ColoredRect(color = color, width = 4.dp, height = 36.dp)
 }
+
 /**
  * The Bills card within the Rally Overview screen.
  */
@@ -231,6 +238,7 @@ fun RallyBillsOverviewCard() {
         }
     }
 }
+
 /**
  * The Accounts composable used in a separate tab.
  */
@@ -242,7 +250,8 @@ fun RallyBillsCard() {
                 aligned(alignment = Alignment.Center) {
                     val accountsProportion = listOf(0.65f, 0.25f, 0.03f, 0.05f)
                     val colors = listOf(0xFF1EB980, 0xFF005D57, 0xFF04B97F, 0xFF37EFBA).map {
-                        Color(it) }
+                        Color(it)
+                    }
                     Container(height = 300.dp, expanded = true) {
                         DrawAnimatedCircle(accountsProportion, colors)
                     }
@@ -288,5 +297,6 @@ fun RallyBillsCard() {
         }
     }
 }
+
 @Composable
 fun RallyDivider() = Divider(color = +themeColor { background }, height = 2.dp)

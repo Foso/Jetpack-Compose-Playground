@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.demos
+package de.jensklingenberg.jetpackcomposeplayground.samples.common
 
 
 import androidx.ui.layout.Row
@@ -49,13 +49,16 @@ interface SemanticProperty<T> {
 // These are some example SemanticProperties provided by the framework.
 
 /** [Label] stores a string that describes the component. */
-class Label(override var value: String) : SemanticProperty<String> {
+class Label(override var value: String) :
+    SemanticProperty<String> {
     // Labels are concatenated.
-    override fun merge(other: SemanticProperty<String>) = Label("$this $other")
+    override fun merge(other: SemanticProperty<String>) =
+        Label("$this $other")
 }
 
 /** [Visibility] stores an enum that represents the visibility of the component. */
-enum class Visibility : SemanticProperty<Visibility> {
+enum class Visibility :
+    SemanticProperty<Visibility> {
     @Suppress("Unused")
     Undefined,
     Visible,
@@ -84,7 +87,12 @@ class SemanticAction<T>(
 fun <T> SemanticAction<T>.invoke(
     caller: ActionCaller = ActionCaller.Unknown,
     param: T = defaultParam
-) = action(ActionParam(caller, param))
+) = action(
+    ActionParam(
+        caller,
+        param
+    )
+)
 
 /**
  * The parameter sent to every callback. In addition to the parameter value, it also provides
@@ -120,17 +128,22 @@ interface ActionType
 
 // These are some example action types provided by the framework:
 @Suppress("Unused")
-class Autofill : ActionType
+class Autofill :
+    ActionType
 
-enum class PolarityAction : ActionType { Positive, Negative }
+enum class PolarityAction :
+    ActionType { Positive, Negative }
 
-enum class AccessibilityAction : ActionType { Primary, Secondary }
+enum class AccessibilityAction :
+    ActionType { Primary, Secondary }
 
 @Suppress("Unused")
-enum class EditAction : ActionType { Cut, Copy, Paste, Select, SelectAll, Clear, Undo }
+enum class EditAction :
+    ActionType { Cut, Copy, Paste, Select, SelectAll, Clear, Undo }
 
 @Suppress("Unused")
-enum class NavigationAction : ActionType { Back, Forward, Up, Down, Left, Right }
+enum class NavigationAction :
+    ActionType { Back, Forward, Up, Down, Left, Right }
 
 /**
  * A PressGestureDetector that uses actions instead of lambda callbacks.
@@ -141,15 +154,42 @@ enum class NavigationAction : ActionType { Back, Forward, Up, Down, Left, Right 
 @Suppress("Unused")
 @Composable
 fun PressGestureDetectorWithActions(
-    onPress: SemanticAction<PxPosition> = SemanticAction(defaultParam = PxPosition.Origin) { },
-    onRelease: SemanticAction<Unit> = SemanticAction(defaultParam = Unit) { },
-    onCancel: SemanticAction<Unit> = SemanticAction(defaultParam = Unit) { },
+    onPress: SemanticAction<PxPosition> = SemanticAction(
+        defaultParam = PxPosition.Origin
+    ) { },
+    onRelease: SemanticAction<Unit> = SemanticAction(
+        defaultParam = Unit
+    ) { },
+    onCancel: SemanticAction<Unit> = SemanticAction(
+        defaultParam = Unit
+    ) { },
     children: @Composable() () -> Unit
 ) {
     PressGestureDetector(
-        onPress = { onPress.action(ActionParam(ActionCaller.PointerInput, it)) },
-        onRelease = { onRelease.action(ActionParam(ActionCaller.PointerInput, Unit)) },
-        onCancel = { onCancel.action(ActionParam(ActionCaller.PointerInput, Unit)) }) {
+        onPress = {
+            onPress.action(
+                ActionParam(
+                    ActionCaller.PointerInput,
+                    it
+                )
+            )
+        },
+        onRelease = {
+            onRelease.action(
+                ActionParam(
+                    ActionCaller.PointerInput,
+                    Unit
+                )
+            )
+        },
+        onCancel = {
+            onCancel.action(
+                ActionParam(
+                    ActionCaller.PointerInput,
+                    Unit
+                )
+            )
+        }) {
         children()
     }
 }
@@ -170,10 +210,18 @@ fun Semantics(
     Column(mainAxisSize = LayoutSize.Expand) {
         MaterialTheme {
             Collapsable {
-                InvokeActionsByType(actions)
-                InvokeActionsByPhrase(actions)
-                InvokeActionsByAssistantAction(actions)
-                InvokeActionsByParameters(actions)
+                InvokeActionsByType(
+                    actions
+                )
+                InvokeActionsByPhrase(
+                    actions
+                )
+                InvokeActionsByAssistantAction(
+                    actions
+                )
+                InvokeActionsByParameters(
+                    actions
+                )
             }
         }
         Row(
