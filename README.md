@@ -69,6 +69,10 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 
 - [Understanding Compose (Android Dev Summit '19)](https://www.youtube.com/watch?v=Q9MtlmmN4Q0)
 
+[![](https://img.youtube.com/vi/oEy6nJaMtLM/0.jpg)](https://www.youtube.com/watch?v=oEy6nJaMtLM "")
+
+- [#AskAndroid at Android Dev Summit 2019 - Jetpack Compose](https://www.youtube.com/watch?v=oEy6nJaMtLM)
+
 - [Google IO19 - Declarative UI patterns](https://youtu.be/VsStyq4Lzxo)
 - [DroidconBerlin - Jetpack Compose — Next Gen Kotlin UI Toolkit for Android](https://www.droidcon.com/media-detail?video=353079951)
 - [DroidconBerlin -  Jumping into Jetpack Compose way too early to see what's inside](https://www.droidcon.com/media-detail?video=352686988)
