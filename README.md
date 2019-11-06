@@ -48,6 +48,8 @@ Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/ma
 
 ## Content
 - [Official Documentation](#Official-Documentation)
+- [Other Documentation](#Other-Documentation)
+
 - [Conference talks](#Conference-talks)
 - [Articles](#Articles) 
 - [SpeakerDeck](#SpeakerDeck)
@@ -58,6 +60,10 @@ Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/ma
 ## Official Documentation
 - [Jetpack compose](https://developer.android.com/jetpack/compose)
 - [Jetpack compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/README.md)
+
+## Other Documentation
+- [FAQ about Jetpack Compose – Android’s modern toolkit for building native UI](https://github.com/Mishkun/jetpack-compose-faq)
+- [This Wiki](https://github.com/Foso/Jetpack-Compose-Playground/wiki)
 
 ## Conference Talks
 [![](https://img.youtube.com/vi/dtm2h-_sNDQ/0.jpg)](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd&index=8&t=0s "")
