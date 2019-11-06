@@ -1,12 +1,16 @@
 package de.jensklingenberg.jetpackcomposeplayground.data
 
+import androidx.ui.material.samples.SimpleDataTable
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.*
 
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.StateBasedRippleDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.layout.*
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.CustomAlertDialogSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.SelectionsControlsDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.SideBySideAlertDialogSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.StackedAlertDialogSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.InputFieldDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.MultipleCollectTest
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.*
@@ -14,6 +18,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.rally.
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.ButtonDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.CounterDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.TextDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.CounterModelDemo
 
 
 val animationDemos = listOf(
@@ -26,7 +31,6 @@ val animationDemos = listOf(
     Page("SpringBackScrolling") { SpringBackScrollingDemo() },
     Page("SwipeToDismiss") { SwipeToDismissDemo() },
     Page("CrossfadeDemo") { CrossfadeDemo() }
-
 
 
 )
@@ -57,7 +61,15 @@ val layoutDemos = listOf(
 val materialDemos = listOf(
     Page("RallyApp") { RallyApp() },
     Page("ButtonDemo") { ButtonDemo() },
-    Page("CounterDemo") { CounterDemo() }
+
+    //Dialogs
+    Page("SideBySideAlertDialogSample") { SideBySideAlertDialogSample() },
+    Page("SideBySideAlertDialogSample") { StackedAlertDialogSample() },
+    Page("CustomAlertDialogSample") { CustomAlertDialogSample() },
+
+    //Table
+    Page("SimpleDataTable") { SimpleDataTable() }
+
 
 )
 
@@ -68,8 +80,7 @@ val otherDemos = listOf(
 )
 
 
-
-val mainPagesEntries = animationDemos + layoutDemos +materialDemos+ otherDemos + listOf(
+val mainPagesEntries = animationDemos + layoutDemos + materialDemos + otherDemos + listOf(
 
     Page("TextDemo") { TextDemo() },
     Page("CounterModelDemo") { CounterModelDemo() },

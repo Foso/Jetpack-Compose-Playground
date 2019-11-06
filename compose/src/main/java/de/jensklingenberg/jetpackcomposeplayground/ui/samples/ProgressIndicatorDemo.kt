@@ -20,10 +20,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples
 import android.os.Handler
 import androidx.compose.*
 import androidx.ui.graphics.Color
-import androidx.ui.layout.FlexColumn
-import androidx.ui.layout.LayoutSize
-import androidx.ui.layout.MainAxisAlignment
-import androidx.ui.layout.Row
+import androidx.ui.layout.*
 import androidx.ui.material.CircularProgressIndicator
 import androidx.ui.material.LinearProgressIndicator
 import androidx.ui.material.MaterialTheme
@@ -79,15 +76,15 @@ private class ProgressState {
 }
 
 @Composable
-private fun ProgressIndicator() {
-    val state: ProgressState = ProgressState()
+private fun ProgressIndicator(state: ProgressState = ProgressState()) {
+
     +onActive { state.start() }
     +onDispose { state.stop() }
 
     FlexColumn {
         expanded(flex = 1f) {
             Row(
-                mainAxisSize = LayoutSize.Expand,
+                ExpandedWidth,
                 mainAxisAlignment = MainAxisAlignment.SpaceEvenly
             ) {
                 // Determinate indicators
@@ -95,7 +92,7 @@ private fun ProgressIndicator() {
                 CircularProgressIndicator(progress = state.progress)
             }
             Row(
-                mainAxisSize = LayoutSize.Expand,
+                ExpandedWidth,
                 mainAxisAlignment = MainAxisAlignment.SpaceEvenly
             ) {
                 // Fancy colours!
@@ -106,7 +103,7 @@ private fun ProgressIndicator() {
                 )
             }
             Row(
-                mainAxisSize = LayoutSize.Expand,
+                ExpandedWidth,
                 mainAxisAlignment = MainAxisAlignment.SpaceEvenly
             ) {
                 // Indeterminate indicators
@@ -116,4 +113,3 @@ private fun ProgressIndicator() {
         }
     }
 }
-

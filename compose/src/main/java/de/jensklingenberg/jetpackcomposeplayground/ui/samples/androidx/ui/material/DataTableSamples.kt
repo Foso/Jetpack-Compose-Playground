@@ -22,6 +22,7 @@ import androidx.compose.Model
 import androidx.ui.material.DataTable
 import androidx.ui.material.DefaultDataTablePagination
 import androidx.ui.material.DefaultDataTableSorting
+import androidx.ui.material.MaterialTheme
 
 @Model
 private data class Dessert(
@@ -133,31 +134,34 @@ private val mutableDesserts = mutableListOf(
 
 @Composable
 fun SimpleDataTable() {
-    DataTable(
-        columns = headers.size,
-        numeric = { j -> j != 0 }
-    ) {
-        headerRow(text = { j -> headers[j] })
+    MaterialTheme {
+        DataTable(
+            columns = headers.size,
+            numeric = { j -> j != 0 }
+        ) {
+            headerRow(text = { j -> headers[j] })
 
-        desserts.forEach { dessert ->
-            dataRow(
-                text = { j ->
-                    when (j) {
-                        0 -> dessert.name
-                        1 -> dessert.calories.toString()
-                        2 -> dessert.fat.toString()
-                        3 -> dessert.carbs.toString()
-                        4 -> dessert.protein.toString()
-                        5 -> dessert.sodium.toString()
-                        6 -> dessert.calcium.toString() + "%"
-                        else -> dessert.iron.toString() + "%"
-                    }
-                },
-                selected = dessert.selected,
-                onSelectedChange = { dessert.selected = it }
-            )
+            desserts.forEach { dessert ->
+                dataRow(
+                    text = { j ->
+                        when (j) {
+                            0 -> dessert.name
+                            1 -> dessert.calories.toString()
+                            2 -> dessert.fat.toString()
+                            3 -> dessert.carbs.toString()
+                            4 -> dessert.protein.toString()
+                            5 -> dessert.sodium.toString()
+                            6 -> dessert.calcium.toString() + "%"
+                            else -> dessert.iron.toString() + "%"
+                        }
+                    },
+                    selected = dessert.selected,
+                    onSelectedChange = { dessert.selected = it }
+                )
+            }
         }
     }
+
 }
 
 

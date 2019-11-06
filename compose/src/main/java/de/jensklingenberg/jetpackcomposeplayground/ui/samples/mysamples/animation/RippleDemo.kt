@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.animation
 
 import androidx.compose.Composable
 import androidx.compose.unaryPlus

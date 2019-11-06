@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material
 
 
 import androidx.compose.Composable

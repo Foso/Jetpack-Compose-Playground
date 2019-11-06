@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other
 
 import androidx.compose.Composable
 import androidx.compose.state
@@ -21,13 +21,20 @@ class CounterModel {
 fun CounterModelDemo() {
 
     MaterialTheme {
-        val countState = CounterModel()
+        val countState =
+            CounterModel()
 
         Center {
             Column {
-                CounterHeader(countState)
-                AddSubtractButtons(countState)
-                CounterLabel(countState)
+                CounterHeader(
+                    countState
+                )
+                AddSubtractButtons(
+                    countState
+                )
+                CounterLabel(
+                    countState
+                )
             }
         }
     }
