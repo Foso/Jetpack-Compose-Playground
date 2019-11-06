@@ -36,7 +36,6 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 
 ### Project Structure
-* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev02 and the Compiler Plugin 0.1.0-dev02
 You need at least Android Studio 4.0 to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Base android project directory
