@@ -11,17 +11,9 @@ import androidx.ui.layout.FlexColumn
 import androidx.ui.material.*
 import androidx.ui.material.surface.Surface
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
-import de.jensklingenberg.jetpackcomposeplayground.samples.common.MultipleCollectTest
-import de.jensklingenberg.jetpackcomposeplayground.model.Page
-import de.jensklingenberg.jetpackcomposeplayground.samples.*
-import de.jensklingenberg.jetpackcomposeplayground.samples.R
-import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloAnimation
-import de.jensklingenberg.jetpackcomposeplayground.samples.animation.HelloGesture
-import de.jensklingenberg.jetpackcomposeplayground.samples.animation.RepeatedRotation
-import de.jensklingenberg.jetpackcomposeplayground.samples.animation.StateBasedRippleDemo
-import de.jensklingenberg.jetpackcomposeplayground.samples.layout.*
-import de.jensklingenberg.jetpackcomposeplayground.samples.rally.RallyApp
-import de.jensklingenberg.jetpackcomposeplayground.samples.text.TextDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.*
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
 
 

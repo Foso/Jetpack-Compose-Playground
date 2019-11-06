@@ -12,6 +12,6 @@
         tools:printViewInfos="true"
         tools:paintBounds="true"
 
-        tools:composableName="de.jensklingenberg.jetpackcomposeplayground.samples.CounterDemoAppKt.CounterDemo" />
+        tools:composableName="de.jensklingenberg.jetpackcomposeplayground.ui.samples.CounterDemoAppKt.CounterDemo" />
 
 </LinearLayout>
