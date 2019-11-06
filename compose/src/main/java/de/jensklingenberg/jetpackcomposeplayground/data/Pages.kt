@@ -1,38 +1,56 @@
 package de.jensklingenberg.jetpackcomposeplayground.data
 
+import androidx.ui.animation.Crossfade
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.*
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation.HelloAnimation
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation.HelloGesture
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation.RepeatedRotation
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation.StateBasedRippleDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.*
+
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.StateBasedRippleDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.MultipleCollectTest
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.rally.RallyApp
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.text.TextDemo
 
 
-val mainPagesEntries = listOf(
-    //  Page("AppBarDemo") { AppBarDemo() },
+val animationDemos = listOf(
+    Page("FancyScrollingExample") { FancyScrollingExample() },
+
+    Page("AnimatableSeekBar") { AnimatableSeekBarDemo() },
+    Page("HelloGesture") { HelloGestureDemo() },
+    Page("HelloAnimation") { HelloAnimationDemo() },
+    Page("RepeatedRotation") { RepeatedRotation() },
+    Page("SpringBackScrolling") { SpringBackScrollingDemo() },
+    Page("SwipeToDismiss") { SwipeToDismissDemo() },
+    Page("CrossfadeDemo") { CrossfadeDemo() }
+
+
+
+)
+
+val layoutDemos = listOf(
+    Page("Rowdemo") { RowDemo() },
+    Page("ColumnDemo") { ColumnDemo() },
+    Page("StackDemo") { StackDemo() }
+
+)
+
+val otherDemos = listOf(
+    Page("RallyApp") { RallyApp() },
+    Page("CounterDemo") { CounterDemo() }
+
+)
+
+val mainPagesEntries = animationDemos + layoutDemos + otherDemos + listOf(
+
     Page("TextDemo") { TextDemo() },
     Page("ButtonDemo") { ButtonDemo() },
-    // Page("RippleDemo") { RippleDemo() },
-    Page("CounterDemo") { CounterDemo() },
-    Page("RallyApp") { RallyApp() },
     Page("CounterModelDemo") { CounterModelDemo() },
     Page("DividersDemo") { DividersDemo() },
     Page("ProgressIndicatorDemo") { ProgressIndicatorDemo() },
     Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
     Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
-    Page("Rowdemo") { RowDemo() },
-    Page("ColumnDemo") { ColumnDemo() },
-    Page("StackDemo") { StackDemo() },
-    Page("Animation") { HelloAnimation() },
-    Page("HelloGesture") { HelloGesture() },
-    Page("RepeatedRotation") { RepeatedRotation() },
+
     Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
     Page("MultipleCollectTest") { MultipleCollectTest() },
     Page("InputFieldDemo") { InputFieldDemo() }
-
-
 )

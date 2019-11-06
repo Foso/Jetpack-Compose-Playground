@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation
 
 
 import android.graphics.PointF
@@ -42,20 +42,28 @@ fun StateBasedRippleDemo() {
 fun RippleRect() {
     val radius = withDensity(+ambientDensity()) { TargetRadius.toPx() }
     val toState = +state { ButtonStatus.Initial }
-    val rippleTransDef = +memo { createTransDef(radius.value) }
+    val rippleTransDef = +memo {
+        createTransDef(
+            radius.value
+        )
+    }
     val onPress: (PxPosition) -> Unit = { position ->
         down.x = position.x.value
         down.y = position.y.value
-        toState.value = ButtonStatus.Pressed
+        toState.value =
+            ButtonStatus.Pressed
     }
 
     val onRelease: () -> Unit = {
-        toState.value = ButtonStatus.Released
+        toState.value =
+            ButtonStatus.Released
     }
     PressGestureDetector(onPress = onPress, onRelease = onRelease) {
         Container(expanded = true) {
             Transition(definition = rippleTransDef, toState = toState.value) { state ->
-                RippleRectFromState(state = state)
+                RippleRectFromState(
+                    state = state
+                )
             }
         }
     }
@@ -71,7 +79,7 @@ fun RippleRectFromState(state: TransitionState) {
     val paint =
         Paint().apply {
             color = Color(
-                alpha = (state[de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation.alpha] * 255).toInt(),
+                alpha = (state[de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.alpha] * 255).toInt(),
                 red = 0,
                 green = 235,
                 blue = 224
@@ -134,7 +142,8 @@ private fun createTransDef(targetRadius: Float): TransitionDefinition<ButtonStat
             }
             interruptionHandling = InterruptionHandling.UNINTERRUPTIBLE
             // switch back to Initial to prepare for the next ripple cycle
-            nextState = ButtonStatus.Initial
+            nextState =
+                ButtonStatus.Initial
         }
 
         // State switch without animation

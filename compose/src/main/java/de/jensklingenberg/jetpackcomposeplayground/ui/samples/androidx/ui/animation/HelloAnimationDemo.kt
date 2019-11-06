@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation
 
 import android.os.Handler
 import android.os.Looper
@@ -31,8 +31,9 @@ import androidx.ui.engine.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 
+
 @Composable
-fun HelloAnimation() {
+fun HelloAnimationDemo() {
     Layout(children = { ColorRect() }) { _, constraints ->
         layout(constraints.maxWidth, constraints.maxHeight) {}
     }
@@ -61,20 +62,25 @@ val handler = Handler(Looper.getMainLooper())
 
 @Composable
 fun ColorRect() {
-    var toState = OverlayState.Closed
+    var toState =
+        OverlayState.Closed
     Recompose { recompose ->
         handler.postDelayed(object : Runnable {
             override fun run() {
                 if ((0..1).random() == 0) {
-                    toState = OverlayState.Open
+                    toState =
+                        OverlayState.Open
                 } else {
-                    toState = OverlayState.Closed
+                    toState =
+                        OverlayState.Closed
                 }
                 recompose()
             }
         }, (200..800).random().toLong())
         Transition(definition = definition, toState = toState) { state ->
-            DrawColorRectState(state = state)
+            DrawColorRectState(
+                state = state
+            )
         }
     }
 }
@@ -85,8 +91,9 @@ fun DrawColorRectState(state: TransitionState) {
     val color = state[background]
     val scaleY = state[y]
 
-    DrawRectangle(color = color)
-
+    DrawRectangle(
+        color = color
+    )
 
     val paint = Paint().apply {
         this.color = Color(alpha = 255, red = 255, green = 255, blue = 255)

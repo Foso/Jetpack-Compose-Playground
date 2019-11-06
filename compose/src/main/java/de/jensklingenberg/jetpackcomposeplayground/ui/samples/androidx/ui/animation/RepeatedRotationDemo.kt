@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation
 
 import androidx.animation.FloatPropKey
 import androidx.animation.LinearEasing
@@ -36,15 +36,12 @@ import androidx.ui.text.TextStyle
 fun RepeatedRotation() {
     Center {
         val state = +state { RotationStates.Original }
-        Column(
-            mainAxisSize = LayoutSize.Expand,
-            mainAxisAlignment = MainAxisAlignment.SpaceEvenly
-        ) {
+        Column(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
             val textStyle = TextStyle(fontSize = 18.sp)
             PressReleasedGestureDetector(onRelease = {
                 state.value = RotationStates.Rotated
             }) {
-                Text(text = "Rotate 10 times", style = textStyle)
+                Text(text = "Click this text to Rotate 10 times", style = textStyle)
             }
             PressReleasedGestureDetector(onRelease = {
                 state.value = RotationStates.Original

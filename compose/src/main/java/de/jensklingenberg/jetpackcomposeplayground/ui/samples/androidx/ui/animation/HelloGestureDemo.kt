@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.animation
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation
 
 import androidx.animation.FloatPropKey
 import androidx.animation.transitionDefinition
@@ -33,7 +33,7 @@ import androidx.ui.material.MaterialTheme
 
 
 @Composable
-fun HelloGesture() {
+fun HelloGestureDemo() {
     MaterialTheme {
         TransitionExample()
 
@@ -60,17 +60,23 @@ private val definition = transitionDefinition {
 fun TransitionExample() {
     val toState = +state { ComponentState.Released }
     PressGestureDetector(
-        onPress = { toState.value = ComponentState.Pressed },
-        onRelease = { toState.value = ComponentState.Released },
-        onCancel = { toState.value = ComponentState.Released }) {
+        onPress = { toState.value =
+            ComponentState.Pressed
+        },
+        onRelease = { toState.value =
+            ComponentState.Released
+        },
+        onCancel = { toState.value =
+            ComponentState.Released
+        }) {
         val children = @Composable {
             Transition(definition = definition, toState = toState.value) { state ->
-                DrawScaledRect(scale = state[scale], color = state[color])
+                DrawScaledRect(
+                    scale = state[scale],
+                    color = state[color]
+                )
             }
-
-
         }
-
         Layout(children) { _, constraints ->
             layout(constraints.maxWidth, constraints.maxHeight) {}
         }
@@ -90,7 +96,8 @@ fun DrawScaledRect(scale: Float, color: Color) {
             Rect(
                 centerX - halfSize * scale, centerY - halfSize * scale,
                 centerX + halfSize * scale, centerY + halfSize * scale
-            ), paint
+            ),
+            paint
         )
     }
 }
