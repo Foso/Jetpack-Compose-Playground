@@ -13,8 +13,8 @@ import androidx.ui.material.surface.Surface
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.AppDrawer
 
 
 @Composable

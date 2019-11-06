@@ -2,7 +2,7 @@ package de.jensklingenberg.jetpackcomposeplayground.model
 
 import androidx.compose.state
 import androidx.compose.unaryPlus
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.text.SimgpleTextDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.SimgpleTextDemo
 
 /**
  * Custom navigation class
