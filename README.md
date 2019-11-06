@@ -41,7 +41,7 @@ You need at least Android Studio 4.0 to build this project https://developer.and
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
 the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/)
-Inside the MyComposeApp() you can change the demo page that should be opened
+Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/data/Pages.kt) you can change the demo pages which should be opened
 
 
 # Resources
