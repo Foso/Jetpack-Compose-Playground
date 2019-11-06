@@ -2,7 +2,7 @@
 
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-range.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-range.svg?style=flat-square)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 
@@ -36,19 +36,20 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 
 ### Project Structure
-* <kbd>androidx_prebuilts</kbd> - This folder contains the Compose Libraries 0.1.0-dev02 and the Compiler Plugin 0.1.0-dev02
 You need at least Android Studio 4.0 to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
 the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/)
-Inside the MyComposeApp() you can change the demo page that should be opened
+Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/data/Pages.kt) you can change the demo pages which should be opened
 
 
 # Resources
 
 ## Content
 - [Official Documentation](#Official-Documentation)
+- [Other Documentation](#Other-Documentation)
+
 - [Conference talks](#Conference-talks)
 - [Articles](#Articles) 
 - [SpeakerDeck](#SpeakerDeck)
@@ -59,6 +60,10 @@ Inside the MyComposeApp() you can change the demo page that should be opened
 ## Official Documentation
 - [Jetpack compose](https://developer.android.com/jetpack/compose)
 - [Jetpack compose Readme](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/ui/README.md)
+
+## Other Documentation
+- [FAQ about Jetpack Compose – Android’s modern toolkit for building native UI](https://github.com/Mishkun/jetpack-compose-faq)
+- [This Wiki](https://github.com/Foso/Jetpack-Compose-Playground/wiki)
 
 ## Conference Talks
 [![](https://img.youtube.com/vi/dtm2h-_sNDQ/0.jpg)](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd&index=8&t=0s "")
