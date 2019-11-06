@@ -1,16 +1,15 @@
 package de.jensklingenberg.jetpackcomposeplayground.data
 
+import androidx.ui.foundation.samples.AnchoredDraggableSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.foundation.ControlledHorizontalScrollerSample
+import androidx.ui.foundation.samples.DraggableSample
 import androidx.ui.material.samples.SimpleDataTable
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.*
 
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.StateBasedRippleDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.layout.*
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.CustomAlertDialogSample
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.SelectionsControlsDemo
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.SideBySideAlertDialogSample
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.StackedAlertDialogSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.InputFieldDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.MultipleCollectTest
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.*
@@ -23,7 +22,6 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.Co
 
 val animationDemos = listOf(
     Page("FancyScrollingExample") { FancyScrollingExample() },
-
     Page("AnimatableSeekBar") { AnimatableSeekBarDemo() },
     Page("HelloGesture") { HelloGestureDemo() },
     Page("HelloAnimation") { HelloAnimationDemo() },
@@ -31,8 +29,6 @@ val animationDemos = listOf(
     Page("SpringBackScrolling") { SpringBackScrollingDemo() },
     Page("SwipeToDismiss") { SwipeToDismissDemo() },
     Page("CrossfadeDemo") { CrossfadeDemo() }
-
-
 )
 
 val layoutDemos = listOf(
@@ -41,6 +37,11 @@ val layoutDemos = listOf(
     Page("ColumnDemo") { ColumnDemo() },
     Page("SimpleStack") { SimpleStack() },
     Page("StackDemo") { StackDemo() },
+
+    //Scroller
+    Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
+    Page("ControlledHorizontalScrollerSample") { ControlledHorizontalScrollerSample() },
+
 
     //Table
     Page("SimpleTable") { SimpleTable() },
@@ -69,26 +70,25 @@ val materialDemos = listOf(
 
     //Table
     Page("SimpleDataTable") { SimpleDataTable() }
+)
 
-
+val foundationDemos = listOf(
+    Page("DraggableSample") { DraggableSample() },
+    Page("AnchoredDraggableSample") { AnchoredDraggableSample() }
 )
 
 val otherDemos = listOf(
     Page("RallyApp") { RallyApp() },
     Page("CounterDemo") { CounterDemo() }
-
 )
 
 
-val mainPagesEntries = animationDemos + layoutDemos + materialDemos + otherDemos + listOf(
-
+val mainPagesEntries = animationDemos +foundationDemos+ layoutDemos + materialDemos + otherDemos + listOf(
     Page("TextDemo") { TextDemo() },
     Page("CounterModelDemo") { CounterModelDemo() },
     Page("DividersDemo") { DividersDemo() },
     Page("ProgressIndicatorDemo") { ProgressIndicatorDemo() },
     Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
-    Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
-
     Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
     Page("MultipleCollectTest") { MultipleCollectTest() },
     Page("InputFieldDemo") { InputFieldDemo() }

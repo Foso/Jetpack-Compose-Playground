@@ -28,7 +28,6 @@ import androidx.ui.material.Divider
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
 
 
-
 @Composable
 fun HomeScreen(pageIndex: State<Int>) {
 
@@ -37,7 +36,6 @@ fun HomeScreen(pageIndex: State<Int>) {
     VerticalScroller {
         Column {
             mainPagesEntries.forEachIndexed { index, page ->
-
                 HeightSpacer(height = 10.dp)
                 Button(page.title, onClick = {
                     pageIndex.value = index

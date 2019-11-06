@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material
 
 
 import androidx.compose.Composable
@@ -41,7 +41,6 @@ fun DividersDemo() {
     }
 
 }
-
 
 @Composable
 fun Dividers() {
@@ -83,7 +82,7 @@ fun Item(text: String, color: Color? = null) {
     Container(height = ItemSize, padding = EdgeInsets(ItemPadding)) {
         Row(crossAxisAlignment = CrossAxisAlignment.Center) {
             if (color != null) {
-                ColoredRect(
+                androidx.ui.foundation.ColoredRect(
                     width = avatarSize,
                     height = avatarSize,
                     color = color

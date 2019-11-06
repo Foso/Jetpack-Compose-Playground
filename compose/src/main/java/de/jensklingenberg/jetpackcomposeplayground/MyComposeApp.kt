@@ -4,16 +4,17 @@ import androidx.compose.Composable
 import androidx.compose.State
 import androidx.compose.state
 import androidx.compose.unaryPlus
-import androidx.ui.animation.Crossfade
 import androidx.ui.core.Text
 import androidx.ui.layout.CrossAxisAlignment
 import androidx.ui.layout.FlexColumn
 import androidx.ui.material.*
 import androidx.ui.material.surface.Surface
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.VectorImageButton
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.lightThemeColors
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.themeTypography
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.AppDrawer
 
 
@@ -56,7 +57,6 @@ private fun AppContent(
     pageIndex: State<Int>
 ) {
 
-    Crossfade(JetnewsStatus.currentScreen) { screen ->
         Surface(color = +themeColor { background }) {
             FlexColumn(crossAxisAlignment = CrossAxisAlignment.Center) {
                 inflexible {
@@ -79,7 +79,10 @@ private fun AppContent(
                             )
                         }
                         else -> {
-                            mainPagesEntries[pageIndex.value].function.invoke()
+                            MaterialTheme {
+                                mainPagesEntries[pageIndex.value].function.invoke()
+
+                            }
                         }
                     }
 
@@ -89,7 +92,7 @@ private fun AppContent(
 
 
         }
-    }
+
 }
 
 

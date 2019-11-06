@@ -15,7 +15,7 @@ import androidx.ui.material.surface.Surface
 import androidx.ui.material.themeColor
 import androidx.ui.material.themeTextStyle
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.VectorImage
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.VectorImage
 
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 

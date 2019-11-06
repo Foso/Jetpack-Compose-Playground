@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.common
 
 import androidx.ui.core.sp
 import androidx.ui.material.MaterialTypography

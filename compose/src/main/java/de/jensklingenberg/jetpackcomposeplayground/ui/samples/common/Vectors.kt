@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.common
 
 import androidx.annotation.DrawableRes
 import androidx.compose.Composable
@@ -31,7 +31,9 @@ import androidx.ui.res.vectorResource
 fun VectorImageButton(@DrawableRes id: Int, onClick: () -> Unit) {
     Ripple(bounded = false) {
         Clickable(onClick = onClick) {
-            VectorImage(id)
+            VectorImage(
+                id
+            )
         }
     }
 }
