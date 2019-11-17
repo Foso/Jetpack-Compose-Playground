@@ -29,6 +29,6 @@ fun ClickableSample() {
     val count = +state { 0 }
     Clickable(onClick = { count.value += 1 }) {
         // content that you want to make clickable
-        Text(text = count.toString())
+        Text(text = count.value.toString())
     }
 }
