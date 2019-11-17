@@ -30,6 +30,22 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 ## 📙 Docs
 Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
+## 📙 Componets
+
+
+# How to get started?
+* [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/How-to-write-a-Compose-function%3F)
+
+
+# Layouts 
+* [Stack](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Stack)
+* Flex
+* [VerticalScroller](https://github.com/Foso/Jetpack-Compose-Playground/wiki/VerticalScroller)
+* [Column](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Column)
+* [Row](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Row)
+* Container
+
+
 # 🏠 Architecture
 
 ## 🛠️ Built With
