@@ -44,6 +44,7 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 * [Column](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Column)
 * [Row](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Row)
 * Container
+* [Padding](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Padding)
 
 
 # 🏠 Architecture
