@@ -30,11 +30,11 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 ## 📙 Docs
 Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
-## 📙 Componets
+## 📙 Components
 
 
 # How to get started?
-* [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/How-to-write-a-Compose-function%3F)
+* [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Hello-World-Compose)
 
 
 # Layouts 
@@ -44,6 +44,7 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 * [Column](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Column)
 * [Row](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Row)
 * Container
+* [Padding](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Padding)
 
 
 # 🏠 Architecture
