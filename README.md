@@ -30,6 +30,12 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 ## 📙 Docs
 Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
+## 📙 Componets
+
+#Layout
+[VerticalScroller](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/wiki/VerticalScroller.md)
+
+
 # 🏠 Architecture
 
 ## 🛠️ Built With
