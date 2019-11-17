@@ -36,6 +36,8 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 # How to get started?
 * [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Hello-World-Compose)
 
+# Lifecycle 
+* [Lifecycle](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Lifecycle)
 
 # Layouts 
 * [Stack](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Stack)
@@ -50,6 +52,9 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 # GestureDetectors
 * [PressGestureDetector](https://github.com/Foso/Jetpack-Compose-Playground/wiki/PressGestureDetector)
+* [Draggable](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Draggable)
+* [Clickable](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Clickable)
+
 
 
 
