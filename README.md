@@ -48,6 +48,10 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 * [How to draw to canvas?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/How-to-draw-to-canvas%3F)
 
+# GestureDetectors
+* [PressGestureDetector](https://github.com/Foso/Jetpack-Compose-Playground/wiki/PressGestureDetector)
+
+
 
 # 🏠 Architecture
 
