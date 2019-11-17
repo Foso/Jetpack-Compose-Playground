@@ -32,8 +32,13 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 ## 📙 Componets
 
-# Layout
-[VerticalScroller](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/wiki/VerticalScroller.md)
+# Layouts 
+* [Stack](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Stack)
+* Flex
+* [VerticalScroller](https://github.com/Foso/Jetpack-Compose-Playground/wiki/VerticalScroller)
+* [Column](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Column)
+* [Row](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Row)
+* Container
 
 
 # 🏠 Architecture
