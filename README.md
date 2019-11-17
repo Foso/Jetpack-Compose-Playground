@@ -32,6 +32,11 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 ## 📙 Componets
 
+
+# How to get started?
+* [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/How-to-write-a-Compose-function%3F)
+
+
 # Layouts 
 * [Stack](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Stack)
 * Flex
