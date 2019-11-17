@@ -30,7 +30,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 ## 📙 Docs
 Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
-## 📙 Componets
+## 📙 Components
 
 
 # How to get started?
