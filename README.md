@@ -50,6 +50,8 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 # GestureDetectors
 * [PressGestureDetector](https://github.com/Foso/Jetpack-Compose-Playground/wiki/PressGestureDetector)
+* [Draggable](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Draggable)
+
 
 
 
