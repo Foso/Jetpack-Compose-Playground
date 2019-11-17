@@ -34,7 +34,7 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 
 # How to get started?
-* [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/How-to-write-a-Compose-function%3F)
+* [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Hello-World-Compose)
 
 
 # Layouts 
