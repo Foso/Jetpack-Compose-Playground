@@ -32,7 +32,7 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 ## 📙 Componets
 
-#Layout
+# Layout
 [VerticalScroller](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/wiki/VerticalScroller.md)
 
 
