@@ -46,6 +46,8 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 * Container
 * [Padding](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Padding)
 
+* [How to draw to canvas?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/How-to-draw-to-canvas%3F)
+
 
 # 🏠 Architecture
 
