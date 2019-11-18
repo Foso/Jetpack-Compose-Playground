@@ -57,6 +57,7 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 # Material
 * [Switch](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Switch)
+* [Checkbox](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Checkbox)
 
 
 
