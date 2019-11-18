@@ -33,6 +33,8 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 # How to get started?
 * [How to write a Compose function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Hello-World-Compose)
+* [Get Android Context in Compose Function?](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Get-Android-Context-in-Compose-Function)
+
 
 # Lifecycle 
 * [Lifecycle](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Lifecycle)
