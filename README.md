@@ -55,6 +55,9 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 * [Draggable](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Draggable)
 * [Clickable](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Clickable)
 
+# Material
+* [Switch](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Switch)
+
 
 
 
