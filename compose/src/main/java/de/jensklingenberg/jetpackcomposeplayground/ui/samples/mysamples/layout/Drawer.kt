@@ -2,7 +2,6 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout
 
 import androidx.annotation.DrawableRes
 import androidx.compose.Composable
-import androidx.compose.State
 import androidx.compose.unaryPlus
 import androidx.ui.core.Text
 import androidx.ui.core.dp
@@ -14,6 +13,7 @@ import androidx.ui.material.TextButtonStyle
 import androidx.ui.material.surface.Surface
 import androidx.ui.material.themeColor
 import androidx.ui.material.themeTextStyle
+import de.jensklingenberg.jetpackcomposeplayground.Navigator
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.VectorImage
 
@@ -23,7 +23,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 @Composable
 fun AppDrawer(
     closeDrawer: () -> Unit,
-    pageIndex: State<Int>
+    navigator: Navigator
 ) {
 
     VerticalScroller {
@@ -35,16 +35,16 @@ fun AppDrawer(
                     label = "Home",
                     isSelected = false
                 ) {
-                    pageIndex.value = -1
+                    navigator.navigateToHome()
                     closeDrawer()
                 }
                 mainPagesEntries.forEachIndexed { index, page ->
                     DrawerButton(
                         icon = R.drawable.ic_interests,
                         label = page.title,
-                        isSelected = pageIndex.value == index
+                        isSelected = navigator.getIndex().value == index
                     ) {
-                        pageIndex.value = index
+                        navigator.getIndex().value = index
                         closeDrawer()
                     }
 
