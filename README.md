@@ -43,6 +43,7 @@ Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
 * [Stack](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Stack)
 * Flex
 * [VerticalScroller](https://github.com/Foso/Jetpack-Compose-Playground/wiki/VerticalScroller)
+* [HorizontalScroller](https://github.com/Foso/Jetpack-Compose-Playground/wiki/HorizontalScroller)
 * [Column](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Column)
 * [Row](https://github.com/Foso/Jetpack-Compose-Playground/wiki/Row)
 * Container
