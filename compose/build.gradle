@@ -15,12 +15,12 @@ repositories {
 
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -28,14 +28,7 @@ android {
 
     }
 
-    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
-        kotlinOptions {
-//            useIR = true
-            freeCompilerArgs += "-P"
-            freeCompilerArgs +=
-                    "plugin:androidx.compose.plugins.kotlin:syntax=FCS"
-        }
-    }
+
 
     buildTypes {
         debug {}
@@ -53,6 +46,10 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        compose true
     }
 
 }
