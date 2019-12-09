@@ -11,7 +11,6 @@ import androidx.ui.layout.Padding
 import androidx.ui.layout.Stack
 import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.MaterialTheme
-import androidx.ui.material.themeTextStyle
 import androidx.ui.text.style.TextAlign
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.ColoredRect
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.rally.rallyBlue
@@ -36,7 +35,7 @@ fun StackExample() {
         aligned(Alignment.TopCenter) {
             Text(
                 text = "This text is drawed first ",
-                style = +themeTextStyle { h4 }
+                style = (+MaterialTheme.typography()).h4
                 , paragraphStyle = androidx.ui.text.ParagraphStyle(textAlign = TextAlign.Center)
             )
         }
@@ -59,7 +58,7 @@ fun StackExample() {
         aligned(Alignment.Center) {
             Text(
                 text = "This text is drawed last ",
-                style = +themeTextStyle { h4 },
+                style = (+MaterialTheme.typography()).h4,
                 paragraphStyle = androidx.ui.text.ParagraphStyle(textAlign = TextAlign.Center)
             )
         }

@@ -7,7 +7,6 @@ import androidx.ui.core.Text
 import androidx.ui.layout.Column
 import androidx.ui.layout.Container
 import androidx.ui.material.MaterialTheme
-import androidx.ui.material.themeTextStyle
 
 
 @Composable
@@ -26,8 +25,8 @@ fun ColumnDemo() {
 fun ColumnExample() {
     Container {
         Column {
-            Text(text = " Hello World!", style = +themeTextStyle { body1 })
-            Text(text = " Hello World!2", style = +themeTextStyle { body1 })
+            Text(text = " Hello World!", style =(+MaterialTheme.typography()).body1)
+            Text(text = " Hello World!2", style =(+MaterialTheme.typography()).body1)
         }
     }
 

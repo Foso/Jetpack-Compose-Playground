@@ -5,8 +5,6 @@ import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.material.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.lightThemeColors
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.themeTypography
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.AppDrawer
 
 
@@ -21,10 +19,7 @@ fun MainPage() {
 
     val (drawerState: DrawerState, onDrawerStateChange: (DrawerState) -> Unit) = +state { DrawerState.Closed }
 
-    MaterialTheme(
-        colors = lightThemeColors,
-        typography = themeTypography
-    ) {
+    MaterialTheme() {
         ModalDrawerLayout(
             drawerState = drawerState,
             onStateChange = onDrawerStateChange,

@@ -4,8 +4,8 @@ import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.layout.CrossAxisAlignment
 import androidx.ui.layout.FlexColumn
+import androidx.ui.material.MaterialTheme
 import androidx.ui.material.surface.Surface
-import androidx.ui.material.themeColor
 
 @Composable
 fun AppContent(
@@ -13,7 +13,7 @@ fun AppContent(
     appBar: () -> Unit
 ) {
 
-    Surface(color = +themeColor { background }) {
+    Surface(color = (+MaterialTheme.colors()).background) {
         FlexColumn(crossAxisAlignment = CrossAxisAlignment.Center) {
             inflexible {
                 appBar()

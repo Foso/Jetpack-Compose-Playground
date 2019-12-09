@@ -18,16 +18,11 @@ package androidx.ui.foundation.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Alignment
-import androidx.ui.core.dp
-import androidx.ui.foundation.DropDownAlignment
-import androidx.ui.foundation.DropdownPopup
-import androidx.ui.foundation.Popup
+import androidx.ui.core.*
 import androidx.ui.foundation.shape.DrawShape
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Container
-
 
 @Composable
 fun PopupSample() {
@@ -44,7 +39,6 @@ fun PopupSample() {
         }
     }
 }
-
 
 @Composable
 fun DropdownPopupSample() {

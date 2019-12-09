@@ -50,133 +50,32 @@ fun SelectionsControlsDemo() {
 @Composable
 fun SelectionsControls() {
 
-    val headerStyle = +themeTextStyle { h6 }
+    val headerStyle = (+MaterialTheme.typography()).h6
     val padding = EdgeInsets(10.dp)
 
-    Surface(color = Color.White) {
-        Padding(padding = padding) {
-            Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-                Text(text = "Checkbox", style = headerStyle)
-                Padding(padding = padding) {
-                    TriStateCheckboxSample()
-                }
-                Text(text = "Switch", style = headerStyle)
-                Padding(padding = padding) {
-                    SwitchSample()
-                }
-                Text(text = "RadioButton", style = headerStyle)
-                Padding(padding = padding) {
-                    RadioButtonSample()
-                }
-                Text(text = "Radio group :: Default usage", style = headerStyle)
-                Padding(padding = padding) {
-                    DefaultRadioGroupSample()
-                }
-                Text(text = "Radio group :: Custom usage", style = headerStyle)
-                Padding(padding = padding) {
-                    CustomRadioGroupSample()
-                }
+    Padding(padding = padding) {
+        Column {
+            Text(text = "Checkbox", style = headerStyle)
+            Padding(padding = padding) {
+                TriStateCheckboxSample()
+            }
+            Text(text = "Switch", style = headerStyle)
+            Padding(padding = padding) {
+                SwitchSample()
+            }
+            Text(text = "RadioButton", style = headerStyle)
+            Padding(padding = padding) {
+                RadioButtonSample()
+            }
+            Text(text = "Radio group :: Default usage", style = headerStyle)
+            Padding(padding = padding) {
+                DefaultRadioGroupSample()
+            }
+            Text(text = "Radio group :: Custom usage", style = headerStyle)
+            Padding(padding = padding) {
+                CustomRadioGroupSample()
             }
         }
     }
 }
 
-@Composable
-fun DefaultRadioGroup() {
-    val radioOptions = listOf("Calls", "Missed", "Friends")
-    val (selectedOption, onOptionSelected) = +state { radioOptions[0] }
-    RadioGroup(
-        options = radioOptions,
-        selectedOption = selectedOption,
-        onSelectedChange = onOptionSelected,
-        radioColor = customColor2
-    )
-}
-
-@Composable
-fun CustomRadioGroup() {
-    val radioOptions = listOf("Disagree", "Neutral", "Agree")
-    val (selectedOption, onOptionSelected) = +state { radioOptions[0] }
-    val textStyle = +themeTextStyle { subtitle1 }
-
-    RadioGroup {
-        Row {
-            radioOptions.forEach { text ->
-                val selected = text == selectedOption
-                RadioGroupItem(
-                    selected = selected,
-                    onSelect = { onOptionSelected(text) }) {
-                    Padding(padding = 10.dp) {
-                        Column {
-                            RadioButton(
-                                selected = selected,
-                                onSelect = { onOptionSelected(text) })
-                            Text(text = text, style = textStyle)
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun CheckboxDemo() {
-    Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-        val (state, onStateChange) = +state { true }
-        val (state2, onStateChange2) = +state { true }
-        val (state3, onStateChange3) = +state { true }
-        val parentState = +memo(state, state2, state3) {
-            if (state && state2 && state3) ToggleableState.Checked
-            else if (!state && !state2 && !state3) ToggleableState.Unchecked
-            else ToggleableState.Indeterminate
-        }
-        val onParentClick = {
-            val s = parentState != ToggleableState.Checked
-            onStateChange(s)
-            onStateChange2(s)
-            onStateChange3(s)
-        }
-        Row {
-            TriStateCheckbox(value = parentState, onClick = onParentClick)
-            Text(text = "This is parent TriStateCheckbox", style = +themeTextStyle { body1 })
-        }
-        Padding(left = 10.dp) {
-            Column(crossAxisAlignment = CrossAxisAlignment.Start) {
-                Checkbox(state, onStateChange,
-                    customColor
-                )
-                Checkbox(state2, onStateChange2,
-                    customColor2
-                )
-                Checkbox(state3, onStateChange3,
-                    customColor3
-                )
-            }
-        }
-    }
-}
-
-@Composable
-fun SwitchDemo() {
-    Row(mainAxisAlignment = MainAxisAlignment.SpaceAround) {
-        val (checked, onChecked) = +state { false }
-        val (checked2, onChecked2) = +state { false }
-        val (checked3, onChecked3) = +state { true }
-        val (checked4, _) = +state { true }
-        Switch(checked = checked, onCheckedChange = onChecked)
-        Switch(checked = checked2, onCheckedChange = onChecked2, color = customColor)
-        Switch(checked = checked3, onCheckedChange = onChecked3, color = customColor2)
-        Switch(checked = checked4, onCheckedChange = {}, color = customColor3)
-    }
-}
-
-@Composable
-fun RadioButtonDemo() {
-    Row(mainAxisAlignment = MainAxisAlignment.SpaceAround) {
-        RadioButton(selected = true, onSelect = null)
-        RadioButton(selected = false, onSelect = null)
-        RadioButton(selected = true, color = customColor, onSelect = null)
-        RadioButton(selected = false, color = customColor, onSelect = null)
-    }
-}

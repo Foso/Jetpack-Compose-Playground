@@ -21,10 +21,7 @@ import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.core.dp
 import androidx.ui.foundation.VerticalScroller
-import androidx.ui.layout.Column
-import androidx.ui.layout.HeightSpacer
-import androidx.ui.layout.LayoutSize
-import androidx.ui.layout.Padding
+import androidx.ui.layout.*
 import androidx.ui.material.Tab
 import androidx.ui.material.TabRow
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.Scaffold
@@ -33,20 +30,18 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.S
  * This Activity recreates the Rally Material Study from
  * https://material.io/design/material-studies/rally.html
  */
-
 @Composable
 fun RallyApp() {
     RallyTheme {
         val allScreens = RallyScreenState.values().toList()
         var currentScreen by +state { RallyScreenState.Overview }
-        Scaffold(
-            appBar = {
-                TabRow(allScreens, selectedIndex = currentScreen.ordinal) { i, screen ->
-                    Tab(text = screen.name, selected = currentScreen.ordinal == i) {
-                        currentScreen = screen
-                    }
+        Scaffold(appBar = {
+            TabRow(allScreens, selectedIndex = currentScreen.ordinal) { i, screen ->
+                Tab(text = screen.name, selected = currentScreen.ordinal == i) {
+                    currentScreen = screen
                 }
-            }) {
+            }
+        }) {
             currentScreen.body()
         }
     }
@@ -55,16 +50,13 @@ fun RallyApp() {
 @Composable
 fun RallyBody() {
     VerticalScroller {
-        Padding(16.dp) {
-            Column(mainAxisSize = LayoutSize.Expand) {
-                RallyAlertCard()
-                HeightSpacer(height = 10.dp)
-                RallyAccountsOverviewCard()
-                HeightSpacer(height = 10.dp)
-                RallyBillsOverviewCard()
-            }
+        Column(modifier = Spacing(16.dp)) {
+            RallyAlertCard()
+            Spacer(Height(10.dp))
+            RallyAccountsOverviewCard()
+            Spacer(Height(10.dp))
+            RallyBillsOverviewCard()
         }
-
     }
 }
 

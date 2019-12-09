@@ -23,19 +23,7 @@ import androidx.ui.core.dp
 import androidx.ui.foundation.shape.DrawShape
 import androidx.ui.foundation.shape.RectangleShape
 import androidx.ui.graphics.Color
-import androidx.ui.layout.AspectRatio
-import androidx.ui.layout.Column
-import androidx.ui.layout.ConstrainedBox
-import androidx.ui.layout.Container
-import androidx.ui.layout.CrossAxisAlignment
-import androidx.ui.layout.DpConstraints
-import androidx.ui.layout.ExpandedHeight
-import androidx.ui.layout.FlexRow
-import androidx.ui.layout.MaxIntrinsicHeight
-import androidx.ui.layout.MaxIntrinsicWidth
-import androidx.ui.layout.MinIntrinsicHeight
-import androidx.ui.layout.MinIntrinsicWidth
-import androidx.ui.layout.Wrap
+import androidx.ui.layout.*
 
 /**
  * Builds a layout containing three [ConstrainedBox] having the same width as the widest one.
@@ -43,7 +31,7 @@ import androidx.ui.layout.Wrap
  * Here [MinIntrinsicWidth] is adding a speculative width measurement pass for the [Column],
  * whose minimum intrinsic width will correspond to the preferred width of the largest
  * [ConstrainedBox]. Then [MinIntrinsicWidth] will measure the [Column] with tight width, the same
- * as the premeasured minimum intrinsic width, which due to [CrossAxisAlignment.Stretch] will force
+ * as the premeasured minimum intrinsic width, which due to [ExpandedWidth] will force
  * the [ConstrainedBox]s to use the same width.
  */
 
@@ -51,17 +39,23 @@ import androidx.ui.layout.Wrap
 fun SameWidthBoxes() {
     Wrap {
         MinIntrinsicWidth {
-            Column(
-                ExpandedHeight,
-                crossAxisAlignment = CrossAxisAlignment.Stretch
-            ) {
-                ConstrainedBox(DpConstraints.tightConstraints(width = 20.dp, height = 10.dp)) {
+            Column(ExpandedHeight) {
+                ConstrainedBox(
+                    constraints = DpConstraints.tightConstraints(width = 20.dp, height = 10.dp),
+                    modifier = ExpandedWidth
+                ) {
                     DrawShape(RectangleShape, Color.Gray)
                 }
-                ConstrainedBox(DpConstraints.tightConstraints(width = 30.dp, height = 10.dp)) {
+                ConstrainedBox(
+                    constraints = DpConstraints.tightConstraints(width = 30.dp, height = 10.dp),
+                    modifier = ExpandedWidth
+                ) {
                     DrawShape(RectangleShape, Color.Blue)
                 }
-                ConstrainedBox(DpConstraints.tightConstraints(width = 10.dp, height = 10.dp)) {
+                ConstrainedBox(
+                    constraints = DpConstraints.tightConstraints(width = 10.dp, height = 10.dp),
+                    modifier = ExpandedWidth
+                ) {
                     DrawShape(RectangleShape, Color.Magenta)
                 }
             }
@@ -106,7 +100,7 @@ fun MatchParentDividerForText() {
  * Here [MaxIntrinsicWidth] is adding a speculative width measurement pass for the [Column],
  * whose maximum intrinsic width will correspond to the preferred width of the largest
  * [ConstrainedBox]. Then [MaxIntrinsicWidth] will measure the [Column] with tight width, the same
- * as the premeasured maximum intrinsic width, which due to [CrossAxisAlignment.Stretch] will force
+ * as the premeasured maximum intrinsic width, which due to [ExpandedWidth] modifiers will force
  * the [ConstrainedBox]s to use the same width.
  */
 
@@ -114,19 +108,16 @@ fun MatchParentDividerForText() {
 fun SameWidthTextBoxes() {
     Wrap {
         MaxIntrinsicWidth {
-            Column(
-                ExpandedHeight,
-                crossAxisAlignment = CrossAxisAlignment.Stretch
-            ) {
-                Wrap {
+            Column(ExpandedHeight) {
+                Container(ExpandedWidth) {
                     DrawShape(RectangleShape, Color.Gray)
                     Text("Short text")
                 }
-                Wrap {
+                Container(ExpandedWidth) {
                     DrawShape(RectangleShape, Color.Blue)
                     Text("Extremely long text giving the width of its siblings")
                 }
-                Wrap {
+                Container(ExpandedWidth) {
                     DrawShape(RectangleShape, Color.Magenta)
                     Text("Medium length text")
                 }

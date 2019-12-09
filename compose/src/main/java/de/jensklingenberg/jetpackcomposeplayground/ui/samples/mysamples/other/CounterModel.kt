@@ -9,7 +9,6 @@ import androidx.ui.layout.Center
 import androidx.ui.layout.Column
 import androidx.ui.material.Button
 import androidx.ui.material.MaterialTheme
-import androidx.ui.material.themeTextStyle
 
 
 class CounterModel {
@@ -44,7 +43,7 @@ fun CounterModelDemo() {
 
 @Composable
 fun CounterHeader(counterModel: CounterModel) {
-    Text(text = counterModel.header, style = +themeTextStyle { h4 })
+    Text(text = counterModel.header, style = (+MaterialTheme.typography()).h4)
 }
 
 @Composable
@@ -63,5 +62,5 @@ fun AddSubtractButtons(
 
 @Composable
 fun CounterLabel(counterModel: CounterModel) {
-    Text(text = "Clicks: ${counterModel.counter.value}", style = +themeTextStyle { h4 })
+    Text(text = "Clicks: ${counterModel.counter.value}",  style = (+MaterialTheme.typography()).h4)
 }

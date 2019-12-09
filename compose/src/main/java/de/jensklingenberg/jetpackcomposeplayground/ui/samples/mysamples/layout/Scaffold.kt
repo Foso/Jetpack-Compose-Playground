@@ -20,8 +20,8 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.layout.FlexColumn
+import androidx.ui.material.MaterialTheme
 import androidx.ui.material.surface.Surface
-import androidx.ui.material.themeColor
 
 /**
  * This file contains Material components that are needed to build the Rally app and not
@@ -37,7 +37,7 @@ fun Scaffold(appBar: @Composable() () -> Unit, children: @Composable() () -> Uni
             appBar()
         }
         expanded(flex = 1.0f) {
-            Surface(color = +themeColor { background }) {
+            Surface(color = (+MaterialTheme.colors()).surface) {
                 children()
             }
         }

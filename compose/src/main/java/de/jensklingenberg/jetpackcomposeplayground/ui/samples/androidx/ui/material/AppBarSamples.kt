@@ -25,14 +25,10 @@ import androidx.ui.core.Text
 import androidx.ui.foundation.shape.corner.CircleShape
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
 import androidx.ui.graphics.Color
-import androidx.ui.material.AppBarIcon
-import androidx.ui.material.BottomAppBar
 import androidx.ui.material.BottomAppBar.FabConfiguration
-import androidx.ui.material.FloatingActionButton
-import androidx.ui.material.TopAppBar
 import androidx.ui.graphics.Image
 import androidx.ui.foundation.shape.corner.CutCornerShape
-import androidx.ui.material.themeColor
+import androidx.ui.material.*
 import androidx.ui.text.TextStyle
 import kotlin.math.abs
 import kotlin.math.roundToInt
@@ -71,7 +67,6 @@ fun SimpleTopAppBarNavIconWithActions(
     }
 }
 
-
 @Composable
 fun SimpleBottomAppBarNoFab(getMyActionImage: () -> Image, getMyNavigationImage: () -> Image) {
     val someActionImage: Image = getMyActionImage()
@@ -90,7 +85,6 @@ fun SimpleBottomAppBarNoFab(getMyActionImage: () -> Image, getMyNavigationImage:
     }
 }
 
-
 @Composable
 fun SimpleBottomAppBarCenterFab(getMyActionImage: () -> Image, getMyNavigationImage: () -> Image) {
     val someActionImage: Image = getMyActionImage()
@@ -105,7 +99,7 @@ fun SimpleBottomAppBarCenterFab(getMyActionImage: () -> Image, getMyNavigationIm
         navigationIcon = navigationIcon,
         fabConfiguration = FabConfiguration {
             FloatingActionButton(
-                color = +themeColor { secondary },
+                color = (+MaterialTheme.colors()).secondary,
                 icon = someActionImage,
                 onClick = { /** doSomething() */ })
         },
@@ -114,7 +108,6 @@ fun SimpleBottomAppBarCenterFab(getMyActionImage: () -> Image, getMyNavigationIm
         AppBarIcon(actionImage) { /* doSomething()*/ }
     }
 }
-
 
 @Composable
 fun SimpleBottomAppBarEndFab(getMyActionImage: () -> Image) {
@@ -124,7 +117,7 @@ fun SimpleBottomAppBarEndFab(getMyActionImage: () -> Image) {
     BottomAppBar(
         fabConfiguration = FabConfiguration(fabPosition = BottomAppBar.FabPosition.End) {
             FloatingActionButton(
-                color = +themeColor { secondary },
+                color = (+MaterialTheme.colors()).secondary,
                 icon = someActionImage,
                 onClick = { /** doSomething() */ })
         },
@@ -133,7 +126,6 @@ fun SimpleBottomAppBarEndFab(getMyActionImage: () -> Image) {
         AppBarIcon(actionImage) { /* doSomething()*/ }
     }
 }
-
 
 @Composable
 fun SimpleBottomAppBarCutoutFab(
@@ -152,7 +144,7 @@ fun SimpleBottomAppBarCutoutFab(
         navigationIcon = navigationIcon,
         fabConfiguration = FabConfiguration(cutoutShape = CircleShape) {
             FloatingActionButton(
-                color = +themeColor { secondary },
+                color = (+MaterialTheme.colors()).secondary,
                 icon = someActionImage,
                 onClick = { /** doSomething() */ })
         },
@@ -180,7 +172,7 @@ fun SimpleBottomAppBarExtendedCutoutFab(
         navigationIcon = navigationIcon,
         fabConfiguration = FabConfiguration(cutoutShape = CircleShape) {
             FloatingActionButton(
-                color = +themeColor { secondary },
+                color = (+MaterialTheme.colors()).secondary,
                 text = "Extended FAB",
                 textStyle = TextStyle(color = Color.White),
                 onClick = { /** doSomething() */ })
@@ -190,7 +182,6 @@ fun SimpleBottomAppBarExtendedCutoutFab(
         AppBarIcon(actionImage) { /* doSomething()*/ }
     }
 }
-
 
 @Composable
 fun SimpleBottomAppBarFancyAnimatingCutoutFab(
@@ -235,7 +226,7 @@ fun SimpleBottomAppBarFancyAnimatingCutoutFab(
         navigationIcon = navigationIcon,
         fabConfiguration = FabConfiguration(cutoutShape = fabShape) {
             FloatingActionButton(
-                color = +themeColor { secondary },
+                color = (+MaterialTheme.colors()).secondary,
                 icon = someActionImage,
                 onClick = switchShape,
                 shape = fabShape

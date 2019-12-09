@@ -81,20 +81,14 @@ private fun ProgressIndicator(state: ProgressState = ProgressState()) {
     +onActive { state.start() }
     +onDispose { state.stop() }
 
-    FlexColumn {
+    FlexColumn(mainAxisAlignment = MainAxisAlignment.Center) {
         expanded(flex = 1f) {
-            Row(
-                ExpandedWidth,
-                mainAxisAlignment = MainAxisAlignment.SpaceEvenly
-            ) {
+            Row(ExpandedWidth, arrangement = Arrangement.SpaceEvenly) {
                 // Determinate indicators
                 LinearProgressIndicator(progress = state.progress)
                 CircularProgressIndicator(progress = state.progress)
             }
-            Row(
-                ExpandedWidth,
-                mainAxisAlignment = MainAxisAlignment.SpaceEvenly
-            ) {
+            Row(ExpandedWidth, arrangement = Arrangement.SpaceEvenly) {
                 // Fancy colours!
                 LinearProgressIndicator(progress = (state.progress), color = state.generateColor())
                 CircularProgressIndicator(
@@ -102,10 +96,7 @@ private fun ProgressIndicator(state: ProgressState = ProgressState()) {
                     color = state.generateColor()
                 )
             }
-            Row(
-                ExpandedWidth,
-                mainAxisAlignment = MainAxisAlignment.SpaceEvenly
-            ) {
+            Row(ExpandedWidth, arrangement = Arrangement.SpaceEvenly) {
                 // Indeterminate indicators
                 LinearProgressIndicator()
                 CircularProgressIndicator()

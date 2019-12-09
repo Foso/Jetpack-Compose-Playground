@@ -35,7 +35,6 @@ import androidx.ui.text.ParagraphStyle
 import androidx.ui.graphics.Shadow
 import androidx.ui.text.TextStyle
 import androidx.ui.text.style.TextOverflow
-import androidx.ui.core.Sp
 import androidx.ui.core.em
 import androidx.ui.core.sp
 import androidx.ui.layout.ExpandedHeight
@@ -51,15 +50,15 @@ val displayText = "Text Demo"
 val displayTextChinese = "文本演示"
 val displayTextArabic = "عرض النص"
 val displayTextHindi = "पाठ डेमो"
-val fontSize4: Sp = 16.sp
-val fontSize6: Sp = 20.sp
-val fontSize8: Sp = 25.sp
-val fontSize10: Sp = 30.sp
+val fontSize4 = 16.sp
+val fontSize6 = 20.sp
+val fontSize8 = 25.sp
+val fontSize10 = 30.sp
 
 @Composable
 fun TextDemo() {
     VerticalScroller {
-        Column(crossAxisAlignment = CrossAxisAlignment.Start) {
+        Column {
             TagLine(tag = "color, fontSize, fontWeight and fontStyle")
             TextDemoBasic()
             TagLine(
@@ -366,8 +365,7 @@ fun TextDemoTextAlign() {
         text = "$text$displayText "
     }
     Column(
-        ExpandedHeight,
-        crossAxisAlignment = CrossAxisAlignment.Start
+        ExpandedHeight
     ) {
         SecondTagLine(tag = "textAlign = TextAlign.Left")
         Text(paragraphStyle = ParagraphStyle(textAlign = TextAlign.Left)) {
@@ -437,10 +435,7 @@ fun TextDemoSoftWrap() {
     val textStyle =
         TextStyle(fontSize = fontSize8, color = Color(0xFFFF0000))
 
-    Column(
-        ExpandedHeight,
-        crossAxisAlignment = CrossAxisAlignment.Start
-    ) {
+    Column(ExpandedHeight) {
         Text {
             Span(text = text, style = textStyle)
         }
@@ -490,10 +485,10 @@ fun TextDemoShadowEffect() {
         }
     }
 }
-
 @Composable
 fun TextDemoComposableTextSpan() {
-    Text(text = "This is a ", style = TextStyle(fontSize = fontSize8)) {
+    Text(style = TextStyle(fontSize = fontSize8)) {
+        Span(text = "This is a ")
         Span(text = "composable ", style = TextStyle(fontStyle = FontStyle.Italic))
         val color1 = Color(0xFFEF50AD)
         val color2 = Color(0xFF10AF52)
@@ -511,7 +506,7 @@ fun TextDemoFontSizeScale() {
         Span(style = TextStyle(fontSize = fontSize8)) {
             for (i in 4..12 step 4) {
                 val scale = i * 0.1f
-                Span("fontSizeScale=$scale\n", style = TextStyle(fontSizeScale = scale))
+                Span("fontSizeScale=$scale\n", style = TextStyle(fontSize = scale.em))
             }
         }
     }

@@ -6,6 +6,7 @@ import androidx.ui.core.Text
 import androidx.ui.core.ambientDensity
 import androidx.ui.core.dp
 import androidx.ui.core.withDensity
+import androidx.ui.foundation.animation.animatedDragValue
 import androidx.ui.foundation.gestures.DragDirection
 import androidx.ui.foundation.gestures.Draggable
 import androidx.ui.layout.Column
@@ -19,17 +20,20 @@ fun DraggableDemo(){
     val (minPx, maxPx) = withDensity(+ambientDensity()) {
         min.toPx().value to max.toPx().value
     }
-    Draggable(DragDirection.Horizontal, minPx, maxPx) { dragValue ->
+
+    val position = +animatedDragValue(0f, minPx, maxPx)
+
+    Draggable(DragDirection.Horizontal,position,{ position.animatedFloat.snapTo(it) }) {
         // dragValue is the current value in progress of dragging
         val draggedDp = withDensity(+ambientDensity()) {
-            dragValue.toDp()
+            position.value.toDp()
         }
 
        Column {
            Padding(left = draggedDp){
                Text("Drag me ")
            }
-           Text("Dragvalue: "+dragValue.dp)
+           Text("Dragvalue: "+position.value.dp)
        }
     }
 }

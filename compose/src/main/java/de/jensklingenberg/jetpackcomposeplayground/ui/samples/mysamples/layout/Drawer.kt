@@ -3,16 +3,16 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout
 import androidx.annotation.DrawableRes
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
+import androidx.ui.core.Modifier
 import androidx.ui.core.Text
 import androidx.ui.core.dp
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
 import androidx.ui.layout.*
 import androidx.ui.material.Button
+import androidx.ui.material.MaterialTheme
 import androidx.ui.material.TextButtonStyle
 import androidx.ui.material.surface.Surface
-import androidx.ui.material.themeColor
-import androidx.ui.material.themeTextStyle
 import de.jensklingenberg.jetpackcomposeplayground.Navigator
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.VectorImage
@@ -59,44 +59,44 @@ fun AppDrawer(
 
 @Composable
 private fun DrawerButton(
+    modifier: Modifier = Modifier.None,
     @DrawableRes icon: Int,
     label: String,
     isSelected: Boolean,
     action: () -> Unit
 ) {
+    val colors = +MaterialTheme.colors()
     val textIconColor = if (isSelected) {
-        +themeColor { primary }
+        colors.primary
     } else {
-        (+themeColor { onSurface }).copy(alpha = 0.6f)
+        colors.onSurface.copy(alpha = 0.6f)
     }
     val backgroundColor = if (isSelected) {
-        (+themeColor { primary }).copy(alpha = 0.12f)
+        colors.primary.copy(alpha = 0.12f)
     } else {
-        +themeColor { surface }
+        colors.surface
     }
 
-    Padding(left = 8.dp, top = 8.dp, right = 8.dp) {
-        Surface(
-            color = backgroundColor,
-            shape = RoundedCornerShape(4.dp)
-        ) {
-            Button(onClick = action, style = TextButtonStyle()) {
-                Row(
-                    mainAxisSize = LayoutSize.Expand,
-                    crossAxisAlignment = CrossAxisAlignment.Center
-                ) {
-                    VectorImage(
-                        id = icon,
-                        tint = textIconColor
+
+    Surface(
+        modifier = modifier wraps Spacing(left = 8.dp, top = 8.dp, right = 8.dp),
+        color = backgroundColor,
+        shape = RoundedCornerShape(4.dp)
+    ) {
+        Button(onClick = action, style = TextButtonStyle()) {
+            Row {
+                VectorImage(
+                    modifier = Gravity.Center,
+                    id = icon,
+                    tint = textIconColor
+                )
+                WidthSpacer(16.dp)
+                Text(
+                    text = label,
+                    style = (+MaterialTheme.typography()).body2.copy(
+                        color = textIconColor
                     )
-                    WidthSpacer(16.dp)
-                    Text(
-                        text = label,
-                        style = (+themeTextStyle { body2 }).copy(
-                            color = textIconColor
-                        )
-                    )
-                }
+                )
             }
         }
     }

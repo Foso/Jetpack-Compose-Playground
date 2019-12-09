@@ -36,12 +36,12 @@ import androidx.ui.text.TextStyle
 fun RepeatedRotation() {
     Center {
         val state = +state { RotationStates.Original }
-        Column(mainAxisAlignment = MainAxisAlignment.SpaceEvenly) {
+        Column(arrangement = Arrangement.SpaceEvenly) {
             val textStyle = TextStyle(fontSize = 18.sp)
             PressReleasedGestureDetector(onRelease = {
                 state.value = RotationStates.Rotated
             }) {
-                Text(text = "Click this text to Rotate 10 times", style = textStyle)
+                Text(text = "Rotate 10 times", style = textStyle)
             }
             PressReleasedGestureDetector(onRelease = {
                 state.value = RotationStates.Original

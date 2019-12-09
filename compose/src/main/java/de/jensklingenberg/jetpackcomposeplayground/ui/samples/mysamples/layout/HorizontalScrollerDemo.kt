@@ -9,7 +9,6 @@ import androidx.ui.foundation.HorizontalScroller
 import androidx.ui.layout.FlexColumn
 import androidx.ui.layout.Row
 import androidx.ui.material.MaterialTheme
-import androidx.ui.material.themeTextStyle
 
 @Composable
         /**
@@ -31,7 +30,7 @@ fun HorizontalScrollerExample() {
         //Only one child is allowed in a VerticalScroller
         Row {
             for (i in 0..100) {
-                Text(text = "$i Hello World!", style = +themeTextStyle { body1 })
+                Text(text = "$i Hello World!", style =(+MaterialTheme.typography()).body1)
             }
         }
     }

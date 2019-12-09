@@ -19,6 +19,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.mater
 import android.util.Log
 import androidx.compose.Composable
 import androidx.ui.graphics.Image
+import androidx.ui.graphics.imageFromResource
 import androidx.ui.layout.*
 import androidx.ui.material.FloatingActionButton
 
@@ -38,14 +39,18 @@ fun FloatingActionButtonDemo(icon: Image) {
 
     Center {
         val onClick: () -> Unit = { Log.e("FABDemo", "onClick") }
-        Column(
-            mainAxisSize = LayoutSize.Expand,
-            mainAxisAlignment = MainAxisAlignment.SpaceEvenly,
-            crossAxisAlignment = CrossAxisAlignment.Center
-        ) {
-            FloatingActionButton(icon = icon, onClick = onClick)
-            FloatingActionButton(text = "EXTENDED", onClick = onClick)
-            FloatingActionButton(icon = icon, text = "ADD TO FAVS", onClick = onClick)
+        Column(ExpandedHeight, arrangement = Arrangement.SpaceEvenly) {
+            FloatingActionButton(icon = icon, onClick = onClick, modifier = Gravity.Center)
+            FloatingActionButton(
+                text = "EXTENDED",
+                onClick = onClick,
+                modifier = Gravity.Center
+            )
+            FloatingActionButton(
+                icon = icon, text = "ADD TO FAVS",
+                onClick = onClick,
+                modifier = Gravity.Center
+            )
         }
     }
 

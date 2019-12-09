@@ -21,17 +21,11 @@ import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.Text
 import androidx.ui.core.dp
+import androidx.ui.foundation.ColoredRect
 import androidx.ui.graphics.Color
-import androidx.ui.layout.Column
-import androidx.ui.layout.Container
-import androidx.ui.layout.CrossAxisAlignment
-import androidx.ui.layout.EdgeInsets
-import androidx.ui.layout.HeightSpacer
-import androidx.ui.layout.Row
-import androidx.ui.layout.WidthSpacer
+import androidx.ui.layout.*
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
-import androidx.ui.material.themeTextStyle
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.ColoredRect
 
 @Composable
@@ -78,21 +72,23 @@ fun Dividers() {
 @Composable
 fun Item(text: String, color: Color? = null) {
     val avatarSize = ItemSize - ItemPadding * 2
-    val textStyle = +themeTextStyle { body1 }
+    val textStyle = (+MaterialTheme.typography()).body1
     Container(height = ItemSize, padding = EdgeInsets(ItemPadding)) {
-        Row(crossAxisAlignment = CrossAxisAlignment.Center) {
+        Row {
             if (color != null) {
-                androidx.ui.foundation.ColoredRect(
+                ColoredRect(
                     width = avatarSize,
                     height = avatarSize,
-                    color = color
+                    color = color,
+                    modifier = Gravity.Center
                 )
                 WidthSpacer(width = ItemPadding)
             }
-            Text(text = text, style = textStyle)
+            Text(text = text, style = textStyle, modifier = Gravity.Center)
         }
     }
 }
+
 
 private val ItemSize = 55.dp
 private val ItemPadding = 7.5.dp

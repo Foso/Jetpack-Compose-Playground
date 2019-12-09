@@ -11,7 +11,6 @@ import androidx.ui.layout.Padding
 import androidx.ui.layout.Stack
 import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.MaterialTheme
-import androidx.ui.material.themeTextStyle
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.rally.rallyBlue
 
 
@@ -26,7 +25,7 @@ fun CounterDemo() {
             aligned(Alignment.Center) {
                 Text(
                     text = "You have pushed the button this many times: " + counterState.value,
-                    style = +themeTextStyle { h4 }
+                    style =(+MaterialTheme.typography()).h4
                 )
             }
 

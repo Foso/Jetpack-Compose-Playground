@@ -21,13 +21,11 @@ import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.core.TextField
-import androidx.ui.input.EditorStyle
 import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
 import androidx.ui.layout.Column
-import androidx.ui.layout.CrossAxisAlignment
-import androidx.ui.layout.LayoutSize
 import androidx.ui.foundation.VerticalScroller
+import androidx.ui.layout.ExpandedHeight
 import androidx.ui.text.TextStyle
 
 val KEYBOARD_TYPES = listOf(
@@ -54,10 +52,7 @@ val IME_ACTIONS = listOf(
 @Composable
 fun InputFieldDemo() {
     VerticalScroller {
-        Column(
-            mainAxisSize = LayoutSize.Expand,
-            crossAxisAlignment = CrossAxisAlignment.Start
-        ) {
+        Column(ExpandedHeight) {
             TagLine(tag = "simple editing")
             EditLine()
             TagLine(tag = "simple editing2")
@@ -65,16 +60,12 @@ fun InputFieldDemo() {
 
             for ((type, name) in KEYBOARD_TYPES) {
                 TagLine(tag = "Keyboard Type: $name")
-                EditLine(
-                    keyboardType = type
-                )
+                EditLine(keyboardType = type)
             }
 
             for ((action, name) in IME_ACTIONS) {
                 TagLine(tag = "Ime Action: $name")
-                EditLine(
-                    imeAction = action
-                )
+                EditLine(imeAction = action)
             }
         }
     }
@@ -91,6 +82,6 @@ fun EditLine(
         keyboardType = keyboardType,
         imeAction = imeAction,
         onValueChange = { state.value = it },
-        editorStyle = EditorStyle(textStyle = TextStyle(fontSize = fontSize8))
+        textStyle = TextStyle(fontSize = fontSize8)
     )
 }
