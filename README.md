@@ -103,6 +103,10 @@ Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/ma
 - [This Wiki](https://github.com/Foso/Jetpack-Compose-Playground/wiki)
 
 ## Conference Talks
+[![](https://img.youtube.com/vi/WqnR_XhEiVI/0.jpg)](https://www.youtube.com/watch?v=WqnR_XhEiVI "")
+
+- [KotlinConf 2019: Compose Yourself: Designing a Kotlin First UI Toolkit by Anna-Chiara & Clara](https://www.youtube.com/watch?v=WqnR_XhEiVI)
+
 [![](https://img.youtube.com/vi/dtm2h-_sNDQ/0.jpg)](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd&index=8&t=0s "")
 
 - [What's New in Jetpack Compose (Android Dev Summit '19)](https://www.youtube.com/watch?v=dtm2h-_sNDQ&list=PLWz5rJ2EKKc_xXXubDti2eRnIKU0p7wHd&index=8&t=0s)
