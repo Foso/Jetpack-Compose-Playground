@@ -21,8 +21,12 @@ import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.Modifier
 import androidx.ui.core.WithDensity
+import androidx.ui.core.dp
 import androidx.ui.foundation.Clickable
 import androidx.ui.graphics.Color
+import androidx.ui.graphics.Image
+import androidx.ui.graphics.ImageConfig
+import androidx.ui.graphics.colorspace.ColorSpaces
 import androidx.ui.graphics.vector.DrawVector
 import androidx.ui.layout.Container
 import androidx.ui.layout.Size
@@ -50,3 +54,14 @@ fun VectorImage(modifier: Modifier = Modifier.None, @DrawableRes id: Int, tint: 
     }
 }
 
+
+private fun createImageList(count: Int) =
+    List<@Composable() () -> Unit>(count) { { FakeIcon() } }
+
+// Render a red rectangle to simulate an icon
+@Composable
+private fun FakeIcon() =
+    androidx.ui.foundation.ColoredRect(Color.Red, width = 24.dp, height = 24.dp)
+
+fun FakeImage() =
+    Image(40, 40, ImageConfig.Rgb565, false, ColorSpaces.Srgb)
