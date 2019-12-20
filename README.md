@@ -28,7 +28,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 [![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
 
 ## 📙 Components
-Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
+Documentation avaible at: https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 
 # How to get started?
