@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text
-
+package androidx.ui.text.demos
 
 import androidx.compose.Composable
 import androidx.compose.state
@@ -27,6 +26,8 @@ import androidx.ui.layout.Column
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.ExpandedHeight
 import androidx.ui.text.TextStyle
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.TagLine
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.fontSize8
 
 val KEYBOARD_TYPES = listOf(
     Pair(KeyboardType.Text, "Text"),

@@ -4,13 +4,14 @@ import androidx.ui.foundation.samples.AnchoredDraggableSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.foundation.ControlledHorizontalScrollerSample
 import androidx.ui.foundation.samples.DraggableSample
 import androidx.ui.material.samples.SimpleDataTable
+import androidx.ui.text.demos.InputFieldDemo
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.*
 
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.StateBasedRippleDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.*
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.InputFieldDemo
+
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.MultipleCollectTest
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.rally.RallyApp
