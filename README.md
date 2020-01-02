@@ -28,7 +28,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 [![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
 
 ## 📙 Components
-Documentation avaible at:https://github.com/Foso/Jetpack-Compose-Playground/wiki
+Documentation avaible at: https://github.com/Foso/Jetpack-Compose-Playground/wiki
 
 
 # How to get started?
@@ -103,6 +103,10 @@ Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/ma
 - [This Wiki](https://github.com/Foso/Jetpack-Compose-Playground/wiki)
 
 ## Conference Talks
+[![](https://img.youtube.com/vi/6BRlI5zfCCk/0.jpg)](https://www.youtube.com/watch?v=6BRlI5zfCCk "")
+
+- [KotlinConf 2019: The Compose Runtime, Demystified by Leland Richardson](https://www.youtube.com/watch?v=6BRlI5zfCCk)
+
 [![](https://img.youtube.com/vi/WqnR_XhEiVI/0.jpg)](https://www.youtube.com/watch?v=WqnR_XhEiVI "")
 
 - [KotlinConf 2019: Compose Yourself: Designing a Kotlin First UI Toolkit by Anna-Chiara & Clara](https://www.youtube.com/watch?v=WqnR_XhEiVI)
