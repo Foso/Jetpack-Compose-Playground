@@ -3,6 +3,7 @@ package de.jensklingenberg.jetpackcomposeplayground.data
 import androidx.ui.foundation.samples.AnchoredDraggableSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.foundation.ControlledHorizontalScrollerSample
 import androidx.ui.foundation.samples.DraggableSample
+import androidx.ui.framework.samples.TextFieldSampleDemo
 import androidx.ui.material.samples.SimpleDataTable
 import androidx.ui.text.demos.InputFieldDemo
 import de.jensklingenberg.jetpackcomposeplayground.model.Page
@@ -92,5 +93,9 @@ val mainPagesEntries = animationDemos +foundationDemos+ layoutDemos + materialDe
     Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
     Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
     Page("MultipleCollectTest") { MultipleCollectTest() },
-    Page("InputFieldDemo") { InputFieldDemo() }
+    Page("InputFieldDemo") { InputFieldDemo() },
+    Page("TextFieldSampleDemo") { TextFieldSampleDemo() }
+
+
+
 )
