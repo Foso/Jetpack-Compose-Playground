@@ -18,7 +18,7 @@
 </p>
 
 ## Introduction 🙋‍♂️
-This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose
+This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose. You can find the samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/samples/androidx/ui)
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
@@ -69,7 +69,7 @@ Documentation avaible at: https://github.com/Foso/Jetpack-Compose-Playground/wik
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.3.60-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.3.61-green.svg)]()
 
 
 ### Project Structure
