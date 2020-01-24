@@ -102,6 +102,11 @@ Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/ma
 - [This Wiki](https://github.com/Foso/Jetpack-Compose-Playground/wiki)
 
 ## Conference Talks
+
+[![](https://1.bp.blogspot.com/-xon4k5b6b2c/XiejV5fOr0I/AAAAAAAAN8s/boKWh5GfM3EsydjxhS3MUlIWGsuUbAJjACLcBGAsYHQ/s320/IMG_20200108_145939.jpg)](http://androidbackstage.blogspot.com/2020/01/episode-131-jetpack-compose-and.html "")
+
+- [Android Developers Backstage : Episode 131: Jetpack Compose and Declarative UIs ](http://androidbackstage.blogspot.com/2020/01/episode-131-jetpack-compose-and.html)
+
 [![](https://img.youtube.com/vi/6BRlI5zfCCk/0.jpg)](https://www.youtube.com/watch?v=6BRlI5zfCCk "")
 
 - [KotlinConf 2019: The Compose Runtime, Demystified by Leland Richardson](https://www.youtube.com/watch?v=6BRlI5zfCCk)
