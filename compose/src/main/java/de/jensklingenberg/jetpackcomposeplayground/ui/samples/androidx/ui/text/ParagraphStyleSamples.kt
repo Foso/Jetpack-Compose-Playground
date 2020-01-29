@@ -1,19 +1,21 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text
 
 
+
 import androidx.compose.Composable
 import androidx.ui.core.Text
-import androidx.ui.core.sp
 import androidx.ui.text.AnnotatedString
 import androidx.ui.text.ParagraphStyle
+import androidx.ui.text.TextStyle
 import androidx.ui.text.style.TextAlign
 import androidx.ui.text.style.TextDirectionAlgorithm
 import androidx.ui.text.style.TextIndent
+import androidx.ui.unit.sp
 
 
 @Composable
 fun ParagraphStyleSample() {
-    val paragraphStyle = ParagraphStyle(
+    val textStyle = TextStyle(
         textAlign = TextAlign.Justify,
         lineHeight = 20.sp,
         textIndent = TextIndent(firstLine = 14.sp, restLine = 3.sp)
@@ -22,9 +24,10 @@ fun ParagraphStyleSample() {
         text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor " +
                 "incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis " +
                 "nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        paragraphStyle = paragraphStyle
+        style = textStyle
     )
 }
+
 
 @Composable
 fun ParagraphStyleAnnotatedStringsSample() {

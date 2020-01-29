@@ -9,7 +9,7 @@ import androidx.compose.memo
 import androidx.compose.unaryPlus
 import androidx.ui.animation.animatedFloat
 import androidx.ui.core.Draw
-import androidx.ui.core.dp
+import androidx.ui.unit.dp
 import androidx.ui.engine.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
@@ -24,7 +24,7 @@ fun animatedFloatTest() {
     MaterialTheme {
         Column {
 
-            val animValue = +animatedFloat(0f)
+            val animValue = animatedFloat(0f)
 
             Padding(left = 10.dp, right = 10.dp, bottom = 30.dp) {
                 MovingTargetExample2(animValue)
@@ -48,7 +48,7 @@ fun MovingTargetExample2(animValue: AnimatedFloat) {
 
 @Composable
 fun DrawBar(x: Float) {
-    val paint = +memo { Paint() }
+    val paint = remember { Paint() }
     Draw { canvas, parentSize ->
         val centerY = parentSize.height.value / 2
         val xConstraint = x.coerceIn(0f, parentSize.width.value)

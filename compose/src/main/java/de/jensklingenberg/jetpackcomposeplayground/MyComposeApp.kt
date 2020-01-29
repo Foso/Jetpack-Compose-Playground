@@ -17,7 +17,7 @@ fun MainPage() {
         )
     }
 
-    val (drawerState: DrawerState, onDrawerStateChange: (DrawerState) -> Unit) = +state { DrawerState.Closed }
+    val (drawerState: DrawerState, onDrawerStateChange: (DrawerState) -> Unit) = state { DrawerState.Closed }
 
     MaterialTheme() {
         ModalDrawerLayout(

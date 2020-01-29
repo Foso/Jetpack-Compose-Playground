@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-    def compose_version = "0.1.0-dev03"
+    def compose_version = "0.1.0-dev04"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.ui:ui-core:$compose_version"

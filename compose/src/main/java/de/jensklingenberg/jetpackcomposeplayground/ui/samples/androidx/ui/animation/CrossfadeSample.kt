@@ -17,10 +17,7 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation
 
 import android.util.Log
-import androidx.compose.Composable
-import androidx.compose.memo
-import androidx.compose.state
-import androidx.compose.unaryPlus
+import androidx.compose.*
 import androidx.ui.animation.Crossfade
 import androidx.ui.core.*
 import androidx.ui.core.gesture.PressReleasedGestureDetector
@@ -31,12 +28,15 @@ import androidx.ui.layout.Container
 import androidx.ui.layout.FlexColumn
 import androidx.ui.layout.FlexRow
 import androidx.ui.material.MaterialTheme
+import androidx.ui.unit.PxSize
+import androidx.ui.unit.dp
+import androidx.ui.unit.toRect
 import kotlin.random.Random
 
 @Composable
 fun CrossfadeDemo() {
     MaterialTheme {
-        var current by +state { tabs[0] }
+        var current by state { tabs[0] }
         FlexColumn {
             inflexible {
                 FlexRow {
@@ -56,7 +56,7 @@ fun CrossfadeDemo() {
             }
             flexible(1f) {
                 Crossfade(current = current) { tab ->
-                    tab.lastInt = +memo { Random.nextInt() }
+                    tab.lastInt = remember { Random.nextInt() }
                     Container(expanded = true) {
                         DrawTab(tab = tab)
                     }

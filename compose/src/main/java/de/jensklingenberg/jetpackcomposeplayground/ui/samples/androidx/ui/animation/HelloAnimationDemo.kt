@@ -26,10 +26,11 @@ import androidx.ui.animation.ColorPropKey
 import androidx.ui.animation.Transition
 import androidx.ui.core.Draw
 import androidx.ui.core.Layout
-import androidx.ui.core.toRect
-import androidx.ui.engine.geometry.Rect
+import androidx.ui.geometry.Rect
+
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
+import androidx.ui.unit.toRect
 
 
 @Composable

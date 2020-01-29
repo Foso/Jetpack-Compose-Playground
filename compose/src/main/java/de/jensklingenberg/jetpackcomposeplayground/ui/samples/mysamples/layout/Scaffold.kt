@@ -37,7 +37,7 @@ fun Scaffold(appBar: @Composable() () -> Unit, children: @Composable() () -> Uni
             appBar()
         }
         expanded(flex = 1.0f) {
-            Surface(color = (+MaterialTheme.colors()).surface) {
+            Surface(color = (MaterialTheme.colors()).surface) {
                 children()
             }
         }

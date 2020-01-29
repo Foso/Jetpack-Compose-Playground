@@ -19,7 +19,7 @@ package androidx.ui.layout.samples
 
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
-import androidx.ui.core.dp
+import androidx.ui.unit.dp
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Align
 import androidx.ui.layout.Container

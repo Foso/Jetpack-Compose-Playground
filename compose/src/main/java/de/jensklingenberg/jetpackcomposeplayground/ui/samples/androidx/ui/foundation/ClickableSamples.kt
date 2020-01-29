@@ -26,7 +26,7 @@ import androidx.ui.foundation.Clickable
 
 @Composable
 fun ClickableSample() {
-    val count = +state { 0 }
+    val count = state { 0 }
     Clickable(onClick = { count.value += 1 }) {
         // content that you want to make clickable
         Text(text = count.value.toString())

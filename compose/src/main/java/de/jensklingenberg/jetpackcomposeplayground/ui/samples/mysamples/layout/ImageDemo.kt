@@ -4,8 +4,9 @@ import android.content.Context
 import androidx.compose.Composable
 import androidx.ui.core.Draw
 import androidx.ui.core.WithDensity
-import androidx.ui.engine.geometry.Offset
+
 import androidx.ui.foundation.SimpleImage
+import androidx.ui.geometry.Offset
 import androidx.ui.graphics.Paint
 import androidx.ui.graphics.imageFromResource
 import androidx.ui.layout.Container

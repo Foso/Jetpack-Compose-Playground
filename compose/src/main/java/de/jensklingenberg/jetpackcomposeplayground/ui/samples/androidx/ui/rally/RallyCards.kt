@@ -25,11 +25,11 @@ import androidx.ui.foundation.ColoredRect
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
-import androidx.ui.layout.Size
 import androidx.ui.material.*
 import androidx.ui.material.ripple.Ripple
 import androidx.ui.material.studies.rally.DrawAnimatedCircle
 import androidx.ui.material.surface.Card
+import androidx.ui.unit.dp
 import java.util.Locale
 
 /**
@@ -37,7 +37,7 @@ import java.util.Locale
  */
 @Composable
 fun RallyAlertCard() {
-    val openDialog = +state { false }
+    val openDialog = state { false }
     val alertMessage = "Heads up, you've used up 90% of your Shopping budget for this month."
 
     if (openDialog.value) {
@@ -55,27 +55,27 @@ fun RallyAlertCard() {
                 Clickable(onClick = { openDialog.value = true }) {
                     Container {
                         Row(
-                            modifier = Spacing(12.dp) wraps ExpandedWidth,
+                            modifier = LayoutPadding(12.dp) + LayoutWidth.Fill,
                             arrangement = Arrangement.SpaceBetween
                         ) {
-                            Text(text = "Alerts", style = (+MaterialTheme.typography()).subtitle2)
+                            Text(text = "Alerts", style = MaterialTheme.typography().subtitle2)
                             Button(text = "See All", onClick = { }, style = TextButtonStyle())
                         }
                     }
                 }
             }
             Divider(
-                Spacing(left = 12.dp, right = 12.dp),
-                color = (+MaterialTheme.colors()).background,
+                LayoutPadding(left = 12.dp, right = 12.dp),
+                color = MaterialTheme.colors().background,
                 height = 2.dp
             )
             Ripple(bounded = true) {
                 Clickable(onClick = { openDialog.value = true }) {
                     Container {
-                        Row(Spacing(12.dp)) {
+                        Row(LayoutPadding(12.dp)) {
                             Text(
-                                style = (+MaterialTheme.typography()).body1,
-                                modifier = Flexible(1f),
+                                style = MaterialTheme.typography().body1,
+                                modifier = LayoutFlexible(1f),
                                 text = alertMessage
                             )
                             // TODO: icons still don't work
@@ -97,12 +97,12 @@ fun RallyAlertCard() {
 fun RallyAccountsOverviewCard() {
     Card {
         Column {
-            Column(modifier = Spacing(12.dp)) {
-                Text(text = "Accounts", style = (+MaterialTheme.typography()).body1)
-                Text(text = "$12,132.49", style = (+MaterialTheme.typography()).h3)
+            Column(modifier = LayoutPadding(12.dp)) {
+                Text(text = "Accounts", style = MaterialTheme.typography().body1)
+                Text(text = "$12,132.49", style = MaterialTheme.typography().h3)
             }
             Divider(color = rallyGreen, height = 1.dp)
-            Column(modifier = Spacing(12.dp)) {
+            Column(modifier = LayoutPadding(12.dp)) {
                 RallyAccountRow(
                     name = "Checking",
                     number = "1234",
@@ -137,29 +137,29 @@ fun RallyAccountsOverviewCard() {
 fun RallyAccountsCard() {
     VerticalScroller {
         Column {
-            Stack(Spacing(16.dp)) {
+            Stack(LayoutPadding(16.dp)) {
                 val accountsProportion = listOf(0.595f, 0.045f, 0.095f, 0.195f, 0.045f)
                 val colors = listOf(0xFF1EB980, 0xFF005D57, 0xFF04B97F, 0xFF37EFBA,
                     0xFFFAFFBF).map { Color(it) }
-                Container( height = 300.dp, expanded = true) {
+                Container(LayoutGravity.Center, height = 300.dp, expanded = true) {
                     DrawAnimatedCircle(accountsProportion, colors)
                 }
-                Column() {
+                Column(modifier = LayoutGravity.Center) {
                     Text(
                         text = "Total",
-                        style = (+MaterialTheme.typography()).body1,
-                        modifier = Gravity.Center
+                        style = MaterialTheme.typography().body1,
+                        modifier = LayoutGravity.Center
                     )
                     Text(
                         text = "$12,132.49",
-                        style = (+MaterialTheme.typography()).h3,
-                        modifier = Gravity.Center
+                        style = MaterialTheme.typography().h3,
+                        modifier = LayoutGravity.Center
                     )
                 }
             }
-            Spacer(Height(10.dp))
+            Spacer(LayoutHeight(10.dp))
             Card {
-                Column(modifier = Spacing(12.dp)) {
+                Column(modifier = LayoutPadding(12.dp)) {
                     RallyAccountRow(
                         name = "Checking",
                         number = "1234",
@@ -193,30 +193,20 @@ fun RallyAccountsCard() {
     }
 }
 
-fun Spacer(height: LayoutModifier) {
-
-}
-
 /**
  * A row within the Accounts card in the Rally Overview screen.
  */
 @Composable
 fun RallyAccountRow(name: String, number: String, amount: String, color: Color) {
-    FlexRow(Spacing(top = 12.dp, bottom = 12.dp)) {
-        inflexible {
-            AccountIndicator(color = color)
-            Spacer(Width(8.dp))
-            Column {
-                Text(text = name, style = (+MaterialTheme.typography()).body1)
-                Text(text = "•••••$number", style = (+MaterialTheme.typography()).subtitle1)
-            }
+    Row(LayoutPadding(top = 12.dp, bottom = 12.dp)) {
+        AccountIndicator(color = color)
+        Spacer(LayoutWidth(8.dp))
+        Column {
+            Text(text = name, style = MaterialTheme.typography().body1)
+            Text(text = "•••••$number", style = MaterialTheme.typography().subtitle1)
         }
-        expanded(flex = 1.0f) {
-            Spacer(Size(width = 0.dp, height = 0.dp))
-        }
-        inflexible {
-            Text(text = "$ $amount", style = (+MaterialTheme.typography()).h6)
-        }
+        Spacer(LayoutFlexible(1f))
+        Text(text = "$ $amount", style = MaterialTheme.typography().h6)
     }
 }
 
@@ -235,13 +225,13 @@ fun AccountIndicator(color: Color) {
 fun RallyBillsOverviewCard() {
     Card {
         Column {
-            Column(modifier = Spacing(12.dp)) {
-                Text(text = "Bills", style = (+MaterialTheme.typography()).subtitle2)
-                Text(text = "$1,810.00", style = (+MaterialTheme.typography()).h3)
+            Column(modifier = LayoutPadding(12.dp)) {
+                Text(text = "Bills", style = MaterialTheme.typography().subtitle2)
+                Text(text = "$1,810.00", style = MaterialTheme.typography().h3)
             }
             Divider(color = rallyGreen, height = 1.dp)
             // TODO: change to proper bill items
-            Column(modifier = Spacing(12.dp)) {
+            Column(modifier = LayoutPadding(12.dp)) {
                 RallyAccountRow(
                     name = "RedPay Credit",
                     number = "Jan 29",
@@ -276,31 +266,31 @@ fun RallyBillsOverviewCard() {
 fun RallyBillsCard() {
     VerticalScroller {
         Column {
-            Stack(Spacing(16.dp)) {
+            Stack(LayoutPadding(16.dp)) {
                 val accountsProportion = listOf(0.65f, 0.25f, 0.03f, 0.05f)
                 val colors = listOf(0xFF1EB980, 0xFF005D57, 0xFF04B97F, 0xFF37EFBA).map {
                     Color(it)
                 }
-                Container( height = 300.dp, expanded = true) {
+                Container(modifier = LayoutGravity.Center, height = 300.dp, expanded = true) {
                     DrawAnimatedCircle(accountsProportion, colors)
                 }
-                Column() {
+                Column(modifier = LayoutGravity.Center) {
                     Text(
                         text = "Due",
-                        style = (+MaterialTheme.typography()).body1,
-                        modifier = Gravity.Center
+                        style = MaterialTheme.typography().body1,
+                        modifier = LayoutGravity.Center
                     )
                     Text(
                         text = "$1,810.00",
-                        style = (+MaterialTheme.typography()).h3,
-                        modifier = Gravity.Center
+                        style = MaterialTheme.typography().h3,
+                        modifier = LayoutGravity.Center
                     )
                 }
             }
-            Spacer(Height(10.dp))
+            Spacer(LayoutHeight(10.dp))
             Card {
                 // TODO: change to proper bill items
-                Column(modifier = Spacing(12.dp)) {
+                Column(modifier = LayoutPadding(12.dp)) {
                     RallyAccountRow(
                         name = "RedPay Credit",
                         number = "Jan 29",
@@ -335,4 +325,4 @@ fun RallyBillsCard() {
 }
 
 @Composable
-fun RallyDivider() = Divider(color = (+MaterialTheme.colors()).background, height = 2.dp)
+fun RallyDivider() = Divider(color = MaterialTheme.colors().background, height = 2.dp)

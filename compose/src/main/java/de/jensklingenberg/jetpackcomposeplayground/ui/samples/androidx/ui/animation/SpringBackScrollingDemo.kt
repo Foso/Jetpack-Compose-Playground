@@ -23,41 +23,40 @@ import androidx.animation.DEBUG
 import androidx.animation.PhysicsBuilder
 import androidx.animation.fling
 import androidx.compose.Composable
-import androidx.compose.memo
+import androidx.compose.remember
 import androidx.compose.state
-import androidx.compose.unaryPlus
 import androidx.ui.animation.animatedFloat
 import androidx.ui.core.Draw
-import androidx.ui.core.IntPx
-import androidx.ui.core.Layout
-import androidx.ui.core.PxPosition
-import androidx.ui.core.PxSize
 import androidx.ui.core.Text
-import androidx.ui.core.dp
-import androidx.ui.core.gesture.RawDragGestureDetector
 import androidx.ui.core.gesture.DragObserver
+import androidx.ui.core.gesture.RawDragGestureDetector
 import androidx.ui.core.setContent
-import androidx.ui.core.sp
-import androidx.ui.engine.geometry.Rect
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Column
-import androidx.ui.layout.Padding
+import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Canvas
+import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
-import androidx.ui.layout.ExpandedHeight
+import androidx.ui.layout.Column
+import androidx.ui.layout.Container
+import androidx.ui.layout.LayoutHeight
+import androidx.ui.layout.Padding
 import androidx.ui.text.TextStyle
+import androidx.ui.unit.PxPosition
+import androidx.ui.unit.PxSize
+import androidx.ui.unit.dp
+import androidx.ui.unit.sp
 import kotlin.math.roundToInt
 
 
     @Composable
     fun SpringBackScrollingDemo() {
-        Column(ExpandedHeight) {
+
+        Column(LayoutHeight.Fill) {
             Padding(40.dp) {
                 Text("<== Scroll horizontally ==>", style = TextStyle(fontSize = 20.sp))
             }
-            val animScroll = +animatedFloat(0f)
-            val itemWidth = +state { 0f }
-            var isFlinging = +state { false }
+            val animScroll = animatedFloat(0f)
+            val itemWidth = state { 0f }
+            var isFlinging = state { false }
             RawDragGestureDetector(dragObserver = object : DragObserver {
                 override fun onDrag(dragDistance: PxPosition): PxPosition {
                     animScroll.snapTo(animScroll.targetValue + dragDistance.x.value)
@@ -70,8 +69,8 @@ import kotlin.math.roundToInt
                     })
                 }
             }) {
-                val children = @Composable {
-                    var paint = +memo { Paint() }
+                Container(expanded = true, height = 400.dp) {
+                    var paint = remember { Paint() }
                     Draw { canvas, parentSize ->
 
                         itemWidth.value = parentSize.width.value / 2f
@@ -104,42 +103,39 @@ import kotlin.math.roundToInt
                         drawRects(canvas, parentSize, paint, animScroll.value)
                     }
                 }
-                Layout(children) { _, constraints ->
-                    layout(constraints.maxWidth, IntPx(1200)) {}
-                }
             }
         }
     }
 
-    private fun drawRects(canvas: Canvas, parentSize: PxSize, paint: Paint, animScroll: Float) {
-        val width = parentSize.width.value / 2f
-        val scroll = animScroll + width / 2
-        var startingPos = scroll % width
-        if (startingPos > 0) {
-            startingPos -= width
-        }
-        var startingColorIndex = ((scroll - startingPos) / width).roundToInt().rem(colors.size)
-        if (startingColorIndex < 0) {
-            startingColorIndex += colors.size
-        }
-        paint.color = colors[startingColorIndex]
-        canvas.drawRect(Rect(startingPos + 10, 0f, startingPos + width - 10,
-            parentSize.height.value), paint)
-        paint.color = colors[(startingColorIndex + colors.size - 1) % colors.size]
-        canvas.drawRect(Rect(startingPos + width + 10, 0f, startingPos + width * 2 - 10,
-            parentSize.height.value), paint)
-        paint.color = colors[(startingColorIndex + colors.size - 2) % colors.size]
-        canvas.drawRect(Rect(startingPos + width * 2 + 10, 0f, startingPos + width * 3 - 10,
-            parentSize.height.value), paint)
+private fun drawRects(canvas: Canvas, parentSize: PxSize, paint: Paint, animScroll: Float) {
+    val width = parentSize.width.value / 2f
+    val scroll = animScroll + width / 2
+    var startingPos = scroll % width
+    if (startingPos > 0) {
+        startingPos -= width
     }
+    var startingColorIndex = ((scroll - startingPos) / width).roundToInt().rem(colors.size)
+    if (startingColorIndex < 0) {
+        startingColorIndex += colors.size
+    }
+    paint.color = colors[startingColorIndex]
+    canvas.drawRect(Rect(startingPos + 10, 0f, startingPos + width - 10,
+        parentSize.height.value), paint)
+    paint.color = colors[(startingColorIndex + colors.size - 1) % colors.size]
+    canvas.drawRect(Rect(startingPos + width + 10, 0f, startingPos + width * 2 - 10,
+        parentSize.height.value), paint)
+    paint.color = colors[(startingColorIndex + colors.size - 2) % colors.size]
+    canvas.drawRect(Rect(startingPos + width * 2 + 10, 0f, startingPos + width * 3 - 10,
+        parentSize.height.value), paint)
+}
 
-    private val colors = listOf(
-            Color(0xFFdaf8e3),
-            Color(0xFF97ebdb),
-            Color(0xFF00c2c7),
-            Color(0xFF0086ad),
-            Color(0xFF005582),
-            Color(0xFF0086ad),
-            Color(0xFF00c2c7),
-            Color(0xFF97ebdb))
+private val colors = listOf(
+    Color(0xFFdaf8e3),
+    Color(0xFF97ebdb),
+    Color(0xFF00c2c7),
+    Color(0xFF0086ad),
+    Color(0xFF005582),
+    Color(0xFF0086ad),
+    Color(0xFF00c2c7),
+    Color(0xFF97ebdb))
 

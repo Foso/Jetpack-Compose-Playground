@@ -9,7 +9,7 @@ import androidx.ui.material.Switch
 @Composable
 fun SwitchDemo() {
     MaterialTheme {
-        val checkedState = +state { true }
+        val checkedState = state { true }
         Switch(
             checked = checkedState.value,
             onCheckedChange = { checkedState.value = it }

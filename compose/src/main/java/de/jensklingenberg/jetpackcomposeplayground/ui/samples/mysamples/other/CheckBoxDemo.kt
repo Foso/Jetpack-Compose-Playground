@@ -9,7 +9,7 @@ import androidx.ui.material.MaterialTheme
 @Composable
 fun CheckBoxDemo() {
     MaterialTheme {
-        val checkedState = +state { true }
+        val checkedState = state { true }
         Checkbox(
             checked = checkedState.value,
             onCheckedChange = { checkedState.value = it }

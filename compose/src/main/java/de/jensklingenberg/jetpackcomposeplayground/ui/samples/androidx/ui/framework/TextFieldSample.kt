@@ -45,7 +45,7 @@ fun TextFieldSampleDemo(){
 
 @Composable
 fun StringTextFieldSample() {
-    val state = +state { "" }
+    val state = state { "" }
     TextField(
         value = state.value,
         onValueChange = { state.value = it }
@@ -54,7 +54,7 @@ fun StringTextFieldSample() {
 
 @Composable
 fun EditorModelTextFieldSample() {
-    val state = +state { EditorModel() }
+    val state = state { EditorModel() }
     TextField(
         value = state.value,
         onValueChange = { state.value = it }
@@ -63,8 +63,8 @@ fun EditorModelTextFieldSample() {
 
 @Composable
 fun CompositionEditorModelTextFieldSample() {
-    val model = +state { EditorModel() }
-    val composition = +state<TextRange?> { null }
+    val model = state { EditorModel() }
+    val composition = state<TextRange?> { null }
     TextField(
         model = model.value,
         compositionRange = composition.value,
@@ -77,7 +77,7 @@ fun CompositionEditorModelTextFieldSample() {
 
 @Composable
 fun PasswordTextFieldSample() {
-    val state = +state { "" }
+    val state = state { "" }
     PasswordTextField(
         value = state.value,
         onValueChange = { state.value = it }

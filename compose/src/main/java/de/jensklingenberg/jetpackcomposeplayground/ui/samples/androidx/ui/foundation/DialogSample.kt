@@ -20,17 +20,18 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.found
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.compose.unaryPlus
-import androidx.ui.core.dp
+
 import androidx.ui.foundation.Dialog
 import androidx.ui.foundation.shape.DrawShape
 import androidx.ui.foundation.shape.corner.CircleShape
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Container
+import androidx.ui.unit.dp
 
 
 @Composable
 fun DialogSample() {
-    val openDialog = +state { true }
+    val openDialog = state { true }
     val dialogWidth = 200.dp
     val dialogHeight = 50.dp
 

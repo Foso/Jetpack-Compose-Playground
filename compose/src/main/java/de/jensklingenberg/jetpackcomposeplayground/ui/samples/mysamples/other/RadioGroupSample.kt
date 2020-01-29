@@ -10,7 +10,7 @@ import androidx.ui.material.RadioGroup
 fun RadioGroupSample() {
     MaterialTheme {
         val radioOptions = listOf("A", "B", "C")
-        val (selectedOption, onOptionSelected) = +state { radioOptions[0] }
+        val (selectedOption, onOptionSelected) = state { radioOptions[0] }
         RadioGroup(
             options = radioOptions,
             selectedOption = selectedOption,

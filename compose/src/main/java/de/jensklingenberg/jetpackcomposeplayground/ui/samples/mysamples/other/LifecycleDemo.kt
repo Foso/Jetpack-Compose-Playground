@@ -28,7 +28,7 @@ import androidx.ui.material.MaterialTheme
 @Composable
 fun LifecycleDemo() {
     MaterialTheme {
-        val count = +state { 0 }
+        val count = state { 0 }
 
         Column {
             Button(text = "Click me", onClick = {
@@ -36,8 +36,8 @@ fun LifecycleDemo() {
             })
 
             if (count.value < 3) {
-                +onActive { Log.d("Compose", "onactive with value: " + count.value) }
-                +onDispose { Log.d("Compose", "onDispose because value=" + count.value) }
+                onActive { Log.d("Compose", "onactive with value: " + count.value) }
+                onDispose { Log.d("Compose", "onDispose because value=" + count.value) }
                 Text(text = "You have clicked the button: " + count.value.toString())
             }
         }

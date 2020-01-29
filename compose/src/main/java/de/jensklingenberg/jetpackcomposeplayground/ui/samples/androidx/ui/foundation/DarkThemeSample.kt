@@ -19,16 +19,17 @@ package androidx.ui.foundation.samples
 
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
-import androidx.ui.core.dp
+
 import androidx.ui.foundation.ColoredRect
 import androidx.ui.foundation.isSystemInDarkTheme
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Wrap
+import androidx.ui.unit.dp
 
 
 @Composable
 fun DarkThemeSample() {
-    val dark = +isSystemInDarkTheme()
+    val dark = isSystemInDarkTheme()
     val color = if (dark) Color.White else Color.Black
     Wrap {
         ColoredRect(color = color, width = 50.dp, height = 50.dp)

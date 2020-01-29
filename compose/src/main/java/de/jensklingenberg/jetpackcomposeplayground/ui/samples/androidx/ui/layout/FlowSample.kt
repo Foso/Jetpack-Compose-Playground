@@ -18,7 +18,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.layou
 
 
 import androidx.compose.Composable
-import androidx.ui.core.dp
+import androidx.ui.unit.dp
 import androidx.ui.graphics.Color
 import androidx.ui.layout.FlowColumn
 import androidx.ui.layout.FlowRow

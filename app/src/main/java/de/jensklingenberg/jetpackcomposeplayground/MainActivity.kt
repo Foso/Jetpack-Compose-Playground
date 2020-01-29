@@ -3,6 +3,7 @@ package de.jensklingenberg.jetpackcomposeplayground
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.ui.core.setContent
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation.AnimatableSeekBarDemo
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            MainPage()
+            //AnimatableSeekBarDemo()
         }
     }
 

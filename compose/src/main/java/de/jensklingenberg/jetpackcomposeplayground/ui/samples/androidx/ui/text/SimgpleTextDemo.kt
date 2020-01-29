@@ -10,7 +10,7 @@ import androidx.ui.material.MaterialTheme
 fun SimpleTextDemo() {
 
     MaterialTheme {
-        Text(text = "Hello World!", style =(+MaterialTheme.typography()).body2)
+        Text(text = "Hello World!", style =(MaterialTheme.typography()).body2)
     }
 
 }

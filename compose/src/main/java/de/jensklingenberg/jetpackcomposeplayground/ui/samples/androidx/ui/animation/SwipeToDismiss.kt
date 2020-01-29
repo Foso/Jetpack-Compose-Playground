@@ -17,21 +17,22 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animation
 
 import androidx.animation.*
-import androidx.compose.Composable
-import androidx.compose.memo
-import androidx.compose.state
-import androidx.compose.unaryPlus
+import androidx.compose.*
 import androidx.ui.animation.animatedFloat
 import androidx.ui.core.*
 import androidx.ui.core.gesture.DragObserver
 import androidx.ui.core.gesture.RawDragGestureDetector
-import androidx.ui.engine.geometry.Rect
+import androidx.ui.geometry.Rect
+
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 import androidx.ui.layout.Column
 import androidx.ui.layout.Padding
 import androidx.ui.material.MaterialTheme
 import androidx.ui.text.TextStyle
+import androidx.ui.unit.IntPx
+import androidx.ui.unit.PxPosition
+import androidx.ui.unit.dp
 import kotlin.math.sign
 
 
@@ -57,10 +58,10 @@ import kotlin.math.sign
 
     @Composable
     fun SwipeToDismiss() {
-        val itemBottom = +animatedFloat(height)
-        val index = +state { 0 }
-        val itemWidth = +state { 0f }
-        val isFlinging = +state { false }
+        val itemBottom = animatedFloat(height)
+        val index = state { 0 }
+        val itemWidth = state { 0f }
+        val isFlinging = state { false }
         RawDragGestureDetector(dragObserver = object : DragObserver {
             override fun onStart(downPosition: PxPosition) {
                 itemBottom.setBounds(0f, height)
@@ -136,7 +137,7 @@ import kotlin.math.sign
 
     @Composable
     fun drawLeftItems(horizontalOffset: Float, width: Float, height: Float, index: Int) {
-        var paint = +memo { Paint() }
+        var paint = remember { Paint() }
         Draw { canvas, parentSize ->
             paint.color = colors[index % colors.size]
             val centerX = parentSize.width.value / 2
@@ -159,7 +160,7 @@ import kotlin.math.sign
 
     @Composable
     fun drawDismissingItem(bottom: Float, width: Float, height: Float, index: Int, alpha: Float) {
-        var paint = +memo { Paint() }
+        var paint = remember { Paint() }
         Draw { canvas, parentSize ->
             paint.color = colors[index % colors.size]
             paint.alpha = alpha

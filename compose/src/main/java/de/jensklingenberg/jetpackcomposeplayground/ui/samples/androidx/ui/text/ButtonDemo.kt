@@ -31,28 +31,28 @@ import androidx.ui.material.samples.TextButtonSample
 @Composable
 fun ButtonDemo() {
     val onClick: () -> Unit = { Log.e("ButtonDemo", "onClick") }
-    MaterialTheme {
-        Center {
-            Column(ExpandedHeight, arrangement = Arrangement.SpaceEvenly) {
-                ContainedButtonSample(onClick)
+    Center {
+        Column(LayoutHeight.Fill, arrangement = Arrangement.SpaceEvenly) {
+            ContainedButtonSample(onClick)
 
-                OutlinedButtonSample(onClick)
+            OutlinedButtonSample(onClick)
 
-                TextButtonSample(onClick)
+            TextButtonSample(onClick)
 
-                Button(
-                    text = "SECONDARY COLOR",
-                    onClick = onClick,
-                    style = ContainedButtonStyle((+MaterialTheme.colors()).secondary))
+            Button(
+                text = "SECONDARY COLOR",
+                onClick = onClick,
+                style = ContainedButtonStyle(MaterialTheme.colors().secondary))
 
-                ButtonWithTextSample(onClick)
+            ButtonWithTextSample(onClick)
 
-                // TODO(Andrey): Disabled button has wrong bg and text color for now.
-                // Need to figure out where will we store their styling. Not a part of
-                // ColorPalette right now and specs are not clear about this.
-                Button("DISABLED. TODO")
-            }
+            // TODO(Andrey): Disabled button has wrong bg and text color for now.
+            // Need to figure out where will we store their styling. Not a part of
+            // ColorPalette right now and specs are not clear about this.
+            Button("DISABLED. TODO")
         }
     }
+
+
 
 }

@@ -16,19 +16,19 @@
 
 package androidx.ui.framework.samples
 
+
 import androidx.compose.Composable
-import androidx.compose.unaryPlus
 import androidx.ui.core.WithConstraints
 import androidx.ui.core.ambientDensity
-import androidx.ui.core.dp
-import androidx.ui.core.withDensity
 import androidx.ui.graphics.Color
+import androidx.ui.unit.dp
+import androidx.ui.unit.withDensity
 
 @Composable
 fun WithConstraintsSample() {
     WithConstraints { constraints ->
         val rectangleHeight = 100.dp
-        val threshold = withDensity(+ambientDensity()) { (rectangleHeight * 2).toIntPx() }
+        val threshold = withDensity(ambientDensity()) { (rectangleHeight * 2).toIntPx() }
         if (constraints.maxHeight < threshold) {
             SizedRectangle(color = Color.Blue, width = 50.dp, height = rectangleHeight)
         } else {

@@ -18,21 +18,20 @@ package androidx.ui.framework.samples
 
 import androidx.compose.Composable
 import androidx.ui.core.Constraints
-import androidx.ui.core.Dp
 import androidx.ui.core.Layout
 import androidx.ui.core.Modifier
 import androidx.ui.core.OnChildPositioned
 import androidx.ui.core.OnPositioned
-import androidx.ui.core.coerceAtLeast
-import androidx.ui.core.coerceIn
-import androidx.ui.core.dp
 import androidx.ui.core.globalPosition
-import androidx.ui.core.ipx
-import androidx.ui.core.max
 import androidx.ui.core.positionInRoot
 import androidx.ui.foundation.shape.DrawShape
 import androidx.ui.foundation.shape.RectangleShape
 import androidx.ui.graphics.Color
+import androidx.ui.unit.Dp
+import androidx.ui.unit.dp
+import androidx.ui.unit.ipx
+import androidx.ui.unit.max
+
 
 @Composable
 fun OnPositionedSample() {
@@ -42,8 +41,6 @@ fun OnPositionedSample() {
         OnPositioned(onPositioned = { coordinates ->
             // This will be the size of the Column.
             coordinates.size
-            // This will be the position of Column inside its parent.
-            coordinates.position
             // The position of the Column relative to the application window.
             coordinates.globalPosition
             // The position of the Column relative to the Compose root.
@@ -63,8 +60,6 @@ fun OnChildPositionedSample() {
         OnChildPositioned(onPositioned = { coordinates ->
             // This will be the size of the child SizedRectangle.
             coordinates.size
-            // This will be the position of SizedRectangle inside its Column parent.
-            coordinates.position
             // The position of the SizedRectangle relative to the application window.
             coordinates.globalPosition
             // The position of the SizedRectangle relative to the Compose root.

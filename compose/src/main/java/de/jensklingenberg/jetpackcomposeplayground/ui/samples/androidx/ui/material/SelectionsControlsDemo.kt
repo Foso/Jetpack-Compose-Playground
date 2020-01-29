@@ -21,7 +21,7 @@ import androidx.compose.memo
 import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.core.Text
-import androidx.ui.core.dp
+import androidx.ui.unit.dp
 import androidx.ui.foundation.selection.ToggleableState
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
@@ -49,8 +49,7 @@ fun SelectionsControlsDemo() {
 
 @Composable
 fun SelectionsControls() {
-
-    val headerStyle = (+MaterialTheme.typography()).h6
+    val headerStyle = MaterialTheme.typography().h6
     val padding = EdgeInsets(10.dp)
 
     Padding(padding = padding) {

@@ -20,13 +20,14 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.mater
 import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.Text
-import androidx.ui.core.dp
+
 import androidx.ui.foundation.ColoredRect
 import androidx.ui.graphics.Color
 import androidx.ui.layout.*
 import androidx.ui.material.Divider
 import androidx.ui.material.MaterialTheme
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.ColoredRect
+import androidx.ui.unit.dp
+
 
 @Composable
 fun DividersDemo() {
@@ -57,9 +58,9 @@ fun Dividers() {
                 }
             }
         }
-        HeightSpacer(height = 30.dp)
+        Spacer(LayoutHeight(30.dp))
         Divider(height = 2.dp, color = blackColor)
-        HeightSpacer(height = 10.dp)
+        Spacer(LayoutHeight(10.dp))
         Column {
             items.forEach { text ->
                 Item(text = text)
@@ -72,7 +73,7 @@ fun Dividers() {
 @Composable
 fun Item(text: String, color: Color? = null) {
     val avatarSize = ItemSize - ItemPadding * 2
-    val textStyle = (+MaterialTheme.typography()).body1
+    val textStyle = MaterialTheme.typography().body1
     Container(height = ItemSize, padding = EdgeInsets(ItemPadding)) {
         Row {
             if (color != null) {
@@ -80,11 +81,11 @@ fun Item(text: String, color: Color? = null) {
                     width = avatarSize,
                     height = avatarSize,
                     color = color,
-                    modifier = Gravity.Center
+                    modifier = LayoutGravity.Center
                 )
-                WidthSpacer(width = ItemPadding)
+                Spacer(LayoutWidth(ItemPadding))
             }
-            Text(text = text, style = textStyle, modifier = Gravity.Center)
+            Text(text = text, style = textStyle, modifier = LayoutGravity.Center)
         }
     }
 }

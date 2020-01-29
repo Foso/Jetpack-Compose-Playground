@@ -19,7 +19,7 @@ package androidx.ui.framework.samples
 import androidx.compose.Composable
 import androidx.ui.core.Layout
 import androidx.ui.core.ParentData
-import androidx.ui.core.dp
+import androidx.ui.unit.dp
 import androidx.ui.graphics.Color
 
 

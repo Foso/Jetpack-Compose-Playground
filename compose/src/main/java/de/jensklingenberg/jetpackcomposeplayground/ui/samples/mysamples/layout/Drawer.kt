@@ -5,7 +5,6 @@ import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.Modifier
 import androidx.ui.core.Text
-import androidx.ui.core.dp
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
 import androidx.ui.layout.*
@@ -13,11 +12,11 @@ import androidx.ui.material.Button
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.TextButtonStyle
 import androidx.ui.material.surface.Surface
+import androidx.ui.unit.dp
 import de.jensklingenberg.jetpackcomposeplayground.Navigator
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.VectorImage
-
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.VectorImage
 
 
 @Composable
@@ -65,7 +64,7 @@ private fun DrawerButton(
     isSelected: Boolean,
     action: () -> Unit
 ) {
-    val colors = +MaterialTheme.colors()
+    val colors = MaterialTheme.colors()
     val textIconColor = if (isSelected) {
         colors.primary
     } else {
@@ -86,14 +85,14 @@ private fun DrawerButton(
         Button(onClick = action, style = TextButtonStyle()) {
             Row {
                 VectorImage(
-                    modifier = Gravity.Center,
+                    modifier = LayoutGravity.Center,
                     id = icon,
                     tint = textIconColor
                 )
-                WidthSpacer(16.dp)
+           Spacer(LayoutWidth(16.dp))
                 Text(
                     text = label,
-                    style = (+MaterialTheme.typography()).body2.copy(
+                    style = (MaterialTheme.typography()).body2.copy(
                         color = textIconColor
                     )
                 )

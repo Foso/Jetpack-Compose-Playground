@@ -19,14 +19,14 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text
 
 import androidx.compose.Composable
 import androidx.ui.core.Text
-import androidx.ui.core.em
-import androidx.ui.core.sp
 import androidx.ui.graphics.Color
 import androidx.ui.text.TextStyle
 import androidx.ui.text.font.FontFamily
 import androidx.ui.text.font.FontStyle
 import androidx.ui.text.font.FontWeight
 import androidx.ui.text.style.TextDecoration
+import androidx.ui.unit.em
+import androidx.ui.unit.sp
 
 @Composable
 fun TextStyleSample() {
@@ -40,8 +40,7 @@ fun TextStyleSample() {
             fontStyle = FontStyle.Italic,
             letterSpacing = 0.5.em,
             background = Color.LightGray,
-            decoration = TextDecoration.Underline
+            textDecoration = TextDecoration.Underline
         )
     )
 }
-

@@ -21,16 +21,15 @@ import androidx.animation.FloatPropKey
 import androidx.animation.LinearOutSlowInEasing
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
-import androidx.compose.memo
-import androidx.compose.unaryPlus
+import androidx.compose.remember
 import androidx.ui.animation.Transition
 import androidx.ui.core.Draw
-import androidx.ui.core.dp
-import androidx.ui.core.minDimension
-import androidx.ui.engine.geometry.Rect
+import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 import androidx.ui.graphics.PaintingStyle
+import androidx.ui.unit.dp
+import androidx.ui.unit.minDimension
 
 private const val DividerLengthInDegrees = 1.8f
 private val AngleOffset = FloatPropKey()
@@ -64,8 +63,8 @@ private val CircularTransition = transitionDefinition {
 @Composable
 fun DrawAnimatedCircle(proportions: List<Float>, colors: List<Color>) {
     val strokeWidthDp = 5.dp
-    val paint = +memo { Paint() }
-    Transition(definition = CircularTransition, toState = 1) { state ->
+    val paint = remember { Paint() }
+    Transition(definition = CircularTransition, initState = 0, toState = 1) { state ->
         Draw { canvas, parentSize ->
             val strokeWidth = strokeWidthDp.toPx().value
             paint.style = PaintingStyle.stroke

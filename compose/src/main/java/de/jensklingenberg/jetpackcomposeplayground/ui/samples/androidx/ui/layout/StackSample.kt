@@ -17,31 +17,29 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.layout
 
 
-import androidx.compose.Composable
-import androidx.ui.core.Alignment
-import androidx.ui.core.dp
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Stack
 
+import androidx.compose.Composable
+import androidx.ui.graphics.Color
+import androidx.ui.layout.LayoutGravity
+import androidx.ui.layout.LayoutPadding
+import androidx.ui.layout.LayoutSize
+import androidx.ui.layout.Stack
+import androidx.ui.unit.dp
 
 @Composable
 fun SimpleStack() {
     Stack {
-        expanded {
-            SizedRectangle(color = Color(0xFFFFFFFF.toInt()))
-        }
-        aligned(Alignment.Center) {
-            SizedRectangle(color = Color(0xFF0000FF), width = 300.dp, height = 300.dp)
-        }
-        aligned(Alignment.TopLeft) {
-            SizedRectangle(color = Color(0xFF00FF00), width = 150.dp, height = 150.dp)
-        }
-        aligned(Alignment.BottomRight) {
-            SizedRectangle(color = Color(0xFFFF0000), width = 150.dp, height = 150.dp)
-        }
-        positioned(null, 20.dp, null, 20.dp) {
-            SizedRectangle(color = Color(0xFFFFA500), width = 80.dp)
-            SizedRectangle(color = Color(0xFFA52A2A), width = 20.dp)
-        }
+        SizedRectangle(LayoutSize.Fill, color = Color.Cyan)
+        SizedRectangle(
+            LayoutGravity.Stretch + LayoutPadding(top = 20.dp, bottom = 20.dp),
+            color = Color.Yellow
+        )
+        SizedRectangle(LayoutGravity.Stretch + LayoutPadding(40.dp), color = Color.Magenta)
+        SizedRectangle(LayoutGravity.Center + LayoutSize(300.dp, 300.dp), color = Color.Green)
+        SizedRectangle(LayoutGravity.TopLeft + LayoutSize(150.dp, 150.dp), color = Color.Red)
+        SizedRectangle(
+            LayoutGravity.BottomRight + LayoutSize(150.dp, 150.dp),
+            color = Color.Blue
+        )
     }
 }

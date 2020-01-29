@@ -25,8 +25,8 @@ fun ColumnDemo() {
 fun ColumnExample() {
     Container {
         Column {
-            Text(text = " Hello World!", style =(+MaterialTheme.typography()).body1)
-            Text(text = " Hello World!2", style =(+MaterialTheme.typography()).body1)
+            Text(text = " Hello World!", style =(MaterialTheme.typography()).body1)
+            Text(text = " Hello World!2", style =(MaterialTheme.typography()).body1)
         }
     }
 

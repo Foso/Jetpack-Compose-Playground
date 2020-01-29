@@ -17,45 +17,48 @@
 package androidx.ui.layout.samples
 
 
+
 import androidx.compose.Composable
 import androidx.ui.core.Text
-import androidx.ui.core.dp
 import androidx.ui.foundation.shape.DrawShape
 import androidx.ui.foundation.shape.RectangleShape
 import androidx.ui.graphics.Color
-import androidx.ui.layout.*
+import androidx.ui.layout.LayoutAspectRatio
+import androidx.ui.layout.Column
+import androidx.ui.layout.Container
+import androidx.ui.layout.LayoutHeight
+import androidx.ui.layout.LayoutSize
+import androidx.ui.layout.LayoutWidth
+import androidx.ui.layout.MaxIntrinsicHeight
+import androidx.ui.layout.MaxIntrinsicWidth
+import androidx.ui.layout.MinIntrinsicHeight
+import androidx.ui.layout.MinIntrinsicWidth
+import androidx.ui.layout.Row
+import androidx.ui.layout.Wrap
+import androidx.ui.unit.dp
 
 /**
- * Builds a layout containing three [ConstrainedBox] having the same width as the widest one.
+ * Builds a layout containing three [Container] having the same width as the widest one.
  *
  * Here [MinIntrinsicWidth] is adding a speculative width measurement pass for the [Column],
  * whose minimum intrinsic width will correspond to the preferred width of the largest
- * [ConstrainedBox]. Then [MinIntrinsicWidth] will measure the [Column] with tight width, the same
- * as the premeasured minimum intrinsic width, which due to [ExpandedWidth] will force
- * the [ConstrainedBox]s to use the same width.
+ * [Container]. Then [MinIntrinsicWidth] will measure the [Column] with tight width, the same
+ * as the premeasured minimum intrinsic width, which due to [LayoutExpandedWidth] will force
+ * the [Container]'s to use the same width.
  */
 
 @Composable
 fun SameWidthBoxes() {
     Wrap {
         MinIntrinsicWidth {
-            Column(ExpandedHeight) {
-                ConstrainedBox(
-                    constraints = DpConstraints.tightConstraints(width = 20.dp, height = 10.dp),
-                    modifier = ExpandedWidth
-                ) {
+            Column(LayoutHeight.Fill) {
+                Container(modifier = LayoutWidth.Fill + LayoutSize(20.dp, 10.dp)) {
                     DrawShape(RectangleShape, Color.Gray)
                 }
-                ConstrainedBox(
-                    constraints = DpConstraints.tightConstraints(width = 30.dp, height = 10.dp),
-                    modifier = ExpandedWidth
-                ) {
+                Container(modifier = LayoutWidth.Fill + LayoutSize(30.dp, 10.dp)) {
                     DrawShape(RectangleShape, Color.Blue)
                 }
-                ConstrainedBox(
-                    constraints = DpConstraints.tightConstraints(width = 10.dp, height = 10.dp),
-                    modifier = ExpandedWidth
-                ) {
+                Container(modifier = LayoutWidth.Fill + LayoutSize(10.dp, 10.dp)) {
                     DrawShape(RectangleShape, Color.Magenta)
                 }
             }
@@ -63,14 +66,14 @@ fun SameWidthBoxes() {
     }
 }
 
-/*
+/**
  * Builds a layout containing two pieces of text separated by a divider, where the divider
  * is sized according to the height of the longest text.
  *
- * Here [MinIntrinsicHeight] is adding a speculative height measurement pass for the [FlexRow],
+ * Here [MinIntrinsicHeight] is adding a speculative height measurement pass for the [Row],
  * whose minimum intrinsic height will correspond to the height of the largest [Text]. Then
- * [MinIntrinsicHeight] will measure the [FlexRow] with tight height, the same as the premeasured
- * minimum intrinsic height, which due to [CrossAxisAlignment.Stretch] will force the [Text]s and
+ * [MinIntrinsicHeight] will measure the [Row] with tight height, the same as the premeasured
+ * minimum intrinsic height, which due to [LayoutExpandedHeight] will force the [Text]s and
  * the divider to use the same height.
  */
 
@@ -78,17 +81,19 @@ fun SameWidthBoxes() {
 fun MatchParentDividerForText() {
     Wrap {
         MinIntrinsicHeight {
-            FlexRow(crossAxisAlignment = CrossAxisAlignment.Stretch) {
-                expanded(flex = 1f) {
-                    Text("This is a really short text")
+            Row {
+                Text(
+                    text = "This is a really short text",
+                    modifier = LayoutFlexible(1f) + LayoutHeight.Fill
+                )
+                Container(width = 1.dp, modifier = LayoutHeight.Fill) {
+                    DrawShape(RectangleShape, Color.Black)
                 }
-                inflexible {
-                    Container(width = 1.dp) { DrawShape(RectangleShape, Color.Black) }
-                }
-                expanded(flex = 1f) {
-                    Text("This is a much much much much much much much much much much" +
-                            " much much much much much much longer text")
-                }
+                Text(
+                    text = "This is a much much much much much much much much much much" +
+                            " much much much much much much longer text",
+                    modifier = LayoutFlexible(1f) + LayoutHeight.Fill
+                )
             }
         }
     }
@@ -99,25 +104,25 @@ fun MatchParentDividerForText() {
  *
  * Here [MaxIntrinsicWidth] is adding a speculative width measurement pass for the [Column],
  * whose maximum intrinsic width will correspond to the preferred width of the largest
- * [ConstrainedBox]. Then [MaxIntrinsicWidth] will measure the [Column] with tight width, the same
- * as the premeasured maximum intrinsic width, which due to [ExpandedWidth] modifiers will force
- * the [ConstrainedBox]s to use the same width.
+ * [Container]. Then [MaxIntrinsicWidth] will measure the [Column] with tight width, the same
+ * as the premeasured maximum intrinsic width, which due to [LayoutExpandedWidth] modifiers will
+ * force the [Container]s to use the same width.
  */
 
 @Composable
 fun SameWidthTextBoxes() {
     Wrap {
         MaxIntrinsicWidth {
-            Column(ExpandedHeight) {
-                Container(ExpandedWidth) {
+            Column(LayoutHeight.Fill) {
+                Container(LayoutWidth.Fill) {
                     DrawShape(RectangleShape, Color.Gray)
                     Text("Short text")
                 }
-                Container(ExpandedWidth) {
+                Container(LayoutWidth.Fill) {
                     DrawShape(RectangleShape, Color.Blue)
                     Text("Extremely long text giving the width of its siblings")
                 }
-                Container(ExpandedWidth) {
+                Container(LayoutWidth.Fill) {
                     DrawShape(RectangleShape, Color.Magenta)
                     Text("Medium length text")
                 }
@@ -126,30 +131,31 @@ fun SameWidthTextBoxes() {
     }
 }
 
-/*
- * Builds a layout containing two [AspectRatio]s separated by a divider, where the divider
- * is sized according to the height of the taller [AspectRatio].
+/**
+ * Builds a layout containing two [LayoutAspectRatio]s separated by a divider, where the divider
+ * is sized according to the height of the taller [LayoutAspectRatio].
  *
- * Here [MaxIntrinsicHeight] is adding a speculative height measurement pass for the [FlexRow],
- * whose maximum intrinsic height will correspond to the height of the taller [AspectRatio]. Then
- * [MaxIntrinsicHeight] will measure the [FlexRow] with tight height, the same as the premeasured
- * maximum intrinsic height, which due to [CrossAxisAlignment.Stretch] will force the [AspectRatio]s
- * and the divider to use the same height.
+ * Here [MaxIntrinsicHeight] is adding a speculative height measurement pass for the [Row], whose
+ * maximum intrinsic height will correspond to the height of the taller [LayoutAspectRatio]. Then
+ * [MaxIntrinsicHeight] will measure the [Row] with tight height, the same as the premeasured
+ * maximum intrinsic height, which due to [LayoutExpandedHeight] modifier will force the
+ * [LayoutAspectRatio]s and the divider to use the same height.
  */
 
 @Composable
 fun MatchParentDividerForAspectRatio() {
     Wrap {
         MaxIntrinsicHeight {
-            FlexRow(crossAxisAlignment = CrossAxisAlignment.Stretch) {
-                expanded(flex = 1f) {
-                    Container(AspectRatio(2f)) { DrawShape(RectangleShape, Color.Gray) }
+            Row {
+                val modifier = LayoutHeight.Fill + LayoutFlexible(1f)
+                Container(modifier + LayoutAspectRatio(2f)) {
+                    DrawShape(RectangleShape, Color.Gray)
                 }
-                inflexible {
-                    Container(width = 1.dp) { DrawShape(RectangleShape, Color.Black) }
+                Container(width = 1.dp, modifier = LayoutHeight.Fill) {
+                    DrawShape(RectangleShape, Color.Black)
                 }
-                expanded(flex = 1f) {
-                    Container(AspectRatio(1f)) { DrawShape(RectangleShape, Color.Blue) }
+                Container(modifier + LayoutAspectRatio(1f)) {
+                    DrawShape(RectangleShape, Color.Blue)
                 }
             }
         }

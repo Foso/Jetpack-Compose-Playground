@@ -78,29 +78,28 @@ private class ProgressState {
 @Composable
 private fun ProgressIndicator(state: ProgressState = ProgressState()) {
 
-    +onActive { state.start() }
-    +onDispose { state.stop() }
+    onActive { state.start() }
+    onDispose { state.stop() }
 
-    FlexColumn(mainAxisAlignment = MainAxisAlignment.Center) {
-        expanded(flex = 1f) {
-            Row(ExpandedWidth, arrangement = Arrangement.SpaceEvenly) {
-                // Determinate indicators
-                LinearProgressIndicator(progress = state.progress)
-                CircularProgressIndicator(progress = state.progress)
-            }
-            Row(ExpandedWidth, arrangement = Arrangement.SpaceEvenly) {
-                // Fancy colours!
-                LinearProgressIndicator(progress = (state.progress), color = state.generateColor())
-                CircularProgressIndicator(
-                    progress = (state.progress),
-                    color = state.generateColor()
-                )
-            }
-            Row(ExpandedWidth, arrangement = Arrangement.SpaceEvenly) {
-                // Indeterminate indicators
-                LinearProgressIndicator()
-                CircularProgressIndicator()
-            }
+    Column {
+        val modifier = LayoutFlexible(1f) + LayoutGravity.Center + LayoutWidth.Fill
+        Row(modifier = modifier, arrangement = Arrangement.SpaceEvenly) {
+            // Determinate indicators
+            LinearProgressIndicator(progress = state.progress)
+            CircularProgressIndicator(progress = state.progress)
+        }
+        Row(modifier = modifier, arrangement = Arrangement.SpaceEvenly) {
+            // Fancy colours!
+            LinearProgressIndicator(progress = (state.progress), color = state.generateColor())
+            CircularProgressIndicator(
+                progress = (state.progress),
+                color = state.generateColor()
+            )
+        }
+        Row(modifier = modifier, arrangement = Arrangement.SpaceEvenly) {
+            // Indeterminate indicators
+            LinearProgressIndicator()
+            CircularProgressIndicator()
         }
     }
 }

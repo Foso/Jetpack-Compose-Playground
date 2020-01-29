@@ -18,16 +18,18 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.frame
 
 import androidx.compose.Composable
 import androidx.compose.memo
+import androidx.compose.remember
 import androidx.compose.unaryPlus
 import androidx.ui.core.Draw
-import androidx.ui.core.toRect
+
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
+import androidx.ui.unit.toRect
 
 
 @Composable
 fun DrawSample() {
-    val paint = +memo { Paint() }
+    val paint = remember { Paint() }
     Draw { canvas, parentSize ->
         paint.color = Color.Black
         canvas.drawRect(parentSize.toRect(), paint)

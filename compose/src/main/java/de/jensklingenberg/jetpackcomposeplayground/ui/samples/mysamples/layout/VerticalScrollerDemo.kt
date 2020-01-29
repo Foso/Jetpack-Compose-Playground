@@ -32,7 +32,7 @@ fun VerticalScrollerExample() {
         //Only one child is allowed in a VerticalScroller
         Column {
             for (i in 0..100) {
-                Text(text = "$i Hello World!", style =(+MaterialTheme.typography()).body1)
+                Text(text = "$i Hello World!", style =(MaterialTheme.typography()).body1)
             }
         }
     }

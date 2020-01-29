@@ -2,9 +2,9 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout
 
 import androidx.compose.Composable
 import androidx.ui.core.Draw
-import androidx.ui.core.dp
-import androidx.ui.engine.geometry.Offset
-import androidx.ui.engine.geometry.Rect
+import androidx.ui.unit.dp
+import androidx.ui.geometry.Offset
+import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 import androidx.ui.layout.Container

@@ -17,30 +17,32 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui
 
 import androidx.compose.Composable
+import androidx.compose.MutableState
 import androidx.compose.State
-import androidx.ui.core.dp
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
-import androidx.ui.layout.HeightSpacer
+import androidx.ui.layout.LayoutHeight
+import androidx.ui.layout.Spacer
 import androidx.ui.material.Button
 import androidx.ui.material.Divider
+import androidx.ui.unit.dp
 import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
 
 
 @Composable
-fun HomeScreen(pageIndex: State<Int>) {
+fun HomeScreen(pageIndex: MutableState<Int>) {
 
     val dividerColor = Color(0xFFC6C6C6.toInt())
 
     VerticalScroller {
         Column {
             mainPagesEntries.forEachIndexed { index, page ->
-                HeightSpacer(height = 10.dp)
+                Spacer(LayoutHeight(10.dp))
                 Button(page.title, onClick = {
                     pageIndex.value = index
                 })
-                HeightSpacer(height = 10.dp)
+                Spacer(LayoutHeight(10.dp))
                 Divider(color = dividerColor, height = 0.5.dp)
             }
 

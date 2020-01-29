@@ -30,12 +30,15 @@ import androidx.ui.graphics.Paint
 import androidx.ui.layout.*
 
 import androidx.ui.text.TextStyle
+import androidx.ui.unit.dp
+import androidx.ui.unit.sp
+import androidx.ui.unit.toRect
 
 
 @Composable
 fun RepeatedRotation() {
     Center {
-        val state = +state { RotationStates.Original }
+        val state = state { RotationStates.Original }
         Column(arrangement = Arrangement.SpaceEvenly) {
             val textStyle = TextStyle(fontSize = 18.sp)
             PressReleasedGestureDetector(onRelease = {

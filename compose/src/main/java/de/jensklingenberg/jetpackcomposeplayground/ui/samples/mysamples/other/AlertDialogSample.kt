@@ -14,7 +14,7 @@ import androidx.ui.material.MaterialTheme
 fun AlertDialogSample() {
     MaterialTheme {
         Column {
-            val openDialog = +state { false }
+            val openDialog = state { false }
 
             Button("Click me", onClick = {
                 openDialog.value = true

@@ -18,8 +18,9 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.frame
 
 import androidx.compose.Composable
 import androidx.ui.core.DrawShadow
-import androidx.ui.core.dp
+
 import androidx.ui.foundation.shape.RectangleShape
+import androidx.ui.unit.dp
 
 @Composable
 fun DrawShadowSample() {

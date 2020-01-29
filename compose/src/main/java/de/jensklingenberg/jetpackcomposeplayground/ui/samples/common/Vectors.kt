@@ -21,17 +21,20 @@ import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.Modifier
 import androidx.ui.core.WithDensity
-import androidx.ui.core.dp
+
 import androidx.ui.foundation.Clickable
+import androidx.ui.geometry.Size
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Image
 import androidx.ui.graphics.ImageConfig
 import androidx.ui.graphics.colorspace.ColorSpaces
 import androidx.ui.graphics.vector.DrawVector
 import androidx.ui.layout.Container
-import androidx.ui.layout.Size
+import androidx.ui.layout.LayoutSize
+
 import androidx.ui.material.ripple.Ripple
 import androidx.ui.res.vectorResource
+import androidx.ui.unit.dp
 
 @Composable
 fun VectorImageButton(@DrawableRes id: Int, onClick: () -> Unit) {
@@ -44,10 +47,10 @@ fun VectorImageButton(@DrawableRes id: Int, onClick: () -> Unit) {
 
 @Composable
 fun VectorImage(modifier: Modifier = Modifier.None, @DrawableRes id: Int, tint: Color = Color.Transparent) {
-    val vector = +vectorResource(id)
+    val vector = vectorResource(id)
     WithDensity {
         Container(
-            modifier = modifier wraps Size(vector.defaultWidth.toDp(), vector.defaultHeight.toDp())
+            modifier = modifier + LayoutSize(vector.defaultWidth, vector.defaultHeight)
         ) {
             DrawVector(vector, tint)
         }

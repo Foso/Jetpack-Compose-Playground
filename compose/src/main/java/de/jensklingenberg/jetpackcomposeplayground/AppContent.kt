@@ -13,7 +13,7 @@ fun AppContent(
     appBar: () -> Unit
 ) {
 
-    Surface(color = (+MaterialTheme.colors()).background) {
+    Surface(color = (MaterialTheme.colors()).background) {
         FlexColumn(crossAxisAlignment = CrossAxisAlignment.Center) {
             inflexible {
                 appBar()

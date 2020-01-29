@@ -18,16 +18,15 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.layou
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Dp
-import androidx.ui.core.dp
 import androidx.ui.foundation.shape.DrawShape
 import androidx.ui.foundation.shape.corner.CircleShape
 import androidx.ui.graphics.Color
-import androidx.ui.layout.AspectRatio
+import androidx.ui.layout.LayoutAspectRatio
 import androidx.ui.layout.Padding
 import androidx.ui.layout.Table
 import androidx.ui.layout.TableColumnWidth
-
+import androidx.ui.unit.Dp
+import androidx.ui.unit.dp
 
 @Composable
 fun SimpleTable() {
@@ -104,5 +103,5 @@ fun TableWithDifferentColumnWidths() {
 
 @Composable
 private fun SizedSquare(color: Color, size: Dp? = null) {
-    SizedRectangle(AspectRatio(1f), color = color, width = size)
+    SizedRectangle(LayoutAspectRatio(1f), color = color, width = size)
 }

@@ -18,53 +18,40 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Span
 import androidx.ui.core.Text
-import androidx.ui.core.sp
 import androidx.ui.text.AnnotatedString
+import androidx.ui.text.SpanStyle
 import androidx.ui.text.TextStyle
 import androidx.ui.text.style.BaselineShift
+import androidx.ui.text.withStyle
+import androidx.ui.unit.sp
+
 
 
 @Composable
 fun BaselineShiftSample() {
-    Text {
-        Span(text = "Hello", style = TextStyle(fontSize = 20.sp)) {
-            Span(
-                text = "superscript",
-                style = TextStyle(
-                    baselineShift = BaselineShift.Superscript,
-                    fontSize = 16.sp
-                )
-            ) {
-                Span(
-                    text = "subscript",
-                    style = TextStyle(
-                        baselineShift = BaselineShift.Subscript,
-                        fontSize = 16.sp
-                    )
-                )
+    Text(
+        style = TextStyle(fontSize = 20.sp),
+        text = AnnotatedString {
+            append(text = "Hello")
+            withStyle(SpanStyle(baselineShift = BaselineShift.Superscript, fontSize = 16.sp)) {
+                append("superscript")
+                withStyle(SpanStyle(baselineShift = BaselineShift.Subscript)) {
+                    append("subscript")
+                }
             }
         }
-    }
+    )
 }
 
 
 @Composable
 fun BaselineShiftAnnotatedStringSample() {
-    val item1 = AnnotatedString.Item(
-        style = TextStyle(),
-        start = 0,
-        end = 4
-    )
-    val item2 = AnnotatedString.Item(
-        style = TextStyle(baselineShift = BaselineShift.Superscript),
-        start = 0,
-        end = 4
-    )
-    val annotatedString = AnnotatedString(
-        text = "Text Demo",
-        textStyles = listOf(item1, item2)
-    )
+    val annotatedString = AnnotatedString {
+        append("Text ")
+        withStyle(SpanStyle(baselineShift = BaselineShift.Superscript)) {
+            append("Demo")
+        }
+    }
     Text(text = annotatedString)
 }

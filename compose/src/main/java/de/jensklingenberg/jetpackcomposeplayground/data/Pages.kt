@@ -1,7 +1,8 @@
 package de.jensklingenberg.jetpackcomposeplayground.data
 
 import androidx.ui.foundation.samples.AnchoredDraggableSample
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.foundation.ControlledHorizontalScrollerSample
+import androidx.ui.foundation.samples.ControlledHorizontalScrollerSample
+
 import androidx.ui.foundation.samples.DraggableSample
 import androidx.ui.framework.samples.TextFieldSampleDemo
 import androidx.ui.material.samples.SimpleDataTable
@@ -13,7 +14,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.animat
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.*
 
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.common.MultipleCollectTest
+
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.rally.RallyApp
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.ButtonDemo
@@ -38,7 +39,7 @@ val layoutDemos = listOf(
     Page("Rowdemo") { RowDemo() },
     Page("ColumnDemo") { ColumnDemo() },
     Page("SimpleStack") { SimpleStack() },
-    Page("StackDemo") { StackDemo() },
+   // Page("StackDemo") { StackDemo() },
 
     //Scroller
     Page("VerticalScrollerDemo") { VerticalScrollerDemo() },
@@ -52,12 +53,10 @@ val layoutDemos = listOf(
 
     //Flow
     Page("SimpleFlowColumn") { SimpleFlowColumn() },
-    Page("SimpleFlowRow") { SimpleFlowRow() },
+    Page("SimpleFlowRow") { SimpleFlowRow() }
 
     //ExpandedModifier
-    Page("SimpleExpandedHeightModifier") { SimpleExpandedHeightModifier() },
-    Page("SimpleExpandedWidthModifier") { SimpleExpandedWidthModifier() },
-    Page("SimpleExpandedModifier") { SimpleExpandedModifier() }
+
 
 )
 
@@ -92,7 +91,8 @@ val mainPagesEntries = animationDemos +foundationDemos+ layoutDemos + materialDe
     Page("ProgressIndicatorDemo") { ProgressIndicatorDemo() },
     Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
     Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
-    Page("MultipleCollectTest") { MultipleCollectTest() },
+  //  Page("MultipleCollectTest") { MultipleCollectTest() },
+  //  Page("MultipleCollectTest") { MultipleCollectTest() },
     Page("InputFieldDemo") { InputFieldDemo() },
     Page("TextFieldSampleDemo") { TextFieldSampleDemo() }
 

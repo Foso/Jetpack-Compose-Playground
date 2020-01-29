@@ -2,21 +2,24 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.anima
 
 import androidx.animation.PhysicsBuilder
 import androidx.compose.Composable
-import androidx.compose.memo
-import androidx.compose.unaryPlus
+import androidx.compose.remember
 import androidx.ui.animation.animatedFloat
-import androidx.ui.core.*
+import androidx.ui.core.Draw
+import androidx.ui.core.Text
 import androidx.ui.core.gesture.DragObserver
 import androidx.ui.core.gesture.PressGestureDetector
 import androidx.ui.core.gesture.RawDragGestureDetector
-import androidx.ui.engine.geometry.Offset
-import androidx.ui.engine.geometry.Rect
+import androidx.ui.geometry.Offset
+import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 import androidx.ui.layout.Column
 import androidx.ui.layout.Container
 import androidx.ui.layout.Padding
 import androidx.ui.text.TextStyle
+import androidx.ui.unit.PxPosition
+import androidx.ui.unit.dp
+import androidx.ui.unit.sp
 
 @Composable
 fun AnimatableSeekBarDemo() {
@@ -35,7 +38,7 @@ fun AnimatableSeekBarDemo() {
 
 @Composable
 fun MovingTargetExample() {
-    val animValue = +animatedFloat(0f)
+    val animValue = animatedFloat(0f)
     RawDragGestureDetector(dragObserver = object : DragObserver {
         override fun onDrag(dragDistance: PxPosition): PxPosition {
             animValue.snapTo(animValue.targetValue + dragDistance.x.value)
@@ -58,7 +61,7 @@ fun MovingTargetExample() {
 
 @Composable
 fun DrawSeekBar(x: Float) {
-    val paint = +memo { Paint() }
+    val paint = remember { Paint() }
     Draw { canvas, parentSize ->
         val centerY = parentSize.height.value / 2
         val xConstraint = x.coerceIn(0f, parentSize.width.value)

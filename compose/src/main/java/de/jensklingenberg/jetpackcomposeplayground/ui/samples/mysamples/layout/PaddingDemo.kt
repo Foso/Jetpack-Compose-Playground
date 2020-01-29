@@ -2,7 +2,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout
 
 import androidx.compose.Composable
 import androidx.ui.core.Text
-import androidx.ui.core.dp
+import androidx.ui.unit.dp
 import androidx.ui.layout.Column
 import androidx.ui.layout.Padding
 

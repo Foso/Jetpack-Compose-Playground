@@ -10,9 +10,9 @@ import androidx.ui.layout.Column
 @Composable
 fun PressGestureDetectorDemo() {
 
-    val posX = +state { 0f }
-    val posXY = +state { 0f }
-    val clickState = +state { "" }
+    val posX = state { 0f }
+    val posXY = state { 0f }
+    val clickState = state { "" }
 
     PressGestureDetector(
         onPress = { position ->

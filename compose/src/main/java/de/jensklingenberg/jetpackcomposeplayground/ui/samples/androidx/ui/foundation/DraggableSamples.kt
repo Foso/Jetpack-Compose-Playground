@@ -21,8 +21,7 @@ import androidx.compose.Composable
 import androidx.compose.unaryPlus
 import androidx.ui.core.Alignment
 import androidx.ui.core.ambientDensity
-import androidx.ui.core.dp
-import androidx.ui.core.withDensity
+
 import androidx.ui.foundation.ColoredRect
 import androidx.ui.foundation.animation.AnchorsFlingConfig
 import androidx.ui.foundation.animation.animatedDragValue
@@ -33,23 +32,25 @@ import androidx.ui.foundation.shape.RectangleShape
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Container
 import androidx.ui.layout.Padding
+import androidx.ui.unit.dp
+import androidx.ui.unit.withDensity
 
 
 @Composable
 fun DraggableSample() {
     val max = 300.dp
     val min = 0.dp
-    val (minPx, maxPx) = withDensity(+ambientDensity()) {
+    val (minPx, maxPx) = withDensity(ambientDensity()) {
         min.toPx().value to max.toPx().value
     }
-    val position = +animatedDragValue(0f, minPx, maxPx)
+    val position = animatedDragValue(0f, minPx, maxPx)
     Draggable(
         dragValue = position,
         onDragValueChangeRequested = { position.animatedFloat.snapTo(it) },
         dragDirection = DragDirection.Horizontal
     ) {
         // dragValue is the current value in progress of dragging
-        val draggedDp = withDensity(+ambientDensity()) {
+        val draggedDp = withDensity(ambientDensity()) {
             position.value.toDp()
         }
         val squareSize = 50.dp
@@ -69,13 +70,13 @@ fun DraggableSample() {
 fun AnchoredDraggableSample() {
     val max = 300.dp
     val min = 0.dp
-    val (minPx, maxPx) = withDensity(+ambientDensity()) {
+    val (minPx, maxPx) = withDensity(ambientDensity()) {
         min.toPx().value to max.toPx().value
     }
     // define anchors and related animation controller
     val anchors = listOf(minPx, maxPx, maxPx / 2)
     val flingConfig = AnchorsFlingConfig(anchors)
-    val position = +animatedDragValue(0f, minPx, maxPx)
+    val position = animatedDragValue(0f, minPx, maxPx)
 
     Draggable(
         dragValue = position,
@@ -83,7 +84,7 @@ fun AnchoredDraggableSample() {
         dragDirection = DragDirection.Horizontal,
         onDragStopped = { position.fling(flingConfig, it) }
     ) {
-        val draggedDp = withDensity(+ambientDensity()) {
+        val draggedDp = withDensity(ambientDensity()) {
             position.value.toDp()
         }
         val squareSize = 50.dp

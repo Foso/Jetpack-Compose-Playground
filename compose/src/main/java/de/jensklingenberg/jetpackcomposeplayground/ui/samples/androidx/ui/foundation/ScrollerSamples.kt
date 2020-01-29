@@ -14,32 +14,33 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.foundation
+package androidx.ui.foundation.samples
 
 
 import androidx.compose.Composable
-import androidx.compose.State
-import androidx.compose.memo
+import androidx.compose.MutableState
 import androidx.compose.state
-import androidx.compose.unaryPlus
 import androidx.ui.core.Alignment
 import androidx.ui.core.Text
-import androidx.ui.core.dp
-import androidx.ui.core.px
-import androidx.ui.core.sp
+import androidx.ui.core.gesture.PressIndicatorGestureDetector
 import androidx.ui.foundation.Clickable
 import androidx.ui.foundation.HorizontalScroller
-import androidx.ui.foundation.VerticalScroller
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Column
-import androidx.ui.layout.Padding
-import androidx.ui.layout.Row
 import androidx.ui.foundation.ScrollerPosition
+import androidx.ui.foundation.VerticalScroller
 import androidx.ui.foundation.shape.DrawShape
 import androidx.ui.foundation.shape.RectangleShape
+import androidx.ui.graphics.Color
+import androidx.ui.layout.Column
 import androidx.ui.layout.Container
+import androidx.ui.layout.LayoutPadding
+import androidx.ui.layout.Padding
+import androidx.ui.layout.Row
 import androidx.ui.layout.Table
 import androidx.ui.text.TextStyle
+import androidx.ui.unit.PxPosition
+import androidx.ui.unit.dp
+import androidx.ui.unit.px
+import androidx.ui.unit.sp
 
 private val colors = listOf(
     Color(0xFFffd7d7.toInt()),
@@ -82,17 +83,14 @@ private val phrases = listOf(
     "Go For Broke"
 )
 
-
 @Composable
 fun VerticalScrollerSample() {
     val style = TextStyle(fontSize = 30.sp)
     // Scroller will be clipped to this padding
-    Padding(padding = 10.dp) {
-        VerticalScroller {
-            Column {
-                phrases.forEach { phrase ->
-                    Text(text = phrase, style = style)
-                }
+    VerticalScroller {
+        Column(modifier = LayoutPadding(20.dp)) {
+            phrases.forEach { phrase ->
+                Text(phrase, style)
             }
         }
     }
@@ -110,14 +108,16 @@ fun SimpleHorizontalScrollerSample() {
     }
 }
 
-
 @Composable
 fun ControlledHorizontalScrollerSample() {
     // Create and own ScrollerPosition to call `smoothScrollTo` later
-    val position = +memo { ScrollerPosition() }
-    val scrollable = +state { true }
+    val position = ScrollerPosition()
+    val scrollable = state { true }
     Column {
-        HorizontalScroller(scrollerPosition = position, isScrollable = scrollable.value) {
+        HorizontalScroller(
+            scrollerPosition = position,
+            isScrollable = scrollable.value
+        ) {
             Row {
                 repeat(1000) { index ->
                     Square(index)
@@ -138,7 +138,7 @@ private fun Square(index: Int) {
 }
 
 @Composable
-private fun ScrollControl(position: ScrollerPosition, scrollable: State<Boolean>) {
+private fun ScrollControl(position: ScrollerPosition, scrollable: MutableState<Boolean>) {
     Padding(top = 20.dp) {
         Table(3, alignment = { Alignment.Center }) {
             tableRow {
@@ -179,6 +179,30 @@ private fun SquareButton(text: String, color: Color = Color.LightGray, onClick: 
                 DrawShape(RectangleShape, color)
                 Text(text, style = TextStyle(fontSize = 20.sp))
             }
+        }
+    }
+}
+
+@Composable
+private fun Text(text: String, textStyle: TextStyle) {
+
+    val pressedColor = Color.LightGray
+    val releasedColor = Color.Transparent
+
+    val color = state { releasedColor }
+
+    val onPress: (PxPosition) -> Unit = { _ ->
+        color.value = pressedColor
+    }
+
+    val onRelease: () -> Unit = {
+        color.value = releasedColor
+    }
+
+    PressIndicatorGestureDetector(onStart = onPress, onStop = onRelease, onCancel = onRelease) {
+        Container {
+            DrawShape(RectangleShape, color.value)
+            Text(text, style = textStyle)
         }
     }
 }

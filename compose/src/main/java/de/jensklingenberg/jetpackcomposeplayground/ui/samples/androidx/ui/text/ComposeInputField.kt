@@ -24,7 +24,8 @@ import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
 import androidx.ui.layout.Column
 import androidx.ui.foundation.VerticalScroller
-import androidx.ui.layout.ExpandedHeight
+
+import androidx.ui.layout.LayoutHeight
 import androidx.ui.text.TextStyle
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.TagLine
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.text.fontSize8
@@ -53,7 +54,7 @@ val IME_ACTIONS = listOf(
 @Composable
 fun InputFieldDemo() {
     VerticalScroller {
-        Column(ExpandedHeight) {
+        Column(LayoutHeight.Fill) {
             TagLine(tag = "simple editing")
             EditLine()
             TagLine(tag = "simple editing2")
@@ -77,7 +78,7 @@ fun EditLine(
     keyboardType: KeyboardType = KeyboardType.Text,
     imeAction: ImeAction = ImeAction.Unspecified
 ) {
-    val state = +state { "" }
+    val state = state { "" }
     TextField(
         value = state.value,
         keyboardType = keyboardType,

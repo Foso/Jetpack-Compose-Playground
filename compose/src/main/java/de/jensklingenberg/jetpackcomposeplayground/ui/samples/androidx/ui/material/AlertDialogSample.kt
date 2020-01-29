@@ -33,7 +33,7 @@ import androidx.ui.material.MaterialTheme
 
 @Composable
 fun SideBySideAlertDialogSample() {
-    val openDialog = +state { true }
+    val openDialog = state { true }
 
     if (openDialog.value) {
         AlertDialog(
@@ -65,7 +65,7 @@ fun SideBySideAlertDialogSample() {
 
 @Composable
 fun StackedAlertDialogSample() {
-    val openDialog = +state { true }
+    val openDialog = state { true }
 
     if (openDialog.value) {
         AlertDialog(
@@ -98,7 +98,7 @@ fun StackedAlertDialogSample() {
 
 @Composable
 fun CustomAlertDialogSample() {
-    val openDialog = +state { true }
+    val openDialog = state { true }
 
     if (openDialog.value) {
         AlertDialog(

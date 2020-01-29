@@ -39,17 +39,18 @@ fun FloatingActionButtonDemo(icon: Image) {
 
     Center {
         val onClick: () -> Unit = { Log.e("FABDemo", "onClick") }
-        Column(ExpandedHeight, arrangement = Arrangement.SpaceEvenly) {
-            FloatingActionButton(icon = icon, onClick = onClick, modifier = Gravity.Center)
+        Column(LayoutHeight.Fill, arrangement = Arrangement.SpaceEvenly) {
+            FloatingActionButton(icon = icon, onClick = onClick,
+                modifier = LayoutGravity.Center)
             FloatingActionButton(
                 text = "EXTENDED",
                 onClick = onClick,
-                modifier = Gravity.Center
+                modifier = LayoutGravity.Center
             )
             FloatingActionButton(
                 icon = icon, text = "ADD TO FAVS",
                 onClick = onClick,
-                modifier = Gravity.Center
+                modifier = LayoutGravity.Center
             )
         }
     }

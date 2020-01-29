@@ -1,5 +1,6 @@
 package de.jensklingenberg.jetpackcomposeplayground
 
+import androidx.compose.MutableState
 import androidx.compose.State
 import androidx.compose.state
 import androidx.compose.unaryPlus
@@ -9,7 +10,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
 
 class Navigator {
 
-    private val pageIndex = +state { -1 }
+    private val pageIndex = state { -1 }
     private var home = {}
 
     fun setHome(home: () -> Unit) {
@@ -20,7 +21,7 @@ class Navigator {
         pageIndex.value = -1
     }
 
-    fun getIndex(): State<Int> {
+    fun getIndex(): MutableState<Int> {
         return pageIndex
     }
 

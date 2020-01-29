@@ -15,15 +15,11 @@
  */
 
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material
-
 import androidx.compose.Composable
-import androidx.compose.memo
+import androidx.compose.remember
 import androidx.compose.state
-import androidx.compose.unaryPlus
 import androidx.ui.core.Text
-import androidx.ui.core.dp
 import androidx.ui.foundation.selection.ToggleableState
-
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
 import androidx.ui.layout.Padding
@@ -33,19 +29,18 @@ import androidx.ui.material.RadioButton
 import androidx.ui.material.RadioGroup
 import androidx.ui.material.Switch
 import androidx.ui.material.TriStateCheckbox
-
-
+import androidx.ui.unit.dp
 
 
 @Composable
 fun TriStateCheckboxSample() {
     Column {
         // define dependent checkboxes states
-        val (state, onStateChange) = +state { true }
-        val (state2, onStateChange2) = +state { true }
+        val (state, onStateChange) = state { true }
+        val (state2, onStateChange2) = state { true }
 
         // TriStateCheckbox state reflects state of dependent checkboxes
-        val parentState = +memo(state, state2) {
+        val parentState = remember(state, state2) {
             if (state && state2) ToggleableState.On
             else if (!state && !state2) ToggleableState.Off
             else ToggleableState.Indeterminate
@@ -67,9 +62,10 @@ fun TriStateCheckboxSample() {
     }
 }
 
+
 @Composable
 fun CheckboxSample() {
-    val checkedState = +state { true }
+    val checkedState = state { true }
     Checkbox(
         checked = checkedState.value,
         onCheckedChange = { checkedState.value = it }
@@ -79,7 +75,7 @@ fun CheckboxSample() {
 
 @Composable
 fun SwitchSample() {
-    val checkedState = +state { true }
+    val checkedState = state { true }
     Switch(
         checked = checkedState.value,
         onCheckedChange = { checkedState.value = it }
@@ -91,7 +87,7 @@ fun SwitchSample() {
 fun RadioButtonSample() {
     // we have two radio buttons and only one can be selected
     // let's emulate binary choice here
-    var enterTheMatrix by +state { true }
+    var enterTheMatrix by state { true }
     Row {
         RadioButton(
             selected = enterTheMatrix,
@@ -110,7 +106,7 @@ fun RadioButtonSample() {
 @Composable
 fun DefaultRadioGroupSample() {
     val radioOptions = listOf("Calls", "Missed", "Friends")
-    val (selectedOption, onOptionSelected) = +state { radioOptions[0] }
+    val (selectedOption, onOptionSelected) = state { radioOptions[0] }
     RadioGroup(
         options = radioOptions,
         selectedOption = selectedOption,
@@ -122,7 +118,7 @@ fun DefaultRadioGroupSample() {
 @Composable
 fun CustomRadioGroupSample() {
     val radioOptions = listOf("Disagree", "Neutral", "Agree")
-    val (selectedOption, onOptionSelected) = +state { radioOptions[0] }
+    val (selectedOption, onOptionSelected) = state { radioOptions[0] }
 
     RadioGroup {
         Row {

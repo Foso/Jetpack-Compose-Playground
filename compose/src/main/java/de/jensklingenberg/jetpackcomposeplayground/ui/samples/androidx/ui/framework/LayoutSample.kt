@@ -19,7 +19,10 @@ package androidx.ui.framework.samples
 import androidx.compose.Composable
 import androidx.ui.core.Constraints
 import androidx.ui.core.Layout
-import androidx.ui.core.ipx
+import androidx.ui.core.LayoutTag
+import androidx.ui.core.tag
+import androidx.ui.layout.Container
+import androidx.ui.unit.ipx
 
 @Composable
 fun LayoutWithProvidedIntrinsicsUsage(children: @Composable() () -> Unit) {
@@ -91,24 +94,25 @@ fun LayoutUsage(children: @Composable() () -> Unit) {
 }
 
 @Composable
-fun LayoutVarargsUsage(header: @Composable() () -> Unit, footer: @Composable() () -> Unit) {
-    Layout(header, footer) { children, constraints ->
-        val headerMeasurables = children[header]
-        val footerMeasurables = children[footer]
-
-        val headerPlaceables = headerMeasurables.map { child ->
-            // You should use appropriate constraints.
-            // This is shortened for the sake of a short example.
-            child.measure(Constraints.tightConstraints(100.ipx, 100.ipx))
+fun LayoutTagChildrenUsage(header: @Composable() () -> Unit, footer: @Composable() () -> Unit) {
+    Layout({
+        // Here the Containers are only needed to apply the modifiers. You could use the
+        // modifier on header and footer directly if they are composables accepting modifiers.
+        Container(LayoutTag("header"), children = header)
+        Container(LayoutTag("footer"), children = footer)
+    }) { measurables, constraints ->
+        val placeables = measurables.map { measurable ->
+            when (measurable.tag) {
+                // You should use appropriate constraints. Here we measure with dummy constraints.
+                "header" -> measurable.measure(Constraints.fixed(100.ipx, 100.ipx))
+                "footer" -> measurable.measure(constraints)
+                else -> error("Unexpected tag")
+            }
         }
-        val footerPlaceables = footerMeasurables.map { child ->
-            child.measure(constraints)
-        }
-        // Size should be derived from headerMeasurables and footerMeasurables measured
-        // sizes, but this is shortened for the purposes of the example.
+        // Size should be derived from children measured sizes on placeables,
+        // but this is simplified for the purposes of the example.
         layout(100.ipx, 100.ipx) {
-            headerPlaceables.forEach { it.place(0.ipx, 0.ipx) }
-            footerPlaceables.forEach { it.place(0.ipx, 0.ipx) }
+            placeables.forEach { it.place(0.ipx, 0.ipx) }
         }
     }
 }

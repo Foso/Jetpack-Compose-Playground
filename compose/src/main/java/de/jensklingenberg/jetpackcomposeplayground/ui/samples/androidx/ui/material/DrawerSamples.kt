@@ -15,32 +15,29 @@
  */
 
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material
-
-
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.compose.unaryPlus
 import androidx.ui.core.Text
-import androidx.ui.core.dp
 import androidx.ui.foundation.ColoredRect
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Center
 import androidx.ui.layout.Column
 import androidx.ui.layout.Container
-import androidx.ui.layout.ExpandedHeight
-import androidx.ui.layout.ExpandedWidth
-import androidx.ui.layout.HeightSpacer
+import androidx.ui.layout.LayoutHeight
+import androidx.ui.layout.LayoutWidth
 import androidx.ui.layout.Row
+import androidx.ui.layout.Spacer
 import androidx.ui.material.BottomDrawerLayout
 import androidx.ui.material.Button
 import androidx.ui.material.DrawerState
 import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.material.StaticDrawer
+import androidx.ui.unit.dp
 
 
 @Composable
 fun StaticDrawerSample() {
-    Row(ExpandedWidth) {
+    Row(LayoutWidth.Fill) {
         StaticDrawer {
             Center {
                 Text("Drawer Content")
@@ -54,7 +51,7 @@ fun StaticDrawerSample() {
 
 @Composable
 fun ModalDrawerSample() {
-    val (state, onStateChange) = +state { DrawerState.Closed }
+    val (state, onStateChange) = state { DrawerState.Closed }
     val appContentText =
         if (state == DrawerState.Closed) ">>> Pull to open >>>" else "<<< Swipe to close <<<"
     ModalDrawerLayout(
@@ -68,7 +65,7 @@ fun ModalDrawerSample() {
 
 @Composable
 fun BottomDrawerSample() {
-    val (state, onStateChange) = +state { DrawerState.Closed }
+    val (state, onStateChange) = state { DrawerState.Closed }
     val appContentText =
         if (state == DrawerState.Closed) "▲▲▲ Pull to open ▲▲▲" else "▼▼▼ Drag down to close ▼▼▼"
     BottomDrawerLayout(
@@ -82,9 +79,9 @@ fun BottomDrawerSample() {
 @Composable
 private fun YourDrawerContent(onStateChange: (DrawerState) -> Unit) {
     Container(expanded = true) {
-        Column(ExpandedHeight) {
+        Column(LayoutHeight.Fill) {
             Text(text = "Drawer Content")
-            HeightSpacer(20.dp)
+            Spacer(LayoutHeight(20.dp))
             Button(
                 text = "Close Drawer",
                 onClick = { onStateChange(DrawerState.Closed) })
@@ -95,9 +92,9 @@ private fun YourDrawerContent(onStateChange: (DrawerState) -> Unit) {
 @Composable
 private fun YourAppContent(text: String, onDrawerStateChange: (DrawerState) -> Unit) {
     Center {
-        Column(ExpandedHeight) {
+        Column(LayoutHeight.Fill) {
             Text(text = text)
-            HeightSpacer(20.dp)
+            Spacer(LayoutHeight(20.dp))
             Button(
                 text = "Click to open",
                 onClick = { onDrawerStateChange(DrawerState.Opened) }

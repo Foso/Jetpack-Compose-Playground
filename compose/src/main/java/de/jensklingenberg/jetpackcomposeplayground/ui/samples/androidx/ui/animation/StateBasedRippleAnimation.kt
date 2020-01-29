@@ -19,17 +19,18 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.anima
 
 import android.graphics.PointF
 import androidx.animation.*
-import androidx.compose.Composable
-import androidx.compose.memo
-import androidx.compose.state
-import androidx.compose.unaryPlus
+import androidx.compose.*
 import androidx.ui.animation.Transition
 import androidx.ui.core.*
 import androidx.ui.core.gesture.PressGestureDetector
-import androidx.ui.engine.geometry.Offset
+import androidx.ui.geometry.Offset
+
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 import androidx.ui.layout.Container
+import androidx.ui.unit.PxPosition
+import androidx.ui.unit.dp
+import androidx.ui.unit.withDensity
 
 @Composable
 fun StateBasedRippleDemo() {
@@ -40,9 +41,9 @@ fun StateBasedRippleDemo() {
 
 @Composable
 fun RippleRect() {
-    val radius = withDensity(+ambientDensity()) { TargetRadius.toPx() }
-    val toState = +state { ButtonStatus.Initial }
-    val rippleTransDef = +memo {
+    val radius = withDensity(ambientDensity()) { TargetRadius.toPx() }
+    val toState = state { ButtonStatus.Initial }
+    val rippleTransDef = remember {
         createTransDef(
             radius.value
         )
