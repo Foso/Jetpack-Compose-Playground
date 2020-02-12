@@ -45,8 +45,8 @@ fun RippleDemo() {
                             Ripple(bounded = true) {
                                 Container(width = 100.dp, height = 50.dp) {
                                     Text(
-                                        text = "inner",
-                                        style = MaterialTheme.typography().body1
+                                        text = "inner"
+
                                     )
                                 }
                             }

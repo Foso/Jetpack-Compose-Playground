@@ -37,7 +37,7 @@ val animationDemos = listOf(
 val layoutDemos = listOf(
 
     Page("Rowdemo") { RowDemo() },
-    Page("ColumnDemo") { ColumnDemo() },
+    Page("ColumnDemo") { de.jensklingenberg.jetpackcomposeplayground.ColumnDemo() },
     Page("SimpleStack") { SimpleStack() },
    // Page("StackDemo") { StackDemo() },
 
@@ -89,7 +89,7 @@ val mainPagesEntries = animationDemos +foundationDemos+ layoutDemos + materialDe
     Page("CounterModelDemo") { CounterModelDemo() },
     Page("DividersDemo") { DividersDemo() },
     Page("ProgressIndicatorDemo") { ProgressIndicatorDemo() },
-    Page("SelectionsControlsDemo") { SelectionsControlsDemo() },
+    Page("SelectionsControlsDemo") { de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.material.SelectionsControlsDemo() },
     Page("StateBasedRippleDemo") { StateBasedRippleDemo() },
   //  Page("MultipleCollectTest") { MultipleCollectTest() },
   //  Page("MultipleCollectTest") { MultipleCollectTest() },

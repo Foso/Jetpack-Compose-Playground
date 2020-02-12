@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="de.jensklingenberg.jetpackcomposeplayground.ui.samples">
+
+    <application>
+        <activity android:name="androidx.ui.animation.demos.CrossfadeActivity" />
+        <activity android:name="androidx.ui.animation.demos.FancyScrolling" />
+        <activity android:name="androidx.ui.animation.demos.HelloAnimationActivity" />
+        <activity android:name="androidx.ui.animation.demos.HelloGestureBasedAnimationActivity" />
+        <activity android:name="androidx.ui.animation.demos.MultiDimensionalAnimation" />
+        <activity android:name="androidx.ui.animation.demos.RepeatedRotationActivity" />
+        <activity android:name="androidx.ui.animation.demos.SpringBackScrolling" />
+        <activity android:name="androidx.ui.animation.demos.StateBasedRippleAnimation" />
+        <activity android:name="androidx.ui.animation.demos.SwipeToDismiss" />
+        <activity android:name="androidx.ui.foundation.demos.AnimatedDraggableActivity" />
+        <activity android:name="androidx.ui.foundation.demos.DialogActivity" />
+        <activity android:name="androidx.ui.foundation.demos.DrawModifiersActivity" />
+        <activity android:name="androidx.ui.foundation.demos.HorizontalScrollerActivity" />
+        <activity android:name="androidx.ui.foundation.demos.TableBordersActivity" />
+        <activity android:name="androidx.ui.foundation.demos.VerticalScrollerActivity" />
+        <activity android:name="androidx.ui.framework.demos.autofill.ExplicitAutofillTypesActivity" />
+        <activity android:name="androidx.ui.framework.demos.focus.FocusableActivity" />
+        <activity android:name="androidx.ui.framework.demos.gestures.PopupDragActivity" />
+        <activity android:name="androidx.ui.framework.demos.gestures.PressIndicatorGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.DoubleTapGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.DragAndScaleGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.LongPressDragGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.LongPressGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.NestedPressDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.NestedScalingDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.NestedScrollingDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.PressReleasedGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.RawDragGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.ScaleGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.TouchSlopDragGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.gestures.TouchSlopExceededGestureDetectorDemo" />
+        <activity android:name="androidx.ui.framework.demos.AnimationGestureSemanticsActivity" />
+        <activity android:name="androidx.ui.framework.demos.MultipleCollectActivity" />
+        <activity android:name="androidx.ui.framework.demos.PopupActivity" />
+    </application>
+</manifest>
