@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2019 Google, Inc.
  *
@@ -17,40 +18,128 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui
 
 import androidx.compose.Composable
-import androidx.compose.MutableState
-import androidx.compose.State
+import androidx.compose.state
 import androidx.ui.foundation.VerticalScroller
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutHeight
-import androidx.ui.layout.Spacer
+import androidx.ui.layout.*
 import androidx.ui.material.Button
-import androidx.ui.material.Divider
+import androidx.ui.material.DrawerState
+import androidx.ui.material.MaterialTheme
+import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.unit.dp
-import de.jensklingenberg.jetpackcomposeplayground.data.mainPagesEntries
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.material.CheckBoxDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.gesturedetectors.DraggableDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.PressGestureDetectorDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AndroidContextComposeDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.RowExample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.CounterModelDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.RadioGroupSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.SwitchDemo
 
 
 @Composable
-fun HomeScreen(pageIndex: MutableState<Int>) {
+fun HomeScreen() {
 
-    val dividerColor = Color(0xFFC6C6C6.toInt())
+    MaterialTheme {
+        val (drawerState: androidx.ui.material.DrawerState, onDrawerStateChange: (DrawerState) -> Unit) = state { DrawerState.Closed }
 
-    VerticalScroller {
-        Column {
-            mainPagesEntries.forEachIndexed { index, page ->
-                Spacer(LayoutHeight(10.dp))
-                Button(page.title, onClick = {
-                    pageIndex.value = index
-                })
-                Spacer(LayoutHeight(10.dp))
-                Divider(color = dividerColor, height = 0.5.dp)
+        var currentScreen by state { RallyScreenState.Overview }
+
+        ModalDrawerLayout(
+            drawerState = drawerState,
+            onStateChange = onDrawerStateChange,
+            gesturesEnabled = drawerState == DrawerState.Opened,
+            drawerContent = {
+               myDrawerContent(onDrawerStateChange){
+                   currentScreen=it
+               }
+
+            },
+            bodyContent = {
+
+                Column(modifier = LayoutWidth.Fill, arrangement = Arrangement.Center) {
+                    Row(modifier = LayoutWidth.Fill, arrangement = Arrangement.Begin) {
+                        Button(text = "Open Drawer", onClick = {
+                            onDrawerStateChange(DrawerState.Opened)
+                        })
+
+                        Button(text = "Go Back", onClick = {
+                            currentScreen = RallyScreenState.Overview
+                        })
+                    }
+
+                    if (currentScreen == RallyScreenState.Overview) {
+                        myOverView(){
+                            currentScreen = it
+                        }
+                    } else {
+                        currentScreen.body()
+                    }
+
+                }
             }
-
-
-        }
+        )
 
 
     }
+
+}
+@Composable
+fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(RallyScreenState)->Unit) {
+    val allScreens = RallyScreenState.values().toList()
+
+    VerticalScroller {
+        Column(arrangement = Arrangement.Begin) {
+            allScreens.forEach {
+                Spacer(LayoutHeight(10.dp))
+                Button(text = it.name, onClick = {
+                    fn(it)
+                    onDrawerStateChange(DrawerState.Closed)
+                })
+
+            }
+
+        }
+    }
 }
 
+@Composable
+fun myOverView(fn:(RallyScreenState)->Unit){
+    val allScreens = RallyScreenState.values().toList()
 
+    VerticalScroller {
+        Column(arrangement = Arrangement.Begin) {
+            allScreens.forEach {
+                Spacer(LayoutHeight(10.dp))
+                Button(text = it.name, onClick = {
+                    fn(it)
+                })
+
+            }
+
+        }
+    }
+}
+
+enum class RallyScreenState {
+    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,PressGestureDetectorDemo,DraggableDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo
+}
+
+@Composable
+fun RallyScreenState.body() = when (this) {
+    RallyScreenState.Overview -> CanvasDrawExample()
+    RallyScreenState.AndroidContextComposeDemo -> AndroidContextComposeDemo()
+    RallyScreenState.ColumnExample -> ColumnExample()
+    RallyScreenState.VerticalScroller -> VerticalScrollerExample()
+    RallyScreenState.HorizontalScrollerExample -> HorizontalScrollerExample()
+    RallyScreenState.RowExample -> RowExample()
+    RallyScreenState.PaddingDemo -> PaddingDemo()
+    RallyScreenState.PressGestureDetectorDemo -> PressGestureDetectorDemo()
+    RallyScreenState.DraggableDemo -> DraggableDemo()
+    RallyScreenState.SwitchDemo -> SwitchDemo()
+    RallyScreenState.CheckBoxDemo -> CheckBoxDemo()
+    RallyScreenState.RadioGroupSample -> RadioGroupSample()
+    RallyScreenState.AlertDialogSample -> AlertDialogSample()
+    RallyScreenState.CounterModelDemo -> CounterModelDemo()
+}

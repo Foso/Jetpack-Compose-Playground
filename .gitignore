@@ -13,3 +13,4 @@
 /captures
 .externalNativeBuild
 /.idea/vcs.xml
+/compose/build/

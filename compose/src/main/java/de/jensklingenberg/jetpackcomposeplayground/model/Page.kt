@@ -1,5 +1,6 @@
 package de.jensklingenberg.jetpackcomposeplayground.model
 
-import android.content.Context
+import androidx.compose.Composable
 
-data class Page(val title: String, val function: () -> Unit)
+
+class Page(val title: String, @Composable val function: () -> Unit)

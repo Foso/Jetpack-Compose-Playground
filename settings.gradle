@@ -1,1 +1,1 @@
-include ':app',':compose3'
+include ':app',':compose'
