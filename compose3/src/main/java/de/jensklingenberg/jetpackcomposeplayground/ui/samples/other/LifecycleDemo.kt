@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
 
 import android.util.Log

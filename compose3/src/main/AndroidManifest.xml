@@ -54,5 +54,7 @@
         <activity android:name="androidx.ui.material.demos.ListItemActivity" />
         <activity android:name="androidx.ui.material.studies.rally.RallyActivity" />
         <activity android:name="androidx.ui.text.demos.ComposeTextActivity" />
+        <activity android:name="de.jensklingenberg.jetpackcomposeplayground.ui.MyComposeActivity" />
+        <activity android:name="androidx.ui.text.ComposeInputFieldActivity" />
     </application>
 </manifest>

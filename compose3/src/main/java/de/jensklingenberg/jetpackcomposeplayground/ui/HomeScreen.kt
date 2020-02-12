@@ -25,8 +25,17 @@ import androidx.ui.material.Button
 import androidx.ui.material.DrawerState
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.ModalDrawerLayout
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.CanvasDrawExample
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.ColumnExample
+import androidx.ui.unit.dp
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.material.CheckBoxDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.gesturedetectors.DraggableDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.PressGestureDetectorDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AndroidContextComposeDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.RowExample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.CounterModelDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.RadioGroupSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.SwitchDemo
 
 
 @Composable
@@ -51,11 +60,11 @@ fun HomeScreen() {
 
                 Column(modifier = LayoutWidth.Fill, arrangement = Arrangement.Center) {
                     Row(modifier = LayoutWidth.Fill, arrangement = Arrangement.Begin) {
-                        Button(text = "Drawer", onClick = {
+                        Button(text = "Open Drawer", onClick = {
                             onDrawerStateChange(DrawerState.Opened)
                         })
 
-                        Button(text = "Back", onClick = {
+                        Button(text = "Go Back", onClick = {
                             currentScreen = RallyScreenState.Overview
                         })
                     }
@@ -83,7 +92,7 @@ fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(RallyScreenS
     VerticalScroller {
         Column(arrangement = Arrangement.Begin) {
             allScreens.forEach {
-
+                Spacer(LayoutHeight(10.dp))
                 Button(text = it.name, onClick = {
                     fn(it)
                     onDrawerStateChange(DrawerState.Closed)
@@ -99,23 +108,38 @@ fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(RallyScreenS
 fun myOverView(fn:(RallyScreenState)->Unit){
     val allScreens = RallyScreenState.values().toList()
 
-    allScreens.forEach {
-        Row(modifier = LayoutWidth.Fill, arrangement = Arrangement.Center) {
-            Button(text = it.name, onClick = {
-                fn(it)
-            })
+    VerticalScroller {
+        Column(arrangement = Arrangement.Begin) {
+            allScreens.forEach {
+                Spacer(LayoutHeight(10.dp))
+                Button(text = it.name, onClick = {
+                    fn(it)
+                })
+
+            }
+
         }
     }
 }
 
 enum class RallyScreenState {
-    Overview, CANVAS, ColumnExample
+    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,PressGestureDetectorDemo,DraggableDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo
 }
 
 @Composable
 fun RallyScreenState.body() = when (this) {
     RallyScreenState.Overview -> CanvasDrawExample()
-    RallyScreenState.CANVAS -> CanvasDrawExample()
+    RallyScreenState.AndroidContextComposeDemo -> AndroidContextComposeDemo()
     RallyScreenState.ColumnExample -> ColumnExample()
-
+    RallyScreenState.VerticalScroller -> VerticalScrollerExample()
+    RallyScreenState.HorizontalScrollerExample -> HorizontalScrollerExample()
+    RallyScreenState.RowExample -> RowExample()
+    RallyScreenState.PaddingDemo -> PaddingDemo()
+    RallyScreenState.PressGestureDetectorDemo -> PressGestureDetectorDemo()
+    RallyScreenState.DraggableDemo -> DraggableDemo()
+    RallyScreenState.SwitchDemo -> SwitchDemo()
+    RallyScreenState.CheckBoxDemo -> CheckBoxDemo()
+    RallyScreenState.RadioGroupSample -> RadioGroupSample()
+    RallyScreenState.AlertDialogSample -> AlertDialogSample()
+    RallyScreenState.CounterModelDemo -> CounterModelDemo()
 }

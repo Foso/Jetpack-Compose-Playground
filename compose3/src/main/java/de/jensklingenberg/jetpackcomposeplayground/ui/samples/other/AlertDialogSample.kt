@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other
+package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
 import androidx.compose.Composable
 import androidx.compose.state

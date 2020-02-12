@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
-package androidx.ui.text
+package de.jensklingenberg.jetpackcomposeplayground.ui
 
 import android.app.Activity
 import android.os.Bundle
 import androidx.ui.core.setContent
-import androidx.ui.text.demos.InputFieldDemo
+import androidx.ui.layout.samples.SimpleFlowRow
+import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
 
-class ComposeInputFieldActivity : Activity() {
+class MyComposeActivity : Activity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { InputFieldDemo() }
+        setContent {
+            HomeScreen()
+        }
     }
 }
