@@ -21,7 +21,7 @@
 </p>
 
 ## Introduction 🙋‍♂️
-This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose. You can find the samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/samples/androidx/ui)
+This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose. You can find the samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
