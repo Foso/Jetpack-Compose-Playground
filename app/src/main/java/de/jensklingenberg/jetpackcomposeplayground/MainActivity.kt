@@ -17,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity)
+
+        /**
+         *  Please check the Compose module to find all sample codes. Here are only listed a few activities,
+         *  because it would be to confusing to list them all here
+         *  If an added Activity is not starting, you may need to add it to the AndroidManifest
+         */
         val button1 = findViewById<Button>(R.id.button1)
         button1.text="RallyApp"
         button1.setOnClickListener {
