@@ -2,6 +2,8 @@
 
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![jCenter](https://img.shields.io/badge/Compose-dev04-green.svg
+)](https://github.com/Foso/MpApt/blob/master/LICENSE)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-range.svg?style=flat-square)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
@@ -9,16 +11,17 @@
 > A Jetpack Compose Example App
 
  <p align="left">
-    <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/MainPage.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/selectiondemo.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/TextDemo.png" height=500 />
+    <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/RallyActivity.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ComposeTextActivity.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ButtonActivity.png" height=500 />
      <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/DialogExample.png" height=500 />
      <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ControlledScrollDemo.png" height=500 />
+   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ListItemActivity.png" height=500 />
 
 </p>
 
 ## Introduction 🙋‍♂️
-This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose. You can find the samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/samples/androidx/ui)
+This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose. You can find the samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
@@ -78,7 +81,7 @@ You need at least Android Studio 4.0 to build this project https://developer.and
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
 the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/)
-Inside the [Pages.kt](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/data/Pages.kt) you can change the demo pages which should be opened
+
 
 # Resources
 
