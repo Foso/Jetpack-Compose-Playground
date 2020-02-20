@@ -11,6 +11,7 @@
 > A Jetpack Compose Example App
 
  <p align="left">
+   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/RallyActivity2.png" height=500 />
     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/RallyActivity.png" height=500 />
      <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ComposeTextActivity.png" height=500 />
      <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ButtonActivity.png" height=500 />
