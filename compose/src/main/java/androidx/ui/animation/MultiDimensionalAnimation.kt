@@ -18,15 +18,12 @@ package androidx.ui.animation.demos
 
 import android.app.Activity
 import android.os.Bundle
-import androidx.animation.AnimationVector4D
-import androidx.animation.PropKey
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.compose.state
 import androidx.ui.animation.ColorPropKey
-
-import androidx.ui.animation.RectToVectorConverter
+import androidx.ui.animation.RectPropKey
 import androidx.ui.animation.Transition
 import androidx.ui.core.Draw
 import androidx.ui.core.OnPositioned
@@ -36,11 +33,6 @@ import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 import androidx.ui.layout.Container
-
-class RectPropKey : PropKey<Rect, AnimationVector4D> {
-    override val typeConverter = RectToVectorConverter
-}
-
 
 class MultiDimensionalAnimation : Activity() {
 

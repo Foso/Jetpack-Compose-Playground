@@ -11,7 +11,7 @@ import androidx.ui.material.MaterialTheme
 
 @Model
 class CounterModel {
-    var counter =  0
+    var counter = 0
     var header = "Counter demo"
 }
 
@@ -49,16 +49,20 @@ fun CounterHeader(counterModel: CounterModel) {
 fun AddSubtractButtons(
     counterModel: CounterModel
 ) {
-   Column {
-       Button(
-           text = "Add",
-           onClick = {
-               counterModel.counter++
-           })
-       Button(
-           text = "Subtract",
-           onClick = { counterModel.counter-- })
-   }
+    Column {
+        Button(
+            onClick = {
+                counterModel.counter++
+            }) {
+            Text("Add")
+        }
+        Button(
+
+            onClick = { counterModel.counter-- }) {
+            Text("Subtract")
+
+        }
+    }
 }
 
 @Composable

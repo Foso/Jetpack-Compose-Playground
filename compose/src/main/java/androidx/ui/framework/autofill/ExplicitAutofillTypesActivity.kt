@@ -19,15 +19,17 @@ package androidx.ui.framework.demos.autofill
 import android.app.Activity
 import android.graphics.Rect
 import android.os.Bundle
-import androidx.compose.Ambient
 import androidx.compose.Composable
-import androidx.compose.ambient
 import androidx.compose.state
-import androidx.ui.autofill.Autofill
 import androidx.ui.autofill.AutofillNode
-import androidx.ui.autofill.AutofillTree
 import androidx.ui.autofill.AutofillType
-import androidx.ui.core.*
+import androidx.ui.core.AutofillAmbient
+import androidx.ui.core.AutofillTreeAmbient
+import androidx.ui.core.LayoutCoordinates
+import androidx.ui.core.OnChildPositioned
+import androidx.ui.core.Text
+import androidx.ui.core.TextField
+import androidx.ui.core.setContent
 import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
 import androidx.ui.layout.Column
@@ -36,8 +38,6 @@ import androidx.ui.layout.Spacer
 import androidx.ui.material.MaterialTheme
 import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
-
-
 
 class ExplicitAutofillTypesActivity : Activity() {
 
@@ -49,7 +49,7 @@ class ExplicitAutofillTypesActivity : Activity() {
 
                     val nameState = state { "Enter name here" }
                     val emailState = state { "Enter email here" }
-                    val autofill: Autofill? = ambient(AutofillAmbient)
+                    val autofill = AutofillAmbient.current
                     val labelStyle = MaterialTheme.typography().subtitle1
                     val textStyle = MaterialTheme.typography().h6
 
@@ -98,9 +98,9 @@ fun Autofill(
     onFill: ((String) -> Unit),
     children: @Composable() (AutofillNode) -> Unit
 ) {
-    val autofillNode: AutofillNode = AutofillNode(onFill = onFill, autofillTypes = autofillTypes)
+    val autofillNode = AutofillNode(onFill = onFill, autofillTypes = autofillTypes)
 
-    val autofillTree: AutofillTree = ambient(AutofillTreeAmbient)//AutofillTreeAmbient.current
+    val autofillTree = AutofillTreeAmbient.current
     autofillTree += autofillNode
 
     OnChildPositioned(onPositioned = { autofillNode.boundingBox = it.boundingBox() }) {

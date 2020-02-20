@@ -19,6 +19,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 
 import androidx.compose.Composable
 import androidx.compose.state
+import androidx.ui.core.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.*
 import androidx.ui.material.Button
@@ -28,7 +29,7 @@ import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.unit.dp
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.material.CheckBoxDemo
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.gesturedetectors.DraggableDemo
+
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.PressGestureDetectorDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AndroidContextComposeDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.RowExample
@@ -60,13 +61,17 @@ fun HomeScreen() {
 
                 Column(modifier = LayoutWidth.Fill, arrangement = Arrangement.Center) {
                     Row(modifier = LayoutWidth.Fill, arrangement = Arrangement.Begin) {
-                        Button(text = "Open Drawer", onClick = {
+                        Button( onClick = {
                             onDrawerStateChange(DrawerState.Opened)
-                        })
+                        }){
+                            Text("Open Drawer")
+                        }
 
-                        Button(text = "Go Back", onClick = {
+                        Button( onClick = {
                             currentScreen = RallyScreenState.Overview
-                        })
+                        }){
+                            Text("Go Back")
+                        }
                     }
 
                     if (currentScreen == RallyScreenState.Overview) {
@@ -93,10 +98,12 @@ fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(RallyScreenS
         Column(arrangement = Arrangement.Begin) {
             allScreens.forEach {
                 Spacer(LayoutHeight(10.dp))
-                Button(text = it.name, onClick = {
+                Button( onClick = {
                     fn(it)
                     onDrawerStateChange(DrawerState.Closed)
-                })
+                }){
+                    Text(it.name)
+                }
 
             }
 
@@ -112,9 +119,11 @@ fun myOverView(fn:(RallyScreenState)->Unit){
         Column(arrangement = Arrangement.Begin) {
             allScreens.forEach {
                 Spacer(LayoutHeight(10.dp))
-                Button(text = it.name, onClick = {
+                Button( onClick = {
                     fn(it)
-                })
+                }){
+                    Text(it.name)
+                }
 
             }
 
@@ -123,7 +132,7 @@ fun myOverView(fn:(RallyScreenState)->Unit){
 }
 
 enum class RallyScreenState {
-    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,PressGestureDetectorDemo,DraggableDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo
+    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,PressGestureDetectorDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo
 }
 
 @Composable
@@ -136,7 +145,7 @@ fun RallyScreenState.body() = when (this) {
     RallyScreenState.RowExample -> RowExample()
     RallyScreenState.PaddingDemo -> PaddingDemo()
     RallyScreenState.PressGestureDetectorDemo -> PressGestureDetectorDemo()
-    RallyScreenState.DraggableDemo -> DraggableDemo()
+
     RallyScreenState.SwitchDemo -> SwitchDemo()
     RallyScreenState.CheckBoxDemo -> CheckBoxDemo()
     RallyScreenState.RadioGroupSample -> RadioGroupSample()

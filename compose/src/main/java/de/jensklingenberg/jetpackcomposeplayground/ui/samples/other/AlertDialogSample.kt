@@ -16,9 +16,11 @@ fun AlertDialogSample() {
         Column {
             val openDialog = state { false }
 
-            Button("Click me", onClick = {
+            Button(onClick = {
                 openDialog.value = true
-            })
+            }) {
+                Text("Click me")
+            }
 
             if (openDialog.value) {
                 AlertDialog(
@@ -35,17 +37,21 @@ fun AlertDialogSample() {
                     },
                     confirmButton = {
                         Button(
-                            "This is the Confirm Button",
+
                             onClick = {
                                 openDialog.value = false
-                            })
+                            }) {
+                            Text("This is the Confirm Button")
+                        }
                     },
                     dismissButton = {
                         Button(
-                            "This is the dismiss Button",
+
                             onClick = {
                                 openDialog.value = false
-                            })
+                            }) {
+                            Text("This is the dismiss Button")
+                        }
                     },
                     buttonLayout = AlertDialogButtonLayout.Stacked
                 )

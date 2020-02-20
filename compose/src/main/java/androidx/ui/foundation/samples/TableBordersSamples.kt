@@ -18,39 +18,37 @@ package androidx.ui.foundation.samples
 
 
 import androidx.compose.Composable
+import androidx.ui.foundation.Border
 import androidx.ui.foundation.ColoredRect
 import androidx.ui.foundation.drawBorders
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.SolidColor
 import androidx.ui.layout.LayoutAspectRatio
-import androidx.ui.layout.Padding
+import androidx.ui.layout.LayoutPadding
 import androidx.ui.layout.Table
 import androidx.ui.unit.dp
 
 
 @Composable
 fun TableWithBorders() {
-    Padding(10.dp) {
-        Table(columns = 8) {
-            drawBorders(
-                defaultBorderBrush = SolidColor(Color.Red),
-                defaultBorderWidth = 2.dp
-            ) {
-                outer()
-                vertical(column = 2, rows = 0 until 8)
-                vertical(column = 4, rows = 0 until 8)
-                vertical(column = 6, rows = 0 until 8)
-                horizontal(row = 2, columns = 0 until 8)
-                horizontal(row = 4, columns = 0 until 8)
-                horizontal(row = 6, columns = 0 until 8)
-            }
-            repeat(8) {
-                tableRow {
-                    repeat(8) {
-                        Padding(2.dp) {
-                            ColoredRect(color = Color.Magenta, modifier = LayoutAspectRatio(1f))
-                        }
-                    }
+    Table(columns = 8) {
+        drawBorders(
+            defaultBorder = Border(color = Color.Red, size = 2.dp)
+        ) {
+            outer()
+            vertical(column = 2, rows = 0 until 8)
+            vertical(column = 4, rows = 0 until 8)
+            vertical(column = 6, rows = 0 until 8)
+            horizontal(row = 2, columns = 0 until 8)
+            horizontal(row = 4, columns = 0 until 8)
+            horizontal(row = 6, columns = 0 until 8)
+        }
+        repeat(8) {
+            tableRow {
+                repeat(8) {
+                    ColoredRect(
+                        color = Color.Magenta,
+                        modifier = LayoutPadding(2.dp) + LayoutAspectRatio(1f)
+                    )
                 }
             }
         }

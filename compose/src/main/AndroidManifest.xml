@@ -11,7 +11,7 @@
         <activity android:name="androidx.ui.animation.demos.SpringBackScrolling" />
         <activity android:name="androidx.ui.animation.demos.StateBasedRippleAnimation" />
         <activity android:name="androidx.ui.animation.demos.SwipeToDismiss" />
-        <activity android:name="androidx.ui.foundation.demos.AnimatedDraggableActivity" />
+
         <activity android:name="androidx.ui.foundation.demos.DialogActivity" />
         <activity android:name="androidx.ui.foundation.demos.DrawModifiersActivity" />
         <activity android:name="androidx.ui.foundation.demos.HorizontalScrollerActivity" />
@@ -22,7 +22,7 @@
         <activity android:name="androidx.ui.framework.demos.gestures.PopupDragActivity" />
         <activity android:name="androidx.ui.framework.demos.gestures.PressIndicatorGestureDetectorDemo" />
         <activity android:name="androidx.ui.framework.demos.gestures.DoubleTapGestureDetectorDemo" />
-        <activity android:name="androidx.ui.framework.demos.gestures.DragAndScaleGestureDetectorDemo" />
+
         <activity android:name="androidx.ui.framework.demos.gestures.LongPressDragGestureDetectorDemo" />
         <activity android:name="androidx.ui.framework.demos.gestures.LongPressGestureDetectorDemo" />
         <activity android:name="androidx.ui.framework.demos.gestures.NestedPressDemo" />
@@ -41,7 +41,7 @@
         <activity android:name="androidx.ui.layout.demos.FlowActivity" />
         <activity android:name="androidx.ui.layout.demos.LayoutActivity" />
         <activity android:name="androidx.ui.layout.demos.TableActivity" />
-        <activity android:name="androidx.ui.material.demos.AppBarActivity" />
+
         <activity android:name="androidx.ui.material.demos.ButtonActivity" />
         <activity android:name="androidx.ui.material.demos.RippleActivity" />
         <activity android:name="androidx.ui.material.demos.SelectionControlsActivity" />

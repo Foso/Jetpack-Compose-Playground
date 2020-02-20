@@ -20,10 +20,13 @@ package androidx.ui.text.samples
 import androidx.compose.Composable
 import androidx.ui.core.Text
 import androidx.ui.text.TextStyle
-import androidx.ui.text.font.*
-
+import androidx.ui.text.font.font
+import androidx.ui.text.font.FontFamily
+import androidx.ui.text.font.fontFamily
+import androidx.ui.text.font.FontStyle
+import androidx.ui.text.font.FontSynthesis
+import androidx.ui.text.font.FontWeight
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.fontFamily
 
 
 @Composable
@@ -61,3 +64,38 @@ fun FontFamilyCursiveSample() {
     )
 }
 
+
+@Composable
+fun CustomFontFamilySample() {
+    val fontFamily = fontFamily(
+        font(
+            resId = R.font.my_font_400_regular,
+            weight = FontWeight.W400,
+            style = FontStyle.Normal),
+        font(
+            resId = R.font.my_font_400_italic,
+            weight = FontWeight.W400,
+            style = FontStyle.Italic)
+    )
+    Text(text = "Demo Text", style = TextStyle(fontFamily = fontFamily))
+}
+
+
+@Composable
+fun FontFamilySynthesisSample() {
+    // The font family contains a single font, with normal weight
+    val fontFamily = fontFamily(
+        font(resId = R.font.myfont, weight = FontWeight.Normal)
+    )
+    // Configuring the Text composable to be bold
+    // Using FontSynthesis.Weight to have the system render the font bold my making the glyphs
+    // thicker
+    Text(
+        text = "Demo Text",
+        style = TextStyle(
+            fontFamily = fontFamily,
+            fontWeight = FontWeight.Bold,
+            fontSynthesis = FontSynthesis.Weight
+        )
+    )
+}

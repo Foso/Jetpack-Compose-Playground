@@ -30,8 +30,10 @@ import androidx.ui.text.AnnotatedString
 import androidx.ui.text.LocaleList
 import androidx.ui.text.SpanStyle
 import androidx.ui.text.TextStyle
+import androidx.ui.text.font.FontFamily
 import androidx.ui.text.font.FontStyle
 import androidx.ui.text.font.FontWeight
+import androidx.ui.text.font.fontFamily
 import androidx.ui.text.samples.BaselineShiftSample
 import androidx.ui.text.samples.FontFamilyCursiveSample
 import androidx.ui.text.samples.FontFamilyMonospaceSample
@@ -47,7 +49,6 @@ import androidx.ui.text.style.TextAlign
 import androidx.ui.unit.em
 import androidx.ui.unit.px
 import androidx.ui.unit.sp
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.androidx.ui.fontFamily
 
 val displayText = "Text Demo"
 val displayTextChinese = "文本演示"
@@ -224,7 +225,7 @@ fun TextDemoFontFamily() {
         pushStyle(
             style = SpanStyle(
                 fontSize = fontSize8,
-                fontFamily = fontFamily("sans-serif")
+                fontFamily = FontFamily.SansSerif
             )
         )
         append("$displayText sans-serif\n")
@@ -233,7 +234,7 @@ fun TextDemoFontFamily() {
         pushStyle(
             style = SpanStyle(
                 fontSize = fontSize8,
-                fontFamily = fontFamily("serif")
+                fontFamily = FontFamily.Serif
             )
         )
         append("$displayText serif\n")
@@ -242,7 +243,7 @@ fun TextDemoFontFamily() {
         pushStyle(
             style = SpanStyle(
                 fontSize = fontSize8,
-                fontFamily = fontFamily("monospace")
+                fontFamily = FontFamily.Monospace
             )
         )
         append("$displayText monospace")

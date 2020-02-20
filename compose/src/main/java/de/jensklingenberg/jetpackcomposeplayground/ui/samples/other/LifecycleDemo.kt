@@ -31,9 +31,11 @@ fun LifecycleDemo() {
         val count = state { 0 }
 
         Column {
-            Button(text = "Click me", onClick = {
+            Button( onClick = {
                 count.value++
-            })
+            }){
+                Text("Click me")
+            }
 
             if (count.value < 3) {
                 onActive { Log.d("Compose", "onactive with value: " + count.value) }

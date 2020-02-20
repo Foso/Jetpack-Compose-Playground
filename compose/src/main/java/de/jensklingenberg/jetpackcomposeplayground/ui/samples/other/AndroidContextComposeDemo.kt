@@ -1,7 +1,6 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
 import androidx.compose.Composable
-import androidx.compose.ambient
 import androidx.compose.state
 import androidx.compose.unaryPlus
 import androidx.ui.core.ContextAmbient
@@ -13,7 +12,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 @Composable
 fun AndroidContextComposeDemo() {
     MaterialTheme {
-        val context = ambient(ContextAmbient)
+        val context = ContextAmbient.current
         Text(text = "Read this string from Context: "+context.getString(R.string.app_name))
     }
 }

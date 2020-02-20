@@ -17,16 +17,12 @@
 package androidx.ui.material.demos
 
 import androidx.compose.Composable
-import androidx.ui.graphics.imageFromResource
 import androidx.ui.material.samples.ScaffoldWithBottomBarAndCutout
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
 class ScaffoldActivity : MaterialDemoActivity() {
 
     @Composable
     override fun materialContent() {
-        ScaffoldWithBottomBarAndCutout(
-            navigationImage = imageFromResource(resources, R.drawable.ic_menu)
-        )
+        ScaffoldWithBottomBarAndCutout()
     }
 }

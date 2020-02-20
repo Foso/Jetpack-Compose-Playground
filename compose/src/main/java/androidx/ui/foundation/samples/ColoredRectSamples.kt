@@ -16,16 +16,19 @@
 
 package androidx.ui.foundation.samples
 
+
 import androidx.compose.Composable
 import androidx.ui.foundation.ColoredRect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.SolidColor
 import androidx.ui.unit.dp
 
+
 @Composable
 fun ColoredRectColorSample() {
     ColoredRect(Color.Cyan, width = 20.dp, height = 20.dp)
 }
+
 
 @Composable
 fun ColoredRectBrushSample() {

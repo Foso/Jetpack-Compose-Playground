@@ -16,12 +16,14 @@
 
 package androidx.ui.foundation.samples
 
+
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Text
 import androidx.ui.foundation.selection.Toggleable
 import androidx.ui.foundation.selection.ToggleableState
 import androidx.ui.foundation.selection.TriStateToggleable
+
 
 @Composable
 fun ToggleableSample() {
@@ -31,6 +33,7 @@ fun ToggleableSample() {
         Text(text = checked.toString())
     }
 }
+
 
 @Composable
 fun TriStateToggleableSample() {
