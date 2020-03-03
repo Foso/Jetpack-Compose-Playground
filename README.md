@@ -73,11 +73,11 @@ Documentation avaible at: https://github.com/Foso/Jetpack-Compose-Playground/wik
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.3.61-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.3.70-green.svg)]()
 
 
 ### Project Structure
-You need at least Android Studio 4.0 to build this project https://developer.android.com/studio/preview/
+You need at least Android Studio 4.1 to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
