@@ -77,7 +77,7 @@ Documentation avaible at: https://github.com/Foso/Jetpack-Compose-Playground/wik
 
 
 ### Project Structure
-You need at least Android Studio 4.1 to build this project https://developer.android.com/studio/preview/
+You need at least Android Studio 4.1 canary 1 to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Base android project directory
 * <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
