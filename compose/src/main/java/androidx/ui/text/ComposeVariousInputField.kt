@@ -24,6 +24,7 @@ import androidx.ui.core.Text
 import androidx.ui.core.TextField
 import androidx.ui.core.tag
 import androidx.ui.foundation.VerticalScroller
+
 import androidx.ui.graphics.Color
 import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
@@ -257,6 +258,7 @@ fun VariousEditLine(
         textStyle = TextStyle(fontSize = fontSize8)
     )
 }
+
 
 @Composable
 fun HintEditText(hintText: @Composable() () -> Unit) {

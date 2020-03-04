@@ -14,28 +14,21 @@
  * limitations under the License.
  */
 
-package androidx.ui.framework.samples
-
+package androidx.ui.material.demos
 
 import androidx.compose.Composable
-import androidx.ui.core.Layout
-import androidx.ui.core.ParentData
-import androidx.ui.foundation.Box
-import androidx.ui.graphics.Color
-import androidx.ui.layout.LayoutSize
-import androidx.ui.unit.dp
+import androidx.ui.layout.Column
+import androidx.ui.layout.Spacer
+import androidx.ui.material.samples.SimpleBottomAppBar
+import androidx.ui.material.samples.SimpleTopAppBar
 
-
-@Composable
-fun ParentDataSample() {
-    val parentDataComposable = @Composable {
-        ParentData(data = 5) {
-            Box(LayoutSize(50.dp), backgroundColor = Color.Blue){}
+class AppBarActivity : MaterialDemoActivity() {
+    @Composable
+    override fun materialContent() {
+        Column {
+            SimpleTopAppBar()
+            Spacer(LayoutFlexible(1f))
+            SimpleBottomAppBar()
         }
-    }
-    Layout(parentDataComposable) { measurables, constraints ->
-        // The parentData will be 5.
-        measurables[0].parentData as Int
-        layout(constraints.maxWidth, constraints.maxHeight) {}
     }
 }

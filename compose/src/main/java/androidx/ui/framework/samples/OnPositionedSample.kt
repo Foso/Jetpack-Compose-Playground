@@ -18,14 +18,10 @@ package androidx.ui.framework.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Constraints
-import androidx.ui.core.Layout
-import androidx.ui.core.OnChildPositioned
-import androidx.ui.core.OnPositioned
-import androidx.ui.core.globalPosition
-import androidx.ui.core.positionInRoot
+import androidx.ui.core.*
 import androidx.ui.foundation.Box
 import androidx.ui.graphics.Color
+import androidx.ui.layout.Column
 import androidx.ui.layout.LayoutSize
 import androidx.ui.unit.dp
 import androidx.ui.unit.ipx
@@ -34,8 +30,8 @@ import androidx.ui.unit.ipx
 @Composable
 fun OnPositionedSample() {
     Column {
-        Box(LayoutSize(20.dp), backgroundColor = Color.Green){}
-        Box(LayoutSize(20.dp), backgroundColor = Color.Blue){}
+        Box(LayoutSize(20.dp), backgroundColor = Color.Green)
+        Box(LayoutSize(20.dp), backgroundColor = Color.Blue)
         OnPositioned(onPositioned = { coordinates ->
             // This will be the size of the Column.
             coordinates.size
@@ -55,7 +51,7 @@ fun OnPositionedSample() {
 @Composable
 fun OnChildPositionedSample() {
     Column {
-        Box(LayoutSize(20.dp), backgroundColor = Color.Green){}
+        Box(LayoutSize(20.dp), backgroundColor = Color.Green)
         OnChildPositioned(onPositioned = { coordinates ->
             // This will be the size of the child SizedRectangle.
             coordinates.size
@@ -68,34 +64,9 @@ fun OnChildPositionedSample() {
             // This will a LayoutCoordinates instance corresponding to the Column.
             coordinates.parentCoordinates
         }) {
-            Box(LayoutSize(20.dp), backgroundColor = Color.Blue){}
+            Box(LayoutSize(20.dp), backgroundColor = Color.Blue)
         }
     }
 }
 
-/**
- * Simple Column implementation.
- */
-@Composable
-fun Column(children: @Composable() () -> Unit) {
-    Layout(children) { measurables, constraints ->
-        val placeables = measurables.map { measurable ->
-            measurable.measure(
-                Constraints(minWidth = constraints.minWidth, maxWidth = constraints.maxWidth)
-            )
-        }
-        val columnWidth = (placeables.maxBy { it.width.value }?.width ?: 0.ipx)
-            .coerceAtLeast(constraints.minWidth)
-        val columnHeight = placeables.sumBy { it.height.value }.ipx.coerceIn(
-            constraints.minHeight,
-            constraints.maxHeight
-        )
-        layout(columnWidth, columnHeight) {
-            var top = 0.ipx
-            placeables.forEach { placeable ->
-                placeable.place(0.ipx, top)
-                top += placeable.height
-            }
-        }
-    }
-}
+

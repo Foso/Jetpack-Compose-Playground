@@ -20,7 +20,6 @@ package androidx.ui.material.samples
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.compose.state
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.LayoutPadding
 import androidx.ui.core.Text
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.selection.ToggleableState

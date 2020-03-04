@@ -2,7 +2,7 @@
 
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![jCenter](https://img.shields.io/badge/Compose-dev05-green.svg
+[![jCenter](https://img.shields.io/badge/Compose-dev06-green.svg
 )](https://github.com/Foso/MpApt/blob/master/LICENSE)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-range.svg?style=flat-square)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android

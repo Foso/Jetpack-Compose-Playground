@@ -30,17 +30,17 @@ import androidx.ui.unit.dp
 @Composable
 fun SimpleStack() {
     Stack {
-        Box(LayoutSize.Fill, backgroundColor = Color.Cyan){}
+        Box(LayoutSize.Fill, backgroundColor = Color.Cyan)
         Box(
             LayoutGravity.Stretch + LayoutPadding(top = 20.dp, bottom = 20.dp),
             backgroundColor = Color.Yellow
-        ){}
-        Box(LayoutGravity.Stretch + LayoutPadding(40.dp), backgroundColor = Color.Magenta){}
-        Box(LayoutGravity.Center + LayoutSize(300.dp, 300.dp), backgroundColor = Color.Green){}
-        Box(LayoutGravity.TopLeft + LayoutSize(150.dp, 150.dp), backgroundColor = Color.Red){}
+        )
+        Box(LayoutGravity.Stretch + LayoutPadding(40.dp), backgroundColor = Color.Magenta)
+        Box(LayoutGravity.Center + LayoutSize(300.dp, 300.dp), backgroundColor = Color.Green)
+        Box(LayoutGravity.TopStart + LayoutSize(150.dp, 150.dp), backgroundColor = Color.Red)
         Box(
-            LayoutGravity.BottomRight + LayoutSize(150.dp, 150.dp),
+            LayoutGravity.BottomEnd + LayoutSize(150.dp, 150.dp),
             backgroundColor = Color.Blue
-        ){}
+        )
     }
 }

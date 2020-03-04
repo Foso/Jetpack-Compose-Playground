@@ -98,7 +98,7 @@ fun Basics() {
         style = commonStyle.merge(header)
     )
     Row {
-        Box(LayoutPadding(8.dp) + LayoutSize(48.dp), backgroundColor = rectColor){}
+        Box(LayoutPadding(8.dp) + LayoutSize(48.dp), backgroundColor = rectColor)
         Text(
             text = "Jetpack Compose is a modern toolkit for building native Android UI." +
                     " Jetpack Compose simplifies and accelerates UI development on Android " +
@@ -132,12 +132,12 @@ fun AddTextElement() {
                 style = commonStyle
             )
         }
-        Box(LayoutPadding(8.dp) + LayoutSize(48.dp), backgroundColor = rectColor){}
+        Box(LayoutPadding(8.dp) + LayoutSize(48.dp), backgroundColor = rectColor)
     }
     Box(
         LayoutPadding(top = 20.dp, bottom = 20.dp) + LayoutSize(200.dp, 60.dp),
         backgroundColor = rectColor
-    ){}
+    )
     Text(
         text = AnnotatedString {
             withStyle(commonStyle.toSpanStyle()) {
@@ -204,7 +204,7 @@ fun MultiLanguage(title: String, content: String) {
         Box(
             LayoutPadding(8.dp) + LayoutSize(48.dp),
             backgroundColor = rectColor
-        ){}
+        )
         Text(
             text = content,
             modifier = LayoutFlexible(1f),

@@ -46,7 +46,7 @@ class DoubleTapGestureDetectorDemo : Activity() {
                     LayoutAlign.Center + LayoutSize(192.dp),
                     backgroundColor = color.value,
                     border = Border(2.dp, BorderColor)
-                ){}
+                )
             }
         }
     }

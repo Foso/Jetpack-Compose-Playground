@@ -31,7 +31,6 @@ import androidx.ui.layout.LayoutPadding
 import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.LayoutWidth
 import androidx.ui.unit.dp
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.LayoutPadding
 
 
 @Composable
@@ -58,13 +57,13 @@ fun DraggableSample() {
         // with a red square that moves along the drag
         Box(
             modifier = LayoutWidth(max + squareSize),
-            gravity = ContentGravity.CenterLeft,
+            gravity = ContentGravity.CenterStart,
             backgroundColor = Color.Black
         ) {
             Box(
                 LayoutPadding(start = draggedDp) + LayoutSize(squareSize),
                 backgroundColor = Color.Red
-            ){}
+            )
         }
     }
 }
@@ -96,13 +95,13 @@ fun AnchoredDraggableSample() {
         // with a red square that moves along the drag
         Box(
             modifier = LayoutWidth(max + squareSize),
-            gravity = ContentGravity.CenterLeft,
+            gravity = ContentGravity.CenterStart,
             backgroundColor = Color.Black
         ) {
             Box(
                 LayoutPadding(start = draggedDp) + LayoutSize(squareSize),
                 backgroundColor = Color.Red
-            ){}
+            )
         }
     }
 }

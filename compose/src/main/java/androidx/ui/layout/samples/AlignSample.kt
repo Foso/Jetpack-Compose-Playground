@@ -18,10 +18,8 @@ package androidx.ui.layout.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Alignment
 import androidx.ui.foundation.Box
 import androidx.ui.graphics.Color
-import androidx.ui.layout.Align
 import androidx.ui.layout.Center
 import androidx.ui.layout.Column
 import androidx.ui.layout.LayoutAlign
@@ -31,22 +29,6 @@ import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.LayoutWidth
 import androidx.ui.layout.Row
 import androidx.ui.unit.dp
-
-
-@Composable
-fun SimpleAlign() {
-    Align(Alignment.BottomRight) {
-        Box(LayoutSize(20.dp, 20.dp), backgroundColor = Color.Blue){}
-    }
-}
-
-
-@Composable
-fun SimpleCenter() {
-    Center {
-        Box(LayoutSize(20.dp, 20.dp), backgroundColor = Color.Blue){}
-    }
-}
 
 
 @Composable
@@ -60,7 +42,7 @@ fun SimpleAlignedModifier() {
     Box(
         modifier = LayoutSize(20.dp) + LayoutSize.Min(40.dp, 40.dp) + LayoutAlign.TopCenter,
         backgroundColor = Color.Blue
-    ){}
+    )
 }
 
 
@@ -78,7 +60,7 @@ fun SimpleVerticallyAlignedModifier() {
     Box(
         LayoutSize(50.dp) + LayoutSize.Fill + LayoutAlign.CenterVertically,
         backgroundColor = Color.Blue
-    ){}
+    )
 }
 
 
@@ -87,16 +69,16 @@ fun SimpleGravityInRow() {
     Row(LayoutHeight.Fill) {
         // The child with no gravity modifier is positioned by default so that its top edge is
         // aligned to the top of the vertical axis.
-        Box(LayoutSize(80.dp, 40.dp), backgroundColor = Color.Magenta){}
+        Box(LayoutSize(80.dp, 40.dp), backgroundColor = Color.Magenta)
         // Gravity.Top, the child will be positioned so that its top edge is aligned to the top
         // of the vertical axis.
-        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Top, backgroundColor = Color.Red){}
+        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Top, backgroundColor = Color.Red)
         // Gravity.Center, the child will be positioned so that its center is in the middle of
         // the vertical axis.
-        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Center, backgroundColor = Color.Yellow){}
+        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Center, backgroundColor = Color.Yellow)
         // Gravity.Bottom, the child will be positioned so that its bottom edge is aligned to the
         // bottom of the vertical axis.
-        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Bottom, backgroundColor = Color.Green){}
+        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Bottom, backgroundColor = Color.Green)
     }
 }
 
@@ -106,15 +88,15 @@ fun SimpleGravityInColumn() {
     Column(LayoutWidth.Fill) {
         // The child with no gravity modifier is positioned by default so that its start edge
         // aligned with the start edge of the horizontal axis.
-        Box(LayoutSize(80.dp, 40.dp), backgroundColor = Color.Magenta){}
+        Box(LayoutSize(80.dp, 40.dp), backgroundColor = Color.Magenta)
         // Gravity.Start, the child will be positioned so that its start edge is aligned with
         // the start edge of the horizontal axis.
-        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Start, backgroundColor = Color.Red){}
+        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Start, backgroundColor = Color.Red)
         // Gravity.Center, the child will be positioned so that its center is in the middle of
         // the horizontal axis.
-        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Center, backgroundColor = Color.Yellow){}
+        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.Center, backgroundColor = Color.Yellow)
         // Gravity.End, the child will be positioned so that its end edge aligned to the end of
         // the horizontal axis.
-        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.End, backgroundColor = Color.Green){}
+        Box(LayoutSize(80.dp, 40.dp) + LayoutGravity.End, backgroundColor = Color.Green)
     }
 }

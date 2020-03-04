@@ -2,7 +2,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.compose.unaryPlus
+
 import androidx.ui.core.Modifier
 import androidx.ui.core.Text
 import androidx.ui.core.gesture.PressGestureDetector

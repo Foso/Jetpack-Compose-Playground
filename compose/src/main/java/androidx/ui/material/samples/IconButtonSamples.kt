@@ -20,14 +20,12 @@ package androidx.ui.material.samples
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.animation.animate
-
-
+import androidx.ui.foundation.Icon
 import androidx.ui.graphics.Color
 import androidx.ui.material.IconButton
 import androidx.ui.material.IconToggleButton
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
-import androidx.ui.material.studies.rally.Icon
 
 
 @Composable
@@ -44,6 +42,6 @@ fun IconToggleButtonSample() {
 
     IconToggleButton(checked = checked, onCheckedChange = { checked = it }) {
         val tint = animate(if (checked) Color(0xFFEC407A) else Color(0xFFB0BEC5))
-        Icon(Icons.Filled.Favorite, tintColor = tint)
+        Icon(Icons.Filled.Favorite, tint = tint)
     }
 }

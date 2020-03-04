@@ -23,7 +23,7 @@ import androidx.compose.remember
 import androidx.ui.animation.animatedFloat
 import androidx.ui.core.Text
 import androidx.ui.foundation.ColoredRect
-
+import androidx.ui.foundation.Icon
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.foundation.shape.corner.CircleShape
 import androidx.ui.foundation.shape.corner.CutCornerShape
@@ -41,7 +41,6 @@ import androidx.ui.material.ScaffoldState
 import androidx.ui.material.TopAppBar
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Menu
-import androidx.ui.material.studies.rally.Icon
 import androidx.ui.unit.dp
 import kotlin.math.abs
 import kotlin.math.roundToInt
@@ -128,7 +127,7 @@ fun ScaffoldWithBottomBarAndCutout() {
         drawerContent = { Text("Drawer content") },
         topAppBar = { TopAppBar(title = { Text("Scaffold with bottom cutout") }) },
         bottomAppBar = { fabConfiguration ->
-            BottomAppBar<Any>(fabConfiguration = fabConfiguration, cutoutShape = fabShape) {
+            BottomAppBar(fabConfiguration = fabConfiguration, cutoutShape = fabShape) {
                 IconButton(onClick = {
                     scaffoldState.drawerState = DrawerState.Opened
                 }) {

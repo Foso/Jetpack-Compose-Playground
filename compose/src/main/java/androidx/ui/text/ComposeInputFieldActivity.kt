@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package androidx.ui.text
+package androidx.ui.text.demos
 
 import android.app.Activity
 import android.os.Bundle
 import androidx.ui.core.setContent
-import androidx.ui.text.demos.InputFieldDemo
 
 class ComposeInputFieldActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {

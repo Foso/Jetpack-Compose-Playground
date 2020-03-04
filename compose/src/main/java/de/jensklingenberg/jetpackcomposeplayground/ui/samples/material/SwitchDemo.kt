@@ -2,7 +2,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.compose.unaryPlus
+
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.Switch
 

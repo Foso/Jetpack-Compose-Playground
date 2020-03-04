@@ -21,6 +21,7 @@ import androidx.compose.Composable
 import androidx.ui.core.Text
 import androidx.ui.foundation.SimpleImage
 import androidx.ui.graphics.Image
+import androidx.ui.graphics.ImageAsset
 import androidx.ui.layout.Column
 import androidx.ui.material.Divider
 import androidx.ui.material.ListItem

@@ -20,6 +20,7 @@ package androidx.ui.material.samples
 import androidx.compose.Composable
 import androidx.ui.foundation.SimpleImage
 import androidx.ui.graphics.Image
+import androidx.ui.graphics.ImageAsset
 import androidx.ui.material.FloatingActionButton
 
 

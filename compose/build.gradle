@@ -28,7 +28,7 @@ android {
 
     }
     composeOptions {
-        kotlinCompilerExtensionVersion "0.1.0-dev05"
+        kotlinCompilerExtensionVersion "0.1.0-dev06"
     }
 
 
@@ -57,7 +57,7 @@ android {
 }
 
 dependencies {
-    def compose_version = "0.1.0-dev05"
+    def compose_version = "0.1.0-dev06"
 
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -84,6 +84,8 @@ dependencies {
     implementation "androidx.ui:ui-text:$compose_version"
     implementation "androidx.ui:ui-tooling:$compose_version"
     implementation "androidx.ui:ui-unit:$compose_version"
+    implementation "androidx.ui:ui-util:$compose_version"
+
     implementation "androidx.ui:ui-vector:$compose_version"
 
     implementation "androidx.preference:preference:1.1.0"

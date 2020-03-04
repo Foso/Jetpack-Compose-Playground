@@ -60,7 +60,7 @@ fun HomeScreen() {
             bodyContent = {
 
                 Column(modifier = LayoutWidth.Fill, arrangement = Arrangement.Center) {
-                    Row(modifier = LayoutWidth.Fill, arrangement = Arrangement.Begin) {
+                    Row(modifier = LayoutWidth.Fill, arrangement = Arrangement.Start) {
                         Button( onClick = {
                             onDrawerStateChange(DrawerState.Opened)
                         }){
@@ -95,7 +95,7 @@ fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(RallyScreenS
     val allScreens = RallyScreenState.values().toList()
 
     VerticalScroller {
-        Column(arrangement = Arrangement.Begin) {
+        Column(arrangement = Arrangement.Top) {
             allScreens.forEach {
                 Spacer(LayoutHeight(10.dp))
                 Button( onClick = {
@@ -116,7 +116,7 @@ fun myOverView(fn:(RallyScreenState)->Unit){
     val allScreens = RallyScreenState.values().toList()
 
     VerticalScroller {
-        Column(arrangement = Arrangement.Begin) {
+        Column(arrangement = Arrangement.Top) {
             allScreens.forEach {
                 Spacer(LayoutHeight(10.dp))
                 Button( onClick = {

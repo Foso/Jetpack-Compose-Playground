@@ -52,15 +52,15 @@ fun SameWidthBoxes() {
                 Box(
                     modifier = LayoutWidth.Fill + LayoutSize(20.dp, 10.dp),
                     backgroundColor = Color.Gray
-                ){}
+                )
                 Box(
                     modifier = LayoutWidth.Fill + LayoutSize(30.dp, 10.dp),
                     backgroundColor = Color.Blue
-                ){}
+                )
                 Box(
                     modifier = LayoutWidth.Fill + LayoutSize(10.dp, 10.dp),
                     backgroundColor = Color.Magenta
-                ){}
+                )
             }
         }
     }
@@ -86,7 +86,7 @@ fun MatchParentDividerForText() {
                     text = "This is a really short text",
                     modifier = LayoutFlexible(1f) + LayoutHeight.Fill
                 )
-                Box(LayoutWidth(1.dp) + LayoutHeight.Fill, backgroundColor = Color.Black){}
+                Box(LayoutWidth(1.dp) + LayoutHeight.Fill, backgroundColor = Color.Black)
                 Text(
                     text = "This is a much much much much much much much much much much" +
                             " much much much much much much longer text",
@@ -143,9 +143,9 @@ fun MatchParentDividerForAspectRatio() {
         MaxIntrinsicHeight {
             Row {
                 val modifier = LayoutHeight.Fill + LayoutFlexible(1f)
-                Box(modifier + LayoutAspectRatio(2f), backgroundColor = Color.Gray){}
-                Box(LayoutWidth(1.dp) + LayoutHeight.Fill, backgroundColor = Color.Black){}
-                Box(modifier + LayoutAspectRatio(1f), backgroundColor = Color.Blue){}
+                Box(modifier + LayoutAspectRatio(2f), backgroundColor = Color.Gray)
+                Box(LayoutWidth(1.dp) + LayoutHeight.Fill, backgroundColor = Color.Black)
+                Box(modifier + LayoutAspectRatio(1f), backgroundColor = Color.Blue)
             }
         }
     }

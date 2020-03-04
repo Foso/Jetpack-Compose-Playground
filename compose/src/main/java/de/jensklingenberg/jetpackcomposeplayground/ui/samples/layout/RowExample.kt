@@ -1,7 +1,7 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout
 
 import androidx.compose.Composable
-import androidx.compose.unaryPlus
+
 import androidx.ui.core.Text
 import androidx.ui.layout.Row
 import androidx.ui.material.MaterialTheme

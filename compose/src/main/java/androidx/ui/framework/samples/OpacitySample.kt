@@ -28,6 +28,6 @@ import androidx.ui.unit.dp
 @Composable
 fun OpacitySample() {
     Opacity(opacity = 0.5f) {
-        Box(LayoutSize(100.dp), backgroundColor = Color.Red){}
+        Box(LayoutSize(100.dp), backgroundColor = Color.Red)
     }
 }

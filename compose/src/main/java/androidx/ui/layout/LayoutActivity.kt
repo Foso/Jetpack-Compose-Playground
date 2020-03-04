@@ -106,7 +106,7 @@ fun LayoutDemo() {
             }
             Spacer(LayoutWidth(24.dp))
             Stack(LayoutHeight(ExampleSize) + DrawBackground(color = lightGrey)) {
-                Column(LayoutHeight.Fill, arrangement = Arrangement.End) {
+                Column(LayoutHeight.Fill, arrangement = Arrangement.Bottom) {
                     PurpleSquare()
                     CyanSquare()
                 }
@@ -131,12 +131,12 @@ fun LayoutDemo() {
 
 @Composable
 fun PurpleSquare(modifier: Modifier = Modifier.None) {
-    Box(modifier + LayoutSize(48.dp), backgroundColor = Color(0xFF6200EE)){}
+    Box(modifier + LayoutSize(48.dp), backgroundColor = Color(0xFF6200EE))
 }
 
 @Composable
 fun CyanSquare(modifier: Modifier = Modifier.None) {
-    Box(modifier + LayoutSize(24.dp), backgroundColor = Color(0xFF03DAC6)){}
+    Box(modifier + LayoutSize(24.dp), backgroundColor = Color(0xFF03DAC6))
 }
 
 private val ExampleSize = 140.dp

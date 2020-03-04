@@ -35,7 +35,7 @@ fun DialogSample() {
     if (openDialog.value) {
         Dialog(onCloseRequest = { openDialog.value = false }) {
             // Draw a rectangle shape with rounded corners inside the dialog
-            Box(LayoutSize(dialogWidth, dialogHeight), backgroundColor = Color.White){}
+            Box(LayoutSize(dialogWidth, dialogHeight), backgroundColor = Color.White)
         }
     }
 }

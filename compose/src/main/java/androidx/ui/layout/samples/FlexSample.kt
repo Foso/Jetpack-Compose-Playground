@@ -37,14 +37,14 @@ import androidx.ui.unit.ipx
 fun SimpleRow() {
     Row {
         // The child with no flexibility modifier is inflexible and will have the specified size.
-        Box(LayoutSize(40.dp, 80.dp), backgroundColor = Color.Magenta){}
+        Box(LayoutSize(40.dp, 80.dp), backgroundColor = Color.Magenta)
         // Flexible, the child will occupy have of the remaining width.
-        Box(LayoutHeight(40.dp) + LayoutFlexible(1f), backgroundColor = Color.Yellow){}
+        Box(LayoutHeight(40.dp) + LayoutFlexible(1f), backgroundColor = Color.Yellow)
         // Flexible not tight, the child will occupy at most half of the remaining width.
         Box(
             LayoutHeight(80.dp) + LayoutFlexible(1f, tight = false),
             backgroundColor = Color.Green
-        ){}
+        )
     }
 }
 
@@ -53,14 +53,14 @@ fun SimpleRow() {
 fun SimpleColumn() {
     Column {
         // The child with no flexibility modifier is inflexible and will have the specified size.
-        Box(LayoutSize(40.dp, 80.dp), backgroundColor = Color.Magenta){}
+        Box(LayoutSize(40.dp, 80.dp), backgroundColor = Color.Magenta)
         // Flexible, the child will occupy have of the remaining height.
-        Box(LayoutWidth(40.dp) + LayoutFlexible(1f), backgroundColor = Color.Yellow){}
+        Box(LayoutWidth(40.dp) + LayoutFlexible(1f), backgroundColor = Color.Yellow)
         // Flexible not tight, the child will occupy at most half of the remaining height.
         Box(
             LayoutHeight(80.dp) + LayoutFlexible(1f, tight = false),
             backgroundColor = Color.Green
-        ){}
+        )
     }
 }
 
@@ -73,15 +73,15 @@ fun SimpleRelativeToSiblings() {
         Box(
             LayoutSize(80.dp, 40.dp) + LayoutGravity.RelativeToSiblings { it.width * 0.5 },
             backgroundColor = Color.Blue
-        ){}
+        )
         Box(
             LayoutSize(80.dp, 40.dp) + LayoutGravity.RelativeToSiblings { it.width },
             backgroundColor = Color.Magenta
-        ){}
+        )
         Box(
             LayoutSize(80.dp, 40.dp) + LayoutGravity.RelativeToSiblings { 0.ipx },
             backgroundColor = Color.Red
-        ){}
+        )
     }
 }
 
@@ -94,34 +94,10 @@ fun SimpleRelativeToSiblingsInRow() {
             backgroundColor = Color.Red,
             modifier = LayoutSize(80.dp, 40.dp) +
                     LayoutGravity.RelativeToSiblings { it.height * 0.5 }
-        ){}
+        )
         Box(LayoutWidth(80.dp) + LayoutGravity.RelativeToSiblings(FirstBaseline)) {
             Text(text = "Text.", style = TextStyle(background = Color.Cyan))
         }
     }
 }
 
-
-@Composable
-fun SimpleRelativeToSiblingsInColumn() {
-    Column {
-        // Center of the first rectangle is aligned to the right edge of the second rectangle and
-        // left edge of the third one.
-        Box(
-            LayoutSize(80.dp, 40.dp) + LayoutGravity.RelativeToSiblings { it.width * 0.5 },
-            backgroundColor = Color.Blue
-        ){}
-        SizedRectangleWithLines(
-            LayoutGravity.RelativeToSiblings(End),
-            color = Color.Magenta,
-            width = 80.dp,
-            height = 40.dp
-        )
-        SizedRectangleWithLines(
-            LayoutGravity.RelativeToSiblings(Start),
-            color = Color.Red,
-            width = 80.dp,
-            height = 40.dp
-        )
-    }
-}

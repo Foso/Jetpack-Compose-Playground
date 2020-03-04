@@ -19,7 +19,6 @@ package androidx.ui.material.studies.rally
 import android.annotation.SuppressLint
 import androidx.compose.Composable
 import androidx.compose.state
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.LayoutPadding
 import androidx.ui.core.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.Arrangement

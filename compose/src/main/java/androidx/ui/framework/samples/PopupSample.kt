@@ -42,7 +42,7 @@ fun PopupSample() {
                 LayoutSize(popupWidth, popupHeight),
                 shape = RoundedCornerShape(cornerSize),
                 backgroundColor = Color.White
-            ){}
+            )
         }
     }
 }
@@ -62,7 +62,7 @@ fun DropdownPopupSample() {
                 LayoutSize(popupWidth, popupHeight),
                 shape = RoundedCornerShape(cornerSize),
                 backgroundColor = Color.White
-            ){}
+            )
         }
     }
 }

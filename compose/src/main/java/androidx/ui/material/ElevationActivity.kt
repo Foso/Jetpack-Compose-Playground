@@ -17,7 +17,6 @@
 package androidx.ui.material.demos
 
 import androidx.compose.Composable
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.LayoutPadding
 import androidx.ui.core.Text
 import androidx.ui.foundation.Border
 import androidx.ui.foundation.Clickable

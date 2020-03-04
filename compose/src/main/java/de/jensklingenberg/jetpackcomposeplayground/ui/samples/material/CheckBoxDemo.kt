@@ -2,7 +2,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.material
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.compose.unaryPlus
+
 import androidx.ui.material.Checkbox
 import androidx.ui.material.MaterialTheme
 

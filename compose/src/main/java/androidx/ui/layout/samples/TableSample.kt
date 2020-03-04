@@ -39,7 +39,7 @@ fun SimpleTable() {
                     Box(
                         LayoutPadding(2.dp) + LayoutAspectRatio(1f),
                         backgroundColor = Color.Magenta
-                    ){}
+                    )
                 }
             }
         }
@@ -51,10 +51,10 @@ fun SimpleTable() {
 fun TableWithDecorations() {
     Table(columns = 8) {
         tableDecoration(overlay = false) {
-            Box(backgroundColor = Color.Green){}
+            Box(backgroundColor = Color.Green)
         }
         tableDecoration(overlay = false) {
-            Box(shape = CircleShape, backgroundColor = Color.Red){}
+            Box(shape = CircleShape, backgroundColor = Color.Red)
         }
         for (i in 0 until 8) {
             tableRow {
@@ -62,7 +62,7 @@ fun TableWithDecorations() {
                     Box(
                         LayoutPadding(2.dp) + LayoutAspectRatio(1f),
                         backgroundColor = Color.Magenta
-                    ){}
+                    )
                 }
             }
         }
@@ -87,9 +87,9 @@ fun TableWithDifferentColumnWidths() {
     ) {
         for (i in 0 until 8) {
             tableRow {
-                Box(padding + LayoutSize(25.dp, 25.dp), backgroundColor = Color.Magenta){}
+                Box(padding + LayoutSize(25.dp, 25.dp), backgroundColor = Color.Magenta)
                 for (j in 1 until 5) {
-                    Box(padding + LayoutHeight(25.dp), backgroundColor = Color.Magenta){}
+                    Box(padding + LayoutHeight(25.dp), backgroundColor = Color.Magenta)
                 }
             }
         }

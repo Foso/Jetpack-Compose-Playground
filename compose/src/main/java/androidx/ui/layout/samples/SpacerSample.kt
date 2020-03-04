@@ -30,10 +30,10 @@ import androidx.ui.unit.dp
 @Composable
 fun SpacerExample() {
     Row {
-        Box(LayoutSize(100.dp), backgroundColor = Color.Red){}
+        Box(LayoutSize(100.dp), backgroundColor = Color.Red)
         Spacer(modifier = LayoutWidth(20.dp))
-        Box(LayoutSize(100.dp), backgroundColor = Color.Magenta){}
+        Box(LayoutSize(100.dp), backgroundColor = Color.Magenta)
         Spacer(modifier = LayoutFlexible(1f))
-        Box(LayoutSize(100.dp), backgroundColor = Color.Black){}
+        Box(LayoutSize(100.dp), backgroundColor = Color.Black)
     }
 }

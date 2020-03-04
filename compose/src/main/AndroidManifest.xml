@@ -58,5 +58,11 @@
         <activity android:name="androidx.ui.text.ComposeInputFieldActivity" />
         <activity android:name="androidx.ui.text.demos.ComposeVariousInputFieldActivity" />
         <activity android:name="androidx.ui.text.demos.ComposeInputFieldTrickyUseCaseActivity" />
+        <activity android:name="androidx.ui.animation.demos.AnimatableSeekBar" />
+        <activity android:name="androidx.ui.foundation.demos.BoxActivity" />
+        <activity android:name="androidx.ui.foundation.demos.HighLevelGesturesActivity" />
+        <activity android:name="androidx.ui.framework.demos.VectorGraphicsActivity" />
+        <activity android:name="androidx.ui.material.demos.BottomDrawerActivity" />
+        <activity android:name="androidx.ui.text.demos.InteractiveTextActivity" />
     </application>
 </manifest>

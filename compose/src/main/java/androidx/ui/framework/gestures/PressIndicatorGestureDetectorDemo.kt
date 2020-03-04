@@ -61,7 +61,7 @@ class PressIndicatorGestureDetectorDemo : Activity() {
                     LayoutAlign.Center + LayoutSize(192.dp),
                     backgroundColor = color,
                     border = Border(2.dp, BorderColor)
-                ){}
+                )
             }
         }
     }

@@ -38,7 +38,7 @@ fun SimpleFlowRow() {
         crossAxisSpacing = 10.dp
     ) {
         sizes.forEach { size ->
-            Box(LayoutSize(size, 20.dp), backgroundColor = Color.Magenta){}
+            Box(LayoutSize(size, 20.dp), backgroundColor = Color.Magenta)
         }
     }
 }
@@ -51,7 +51,7 @@ fun SimpleFlowColumn() {
         crossAxisSpacing = 10.dp
     ) {
         sizes.forEach { size ->
-            Box(LayoutSize(20.dp, size), backgroundColor = Color.Magenta){}
+            Box(LayoutSize(20.dp, size), backgroundColor = Color.Magenta)
         }
     }
 }

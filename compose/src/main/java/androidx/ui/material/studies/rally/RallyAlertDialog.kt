@@ -17,12 +17,11 @@
 package androidx.ui.material.studies.rally
 
 import androidx.compose.Composable
-import de.jensklingenberg.jetpackcomposeplayground.ui.common.LayoutPadding
 import androidx.ui.core.Text
 import androidx.ui.foundation.shape.RectangleShape
 import androidx.ui.layout.Column
 import androidx.ui.layout.EdgeInsets
-
+import androidx.ui.layout.LayoutPadding
 import androidx.ui.layout.LayoutWidth
 import androidx.ui.material.AlertDialog
 import androidx.ui.material.Divider

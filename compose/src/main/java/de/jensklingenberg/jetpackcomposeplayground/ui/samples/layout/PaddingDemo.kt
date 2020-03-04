@@ -12,13 +12,13 @@ fun PaddingDemo() {
 
     Column {
         Text("TextWithoutPadding")
-        Column(LayoutPadding(left = 80.dp)){
+        Column(LayoutPadding(start = 80.dp)){
             Text("TextWith80dpOnlyLeftPadding")
 
         }
 
 
-        Column(LayoutPadding(left = 80.dp)){
+        Column(LayoutPadding(start = 80.dp)){
             Text("TextWith80dpPadding")
         }
 

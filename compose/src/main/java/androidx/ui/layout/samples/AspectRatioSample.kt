@@ -27,5 +27,5 @@ import androidx.ui.unit.dp
 
 @Composable
 fun SimpleAspectRatio() {
-    Box(LayoutWidth(100.dp) + LayoutAspectRatio(2f), backgroundColor = Color.Green){}
+    Box(LayoutWidth(100.dp) + LayoutAspectRatio(2f), backgroundColor = Color.Green)
 }

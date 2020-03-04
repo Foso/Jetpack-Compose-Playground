@@ -29,7 +29,7 @@ import androidx.ui.unit.dp
 fun AlignmentLineOffsetUsage() {
     AlignmentLineOffset(
         FirstBaseline,
-
+        modifier = DrawBackground(Color.Gray),
         before = 20.dp,
         after = 40.dp
     ) {
