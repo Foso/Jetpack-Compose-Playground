@@ -1,0 +1,71 @@
+site_name: Jetpack Compose Playground
+repo_name: Jetpack Compose Playground
+
+repo_url: https://github.com/Foso/Jetpack-Compose-Playground
+site_url: https://github.com/Foso/Jetpack-Compose-Playground
+site_dir: 'docs'
+docs_dir: 'mkdocs'
+edit_uri: 'mkdocs/'
+theme:
+  name: 'material'
+  custom_dir: 'mkdocs/theme'
+  palette:
+    primary: 'deep-blue'
+    accent: 'deep-purple'
+  feature:
+    tabs: true
+nav:
+  - 'Jetpack Compose':
+      - 'Overview': index.md
+      - 'Guides & Samples':
+          - 'General':
+              - 'Project Setup': general/getting_started.md
+              - 'Hello World Compose': general/helloworld.md
+              - 'Compose Preview': general/compose_preview.md
+              - 'State': general/state.md
+
+              - 'Compose Lifecycle': general/compose_lifecycle.md
+              - 'How to get Android Context': general/get_android_context.md
+              - 'How to draw on Canvas': general/draw_on_canvas.md
+          - 'Foundation':
+              - 'Clickable': foundation/clickable.md
+              - 'VerticalScroller': foundation/vertical_scroller.md
+              - 'HorizontalScroller': foundation/horizontal_scroller.md
+              - 'Draggable': foundation/draggable.md
+          - 'Core':
+              - 'PressGestureDetector': core/pressgesturedetector.md
+          - 'Layout':
+              - 'Column': layout/column.md
+              - 'Row': layout/row.md
+              - 'Stack': layout/stack.md
+          - 'Material':
+              - 'Switch': material/switch.md
+              - 'Checkbox': material/checkbox.md
+              - 'RadioGroup': material/radiogroup.md
+              - 'AlertDialog': material/alertdialog.md
+      - 'Compose Projects': compose_projects.md
+      - 'Contributing': contributing.md
+      - 'Resources': resources.md
+
+markdown_extensions:
+  - smarty
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - tables
+  - admonition
+
+plugins:
+  - search

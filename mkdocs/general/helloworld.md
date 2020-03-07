@@ -1,6 +1,6 @@
-## Hello World Compose
+# Hello World Compose
 
- * Write a simple Compose function
+### Write a simple Compose function
 
 A basic Compose View is using a normal Kotlin function which is annotated with @Composable
 
@@ -8,13 +8,13 @@ A basic Compose View is using a normal Kotlin function which is annotated with @
 ```kotlin
 @Composable
 fun HelloWorld() {
-   Text(text = "Hello World!")
+   Text("Hello World!")
 }
 ```
 
- * Use a Compose function as a view in your android app
+### Use a Compose function as a view in your android app
 
-To usethe HelloWorld() function in your App you have to use the setContent() extension function inside a onCreate() in an Activity and wrap this with a CraneWrapper.
+ To use the HelloWorld() function in your App you have to use the setContent() extension function inside a onCreate() in an Activity.
 
 
 ```kotlin
@@ -25,9 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            CraneWrapper {
                 HelloWorld()
-            }
         }
     }
 }

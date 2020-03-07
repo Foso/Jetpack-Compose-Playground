@@ -85,7 +85,6 @@ dependencies {
     implementation "androidx.ui:ui-tooling:$compose_version"
     implementation "androidx.ui:ui-unit:$compose_version"
     implementation "androidx.ui:ui-util:$compose_version"
-
     implementation "androidx.ui:ui-vector:$compose_version"
 
     implementation "androidx.preference:preference:1.1.0"

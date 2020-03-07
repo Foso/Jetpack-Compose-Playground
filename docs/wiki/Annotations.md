@@ -1,2 +1,0 @@
-@Composable
-@Pivotal

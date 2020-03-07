@@ -11,13 +11,13 @@
 > A Jetpack Compose Example App
 
  <p align="left">
-   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/RallyActivity2.png" height=500 />
-    <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/RallyActivity.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ComposeTextActivity.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ButtonActivity.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/DialogExample.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ControlledScrollDemo.png" height=500 />
-   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/screenshots/ListItemActivity.png" height=500 />
+   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height=500 />
+    <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ComposeTextActivity.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/DialogExample.png" height=500 />
+     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height=500 />
+   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ListItemActivity.png" height=500 />
 
 </p>
 
