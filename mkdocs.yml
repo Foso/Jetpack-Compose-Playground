@@ -5,7 +5,7 @@ repo_url: https://github.com/Foso/Jetpack-Compose-Playground
 site_url: https://github.com/Foso/Jetpack-Compose-Playground
 site_dir: 'docs'
 docs_dir: 'mkdocs'
-edit_uri: 'mkdocs/'
+edit_uri: 'tree/master/mkdocs/'
 theme:
   name: 'material'
   custom_dir: 'mkdocs/theme'
