@@ -1,5 +1,10 @@
 <h1 align="center">Jetpack Compose Playground</h1>
 
+## Introduction 🙋‍♂️
+This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the github page https://foso.github.io/compose. You can find the code samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)
+
+> :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
+
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![jCenter](https://img.shields.io/badge/Compose-dev06-green.svg
@@ -25,10 +30,6 @@
 
 </p>
 
-## Introduction 🙋‍♂️
-This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose. You can find the samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)
-
-> :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
 
 ### Show some :heart: and star the repo to support the project
