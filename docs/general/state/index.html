@@ -849,6 +849,7 @@
 <h2 id="define-a-state">Define a state<a class="headerlink" href="#define-a-state" title="Permanent link">&para;</a></h2>
 <h3 id="1-state-function">1) state function<a class="headerlink" href="#1-state-function" title="Permanent link">&para;</a></h3>
 <p>val textState = state{&ldquo;Hello&rdquo;}</p>
+<p>You can use the state function to create a state. state{T} will return a MutableState<code>&lt;T&gt;</code></p>
 <h3 id="2-model">2) @Model<a class="headerlink" href="#2-model" title="Permanent link">&para;</a></h3>
 <p>You can also use @Model, when you annotate classes with it, you can use the whole class as a state and observe all properties.</p>
 <div class="codehilite"><pre><span></span><span class="n">@Model</span>

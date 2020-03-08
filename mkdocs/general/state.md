@@ -4,6 +4,8 @@
 ### 1) state function
 val textState = state{"Hello"}
 
+You can use the state function to create a state. state{T} will return a MutableState`<T>`
+
 ### 2) @Model
 You can also use @Model, when you annotate classes with it, you can use the whole class as a state and observe all properties.
 

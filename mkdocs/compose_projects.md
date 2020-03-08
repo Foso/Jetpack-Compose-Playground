@@ -9,6 +9,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [Compose Pokedex](https://github.com/zsoltk/compose-pokedex)  		    | Pokedex on Jetpack Compose.  |
 | [Compose Samples Repository](https://github.com/android/compose-samples)  		    | This repository contains a set of individual Android Studio projects to help you learn about Compose in Android.  |
 | [PeopleInSpace](https://github.com/joreilly/PeopleInSpace)  		    | Minimal Kotlin Multiplatform project using Jetpack Compose and SwiftUI|
+| [ComposeClock](https://github.com/adibfara/composeclock)  		    | Particle clock created with Jetpack Compose framework |
 
 
 
