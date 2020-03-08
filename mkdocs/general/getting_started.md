@@ -5,6 +5,19 @@
 To use Jetpack Compose you need to use at least a [version >4.1 Canary 1](https://developer.android.com/studio/preview)
 
 ## Gradle Dependencies
+
+
+Add this inside in the android{} block your build.gradle
+```groovy
+buildFeatures {
+    compose true
+}
+composeOptions {
+    kotlinCompilerExtensionVersion "0.1.0-dev06"
+}
+
+```
+
 Below are all compose dependencies that are online avaiable, you don't need to add all of them.
 
 ```groovy

@@ -796,6 +796,14 @@
 <h2 id="android-studio">Android Studio<a class="headerlink" href="#android-studio" title="Permanent link">&para;</a></h2>
 <p>To use Jetpack Compose you need to use at least a <a href="https://developer.android.com/studio/preview">version &gt;4.1 Canary 1</a></p>
 <h2 id="gradle-dependencies">Gradle Dependencies<a class="headerlink" href="#gradle-dependencies" title="Permanent link">&para;</a></h2>
+<p>Add this inside in the android{} block your build.gradle
+<div class="codehilite"><pre><span></span><span class="n">buildFeatures</span> <span class="o">{</span>
+    <span class="n">compose</span> <span class="kc">true</span>
+<span class="o">}</span>
+<span class="n">composeOptions</span> <span class="o">{</span>
+    <span class="n">kotlinCompilerExtensionVersion</span> <span class="s2">&quot;0.1.0-dev06&quot;</span>
+<span class="o">}</span>
+</pre></div></p>
 <p>Below are all compose dependencies that are online avaiable, you don&rsquo;t need to add all of them.</p>
 <div class="codehilite"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
     <span class="kt">def</span> <span class="n">compose_version</span> <span class="o">=</span> <span class="s2">&quot;0.1.0-dev06&quot;</span>
@@ -885,6 +893,15 @@
           Material for MkDocs</a>
       </div>
       
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/foso" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/jklingenberg_" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
     </div>
   </div>
 </footer>

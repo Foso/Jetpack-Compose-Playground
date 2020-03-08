@@ -14,6 +14,12 @@ theme:
     accent: 'deep-purple'
   feature:
     tabs: true
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/foso'
+    - type: 'twitter'
+      link: 'https://twitter.com/jklingenberg_'
 nav:
   - 'Jetpack Compose':
       - 'Overview': index.md
