@@ -13,7 +13,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 
-> A Jetpack Compose Example App
+> Some of the code samples in this Repository:
 
 | RallyActivity | RallyActivity | ComposeTextActivity |
 | ------------------ | --------------------------- | ------------------ |
