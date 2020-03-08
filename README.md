@@ -1,5 +1,10 @@
 <h1 align="center">Jetpack Compose Playground</h1>
 
+## Introduction 🙋‍♂️
+This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the github page https://foso.github.io/compose. You can find the code samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)
+
+> :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
+
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![jCenter](https://img.shields.io/badge/Compose-dev06-green.svg
@@ -8,31 +13,33 @@
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 
-> A Jetpack Compose Example App
-
- <p align="left">
-   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height=500 />
-    <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ComposeTextActivity.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/DialogExample.png" height=500 />
-     <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height=500 />
-   <img src ="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ListItemActivity.png" height=500 />
-
-</p>
-
-## Introduction 🙋‍♂️
-This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Widgets/Composables  https://developer.android.com/jetpack/compose. You can find the samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)
-
-> :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
-
 
 ### Show some :heart: and star the repo to support the project
 
 [![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
 
+> Some of the code samples in this Repository:
+
+| RallyActivity | RallyActivity | ComposeTextActivity |
+| ------------------ | --------------------------- | ------------------ |
+| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ComposeTextActivity.png" height="400" alt="Screenshot"/> |
+
+| ButtonActivity | DialogExample | ControlledScrollDemo |
+| ------------------ | --------------------------- | ------------------ |
+| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
+
+| ListItemActivity |
+| ------------------ |
+| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ListItemActivity.png" height="400" alt="Screenshot"/> 
+
+
+</p>
+
+
+
+
 ## 📙 Jetpack Compose examples/tutorials and demos
-Please take a look at the github page: https://foso.github.io/compose
+Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
 
 
 # 🏠 Architecture
