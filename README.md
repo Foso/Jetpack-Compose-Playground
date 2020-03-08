@@ -13,6 +13,11 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 
+
+### Show some :heart: and star the repo to support the project
+
+[![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
+
 > Some of the code samples in this Repository:
 
 | RallyActivity | RallyActivity | ComposeTextActivity |
@@ -32,9 +37,6 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 
 
 
-### Show some :heart: and star the repo to support the project
-
-[![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
 
 ## 📙 Jetpack Compose examples/tutorials and demos
 Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
