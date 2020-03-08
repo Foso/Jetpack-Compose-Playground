@@ -10,10 +10,13 @@ The generated files for the github page are in [/docs](https://github.com/Foso/J
 
 * Run docs locally
 
-To start the mkdocs server locally, run "mkdocs serve" in a terminal in the project folder.
+To start the mkdocs server locally, run **mkdocs serve** in a terminal in the project folder.
 
 * Add/Change docs
 
 The docs are written in markdown files which are all in [/mkdocs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs). To change the navigation sidebar, you need to edit the mkdocs.yml.
 
-Feel free to change/add files and send a pull request. 
+When you run **mkdocs build** in a terminal in the project folder, the html files be generated to [/docs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/docs)
+
+
+Feel free to change/add files and send a pull request.

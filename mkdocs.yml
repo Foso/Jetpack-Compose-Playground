@@ -39,6 +39,7 @@ nav:
               - 'Draggable': foundation/draggable.md
           - 'Core':
               - 'PressGestureDetector': core/pressgesturedetector.md
+              - 'Text': core/text.md
           - 'Layout':
               - 'Column': layout/column.md
               - 'Row': layout/row.md

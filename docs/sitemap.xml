@@ -66,6 +66,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/core/text/</loc>
+     <lastmod>2020-03-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/column/</loc>
      <lastmod>2020-03-08</lastmod>
      <changefreq>daily</changefreq>
