@@ -19,8 +19,6 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 import android.app.Activity
 import android.os.Bundle
 import androidx.ui.core.setContent
-import androidx.ui.layout.samples.SimpleFlowRow
-import de.jensklingenberg.jetpackcomposeplayground.ui.HomeScreen
 
 class MyComposeActivity : Activity() {
 
