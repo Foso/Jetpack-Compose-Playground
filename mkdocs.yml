@@ -46,6 +46,7 @@ nav:
               - 'Stack': layout/stack.md
               - 'LayoutPadding': layout/layoutpadding.md
           - 'Material':
+              - 'Button': material/button.md
               - 'ModalDrawerLayout': material/modaldrawer.md
               - 'Switch': material/switch.md
               - 'Checkbox': material/checkbox.md
