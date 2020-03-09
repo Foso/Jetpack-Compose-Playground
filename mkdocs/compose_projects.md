@@ -19,4 +19,5 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | ----------------------------------------- | ------------------------------------ |
 | [Compose Router](https://github.com/zsoltk/compose-router)  		    | Routing functionality for Jetpack Compose with back stack |
 | [Compose Glide Image](https://github.com/mvarnagiris/compose-glide-image)  		    | Simple Glide library adaptation for Jetpack Compose.  |
+| [Compose Navigation](https://github.com/mvarnagiris/compose-navigation)  		    |  |
 
