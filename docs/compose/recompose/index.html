@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/foundation/horizontal_scroller/">
+        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/compose/recompose/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>HorizontalScroller - Jetpack Compose Playground</title>
+        <title>Recompose - Jetpack Compose Playground</title>
       
     
     
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#horizontalscroller" tabindex="1" class="md-skip">
+      <a href="#recompose" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -113,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                HorizontalScroller
+                Recompose
               
             </span>
           
@@ -421,10 +421,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-2" type="checkbox" id="nav-1-2-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-2" type="checkbox" id="nav-1-2-2" checked>
     
     <label class="md-nav__link" for="nav-1-2-2">
       Compose
@@ -440,11 +442,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../compose/recompose/" title="Recompose" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Recompose" class="md-nav__link md-nav__link--active">
       Recompose
     </a>
+    
   </li>
 
         
@@ -457,12 +468,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3">
     
     <label class="md-nav__link" for="nav-1-2-3">
       Foundation
@@ -480,7 +489,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../clickable/" title="Clickable" class="md-nav__link">
+    <a href="../../foundation/clickable/" title="Clickable" class="md-nav__link">
       Clickable
     </a>
   </li>
@@ -492,7 +501,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../vertical_scroller/" title="VerticalScroller" class="md-nav__link">
+    <a href="../../foundation/vertical_scroller/" title="VerticalScroller" class="md-nav__link">
       VerticalScroller
     </a>
   </li>
@@ -502,20 +511,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="HorizontalScroller" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../foundation/horizontal_scroller/" title="HorizontalScroller" class="md-nav__link">
       HorizontalScroller
     </a>
-    
   </li>
 
         
@@ -525,7 +525,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../draggable/" title="Draggable" class="md-nav__link">
+    <a href="../../foundation/draggable/" title="Draggable" class="md-nav__link">
       Draggable
     </a>
   </li>
@@ -838,24 +838,47 @@
               
 
 
-<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20foundation/horizontal_scroller/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/foundation/horizontal_scroller.md">edit</a></span>
+<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20compose/recompose/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/compose/recompose.md">edit</a></span>
 
 
 
-<h1 id="horizontalscroller">HorizontalScroller<a class="headerlink" href="#horizontalscroller" title="Permanent link">&para;</a></h1>
-<p>When an app has layout content that might be longer than the width of the device and that content should be horizontal scrollable, then we need to use a HorizontalScroller. It is the horizontal equivalent of <a href="/foundation/vertical_scroller">VerticalScroller</a></p>
+<h1 id="recompose">Recompose<a class="headerlink" href="#recompose" title="Permanent link">&para;</a></h1>
+<p>You can use Recompose when you need to manually trigger an recomposition/update of a part of your composable tree.
+Wrap <strong>Recompose</strong> around the part where you need the functionality. When you execute the <strong>recompose</strong> function, the whole code inside Recompose will be rendered again.</p>
 <div class="codehilite"><pre><span></span><span class="n">@Composable</span>
-<span class="k">fun</span> <span class="nf">HorizontalScrollerExample</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">HorizontalScroller</span> <span class="p">{</span>
-        <span class="c1">//Only one child is allowed in a HorizontalScroller</span>
-        <span class="n">Row</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="m">0.</span><span class="p">.</span><span class="m">100</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">Text</span><span class="p">(</span><span class="s">&quot;$i Hello World!&quot;</span><span class="p">,</span> <span class="n">style</span> <span class="p">=(</span><span class="n">MaterialTheme</span><span class="p">.</span><span class="n">typography</span><span class="p">()).</span><span class="n">body1</span><span class="p">)</span>
+<span class="k">fun</span> <span class="nf">recomposeDemo</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="py">countState</span> <span class="p">=</span> <span class="m">0</span>
+
+    <span class="n">Recompose</span> <span class="p">{</span> <span class="n">recompose</span> <span class="p">-&gt;</span>
+        <span class="n">Column</span> <span class="p">{</span>
+            <span class="n">Text</span><span class="p">(</span><span class="s">&quot;CountState is: &quot;</span> <span class="p">+</span> <span class="n">countState</span><span class="p">)</span>
+
+            <span class="n">Button</span><span class="p">(</span><span class="n">onClick</span> <span class="p">=</span> <span class="p">{</span> <span class="n">countState</span><span class="p">++</span> <span class="p">})</span> <span class="p">{</span>
+                <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Count up&quot;</span><span class="p">)</span>
+            <span class="p">}</span>
+
+            <span class="n">Button</span><span class="p">(</span><span class="n">onClick</span> <span class="p">=</span> <span class="p">{</span>
+                 <span class="n">recompose</span><span class="p">()</span>
+            <span class="p">})</span> <span class="p">{</span>
+                <span class="n">Text</span><span class="p">(</span><span class="s">&quot;I want to recompose&quot;</span><span class="p">)</span>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
+<h1 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h1>
+<p>The UI in the <strong>recomposeDemo</strong> consists of 3 Elements. A Text with the counterstate, a button which will increment the counterstate and a button to recompose the UI.</p>
+<p align="left">
+  <img src ="../../images/recompose1.png" />
+</p>
+
+<p>On a click on the &ldquo;Count up&rdquo;-Button, the value of countState will go up, but the <strong>Text</strong> will not be updated. This is because countState is usual Int and not an State<code>&lt;Int&gt;</code>.
+When the recompose button gets clicked, the <strong>Column</strong> inside <strong>Recompose</strong> will be rendered again. This time with the updated value of countState.</p>
+<p align="left">
+  <img src ="../../images/recompose2.png" />
+</p>
 
 
 
@@ -876,7 +899,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../vertical_scroller/" title="VerticalScroller" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../general/loadimage/" title="How to load an Image" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -885,19 +908,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                VerticalScroller
+                How to load an Image
               </span>
             </div>
           </a>
         
         
-          <a href="../draggable/" title="Draggable" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../foundation/clickable/" title="Clickable" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Draggable
+                Clickable
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -33,6 +33,8 @@ nav:
               - 'How to get Android Context': general/get_android_context.md
               - 'How to draw on Canvas': general/draw_on_canvas.md
               - 'How to load an Image': general/loadimage.md
+          - 'Compose':
+              - 'Recompose': compose/recompose.md
           - 'Foundation':
               - 'Clickable': foundation/clickable.md
               - 'VerticalScroller': foundation/vertical_scroller.md

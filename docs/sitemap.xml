@@ -46,6 +46,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/compose/recompose/</loc>
+     <lastmod>2020-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/clickable/</loc>
      <lastmod>2020-03-10</lastmod>
      <changefreq>daily</changefreq>
