@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.ui.foundation.demos.VerticalScrollerActivity
+import androidx.ui.framework.demos.gestures.ScaleGestureDetectorDemo
 import androidx.ui.material.demos.ButtonActivity
 import androidx.ui.material.studies.rally.RallyActivity
 import androidx.ui.text.demos.ComposeTextActivity
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val button1 = findViewById<Button>(R.id.button1)
         button1.text="RallyApp"
         button1.setOnClickListener {
-            startActivity(Intent(this, RallyActivity::class.java))
+            startActivity(Intent(this, ScaleGestureDetectorDemo::class.java))
         }
 
         val button2 = findViewById<Button>(R.id.button2)
