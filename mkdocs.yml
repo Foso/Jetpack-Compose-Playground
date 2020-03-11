@@ -25,6 +25,10 @@ nav:
       - 'Overview': index.md
       - 'Guides & Samples':
           - 'General':
+              - 'Cookbook': general/cookbook.md
+              - 'Codelabs': general/codelabs.md
+
+              - 'Compose for Android Developers': compose_for/android_devs.md
               - 'Project Setup': general/getting_started.md
               - 'Hello World Compose': general/helloworld.md
               - 'Compose Preview': general/compose_preview.md
