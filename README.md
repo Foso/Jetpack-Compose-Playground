@@ -42,7 +42,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
 
 ## New to Compose?
-Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld//)
+Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld/)
 
 # 🏠 Architecture
 
