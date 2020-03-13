@@ -23,9 +23,12 @@ extra:
 nav:
   - 'Jetpack Compose':
       - 'Overview': index.md
+      - 'Cookbook':
+           - 'Overview': cookbook/overview.md
+           - 'Handle changes to a text field': cookbook/textfield_changes.md
+
       - 'Guides & Samples':
           - 'General':
-              - 'Cookbook': general/cookbook.md
               - 'Codelabs': general/codelabs.md
 
               - 'Compose for Android Developers': compose_for/android_devs.md

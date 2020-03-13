@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/general/cookbook/">
+        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/cookbook/textfield_changes/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>Cookbook - Jetpack Compose Playground</title>
+        <title>Handle changes to a text field - Jetpack Compose Playground</title>
       
     
     
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#cookbook" tabindex="1" class="md-skip">
+      <a href="#handle-changes-to-a-textfield" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -113,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Cookbook
+                Handle changes to a text field
               
             </span>
           
@@ -288,11 +288,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" checked>
     
     <label class="md-nav__link" for="nav-1-2">
-      Guides & Samples
+      Cookbook
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-1-2">
-        Guides & Samples
+        Cookbook
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -301,22 +301,13 @@
           
           
 
-  
 
+  <li class="md-nav__item">
+    <a href="../overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-1" type="checkbox" id="nav-1-2-1" checked>
-    
-    <label class="md-nav__link" for="nav-1-2-1">
-      General
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-2-1">
-        General
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
@@ -332,10 +323,44 @@
       
     
     
-    <a href="./" title="Cookbook" class="md-nav__link md-nav__link--active">
-      Cookbook
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Handle changes to a text field
+      </label>
+    
+    <a href="./" title="Handle changes to a text field" class="md-nav__link md-nav__link--active">
+      Handle changes to a text field
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-supply-an-onvaluechange-callback-to-a-textfield" class="md-nav__link">
+    1) Supply an onValueChange() callback to a TextField
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -344,8 +369,46 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      Guides & Samples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        Guides & Samples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1">
+    
+    <label class="md-nav__link" for="nav-1-3-1">
+      General
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-3-1">
+        General
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../codelabs/" title="Codelabs" class="md-nav__link">
+    <a href="../../general/codelabs/" title="Codelabs" class="md-nav__link">
       Codelabs
     </a>
   </li>
@@ -369,7 +432,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../getting_started/" title="Project Setup" class="md-nav__link">
+    <a href="../../general/getting_started/" title="Project Setup" class="md-nav__link">
       Project Setup
     </a>
   </li>
@@ -381,7 +444,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../helloworld/" title="Hello World Compose" class="md-nav__link">
+    <a href="../../general/helloworld/" title="Hello World Compose" class="md-nav__link">
       Hello World Compose
     </a>
   </li>
@@ -393,7 +456,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../compose_preview/" title="Compose Preview" class="md-nav__link">
+    <a href="../../general/compose_preview/" title="Compose Preview" class="md-nav__link">
       Compose Preview
     </a>
   </li>
@@ -405,7 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../state/" title="State" class="md-nav__link">
+    <a href="../../general/state/" title="State" class="md-nav__link">
       State
     </a>
   </li>
@@ -417,7 +480,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../compose_lifecycle/" title="Compose Lifecycle" class="md-nav__link">
+    <a href="../../general/compose_lifecycle/" title="Compose Lifecycle" class="md-nav__link">
       Compose Lifecycle
     </a>
   </li>
@@ -429,7 +492,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../get_android_context/" title="How to get Android Context" class="md-nav__link">
+    <a href="../../general/get_android_context/" title="How to get Android Context" class="md-nav__link">
       How to get Android Context
     </a>
   </li>
@@ -441,7 +504,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../draw_on_canvas/" title="How to draw on Canvas" class="md-nav__link">
+    <a href="../../general/draw_on_canvas/" title="How to draw on Canvas" class="md-nav__link">
       How to draw on Canvas
     </a>
   </li>
@@ -453,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../loadimage/" title="How to load an Image" class="md-nav__link">
+    <a href="../../general/loadimage/" title="How to load an Image" class="md-nav__link">
       How to load an Image
     </a>
   </li>
@@ -465,7 +528,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../detect_darkmode/" title="How to detect dark mode" class="md-nav__link">
+    <a href="../../general/detect_darkmode/" title="How to detect dark mode" class="md-nav__link">
       How to detect dark mode
     </a>
   </li>
@@ -483,13 +546,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-2" type="checkbox" id="nav-1-2-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-2" type="checkbox" id="nav-1-3-2">
     
-    <label class="md-nav__link" for="nav-1-2-2">
+    <label class="md-nav__link" for="nav-1-3-2">
       Compose
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-2-2">
+      <label class="md-nav__title" for="nav-1-3-2">
         Compose
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -519,13 +582,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-3" type="checkbox" id="nav-1-2-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-3" type="checkbox" id="nav-1-3-3">
     
-    <label class="md-nav__link" for="nav-1-2-3">
+    <label class="md-nav__link" for="nav-1-3-3">
       Foundation
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-2-3">
+      <label class="md-nav__title" for="nav-1-3-3">
         Foundation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -591,13 +654,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-4" type="checkbox" id="nav-1-2-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-4" type="checkbox" id="nav-1-3-4">
     
-    <label class="md-nav__link" for="nav-1-2-4">
+    <label class="md-nav__link" for="nav-1-3-4">
       Core
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-2-4">
+      <label class="md-nav__title" for="nav-1-3-4">
         Core
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -651,13 +714,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-5" type="checkbox" id="nav-1-2-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-5" type="checkbox" id="nav-1-3-5">
     
-    <label class="md-nav__link" for="nav-1-2-5">
+    <label class="md-nav__link" for="nav-1-3-5">
       Layout
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-2-5">
+      <label class="md-nav__title" for="nav-1-3-5">
         Layout
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -723,13 +786,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-6" type="checkbox" id="nav-1-2-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-6" type="checkbox" id="nav-1-3-6">
     
-    <label class="md-nav__link" for="nav-1-2-6">
+    <label class="md-nav__link" for="nav-1-3-6">
       Material
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-1-2-6">
+      <label class="md-nav__title" for="nav-1-3-6">
         Material
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -875,6 +938,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-supply-an-onvaluechange-callback-to-a-textfield" class="md-nav__link">
+    1) Supply an onValueChange() callback to a TextField
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -886,12 +965,33 @@
               
 
 
-<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20general/cookbook/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/general/cookbook.md">edit</a></span>
+<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20cookbook/textfield_changes/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/cookbook/textfield_changes.md">edit</a></span>
 
 
 
-<h1 id="cookbook">Cookbook<a class="headerlink" href="#cookbook" title="Permanent link">&para;</a></h1>
-<p>Work in Progress</p>
+<h1 id="handle-changes-to-a-textfield">Handle changes to a TextField<a class="headerlink" href="#handle-changes-to-a-textfield" title="Permanent link">&para;</a></h1>
+<p>In some cases, it’s useful to get the value of a textfield every time the text in a text field changes. For example, you might want to build a search screen with autocomplete functionality where you want to update the results as the user types.</p>
+<p>With Compose you have the following options:</p>
+<h2 id="1-supply-an-onvaluechange-callback-to-a-textfield">1) Supply an onValueChange() callback to a TextField<a class="headerlink" href="#1-supply-an-onvaluechange-callback-to-a-textfield" title="Permanent link">&para;</a></h2>
+<p align="left">
+  <img src ="../../images/TextFieldDemo.png"  />
+</p>
+
+<div class="codehilite"><pre><span></span><span class="n">@Composable</span>
+<span class="k">fun</span> <span class="nf">HandleTextFieldChanges</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Column</span> <span class="p">{</span>
+        <span class="k">val</span> <span class="py">state</span> <span class="p">=</span> <span class="n">state</span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">}</span>
+        <span class="n">TextField</span><span class="p">(</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="n">state</span><span class="p">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="n">onValueChange</span> <span class="p">=</span> <span class="p">{</span> <span class="n">state</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">it</span> <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;The textfield has this text: &quot;</span><span class="p">+</span><span class="n">state</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>The simplest approach is to supply an onValueChange() callback to a TextField. Whenever the text changes, the callback is invoked.</p>
+<p>In this example, every time the TextField changes, the new text value will be saved in a state and set to the TextField and the Text.</p>
 
 
 
@@ -912,7 +1012,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../overview/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -927,7 +1027,7 @@
           </a>
         
         
-          <a href="../codelabs/" title="Codelabs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../general/codelabs/" title="Codelabs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">

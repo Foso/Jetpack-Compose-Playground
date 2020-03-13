@@ -1,3 +1,0 @@
-# Cookbook
-
-Work in Progress

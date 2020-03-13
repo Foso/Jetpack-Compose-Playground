@@ -6,7 +6,12 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/cookbook/</loc>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/overview/</loc>
+     <lastmod>2020-03-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/textfield_changes/</loc>
      <lastmod>2020-03-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
