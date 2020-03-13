@@ -28,7 +28,13 @@ fun Example() {
     }
 }
 
-```
+``` 
+
+
+### What is the equivalent of a RelativeLayout?
+A RelativeLayout lays your widgets out relative to each other. In Compose, there are a few ways to achieve the same result.
+
+You can achieve the result of a RelativeLayout by using a combination of Column, Row, and Stack widgets
 
 ### What is the equivalent of a ScrollView?
 
