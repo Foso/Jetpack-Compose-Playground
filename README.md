@@ -43,8 +43,8 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 * Cookbook
 
-[Overview](https://foso.github.io/Jetpack-Compose-Playground/cookbook/overview/)
-[Handle changes to a TextField](https://foso.github.io/Jetpack-Compose-Playground/cookbook/textfield_changes/)
+* [Overview](https://foso.github.io/Jetpack-Compose-Playground/cookbook/overview/)
+* [Handle changes to a TextField](https://foso.github.io/Jetpack-Compose-Playground/cookbook/textfield_changes/)
 
 
 ## New to Compose?
