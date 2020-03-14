@@ -35,7 +35,8 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 
 </p>
 
-
+## Composable of the week!! 🎉
+The [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/layout/scaffold/)
 
 
 ## 📙 Jetpack Compose examples/tutorials and demos
