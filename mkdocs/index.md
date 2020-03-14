@@ -1,5 +1,10 @@
 # Jetpack Compose Playground 
 
+## Show some :heart: and star the repo to support the project
+
+[![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
+
+
 ## Introduction
 This is a collection of Jetpack Compose examples/tutorials and demos.
 
@@ -16,7 +21,8 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 ## What is Jetpack Compose?
 " Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. "
 
-
+## Composable of the week!! 🎉
+The [Scaffold](layout/scaffold.md)
 
 
 ## New to Compose?
@@ -25,14 +31,11 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 ## Looking for tutorials/sample code
 Take a look at the sidebar under "Guides & Samples" or check [Compose projects](compose_projects)
 
+
+
+
 ## Contributing
 Interested in adding samples/tutorials? Check [Contributing](contributing.md)
-
-
-## Show some :heart: and star the repo to support the project
-
-[![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
-
 
 ## 📜 License
 

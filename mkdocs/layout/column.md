@@ -3,7 +3,7 @@
 A Column will show each children below the previous children. It' similar to a LinearLayout with vertical orientation.
 
 <p align="left">
-  <img src ="../../images/ColumnExample.png" height=500 />
+  <img src ="../../images/layout/column/ColumnExample.png" height=500 />
 </p>
 
 ```kotlin

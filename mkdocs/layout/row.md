@@ -4,7 +4,7 @@ A Row will show each children next to the previous children. It' similar to a Li
 
 
 <p align="left">
-  <img src ="../../images/RowExample.png" height=500 />
+  <img src ="../../images/layout/row/RowExample.png" height=500 />
 </p>
 
 ```kotlin

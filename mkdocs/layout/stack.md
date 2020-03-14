@@ -7,7 +7,7 @@ The children of the Stack layout will be stacked over each other. You can use th
 
 
 <p align="left">
-  <img src ="../../images/StackExample.png" height=500 />
+  <img src ="../../images/layout/stack/StackExample.png" height=500 />
 </p>
 
 

@@ -54,6 +54,7 @@ nav:
               - 'Text': core/text.md
               - 'TextField': core/textfield.md
           - 'Layout':
+              - 'Scaffold': layout/scaffold.md
               - 'Column': layout/column.md
               - 'Row': layout/row.md
               - 'Stack': layout/stack.md
