@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         val button1 = findViewById<Button>(R.id.button1)
         button1.text="RallyApp"
         button1.setOnClickListener {
-            startActivity(Intent(this, ScaleGestureDetectorDemo::class.java))
+            startActivity(Intent(this, RallyActivity::class.java))
         }
 
         val button2 = findViewById<Button>(R.id.button2)
