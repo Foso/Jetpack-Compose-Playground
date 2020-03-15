@@ -42,7 +42,15 @@ The [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/layout/scaffold
 ## 📙 Jetpack Compose examples/tutorials and demos
 Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
 
-* Cookbook
+### Layout
+* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/layout/scaffold/)
+* [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column/)
+* [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row/)
+* [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack/)
+* [LayoutPadding](https://foso.github.io/Jetpack-Compose-Playground/layout/layoutpadding/)
+
+
+### Cookbook
 
 * [Overview](https://foso.github.io/Jetpack-Compose-Playground/cookbook/overview/)
 * [Handle changes to a TextField](https://foso.github.io/Jetpack-Compose-Playground/cookbook/textfield_changes/)
