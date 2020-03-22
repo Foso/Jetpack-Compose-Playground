@@ -23,8 +23,8 @@ import androidx.ui.core.LayoutTag
 import androidx.ui.core.Text
 import androidx.ui.core.TextField
 import androidx.ui.core.tag
+import androidx.ui.foundation.Box
 import androidx.ui.foundation.VerticalScroller
-
 import androidx.ui.graphics.Color
 import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
@@ -33,7 +33,6 @@ import androidx.ui.input.PasswordVisualTransformation
 import androidx.ui.input.TransformedText
 import androidx.ui.input.VisualTransformation
 import androidx.ui.layout.Column
-import androidx.ui.layout.Container
 import androidx.ui.text.AnnotatedString
 import androidx.ui.text.LocaleList
 import androidx.ui.text.TextStyle
@@ -242,7 +241,7 @@ fun VariousInputFieldDemo() {
 }
 
 @Composable
-fun VariousEditLine(
+private fun VariousEditLine(
     keyboardType: KeyboardType = KeyboardType.Text,
     imeAction: ImeAction = ImeAction.Unspecified,
     onValueChange: (String, String) -> String = { _, new -> new },
@@ -259,9 +258,8 @@ fun VariousEditLine(
     )
 }
 
-
 @Composable
-fun HintEditText(hintText: @Composable() () -> Unit) {
+private fun HintEditText(hintText: @Composable() () -> Unit) {
     val state = state { "" }
 
     val inputField = @Composable {
@@ -278,8 +276,8 @@ fun HintEditText(hintText: @Composable() () -> Unit) {
     } else {
         Layout({
             inputField()
-            Container(LayoutTag("hintText"), children = hintText)
-        }) { measurable, constraints ->
+            Box(LayoutTag("hintText"), children = hintText)
+        }) { measurable, constraints, _ ->
             val inputFieldPlacable =
                 measurable.first { it.tag == "inputField" }.measure(constraints)
             val hintTextPlacable = measurable.first { it.tag == "hintText" }.measure(constraints)

@@ -18,27 +18,26 @@ package androidx.ui.material.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.foundation.SimpleImage
-import androidx.ui.graphics.Image
+import androidx.ui.foundation.Image
 import androidx.ui.graphics.ImageAsset
 import androidx.ui.material.FloatingActionButton
 
 
 @Composable
-fun FloatingActionButtonSimple(icon: Image) {
+fun FloatingActionButtonSimple(icon: ImageAsset) {
     FloatingActionButton(icon = icon, onClick = { /*do something*/ })
 }
 
 
 @Composable
-fun FloatingActionButtonCustomContent(icon: Image) {
+fun FloatingActionButtonCustomContent(icon: ImageAsset) {
     FloatingActionButton(onClick = { /*do something*/ }) {
-        SimpleImage(image = icon)
+        Image(image = icon)
     }
 }
 
 
 @Composable
-fun FloatingActionButtonExtended(icon: Image) {
+fun FloatingActionButtonExtended(icon: ImageAsset) {
     FloatingActionButton(icon = icon, text = "ADD TO BASKET", onClick = { /*do something*/ })
 }

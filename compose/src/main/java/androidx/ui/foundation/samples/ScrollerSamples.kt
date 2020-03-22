@@ -21,7 +21,7 @@ import androidx.compose.Composable
 import androidx.compose.MutableState
 import androidx.compose.state
 import androidx.ui.core.Alignment
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.PressIndicatorGestureDetector
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.Clickable
@@ -29,10 +29,10 @@ import androidx.ui.foundation.ContentGravity
 import androidx.ui.foundation.DrawBackground
 import androidx.ui.foundation.HorizontalScroller
 import androidx.ui.foundation.ScrollerPosition
+import androidx.ui.core.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
-import androidx.ui.layout.Container
 import androidx.ui.layout.LayoutPadding
 import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.Row
@@ -167,9 +167,9 @@ private fun ScrollControl(position: ScrollerPosition, scrollable: MutableState<B
             SquareButton("Scroll: ${scrollable.value}") {
                 scrollable.value = !scrollable.value
             }
-            // empty container to fill table
-            Container { }
-            Container { }
+            // empty dummy boxes to fill the table
+            Box()
+            Box()
         }
     }
 }
@@ -203,7 +203,9 @@ private fun Text(text: String, textStyle: TextStyle) {
         color.value = releasedColor
     }
 
-    PressIndicatorGestureDetector(onStart = onPress, onStop = onRelease, onCancel = onRelease) {
-        Text(text, modifier = DrawBackground(color = color.value), style = textStyle)
-    }
+
+
+    Text(text, modifier =  DrawBackground(color = color.value), style = textStyle)
 }
+
+infix fun Modifier.wraps(other: Modifier): Modifier = this + other

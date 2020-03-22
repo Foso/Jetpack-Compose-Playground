@@ -29,7 +29,6 @@ fun ColoredRectColorSample() {
     ColoredRect(Color.Cyan, width = 20.dp, height = 20.dp)
 }
 
-
 @Composable
 fun ColoredRectBrushSample() {
     ColoredRect(

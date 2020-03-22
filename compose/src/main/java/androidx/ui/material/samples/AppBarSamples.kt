@@ -30,32 +30,24 @@ import androidx.ui.material.TopAppBar
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 import androidx.ui.material.icons.filled.Menu
-import androidx.ui.res.loadVectorResource
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
-@Composable fun menuIcon() = loadVectorResource(R.drawable.ic_crane).resource.resource!!
-@Composable fun favIcon() = loadVectorResource(R.drawable.favorite).resource.resource!!
 
 @Composable
 fun SimpleTopAppBar() {
-
-
-
     TopAppBar(
         title = { Text("Simple TopAppBar") },
         navigationIcon = {
-
             IconButton(onClick = { /* doSomething() */ }) {
-                Icon(menuIcon())
+                Icon(Icons.Filled.Menu)
             }
         },
         actions = {
             // RowScope here, so these icons will be placed horizontally
             IconButton(onClick = { /* doSomething() */ }) {
-                Icon(favIcon())
+                Icon(Icons.Filled.Favorite)
             }
             IconButton(onClick = { /* doSomething() */ }) {
-                Icon(favIcon())
+                Icon(Icons.Filled.Favorite)
             }
         }
     )
@@ -66,15 +58,15 @@ fun SimpleTopAppBar() {
 fun SimpleBottomAppBar() {
     BottomAppBar {
         IconButton(onClick = { /* doSomething() */ }) {
-            Icon(menuIcon())
+            Icon(Icons.Filled.Menu)
         }
         // The actions should be at the end of the BottomAppBar
-        Spacer(LayoutFlexible(1f))
+        Spacer(LayoutWeight(1f))
         IconButton(onClick = { /* doSomething() */ }) {
-            Icon(favIcon())
+            Icon(Icons.Filled.Favorite)
         }
         IconButton(onClick = { /* doSomething() */ }) {
-            Icon(favIcon())
+            Icon(Icons.Filled.Favorite)
         }
     }
 }

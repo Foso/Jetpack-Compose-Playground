@@ -20,12 +20,13 @@ package androidx.ui.material.samples
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Text
+import androidx.ui.foundation.Box
 import androidx.ui.foundation.ColoredRect
+import androidx.ui.foundation.ContentGravity
 import androidx.ui.graphics.Color
-import androidx.ui.layout.Center
 import androidx.ui.layout.Column
-import androidx.ui.layout.Container
 import androidx.ui.layout.LayoutHeight
+import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.LayoutWidth
 import androidx.ui.layout.Row
 import androidx.ui.layout.Spacer
@@ -41,9 +42,7 @@ import androidx.ui.unit.dp
 fun StaticDrawerSample() {
     Row(LayoutWidth.Fill) {
         StaticDrawer {
-            Center {
-                Text("Drawer Content")
-            }
+            Text("Drawer Content")
         }
         ColoredRect(Color.Black, width = 1.dp)
         Text("Rest of App")
@@ -80,7 +79,7 @@ fun BottomDrawerSample() {
 
 @Composable
 private fun YourDrawerContent(onStateChange: (DrawerState) -> Unit) {
-    Container(expanded = true) {
+    Box(LayoutSize.Fill, gravity = ContentGravity.Center) {
         Column(LayoutHeight.Fill) {
             Text(text = "Drawer Content")
             Spacer(LayoutHeight(20.dp))
@@ -93,13 +92,11 @@ private fun YourDrawerContent(onStateChange: (DrawerState) -> Unit) {
 
 @Composable
 private fun YourAppContent(text: String, onDrawerStateChange: (DrawerState) -> Unit) {
-    Center {
-        Column(LayoutHeight.Fill) {
-            Text(text = text)
-            Spacer(LayoutHeight(20.dp))
-            Button(onClick = { onDrawerStateChange(DrawerState.Opened) }) {
-                Text("Click to open")
-            }
+    Column(LayoutHeight.Fill) {
+        Text(text = text)
+        Spacer(LayoutHeight(20.dp))
+        Button(onClick = { onDrawerStateChange(DrawerState.Opened) }) {
+            Text("Click to open")
         }
     }
 }

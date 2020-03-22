@@ -20,8 +20,16 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Text
+import androidx.ui.demos.ComposableDemo
+import androidx.ui.demos.DemoCategory
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.*
+import androidx.ui.layout.demos.ComplexLayoutDemo
+import androidx.ui.layout.demos.ConstraintLayoutDemo
+import androidx.ui.layout.demos.RtlDemo
+import androidx.ui.layout.demos.SimpleLayoutDemo
+import androidx.ui.layout.samples.SimpleFlowRow
+import androidx.ui.layout.samples.TableWithDecorations
 import androidx.ui.material.Button
 import androidx.ui.material.DrawerState
 import androidx.ui.material.MaterialTheme
@@ -37,6 +45,10 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogS
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.CounterModelDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.RadioGroupSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.SwitchDemo
+
+val MyHomeScreen = DemoCategory("My example Demos", listOf(
+    ComposableDemo("My examples") { HomeScreen() }
+))
 
 
 @Composable

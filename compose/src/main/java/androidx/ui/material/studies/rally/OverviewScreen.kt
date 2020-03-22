@@ -35,7 +35,7 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.TextButton
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Sort
-import androidx.ui.material.surface.Card
+import androidx.ui.material.Card
 import androidx.ui.unit.dp
 import java.util.Locale
 
@@ -93,7 +93,7 @@ private fun AlertHeader(onClickSeeAll: () -> Unit) {
         )
         TextButton(
             onClick = onClickSeeAll,
-            paddings = EdgeInsets(0.dp),
+            innerPadding = EdgeInsets(0.dp),
             modifier = LayoutGravity.Center
         ) {
             Text("SEE ALL")
@@ -110,7 +110,7 @@ private fun AlertItem(message: String) {
     ) {
         Text(
             style = MaterialTheme.typography().h3,
-            modifier = LayoutFlexible(1f),
+            modifier = LayoutWeight(1f),
             text = message
         )
         IconButton(

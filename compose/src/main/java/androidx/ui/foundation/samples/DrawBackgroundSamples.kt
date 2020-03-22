@@ -20,6 +20,7 @@ package androidx.ui.foundation.samples
 import androidx.compose.Composable
 import androidx.ui.core.Text
 import androidx.ui.foundation.DrawBackground
+
 import androidx.ui.foundation.shape.corner.CutCornerShape
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.HorizontalGradient

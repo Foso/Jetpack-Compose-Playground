@@ -36,13 +36,13 @@ import androidx.ui.unit.ipx
 @Composable
 fun SimpleRow() {
     Row {
-        // The child with no flexibility modifier is inflexible and will have the specified size.
+        // The child with no weight will have the specified size.
         Box(LayoutSize(40.dp, 80.dp), backgroundColor = Color.Magenta)
-        // Flexible, the child will occupy have of the remaining width.
-        Box(LayoutHeight(40.dp) + LayoutFlexible(1f), backgroundColor = Color.Yellow)
-        // Flexible not tight, the child will occupy at most half of the remaining width.
+        // Has weight, the child will occupy half of the remaining width.
+        Box(LayoutHeight(40.dp) + LayoutWeight(1f), backgroundColor = Color.Yellow)
+        // Has weight and does not fill, the child will occupy at most half of the remaining width.
         Box(
-            LayoutHeight(80.dp) + LayoutFlexible(1f, tight = false),
+            LayoutHeight(80.dp) + LayoutWeight(1f, fill = false),
             backgroundColor = Color.Green
         )
     }
@@ -52,13 +52,13 @@ fun SimpleRow() {
 @Composable
 fun SimpleColumn() {
     Column {
-        // The child with no flexibility modifier is inflexible and will have the specified size.
+        // The child with no weight will have the specified size.
         Box(LayoutSize(40.dp, 80.dp), backgroundColor = Color.Magenta)
-        // Flexible, the child will occupy have of the remaining height.
-        Box(LayoutWidth(40.dp) + LayoutFlexible(1f), backgroundColor = Color.Yellow)
-        // Flexible not tight, the child will occupy at most half of the remaining height.
+        // Has weight, the child will occupy half of the remaining height.
+        Box(LayoutWidth(40.dp) + LayoutWeight(1f), backgroundColor = Color.Yellow)
+        // Has weight and does not fill, the child will occupy at most half of the remaining height.
         Box(
-            LayoutHeight(80.dp) + LayoutFlexible(1f, tight = false),
+            LayoutHeight(80.dp) + LayoutWeight(1f, fill = false),
             backgroundColor = Color.Green
         )
     }
@@ -101,3 +101,27 @@ fun SimpleRelativeToSiblingsInRow() {
     }
 }
 
+
+@Composable
+fun SimpleRelativeToSiblingsInColumn() {
+    Column {
+        // Center of the first rectangle is aligned to the right edge of the second rectangle and
+        // left edge of the third one.
+        Box(
+            LayoutSize(80.dp, 40.dp) + LayoutGravity.RelativeToSiblings { it.width * 0.5 },
+            backgroundColor = Color.Blue
+        )
+        SizedRectangleWithLines(
+            LayoutGravity.RelativeToSiblings(End),
+            color = Color.Magenta,
+            width = 80.dp,
+            height = 40.dp
+        )
+        SizedRectangleWithLines(
+            LayoutGravity.RelativeToSiblings(Start),
+            color = Color.Red,
+            width = 80.dp,
+            height = 40.dp
+        )
+    }
+}

@@ -13,7 +13,7 @@ buildFeatures {
     compose true
 }
 composeOptions {
-    kotlinCompilerExtensionVersion "0.1.0-dev06"
+    kotlinCompilerExtensionVersion "0.1.0-dev07"
 }
 
 ```

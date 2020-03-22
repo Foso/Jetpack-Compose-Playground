@@ -61,5 +61,8 @@
         <activity android:name="androidx.ui.material.demos.BottomNavigationActivity" />
         <activity android:name="androidx.ui.material.demos.StaticDrawerActivity" />
         <activity android:name="androidx.ui.material.demos.SliderActivity" />
+        <activity android:name="androidx.ui.foundation.demos.ListActivity" />
+        <activity android:name="androidx.ui.demos.DemoActivity" />
+        <activity android:name="androidx.ui.demos.DemoSettingsActivity" />
     </application>
 </manifest>

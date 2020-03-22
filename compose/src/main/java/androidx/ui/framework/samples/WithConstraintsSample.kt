@@ -22,14 +22,13 @@ import androidx.ui.core.DensityAmbient
 import androidx.ui.core.WithConstraints
 import androidx.ui.foundation.Box
 import androidx.ui.graphics.Color
-import androidx.ui.layout.Column
 import androidx.ui.layout.LayoutSize
 import androidx.ui.unit.dp
 
 
 @Composable
 fun WithConstraintsSample() {
-    WithConstraints { constraints ->
+    WithConstraints { constraints, _ ->
         val rectangleHeight = 100.dp
         val threshold = with(DensityAmbient.current) { (rectangleHeight * 2).toIntPx() }
         if (constraints.maxHeight < threshold) {
