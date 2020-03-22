@@ -14,7 +14,7 @@ fun ScaffoldDemo() {
           scaffoldState = ScaffoldState(DrawerState.Opened),
           topAppBar = { TopAppBar(title = {Text("TopAppBar")},color = materialBlue700)  },
           floatingActionButtonPosition = Scaffold.FabPosition.End,
-          floatingActionButton = { FloatingActionButton(text = "X", elevation = 8.dp,onClick = {}) },
+          floatingActionButton = { FloatingActionButton(text = "X",onClick = {}) },
           drawerContent = { Text(text = "drawerContent") },
           bodyContent = { Text("BodyContent") },
           bottomAppBar = { BottomAppBar(color = materialBlue700) { Text("BottomAppBar") } }
