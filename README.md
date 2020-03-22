@@ -24,7 +24,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 | ------------------ | --------------------------- | ------------------ |
 |<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height="400" alt="Screenshot"/> | 
 
-| ButtonActivity | DialogExample | ControlledScrollDemo |
+| Material Studies > Buttons & FABs | DialogExample | ControlledScrollDemo |
 | ------------------ | --------------------------- | ------------------ |
 | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
 
