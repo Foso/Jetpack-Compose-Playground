@@ -20,7 +20,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 
 > Some of the code samples in this Repository:
 
-| Overview | RallyActivity | RallyActivity |
+| Overview | Material Studies > Rally |  Material Studies > Rally |
 | ------------------ | --------------------------- | ------------------ |
 |<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height="400" alt="Screenshot"/> | 
 
