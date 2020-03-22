@@ -28,7 +28,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 | ------------------ | --------------------------- | ------------------ |
 | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
 
-| ListItemActivity |
+| Material Studies > ListItems |
 | ------------------ |
 | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ListItemActivity.png" height="400" alt="Screenshot"/> 
 
