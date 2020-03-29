@@ -17,6 +17,7 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.ui
 
+import DrawLayerDemo
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Text
@@ -24,12 +25,6 @@ import androidx.ui.demos.ComposableDemo
 import androidx.ui.demos.DemoCategory
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.*
-import androidx.ui.layout.demos.ComplexLayoutDemo
-import androidx.ui.layout.demos.ConstraintLayoutDemo
-import androidx.ui.layout.demos.RtlDemo
-import androidx.ui.layout.demos.SimpleLayoutDemo
-import androidx.ui.layout.samples.SimpleFlowRow
-import androidx.ui.layout.samples.TableWithDecorations
 import androidx.ui.material.Button
 import androidx.ui.material.DrawerState
 import androidx.ui.material.MaterialTheme
@@ -37,14 +32,13 @@ import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.unit.dp
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.material.CheckBoxDemo
-
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.PressGestureDetectorDemo
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AndroidContextComposeDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.RowExample
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogSample
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.CounterModelDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.RadioGroupSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.SwitchDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogSample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AndroidContextComposeDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.CounterModelDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.PressGestureDetectorDemo
 
 val MyHomeScreen = DemoCategory("My example Demos", listOf(
     ComposableDemo("My examples") { HomeScreen() }
@@ -57,7 +51,7 @@ fun HomeScreen() {
     MaterialTheme {
         val (drawerState: androidx.ui.material.DrawerState, onDrawerStateChange: (DrawerState) -> Unit) = state { DrawerState.Closed }
 
-        var currentScreen by state { RallyScreenState.Overview }
+        var currentScreen by state { ScreenState.Overview }
 
         ModalDrawerLayout(
             drawerState = drawerState,
@@ -80,13 +74,13 @@ fun HomeScreen() {
                         }
 
                         Button( onClick = {
-                            currentScreen = RallyScreenState.Overview
+                            currentScreen = ScreenState.Overview
                         }){
                             Text("Go Back")
                         }
                     }
 
-                    if (currentScreen == RallyScreenState.Overview) {
+                    if (currentScreen == ScreenState.Overview) {
                         myOverView(){
                             currentScreen = it
                         }
@@ -103,8 +97,8 @@ fun HomeScreen() {
 
 }
 @Composable
-fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(RallyScreenState)->Unit) {
-    val allScreens = RallyScreenState.values().toList()
+fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(ScreenState)->Unit) {
+    val allScreens = ScreenState.values().toList()
 
     VerticalScroller {
         Column(arrangement = Arrangement.Top) {
@@ -124,8 +118,8 @@ fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(RallyScreenS
 }
 
 @Composable
-fun myOverView(fn:(RallyScreenState)->Unit){
-    val allScreens = RallyScreenState.values().toList()
+fun myOverView(fn:(ScreenState)->Unit){
+    val allScreens = ScreenState.values().toList()
 
     VerticalScroller {
         Column(arrangement = Arrangement.Top) {
@@ -143,24 +137,25 @@ fun myOverView(fn:(RallyScreenState)->Unit){
     }
 }
 
-enum class RallyScreenState {
-    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,PressGestureDetectorDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo
+enum class ScreenState {
+    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,PressGestureDetectorDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo,DrawlayerDemo
 }
 
 @Composable
-fun RallyScreenState.body() = when (this) {
-    RallyScreenState.Overview -> CanvasDrawExample()
-    RallyScreenState.AndroidContextComposeDemo -> AndroidContextComposeDemo()
-    RallyScreenState.ColumnExample -> ColumnExample()
-    RallyScreenState.VerticalScroller -> VerticalScrollerExample()
-    RallyScreenState.HorizontalScrollerExample -> HorizontalScrollerExample()
-    RallyScreenState.RowExample -> RowExample()
-    RallyScreenState.PaddingDemo -> PaddingDemo()
-    RallyScreenState.PressGestureDetectorDemo -> PressGestureDetectorDemo()
+fun ScreenState.body() = when (this) {
+    ScreenState.Overview -> CanvasDrawExample()
+    ScreenState.AndroidContextComposeDemo -> AndroidContextComposeDemo()
+    ScreenState.ColumnExample -> ColumnExample()
+    ScreenState.VerticalScroller -> VerticalScrollerExample()
+    ScreenState.HorizontalScrollerExample -> HorizontalScrollerExample()
+    ScreenState.RowExample -> RowExample()
+    ScreenState.PaddingDemo -> PaddingDemo()
+    ScreenState.PressGestureDetectorDemo -> PressGestureDetectorDemo()
 
-    RallyScreenState.SwitchDemo -> SwitchDemo()
-    RallyScreenState.CheckBoxDemo -> CheckBoxDemo()
-    RallyScreenState.RadioGroupSample -> RadioGroupSample()
-    RallyScreenState.AlertDialogSample -> AlertDialogSample()
-    RallyScreenState.CounterModelDemo -> CounterModelDemo()
+    ScreenState.SwitchDemo -> SwitchDemo()
+    ScreenState.CheckBoxDemo -> CheckBoxDemo()
+    ScreenState.RadioGroupSample -> RadioGroupSample()
+    ScreenState.AlertDialogSample -> AlertDialogSample()
+    ScreenState.CounterModelDemo -> CounterModelDemo()
+    ScreenState.DrawlayerDemo -> DrawLayerDemo()
 }

@@ -30,7 +30,6 @@ nav:
       - 'Guides & Samples':
           - 'General':
               - 'Codelabs': general/codelabs.md
-
               - 'Compose for Android Developers': compose_for/android_devs.md
               - 'Project Setup': general/getting_started.md
               - 'Hello World Compose': general/helloworld.md
@@ -41,31 +40,31 @@ nav:
               - 'How to draw on Canvas': general/draw_on_canvas.md
               - 'How to load an Image': general/loadimage.md
               - 'How to detect dark mode': general/detect_darkmode.md
-
           - 'Compose':
               - 'Recompose': compose/recompose.md
           - 'Foundation':
+              - 'AdapterList': foundation/adapter_list.md
               - 'Clickable': foundation/clickable.md
-              - 'VerticalScroller': foundation/vertical_scroller.md
-              - 'HorizontalScroller': foundation/horizontal_scroller.md
               - 'Draggable': foundation/draggable.md
+              - 'HorizontalScroller': foundation/horizontal_scroller.md
+              - 'VerticalScroller': foundation/vertical_scroller.md
           - 'Core':
               - 'PressGestureDetector': core/pressgesturedetector.md
               - 'Text': core/text.md
               - 'TextField': core/textfield.md
           - 'Layout':
-              - 'Scaffold': layout/scaffold.md
               - 'Column': layout/column.md
-              - 'Row': layout/row.md
-              - 'Stack': layout/stack.md
               - 'LayoutPadding': layout/layoutpadding.md
+              - 'Row': layout/row.md
+              - 'Scaffold': layout/scaffold.md
+              - 'Stack': layout/stack.md
           - 'Material':
-              - 'Button': material/button.md
-              - 'ModalDrawerLayout': material/modaldrawer.md
-              - 'Switch': material/switch.md
-              - 'Checkbox': material/checkbox.md
-              - 'RadioGroup': material/radiogroup.md
               - 'AlertDialog': material/alertdialog.md
+              - 'Button': material/button.md
+              - 'Checkbox': material/checkbox.md
+              - 'ModalDrawerLayout': material/modaldrawer.md
+              - 'RadioGroup': material/radiogroup.md
+              - 'Switch': material/switch.md
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
       - 'Resources': resources.md
