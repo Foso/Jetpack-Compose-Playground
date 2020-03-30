@@ -26,12 +26,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/getting_started/</loc>
-     <lastmod>2020-03-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/helloworld/</loc>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_lifecycle/</loc>
      <lastmod>2020-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -41,12 +36,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/state/</loc>
-     <lastmod>2020-03-30</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_lifecycle/</loc>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/helloworld/</loc>
      <lastmod>2020-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -67,6 +57,21 @@
     </url>
     <url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/detect_darkmode/</loc>
+     <lastmod>2020-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</loc>
+     <lastmod>2020-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/getting_started/</loc>
+     <lastmod>2020-03-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/state/</loc>
      <lastmod>2020-03-30</lastmod>
      <changefreq>daily</changefreq>
     </url>

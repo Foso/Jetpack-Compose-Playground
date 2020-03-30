@@ -26,20 +26,20 @@ nav:
       - 'Cookbook':
            - 'Overview': cookbook/overview.md
            - 'Handle changes to a text field': cookbook/textfield_changes.md
-
       - 'Guides & Samples':
           - 'General':
               - 'Codelabs': general/codelabs.md
               - 'Compose for Android Developers': compose_for/android_devs.md
-              - 'Project Setup': general/getting_started.md
-              - 'Hello World Compose': general/helloworld.md
-              - 'Compose Preview': general/compose_preview.md
-              - 'State': general/state.md
               - 'Compose Lifecycle': general/compose_lifecycle.md
+              - 'Compose Preview': general/compose_preview.md
+              - 'Hello World Compose': general/helloworld.md
               - 'How to get Android Context': general/get_android_context.md
               - 'How to draw on Canvas': general/draw_on_canvas.md
               - 'How to load an Image': general/loadimage.md
               - 'How to detect dark mode': general/detect_darkmode.md
+              - 'Modifier': general/modifier.md
+              - 'Project Setup': general/getting_started.md
+              - 'State': general/state.md
           - 'Compose':
               - 'Recompose': compose/recompose.md
           - 'Foundation':
