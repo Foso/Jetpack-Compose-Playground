@@ -740,9 +740,52 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ConstraintLayout
+      </label>
+    
     <a href="./" title="ConstraintLayout" class="md-nav__link md-nav__link--active">
       ConstraintLayout
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-constraintlayout" class="md-nav__link">
+    Simple ConstraintLayout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#align-a-constraintlayout-children" class="md-nav__link">
+    Align a ConstraintLayout children
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-guideline" class="md-nav__link">
+    Create a guideline
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -959,6 +1002,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-constraintlayout" class="md-nav__link">
+    Simple ConstraintLayout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#align-a-constraintlayout-children" class="md-nav__link">
+    Align a ConstraintLayout children
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-guideline" class="md-nav__link">
+    Create a guideline
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -977,7 +1050,7 @@
 <h1 id="constraintlayout">ConstraintLayout<a class="headerlink" href="#constraintlayout" title="Permanent link">&para;</a></h1>
 <p>A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System</p>
 <p>A ConstraintLayout requires a <strong>ConstraintSet</strong> as parameter. In the ConstraintSet all constraints of the layout has to be declared. <strong>children</strong> will set the children of the layout </p>
-<h1 id="simple-constraintlayout">Simple ConstraintLayout<a class="headerlink" href="#simple-constraintlayout" title="Permanent link">&para;</a></h1>
+<h2 id="simple-constraintlayout">Simple ConstraintLayout<a class="headerlink" href="#simple-constraintlayout" title="Permanent link">&para;</a></h2>
 <p><div class="codehilite"><pre><span></span><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">SimpleConstraintLayout</span><span class="p">(){</span>
     <span class="n">ConstraintLayout</span><span class="p">(</span><span class="n">constraintSet</span> <span class="p">=</span> <span class="n">ConstraintSet</span> <span class="p">{})</span> <span class="p">{</span>
         <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Text1&quot;</span><span class="p">)</span>
@@ -989,7 +1062,7 @@ This is a ConstraintLayout that just shows a text composable. The ConstraintSet 
   <img src ="../../images/layout/constraintlayout/simplelayout.png" />
 </p>
 
-<h1 id="align-a-constraintlayout-children">Align a ConstraintLayout children<a class="headerlink" href="#align-a-constraintlayout-children" title="Permanent link">&para;</a></h1>
+<h2 id="align-a-constraintlayout-children">Align a ConstraintLayout children<a class="headerlink" href="#align-a-constraintlayout-children" title="Permanent link">&para;</a></h2>
 <p>Let&rsquo;s align the text composable created above, to the right end of it&rsquo;s a parent layout.</p>
 <p>First we need to create a <strong>LayoutTag</strong> for the Text. The LayoutTag will be added as a modifier. The tag name used inside the LayoutTag, will be used as a reference inside the ConstraintSet.</p>
 <div class="codehilite"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Text1&quot;</span><span class="p">,</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">LayoutTag</span><span class="p">(</span><span class="s">&quot;text1&quot;</span><span class="p">))</span>
@@ -1025,7 +1098,7 @@ This is a ConstraintLayout that just shows a text composable. The ConstraintSet 
 <p align="left">
   <img src ="../../images/layout/constraintlayout/constrainParentend.png" />
 </p></p>
-<h1 id="create-a-guideline">Create a guideline<a class="headerlink" href="#create-a-guideline" title="Permanent link">&para;</a></h1>
+<h2 id="create-a-guideline">Create a guideline<a class="headerlink" href="#create-a-guideline" title="Permanent link">&para;</a></h2>
 <p>A guideline can used as an invisible line to which you can constrain your composables.</p>
 <p>The example below shows how to create a guideline at 50% of the height of the ConstraintLayout and align a Text to it.
 There are similar functions for guidelines from left, right and bottom.</p>

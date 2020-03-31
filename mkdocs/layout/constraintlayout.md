@@ -3,7 +3,7 @@ A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic 
 
 A ConstraintLayout requires a **ConstraintSet** as parameter. In the ConstraintSet all constraints of the layout has to be declared. **children** will set the children of the layout 
 
-# Simple ConstraintLayout
+## Simple ConstraintLayout
 
 ```kotlin
 @Composable fun SimpleConstraintLayout(){
@@ -18,7 +18,7 @@ This is a ConstraintLayout that just shows a text composable. The ConstraintSet 
   <img src ="../../images/layout/constraintlayout/simplelayout.png" />
 </p>
 
-# Align a ConstraintLayout children
+## Align a ConstraintLayout children
 Let's align the text composable created above, to the right end of it's a parent layout.
 
 First we need to create a **LayoutTag** for the Text. The LayoutTag will be added as a modifier. The tag name used inside the LayoutTag, will be used as a reference inside the ConstraintSet.
@@ -63,7 +63,7 @@ Now the right of your text will be constraint to the right of your parent compos
   <img src ="../../images/layout/constraintlayout/constrainParentend.png" />
 </p>
 
-# Create a guideline
+## Create a guideline
 
 A guideline can used as an invisible line to which you can constrain your composables.
 
