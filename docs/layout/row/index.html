@@ -752,9 +752,52 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Row
+      </label>
+    
     <a href="./" title="Row" class="md-nav__link md-nav__link--active">
       Row
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-align-row-childrens-with-equal-width" class="md-nav__link">
+    How to align row childrens with equal width
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-align-row-childrens-in-center" class="md-nav__link">
+    How to align row childrens in center
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-align-row-childrens-at-end" class="md-nav__link">
+    How to align row childrens at end
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -947,6 +990,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-align-row-childrens-with-equal-width" class="md-nav__link">
+    How to align row childrens with equal width
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-align-row-childrens-in-center" class="md-nav__link">
+    How to align row childrens in center
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-align-row-childrens-at-end" class="md-nav__link">
+    How to align row childrens at end
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -976,6 +1049,49 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
+<h2 id="how-to-align-row-childrens-with-equal-width">How to align row childrens with equal width<a class="headerlink" href="#how-to-align-row-childrens-with-equal-width" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="n">@Composable</span>
+<span class="k">fun</span> <span class="nf">RowExample</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Row</span><span class="p">(</span><span class="n">arrangement</span> <span class="p">=</span> <span class="n">Arrangement</span><span class="p">.</span><span class="n">SpaceEvenly</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!2&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Row takes an <strong>Arrangement</strong> parameter. When you set it to <strong>Arrangement.SpaceEvenly</strong>, the children of Row will equal a width.</p>
+<p align="left">
+  <img src ="../../images/layout/row/row_arrangement_space_evenly.png" />
+</p>
+
+<h2 id="how-to-align-row-childrens-in-center">How to align row childrens in center<a class="headerlink" href="#how-to-align-row-childrens-in-center" title="Permanent link">&para;</a></h2>
+<p><div class="codehilite"><pre><span></span><span class="n">@Composable</span>
+<span class="k">fun</span> <span class="nf">RowExample</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Row</span><span class="p">(</span><span class="n">arrangement</span> <span class="p">=</span> <span class="n">Arrangement</span><span class="p">.</span><span class="n">Center</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!2&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+Row takes an Arrangement parameter. When you set it to <strong>Arrangement.Center</strong>, the children of Row will aligned in the center of Row.</p>
+<p align="left">
+  <img src ="../../images/layout/row/arrange_center.png" />
+</p>
+
+<h2 id="how-to-align-row-childrens-at-end">How to align row childrens at end<a class="headerlink" href="#how-to-align-row-childrens-at-end" title="Permanent link">&para;</a></h2>
+<p><div class="codehilite"><pre><span></span><span class="n">@Composable</span>
+<span class="k">fun</span> <span class="nf">RowExample</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Row</span><span class="p">(</span><span class="n">arrangement</span> <span class="p">=</span> <span class="n">Arrangement</span><span class="p">.</span><span class="n">End</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!2&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+Row takes an Arrangement parameter. When you set it to <strong>Arrangement.End</strong>, the children of Row will aligned at the end of Row.</p>
+<p align="left">
+  <img src ="../../images/layout/row/arrangement_end.png" />
+</p>
 
 
 
