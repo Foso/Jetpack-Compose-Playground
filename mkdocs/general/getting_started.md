@@ -23,7 +23,7 @@ Below are all compose dependencies that are online avaiable, you don't need to a
 ```groovy
 
 dependencies {
-    def compose_version = "0.1.0-dev06"
+    def compose_version = "0.1.0-dev07"
 
     implementation("androidx.compose:compose-runtime:$compose_version")
     implementation "androidx.ui:ui-android-text:$compose_version"
