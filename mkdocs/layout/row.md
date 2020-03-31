@@ -65,3 +65,4 @@ Row takes an Arrangement parameter. When you set it to **Arrangement.End**, the 
 <p align="left">
   <img src ="../../images/layout/row/arrangement_end.png" />
 </p>
+

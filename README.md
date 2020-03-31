@@ -43,6 +43,7 @@ The [AdapterList](https://foso.github.io/Jetpack-Compose-Playground/foundation/a
 Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
 
 ### Layout
+* [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout/)
 * [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/layout/scaffold/)
 * [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column/)
 * [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row/)
