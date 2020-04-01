@@ -48,10 +48,10 @@ nav:
               - 'HorizontalScroller': foundation/horizontal_scroller.md
               - 'VerticalScroller': foundation/vertical_scroller.md
               - 'Text': foundation/text.md
+              - 'TextField': foundation/textfield.md
           - 'Core':
               - 'LayoutPadding': core/layoutpadding.md
               - 'PressGestureDetector': core/pressgesturedetector.md
-              - 'TextField': core/textfield.md
           - 'Layout':
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md

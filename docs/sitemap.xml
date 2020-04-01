@@ -106,17 +106,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/textfield/</loc>
+     <lastmod>2020-04-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/core/layoutpadding/</loc>
      <lastmod>2020-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/core/pressgesturedetector/</loc>
-     <lastmod>2020-04-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/core/textfield/</loc>
      <lastmod>2020-04-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
