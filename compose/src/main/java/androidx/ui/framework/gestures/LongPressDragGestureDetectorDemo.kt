@@ -18,11 +18,18 @@ package androidx.ui.framework.demos.gestures
 
 import androidx.compose.Composable
 import androidx.compose.state
+import androidx.ui.core.Alignment
+import androidx.ui.core.DensityAmbient
+import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.LongPressDragGestureDetector
 import androidx.ui.core.gesture.LongPressDragObserver
+import androidx.ui.foundation.Box
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.layout.offset
+import androidx.ui.layout.preferredSize
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
-import androidx.ui.unit.px
 
 /**
  * Simple demo that shows off TouchSlopDragGestureDetector.
@@ -30,8 +37,7 @@ import androidx.ui.unit.px
 @Composable
 fun LongPressDragGestureDetectorDemo() {
 
-    val xOffset = state { 0.px }
-    val yOffset = state { 0.px }
+    val offset = state { PxPosition.Origin }
     val color = state { Grey }
 
     val longPressDragObserver =
@@ -47,8 +53,7 @@ fun LongPressDragGestureDetectorDemo() {
             }
 
             override fun onDrag(dragDistance: PxPosition): PxPosition {
-                xOffset.value += dragDistance.x
-                yOffset.value += dragDistance.y
+                offset.value += dragDistance
                 return dragDistance
             }
 
@@ -57,7 +62,15 @@ fun LongPressDragGestureDetectorDemo() {
             }
         }
 
-    LongPressDragGestureDetector(longPressDragObserver) {
-        DrawingBox(xOffset.value, yOffset.value, 96.dp, 96.dp, color.value)
-    }
+    val (offsetX, offsetY) =
+        with(DensityAmbient.current) { offset.value.x.toDp() to offset.value.y.toDp() }
+
+    Box(
+        Modifier.offset(offsetX, offsetY)
+            .fillMaxSize()
+            .wrapContentSize(Alignment.Center)
+            .plus(LongPressDragGestureDetector(longPressDragObserver))
+            .preferredSize(96.dp),
+        backgroundColor = color.value
+    )
 }

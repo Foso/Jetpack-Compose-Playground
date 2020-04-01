@@ -18,15 +18,16 @@ package androidx.ui.text.demos
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
 import androidx.ui.core.selection.Selection
 import androidx.ui.core.selection.SelectionContainer
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutHeight
-import androidx.ui.layout.LayoutWidth
 import androidx.ui.layout.Row
+import androidx.ui.layout.fillMaxHeight
+import androidx.ui.layout.fillMaxWidth
 import androidx.ui.text.AnnotatedString
 import androidx.ui.text.LocaleList
 import androidx.ui.text.SpanStyle
@@ -77,17 +78,17 @@ fun TextDemoSelection() {
                     )
                 )
                 append(displayTextHindi)
-                popStyle()
+                pop()
 
                 append(text = "$arabicSentence")
 
                 pushStyle(SpanStyle(localeList = LocaleList("zh-CN")))
                 append("\n先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。")
-                popStyle()
+                pop()
 
                 pushStyle(SpanStyle(localeList = LocaleList("ja-JP")))
                 append("\nまず、現在天下が魏・呉・蜀に分れており、そのうち蜀は疲弊していることを指摘する。")
-                popStyle()
+                pop()
             }
         )
     }
@@ -134,9 +135,9 @@ fun TextDemoSelection2DArrayVertical() {
     SelectionContainer(
         selection = selection.value,
         onSelectionChange = { selection.value = it }) {
-        Column(LayoutHeight.Fill) {
+        Column(Modifier.fillMaxHeight()) {
             for (i in 0..2) {
-                Row(LayoutWidth.Fill) {
+                Row(Modifier.fillMaxWidth()) {
                     for (j in 0..2) {
                         Text(
                             text = text,

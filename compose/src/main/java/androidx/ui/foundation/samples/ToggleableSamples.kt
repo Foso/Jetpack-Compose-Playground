@@ -19,7 +19,7 @@ package androidx.ui.foundation.samples
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.selection.Toggleable
 import androidx.ui.foundation.selection.ToggleableState
 import androidx.ui.foundation.selection.TriStateToggleable
@@ -39,8 +39,8 @@ fun ToggleableSample() {
 fun TriStateToggleableSample() {
     var checked by state { ToggleableState.Indeterminate }
     TriStateToggleable(
-        value = checked,
-        onToggle = {
+        state = checked,
+        onClick = {
             checked =
                 if (checked == ToggleableState.On) {
                     ToggleableState.Off

@@ -18,7 +18,7 @@ package androidx.ui.material.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.material.Card
 
 

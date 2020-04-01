@@ -32,6 +32,7 @@ import kotlin.reflect.full.memberProperties
 inline operator fun PreferenceGroup.plusAssign(preference: Preference) {
     addPreference(preference)
 }
+
 /**
  * Shell [AppCompatActivity] around [SettingsFragment], as we need a FragmentActivity subclass
  * to host the [SettingsFragment].
@@ -59,7 +60,7 @@ class DemoSettingsActivity : AppCompatActivity() {
                 title = "Shuffle all colors"
                 onPreferenceClickListener = Preference.OnPreferenceClickListener {
                     generateRandomPalette().saveColors(context)
-                    activity?.finish()
+                    activity!!.finish()
                     true
                 }
             }

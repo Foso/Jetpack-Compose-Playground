@@ -2,7 +2,7 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.Column
 import androidx.ui.material.MaterialTheme
@@ -18,7 +18,7 @@ fun VerticalScrollerExample() {
         //Only one child is allowed in a VerticalScroller
         Column {
             for (i in 0..100) {
-                Text(text = "$i Hello World!", style =(MaterialTheme.typography()).body1)
+                Text(text = "$i Hello World!", style =(MaterialTheme.typography).body1)
             }
         }
     }

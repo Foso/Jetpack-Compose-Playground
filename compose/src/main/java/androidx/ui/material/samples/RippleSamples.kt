@@ -18,16 +18,15 @@ package androidx.ui.material.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
 import androidx.ui.foundation.Clickable
-import androidx.ui.material.ripple.Ripple
+import androidx.ui.foundation.Text
+import androidx.ui.material.ripple.ripple
 
 
 @Composable
 fun RippleSample() {
-    Ripple(bounded = true) {
-        Clickable(onClick = { /** do something */ }) {
-            Text(text = "Clickable text")
-        }
+    Clickable(onClick = { /** do something */ }, modifier = Modifier.ripple()) {
+        Text(text = "Clickable text")
     }
 }

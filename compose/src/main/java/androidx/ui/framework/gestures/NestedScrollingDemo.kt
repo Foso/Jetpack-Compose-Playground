@@ -23,20 +23,20 @@ import androidx.ui.core.DrawModifier
 import androidx.ui.core.Layout
 import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.DoubleTapGestureDetector
+import androidx.ui.core.gesture.DragGestureDetector
 import androidx.ui.core.gesture.DragObserver
 import androidx.ui.core.gesture.LongPressGestureDetector
 import androidx.ui.core.gesture.PressIndicatorGestureDetector
-import androidx.ui.core.gesture.PressReleasedGestureDetector
-import androidx.ui.core.gesture.TouchSlopDragGestureDetector
+import androidx.ui.core.gesture.TapGestureDetector
 import androidx.ui.foundation.Border
 import androidx.ui.foundation.Box
-import androidx.ui.foundation.DrawBackground
-import androidx.ui.foundation.DrawBorder
+import androidx.ui.foundation.drawBackground
+import androidx.ui.foundation.drawBorder
 import androidx.ui.graphics.Canvas
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutHeight
-import androidx.ui.layout.LayoutWidth
+import androidx.ui.layout.fillMaxWidth
+import androidx.ui.layout.preferredHeight
 import androidx.ui.unit.Density
 import androidx.ui.unit.Dp
 import androidx.ui.unit.IntPx
@@ -56,7 +56,7 @@ fun NestedScrollingDemo() {
     // Outer composable that scrollsAll mea
     Draggable {
         RepeatingList(repetitions = 3) {
-            Box(LayoutHeight(398.dp), padding = 72.dp) {
+            Box(Modifier.preferredHeight(398.dp), padding = 72.dp) {
                 // Inner composable that scrolls
                 Draggable {
                     RepeatingList(repetitions = 5) {
@@ -103,22 +103,20 @@ private fun Draggable(children: @Composable() () -> Unit) {
         }
     }
 
-    TouchSlopDragGestureDetector(dragObserver, canDrag) {
-        Layout(
-            children = children,
-            modifier = ClipModifier,
-            measureBlock = { measurables, constraints, _ ->
-                val placeable =
-                    measurables.first()
-                        .measure(constraints.copy(minHeight = 0.ipx, maxHeight = IntPx.Infinity))
+    Layout(
+        children = children,
+        modifier = DragGestureDetector(dragObserver, canDrag) + ClipModifier,
+        measureBlock = { measurables, constraints, _ ->
+            val placeable =
+                measurables.first()
+                    .measure(constraints.copy(minHeight = 0.ipx, maxHeight = IntPx.Infinity))
 
-                maxOffset.value = constraints.maxHeight.value.px - placeable.height
+            maxOffset.value = constraints.maxHeight.value.px - placeable.height
 
-                layout(constraints.maxWidth, constraints.maxHeight) {
-                    placeable.place(0.ipx, offset.value.round())
-                }
-            })
-    }
+            layout(constraints.maxWidth, constraints.maxHeight) {
+                placeable.place(0.ipx, offset.value.round())
+            }
+        })
 }
 
 val ClipModifier = object : DrawModifier {
@@ -165,20 +163,19 @@ private fun Pressable(
         showPressed.value = false
     }
 
-    PressIndicatorGestureDetector(onPress, onRelease, onRelease) {
-        PressReleasedGestureDetector(onTap, false) {
-            DoubleTapGestureDetector(onDoubleTap) {
-                LongPressGestureDetector(onLongPress) {
-                    val pressOverlay =
-                        if (showPressed.value) DrawBackground(pressedColor) else Modifier.None
-                    Box(
-                        LayoutWidth.Fill + LayoutHeight(height) +
-                                DrawBackground(color = color.value) + pressOverlay
-                    )
-                }
-            }
-        }
-    }
+    val gestureDetectors = PressIndicatorGestureDetector(
+        onPress,
+        onRelease,
+        onRelease
+    ) + TapGestureDetector(onTap) +
+            DoubleTapGestureDetector(onDoubleTap) +
+            LongPressGestureDetector(onLongPress)
+
+    val layout = Modifier.fillMaxWidth().preferredHeight(height)
+
+    val pressOverlay =
+        if (showPressed.value) Modifier.drawBackground(pressedColor) else Modifier.None
+    Box(gestureDetectors.plus(layout).drawBackground(color.value).plus(pressOverlay))
 }
 
 /**
@@ -187,12 +184,12 @@ private fun Pressable(
  */
 @Composable
 private fun RepeatingList(repetitions: Int, row: @Composable() () -> Unit) {
-    Column(DrawBorder(border = Border(2.dp, BorderColor))) {
+    Column(Modifier.drawBorder(border = Border(2.dp, BorderColor))) {
         for (i in 1..repetitions) {
             row()
             if (i != repetitions) {
                 Box(
-                    LayoutWidth.Fill + LayoutHeight(1.dp),
+                    Modifier.fillMaxWidth().preferredHeight(1.dp),
                     backgroundColor = Color(0f, 0f, 0f, .12f)
                 )
             }

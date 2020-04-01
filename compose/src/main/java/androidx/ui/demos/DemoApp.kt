@@ -19,13 +19,20 @@ package androidx.ui.demos
 import androidx.compose.Composable
 import androidx.compose.mutableStateOf
 import androidx.ui.animation.Crossfade
-import androidx.ui.core.Text
-
+import androidx.ui.core.Alignment
+import androidx.ui.core.Modifier
+import androidx.ui.demos.common.ActivityDemo
+import androidx.ui.demos.common.ComposableDemo
+import androidx.ui.demos.common.Demo
+import androidx.ui.demos.common.DemoCategory
+import androidx.ui.demos.common.allLaunchableDemos
 import androidx.ui.foundation.Icon
+import androidx.ui.foundation.Text
+
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutAlign
-import androidx.ui.layout.LayoutHeight
+import androidx.ui.layout.preferredHeight
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.material.IconButton
 import androidx.ui.material.ListItem
 import androidx.ui.material.Scaffold
@@ -34,6 +41,7 @@ import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.material.icons.filled.Search
 import androidx.ui.material.icons.filled.Settings
+import androidx.ui.text.TextFieldValue
 import androidx.ui.unit.dp
 
 @Composable
@@ -54,7 +62,7 @@ fun DemoApp(
         }
     }).takeIf { canNavigateUp }
 
-    var filterText by mutableStateOf("")
+    var filterText by mutableStateOf(TextFieldValue())
 
     Scaffold(topAppBar = {
         DemoAppBar(
@@ -68,7 +76,7 @@ fun DemoApp(
             onEndFiltering = onEndFiltering
         )
     }) {
-        DemoContent(currentDemo, isFiltering, filterText, onNavigateToDemo)
+        DemoContent(currentDemo, isFiltering, filterText.text, onNavigateToDemo)
     }
 }
 
@@ -111,7 +119,8 @@ private fun DisplayDemoCategory(category: DemoCategory, onNavigate: (Demo) -> Un
                 ListItem(
                     text = {
                         Text(
-                            modifier = LayoutHeight(56.dp) + LayoutAlign.Center,
+                            modifier = Modifier.preferredHeight(56.dp)
+                                .wrapContentSize(Alignment.Center),
                             text = demo.title
                         )
                     },
@@ -129,8 +138,8 @@ private fun DemoAppBar(
     title: String,
     navigationIcon: @Composable() (() -> Unit)?,
     isFiltering: Boolean,
-    filterText: String,
-    onFilter: (String) -> Unit,
+    filterText: TextFieldValue,
+    onFilter: (TextFieldValue) -> Unit,
     onStartFiltering: () -> Unit,
     onEndFiltering: () -> Unit,
     launchSettings: () -> Unit

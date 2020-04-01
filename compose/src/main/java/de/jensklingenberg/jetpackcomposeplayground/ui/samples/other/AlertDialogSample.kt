@@ -2,7 +2,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.layout.Column
 import androidx.ui.material.AlertDialog
 import androidx.ui.material.AlertDialogButtonLayout

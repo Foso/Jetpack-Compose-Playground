@@ -19,15 +19,45 @@ package androidx.ui.foundation.samples
 
 import androidx.compose.Composable
 import androidx.compose.remember
+import androidx.ui.core.Modifier
 import androidx.ui.foundation.Image
 import androidx.ui.geometry.Offset
 import androidx.ui.geometry.Rect
-import androidx.ui.graphics.*
+import androidx.ui.graphics.Canvas
+import androidx.ui.graphics.Color
+import androidx.ui.graphics.ColorFilter
+import androidx.ui.graphics.ImageAsset
+import androidx.ui.graphics.Paint
+import androidx.ui.graphics.ScaleFit
 import androidx.ui.graphics.painter.Painter
-import androidx.ui.layout.LayoutSize
+import androidx.ui.layout.preferredSize
+import androidx.ui.res.loadVectorResource
 import androidx.ui.unit.PxSize
 import androidx.ui.unit.dp
 import androidx.ui.unit.px
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
+
+
+@Composable
+fun ImageSample() {
+    val imageAsset = createTestImage()
+    // Lays out and draws an image sized to the dimensions of the ImageAsset
+    Image(asset = imageAsset)
+}
+
+
+@Composable
+fun ImageVectorAssetSample() {
+    val vectorAsset = loadVectorResource(R.drawable.ic_sample_vector)
+    vectorAsset.resource.resource?.let {
+        Image(
+            asset = it,
+            modifier = Modifier.preferredSize(200.dp, 200.dp),
+            scaleFit = ScaleFit.FillMinDimension,
+            colorFilter = ColorFilter.tint(Color.Cyan)
+        )
+    }
+}
 
 
 @Composable
@@ -49,7 +79,7 @@ fun ImagePainterSample() {
         }
     }
 
-    Image(painter = customPainter, modifier = LayoutSize(100.dp, 100.dp))
+    Image(painter = customPainter, modifier = Modifier.preferredSize(100.dp, 100.dp))
 }
 
 /**

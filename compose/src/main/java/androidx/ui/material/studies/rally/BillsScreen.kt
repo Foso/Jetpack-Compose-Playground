@@ -17,7 +17,8 @@
 package androidx.ui.material.studies.rally
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
+
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
@@ -51,12 +52,12 @@ fun BillsBody() {
                 Column(modifier = LayoutGravity.Center) {
                     Text(
                         text = "Due",
-                        style = MaterialTheme.typography().body1,
+                        style = MaterialTheme.typography.body1,
                         modifier = LayoutGravity.Center
                     )
                     Text(
                         text = "$1,810.00",
-                        style = MaterialTheme.typography().h2,
+                        style = MaterialTheme.typography.h2,
                         modifier = LayoutGravity.Center
                     )
                 }

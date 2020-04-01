@@ -18,61 +18,65 @@ package androidx.ui.layout.samples
 
 
 import androidx.compose.Composable
+import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
-import androidx.ui.foundation.ColoredRect
 import androidx.ui.foundation.ContentGravity
+import androidx.ui.foundation.drawBackground
 import androidx.ui.graphics.Color
-import androidx.ui.layout.Center
-import androidx.ui.layout.LayoutAspectRatio
-import androidx.ui.layout.LayoutHeight
-import androidx.ui.layout.LayoutSize
-import androidx.ui.layout.LayoutWidth
+import androidx.ui.layout.Stack
+import androidx.ui.layout.aspectRatio
+import androidx.ui.layout.fillMaxHeight
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.layout.fillMaxWidth
+import androidx.ui.layout.preferredHeight
+import androidx.ui.layout.preferredSize
+import androidx.ui.layout.preferredWidth
 import androidx.ui.unit.dp
 
 
 @Composable
 fun SimpleSizeModifier() {
-    Center {
-        Box(LayoutSize(width = 100.dp, height = 100.dp), backgroundColor = Color.Red)
+    Stack {
+        Box(Modifier.preferredSize(100.dp, 100.dp), backgroundColor = Color.Red)
     }
 }
 
 
 @Composable
 fun SimpleWidthModifier() {
-    Center {
-        Box(LayoutWidth(100.dp) + LayoutAspectRatio(1f), backgroundColor = Color.Magenta)
+    Stack {
+        Box(Modifier.preferredWidth(100.dp).aspectRatio(1f), backgroundColor = Color.Magenta)
     }
 }
 
 
 @Composable
 fun SimpleHeightModifier() {
-    Center {
-        Box(LayoutHeight(100.dp) + LayoutAspectRatio(1f), backgroundColor = Color.Blue)
+    Stack {
+        Box(Modifier.preferredHeight(100.dp).aspectRatio(1f), backgroundColor = Color.Blue)
     }
 }
 
 
 @Composable
 fun SimpleFillWidthModifier() {
-    Box(LayoutWidth.Fill, backgroundColor = Color.Red, gravity = ContentGravity.Center) {
-        ColoredRect(color = Color.Magenta, width = 100.dp, height = 100.dp)
+    Box(Modifier.fillMaxWidth(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
+        Box(Modifier.preferredSize(100.dp).drawBackground(Color.Magenta))
     }
 }
 
 
 @Composable
 fun SimpleFillHeightModifier() {
-    Box(LayoutHeight.Fill, backgroundColor = Color.Red, gravity = ContentGravity.Center) {
-        ColoredRect(color = Color.Magenta, width = 100.dp, height = 100.dp)
+    Box(Modifier.fillMaxHeight(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
+        Box(Modifier.preferredSize(100.dp).drawBackground(Color.Magenta))
     }
 }
 
 
 @Composable
 fun SimpleFillModifier() {
-    Box(LayoutSize.Fill, backgroundColor = Color.Red, gravity = ContentGravity.Center) {
-        ColoredRect(color = Color.Magenta, width = 100.dp, height = 100.dp)
+    Box(Modifier.fillMaxSize(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
+        Box(Modifier.preferredSize(100.dp).drawBackground(Color.Magenta))
     }
 }

@@ -3,7 +3,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 import android.util.Log
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.AdapterList
 import androidx.ui.material.Button
 import androidx.ui.text.TextStyle

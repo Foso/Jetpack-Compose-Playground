@@ -18,15 +18,22 @@ package androidx.ui.framework.demos.gestures
 
 import androidx.compose.Composable
 import androidx.compose.state
+import androidx.ui.core.Alignment
+import androidx.ui.core.DensityAmbient
+import androidx.ui.core.Modifier
+import androidx.ui.core.gesture.DragGestureDetector
 import androidx.ui.core.gesture.DragObserver
-import androidx.ui.core.gesture.PressReleasedGestureDetector
 import androidx.ui.core.gesture.ScaleGestureDetector
 import androidx.ui.core.gesture.ScaleObserver
-import androidx.ui.core.gesture.TouchSlopDragGestureDetector
+import androidx.ui.core.gesture.TapGestureDetector
+import androidx.ui.foundation.Box
 import androidx.ui.graphics.Color
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.layout.offset
+import androidx.ui.layout.preferredSize
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
-import androidx.ui.unit.px
 
 /**
  * Simple demo that shows off how DragGestureDetector and ScaleGestureDetector automatically
@@ -34,23 +41,19 @@ import androidx.ui.unit.px
  */
 @Composable
 fun DragScaleGestureDetectorDemo() {
-    val width = state { 200.dp }
-    val height = state { 200.dp }
-    val xOffset = state { 0.px }
-    val yOffset = state { 0.px }
+    val size = state { 200.dp }
+    val offset = state { PxPosition.Origin }
     val dragInScale = state { false }
 
     val scaleObserver = object : ScaleObserver {
         override fun onScale(scaleFactor: Float) {
-            width.value *= scaleFactor
-            height.value *= scaleFactor
+            size.value *= scaleFactor
         }
     }
 
     val dragObserver = object : DragObserver {
         override fun onDrag(dragDistance: PxPosition): PxPosition {
-            xOffset.value += dragDistance.x
-            yOffset.value += dragDistance.y
+            offset.value += dragDistance
             return dragDistance
         }
     }
@@ -59,33 +62,26 @@ fun DragScaleGestureDetectorDemo() {
         dragInScale.value = !dragInScale.value
     }
 
-    if (dragInScale.value) {
-        ScaleGestureDetector(scaleObserver) {
-            TouchSlopDragGestureDetector(dragObserver = dragObserver) {
-                PressReleasedGestureDetector(onRelease) {
-                    DrawingBox(
-                        xOffset.value,
-                        yOffset.value,
-                        width.value,
-                        height.value,
-                        Color(0xFFf44336.toInt())
-                    )
-                }
-            }
+    val gestures =
+        if (dragInScale.value) {
+            ScaleGestureDetector(scaleObserver) +
+                    DragGestureDetector(dragObserver) +
+                    TapGestureDetector(onRelease)
+        } else {
+            DragGestureDetector(dragObserver) +
+                    ScaleGestureDetector(scaleObserver) +
+                    TapGestureDetector(onRelease)
         }
-    } else {
-        TouchSlopDragGestureDetector(dragObserver = dragObserver) {
-            ScaleGestureDetector(scaleObserver) {
-                PressReleasedGestureDetector(onRelease) {
-                    DrawingBox(
-                        xOffset.value,
-                        yOffset.value,
-                        width.value,
-                        height.value,
-                        Color(0xFF2196f3.toInt())
-                    )
-                }
-            }
-        }
-    }
+
+    val (offsetX, offsetY) =
+        with(DensityAmbient.current) { offset.value.x.toDp() to offset.value.y.toDp() }
+
+    Box(
+        Modifier.offset(offsetX, offsetY)
+            .fillMaxSize()
+            .wrapContentSize(Alignment.Center)
+            .plus(gestures)
+            .preferredSize(size.value),
+        backgroundColor = Color(0xFFf44336.toInt())
+    )
 }

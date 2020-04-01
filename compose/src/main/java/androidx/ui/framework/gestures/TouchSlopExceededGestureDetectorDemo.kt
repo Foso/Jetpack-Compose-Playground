@@ -18,11 +18,16 @@ package androidx.ui.framework.demos.gestures
 
 import androidx.compose.Composable
 import androidx.compose.state
+import androidx.ui.core.Alignment
 import androidx.ui.core.Direction
+import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.TouchSlopExceededGestureDetector
+import androidx.ui.foundation.Box
 import androidx.ui.graphics.Color
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.layout.preferredSize
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.dp
-import androidx.ui.unit.px
 
 /**
  * Simple demo that shows off TouchSlopExceededGestureDetector.
@@ -33,8 +38,6 @@ fun TouchSlopExceededGestureDetectorDemo() {
     val verticalColor = Color(0xfff44336)
     val horizontalColor = Color(0xff2196f3)
 
-    val xOffset = state { 0.px }
-    val yOffset = state { 0.px }
     val orientationVertical = state { true }
 
     // This would be more efficient if onTouchSlopExceeded were memoized because it's
@@ -73,7 +76,11 @@ fun TouchSlopExceededGestureDetectorDemo() {
             horizontalColor
         }
 
-    TouchSlopExceededGestureDetector(onTouchSlopExceeded, canDrag) {
-        DrawingBox(xOffset.value, yOffset.value, 96.dp, 96.dp, color)
-    }
+    Box(
+        Modifier.fillMaxSize()
+            .wrapContentSize(Alignment.Center)
+            .plus(TouchSlopExceededGestureDetector(onTouchSlopExceeded, canDrag))
+            .preferredSize(96.dp),
+        backgroundColor = color
+    )
 }

@@ -6,7 +6,7 @@ import androidx.compose.Model
 import androidx.compose.remember
 import androidx.ui.animation.animate
 import androidx.ui.core.DrawClipToBounds
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.core.drawLayer
 import androidx.ui.foundation.Border
 import androidx.ui.foundation.Box

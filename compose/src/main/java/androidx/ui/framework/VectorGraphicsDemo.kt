@@ -17,8 +17,9 @@
 package androidx.ui.framework.demos
 
 import androidx.compose.Composable
+import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
+import androidx.ui.foundation.Image
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.HorizontalGradient
 import androidx.ui.graphics.RadialGradient
@@ -26,15 +27,16 @@ import androidx.ui.graphics.ScaleFit
 import androidx.ui.graphics.SolidColor
 import androidx.ui.graphics.TileMode
 import androidx.ui.graphics.VerticalGradient
+import androidx.ui.graphics.painter.Painter
 import androidx.ui.graphics.vector.Group
 import androidx.ui.graphics.vector.Path
 import androidx.ui.graphics.vector.PathBuilder
 import androidx.ui.graphics.vector.PathData
+import androidx.ui.graphics.vector.VectorPainter
 import androidx.ui.graphics.vector.VectorScope
-import androidx.ui.graphics.vector.drawVector
-import androidx.ui.layout.Center
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutSize
+import androidx.ui.layout.preferredSize
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.res.loadVectorResource
 import androidx.ui.unit.Dp
 import androidx.ui.unit.Px
@@ -43,29 +45,30 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
 @Composable
 fun VectorGraphicsDemo() {
-    Column {
+    Column(modifier = Modifier.wrapContentSize(Alignment.Center)) {
         val vectorAsset = loadVectorResource(R.drawable.ic_crane)
         vectorAsset.resource.resource?.let {
-            Center {
-                Box(LayoutSize(200.dp, 100.dp) + drawVector(it))
-            }
+            Image(
+                asset = it,
+                modifier = Modifier.preferredSize(200.dp, 200.dp),
+                scaleFit = ScaleFit.FillMinDimension
+            )
         }
 
-        Center {
-            val width = 120.dp
-            val height = 120.dp
-            Box(LayoutSize(width, height) + vectorShape(width, height))
-        }
+        Image(
+            painter = vectorShape(120.dp, 120.dp),
+            modifier = Modifier.preferredSize(200.dp, 150.dp)
+        )
     }
 }
 
 @Composable
-private fun vectorShape(width: Dp, height: Dp): Modifier = drawVector(
-    name = "vectorShape",
-    defaultWidth = width,
-    defaultHeight = height,
-    scaleFit = ScaleFit.FillMaxDimension
-) { viewportWidth, viewportHeight ->
+private fun vectorShape(width: Dp, height: Dp): Painter =
+    VectorPainter(
+        name = "vectorShape",
+        defaultWidth = width,
+        defaultHeight = height
+    ) { viewportWidth, viewportHeight ->
     Group(
         scaleX = 0.75f,
         scaleY = 0.75f,

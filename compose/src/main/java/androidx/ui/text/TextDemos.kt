@@ -16,11 +16,10 @@
 
 package androidx.ui.text.demos
 
-import androidx.ui.demos.ComposableDemo
-import androidx.ui.demos.DemoCategory
+import androidx.ui.demos.common.ComposableDemo
+import androidx.ui.demos.common.DemoCategory
 
-
-val TextDemos = DemoCategory("Text Demos", listOf(
+val TextDemos = DemoCategory("Text", listOf(
     ComposableDemo("Static text") { TextDemo() },
     ComposableDemo("Text selection") { TextSelectionDemo() },
     ComposableDemo("Text selection sample") { TextSelectionSample() },

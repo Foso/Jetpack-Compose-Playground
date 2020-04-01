@@ -18,11 +18,14 @@ package androidx.ui.framework.demos.gestures
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.ui.core.gesture.PressReleasedGestureDetector
+import androidx.ui.core.Alignment
+import androidx.ui.core.Modifier
+import androidx.ui.core.gesture.TapGestureDetector
 import androidx.ui.foundation.Border
 import androidx.ui.foundation.Box
-import androidx.ui.layout.LayoutAlign
-import androidx.ui.layout.LayoutSize
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.layout.preferredSize
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.dp
 
 /**
@@ -32,15 +35,16 @@ import androidx.ui.unit.dp
 fun PressReleasedGestureDetectorDemo() {
     val color = state { Colors.random() }
 
-    val onRelease = {
+    val onTap = {
         color.value = color.value.anotherRandomColor()
     }
 
-    PressReleasedGestureDetector(onRelease) {
-        Box(
-            LayoutAlign.Center + LayoutSize(192.dp),
-            backgroundColor = color.value,
-            border = Border(2.dp, BorderColor)
-        )
-    }
+    Box(
+        Modifier.fillMaxSize()
+            .wrapContentSize(Alignment.Center)
+            .plus(TapGestureDetector(onTap))
+            .preferredSize(192.dp),
+        backgroundColor = color.value,
+        border = Border(2.dp, BorderColor)
+    )
 }

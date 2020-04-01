@@ -22,7 +22,7 @@ import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.animation.ColorPropKey
 import androidx.ui.animation.Transition
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.selection.MutuallyExclusiveSetItem
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.vector.VectorAsset
@@ -32,7 +32,7 @@ import androidx.ui.layout.LayoutWidth
 import androidx.ui.layout.Row
 import androidx.ui.layout.Spacer
 import androidx.ui.material.MaterialTheme
-import androidx.ui.material.ripple.Ripple
+
 import androidx.ui.material.Surface
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.dp
@@ -67,7 +67,7 @@ private fun RallyTab(
 ) {
     TabTransition(selected = selected) { tabTintColor ->
         Row(LayoutPadding(16.dp) + LayoutHeight(TabHeight)) {
-            Ripple(bounded = false) {
+
                 MutuallyExclusiveSetItem(selected = selected, onClick = onSelected) {
                     Icon(vectorImage = icon, tintColor = tabTintColor)
                     if (selected) {
@@ -75,7 +75,7 @@ private fun RallyTab(
                         Text(text, style = TextStyle(color = tabTintColor))
                     }
                 }
-            }
+
         }
     }
 }
@@ -85,7 +85,7 @@ private fun TabTransition(
     selected: Boolean,
     children: @Composable() (color: Color) -> Unit
 ) {
-    val color = MaterialTheme.colors().onSurface
+    val color = MaterialTheme.colors.onSurface
     val transitionDefinition = remember {
         transitionDefinition {
             state(true) {

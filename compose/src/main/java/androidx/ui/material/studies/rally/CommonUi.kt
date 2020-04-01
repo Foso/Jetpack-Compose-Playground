@@ -18,8 +18,9 @@ package androidx.ui.material.studies.rally
 
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
-import androidx.ui.core.Text
+
 import androidx.ui.foundation.ColoredRect
+import androidx.ui.foundation.Text
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Arrangement
 import androidx.ui.layout.Column
@@ -72,7 +73,7 @@ private fun BaseRow(
     negative: Boolean
 ) {
     Row(LayoutHeight(68.dp)) {
-        val typography = MaterialTheme.typography()
+        val typography = MaterialTheme.typography
         AccountIndicator(color = color, modifier = LayoutGravity.Center)
         Spacer(LayoutWidth(8.dp))
         Column(LayoutGravity.Center) {
@@ -116,7 +117,7 @@ private fun AccountIndicator(color: Color, modifier: Modifier = Modifier.None) {
 
 @Composable
 fun RallyDivider(modifier: Modifier = Modifier.None) {
-    Divider(color = MaterialTheme.colors().background, height = 1.dp, modifier = modifier)
+    Divider(color = MaterialTheme.colors.background, height = 1.dp, modifier = modifier)
 }
 
 fun formatAmount(amount: Float): String {

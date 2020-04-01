@@ -18,7 +18,7 @@ package androidx.ui.material.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.Snackbar
 import androidx.ui.material.TextButton
@@ -31,7 +31,7 @@ fun SimpleSnackbar() {
         text = { Text("Action has been done") },
         action = {
             TextButton(
-                contentColor = snackbarPrimaryColorFor(MaterialTheme.colors()),
+                contentColor = snackbarPrimaryColorFor(MaterialTheme.colors),
                 onClick = { /* perform undo */ }
             ) {
                 Text("UNDO")

@@ -20,7 +20,7 @@ package androidx.ui.foundation.samples
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.foundation.Clickable
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 
 
 @Composable

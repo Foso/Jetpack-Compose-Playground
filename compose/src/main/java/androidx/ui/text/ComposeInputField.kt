@@ -18,12 +18,14 @@ package androidx.ui.text.demos
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.ui.core.TextField
+import androidx.ui.core.Modifier
+import androidx.ui.foundation.TextField
+import androidx.ui.foundation.VerticalScroller
 import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
 import androidx.ui.layout.Column
-import androidx.ui.foundation.VerticalScroller
-import androidx.ui.layout.LayoutHeight
+import androidx.ui.layout.fillMaxHeight
+import androidx.ui.text.TextFieldValue
 import androidx.ui.text.TextStyle
 
 private val KEYBOARD_TYPES = listOf(
@@ -50,7 +52,7 @@ private val IME_ACTIONS = listOf(
 @Composable
 fun InputFieldDemo() {
     VerticalScroller {
-        Column(LayoutHeight.Fill) {
+        Column(Modifier.fillMaxHeight()) {
             TagLine(tag = "simple editing")
             EditLine()
             TagLine(tag = "simple editing2")
@@ -74,7 +76,7 @@ private fun EditLine(
     keyboardType: KeyboardType = KeyboardType.Text,
     imeAction: ImeAction = ImeAction.Unspecified
 ) {
-    val state = state { "" }
+    val state = state { TextFieldValue() }
     TextField(
         value = state.value,
         keyboardType = keyboardType,

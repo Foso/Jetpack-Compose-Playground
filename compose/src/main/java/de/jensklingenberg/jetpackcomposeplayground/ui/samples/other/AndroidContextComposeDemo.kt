@@ -4,7 +4,7 @@ import androidx.compose.Composable
 import androidx.compose.state
 
 import androidx.ui.core.ContextAmbient
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.Switch
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R

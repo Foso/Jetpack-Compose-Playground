@@ -3,7 +3,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 import androidx.compose.Composable
 import androidx.compose.Model
 
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.layout.Center
 import androidx.ui.layout.Column
 import androidx.ui.material.Button

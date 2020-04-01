@@ -18,12 +18,13 @@ package androidx.ui.material.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
 import androidx.ui.foundation.Icon
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.shape.corner.CircleShape
 import androidx.ui.layout.Spacer
 import androidx.ui.material.BottomAppBar
-import androidx.ui.material.FloatingActionButton
+import androidx.ui.material.ExtendedFloatingActionButton
 import androidx.ui.material.IconButton
 import androidx.ui.material.Scaffold
 import androidx.ui.material.TopAppBar
@@ -61,7 +62,7 @@ fun SimpleBottomAppBar() {
             Icon(Icons.Filled.Menu)
         }
         // The actions should be at the end of the BottomAppBar
-        Spacer(LayoutWeight(1f))
+        Spacer(Modifier.weight(1f, true))
         IconButton(onClick = { /* doSomething() */ }) {
             Icon(Icons.Filled.Favorite)
         }
@@ -88,9 +89,11 @@ fun SimpleBottomAppBarCutoutWithScaffold() {
             }
         },
         floatingActionButton = {
-            FloatingActionButton(shape = fabShape, onClick = { /* doSomething() */ }) {
-                Text("Click me!")
-            }
+            ExtendedFloatingActionButton(
+                text = { Text("Click me!") },
+                shape = fabShape,
+                onClick = { /* doSomething() */ }
+            )
         },
         floatingActionButtonPosition = Scaffold.FabPosition.EndDocked
     ) {

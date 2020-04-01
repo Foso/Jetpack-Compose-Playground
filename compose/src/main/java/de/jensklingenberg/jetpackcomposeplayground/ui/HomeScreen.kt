@@ -20,9 +20,9 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 import DrawLayerDemo
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.ui.core.Text
-import androidx.ui.demos.ComposableDemo
-import androidx.ui.demos.DemoCategory
+import androidx.ui.foundation.Text
+import androidx.ui.demos.common.ComposableDemo
+import androidx.ui.demos.common.DemoCategory
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.*
 import androidx.ui.material.Button
@@ -38,7 +38,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.Sw
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AndroidContextComposeDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.CounterModelDemo
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.PressGestureDetectorDemo
+
 
 val MyHomeScreen = DemoCategory("My example Demos", listOf(
     ComposableDemo("My examples") { HomeScreen() }
@@ -138,7 +138,7 @@ fun myOverView(fn:(ScreenState)->Unit){
 }
 
 enum class ScreenState {
-    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,PressGestureDetectorDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo,DrawlayerDemo
+    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo,DrawlayerDemo
 }
 
 @Composable
@@ -150,7 +150,6 @@ fun ScreenState.body() = when (this) {
     ScreenState.HorizontalScrollerExample -> HorizontalScrollerExample()
     ScreenState.RowExample -> RowExample()
     ScreenState.PaddingDemo -> PaddingDemo()
-    ScreenState.PressGestureDetectorDemo -> PressGestureDetectorDemo()
 
     ScreenState.SwitchDemo -> SwitchDemo()
     ScreenState.CheckBoxDemo -> CheckBoxDemo()

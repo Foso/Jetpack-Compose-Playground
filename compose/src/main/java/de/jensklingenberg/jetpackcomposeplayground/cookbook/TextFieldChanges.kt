@@ -2,8 +2,8 @@ package de.jensklingenberg.jetpackcomposeplayground.cookbook
 
 import androidx.compose.Composable
 import androidx.compose.state
-import androidx.ui.core.Text
-import androidx.ui.core.TextField
+import androidx.ui.foundation.Text
+import androidx.ui.foundation.TextField
 import androidx.ui.layout.Column
 
 @Composable

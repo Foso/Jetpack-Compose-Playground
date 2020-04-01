@@ -18,22 +18,17 @@ package androidx.ui.foundation.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.foundation.ColoredRect
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.SolidColor
-import androidx.ui.unit.dp
+import androidx.compose.state
+import androidx.ui.foundation.TextField
+
+import androidx.ui.text.TextFieldValue
 
 
 @Composable
-fun ColoredRectColorSample() {
-    ColoredRect(Color.Cyan, width = 20.dp, height = 20.dp)
-}
-
-@Composable
-fun ColoredRectBrushSample() {
-    ColoredRect(
-        brush = SolidColor(Color.Magenta),
-        width = 20.dp,
-        height = 20.dp
+fun TextFieldSample() {
+    val state = state { TextFieldValue() }
+    TextField(
+        value = state.value,
+        onValueChange = { state.value = it }
     )
 }

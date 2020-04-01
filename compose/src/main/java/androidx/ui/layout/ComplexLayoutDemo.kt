@@ -18,18 +18,19 @@ package androidx.ui.layout.demos
 
 import androidx.compose.Composable
 import androidx.ui.core.FirstBaseline
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
+import androidx.ui.foundation.Text
+import androidx.ui.foundation.drawBackground
 import androidx.ui.graphics.Color
 import androidx.ui.layout.AlignmentLineOffset
 import androidx.ui.layout.Stack
-import androidx.ui.foundation.DrawBackground
 import androidx.ui.unit.dp
 
 @Composable
 private fun AlignmentLineOffsetUsage() {
     AlignmentLineOffset(
         FirstBaseline,
-        modifier = DrawBackground(Color.Gray),
+        modifier = Modifier.drawBackground(Color.Gray),
         before = 20.dp,
         after = 40.dp
     ) {

@@ -16,13 +16,12 @@
 
 package androidx.ui.layout.demos
 
-import androidx.ui.demos.ComposableDemo
-import androidx.ui.demos.DemoCategory
-
+import androidx.ui.demos.common.ComposableDemo
+import androidx.ui.demos.common.DemoCategory
 import androidx.ui.layout.samples.SimpleFlowRow
 import androidx.ui.layout.samples.TableWithDecorations
 
-val LayoutDemos = DemoCategory("Layout Demos", listOf(
+val LayoutDemos = DemoCategory("Layout", listOf(
     ComposableDemo("Complex layout") { ComplexLayoutDemo() },
     ComposableDemo("ConstraintLayout") { ConstraintLayoutDemo() },
     ComposableDemo("Flow layout") { SimpleFlowRow() },

@@ -18,19 +18,21 @@ package androidx.ui.material.samples
 
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
-import androidx.ui.foundation.ColoredRect
+import androidx.ui.core.Modifier
+import androidx.ui.foundation.Box
+import androidx.ui.foundation.Text
+import androidx.ui.foundation.drawBackground
 import androidx.ui.foundation.isSystemInDarkTheme
 import androidx.ui.graphics.Color
-import androidx.ui.layout.LayoutAspectRatio
-import androidx.ui.material.FloatingActionButton
+import androidx.ui.layout.aspectRatio
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.material.ExtendedFloatingActionButton
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.Typography
 import androidx.ui.material.darkColorPalette
 import androidx.ui.material.lightColorPalette
 import androidx.ui.text.TextStyle
 import androidx.ui.text.font.FontFamily
-import androidx.ui.text.font.fontFamily
 import androidx.ui.text.font.FontWeight
 import androidx.ui.unit.sp
 
@@ -57,9 +59,9 @@ fun MaterialThemeSample() {
     )
 
     MaterialTheme(colors = colors, typography = typography) {
-        val currentTheme = if (MaterialTheme.colors().isLight) "light" else "dark"
-        FloatingActionButton(
-            "FAB with text style and color from $currentTheme theme",
+        val currentTheme = if (MaterialTheme.colors.isLight) "light" else "dark"
+        ExtendedFloatingActionButton(
+            text = { Text("FAB with text style and color from $currentTheme theme") },
             onClick = {}
         )
     }
@@ -68,13 +70,13 @@ fun MaterialThemeSample() {
 
 @Composable
 fun ThemeColorSample() {
-    val colors = MaterialTheme.colors()
-    ColoredRect(color = colors.primary, modifier = LayoutAspectRatio(1f))
+    val colors = MaterialTheme.colors
+    Box(Modifier.aspectRatio(1f).fillMaxSize().drawBackground(colors.primary))
 }
 
 
 @Composable
 fun ThemeTextStyleSample() {
-    val typography = MaterialTheme.typography()
+    val typography = MaterialTheme.typography
     Text(text = "H4 styled text", style = typography.h4)
 }

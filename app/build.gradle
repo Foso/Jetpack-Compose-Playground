@@ -47,12 +47,12 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion "0.1.0-dev07"
+        kotlinCompilerExtensionVersion "0.1.0-dev08"
     }
 }
 
 dependencies {
-    def compose_version = "0.1.0-dev07"
+    def compose_version = "0.1.0-dev08"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.ui:ui-core:$compose_version"

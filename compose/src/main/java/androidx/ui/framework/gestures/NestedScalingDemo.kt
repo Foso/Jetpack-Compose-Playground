@@ -18,12 +18,14 @@ package androidx.ui.framework.demos.gestures
 
 import androidx.compose.Composable
 import androidx.compose.state
+import androidx.ui.core.Alignment
 import androidx.ui.core.Layout
+import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.RawScaleGestureDetector
 import androidx.ui.core.gesture.RawScaleObserver
-import androidx.ui.foundation.DrawBackground
+import androidx.ui.foundation.drawBackground
 import androidx.ui.graphics.Color
-import androidx.ui.layout.LayoutAlign
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.IntPx
 
 /**
@@ -70,31 +72,31 @@ private fun Scalable(
         }
     }
 
-    RawScaleGestureDetector(outerScaleObserver) {
-        Layout(
-            children = children,
-            modifier = LayoutAlign.Center + DrawBackground(color = color),
-            measureBlock = { measurables, constraints, _ ->
-                val newConstraints =
-                    constraints.copy(
-                        maxWidth = constraints.maxWidth * currentPercent.value,
-                        maxHeight = constraints.maxHeight * currentPercent.value,
-                        minWidth = IntPx.Zero,
-                        minHeight = IntPx.Zero
-                    )
+    Layout(
+        children = children,
+        modifier = Modifier.wrapContentSize(Alignment.Center)
+            .plus(RawScaleGestureDetector(outerScaleObserver))
+            .drawBackground(color = color),
+        measureBlock = { measurables, constraints, _ ->
+            val newConstraints =
+                constraints.copy(
+                    maxWidth = constraints.maxWidth * currentPercent.value,
+                    maxHeight = constraints.maxHeight * currentPercent.value,
+                    minWidth = IntPx.Zero,
+                    minHeight = IntPx.Zero
+                )
 
-                val placeable = if (measurables.isNotEmpty()) {
-                    measurables.first().measure(newConstraints)
-                } else {
-                    null
-                }
+            val placeable = if (measurables.isNotEmpty()) {
+                measurables.first().measure(newConstraints)
+            } else {
+                null
+            }
 
-                layout(newConstraints.maxWidth, newConstraints.maxHeight) {
-                    placeable?.place(
-                        (newConstraints.maxWidth - placeable.width) / 2,
-                        (newConstraints.maxHeight - placeable.height) / 2
-                    )
-                }
-            })
-    }
+            layout(newConstraints.maxWidth, newConstraints.maxHeight) {
+                placeable?.place(
+                    (newConstraints.maxWidth - placeable.width) / 2,
+                    (newConstraints.maxHeight - placeable.height) / 2
+                )
+            }
+        })
 }

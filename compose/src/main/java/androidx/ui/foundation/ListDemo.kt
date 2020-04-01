@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package androidx.ui.foundation
+package androidx.ui.foundation.demos
 
 import androidx.compose.Composable
 import androidx.ui.foundation.AdapterList
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.sp
 

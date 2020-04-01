@@ -17,15 +17,16 @@
 package androidx.ui.text.demos
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.geometry.Offset
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Shadow
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutHeight
-import androidx.ui.layout.LayoutWidth
 import androidx.ui.layout.Row
+import androidx.ui.layout.fillMaxHeight
+import androidx.ui.layout.fillMaxWidth
 import androidx.ui.text.AnnotatedString
 import androidx.ui.text.LocaleList
 import androidx.ui.text.SpanStyle
@@ -33,7 +34,6 @@ import androidx.ui.text.TextStyle
 import androidx.ui.text.font.FontFamily
 import androidx.ui.text.font.FontStyle
 import androidx.ui.text.font.FontWeight
-import androidx.ui.text.font.fontFamily
 import androidx.ui.text.samples.BaselineShiftSample
 import androidx.ui.text.samples.FontFamilyCursiveSample
 import androidx.ui.text.samples.FontFamilyMonospaceSample
@@ -128,7 +128,7 @@ fun SecondTagLine(tag: String) {
                 )
             )
             append(tag)
-            popStyle()
+            pop()
         }
     )
 }
@@ -147,7 +147,7 @@ fun TextDemoBasic() {
             )
         )
         append("$displayText   ")
-        popStyle()
+        pop()
 
         pushStyle(
             SpanStyle(
@@ -158,7 +158,7 @@ fun TextDemoBasic() {
             )
         )
         append("$displayText   ")
-        popStyle()
+        pop()
 
         pushStyle(
             SpanStyle(
@@ -169,7 +169,7 @@ fun TextDemoBasic() {
             )
         )
         append(displayText)
-        popStyle()
+        pop()
     })
 }
 
@@ -192,7 +192,7 @@ fun TextDemoLanguage() {
             )
         )
         append("$displayTextChinese   ")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(
@@ -203,7 +203,7 @@ fun TextDemoLanguage() {
             )
         )
         append("$displayTextArabic   ")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(
@@ -214,7 +214,7 @@ fun TextDemoLanguage() {
             )
         )
         append(displayTextHindi)
-        popStyle()
+        pop()
     })
 }
 
@@ -229,7 +229,7 @@ fun TextDemoFontFamily() {
             )
         )
         append("$displayText sans-serif\n")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(
@@ -238,7 +238,7 @@ fun TextDemoFontFamily() {
             )
         )
         append("$displayText serif\n")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(
@@ -247,7 +247,7 @@ fun TextDemoFontFamily() {
             )
         )
         append("$displayText monospace")
-        popStyle()
+        pop()
     })
 }
 
@@ -274,7 +274,7 @@ fun TextDemoLetterSpacing() {
     Text(text = AnnotatedString {
         pushStyle(style = SpanStyle(fontSize = fontSize8))
         append("$displayText   ")
-        popStyle()
+        pop()
         pushStyle(
             style = SpanStyle(
                 fontSize = fontSize8,
@@ -282,7 +282,7 @@ fun TextDemoLetterSpacing() {
             )
         )
         append(displayText)
-        popStyle()
+        pop()
     })
 }
 
@@ -294,7 +294,7 @@ fun TextDemoBaselineShift() {
 @Composable
 fun TextDemoHeight() {
     // This group of text composables show different height.
-    Row(LayoutWidth.Fill) {
+    Row(Modifier.fillMaxWidth()) {
         Text(
             text = "$displayText\n$displayText   ",
             style = TextStyle(fontSize = fontSize8)
@@ -317,7 +317,7 @@ fun TextDemoBackground() {
             )
         )
         append("$displayText   ")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(
@@ -326,7 +326,7 @@ fun TextDemoBackground() {
             )
         )
         append("$displayText   ")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(
@@ -335,7 +335,7 @@ fun TextDemoBackground() {
             )
         )
         append(displayText)
-        popStyle()
+        pop()
     })
 }
 
@@ -348,19 +348,19 @@ fun TextDemoLocale() {
             style = SpanStyle(fontSize = fontSize8, localeList = LocaleList("ja-JP"))
         )
         append("$text   ")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(fontSize = fontSize8, localeList = LocaleList("zh-CN"))
         )
         append("$text   ")
-        popStyle()
+        pop()
 
         pushStyle(
             style = SpanStyle(fontSize = fontSize8, localeList = LocaleList("zh-TW"))
         )
         append(text)
-        popStyle()
+        pop()
     })
 }
 
@@ -372,31 +372,31 @@ fun TextDemoTextAlign() {
     for (i in 1..10) {
         text = "$text$displayText "
     }
-    Column(LayoutHeight.Fill) {
+    Column(Modifier.fillMaxHeight()) {
         SecondTagLine(tag = "textAlign = TextAlign.Left")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = displayText,
             style = TextStyle(fontSize = fontSize8, textAlign = TextAlign.Left)
         )
 
         SecondTagLine(tag = "textAlign = TextAlign.Right")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = displayText,
             style = TextStyle(fontSize = fontSize8, textAlign = TextAlign.Right)
         )
 
         SecondTagLine(tag = "textAlign = TextAlign.Center")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = displayText,
             style = TextStyle(fontSize = fontSize8, textAlign = TextAlign.Center)
         )
 
         SecondTagLine(tag = "textAlign = default and TextAlign.Justify")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = text,
             style = TextStyle(
                 fontSize = fontSize8,
@@ -404,7 +404,7 @@ fun TextDemoTextAlign() {
             )
         )
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = text,
             style = TextStyle(
                 fontSize = fontSize8,
@@ -415,25 +415,25 @@ fun TextDemoTextAlign() {
 
         SecondTagLine(tag = "textAlign = TextAlign.Start for Ltr")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = displayText,
             style = TextStyle(fontSize = fontSize8, textAlign = TextAlign.Start)
         )
         SecondTagLine(tag = "textAlign = TextAlign.Start for Rtl")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = displayTextArabic,
             style = TextStyle(fontSize = fontSize8, textAlign = TextAlign.Start)
         )
         SecondTagLine(tag = "textAlign = TextAlign.End for Ltr")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = displayText,
             style = TextStyle(fontSize = fontSize8, textAlign = TextAlign.End)
         )
         SecondTagLine(tag = "textAlign = TextAlign.End for Rtl")
         Text(
-            modifier = LayoutWidth.Fill,
+            modifier = Modifier.fillMaxWidth(),
             text = displayTextArabic,
             style = TextStyle(fontSize = fontSize8, textAlign = TextAlign.End)
         )
@@ -449,7 +449,7 @@ fun TextDemoSoftWrap() {
     }
     val textStyle = TextStyle(fontSize = fontSize8, color = Color(0xFFFF0000))
 
-    Column(LayoutHeight.Fill) {
+    Column(Modifier.fillMaxHeight()) {
         Text(text = text, style = textStyle)
         Text(text = text, style = textStyle, softWrap = false)
     }
@@ -468,7 +468,7 @@ fun TextDemoShadowEffect() {
             append("text with ")
             pushStyle(style = SpanStyle(shadow = shadow))
             append("shadow!")
-            popStyle()
+            pop()
         }
     )
 }
@@ -482,7 +482,7 @@ fun TextDemoFontSizeScale() {
                 val scale = i * 0.1f
                 pushStyle(style = SpanStyle(fontSize = scale.em))
                 append("fontSizeScale=$scale\n")
-                popStyle()
+                pop()
             }
         }
     )

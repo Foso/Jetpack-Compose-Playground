@@ -17,14 +17,18 @@
 package androidx.ui.text.demos
 
 import androidx.compose.Composable
+import androidx.compose.emptyContent
 import androidx.compose.state
+import androidx.ui.core.Constraints
 import androidx.ui.core.Layout
-import androidx.ui.core.LayoutTag
-import androidx.ui.core.Text
-import androidx.ui.core.TextField
+import androidx.ui.core.Modifier
 import androidx.ui.core.tag
 import androidx.ui.foundation.Box
+import androidx.ui.foundation.Text
+import androidx.ui.foundation.TextField
 import androidx.ui.foundation.VerticalScroller
+import androidx.ui.foundation.drawBackground
+import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.input.ImeAction
 import androidx.ui.input.KeyboardType
@@ -35,9 +39,12 @@ import androidx.ui.input.VisualTransformation
 import androidx.ui.layout.Column
 import androidx.ui.text.AnnotatedString
 import androidx.ui.text.LocaleList
+import androidx.ui.text.TextFieldValue
+import androidx.ui.text.TextLayoutResult
 import androidx.ui.text.TextStyle
 import androidx.ui.text.toUpperCase
 import androidx.ui.unit.ipx
+import androidx.ui.unit.px
 
 /**
  * The offset translator used for credit card input field.
@@ -236,6 +243,15 @@ fun VariousInputFieldDemo() {
                     )
                 )
             }
+
+            TagLine(tag = "Custom Cursor TextField")
+            CustomCursorTextField {
+                // Force 4.ipx with red color cursor
+                Layout(
+                    children = emptyContent(),
+                    modifier = Modifier.drawBackground(Color.Red)
+                ) { _, constraints, _ -> layout(4.ipx, constraints.maxHeight) {} }
+            }
         }
     }
 }
@@ -247,36 +263,41 @@ private fun VariousEditLine(
     onValueChange: (String, String) -> String = { _, new -> new },
     visualTransformation: VisualTransformation
 ) {
-    val state = state { "" }
+    val state = state { TextFieldValue() }
     TextField(
         value = state.value,
         keyboardType = keyboardType,
         imeAction = imeAction,
         visualTransformation = visualTransformation,
-        onValueChange = { state.value = onValueChange(state.value, it) },
+        onValueChange = {
+            state.value = TextFieldValue(
+                onValueChange(state.value.text, it.text),
+                state.value.selection
+            )
+        },
         textStyle = TextStyle(fontSize = fontSize8)
     )
 }
 
 @Composable
 private fun HintEditText(hintText: @Composable() () -> Unit) {
-    val state = state { "" }
+    val state = state { TextFieldValue() }
 
     val inputField = @Composable {
         TextField(
-            modifier = LayoutTag("inputField"),
+            modifier = Modifier.tag("inputField"),
             value = state.value,
             onValueChange = { state.value = it },
             textStyle = TextStyle(fontSize = fontSize8)
         )
     }
 
-    if (state.value.isNotEmpty()) {
+    if (state.value.text.isNotEmpty()) {
         inputField()
     } else {
         Layout({
             inputField()
-            Box(LayoutTag("hintText"), children = hintText)
+            Box(Modifier.tag("hintText"), children = hintText)
         }) { measurable, constraints, _ ->
             val inputFieldPlacable =
                 measurable.first { it.tag == "inputField" }.measure(constraints)
@@ -284,6 +305,45 @@ private fun HintEditText(hintText: @Composable() () -> Unit) {
             layout(inputFieldPlacable.width, inputFieldPlacable.height) {
                 inputFieldPlacable.place(0.ipx, 0.ipx)
                 hintTextPlacable.place(0.ipx, 0.ipx)
+            }
+        }
+    }
+}
+
+@Composable
+private fun CustomCursorTextField(cursor: @Composable() () -> Unit) {
+    val state = state { TextFieldValue() }
+    val layoutResult = state<TextLayoutResult?> { null }
+    Layout({
+        TextField(
+            modifier = Modifier.tag("inputField"),
+            value = state.value,
+            onValueChange = { state.value = it },
+            textStyle = TextStyle(fontSize = fontSize8),
+            onTextLayout = { layoutResult.value = it }
+        )
+        Box(Modifier.tag("cursor"), children = cursor)
+    }) { measurable, constraints, _ ->
+        val inputFieldPlacable =
+            measurable.first { it.tag == "inputField" }.measure(constraints)
+
+        // Layout cursor with tight height constraints since cursor is expected fill the line
+        // height.
+        val cursorConstraints = Constraints.fixedHeight(inputFieldPlacable.height)
+        val cursorPlacable = measurable.first { it.tag == "cursor" }.measure(cursorConstraints)
+
+        layout(inputFieldPlacable.width, inputFieldPlacable.height) {
+            inputFieldPlacable.place(0.ipx, 0.ipx)
+            if (state.value.selection.collapsed) {
+                // Getting original cursor rectangle.
+                val cursorRect = layoutResult.value?.getCursorRect(state.value.selection.start)
+                    ?: Rect(
+                        0f, 0f,
+                        cursorPlacable.width.value.toFloat(), cursorPlacable.height.value.toFloat())
+                // Place the custom cursor aligned with center of the original cursor.
+                val cursorX = (cursorRect.left + cursorRect.right) / 2 -
+                            (cursorPlacable.width.value / 2)
+                cursorPlacable.place(cursorX.px, cursorRect.top.px)
             }
         }
     }

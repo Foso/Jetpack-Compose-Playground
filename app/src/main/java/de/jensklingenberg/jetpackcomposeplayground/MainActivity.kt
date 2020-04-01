@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.ui.demos.DemoActivity
-import de.jensklingenberg.jetpackcomposeplayground.ui.MyComposeActivity
+
 
 
 class MainActivity : AppCompatActivity() {

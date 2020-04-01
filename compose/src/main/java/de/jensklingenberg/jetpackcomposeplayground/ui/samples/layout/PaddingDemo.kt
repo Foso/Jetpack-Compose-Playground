@@ -1,7 +1,7 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.unit.dp
 import androidx.ui.layout.Column
 import androidx.ui.layout.LayoutPadding

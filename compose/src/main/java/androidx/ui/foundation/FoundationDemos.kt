@@ -16,16 +16,12 @@
 
 package androidx.ui.foundation.demos
 
-import androidx.ui.demos.ComposableDemo
-import androidx.ui.demos.DemoCategory
-import androidx.ui.foundation.DrawModifiersDemo
-import androidx.ui.foundation.HighLevelGesturesDemo
-import androidx.ui.foundation.ListDemo
+import androidx.ui.demos.common.ComposableDemo
+import androidx.ui.demos.common.DemoCategory
 import androidx.ui.foundation.samples.ControlledHorizontalScrollerSample
 import androidx.ui.foundation.samples.DialogSample
 import androidx.ui.foundation.samples.TableWithBorders
 import androidx.ui.foundation.samples.VerticalScrollerSample
-
 
 val FoundationDemos = DemoCategory("Foundation", listOf(
     ComposableDemo("Draggable and Scrollable") { HighLevelGesturesDemo() },
@@ -36,5 +32,4 @@ val FoundationDemos = DemoCategory("Foundation", listOf(
     ComposableDemo("Draw Modifiers") { DrawModifiersDemo() },
     ComposableDemo("Boxes") { BoxDemo() },
     ComposableDemo("Lists") { ListDemo() }
-
-    ))
+))

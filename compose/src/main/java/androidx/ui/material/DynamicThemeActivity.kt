@@ -22,11 +22,12 @@ import androidx.animation.FastOutSlowInEasing
 import androidx.compose.Composable
 import androidx.compose.Model
 import androidx.compose.remember
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
 import androidx.ui.core.setContent
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.ContentGravity
 import androidx.ui.foundation.ScrollerPosition
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.foundation.shape.corner.CircleShape
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
@@ -34,12 +35,12 @@ import androidx.ui.graphics.Color
 import androidx.ui.graphics.lerp
 import androidx.ui.graphics.toArgb
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutHeight
-import androidx.ui.layout.LayoutPadding
-import androidx.ui.layout.LayoutWidth
+import androidx.ui.layout.fillMaxWidth
+import androidx.ui.layout.padding
+import androidx.ui.layout.preferredHeight
 import androidx.ui.material.BottomAppBar
 import androidx.ui.material.ColorPalette
-import androidx.ui.material.FloatingActionButton
+import androidx.ui.material.ExtendedFloatingActionButton
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.Scaffold
 import androidx.ui.material.TopAppBar
@@ -109,12 +110,11 @@ private fun DynamicThemeApp(scrollFraction: ScrollFraction, palette: ColorPalett
 
 @Composable
 private fun Fab(scrollFraction: ScrollFraction) {
-    val secondary = MaterialTheme.colors().secondary
+    val secondary = MaterialTheme.colors.secondary
     val fabText = emojiForScrollFraction(scrollFraction.fraction)
-    FloatingActionButton(
-        text = fabText,
-        textStyle = MaterialTheme.typography().h5,
-        color = secondary,
+    ExtendedFloatingActionButton(
+        text = { Text(fabText, style = MaterialTheme.typography.h5) },
+        backgroundColor = secondary,
         onClick = {}
     )
 }
@@ -127,7 +127,7 @@ private fun Card(index: Int) {
     // colour from the Material theme to work out text colour, so we end up doing a
     // large amount of work here when the top level theme changes
     Box(
-        LayoutPadding(25.dp) + LayoutWidth.Fill + LayoutHeight(150.dp),
+        Modifier.padding(25.dp).fillMaxWidth().preferredHeight(150.dp),
         shape = RoundedCornerShape(10.dp),
         backgroundColor = shapeColor,
         gravity = ContentGravity.Center

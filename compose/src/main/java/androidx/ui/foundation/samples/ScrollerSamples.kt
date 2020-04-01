@@ -26,17 +26,18 @@ import androidx.ui.core.gesture.PressIndicatorGestureDetector
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.Clickable
 import androidx.ui.foundation.ContentGravity
-import androidx.ui.foundation.DrawBackground
 import androidx.ui.foundation.HorizontalScroller
 import androidx.ui.foundation.ScrollerPosition
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.foundation.VerticalScroller
+import androidx.ui.foundation.drawBackground
+import androidx.ui.foundation.shape.RectangleShape
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutPadding
-import androidx.ui.layout.LayoutSize
 import androidx.ui.layout.Row
 import androidx.ui.layout.Table
+import androidx.ui.layout.padding
+import androidx.ui.layout.preferredSize
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
@@ -89,7 +90,7 @@ fun VerticalScrollerSample() {
     val style = TextStyle(fontSize = 30.sp)
     // Scroller will be clipped to this padding
     VerticalScroller {
-        Column(modifier = LayoutPadding(20.dp)) {
+        Column(Modifier.padding(20.dp)) {
             phrases.forEach { phrase ->
                 Text(phrase, style)
             }
@@ -134,7 +135,7 @@ fun ControlledHorizontalScrollerSample() {
 @Composable
 private fun Square(index: Int) {
     Box(
-        modifier = LayoutSize(75.dp, 200.dp),
+        Modifier.preferredSize(75.dp, 200.dp),
         backgroundColor = colors[index % colors.size],
         gravity = ContentGravity.Center
     ) {
@@ -178,7 +179,7 @@ private fun ScrollControl(position: ScrollerPosition, scrollable: MutableState<B
 private fun SquareButton(text: String, color: Color = Color.LightGray, onClick: () -> Unit) {
     Clickable(onClick = onClick) {
         Box(
-            modifier = LayoutPadding(5.dp) + LayoutSize(120.dp, 60.dp),
+            Modifier.padding(5.dp).preferredSize(120.dp, 60.dp),
             backgroundColor = color,
             gravity = ContentGravity.Center
         ) {
@@ -203,9 +204,8 @@ private fun Text(text: String, textStyle: TextStyle) {
         color.value = releasedColor
     }
 
+    val gestureModifier =
+        PressIndicatorGestureDetector(onStart = onPress, onStop = onRelease, onCancel = onRelease)
 
-
-    Text(text, modifier =  DrawBackground(color = color.value), style = textStyle)
+    Text(text, gestureModifier.drawBackground(color.value, RectangleShape), style = textStyle)
 }
-
-infix fun Modifier.wraps(other: Modifier): Modifier = this + other

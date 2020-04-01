@@ -16,10 +16,8 @@
 
 package androidx.ui.framework.demos
 
-
-
-import androidx.ui.demos.ComposableDemo
-import androidx.ui.demos.DemoCategory
+import androidx.ui.demos.common.ComposableDemo
+import androidx.ui.demos.common.DemoCategory
 import androidx.ui.framework.demos.autofill.ExplicitAutofillTypesDemo
 import androidx.ui.framework.demos.focus.FocusableDemo
 import androidx.ui.framework.demos.gestures.DoubleTapGestureDetectorDemo
@@ -64,7 +62,7 @@ private val GestureDemos = DemoCategory("Gestures", listOf(
     ))
 ))
 
-val FrameworkDemos = DemoCategory("Framework Demos", listOf(
+val FrameworkDemos = DemoCategory("Framework", listOf(
     ComposableDemo("Animations, gestures, and semantics") { AnimationGestureSemanticsDemo() },
     ComposableDemo("Explicit autofill types") { ExplicitAutofillTypesDemo() },
     ComposableDemo("Focus") { FocusableDemo() },

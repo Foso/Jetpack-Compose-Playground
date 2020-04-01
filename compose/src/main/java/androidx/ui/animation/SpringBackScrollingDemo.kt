@@ -24,18 +24,20 @@ import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.compose.state
 import androidx.ui.animation.animatedFloat
-import androidx.ui.core.Text
+import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.DragObserver
 import androidx.ui.core.gesture.RawDragGestureDetector
 import androidx.ui.foundation.Canvas
 import androidx.ui.foundation.CanvasScope
+import androidx.ui.foundation.Text
 import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
 import androidx.ui.graphics.Paint
 import androidx.ui.layout.Column
-import androidx.ui.layout.LayoutHeight
-import androidx.ui.layout.LayoutPadding
-import androidx.ui.layout.LayoutWidth
+import androidx.ui.layout.fillMaxHeight
+import androidx.ui.layout.fillMaxWidth
+import androidx.ui.layout.padding
+import androidx.ui.layout.preferredHeight
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
@@ -44,16 +46,16 @@ import kotlin.math.roundToInt
 
 @Composable
 fun SpringBackScrollingDemo() {
-    Column(LayoutHeight.Fill) {
+    Column(Modifier.fillMaxHeight()) {
         Text(
             "<== Scroll horizontally ==>",
             style = TextStyle(fontSize = 20.sp),
-            modifier = LayoutPadding(40.dp)
+            modifier = Modifier.padding(40.dp)
         )
         val animScroll = animatedFloat(0f)
         val itemWidth = state { 0f }
         val isFlinging = state { false }
-        RawDragGestureDetector(dragObserver = object : DragObserver {
+        val gesture = RawDragGestureDetector(dragObserver = object : DragObserver {
             override fun onDrag(dragDistance: PxPosition): PxPosition {
                 animScroll.snapTo(animScroll.targetValue + dragDistance.x.value)
                 return dragDistance
@@ -65,43 +67,42 @@ fun SpringBackScrollingDemo() {
                     isFlinging.value = false
                 })
             }
-        }) {
-            val paint = remember { Paint() }
-            Canvas(LayoutWidth.Fill + LayoutHeight(400.dp)) {
-                itemWidth.value = size.width.value / 2f
-                if (isFlinging.value) {
-                    // Figure out what position to spring back to
-                    val target = animScroll.targetValue
-                    var rem = target % itemWidth.value
-                    if (animScroll.velocity < 0) {
-                        if (rem > 0) {
-                            rem -= itemWidth.value
-                        }
-                    } else {
-                        if (rem < 0) {
-                            rem += itemWidth.value
-                        }
+        })
+        val paint = remember { Paint() }
+        Canvas(gesture.fillMaxWidth().preferredHeight(400.dp)) {
+            itemWidth.value = size.width.value / 2f
+            if (isFlinging.value) {
+                // Figure out what position to spring back to
+                val target = animScroll.targetValue
+                var rem = target % itemWidth.value
+                if (animScroll.velocity < 0) {
+                    if (rem > 0) {
+                        rem -= itemWidth.value
                     }
-                    val springBackTarget = target - rem
-
-                    // Spring back as soon as the target position is crossed.
-                    if ((animScroll.velocity > 0 && animScroll.value > springBackTarget) ||
-                        (animScroll.velocity < 0 && animScroll.value < springBackTarget)
-                    ) {
-                        animScroll.animateTo(
-                            springBackTarget,
-                            PhysicsBuilder(dampingRatio = 0.8f, stiffness = 200f)
-                        )
+                } else {
+                    if (rem < 0) {
+                        rem += itemWidth.value
                     }
                 }
-                if (DEBUG) {
-                    Log.w(
-                        "Anim", "Spring back scrolling, redrawing with new" +
-                                " scroll value: ${animScroll.value}"
+                val springBackTarget = target - rem
+
+                // Spring back as soon as the target position is crossed.
+                if ((animScroll.velocity > 0 && animScroll.value > springBackTarget) ||
+                    (animScroll.velocity < 0 && animScroll.value < springBackTarget)
+                ) {
+                    animScroll.animateTo(
+                        springBackTarget,
+                        PhysicsBuilder(dampingRatio = 0.8f, stiffness = 200f)
                     )
                 }
-                drawRects(paint, animScroll.value)
             }
+            if (DEBUG) {
+                Log.w(
+                    "Anim", "Spring back scrolling, redrawing with new" +
+                            " scroll value: ${animScroll.value}"
+                )
+            }
+            drawRects(paint, animScroll.value)
         }
     }
 }

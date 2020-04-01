@@ -18,11 +18,14 @@ package androidx.ui.framework.demos.gestures
 
 import androidx.compose.Composable
 import androidx.compose.state
+import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.LongPressGestureDetector
 import androidx.ui.foundation.Border
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.ContentGravity
-import androidx.ui.unit.Dp
+import androidx.ui.graphics.compositeOver
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.layout.padding
 import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
 
@@ -31,29 +34,16 @@ import androidx.ui.unit.dp
  */
 @Composable
 fun NestedLongPressDemo() {
-    LongPressableContainer(
-        paddingLeft = 48.dp,
-        paddingRight = 48.dp,
-        paddingTop = 96.dp,
-        paddingBottom = 96.dp
-    ) {
-        LongPressableContainer(
-            paddingLeft = 48.dp,
-            paddingRight = 48.dp,
-            paddingTop = 96.dp,
-            paddingBottom = 96.dp
-        ) {
-            LongPressableContainer {}
+    LongPressableContainer(Modifier.fillMaxSize()) {
+        LongPressableContainer(Modifier.padding(48.dp).fillMaxSize()) {
+            LongPressableContainer(Modifier.padding(48.dp).fillMaxSize()) {}
         }
     }
 }
 
 @Composable
 private fun LongPressableContainer(
-    paddingLeft: Dp = 0.dp,
-    paddingTop: Dp = 0.dp,
-    paddingRight: Dp = 0.dp,
-    paddingBottom: Dp = 0.dp,
+    modifier: Modifier = Modifier.None,
     children: @Composable() () -> Unit
 ) {
     val defaultColor = DefaultBackgroundColor
@@ -67,21 +57,16 @@ private fun LongPressableContainer(
     }
 
     val color = if (pressed.value) {
-        pressedColor.over(currentColor.value)
+        pressedColor.compositeOver(currentColor.value)
     } else {
         currentColor.value
     }
 
-    LongPressGestureDetector(onLongPress) {
-        Box(
-            paddingStart = paddingLeft,
-            paddingTop = paddingTop,
-            paddingEnd = paddingRight,
-            paddingBottom = paddingBottom,
-            backgroundColor = color,
-            gravity = ContentGravity.Center,
-            border = Border(2.dp, BorderColor),
-            children = children
-        )
-    }
+    Box(
+        modifier + LongPressGestureDetector(onLongPress),
+        backgroundColor = color,
+        gravity = ContentGravity.Center,
+        border = Border(2.dp, BorderColor),
+        children = children
+    )
 }

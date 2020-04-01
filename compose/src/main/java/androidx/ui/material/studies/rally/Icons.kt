@@ -25,7 +25,7 @@ import androidx.ui.graphics.vector.VectorAsset
 import androidx.ui.graphics.vector.drawVector
 import androidx.ui.layout.LayoutHeight
 import androidx.ui.layout.LayoutWidth
-import androidx.ui.material.ripple.Ripple
+
 import androidx.ui.unit.Dp
 import androidx.ui.unit.dp
 
@@ -39,11 +39,11 @@ fun IconButton(
     modifier: Modifier = Modifier.None
 ) {
     Box(modifier = modifier) {
-        Ripple(bounded = false) {
+
             Clickable(onClick) {
                 Icon(vectorImage)
             }
-        }
+
     }
 }
 

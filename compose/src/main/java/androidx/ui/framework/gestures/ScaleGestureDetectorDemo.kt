@@ -18,28 +18,35 @@ package androidx.ui.framework.demos.gestures
 
 import androidx.compose.Composable
 import androidx.compose.state
+import androidx.ui.core.Alignment
+import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.ScaleGestureDetector
 import androidx.ui.core.gesture.ScaleObserver
+import androidx.ui.foundation.Box
 import androidx.ui.graphics.Color
+import androidx.ui.layout.fillMaxSize
+import androidx.ui.layout.preferredSize
+import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.dp
-import androidx.ui.unit.px
 
 /**
  * Simple demo that shows off ScaleGestureDetectorDemo.
  */
 @Composable
 fun ScaleGestureDetectorDemo() {
-    val width = state { 96.dp }
-    val height = state { 96.dp }
+    val size = state { 192.dp }
 
     val scaleObserver = object : ScaleObserver {
         override fun onScale(scaleFactor: Float) {
-            width.value *= scaleFactor
-            height.value *= scaleFactor
+            size.value *= scaleFactor
         }
     }
 
-    ScaleGestureDetector(scaleObserver) {
-        DrawingBox(0.px, 0.px, width.value, height.value, Color(0xFF9e9e9e.toInt()))
-    }
+    Box(
+        Modifier.fillMaxSize()
+            .wrapContentSize(Alignment.Center)
+            .plus(ScaleGestureDetector(scaleObserver))
+            .preferredSize(size.value),
+        backgroundColor = Color(0xFF9e9e9e.toInt())
+    )
 }

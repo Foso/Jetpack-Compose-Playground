@@ -1,7 +1,7 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.github.layout
 
 import androidx.compose.Composable
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.graphics.Color
 import androidx.ui.material.*
 import androidx.ui.unit.dp
@@ -14,7 +14,9 @@ fun ScaffoldDemo() {
           scaffoldState = ScaffoldState(DrawerState.Opened),
           topAppBar = { TopAppBar(title = {Text("TopAppBar")},color = materialBlue700)  },
           floatingActionButtonPosition = Scaffold.FabPosition.End,
-          floatingActionButton = { FloatingActionButton(text = "X",onClick = {}) },
+          floatingActionButton = { FloatingActionButton(onClick = {}){
+              Text("X")
+          } },
           drawerContent = { Text(text = "drawerContent") },
           bodyContent = { Text("BodyContent") },
           bottomAppBar = { BottomAppBar(color = materialBlue700) { Text("BottomAppBar") } }

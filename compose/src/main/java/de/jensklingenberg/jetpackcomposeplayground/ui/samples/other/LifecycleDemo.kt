@@ -19,7 +19,7 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
 import android.util.Log
 import androidx.compose.*
-import androidx.ui.core.Text
+import androidx.ui.foundation.Text
 import androidx.ui.layout.Column
 import androidx.ui.material.Button
 import androidx.ui.material.MaterialTheme
