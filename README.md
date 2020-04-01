@@ -48,7 +48,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column/)
 * [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row/)
 * [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack/)
-* [LayoutPadding](https://foso.github.io/Jetpack-Compose-Playground/layout/layoutpadding/)
+* [LayoutPadding](https://foso.github.io/Jetpack-Compose-Playground/core/layoutpadding/)
 
 
 ### Cookbook
