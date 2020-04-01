@@ -13,7 +13,7 @@ buildFeatures {
     compose true
 }
 composeOptions {
-    kotlinCompilerExtensionVersion "0.1.0-dev07"
+    kotlinCompilerExtensionVersion "0.1.0-dev08"
 }
 
 ```
@@ -23,7 +23,7 @@ Below are all compose dependencies that are online avaiable, you don't need to a
 ```groovy
 
 dependencies {
-    def compose_version = "0.1.0-dev07"
+    def compose_version = "0.1.0-dev08"
 
     implementation("androidx.compose:compose-runtime:$compose_version")
     implementation "androidx.ui:ui-android-text:$compose_version"
@@ -39,6 +39,7 @@ dependencies {
     implementation("androidx.ui:ui-material-icons-core:$compose_version")
     implementation("androidx.ui:ui-material-icons-extended:$compose_version")
     implementation("androidx.ui:ui-platform:$compose_version")
+    implementation("androidx.ui:ui-saved-instance-state:$compose_version")
     implementation("androidx.ui:ui-test:$compose_version")
     implementation "androidx.ui:ui-text:$compose_version"
     implementation "androidx.ui:ui-tooling:$compose_version"

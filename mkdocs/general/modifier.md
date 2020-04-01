@@ -4,7 +4,7 @@ To set them, a composable needs to accept a modifier as a parameter.
 
 ## Combine modifiers    
 ```kotlin
-Column(modifier = LayoutHeight(500.dp) + LayoutPadding(100.dp)) {
+    Column(modifier = Modifier.preferredHeight(500.dp) + Modifier.padding(100.dp)) {
                 Text("Hello")
 }
 ```
@@ -15,14 +15,14 @@ The order is important modifier elements to the left are applied before modifier
 ### Modifier.None
 This can be used as a default parameter.
 
-### LayoutHeight
+### Modifier.preferredHeight()
 Modifies the height of a Compose UI layout element.
 
-### LayoutWidth
+### Modifier.preferredWidth()
 Modifies the width of a Compose UI layout element.
 
-### LayoutWidth
+###  Modifier.preferredSize()
 Modifies the width and height of a Compose UI layout element together
 
-### LayoutPadding
-See [LayoutPadding](/layout/layoutpadding)
+### Modifier.padding()
+See [LayoutPadding](/Jetpack-Compose-Playground/core/layoutpadding)

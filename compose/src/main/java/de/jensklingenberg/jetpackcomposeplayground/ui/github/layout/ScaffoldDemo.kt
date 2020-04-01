@@ -22,3 +22,4 @@ fun ScaffoldDemo() {
           bottomAppBar = { BottomAppBar(color = materialBlue700) { Text("BottomAppBar") } }
       )
 }
+

@@ -45,17 +45,16 @@ nav:
           - 'Foundation':
               - 'AdapterList': foundation/adapter_list.md
               - 'Clickable': foundation/clickable.md
-              - 'Draggable': foundation/draggable.md
               - 'HorizontalScroller': foundation/horizontal_scroller.md
               - 'VerticalScroller': foundation/vertical_scroller.md
+              - 'Text': foundation/text.md
           - 'Core':
+              - 'LayoutPadding': core/layoutpadding.md
               - 'PressGestureDetector': core/pressgesturedetector.md
-              - 'Text': core/text.md
               - 'TextField': core/textfield.md
           - 'Layout':
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
-              - 'LayoutPadding': layout/layoutpadding.md
               - 'Row': layout/row.md
               - 'Scaffold': layout/scaffold.md
               - 'Stack': layout/stack.md

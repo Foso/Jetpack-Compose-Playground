@@ -1,6 +1,9 @@
 # LayoutPadding
 
-You can use the [LayoutPadding](https://developer.android.com/reference/kotlin/androidx/ui/layout/LayoutPadding) modifier to set padding to composables that take a modifier as an argument.
+!!! info
+    This is the API of version dev08. Newer versions may have a different one
+
+You can use **Modifier.padding** to set padding to composables that take a modifier as an argument.
 
 <p align="left">
   <img src ="../../images/PaddingExample.png" height=500 />
@@ -9,12 +12,14 @@ You can use the [LayoutPadding](https://developer.android.com/reference/kotlin/a
 ```kotlin
 @Composable
 fun PaddingDemo() {
+
     Column {
         Text("TextWithoutPadding")
-        Column(modifier = LayoutPadding(start = 80.dp)){
+        Column(modifier = Modifier.padding(start = 80.dp)){
             Text("TextWith80dpOnlyLeftPadding")
         }
-        Column(LayoutPadding(all=80.dp)){
+
+        Column(Modifier.padding(all = 80.dp)){
             Text("TextWith80dpPadding")
         }
     }

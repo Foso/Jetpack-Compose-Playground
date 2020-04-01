@@ -529,29 +529,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutheight" class="md-nav__link">
-    LayoutHeight
+  <a href="#modifierpreferredheight" class="md-nav__link">
+    Modifier.preferredHeight()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutwidth" class="md-nav__link">
-    LayoutWidth
+  <a href="#modifierpreferredwidth" class="md-nav__link">
+    Modifier.preferredWidth()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutwidth_1" class="md-nav__link">
-    LayoutWidth
+  <a href="#modifierpreferredsize" class="md-nav__link">
+    Modifier.preferredSize()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutpadding" class="md-nav__link">
-    LayoutPadding
+  <a href="#modifierpadding" class="md-nav__link">
+    Modifier.padding()
   </a>
   
 </li>
@@ -686,18 +686,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../foundation/draggable/" title="Draggable" class="md-nav__link">
-      Draggable
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../foundation/horizontal_scroller/" title="HorizontalScroller" class="md-nav__link">
       HorizontalScroller
     </a>
@@ -712,6 +700,18 @@
   <li class="md-nav__item">
     <a href="../../foundation/vertical_scroller/" title="VerticalScroller" class="md-nav__link">
       VerticalScroller
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../foundation/text/" title="Text" class="md-nav__link">
+      Text
     </a>
   </li>
 
@@ -746,8 +746,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../core/pressgesturedetector/" title="PressGestureDetector" class="md-nav__link">
-      PressGestureDetector
+    <a href="../../core/layoutpadding/" title="LayoutPadding" class="md-nav__link">
+      LayoutPadding
     </a>
   </li>
 
@@ -758,8 +758,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../core/text/" title="Text" class="md-nav__link">
-      Text
+    <a href="../../core/pressgesturedetector/" title="PressGestureDetector" class="md-nav__link">
+      PressGestureDetector
     </a>
   </li>
 
@@ -820,18 +820,6 @@
   <li class="md-nav__item">
     <a href="../../layout/constraintlayout/" title="ConstraintLayout" class="md-nav__link">
       ConstraintLayout
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../layout/layoutpadding/" title="LayoutPadding" class="md-nav__link">
-      LayoutPadding
     </a>
   </li>
 
@@ -1062,29 +1050,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutheight" class="md-nav__link">
-    LayoutHeight
+  <a href="#modifierpreferredheight" class="md-nav__link">
+    Modifier.preferredHeight()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutwidth" class="md-nav__link">
-    LayoutWidth
+  <a href="#modifierpreferredwidth" class="md-nav__link">
+    Modifier.preferredWidth()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutwidth_1" class="md-nav__link">
-    LayoutWidth
+  <a href="#modifierpreferredsize" class="md-nav__link">
+    Modifier.preferredSize()
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutpadding" class="md-nav__link">
-    LayoutPadding
+  <a href="#modifierpadding" class="md-nav__link">
+    Modifier.padding()
   </a>
   
 </li>
@@ -1119,7 +1107,7 @@
 <p>Modifiers can be used modify certain aspects of a composable.
 To set them, a composable needs to accept a modifier as a parameter.</p>
 <h2 id="combine-modifiers">Combine modifiers<a class="headerlink" href="#combine-modifiers" title="Permanent link">&para;</a></h2>
-<p><div class="codehilite"><pre><span></span><span class="n">Column</span><span class="p">(</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">LayoutHeight</span><span class="p">(</span><span class="m">500.</span><span class="n">dp</span><span class="p">)</span> <span class="p">+</span> <span class="n">LayoutPadding</span><span class="p">(</span><span class="m">100.</span><span class="n">dp</span><span class="p">))</span> <span class="p">{</span>
+<p><div class="codehilite"><pre><span></span>    <span class="n">Column</span><span class="p">(</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">Modifier</span><span class="p">.</span><span class="n">preferredHeight</span><span class="p">(</span><span class="m">500.</span><span class="n">dp</span><span class="p">)</span> <span class="p">+</span> <span class="n">Modifier</span><span class="p">.</span><span class="n">padding</span><span class="p">(</span><span class="m">100.</span><span class="n">dp</span><span class="p">))</span> <span class="p">{</span>
                 <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
@@ -1128,14 +1116,14 @@ The order is important modifier elements to the left are applied before modifier
 <h2 id="some-modifiers">Some Modifiers<a class="headerlink" href="#some-modifiers" title="Permanent link">&para;</a></h2>
 <h3 id="modifiernone">Modifier.None<a class="headerlink" href="#modifiernone" title="Permanent link">&para;</a></h3>
 <p>This can be used as a default parameter.</p>
-<h3 id="layoutheight">LayoutHeight<a class="headerlink" href="#layoutheight" title="Permanent link">&para;</a></h3>
+<h3 id="modifierpreferredheight">Modifier.preferredHeight()<a class="headerlink" href="#modifierpreferredheight" title="Permanent link">&para;</a></h3>
 <p>Modifies the height of a Compose UI layout element.</p>
-<h3 id="layoutwidth">LayoutWidth<a class="headerlink" href="#layoutwidth" title="Permanent link">&para;</a></h3>
+<h3 id="modifierpreferredwidth">Modifier.preferredWidth()<a class="headerlink" href="#modifierpreferredwidth" title="Permanent link">&para;</a></h3>
 <p>Modifies the width of a Compose UI layout element.</p>
-<h3 id="layoutwidth_1">LayoutWidth<a class="headerlink" href="#layoutwidth_1" title="Permanent link">&para;</a></h3>
+<h3 id="modifierpreferredsize">Modifier.preferredSize()<a class="headerlink" href="#modifierpreferredsize" title="Permanent link">&para;</a></h3>
 <p>Modifies the width and height of a Compose UI layout element together</p>
-<h3 id="layoutpadding">LayoutPadding<a class="headerlink" href="#layoutpadding" title="Permanent link">&para;</a></h3>
-<p>See <a href="/layout/layoutpadding">LayoutPadding</a></p>
+<h3 id="modifierpadding">Modifier.padding()<a class="headerlink" href="#modifierpadding" title="Permanent link">&para;</a></h3>
+<p>See <a href="/Jetpack-Compose-Playground/core/layoutpadding">LayoutPadding</a></p>
 
 
 
