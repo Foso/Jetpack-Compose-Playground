@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/core/pressgesturedetector/">
+        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_compose_in_viewgroup/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>PressGestureDetector - Jetpack Compose Playground</title>
+        <title>How to use Compose in a ViewGroup - Jetpack Compose Playground</title>
       
     
     
@@ -87,6 +87,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#how-to-use-compose-in-a-viewgroup" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -109,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                PressGestureDetector
+                How to use Compose in a ViewGroup
               
             </span>
           
@@ -276,10 +280,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" checked>
     
     <label class="md-nav__link" for="nav-1-2">
       Cookbook
@@ -297,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cookbook/overview/" title="Overview" class="md-nav__link">
+    <a href="../overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -309,7 +315,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cookbook/textfield_changes/" title="Handle changes to a text field" class="md-nav__link">
+    <a href="../textfield_changes/" title="Handle changes to a text field" class="md-nav__link">
       Handle changes to a text field
     </a>
   </li>
@@ -319,11 +325,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../cookbook/how_to_use_compose_in_viewgroup/" title="How to use Compose in a ViewGroup" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        How to use Compose in a ViewGroup
+      </label>
+    
+    <a href="./" title="How to use Compose in a ViewGroup" class="md-nav__link md-nav__link--active">
       How to use Compose in a ViewGroup
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-custom-framelayout" class="md-nav__link">
+    Create a custom FrameLayout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-it-to-your-layout-file" class="md-nav__link">
+    Add it to your layout file
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -336,12 +387,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
     <label class="md-nav__link" for="nav-1-3">
       Guides & Samples
@@ -657,12 +706,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-4" type="checkbox" id="nav-1-3-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-4" type="checkbox" id="nav-1-3-4">
     
     <label class="md-nav__link" for="nav-1-3-4">
       Core
@@ -680,7 +727,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../layoutpadding/" title="LayoutPadding" class="md-nav__link">
+    <a href="../../core/layoutpadding/" title="LayoutPadding" class="md-nav__link">
       LayoutPadding
     </a>
   </li>
@@ -690,18 +737,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="PressGestureDetector" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../core/pressgesturedetector/" title="PressGestureDetector" class="md-nav__link">
       PressGestureDetector
     </a>
-    
   </li>
 
         
@@ -943,52 +983,120 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-custom-framelayout" class="md-nav__link">
+    Create a custom FrameLayout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-it-to-your-layout-file" class="md-nav__link">
+    Add it to your layout file
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
 
 
-<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20core/pressgesturedetector/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/core/pressgesturedetector.md">edit</a></span>
+<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20cookbook/how_to_use_compose_in_viewgroup/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/cookbook/how_to_use_compose_in_viewgroup.md">edit</a></span>
 
 
 
-<h1>PressGestureDetector</h1>
-
-<p>You can use a PressGestureDetector to detect when a compose element gets pressed and released.</p>
-<p align="left">
-  <img src ="../../images/PressGesturePressed.png" height=500 />
-<img src ="../../images/PressGestureReleased.png" height=500 />
-</p>
-
-<div class="codehilite"><pre><span></span><span class="n">@Composable</span>
-<span class="k">fun</span> <span class="nf">PressGestureDetectorDemo</span><span class="p">()</span> <span class="p">{</span>
-
-    <span class="k">val</span> <span class="py">posX</span> <span class="p">=</span> <span class="n">state</span> <span class="p">{</span> <span class="m">0f</span> <span class="p">}</span>
-    <span class="k">val</span> <span class="py">posXY</span> <span class="p">=</span> <span class="n">state</span> <span class="p">{</span> <span class="m">0f</span> <span class="p">}</span>
-    <span class="k">val</span> <span class="py">clickState</span> <span class="p">=</span> <span class="n">state</span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">}</span>
-
-    <span class="n">Column</span><span class="p">(</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">LayoutWidth</span><span class="p">.</span><span class="n">Fill</span><span class="p">+</span><span class="n">LayoutHeight</span><span class="p">.</span><span class="n">Fill</span><span class="p">,</span> <span class="n">arrangement</span> <span class="p">=</span> <span class="n">Arrangement</span><span class="p">.</span><span class="n">Center</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">PressGestureDetector</span><span class="p">(</span>
-            <span class="n">onPress</span> <span class="p">=</span> <span class="p">{</span> <span class="n">position</span> <span class="p">-&gt;</span>
-                <span class="n">posX</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">value</span>
-                <span class="n">posXY</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">.</span><span class="n">value</span>
-                <span class="n">clickState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="s">&quot;Pressed&quot;</span>
-            <span class="p">},</span>
-            <span class="n">onRelease</span> <span class="p">=</span> <span class="p">{</span>
-                <span class="n">clickState</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="s">&quot;Released&quot;</span>
-            <span class="p">})</span> <span class="p">{</span>
-
-            <span class="n">Column</span><span class="p">(</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">LayoutWidth</span><span class="p">.</span><span class="n">Fill</span><span class="p">+</span><span class="n">LayoutHeight</span><span class="p">.</span><span class="n">Fill</span><span class="p">,</span> <span class="n">arrangement</span> <span class="p">=</span> <span class="n">Arrangement</span><span class="p">.</span><span class="n">Center</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">Text</span><span class="p">(</span><span class="s">&quot;ClickState: &quot;</span> <span class="p">+</span> <span class="n">clickState</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>
-                <span class="n">Text</span><span class="p">(</span><span class="s">&quot;PostitionX: ${posX.value}&quot;</span><span class="p">)</span>
-                <span class="n">Text</span><span class="p">(</span><span class="s">&quot;PostitionY: ${posXY.value}&quot;</span><span class="p">)</span>
-            <span class="p">}</span>
+<h1 id="how-to-use-compose-in-a-viewgroup">How to use Compose in a ViewGroup<a class="headerlink" href="#how-to-use-compose-in-a-viewgroup" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This is the API of version dev08. Newer versions may have a different one</p>
+</div>
+<p>Compose has a <strong>setContent()</strong>-extension function on ViewGroup which can be used, to use Compose inside a ViewGroup.
+This example will show you, how you can use Compose inside a FrameLayout. It should also work in other layouts like LinearLayout. As long as it&rsquo;s a layout that extends the <strong>ViewGroup</strong> class.</p>
+<div class="codehilite"><pre><span></span><span class="c1">//Extension function from Compose</span>
+<span class="k">fun</span> <span class="nc">ViewGroup</span><span class="p">.</span><span class="nf">setContent</span><span class="p">(</span>
+    <span class="n">content</span><span class="p">:</span> <span class="n">@Composable</span><span class="p">()</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="n">Unit</span>
+<span class="p">):</span> <span class="n">Composition</span> <span class="p">{</span>
+    <span class="k">val</span> <span class="py">composeView</span> <span class="p">=</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">childCount</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">getChildAt</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="k">as</span><span class="p">?</span> <span class="n">Owner</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">removeAllViews</span><span class="p">();</span> <span class="k">null</span>
         <span class="p">}</span>
-    <span class="p">}</span>
-
+            <span class="o">?:</span> <span class="n">createOwner</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="n">also</span> <span class="p">{</span> <span class="n">addView</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">view</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">doSetContent</span><span class="p">(</span><span class="n">composeView</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+
+<h2 id="create-a-custom-framelayout">Create a custom FrameLayout<a class="headerlink" href="#create-a-custom-framelayout" title="Permanent link">&para;</a></h2>
+<p>Create a custom FrameLayout, then you can use the <strong>setContent()</strong> for example inside <strong>init()</strong>. 
+Inside <strong>setContent()</strong> you can then add your Compose code.
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">ComposeFrameLayout</span> <span class="n">@JvmOverloads</span> <span class="k">constructor</span><span class="p">(</span>
+    <span class="n">context</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">attrs</span><span class="p">:</span> <span class="n">AttributeSet</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
+    <span class="n">defStyleAttr</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">0</span>
+<span class="p">)</span> <span class="p">:</span> <span class="n">FrameLayout</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">defStyleAttr</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">init</span> <span class="p">{</span>
+          <span class="n">setContent</span> <span class="p">{</span>
+              <span class="n">Button</span><span class="p">(</span><span class="n">onClick</span> <span class="p">=</span> <span class="p">{})</span> <span class="p">{</span>
+                  <span class="n">Text</span><span class="p">(</span><span class="s">&quot;ComposeButton&quot;</span><span class="p">)</span>
+              <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div></p>
+<h2 id="add-it-to-your-layout-file">Add it to your layout file<a class="headerlink" href="#add-it-to-your-layout-file" title="Permanent link">&para;</a></h2>
+<p>Just add your FrameLayout like any other layout.
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
+    <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
+    <span class="na">android:id=</span><span class="s">&quot;@+id/container&quot;</span>
+    <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:layout_height=</span><span class="s">&quot;match_parent&quot;</span>
+    <span class="na">android:orientation=</span><span class="s">&quot;vertical&quot;</span>
+    <span class="na">tools:context=</span><span class="s">&quot;.MainActivity&quot;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;de.jensklingenberg.jetpackcomposeplayground.ui.ComposeFrameLayout</span>
+        <span class="na">android:id=</span><span class="s">&quot;@+id/linear&quot;</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:orientation=</span><span class="s">&quot;horizontal&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;Button</span>
+        <span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+        <span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+        <span class="na">android:text=</span><span class="s">&quot;WidgetButton&quot;</span>
+        <span class="nt">/&gt;</span>
+<span class="nt">&lt;/LinearLayout&gt;</span>
+</pre></div></p>
+<p align="left">
+  <img src ="../../images/cookbook/viewgroup/viewgroupExample.png" height=500  />
+</p>
 
 
 
@@ -1009,7 +1117,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../layoutpadding/" title="LayoutPadding" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../textfield_changes/" title="Handle changes to a text field" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1018,19 +1126,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                LayoutPadding
+                Handle changes to a text field
               </span>
             </div>
           </a>
         
         
-          <a href="../../layout/column/" title="Column" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../general/codelabs/" title="Codelabs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Column
+                Codelabs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
