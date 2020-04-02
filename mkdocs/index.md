@@ -24,6 +24,13 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 ## Composable of the week!! 🎉
 The [AdapterList](foundation/adapter_list)
 
+## Layouts
+* [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout/)
+* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/layout/scaffold/)
+* [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column/)
+* [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row/)
+* [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack/)
+* [LayoutPadding](https://foso.github.io/Jetpack-Compose-Playground/core/layoutpadding/)
 
 ## New to Compose?
 Check [Project Setup](general/getting_started.md) or [Hello World Compose](general/helloworld/)
