@@ -54,7 +54,7 @@ Just add your FrameLayout like any other layout.
     tools:context=".MainActivity">
 
     <de.jensklingenberg.jetpackcomposeplayground.ui.ComposeFrameLayout
-        android:id="@+id/linear"
+        android:id="@+id/composeFrame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" />
