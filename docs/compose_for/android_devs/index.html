@@ -331,6 +331,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cookbook/hint_edit_text/" title="How to create HintTextField" class="md-nav__link">
+      How to create HintTextField
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1134,7 +1146,7 @@ The goal is to show how common use cases with the classic Android View system, c
 <h3 id="what-is-the-equivalent-of-a-linearlayout">What is the equivalent of a LinearLayout?<a class="headerlink" href="#what-is-the-equivalent-of-a-linearlayout" title="Permanent link">&para;</a></h3>
 <p>In Android, a LinearLayout is used to lay your widgets out linearly—either horizontally or vertically. With Compose, use the <a href="https://foso.github.io/Jetpack-Compose-Playground/layout/row/">Row</a> or <a href="https://foso.github.io/Jetpack-Compose-Playground/layout/column/">Column</a> composable to achieve the same result.</p>
 <p>If you notice the two code samples are identical with the exception of the “Row” and “Column” composable. The children are the same and this feature can be exploited to develop rich layouts that can change overtime with the same children.</p>
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span>
 <span class="k">fun</span> <span class="nf">Example</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">Row</span> <span class="p">{</span>
         <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
@@ -1143,7 +1155,7 @@ The goal is to show how common use cases with the classic Android View system, c
 <span class="p">}</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span>
 <span class="k">fun</span> <span class="nf">Example</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">Column</span> <span class="p">{</span>
         <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
@@ -1158,7 +1170,7 @@ The goal is to show how common use cases with the classic Android View system, c
 <h3 id="what-is-the-equivalent-of-a-scrollview">What is the equivalent of a ScrollView?<a class="headerlink" href="#what-is-the-equivalent-of-a-scrollview" title="Permanent link">&para;</a></h3>
 <p>In Android, use a ScrollView to lay out your widgets—if the user’s device has a smaller screen than your content, it scrolls.</p>
 <p>In Compose, you can use a VerticalScroller.</p>
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span>
 <span class="k">fun</span> <span class="nf">VerticalScrollerExample</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">VerticalScroller</span> <span class="p">{</span>
         <span class="c1">//Only one child is allowed in a VerticalScroller</span>

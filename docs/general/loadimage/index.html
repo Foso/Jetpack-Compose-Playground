@@ -331,6 +331,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cookbook/hint_edit_text/" title="How to create HintTextField" class="md-nav__link">
+      How to create HintTextField
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -976,7 +988,7 @@
 
 <h1 id="how-to-load-an-image">How to load an image<a class="headerlink" href="#how-to-load-an-image" title="Permanent link">&para;</a></h1>
 <p>You can use <strong>imageResource</strong> to load an image from the resources</p>
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">LoadImageResourceDemo</span><span class="p">(){</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">LoadImageResourceDemo</span><span class="p">(){</span>
     <span class="k">val</span> <span class="py">imRes</span><span class="p">:</span> <span class="n">ImageAsset</span> <span class="p">=</span> <span class="n">imageResource</span><span class="p">(</span><span class="n">id</span> <span class="p">=</span> <span class="n">R</span><span class="p">.</span><span class="n">drawable</span><span class="p">.</span><span class="n">placeholder_1_1</span><span class="p">)</span>
 
     <span class="n">Box</span><span class="p">(</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">Modifier</span><span class="p">.</span><span class="n">preferredHeight</span><span class="p">(</span><span class="m">50.</span><span class="n">dp</span><span class="p">)</span> <span class="p">+</span> <span class="n">Modifier</span><span class="p">.</span><span class="n">preferredWidth</span><span class="p">(</span><span class="m">50.</span><span class="n">dp</span><span class="p">))</span> <span class="p">{</span>

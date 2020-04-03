@@ -327,6 +327,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cookbook/hint_edit_text/" title="How to create HintTextField" class="md-nav__link">
+      How to create HintTextField
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -963,7 +975,7 @@
   <img src ="../../images/RadioGroupExample.png" height=500 />
 </p>
 
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span>
 <span class="k">fun</span> <span class="nf">RadioGroupSample</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">val</span> <span class="py">radioOptions</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span> <span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="s">&quot;C&quot;</span><span class="p">)</span>
         <span class="k">val</span> <span class="p">(</span><span class="py">selectedOption</span><span class="p">,</span> <span class="py">onOptionSelected</span><span class="p">)</span> <span class="p">=</span> <span class="n">state</span> <span class="p">{</span> <span class="n">radioOptions</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">}</span>

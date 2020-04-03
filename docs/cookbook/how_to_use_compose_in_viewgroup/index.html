@@ -378,6 +378,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hint_edit_text/" title="How to create HintTextField" class="md-nav__link">
+      How to create HintTextField
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1038,7 +1050,7 @@
 </div>
 <p>Compose has a <strong>setContent()</strong>-extension function on ViewGroup which can be used, to use Compose inside a ViewGroup.
 This example will show you, how you can use Compose inside a FrameLayout. It should also work in other layouts like LinearLayout. As long as it&rsquo;s a layout that extends the <strong>ViewGroup</strong> class.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//Extension function from Compose</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">//Extension function from Compose</span>
 <span class="k">fun</span> <span class="nc">ViewGroup</span><span class="p">.</span><span class="nf">setContent</span><span class="p">(</span>
     <span class="n">content</span><span class="p">:</span> <span class="n">@Composable</span><span class="p">()</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="n">Unit</span>
 <span class="p">):</span> <span class="n">Composition</span> <span class="p">{</span>
@@ -1056,7 +1068,7 @@ This example will show you, how you can use Compose inside a FrameLayout. It sho
 <h2 id="create-a-custom-framelayout">Create a custom FrameLayout<a class="headerlink" href="#create-a-custom-framelayout" title="Permanent link">&para;</a></h2>
 <p>Create a custom FrameLayout, then you can use the <strong>setContent()</strong> for example inside <strong>init()</strong>. 
 Inside <strong>setContent()</strong> you can then add your Compose code.
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ComposeFrameLayout</span> <span class="n">@JvmOverloads</span> <span class="k">constructor</span><span class="p">(</span>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">ComposeFrameLayout</span> <span class="n">@JvmOverloads</span> <span class="k">constructor</span><span class="p">(</span>
     <span class="n">context</span><span class="p">:</span> <span class="n">Context</span><span class="p">,</span> <span class="n">attrs</span><span class="p">:</span> <span class="n">AttributeSet</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
     <span class="n">defStyleAttr</span><span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">0</span>
 <span class="p">)</span> <span class="p">:</span> <span class="n">FrameLayout</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">attrs</span><span class="p">,</span> <span class="n">defStyleAttr</span><span class="p">)</span> <span class="p">{</span>
@@ -1072,7 +1084,7 @@ Inside <strong>setContent()</strong> you can then add your Compose code.
 </code></pre></div></p>
 <h2 id="add-it-to-your-layout-file">Add it to your layout file<a class="headerlink" href="#add-it-to-your-layout-file" title="Permanent link">&para;</a></h2>
 <p>Just add your FrameLayout like any other layout.
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;LinearLayout</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>
     <span class="na">xmlns:tools=</span><span class="s">&quot;http://schemas.android.com/tools&quot;</span>
     <span class="na">android:id=</span><span class="s">&quot;@+id/container&quot;</span>
@@ -1132,13 +1144,13 @@ Inside <strong>setContent()</strong> you can then add your Compose code.
           </a>
         
         
-          <a href="../../general/codelabs/" title="Codelabs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../hint_edit_text/" title="How to create HintTextField" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Codelabs
+                How to create HintTextField
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

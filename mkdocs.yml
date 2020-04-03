@@ -27,6 +27,7 @@ nav:
            - 'Overview': cookbook/overview.md
            - 'Handle changes to a text field': cookbook/textfield_changes.md
            - 'How to use Compose in a ViewGroup': cookbook/how_to_use_compose_in_viewgroup.md
+           - 'How to create HintTextField': cookbook/hint_edit_text.md
       - 'Guides & Samples':
           - 'General':
               - 'Codelabs': general/codelabs.md
