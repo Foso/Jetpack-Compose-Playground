@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/general/state/">
+        <link rel="canonical" href="https://github.com/Foso/Jetpack-Compose-Playground/cookbook/hint_edit_text/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>State - Jetpack Compose Playground</title>
+        <title>How to create HintTextField - Jetpack Compose Playground</title>
       
     
     
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#compose-state" tabindex="0" class="md-skip">
+      <a href="#how-to-show-hint-with-underline-in-a-textfield" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -113,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                State
+                How to create HintTextField
               
             </span>
           
@@ -280,10 +280,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" checked>
     
     <label class="md-nav__link" for="nav-1-2">
       Cookbook
@@ -301,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cookbook/overview/" title="Overview" class="md-nav__link">
+    <a href="../overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -313,7 +315,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cookbook/textfield_changes/" title="Handle changes to a text field" class="md-nav__link">
+    <a href="../textfield_changes/" title="Handle changes to a text field" class="md-nav__link">
       Handle changes to a text field
     </a>
   </li>
@@ -325,7 +327,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cookbook/how_to_use_compose_in_viewgroup/" title="How to use Compose in a ViewGroup" class="md-nav__link">
+    <a href="../how_to_use_compose_in_viewgroup/" title="How to use Compose in a ViewGroup" class="md-nav__link">
       How to use Compose in a ViewGroup
     </a>
   </li>
@@ -335,11 +337,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../cookbook/hint_edit_text/" title="How to create HintTextField" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        How to create HintTextField
+      </label>
+    
+    <a href="./" title="How to create HintTextField" class="md-nav__link md-nav__link--active">
       How to create HintTextField
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-textfield" class="md-nav__link">
+    Create TextField
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-hinttextfield" class="md-nav__link">
+    Create HintTextField
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -352,12 +399,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
     
     <label class="md-nav__link" for="nav-1-3">
       Guides & Samples
@@ -373,12 +418,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-3-1" type="checkbox" id="nav-1-3-1">
     
     <label class="md-nav__link" for="nav-1-3-1">
       General
@@ -396,7 +439,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../codelabs/" title="Codelabs" class="md-nav__link">
+    <a href="../../general/codelabs/" title="Codelabs" class="md-nav__link">
       Codelabs
     </a>
   </li>
@@ -420,7 +463,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../compose_lifecycle/" title="Compose Lifecycle" class="md-nav__link">
+    <a href="../../general/compose_lifecycle/" title="Compose Lifecycle" class="md-nav__link">
       Compose Lifecycle
     </a>
   </li>
@@ -432,7 +475,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../compose_preview/" title="Compose Preview" class="md-nav__link">
+    <a href="../../general/compose_preview/" title="Compose Preview" class="md-nav__link">
       Compose Preview
     </a>
   </li>
@@ -444,7 +487,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../helloworld/" title="Hello World Compose" class="md-nav__link">
+    <a href="../../general/helloworld/" title="Hello World Compose" class="md-nav__link">
       Hello World Compose
     </a>
   </li>
@@ -456,7 +499,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../get_android_context/" title="How to get Android Context" class="md-nav__link">
+    <a href="../../general/get_android_context/" title="How to get Android Context" class="md-nav__link">
       How to get Android Context
     </a>
   </li>
@@ -468,7 +511,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../draw_on_canvas/" title="How to draw on Canvas" class="md-nav__link">
+    <a href="../../general/draw_on_canvas/" title="How to draw on Canvas" class="md-nav__link">
       How to draw on Canvas
     </a>
   </li>
@@ -480,7 +523,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../loadimage/" title="How to load an Image" class="md-nav__link">
+    <a href="../../general/loadimage/" title="How to load an Image" class="md-nav__link">
       How to load an Image
     </a>
   </li>
@@ -492,7 +535,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../detect_darkmode/" title="How to detect dark mode" class="md-nav__link">
+    <a href="../../general/detect_darkmode/" title="How to detect dark mode" class="md-nav__link">
       How to detect dark mode
     </a>
   </li>
@@ -504,7 +547,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../modifier/" title="Modifier" class="md-nav__link">
+    <a href="../../general/modifier/" title="Modifier" class="md-nav__link">
       Modifier
     </a>
   </li>
@@ -516,7 +559,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../getting_started/" title="Project Setup" class="md-nav__link">
+    <a href="../../general/getting_started/" title="Project Setup" class="md-nav__link">
       Project Setup
     </a>
   </li>
@@ -526,76 +569,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        State
-      </label>
-    
-    <a href="./" title="State" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../general/state/" title="State" class="md-nav__link">
       State
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#define-a-state" class="md-nav__link">
-    Define a state
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-state-function" class="md-nav__link">
-    1) state function
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-model" class="md-nav__link">
-    2) @Model
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1031,35 +1009,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#define-a-state" class="md-nav__link">
-    Define a state
+  <a href="#create-textfield" class="md-nav__link">
+    Create TextField
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-state-function" class="md-nav__link">
-    1) state function
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-model" class="md-nav__link">
-    2) @Model
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#create-hinttextfield" class="md-nav__link">
+    Create HintTextField
   </a>
   
 </li>
@@ -1081,59 +1039,86 @@
               
 
 
-<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20general/state/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/general/state.md">edit</a></span>
+<span style="float: right">🤔 Documentation issue? <a href="https://github.com/foso/Jetpack-Compose-Playground/issues/new?assignees=&labels=type%3A+documentation&template=4-doc.md&title=Doc%20issue%20with%20cookbook/hint_edit_text/%20page">Report</a> or <a href="https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs/cookbook/hint_edit_text.md">edit</a></span>
 
 
 
-<h1 id="compose-state">Compose State<a class="headerlink" href="#compose-state" title="Permanent link">&para;</a></h1>
-<h2 id="define-a-state">Define a state<a class="headerlink" href="#define-a-state" title="Permanent link">&para;</a></h2>
-<h3 id="1-state-function">1) state function<a class="headerlink" href="#1-state-function" title="Permanent link">&para;</a></h3>
-<p>val textState = state{&ldquo;Hello&rdquo;}</p>
-<p>You can use the state function to create a state. state{T} will return a MutableState<code>&lt;T&gt;</code></p>
-<h3 id="2-model">2) @Model<a class="headerlink" href="#2-model" title="Permanent link">&para;</a></h3>
-<p>You can also use @Model, when you annotate classes with it, you can use the whole class as a state and observe all properties.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">@Model</span>
-<span class="k">class</span> <span class="nc">TestState</span><span class="p">{</span>
-    <span class="k">var</span> <span class="py">count</span> <span class="p">=</span> <span class="m">0</span>
-<span class="p">}</span>
+<h1 id="how-to-show-hint-with-underline-in-a-textfield">How to show hint with underline in a TextField<a class="headerlink" href="#how-to-show-hint-with-underline-in-a-textfield" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>This is the API of version dev08. Newer versions may have a different one</p>
+</div>
+<p>We have all used EditText in classic Android development. It has lots of features like hint showing or default underline background. In Jetpack compose it&rsquo;s name is TextField
+and we set up it like that.</p>
+<h2 id="create-textfield">Create TextField<a class="headerlink" href="#create-textfield" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="c1">//Extension function from Compose</span>
+<span class="k">val</span> <span class="py">state</span> <span class="p">=</span> <span class="n">state</span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">}</span>
+<span class="n">TextField</span><span class="p">(</span>
+    <span class="n">value</span> <span class="p">=</span> <span class="n">state</span><span class="p">.</span><span class="n">value</span><span class="p">,</span>
+    <span class="n">modifier</span> <span class="p">=</span> <span class="n">modifier</span><span class="p">,</span>
+    <span class="n">onValueChange</span> <span class="p">=</span> <span class="p">{</span> <span class="n">state</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">it</span> <span class="p">},</span>
+    <span class="n">textStyle</span> <span class="p">=</span> <span class="n">yourTextStyle</span>
+<span class="p">)</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">textState</span> <span class="p">=</span> <span class="n">TestState</span><span class="p">()</span>
-</code></pre></div>
-
-<p>You can then create a object of the class and use it as a state. In this example you would then use &ldquo;textState.count&rdquo; to get/set the value of count.</p>
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<p>In this example we will create a composable with a Text and a Button. On a click on the button, the count state will go up and the text of Text will be updated.</p>
-<p align="center">
-Initial state:<br>
-  <img src ="../../images/state1.png"  />
-</p>
-
-<p align="center">
-After Button click:<br>
-  <img src ="../../images/state2.png"  />
-</p>
-
+<p>With textStyle parameter you can change your TextField&rsquo;s font, font size, color and many other things, but there are something that its missing, you cant quite set its PlaceHolder
+text(Hint). So how can we do that? If you think about that hint&rsquo;s only purpose is to be shown when TextField is empty and be hidden when we are starting to type something in TextField.
+So we need two views one Text for hint showing and one TextField. They must have same location on the screen so it will look like same component. So without further ado let&rsquo;s start
+implementing it.</p>
+<h2 id="create-hinttextfield">Create HintTextField<a class="headerlink" href="#create-hinttextfield" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="n">@Composable</span>
-<span class="k">fun</span> <span class="nf">StateDemo</span><span class="p">(){</span>
-    <span class="k">val</span> <span class="py">countState</span> <span class="p">=</span> <span class="n">state</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
-    <span class="n">Column</span> <span class="p">{</span>
-        <span class="n">Button</span><span class="p">(</span><span class="n">backgroundColor</span> <span class="p">=</span> <span class="n">MaterialTheme</span><span class="p">.</span><span class="n">colors</span><span class="p">().</span><span class="n">secondary</span><span class="p">,</span> <span class="n">onClick</span> <span class="p">=</span> <span class="p">{</span><span class="n">countState</span><span class="p">.</span><span class="n">value</span><span class="p">++})</span> <span class="p">{</span>
-            <span class="n">Text</span><span class="p">(</span><span class="s">&quot;count up&quot;</span><span class="p">)</span>
-        <span class="p">}</span>
-        <span class="n">Text</span><span class="p">(</span><span class="s">&quot;You have clicked the Button &quot;</span><span class="p">+</span><span class="n">countState</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span> <span class="p">+</span><span class="s">&quot; times&quot;</span><span class="p">)</span>
+<span class="k">fun</span> <span class="nf">HintEditText</span><span class="p">(</span>
+    <span class="n">hintText</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+    <span class="n">modifier</span><span class="p">:</span> <span class="n">Modifier</span> <span class="p">=</span> <span class="n">Modifier</span><span class="p">.</span><span class="n">None</span><span class="p">,</span>
+    <span class="n">textStyle</span><span class="p">:</span> <span class="n">TextStyle</span> <span class="p">=</span> <span class="n">currentTextStyle</span><span class="p">()</span>
+<span class="p">)</span> <span class="p">{</span>
+    <span class="k">val</span> <span class="py">state</span> <span class="p">=</span> <span class="n">state</span> <span class="p">{</span> <span class="s">&quot;&quot;</span> <span class="p">}</span>
+    <span class="k">val</span> <span class="py">inputField</span> <span class="p">=</span> <span class="n">@Composable</span> <span class="p">{</span>
+        <span class="n">TextField</span><span class="p">(</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="n">state</span><span class="p">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="n">modifier</span> <span class="p">=</span> <span class="n">modifier</span><span class="p">,</span>
+            <span class="n">onValueChange</span> <span class="p">=</span> <span class="p">{</span> <span class="n">state</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">it</span> <span class="p">},</span>
+            <span class="n">textStyle</span> <span class="p">=</span> <span class="n">textStyle</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">TextStyle</span><span class="p">(</span><span class="n">textDecoration</span> <span class="p">=</span> <span class="n">TextDecoration</span><span class="p">.</span><span class="n">None</span><span class="p">))</span>
+        <span class="p">)</span>
     <span class="p">}</span>
+
+    <span class="n">Layout</span><span class="p">(</span>
+        <span class="n">children</span> <span class="p">=</span> <span class="n">@Composable</span> <span class="p">{</span>
+            <span class="n">inputField</span><span class="p">()</span>
+            <span class="n">Text</span><span class="p">(</span>
+                <span class="n">text</span> <span class="p">=</span> <span class="n">hintText</span><span class="p">,</span>
+                <span class="n">modifier</span> <span class="p">=</span> <span class="n">modifier</span><span class="p">,</span>
+                <span class="n">style</span> <span class="p">=</span> <span class="n">textStyle</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">TextStyle</span><span class="p">(</span><span class="n">color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Gray</span><span class="p">))</span>
+            <span class="p">)</span>
+            <span class="n">Divider</span><span class="p">(</span><span class="n">color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Black</span><span class="p">,</span> <span class="n">height</span> <span class="p">=</span> <span class="m">2.</span><span class="n">dp</span><span class="p">)</span>
+        <span class="p">},</span>
+        <span class="n">measureBlock</span> <span class="p">=</span> <span class="p">{</span> <span class="n">measurables</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Measurable</span><span class="p">&gt;,</span> <span class="n">constraints</span><span class="p">:</span> <span class="n">Constraints</span><span class="p">,</span> <span class="n">_</span> <span class="p">-&gt;</span>
+            <span class="k">val</span> <span class="py">inputFieldPlace</span> <span class="p">=</span> <span class="n">measurables</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">measure</span><span class="p">(</span><span class="n">constraints</span><span class="p">)</span>
+            <span class="k">val</span> <span class="py">hintEditPlace</span> <span class="p">=</span> <span class="n">measurables</span><span class="p">[</span><span class="m">1</span><span class="p">].</span><span class="n">measure</span><span class="p">(</span><span class="n">constraints</span><span class="p">)</span>
+            <span class="k">val</span> <span class="py">dividerEditPlace</span> <span class="p">=</span> <span class="n">measurables</span><span class="p">[</span><span class="m">2</span><span class="p">].</span><span class="n">measure</span><span class="p">(</span>
+                <span class="n">Constraints</span><span class="p">(</span><span class="n">constraints</span><span class="p">.</span><span class="n">minWidth</span><span class="p">,</span> <span class="n">constraints</span><span class="p">.</span><span class="n">maxWidth</span><span class="p">,</span> <span class="m">2.</span><span class="n">ipx</span><span class="p">,</span> <span class="m">2.</span><span class="n">ipx</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">layout</span><span class="p">(</span>
+                <span class="n">inputFieldPlace</span><span class="p">.</span><span class="n">width</span><span class="p">,</span>
+                <span class="n">inputFieldPlace</span><span class="p">.</span><span class="n">height</span> <span class="p">+</span> <span class="n">dividerEditPlace</span><span class="p">.</span><span class="n">height</span>
+            <span class="p">)</span> <span class="p">{</span>
+                <span class="n">inputFieldPlace</span><span class="p">.</span><span class="n">place</span><span class="p">(</span><span class="m">0.</span><span class="n">ipx</span><span class="p">,</span> <span class="m">0.</span><span class="n">ipx</span><span class="p">)</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span>
+                    <span class="n">hintEditPlace</span><span class="p">.</span><span class="n">place</span><span class="p">(</span><span class="m">0.</span><span class="n">ipx</span><span class="p">,</span> <span class="m">0.</span><span class="n">ipx</span><span class="p">)</span>
+                <span class="n">dividerEditPlace</span><span class="p">.</span><span class="n">place</span><span class="p">(</span><span class="m">0.</span><span class="n">ipx</span><span class="p">,</span> <span class="n">inputFieldPlace</span><span class="p">.</span><span class="n">height</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="k">val</span> <span class="py">countState</span> <span class="p">=</span> <span class="n">state</span><span class="p">{</span><span class="m">0</span><span class="p">}</span>
-</code></pre></div>
-
-<p>Here we define the state for the click counter. 0 will be the initial value. Because 0 is an Int, the counterState will only allow values which are Int.</p>
-<p><div class="codehilite"><pre><span></span><code><span class="n">countState</span><span class="p">.</span><span class="n">value</span>
-</code></pre></div>
-With the value property you can get/set the value of the counterstate. In the onClick() function of the Button, the value will be incremented. The Text shows the value of the counterstate. When counterstate is changed, 
-&ldquo;Text&rdquo; will also change. </p>
+<p>Seems like lots of code for simple functional, doesn’t it? let’s describe whats happening from the function declaration. it has three function parameters and they are pretty
+self-explanatory. As second part we are creating TextField lambda and passing it in Layout Composable function, with our HintText and Divider, which as you might have guessed
+will create underline background. Now it&rsquo;s time to decide where we are going to put our HintTextField. First of all we need to measure our views and measureBlock will help us
+do that. measurables list will contain three items(Our TextField, HintText and Divider) as Measurable type, we need to call measure on all of list items and pass constraints in it. Constraint
+is class which only has four properties(minWidth, maxWidth, minHeight, maxHeight). We can pass constraints which is given to us by measuring @Composable children lambda, which works
+with our TextField and HintText because we want them to have same size as it&rsquo;s parent, but when it comes to underline background we need it to stay as thin as possible. 
+Now we are measuring our HintTextField one more time and placing it&rsquo;s children on some (x, y). One last thing to realize is that if our state value is not empty we don’t place
+our HintText at all!</p>
 
 
 
@@ -1154,7 +1139,7 @@ With the value property you can get/set the value of the counterstate. In the on
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../getting_started/" title="Project Setup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../how_to_use_compose_in_viewgroup/" title="How to use Compose in a ViewGroup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1163,19 +1148,19 @@ With the value property you can get/set the value of the counterstate. In the on
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Project Setup
+                How to use Compose in a ViewGroup
               </span>
             </div>
           </a>
         
         
-          <a href="../../compose/recompose/" title="Recompose" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../general/codelabs/" title="Codelabs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Recompose
+                Codelabs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

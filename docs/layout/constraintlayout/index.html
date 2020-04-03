@@ -331,6 +331,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cookbook/hint_edit_text/" title="How to create HintTextField" class="md-nav__link">
+      How to create HintTextField
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1051,7 +1063,7 @@
 <p>A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System</p>
 <p>A ConstraintLayout requires a <strong>ConstraintSet</strong> as parameter. In the ConstraintSet all constraints of the layout has to be declared. <strong>children</strong> will set the children of the layout </p>
 <h2 id="simple-constraintlayout">Simple ConstraintLayout<a class="headerlink" href="#simple-constraintlayout" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">SimpleConstraintLayout</span><span class="p">(){</span>
+<p><div class="codehilite"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">SimpleConstraintLayout</span><span class="p">(){</span>
     <span class="n">ConstraintLayout</span><span class="p">(</span><span class="n">constraintSet</span> <span class="p">=</span> <span class="n">ConstraintSet</span> <span class="p">{})</span> <span class="p">{</span>
         <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Text1&quot;</span><span class="p">)</span>
     <span class="p">}</span>
@@ -1065,23 +1077,23 @@ This is a ConstraintLayout that just shows a text composable. The ConstraintSet 
 <h2 id="align-a-constraintlayout-child">Align a ConstraintLayout child<a class="headerlink" href="#align-a-constraintlayout-child" title="Permanent link">&para;</a></h2>
 <p>Let&rsquo;s align the text composable created above, to the right end of it&rsquo;s a parent layout.</p>
 <p>First we need to create a <strong>LayoutTag</strong> for the Text. The LayoutTag will be added as a modifier. The tag name used inside the LayoutTag, will be used as a reference inside the ConstraintSet.</p>
-<div class="highlight"><pre><span></span><code><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Text1&quot;</span><span class="p">,</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">LayoutTag</span><span class="p">(</span><span class="s">&quot;text1&quot;</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Text</span><span class="p">(</span><span class="s">&quot;Text1&quot;</span><span class="p">,</span><span class="n">modifier</span> <span class="p">=</span> <span class="n">LayoutTag</span><span class="p">(</span><span class="s">&quot;text1&quot;</span><span class="p">))</span>
 </code></pre></div>
 
 <p>Inside the ConstraintSet, you have to add a <strong>tag()</strong> with the same name like your LayoutTag 
-<div class="highlight"><pre><span></span><code><span class="n">ConstraintSet</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="n">ConstraintSet</span> <span class="p">{</span>
 <span class="k">val</span> <span class="py">text1</span> <span class="p">=</span> <span class="n">tag</span><span class="p">(</span><span class="s">&quot;text1&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div></p>
 <p>Now you can apply constraints to this tag. With <strong>constrainTo</strong> you can set a composable to another one. </p>
-<div class="highlight"><pre><span></span><code><span class="n">ConstraintSet</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="n">ConstraintSet</span> <span class="p">{</span>
 <span class="k">val</span> <span class="py">text1</span> <span class="p">=</span> <span class="n">tag</span><span class="p">(</span><span class="s">&quot;text1&quot;</span><span class="p">)</span>
 <span class="n">text1</span><span class="p">.</span><span class="n">apply</span> <span class="p">{</span>
     <span class="n">right</span> <span class="n">constrainTo</span> <span class="n">parent</span><span class="p">.</span><span class="n">right</span>
 <span class="p">}}</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">FinalConstraintLayout</span><span class="p">(){</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">FinalConstraintLayout</span><span class="p">(){</span>
     <span class="n">ConstraintLayout</span><span class="p">(</span><span class="n">constraintSet</span> <span class="p">=</span> <span class="n">ConstraintSet</span> <span class="p">{</span>
         <span class="k">val</span> <span class="py">text1</span> <span class="p">=</span> <span class="n">tag</span><span class="p">(</span><span class="s">&quot;text1&quot;</span><span class="p">)</span>
         <span class="n">text1</span><span class="p">.</span><span class="n">apply</span> <span class="p">{</span>
@@ -1102,7 +1114,7 @@ This is a ConstraintLayout that just shows a text composable. The ConstraintSet 
 <p>A guideline can used as an invisible line to which you can constrain your composables.</p>
 <p>The example below shows how to create a guideline at 50% of the height of the ConstraintLayout and align a Text to it.
 There are similar functions for guidelines from left, right and bottom.</p>
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">TopGuideLineExample</span><span class="p">(){</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span> <span class="k">fun</span> <span class="nf">TopGuideLineExample</span><span class="p">(){</span>
     <span class="n">ConstraintLayout</span><span class="p">(</span><span class="n">constraintSet</span> <span class="p">=</span> <span class="n">ConstraintSet</span> <span class="p">{</span>
         <span class="k">val</span> <span class="py">half</span> <span class="p">=</span> <span class="n">createGuidelineFromTop</span><span class="p">(</span><span class="n">percent</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">)</span>
 

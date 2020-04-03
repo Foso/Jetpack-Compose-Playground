@@ -327,6 +327,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cookbook/hint_edit_text/" title="How to create HintTextField" class="md-nav__link">
+      How to create HintTextField
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -960,7 +972,7 @@
 <p>This is the API of version dev06. Newer versions may have a different one</p>
 </div>
 <p>You can use ContextAmbient.current to receive the context of your Android App inside a Compose Function</p>
-<div class="highlight"><pre><span></span><code><span class="n">@Composable</span>
+<div class="codehilite"><pre><span></span><code><span class="n">@Composable</span>
 <span class="k">fun</span> <span class="nf">AndroidContextComposeDemo</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">val</span> <span class="py">context</span> <span class="p">=</span> <span class="n">ContextAmbient</span><span class="p">.</span><span class="n">current</span>
         <span class="n">Text</span><span class="p">(</span><span class="s">&quot;Read this string from Context: &quot;</span><span class="p">+</span><span class="n">context</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">app_name</span><span class="p">))</span>
