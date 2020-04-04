@@ -1,8 +1,8 @@
 !!! info
-    This is the API of version dev06. Newer versions may have a different one
+    This is the API of version dev08. Newer versions may have a different one
     
 <p align="left">
-  <img src ="../../images/SwtichDemo.png" height=500 />
+  <img src ="../../images/material/switch/SwtichDemo.png" height=500 />
 </p>
 
 

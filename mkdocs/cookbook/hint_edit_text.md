@@ -8,7 +8,6 @@ and we set up it like that.
 
 ## Create TextField
 ```kotlin
-//Extension function from Compose
 val state = state { "" }
 TextField(
 	value = state.value,
@@ -71,11 +70,15 @@ fun HintEditText(
 ```
 
 
-Seems like lots of code for simple functional, doesn’t it? let’s describe whats happening from the function declaration. it has three function parameters and they are pretty
+Seems like lots of code for simple functional, doesn’t it? Let’s describe whats happening from the function declaration. It has three function parameters and they are pretty
 self-explanatory. As second part we are creating TextField lambda and passing it in Layout Composable function, with our HintText and Divider, which as you might have guessed
-will create underline background. Now it's time to decide where we are going to put our HintTextField. First of all we need to measure our views and measureBlock will help us
-do that. measurables list will contain three items(Our TextField, HintText and Divider) as Measurable type, we need to call measure on all of list items and pass constraints in it. Constraint
-is class which only has four properties(minWidth, maxWidth, minHeight, maxHeight). We can pass constraints which is given to us by measuring @Composable children lambda, which works
+will create underline background. Now it's time to decide where we are going to put our HintTextField. 
+
+First of all we need to measure our views and **measureBlock** will help us do that. 
+Measurables list will contain three items(Our TextField, HintText and Divider) as Measurable type, we need to call measure on all of list items and pass constraints in it. Constraints
+is a class which only has four properties(minWidth, maxWidth, minHeight, maxHeight). We can pass constraints which is given to us by measuring @Composable children lambda, which works
 with our TextField and HintText because we want them to have same size as it's parent, but when it comes to underline background we need it to stay as thin as possible. 
-Now we are measuring our HintTextField one more time and placing it's children on some (x, y). One last thing to realize is that if our state value is not empty we don’t place
+Now we are measuring our HintTextField one more time and placing it's children on some (x, y).
+ 
+One last thing to realize is that if our state value is not empty we don’t place
 our HintText at all!
