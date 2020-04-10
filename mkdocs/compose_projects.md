@@ -3,7 +3,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 
 # Example Apps
 
-| Sample                                    | Description  |
+| Name                                    | Description  |
 | ----------------------------------------- | ------------------------------------ |
 | [Jetpack Compose Playground](https://github.com/Foso/Jetpack-Compose-Playground)  		    | Collection of Jetpack Compose example code :rocket: .  |
 | [Compose Pokedex](https://github.com/zsoltk/compose-pokedex)  		    | Pokedex on Jetpack Compose.  |
@@ -17,10 +17,11 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 
 # Libraries
 
-| Sample                                    | Description  |
+| Name                                    | Description  |
 | ----------------------------------------- | ------------------------------------ |
 | [Compose Router](https://github.com/zsoltk/compose-router)  		    | Routing functionality for Jetpack Compose with back stack |
 | [Compose Glide Image](https://github.com/mvarnagiris/compose-glide-image)  		    | Simple Glide library adaptation for Jetpack Compose.  |
 | [Compose Navigation](https://github.com/mvarnagiris/compose-navigation)  		    |  |
 | [Compose Backstack](https://github.com/zach-klippenstein/compose-backstack)  		    | Simple composable for rendering transitions between backstacks.|
+| [SwipeReveal-Compose](https://github.com/kacmacuna/SwipeReveal-Compose)  		    | A layout that you can swipe to show action buttons.|
 
