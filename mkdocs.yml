@@ -19,6 +19,7 @@ theme:
   icon:
     logo: material/cloud
 extra:
+  manifest: manifest.webmanifest
   social:
     - icon: fontawesome/brands/github-alt
       link: 'https://github.com/foso'
