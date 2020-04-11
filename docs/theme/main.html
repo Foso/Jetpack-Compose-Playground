@@ -12,6 +12,10 @@
 <h1>{{ page.title | default(config.site_name, true)}}</h1>
 {% endif %}
 {{ page.content }}
+<hr>
+{% if page.meta.git_revision_date_localized %}
+Last update: {{ page.meta.git_revision_date_localized }}
+{% endif %}
 {% block source %}
 {% if page and page.meta and page.meta.source %}
 <h2 id="__source">{{ lang.t("meta.source") }}</h2>

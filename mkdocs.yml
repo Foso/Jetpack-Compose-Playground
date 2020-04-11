@@ -8,17 +8,21 @@ docs_dir: 'mkdocs'
 edit_uri: 'tree/master/mkdocs/'
 theme:
   name: 'material'
+  language: en
   custom_dir: 'mkdocs/theme'
   palette:
     primary: 'deep-blue'
     accent: 'deep-purple'
   feature:
-    tabs: true
+    - tabs: true
+    - instant
+  icon:
+    logo: material/cloud
 extra:
   social:
-    - type: 'github'
+    - icon: fontawesome/brands/github-alt
       link: 'https://github.com/foso'
-    - type: 'twitter'
+    - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/jklingenberg_'
 nav:
   - 'Jetpack Compose':
@@ -93,3 +97,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - git-revision-date-localized:
+      type: date
+  - minify:
+      minify_html: true
