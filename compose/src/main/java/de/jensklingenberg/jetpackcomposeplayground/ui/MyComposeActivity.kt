@@ -26,7 +26,7 @@ class MyComposeActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            BoxDemo()
+            HomeScreen()
         }
     }
 }
