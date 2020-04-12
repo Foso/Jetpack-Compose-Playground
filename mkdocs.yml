@@ -10,6 +10,9 @@ theme:
   name: 'material'
   language: en
   custom_dir: 'mkdocs/theme'
+  font:
+    text: Ubuntu
+    code: Jetbrains Mono
   palette:
     primary: 'deep-blue'
     accent: 'deep-purple'

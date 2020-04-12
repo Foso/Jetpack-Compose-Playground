@@ -55,6 +55,33 @@ fun VerticalScrollerExample() {
 }
 ```
 
+### What is the equivalent of wrap_content?
+
+In the classic Android View system you use **wrap_content** to set the height/width of a View to the minimun needed value.  
+
+In Compose, you can set a Modifier:
+
+#### Modifier.wrapContentWidth()
+Android View equivalent -> android:layout_width="wrap_content"
+
+#### Modifier.wrapContentHeight()
+Android View equivalent ->android:layout_height="wrap_content"
+
+#### Modifier.wrapContentSize()
+Android View equivalent ->android:layout_height="wrap_content"
+
+Android View equivalent -> android:layout_width="wrap_content"
+
+```kotlin
+@Composable
+fun Example() {
+    Row {
+        Text("Text1",modifier = Modifier.wrapContentWidth())
+        Text("Text2",modifier = Modifier.wrapContentHeight())
+    }
+}
+```
+
 ## Working with Text
 
 ### What is the equivalent of a TextView?
