@@ -19,13 +19,14 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 import android.app.Activity
 import android.os.Bundle
 import androidx.ui.core.setContent
+import de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation.BoxDemo
 
 class MyComposeActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            HomeScreen()
+            BoxDemo()
         }
     }
 }

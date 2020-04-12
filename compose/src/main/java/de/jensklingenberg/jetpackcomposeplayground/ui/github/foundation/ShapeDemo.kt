@@ -16,17 +16,10 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
-import android.app.Activity
-import android.graphics.drawable.ShapeDrawable
-import android.os.Bundle
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
-import androidx.ui.core.setContent
 import androidx.ui.foundation.Box
-import androidx.ui.foundation.ContentGravity
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.samples.SimpleCircleBox
 import androidx.ui.foundation.shape.GenericShape
 import androidx.ui.foundation.shape.RectangleShape
 import androidx.ui.foundation.shape.corner.CircleShape
@@ -41,11 +34,11 @@ import androidx.ui.unit.dp
 
 @Composable
 fun CircleShapeDemo(){
-    ExampleBox(shape = CircleShape)
+    BoxDemo(shape = CircleShape)
 }
 
 @Composable
-fun ExampleBox(shape: Shape){
+fun BoxDemo(shape: Shape){
     Column(modifier = Modifier.fillMaxWidth() + Modifier.wrapContentSize(Alignment.Center)) {
         Box(
             modifier = Modifier.preferredSize(100.dp),
@@ -59,24 +52,24 @@ fun ExampleBox(shape: Shape){
 
 @Composable
 fun RoundedCornerShapeDemo(){
-    ExampleBox(shape = RoundedCornerShape(10.dp))
+    BoxDemo(shape = RoundedCornerShape(10.dp))
 }
 
 @Composable
 fun CutCornerShapeDemo(){
-    ExampleBox(shape = CutCornerShape(10.dp))
+    BoxDemo(shape = CutCornerShape(10.dp))
 }
 
 
 
 @Composable
 fun RectangleShapeDemo(){
-    ExampleBox(shape = RectangleShape)
+    BoxDemo(shape = RectangleShape)
 }
 
 @Composable
 fun TriangleShapeDemo(){
-    ExampleBox(shape = CustomShape())
+    BoxDemo(shape = CustomShape())
 }
 
 

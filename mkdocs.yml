@@ -53,6 +53,7 @@ nav:
               - 'Recompose': compose/recompose.md
           - 'Foundation':
               - 'AdapterList': foundation/adapter_list.md
+              - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md
               - 'Clickable': foundation/clickable.md
               - 'HorizontalScroller': foundation/horizontal_scroller.md

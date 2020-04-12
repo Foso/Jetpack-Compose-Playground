@@ -30,6 +30,7 @@ import androidx.ui.material.DrawerState
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.unit.dp
+import de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation.CanvasDrawExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.material.CheckBoxDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.RowExample

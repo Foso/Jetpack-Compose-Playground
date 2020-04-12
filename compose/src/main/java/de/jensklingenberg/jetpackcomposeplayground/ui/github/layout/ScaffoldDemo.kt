@@ -1,6 +1,8 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.github.layout
 
 import androidx.compose.Composable
+import androidx.ui.core.Alignment
+import androidx.ui.foundation.Box
 import androidx.ui.foundation.Text
 import androidx.ui.graphics.Color
 import androidx.ui.material.*
@@ -22,4 +24,3 @@ fun ScaffoldDemo() {
           bottomAppBar = { BottomAppBar(color = materialBlue700) { Text("BottomAppBar") } }
       )
 }
-
