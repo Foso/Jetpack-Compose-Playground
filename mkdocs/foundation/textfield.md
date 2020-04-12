@@ -1,5 +1,5 @@
 # TextField
-In the Android TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
+TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
 
 <p align="left">
   <img src ="../../images/TextFieldDemo.png"  />
