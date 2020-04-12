@@ -8,10 +8,10 @@ https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-su
 When an app has layout content that might be longer than the height of the device and that content should be vertically scrollable, then we need to use a VerticalScroller. It's similar to a ScrollView
 
 <video width="320" height="240" controls>
-  <source src="../../images/VerticalScroller.webm" type="video/webm">
+  <source src="../../images/foundation/verticalscroller/VerticalScroller.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
-https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/VerticalScroller.webm
+https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/foundation/verticalscroller/VerticalScroller.webm
 
 ```kotlin
 @Composable

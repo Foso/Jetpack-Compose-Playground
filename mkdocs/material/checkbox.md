@@ -2,7 +2,7 @@
     This is the API of version dev08. Newer versions may have a different one
 
 <p align="left">
-  <img src ="../../images/CheckboxDemo.png" height=500 />
+  <img src ="../../images/material/checkbox/CheckboxDemo.png" height=500 />
 </p>
 
 ```kotlin
