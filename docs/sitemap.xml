@@ -44,10 +44,6 @@
      <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/draw_on_canvas/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/loadimage/</loc>
      <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
@@ -73,6 +69,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/adapter_list/</loc>
+     <lastmod>2020-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/canvas/</loc>
      <lastmod>2020-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
