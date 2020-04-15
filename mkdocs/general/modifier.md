@@ -4,8 +4,8 @@ To set them, a composable needs to accept a modifier as a parameter.
 
 ## Combine modifiers    
 ```kotlin
-    Column(modifier = Modifier.preferredHeight(500.dp) + Modifier.padding(100.dp)) {
-                Text("Hello")
+Column(modifier = Modifier.preferredHeight(500.dp) + Modifier.padding(100.dp)) {
+    Text("Hello")
 }
 ```
 You can combine multiple modifiers with plus sign.

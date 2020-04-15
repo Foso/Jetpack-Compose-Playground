@@ -67,7 +67,6 @@ nav:
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
               - 'Row': layout/row.md
-              - 'Scaffold': layout/scaffold.md
               - 'Stack': layout/stack.md
           - 'Material':
               - 'AlertDialog': material/alertdialog.md
@@ -75,6 +74,7 @@ nav:
               - 'Checkbox': material/checkbox.md
               - 'ModalDrawerLayout': material/modaldrawer.md
               - 'RadioGroup': material/radiogroup.md
+              - 'Scaffold': material/scaffold.md
               - 'Switch': material/switch.md
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md

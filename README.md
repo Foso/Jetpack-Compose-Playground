@@ -30,7 +30,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 ### Layout
 * [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout/)
-* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/layout/scaffold/)
+* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold/)
 * [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column/)
 * [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row/)
 * [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack/)
