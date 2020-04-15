@@ -20,28 +20,27 @@ import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Direction
 import androidx.ui.core.DrawModifier
+import androidx.ui.core.ContentDrawScope
 import androidx.ui.core.Layout
 import androidx.ui.core.Modifier
-import androidx.ui.core.gesture.DoubleTapGestureDetector
-import androidx.ui.core.gesture.DragGestureDetector
+import androidx.ui.core.gesture.doubleTapGestureFilter
 import androidx.ui.core.gesture.DragObserver
-import androidx.ui.core.gesture.LongPressGestureDetector
-import androidx.ui.core.gesture.PressIndicatorGestureDetector
-import androidx.ui.core.gesture.TapGestureDetector
+import androidx.ui.core.gesture.longPressGestureFilter
+import androidx.ui.core.gesture.pressIndicatorGestureFilter
+import androidx.ui.core.gesture.tapGestureFilter
+import androidx.ui.core.gesture.dragGestureFilter
 import androidx.ui.foundation.Border
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.drawBackground
 import androidx.ui.foundation.drawBorder
-import androidx.ui.graphics.Canvas
 import androidx.ui.graphics.Color
+import androidx.ui.graphics.withSave
 import androidx.ui.layout.Column
 import androidx.ui.layout.fillMaxWidth
 import androidx.ui.layout.preferredHeight
-import androidx.ui.unit.Density
 import androidx.ui.unit.Dp
 import androidx.ui.unit.IntPx
 import androidx.ui.unit.PxPosition
-import androidx.ui.unit.PxSize
 import androidx.ui.unit.dp
 import androidx.ui.unit.ipx
 import androidx.ui.unit.px
@@ -105,7 +104,7 @@ private fun Draggable(children: @Composable() () -> Unit) {
 
     Layout(
         children = children,
-        modifier = DragGestureDetector(dragObserver, canDrag) + ClipModifier,
+        modifier = Modifier.dragGestureFilter(dragObserver, canDrag) + ClipModifier,
         measureBlock = { measurables, constraints, _ ->
             val placeable =
                 measurables.first()
@@ -120,11 +119,11 @@ private fun Draggable(children: @Composable() () -> Unit) {
 }
 
 val ClipModifier = object : DrawModifier {
-    override fun draw(density: Density, drawContent: () -> Unit, canvas: Canvas, size: PxSize) {
-        canvas.save()
-        canvas.clipRect(size.toRect())
-        drawContent()
-        canvas.restore()
+    override fun ContentDrawScope.draw() {
+        withSave {
+            clipRect(size.toRect())
+            drawContent()
+        }
     }
 }
 
@@ -163,18 +162,17 @@ private fun Pressable(
         showPressed.value = false
     }
 
-    val gestureDetectors = PressIndicatorGestureDetector(
-        onPress,
-        onRelease,
-        onRelease
-    ) + TapGestureDetector(onTap) +
-            DoubleTapGestureDetector(onDoubleTap) +
-            LongPressGestureDetector(onLongPress)
+    val gestureDetectors =
+        Modifier
+            .pressIndicatorGestureFilter(onPress, onRelease, onRelease)
+            .tapGestureFilter(onTap)
+            .doubleTapGestureFilter(onDoubleTap)
+            .longPressGestureFilter(onLongPress)
 
     val layout = Modifier.fillMaxWidth().preferredHeight(height)
 
     val pressOverlay =
-        if (showPressed.value) Modifier.drawBackground(pressedColor) else Modifier.None
+        if (showPressed.value) Modifier.drawBackground(pressedColor) else Modifier
     Box(gestureDetectors.plus(layout).drawBackground(color.value).plus(pressOverlay))
 }
 

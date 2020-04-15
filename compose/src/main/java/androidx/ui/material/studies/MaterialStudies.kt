@@ -16,8 +16,6 @@
 
 package androidx.ui.material.studies
 
-
-
 import androidx.ui.demos.common.ActivityDemo
 import androidx.ui.demos.common.DemoCategory
 import androidx.ui.material.studies.rally.RallyActivity

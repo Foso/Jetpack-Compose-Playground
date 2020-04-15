@@ -26,11 +26,10 @@ import androidx.ui.demos.common.Demo
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.TextField
-import androidx.ui.text.TextFieldValue
+import androidx.ui.foundation.TextFieldValue
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.compositeOver
 import androidx.ui.layout.Column
-import androidx.ui.layout.RowAlign
 import androidx.ui.layout.preferredHeight
 import androidx.ui.layout.wrapContentSize
 import androidx.ui.material.IconButton
@@ -83,11 +82,11 @@ fun FilterAppBar(
             // surfaces in dark theme
             primary.copy(alpha = 0.08f).compositeOver(surface)
         }
-        TopAppBar( contentColor = onSurface) {
-            IconButton(modifier = Modifier.gravity(RowAlign.Center), onClick = onClose) {
+        TopAppBar(backgroundColor = appBarColor, contentColor = onSurface) {
+            IconButton(modifier = Modifier.gravity(Alignment.CenterVertically), onClick = onClose) {
                 Icon(Icons.Filled.Close)
             }
-            FilterField(filterText, onFilter, Modifier.gravity(RowAlign.Center))
+            FilterField(filterText, onFilter, Modifier.gravity(Alignment.CenterVertically))
         }
     }
 }
@@ -99,7 +98,7 @@ fun FilterAppBar(
 private fun FilterField(
     filterText: TextFieldValue,
     onFilter: (TextFieldValue) -> Unit,
-    modifier: Modifier = Modifier.None
+    modifier: Modifier = Modifier
 ) {
     val identifier = "filter"
     val manager = FocusManagerAmbient.current

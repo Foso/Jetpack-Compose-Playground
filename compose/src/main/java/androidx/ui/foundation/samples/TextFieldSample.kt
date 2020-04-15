@@ -20,8 +20,7 @@ package androidx.ui.foundation.samples
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.foundation.TextField
-
-import androidx.ui.text.TextFieldValue
+import androidx.ui.foundation.TextFieldValue
 
 
 @Composable

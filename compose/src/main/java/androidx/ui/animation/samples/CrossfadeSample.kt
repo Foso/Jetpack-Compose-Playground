@@ -14,29 +14,20 @@
  * limitations under the License.
  */
 
-package androidx.ui.foundation.demos
+package androidx.ui.animation.samples
+
 
 import androidx.compose.Composable
-import androidx.ui.foundation.AdapterList
+import androidx.ui.animation.Crossfade
 import androidx.ui.foundation.Text
-import androidx.ui.text.TextStyle
-import androidx.ui.unit.sp
+
 
 @Composable
-fun ListDemo() {
-    AdapterList(
-        data = listOf(
-            "Hello,", "World:", "It works!", "",
-            "this one is really long and spans a few lines for scrolling purposes",
-            "these", "are", "offscreen"
-        ) + (1..100).map { "$it" }.toList()
-    ) {
-        Text(text = it, style = TextStyle(fontSize = 80.sp))
-
-        if (it.contains("works")) {
-            Text("You can even emit multiple components per item.")
+fun CrossfadeSample() {
+    Crossfade(current = "A") { screen ->
+        when (screen) {
+            "A" -> Text("Page A")
+            "B" -> Text("Page B")
         }
-
-        println("Composed item: $it")
     }
 }

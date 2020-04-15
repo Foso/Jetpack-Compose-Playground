@@ -28,6 +28,7 @@ import androidx.ui.material.darkColorPalette
 import androidx.ui.material.lightColorPalette
 import kotlin.reflect.full.memberProperties
 
+
 /** Adds `preference` to this preference group. */
 inline operator fun PreferenceGroup.plusAssign(preference: Preference) {
     addPreference(preference)
@@ -60,7 +61,7 @@ class DemoSettingsActivity : AppCompatActivity() {
                 title = "Shuffle all colors"
                 onPreferenceClickListener = Preference.OnPreferenceClickListener {
                     generateRandomPalette().saveColors(context)
-                    activity!!.finish()
+                    requireActivity().finish()
                     true
                 }
             }
@@ -70,7 +71,7 @@ class DemoSettingsActivity : AppCompatActivity() {
                 onPreferenceClickListener = Preference.OnPreferenceClickListener {
                     val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
                     sharedPreferences.edit().clear().apply()
-                    activity!!.finish()
+                    requireActivity().finish()
                     true
                 }
             }

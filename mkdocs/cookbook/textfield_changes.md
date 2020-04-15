@@ -14,7 +14,8 @@ With Compose you have the following options:
 @Composable
 fun HandleTextFieldChanges() {
     Column {
-        val state = state { "" }
+       val state = state { TextFieldValue("") }
+
         TextField(
             value = state.value,
             onValueChange = { state.value = it }

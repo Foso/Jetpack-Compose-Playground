@@ -17,7 +17,9 @@
 package androidx.ui.demos
 
 import androidx.compose.Composable
+import androidx.compose.getValue
 import androidx.compose.mutableStateOf
+import androidx.compose.setValue
 import androidx.ui.animation.Crossfade
 import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
@@ -28,7 +30,7 @@ import androidx.ui.demos.common.DemoCategory
 import androidx.ui.demos.common.allLaunchableDemos
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
-
+import androidx.ui.foundation.TextFieldValue
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.Column
 import androidx.ui.layout.preferredHeight
@@ -41,7 +43,6 @@ import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.ArrowBack
 import androidx.ui.material.icons.filled.Search
 import androidx.ui.material.icons.filled.Settings
-import androidx.ui.text.TextFieldValue
 import androidx.ui.unit.dp
 
 @Composable

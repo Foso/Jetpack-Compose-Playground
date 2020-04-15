@@ -16,12 +16,11 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.ui
 
-import android.app.Activity
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.ui.core.setContent
-import de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation.BoxDemo
 
-class MyComposeActivity : Activity() {
+class MyComposeActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,3 +29,4 @@ class MyComposeActivity : Activity() {
         }
     }
 }
+

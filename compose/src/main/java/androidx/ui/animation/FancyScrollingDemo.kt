@@ -25,11 +25,11 @@ import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.compose.state
 import androidx.ui.animation.animatedFloat
+import androidx.ui.core.DrawScope
 import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.DragObserver
-import androidx.ui.core.gesture.RawDragGestureDetector
+import androidx.ui.core.gesture.rawDragGestureFilter
 import androidx.ui.foundation.Canvas
-import androidx.ui.foundation.CanvasScope
 import androidx.ui.foundation.Text
 import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
@@ -54,7 +54,7 @@ fun FancyScrollingDemo() {
         )
         val animScroll = animatedFloat(0f)
         val itemWidth = state { 0f }
-        val gesture = RawDragGestureDetector(dragObserver = object : DragObserver {
+        val gesture = Modifier.rawDragGestureFilter(dragObserver = object : DragObserver {
             override fun onDrag(dragDistance: PxPosition): PxPosition {
                 // Snap to new drag position
                 animScroll.snapTo(animScroll.value + dragDistance.x.value)
@@ -93,7 +93,7 @@ fun FancyScrollingDemo() {
     }
 }
 
-private fun CanvasScope.drawItems(
+private fun DrawScope.drawItems(
     scrollPosition: Float,
     width: Float,
     height: Float,

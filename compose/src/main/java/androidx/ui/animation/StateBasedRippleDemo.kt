@@ -28,7 +28,7 @@ import androidx.compose.state
 import androidx.ui.animation.Transition
 import androidx.ui.core.DensityAmbient
 import androidx.ui.core.Modifier
-import androidx.ui.core.gesture.PressIndicatorGestureDetector
+import androidx.ui.core.gesture.pressIndicatorGestureFilter
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.Canvas
 import androidx.ui.geometry.Offset
@@ -61,14 +61,14 @@ private fun RippleRect() {
     }
     Transition(definition = rippleTransDef, toState = toState.value) { state ->
         RippleRectFromState(
-            PressIndicatorGestureDetector(onStart = onPress, onStop = onRelease), state =
+            Modifier.pressIndicatorGestureFilter(onStart = onPress, onStop = onRelease), state =
             state
         )
     }
 }
 
 @Composable
-private fun RippleRectFromState(modifier: Modifier = Modifier.None, state: TransitionState) {
+private fun RippleRectFromState(modifier: Modifier = Modifier, state: TransitionState) {
     Canvas(modifier.fillMaxSize()) {
         // TODO: file bug for when "down" is not a file level val, it's not memoized correctly
         val x = down.x

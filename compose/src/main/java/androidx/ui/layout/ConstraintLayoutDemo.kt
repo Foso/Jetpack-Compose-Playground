@@ -41,7 +41,71 @@ fun ConstraintLayoutDemo() {
     Demo3()
 }
 
+@Composable
+fun Demo1() {
+    ConstraintLayout(
+        modifier = Modifier.drawBackground(color = Color.Gray),
+        constraintSet = ConstraintSet {
+            val text1 = tag("text1")
+            val text2 = tag("text2")
+            val divider = tag("divider")
 
+            text1.left constrainTo divider.right
+            text1.right constrainTo parent.right
+            text1.bottom constrainTo parent.bottom
+            text1.top constrainTo parent.top
+            divider.top constrainTo parent.top
+            divider.bottom constrainTo parent.bottom
+            divider.left constrainTo parent.left
+            divider.right constrainTo parent.right
+            text2.top constrainTo divider.top
+            text2.bottom constrainTo divider.bottom
+            text2.verticalBias = 0.2f
+
+            text1.width = wrap
+            text1.height = wrapFixed
+            divider.width = valueFixed(1.dp)
+            divider.height = spread
+        }) {
+        Text(
+            (0 until 100).fold("") { text, value -> "$text$value " },
+            Modifier.tag("text1")
+        )
+        Text("Short text", Modifier.tag("text2"))
+        Box(
+            modifier = Modifier.tag("divider").preferredWidth(1.dp).fillMaxHeight(),
+            backgroundColor = Color.Green
+        )
+    }
+}
+
+@Composable
+fun Demo2() {
+    ConstraintLayout(
+        modifier = Modifier.drawBackground(Color.Cyan),
+        constraintSet = ConstraintSet {
+            val text = tag("text")
+            val divider = tag("divider")
+            val guideline = createGuidelineFromLeft(0.5f)
+
+            text.left constrainTo guideline
+            text.right constrainTo parent.right
+            text.bottom constrainTo parent.bottom
+            text.top constrainTo parent.top
+            divider.top constrainTo parent.top
+            divider.bottom constrainTo parent.bottom
+            divider.left constrainTo parent.left
+            divider.right constrainTo parent.right
+            divider.width = valueFixed(1.dp)
+            divider.height = spread
+        }) {
+        Text("Short text", Modifier.tag("text"))
+        Box(
+            modifier = Modifier.tag("divider").preferredWidth(1.dp).fillMaxHeight(),
+            backgroundColor = Color.Green
+        )
+    }
+}
 
 @Composable
 fun Demo3() {

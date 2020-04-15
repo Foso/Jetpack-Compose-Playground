@@ -21,7 +21,7 @@ import android.util.Log
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Modifier
-import androidx.ui.core.gesture.LongPressGestureDetector
+import androidx.ui.core.gesture.longPressGestureFilter
 import androidx.ui.foundation.ClickableText
 import androidx.ui.foundation.Text
 import androidx.ui.text.AnnotatedString
@@ -44,7 +44,7 @@ fun ClickableText() {
 @Composable
 fun LongClickableText(
     text: AnnotatedString,
-    modifier: Modifier = Modifier.None,
+    modifier: Modifier = Modifier,
     style: TextStyle = TextStyle.Default,
     softWrap: Boolean = false,
     overflow: TextOverflow = TextOverflow.Clip,
@@ -53,7 +53,7 @@ fun LongClickableText(
     onLongClick: (offset: Int) -> Unit
 ) {
     val layoutResult = state<TextLayoutResult?> { null }
-    val gesture = LongPressGestureDetector(
+    val gesture = Modifier.longPressGestureFilter(
         onLongPress = { pos ->
             layoutResult.value?.let { layout ->
                 onLongClick(layout.getOffsetForPosition(pos))

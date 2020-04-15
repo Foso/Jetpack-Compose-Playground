@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.ui.demos.DemoActivity
-import de.jensklingenberg.jetpackcomposeplayground.ui.MyComposeActivity
+
 
 
 class MainActivity : AppCompatActivity() {

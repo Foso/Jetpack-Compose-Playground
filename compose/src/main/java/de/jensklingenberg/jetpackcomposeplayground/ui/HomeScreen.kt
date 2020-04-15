@@ -17,18 +17,20 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.ui
 
-import DrawLayerDemo
-import androidx.compose.Composable
-import androidx.compose.state
+
+import androidx.compose.*
 import androidx.ui.foundation.Text
 import androidx.ui.demos.common.ComposableDemo
 import androidx.ui.demos.common.DemoCategory
 import androidx.ui.foundation.VerticalScroller
+import androidx.ui.graphics.vector.VectorAsset
 import androidx.ui.layout.*
 import androidx.ui.material.Button
 import androidx.ui.material.DrawerState
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.ModalDrawerLayout
+import androidx.ui.material.icons.Icons
+import androidx.ui.material.studies.rally.*
 import androidx.ui.unit.dp
 import de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation.CanvasDrawExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.*
@@ -39,6 +41,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.Sw
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AndroidContextComposeDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.CounterModelDemo
+import kotlin.reflect.KProperty
 
 
 val MyHomeScreen = DemoCategory("My example Demos", listOf(
@@ -52,7 +55,9 @@ fun HomeScreen() {
     MaterialTheme {
         val (drawerState: androidx.ui.material.DrawerState, onDrawerStateChange: (DrawerState) -> Unit) = state { DrawerState.Closed }
 
-        var currentScreen by state { ScreenState.Overview }
+        var currentScreen by state<ScreenState>(init = {
+            ScreenState.Overview
+        })
 
         ModalDrawerLayout(
             drawerState = drawerState,
@@ -66,8 +71,8 @@ fun HomeScreen() {
             },
             bodyContent = {
 
-                Column(modifier = LayoutWidth.Fill, arrangement = Arrangement.Center) {
-                    Row(modifier = LayoutWidth.Fill, arrangement = Arrangement.Start) {
+                Column(modifier = LayoutWidth.Fill) {
+                    Row(modifier = LayoutWidth.Fill) {
                         Button( onClick = {
                             onDrawerStateChange(DrawerState.Opened)
                         }){
@@ -97,12 +102,16 @@ fun HomeScreen() {
     }
 
 }
+
+
+
+
 @Composable
 fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(ScreenState)->Unit) {
     val allScreens = ScreenState.values().toList()
 
     VerticalScroller {
-        Column(arrangement = Arrangement.Top) {
+        Column() {
             allScreens.forEach {
                 Spacer(LayoutHeight(10.dp))
                 Button( onClick = {
@@ -123,7 +132,7 @@ fun myOverView(fn:(ScreenState)->Unit){
     val allScreens = ScreenState.values().toList()
 
     VerticalScroller {
-        Column(arrangement = Arrangement.Top) {
+        Column() {
             allScreens.forEach {
                 Spacer(LayoutHeight(10.dp))
                 Button( onClick = {
@@ -138,8 +147,10 @@ fun myOverView(fn:(ScreenState)->Unit){
     }
 }
 
-enum class ScreenState {
-    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo,DrawlayerDemo
+
+enum class ScreenState( ) {
+    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample,CounterModelDemo
+    //,DrawlayerDemo
 }
 
 @Composable
@@ -157,5 +168,5 @@ fun ScreenState.body() = when (this) {
     ScreenState.RadioGroupSample -> RadioGroupSample()
     ScreenState.AlertDialogSample -> AlertDialogSample()
     ScreenState.CounterModelDemo -> CounterModelDemo()
-    ScreenState.DrawlayerDemo -> DrawLayerDemo()
+  //  ScreenState.DrawlayerDemo -> DrawLayerDemo()
 }

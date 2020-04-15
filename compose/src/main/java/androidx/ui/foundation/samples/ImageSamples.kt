@@ -28,7 +28,7 @@ import androidx.ui.graphics.Color
 import androidx.ui.graphics.ColorFilter
 import androidx.ui.graphics.ImageAsset
 import androidx.ui.graphics.Paint
-import androidx.ui.graphics.ScaleFit
+import androidx.ui.core.ContentScale
 import androidx.ui.graphics.painter.Painter
 import androidx.ui.layout.preferredSize
 import androidx.ui.res.loadVectorResource
@@ -53,7 +53,7 @@ fun ImageVectorAssetSample() {
         Image(
             asset = it,
             modifier = Modifier.preferredSize(200.dp, 200.dp),
-            scaleFit = ScaleFit.FillMinDimension,
+            contentScale = ContentScale.Fit,
             colorFilter = ColorFilter.tint(Color.Cyan)
         )
     }

@@ -24,7 +24,7 @@ import androidx.compose.state
 import androidx.ui.animation.ColorPropKey
 import androidx.ui.animation.Transition
 import androidx.ui.core.Modifier
-import androidx.ui.core.gesture.PressIndicatorGestureDetector
+import androidx.ui.core.gesture.pressIndicatorGestureFilter
 import androidx.ui.foundation.Canvas
 import androidx.ui.geometry.Rect
 import androidx.ui.graphics.Color
@@ -61,7 +61,7 @@ private val definition = transitionDefinition {
 fun GestureBasedAnimationDemo() {
     val toState = state { ComponentState.Released }
     val pressIndicator =
-        PressIndicatorGestureDetector(
+        Modifier.pressIndicatorGestureFilter(
             onStart = { toState.value = ComponentState.Pressed },
             onStop = { toState.value = ComponentState.Released },
             onCancel = { toState.value = ComponentState.Released })
@@ -72,7 +72,7 @@ fun GestureBasedAnimationDemo() {
 }
 
 @Composable
-private fun ScaledColorRect(modifier: Modifier = Modifier.None, scale: Float, color: Color) {
+private fun ScaledColorRect(modifier: Modifier = Modifier, scale: Float, color: Color) {
     val paint = remember { Paint() }
     Canvas(modifier.fillMaxSize()) {
         val centerX = size.width.value / 2

@@ -14,17 +14,18 @@
  * limitations under the License.
  */
 
-package androidx.ui.text.demos
+package androidx.ui.text
 
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.FocusManagerAmbient
 import androidx.ui.foundation.TextField
+import androidx.ui.foundation.TextFieldValue
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.Color
 import androidx.ui.input.ImeAction
 import androidx.ui.layout.Column
-import androidx.ui.text.TextFieldValue
+
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.sp
 

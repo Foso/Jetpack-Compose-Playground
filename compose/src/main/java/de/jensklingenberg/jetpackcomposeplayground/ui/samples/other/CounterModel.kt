@@ -4,7 +4,8 @@ import androidx.compose.Composable
 import androidx.compose.Model
 
 import androidx.ui.foundation.Text
-import androidx.ui.layout.Center
+import androidx.ui.layout.Arrangement
+
 import androidx.ui.layout.Column
 import androidx.ui.material.Button
 import androidx.ui.material.MaterialTheme
@@ -22,7 +23,7 @@ fun CounterModelDemo() {
         val countState: CounterModel =
             CounterModel()
 
-        Center {
+        Column() {
             Column {
                 CounterHeader(
                     countState

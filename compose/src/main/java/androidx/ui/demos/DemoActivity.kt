@@ -27,9 +27,11 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcher
 import androidx.compose.Composable
 import androidx.compose.frames.modelListOf
+import androidx.compose.getValue
 import androidx.compose.mutableStateOf
 import androidx.compose.onCommit
 import androidx.compose.remember
+import androidx.compose.setValue
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.preference.PreferenceManager
@@ -51,7 +53,7 @@ class DemoActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val composition = setContent {
+        setContent {
             val navigator = remember {
                 Navigator(
                     initialDemo = AllDemosCategory,
@@ -96,11 +98,6 @@ class DemoActivity : ComponentActivity() {
                 )
             }
         }
-        lifecycle.addObserver(LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_DESTROY) {
-                composition.dispose()
-            }
-        })
     }
 }
 

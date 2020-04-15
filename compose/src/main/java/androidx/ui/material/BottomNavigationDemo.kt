@@ -17,6 +17,8 @@
 package androidx.ui.material.demos
 
 import androidx.compose.Composable
+import androidx.compose.getValue
+import androidx.compose.setValue
 import androidx.compose.state
 import androidx.ui.core.Modifier
 import androidx.ui.layout.Arrangement
@@ -33,7 +35,7 @@ import androidx.ui.unit.dp
 fun BottomNavigationDemo() {
     var alwaysShowLabels by state { false }
 
-    Column(Modifier.fillMaxHeight(), arrangement = Arrangement.Bottom) {
+    Column(Modifier.fillMaxHeight(), verticalArrangement = Arrangement.Bottom) {
         RadioGroup {
             RadioGroupTextItem(
                 selected = !alwaysShowLabels,

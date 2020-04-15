@@ -39,7 +39,7 @@ import androidx.ui.input.VisualTransformation
 import androidx.ui.layout.Column
 import androidx.ui.text.AnnotatedString
 import androidx.ui.text.LocaleList
-import androidx.ui.text.TextFieldValue
+import androidx.ui.foundation.TextFieldValue
 import androidx.ui.text.TextLayoutResult
 import androidx.ui.text.TextStyle
 import androidx.ui.text.toUpperCase
@@ -234,13 +234,11 @@ fun VariousInputFieldDemo() {
             )
 
             TagLine(tag = "Editfield with Hint Text")
-            HintEditText @Composable {
+            HintEditText {
                 Text(
                     text = "Hint Text",
-                    style = TextStyle(
-                        color = Color(0xFF888888),
-                        fontSize = fontSize8
-                    )
+                    color = Color(0xFF888888),
+                    style = TextStyle(fontSize = fontSize8)
                 )
             }
 

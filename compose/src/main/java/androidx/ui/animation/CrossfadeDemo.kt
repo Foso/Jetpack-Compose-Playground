@@ -18,11 +18,13 @@ package androidx.ui.animation.demos
 
 import android.util.Log
 import androidx.compose.Composable
+import androidx.compose.getValue
 import androidx.compose.remember
+import androidx.compose.setValue
 import androidx.compose.state
 import androidx.ui.animation.Crossfade
 import androidx.ui.core.Modifier
-import androidx.ui.core.gesture.TapGestureDetector
+import androidx.ui.core.gesture.tapGestureFilter
 import androidx.ui.foundation.Box
 import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
@@ -39,7 +41,7 @@ fun CrossfadeDemo() {
         Row {
             tabs.forEach {
                 Box(
-                    TapGestureDetector(onTap = {
+                    Modifier.tapGestureFilter(onTap = {
                         Log.e("Crossfade", "Switch to $it")
                         current = it
                     })
