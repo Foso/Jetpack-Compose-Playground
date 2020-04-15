@@ -18,26 +18,13 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 
 [![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
 
-> Some of the code samples in this Repository:
-
-| Overview | Material Studies > Rally |  Material Studies > Rally |
-| ------------------ | --------------------------- | ------------------ |
-|<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height="400" alt="Screenshot"/> | 
-
-| Material Studies > Buttons & FABs | DialogExample | ControlledScrollDemo |
-| ------------------ | --------------------------- | ------------------ |
-| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
-
-| Material Studies > ListItems |
-| ------------------ |
-| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ListItemActivity.png" height="400" alt="Screenshot"/> 
-
-
-</p>
 
 ## Composable of the week!! 🎉
 The [AdapterList](https://foso.github.io/Jetpack-Compose-Playground/foundation/adapter_list)
 
+
+## New to Compose?
+Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld/)
 
 ## 📙 Jetpack Compose examples/tutorials and demos
 Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
@@ -57,8 +44,24 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [Handle changes to a TextField](https://foso.github.io/Jetpack-Compose-Playground/cookbook/textfield_changes/)
 
 
-## New to Compose?
-Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld/)
+
+> Some of the code samples in this Repository:
+
+| Overview | Material Studies > Rally |  Material Studies > Rally |
+| ------------------ | --------------------------- | ------------------ |
+|<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height="400" alt="Screenshot"/> | 
+
+| Material Studies > Buttons & FABs | DialogExample | ControlledScrollDemo |
+| ------------------ | --------------------------- | ------------------ |
+| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
+
+| Material Studies > ListItems |
+| ------------------ |
+| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ListItemActivity.png" height="400" alt="Screenshot"/> 
+
+
+</p>
+
 
 # 🏠 Architecture
 
