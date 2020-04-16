@@ -1,11 +1,13 @@
-# Text
-You can use **Text** to display text. You can use the **style** argument to define things like textdecoration or fontfamily.
+package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
-<p align="left">
-  <img src ="../../images/foundation/text/TextExample.png" height=500 />
-</p>
+import androidx.ui.text.font.FontFamily
+import androidx.compose.Composable
+import androidx.ui.foundation.Text
+import androidx.ui.layout.Column
+import androidx.ui.text.TextStyle
+import androidx.ui.text.font.FontWeight
+import androidx.ui.text.style.TextDecoration
 
-```kotlin
 @Composable
 fun TextExample(){
     Column {
@@ -32,40 +34,18 @@ fun TextExample(){
         )
     }
 }
-```
 
-# Working with Text
 
-## Normal text
-<p align="center">
-  <img src ="../../images/foundation/text/normal_text.png"  />
-</p>
-
-```kotlin
 @Composable
 fun NormalTextExample(){
     Text("Just Text")
 }
-```
 
-## Cursive text
-<p align="center">
-  <img src ="../../images/foundation/text/cursive_text.png"  />
-</p>
-
-```kotlin
 @Composable
 fun CursiveTextExample(){
     Text("Text with cursive font", style = TextStyle(fontFamily = FontFamily.Cursive))
 }
-```
 
-## Text with LineThrough
-<p align="center">
-  <img src ="../../images/foundation/text/linethrough_text.png"  />
-</p>
-
-```kotlin
 @Composable
 fun TextWithLineThroughExample(){
     Text(
@@ -73,14 +53,7 @@ fun TextWithLineThroughExample(){
         style = TextStyle(textDecoration = TextDecoration.LineThrough)
     )
 }
-```
 
-## Text with underline
-<p align="center">
-  <img src ="../../images/foundation/text/underline_text.png"  />
-</p>
-
-```kotlin
 @Composable
 fun TextWithUnderline(){
     Text(
@@ -88,14 +61,8 @@ fun TextWithUnderline(){
         style = TextStyle(textDecoration = TextDecoration.Underline)
     )
 }
-```
 
-## Text with underline, bold and linethrough
-<p align="center">
-  <img src ="../../images/foundation/text/underline_bold_linethrough_text.png"  />
-</p>
 
-```kotlin
 @Composable
 fun TextWithUnderlineStrikeThroughAndBold(){
     Text(
@@ -110,4 +77,3 @@ fun TextWithUnderlineStrikeThroughAndBold(){
         )
     )
 }
-```
