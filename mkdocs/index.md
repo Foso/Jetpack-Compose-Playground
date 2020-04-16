@@ -24,6 +24,10 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 ## Composable of the week!! 🎉
 The [AdapterList](foundation/adapter_list)
 
+
+## New to Compose?
+Check [Project Setup](general/getting_started.md) or [Hello World Compose](general/helloworld/)
+
 ## Layouts
 * [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout/)
 * [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold/)
@@ -32,13 +36,9 @@ The [AdapterList](foundation/adapter_list)
 * [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack/)
 * [LayoutPadding](https://foso.github.io/Jetpack-Compose-Playground/core/layoutpadding/)
 
-## New to Compose?
-Check [Project Setup](general/getting_started.md) or [Hello World Compose](general/helloworld/)
 
 ## Looking for tutorials/sample code
 Take a look at the sidebar under "Guides & Samples" or check [Compose projects](compose_projects)
-
-
 
 
 ## Contributing
