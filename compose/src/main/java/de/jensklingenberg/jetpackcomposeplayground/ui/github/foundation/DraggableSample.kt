@@ -1,12 +1,18 @@
-# Draggable 
+package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
-https://developer.android.com/reference/kotlin/androidx/ui/foundation/gestures/package-summary#draggable
-
-<p align="left">
-  <img src ="../../images/DraggableDemo.png" height=500 />
-</p>
-
-```kotlin
+import androidx.compose.Composable
+import androidx.compose.getValue
+import androidx.compose.setValue
+import androidx.compose.state
+import androidx.ui.core.DensityAmbient
+import androidx.ui.core.Modifier
+import androidx.ui.foundation.Box
+import androidx.ui.foundation.Text
+import androidx.ui.foundation.gestures.DragDirection
+import androidx.ui.foundation.gestures.draggable
+import androidx.ui.layout.Column
+import androidx.ui.layout.padding
+import androidx.ui.unit.dp
 
 @Composable
 fun DraggableSample() {
@@ -34,4 +40,3 @@ fun DraggableSample() {
 
     }
 }
-```
