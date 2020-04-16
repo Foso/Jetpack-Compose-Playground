@@ -9,7 +9,7 @@ TextField can be used to insert text. This is the equivalent to **EditText** fro
 @Composable
 fun TextFieldDemo() {
     Column {
-        val state = state { "" }
+        val state = state { TextFieldValue("") }
         TextField(
             value = state.value,
             onValueChange = { state.value = it }
