@@ -1,12 +1,12 @@
 # Canvas
 
 !!! info
-    This is the API of version dev08. Newer versions may have a different one
+    This is the API of version dev09. Newer versions may have a different one
 
 ## How to draw on Canvas
 
 <p align="left">
-  <img src ="../../images/CanvasDrawExample.png" height=500 />
+  <img src ="../../images/foundation/canvas/CanvasDrawExample.png" height=500 />
 </p>
 
 

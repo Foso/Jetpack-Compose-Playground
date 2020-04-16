@@ -2,7 +2,7 @@
 # AdapterList
 
 !!! info
-    This is the API of version dev08. Newer versions may have a different one
+    This is the API of version dev09. Newer versions may have a different one
     
 A [AdapterList](https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#adapterlist 
 ) is a vertically scrolling list that only composes and lays out the currently visible items.

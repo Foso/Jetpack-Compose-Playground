@@ -3,7 +3,7 @@
 The children of the Stack layout will be stacked over each other. You can use the LayoutGravity modifier to specify where the composable should be drawn.
 
 !!! info
-    This is the API of version dev08. Newer versions may have a different one
+    This is the API of version dev09. Newer versions may have a different one
 
 
 <p align="left">
