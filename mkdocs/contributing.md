@@ -12,6 +12,9 @@ The generated files for the github page are in [/docs](https://github.com/Foso/J
 
 To start the mkdocs server locally, run **mkdocs serve** in a terminal in the project folder.
 
+pip3 install mkdocs-minify-plugin
+pip3 install mkdocs-git-revision-date-localized-plugin
+
 * Add/Change docs
 
 The docs are written in markdown files which are all in [/mkdocs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs). To change the navigation sidebar, you need to edit the mkdocs.yml.
