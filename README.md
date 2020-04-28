@@ -96,7 +96,6 @@ the demo classes i copied out of the AndroidX repo (https://android.googlesource
 
 ## Other Documentation
 - [FAQ about Jetpack Compose – Android’s modern toolkit for building native UI](https://github.com/Mishkun/jetpack-compose-faq)
-- [This Wiki](https://github.com/Foso/Jetpack-Compose-Playground/wiki)
 
 ## Conference Talks
 
