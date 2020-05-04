@@ -96,9 +96,13 @@ the demo classes i copied out of the AndroidX repo (https://android.googlesource
 
 ## Other Documentation
 - [FAQ about Jetpack Compose – Android’s modern toolkit for building native UI](https://github.com/Mishkun/jetpack-compose-faq)
-- [This Wiki](https://github.com/Foso/Jetpack-Compose-Playground/wiki)
 
 ## Conference Talks
+
+
+[![](https://i.vimeocdn.com/video/884655121.jpg?mw=1800&mh=1013)](https://www.droidcon.com/media-detail?video=412304809 "")
+
+- [droidcon Online 2020: Become A Composer By Brian Gardner ](https://www.droidcon.com/media-detail?video=412304809)
 
 [![](https://1.bp.blogspot.com/-xon4k5b6b2c/XiejV5fOr0I/AAAAAAAAN8s/boKWh5GfM3EsydjxhS3MUlIWGsuUbAJjACLcBGAsYHQ/s320/IMG_20200108_145939.jpg)](http://androidbackstage.blogspot.com/2020/01/episode-131-jetpack-compose-and.html "")
 
