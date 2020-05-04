@@ -16,13 +16,13 @@
 
 package androidx.ui.text.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Text
 import androidx.ui.text.TextStyle
 import androidx.ui.text.style.TextDecoration
 
-
+@Sampled
 @Composable
 fun TextDecorationLineThroughSample() {
     Text(
@@ -31,7 +31,7 @@ fun TextDecorationLineThroughSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun TextDecorationUnderlineSample() {
     Text(
@@ -40,7 +40,7 @@ fun TextDecorationUnderlineSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun TextDecorationCombinedSample() {
     Text(

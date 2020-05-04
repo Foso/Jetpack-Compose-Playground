@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
@@ -32,7 +32,7 @@ import androidx.ui.layout.wrapContentHeight
 import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun SimpleAlignedModifier() {
     // Here, the blue rectangle prefers to have a 20.dp size, subject to the incoming constraints.
@@ -49,7 +49,7 @@ fun SimpleAlignedModifier() {
     )
 }
 
-
+@Sampled
 @Composable
 fun SimpleVerticallyAlignedModifier() {
     // Here, the blue rectangle prefers to have a 50.dp height, subject to the incoming constraints.
@@ -66,7 +66,7 @@ fun SimpleVerticallyAlignedModifier() {
     )
 }
 
-
+@Sampled
 @Composable
 fun SimpleGravityInRow() {
     Row(Modifier.fillMaxHeight()) {
@@ -97,7 +97,7 @@ fun SimpleGravityInRow() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleGravityInColumn() {
     Column(Modifier.fillMaxWidth()) {

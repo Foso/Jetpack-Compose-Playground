@@ -16,12 +16,12 @@
 
 package androidx.ui.text.samples
 
-
+import androidx.annotation.Sampled
 import androidx.ui.input.OffsetMap
 import androidx.ui.input.TransformedText
 import androidx.ui.text.AnnotatedString
 
-
+@Sampled
 fun passwordFilter(text: AnnotatedString): TransformedText {
     return TransformedText(
         AnnotatedString("*".repeat(text.text.length)),
@@ -34,7 +34,7 @@ fun passwordFilter(text: AnnotatedString): TransformedText {
     )
 }
 
-
+@Sampled
 fun creditCardFilter(text: AnnotatedString): TransformedText {
 
     // Making XXXX-XXXX-XXXX-XXXX string.

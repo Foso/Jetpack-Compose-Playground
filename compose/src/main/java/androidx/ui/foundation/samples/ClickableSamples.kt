@@ -16,13 +16,13 @@
 
 package androidx.ui.foundation.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.foundation.Clickable
 import androidx.ui.foundation.Text
 
-
+@Sampled
 @Composable
 fun ClickableSample() {
     val count = state { 0 }

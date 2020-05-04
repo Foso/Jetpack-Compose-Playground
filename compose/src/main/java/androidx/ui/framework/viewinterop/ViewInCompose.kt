@@ -47,6 +47,14 @@ fun ViewInComposeDemo() {
         // UI hierarchies. Note that these APIs are subject to change. Also note that
         // pointer input is currently not working for Views inside Compose.
 
+        // Include Android View.
+        TextView(text = "This is a text in a TextView")
+        val ref = Ref<View>()
+        FrameLayout(ref = ref) {
+            android.widget.TextView(text = "This is a very long very long text")
+        }
+        Text("This is a second text")
+        ref.value!!.layoutParams = ViewGroup.LayoutParams(100, WRAP_CONTENT)
 
         // Inflate AndroidView from XML.
         AndroidView(R.layout.test_layout)
@@ -61,7 +69,13 @@ fun ViewInComposeDemo() {
 
         // Compose custom Android View and do remeasurements and invalidates.
         val squareRef = Ref<ColoredSquareView>()
-
+        FrameLayout {
+            ColoredSquareView(
+                size = 200,
+                color = Color.Cyan,
+                ref = squareRef
+            )
+        }
         Button(onClick = { squareRef.value!!.size += 50 }) {
             Text("Increase size of Android view")
         }

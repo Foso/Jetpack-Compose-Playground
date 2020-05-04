@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
@@ -26,7 +26,7 @@ import androidx.ui.layout.offset
 import androidx.ui.layout.wrapContentSize
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun LayoutOffsetModifier() {
     // This text will be offset (10.dp, 20.dp) from the center of the available space.

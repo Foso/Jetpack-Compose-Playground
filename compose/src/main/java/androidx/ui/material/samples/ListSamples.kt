@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Image
 import androidx.ui.foundation.Text
@@ -25,7 +25,7 @@ import androidx.ui.layout.Column
 import androidx.ui.material.Divider
 import androidx.ui.material.ListItem
 
-
+@Sampled
 @Composable
 fun OneLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset, icon56x56: ImageAsset) {
     Column {
@@ -55,7 +55,7 @@ fun OneLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset, icon56x56: Im
     }
 }
 
-
+@Sampled
 @Composable
 fun TwoLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
     Column {
@@ -95,7 +95,7 @@ fun TwoLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
     }
 }
 
-
+@Sampled
 @Composable
 fun ThreeLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
     Column {

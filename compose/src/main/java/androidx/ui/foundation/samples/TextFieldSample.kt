@@ -16,13 +16,13 @@
 
 package androidx.ui.foundation.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.foundation.TextField
 import androidx.ui.foundation.TextFieldValue
 
-
+@Sampled
 @Composable
 fun TextFieldSample() {
     val state = state { TextFieldValue() }

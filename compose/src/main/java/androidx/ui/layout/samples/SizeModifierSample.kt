@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
@@ -37,7 +37,7 @@ import androidx.ui.layout.size
 import androidx.ui.layout.width
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun SimpleSizeModifier() {
     // The result is a 50.dp x 50.dp red box centered in a 100.dp x 100.dp space.
@@ -51,7 +51,7 @@ fun SimpleSizeModifier() {
     )
 }
 
-
+@Sampled
 @Composable
 fun SimpleWidthModifier() {
     // The result is a 50.dp x 50.dp magenta box centered in a 100.dp x 100.dp space.
@@ -66,7 +66,7 @@ fun SimpleWidthModifier() {
     )
 }
 
-
+@Sampled
 @Composable
 fun SimpleHeightModifier() {
     // The result is a 50.dp x 50.dp blue box centered in a 100.dp x 100.dp space.
@@ -81,7 +81,7 @@ fun SimpleHeightModifier() {
     )
 }
 
-
+@Sampled
 @Composable
 fun SimplePreferredSizeModifier() {
     Stack {
@@ -89,7 +89,7 @@ fun SimplePreferredSizeModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimplePreferredWidthModifier() {
     Stack {
@@ -97,7 +97,7 @@ fun SimplePreferredWidthModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimplePreferredHeightModifier() {
     Stack {
@@ -105,7 +105,7 @@ fun SimplePreferredHeightModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleFillWidthModifier() {
     Box(Modifier.fillMaxWidth(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
@@ -113,7 +113,7 @@ fun SimpleFillWidthModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleFillHeightModifier() {
     Box(Modifier.fillMaxHeight(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
@@ -121,7 +121,7 @@ fun SimpleFillHeightModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleFillModifier() {
     Box(Modifier.fillMaxSize(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {

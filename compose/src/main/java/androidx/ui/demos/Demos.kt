@@ -26,13 +26,14 @@ import androidx.ui.material.studies.MaterialStudies
 import androidx.ui.text.demos.TextDemos
 import de.jensklingenberg.jetpackcomposeplayground.ui.MyHomeScreen
 
+
 /**
  * [DemoCategory] containing all the top level demo categories.
  */
 val AllDemosCategory = DemoCategory(
     "Jetpack Compose Demos",
     listOf(
-       // AndroidViewDemos,
+        //AndroidViewDemos,
         AnimationDemos,
         FoundationDemos,
         FrameworkDemos,

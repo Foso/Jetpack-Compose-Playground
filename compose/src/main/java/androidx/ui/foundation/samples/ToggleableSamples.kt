@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.setValue
@@ -26,7 +26,7 @@ import androidx.ui.foundation.selection.Toggleable
 import androidx.ui.foundation.selection.ToggleableState
 import androidx.ui.foundation.selection.TriStateToggleable
 
-
+@Sampled
 @Composable
 fun ToggleableSample() {
     var checked by state { false }
@@ -36,7 +36,7 @@ fun ToggleableSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun TriStateToggleableSample() {
     var checked by state { ToggleableState.Indeterminate }

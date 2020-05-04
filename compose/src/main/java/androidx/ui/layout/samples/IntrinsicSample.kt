@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
@@ -34,7 +34,7 @@ import androidx.ui.layout.preferredSize
 import androidx.ui.layout.preferredWidth
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun SameWidthBoxes() {
     // Builds a layout containing three Box having the same width as the widest one.
@@ -62,7 +62,7 @@ fun SameWidthBoxes() {
     }
 }
 
-
+@Sampled
 @Composable
 fun MatchParentDividerForText() {
     // Builds a layout containing two pieces of text separated by a divider, where the divider
@@ -89,7 +89,7 @@ fun MatchParentDividerForText() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SameWidthTextBoxes() {
     // Builds a layout containing three Text boxes having the same width as the widest one.
@@ -115,7 +115,7 @@ fun SameWidthTextBoxes() {
     }
 }
 
-
+@Sampled
 @Composable
 fun MatchParentDividerForAspectRatio() {
     // Builds a layout containing two aspectRatios separated by a divider, where the divider

@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.setValue
@@ -28,7 +28,7 @@ import androidx.ui.material.BottomNavigationItem
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 
-
+@Sampled
 @Composable
 fun BottomNavigationSample() {
     var selectedItem by state { 0 }

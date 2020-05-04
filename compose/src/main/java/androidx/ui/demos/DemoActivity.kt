@@ -66,7 +66,7 @@ class DemoActivity : ComponentActivity() {
                 DemoColorPalette().also {
                     lifecycle.addObserver(LifecycleEventObserver { _, event ->
                         if (event == Lifecycle.Event.ON_RESUME) {
-                            it.loadColorsFromSharedPreferences(this)
+                            //it.loadColorsFromSharedPreferences(this)
                         }
                     })
                 }

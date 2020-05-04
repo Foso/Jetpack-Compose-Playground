@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
@@ -27,7 +27,7 @@ import androidx.ui.layout.Stack
 import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun DarkThemeSample() {
     val dark = isSystemInDarkTheme()

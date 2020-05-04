@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Text
 import androidx.ui.material.MaterialTheme
@@ -24,7 +24,7 @@ import androidx.ui.material.Snackbar
 import androidx.ui.material.TextButton
 import androidx.ui.material.snackbarPrimaryColorFor
 
-
+@Sampled
 @Composable
 fun SimpleSnackbar() {
     Snackbar(

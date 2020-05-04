@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
-package androidx.ui.text
+package androidx.ui.text.demos
 
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.FocusManagerAmbient
 import androidx.ui.foundation.TextField
-import androidx.ui.foundation.TextFieldValue
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.Color
 import androidx.ui.input.ImeAction
 import androidx.ui.layout.Column
-
+import androidx.ui.foundation.TextFieldValue
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.sp
 
@@ -55,12 +54,12 @@ private fun TextFieldWithFocusId(focusID: String, nextFocus: String) {
     }
     TextField(
         value = state.value,
-        textStyle = TextStyle(color = color, fontSize = 32.sp),
+        textColor = color,
+        textStyle = TextStyle(fontSize = 32.sp),
         onValueChange = {
             state.value = it
         },
-        onFocus = { focused.value = true },
-        onBlur = { focused.value = false },
+        onFocusChange = { focused.value = it },
         imeAction = ImeAction.Next,
         focusIdentifier = focusID,
         onImeActionPerformed = {

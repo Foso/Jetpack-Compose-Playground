@@ -16,7 +16,7 @@
 
 package androidx.ui.text.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Text
 import androidx.ui.text.AnnotatedString
@@ -26,7 +26,7 @@ import androidx.ui.text.style.BaselineShift
 import androidx.ui.text.withStyle
 import androidx.ui.unit.sp
 
-
+@Sampled
 @Composable
 fun BaselineShiftSample() {
     Text(
@@ -43,7 +43,7 @@ fun BaselineShiftSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun BaselineShiftAnnotatedStringSample() {
     val annotatedString = AnnotatedString {

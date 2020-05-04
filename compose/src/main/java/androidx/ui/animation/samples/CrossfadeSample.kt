@@ -17,11 +17,12 @@
 package androidx.ui.animation.samples
 
 
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.animation.Crossfade
 import androidx.ui.foundation.Text
 
-
+@Sampled
 @Composable
 fun CrossfadeSample() {
     Crossfade(current = "A") { screen ->

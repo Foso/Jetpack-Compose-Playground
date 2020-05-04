@@ -16,7 +16,7 @@
 
 package androidx.ui.text.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Text
 import androidx.ui.graphics.Color
@@ -25,7 +25,7 @@ import androidx.ui.text.SpanStyle
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.sp
 
-
+@Sampled
 @Composable
 fun SpanStyleSample() {
     Text(

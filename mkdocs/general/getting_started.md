@@ -13,8 +13,8 @@ buildFeatures {
     compose true
 }
 composeOptions {
-        kotlinCompilerVersion "1.3.61-dev-withExperimentalGoogleExtensions-20200129"
-        kotlinCompilerExtensionVersion "0.1.0-dev09"
+        kotlinCompilerVersion "1.3.70-dev-withExperimentalGoogleExtensions-20200424"
+        kotlinCompilerExtensionVersion "0.1.0-dev10"
 }
 
 ```
@@ -24,7 +24,7 @@ Below are all compose dependencies that are online available, you don't need to 
 ```groovy
 
 dependencies {
-    def compose_version = "0.1.0-dev09"
+    def compose_version = "0.1.0-dev10"
 
        implementation("androidx.compose:compose-runtime:$compose_version")
        implementation("androidx.ui:ui-animation:$compose_version")

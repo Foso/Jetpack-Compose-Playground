@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
@@ -30,7 +30,7 @@ import androidx.ui.layout.preferredHeight
 import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun SimpleTable() {
     Table(columns = 8) {
@@ -47,7 +47,7 @@ fun SimpleTable() {
     }
 }
 
-
+@Sampled
 @Composable
 fun TableWithDecorations() {
     Table(columns = 8) {
@@ -70,7 +70,7 @@ fun TableWithDecorations() {
     }
 }
 
-
+@Sampled
 @Composable
 fun TableWithDifferentColumnWidths() {
     val padding = Modifier.padding(2.dp)

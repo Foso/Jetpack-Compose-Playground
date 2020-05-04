@@ -16,7 +16,7 @@
 
 package androidx.ui.framework.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Text
 import androidx.ui.res.fontResource
@@ -25,7 +25,7 @@ import androidx.ui.text.TextStyle
 import androidx.ui.text.font.FontFamily
 import androidx.ui.text.font.LoadedFontFamily
 
-
+@Sampled
 @Composable
 fun FontResourcesFontFamily() {
     loadFontResource(
@@ -42,7 +42,7 @@ fun FontResourcesFontFamily() {
     }
 }
 
-
+@Sampled
 @Composable
 fun FontResourcesTypeface() {
     loadFontResource(

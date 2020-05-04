@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Layout
 import androidx.ui.core.Modifier
@@ -34,7 +34,7 @@ import androidx.ui.unit.ipx
 import androidx.ui.unit.max
 import androidx.ui.unit.min
 
-
+@Sampled
 @Composable
 fun SimpleColumn() {
     Column {
@@ -51,7 +51,7 @@ fun SimpleColumn() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleRelativeToSiblings() {
     Column {
@@ -72,7 +72,7 @@ fun SimpleRelativeToSiblings() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleRelativeToSiblingsInColumn() {
     // Alignment lines provided by the RectangleWithStartEnd layout. We need to create these

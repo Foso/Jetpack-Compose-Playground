@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Border
@@ -32,7 +32,7 @@ import androidx.ui.unit.dp
 import androidx.ui.unit.px
 
 @Composable
-
+@Sampled
 fun BorderSample() {
     Text(
         "Text with  square border",
@@ -41,7 +41,7 @@ fun BorderSample() {
 }
 
 @Composable
-
+@Sampled
 fun BorderSampleWithBrush() {
     val gradientBrush = HorizontalGradient(
         colors = listOf(Color.Red, Color.Blue, Color.Green),
@@ -57,7 +57,7 @@ fun BorderSampleWithBrush() {
 }
 
 @Composable
-
+@Sampled
 fun BorderSampleWithDataClass() {
     Text(
         "Text with gradient border",

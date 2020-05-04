@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.core.Modifier
@@ -27,7 +27,7 @@ import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 import androidx.ui.unit.toRect
 
-
+@Sampled
 @Composable
 fun CanvasSample() {
     val paint = remember { Paint().apply { color = Color.Magenta } }

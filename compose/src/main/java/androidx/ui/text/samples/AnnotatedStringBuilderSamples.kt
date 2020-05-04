@@ -16,7 +16,7 @@
 
 package androidx.ui.text.samples
 
-
+import androidx.annotation.Sampled
 import androidx.ui.graphics.Color
 import androidx.ui.text.AnnotatedString
 import androidx.ui.text.ParagraphStyle
@@ -24,7 +24,7 @@ import androidx.ui.text.SpanStyle
 import androidx.ui.text.withStyle
 import androidx.ui.unit.sp
 
-
+@Sampled
 fun AnnotatedStringBuilderSample() {
     with(AnnotatedString.Builder("Hello")) {
         // push green text style so that any appended text will be green
@@ -42,7 +42,7 @@ fun AnnotatedStringBuilderSample() {
     }
 }
 
-
+@Sampled
 fun AnnotatedStringBuilderPushSample() {
     with(AnnotatedString.Builder()) {
         // push green text color so that any appended text will be rendered green
@@ -58,7 +58,7 @@ fun AnnotatedStringBuilderPushSample() {
     }
 }
 
-
+@Sampled
 fun AnnotatedStringBuilderPushParagraphStyleSample() {
     with(AnnotatedString.Builder()) {
         // push a ParagraphStyle to be applied to any appended text after this point.
@@ -74,7 +74,7 @@ fun AnnotatedStringBuilderPushParagraphStyleSample() {
     }
 }
 
-
+@Sampled
 fun AnnotatedStringBuilderPushStringAnnotationSample() {
     with(AnnotatedString.Builder()) {
         // push a string annotation to be applied to any appended text after this point.
@@ -90,7 +90,7 @@ fun AnnotatedStringBuilderPushStringAnnotationSample() {
     }
 }
 
-
+@Sampled
 fun AnnotatedStringBuilderWithStyleSample() {
     with(AnnotatedString.Builder()) {
         withStyle(SpanStyle(color = Color.Green)) {
@@ -101,7 +101,7 @@ fun AnnotatedStringBuilderWithStyleSample() {
     }
 }
 
-
+@Sampled
 fun AnnotatedStringBuilderLambdaSample() {
     // create an AnnotatedString using the lambda builder
     AnnotatedString {

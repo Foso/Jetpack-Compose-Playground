@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.setValue
@@ -35,7 +35,7 @@ import androidx.ui.layout.preferredSize
 import androidx.ui.layout.preferredWidth
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun DraggableSample() {
     // Draw a seekbar-like composable that has a black background
@@ -69,7 +69,7 @@ fun DraggableSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun AnchoredDraggableSample() {
     // Draw a seekbar-like composable that has a black background

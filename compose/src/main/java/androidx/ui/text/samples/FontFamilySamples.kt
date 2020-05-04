@@ -16,7 +16,7 @@
 
 package androidx.ui.text.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Text
 import androidx.ui.text.TextStyle
@@ -28,7 +28,7 @@ import androidx.ui.text.font.font
 import androidx.ui.text.font.fontFamily
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
-
+@Sampled
 @Composable
 fun FontFamilySansSerifSample() {
     Text(
@@ -37,7 +37,7 @@ fun FontFamilySansSerifSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun FontFamilySerifSample() {
     Text(
@@ -46,7 +46,7 @@ fun FontFamilySerifSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun FontFamilyMonospaceSample() {
     Text(
@@ -55,7 +55,7 @@ fun FontFamilyMonospaceSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun FontFamilyCursiveSample() {
     Text(
@@ -64,7 +64,7 @@ fun FontFamilyCursiveSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun CustomFontFamilySample() {
     val fontFamily = fontFamily(
@@ -80,7 +80,7 @@ fun CustomFontFamilySample() {
     Text(text = "Demo Text", style = TextStyle(fontFamily = fontFamily))
 }
 
-
+@Sampled
 @Composable
 fun FontFamilySynthesisSample() {
     // The font family contains a single font, with normal weight

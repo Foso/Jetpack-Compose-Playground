@@ -16,7 +16,7 @@
 
 package androidx.ui.text.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.foundation.Text
 import androidx.ui.text.AnnotatedString
@@ -27,7 +27,7 @@ import androidx.ui.text.style.TextDirectionAlgorithm
 import androidx.ui.text.style.TextIndent
 import androidx.ui.unit.sp
 
-
+@Sampled
 @Composable
 fun ParagraphStyleSample() {
     val textStyle = TextStyle(
@@ -43,7 +43,7 @@ fun ParagraphStyleSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun ParagraphStyleAnnotatedStringsSample() {
     val text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor " +

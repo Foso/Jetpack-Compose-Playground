@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-
+import androidx.annotation.Sampled
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
@@ -27,7 +27,7 @@ import androidx.ui.layout.padding
 import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 
-
+@Sampled
 @Composable
 fun LayoutPaddingModifier() {
     Stack(Modifier.drawBackground(Color.Gray)) {
@@ -39,7 +39,7 @@ fun LayoutPaddingModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun LayoutPaddingAllModifier() {
     Stack(Modifier.drawBackground(Color.Gray)) {
