@@ -1,28 +1,10 @@
 # Compose State
 
 ## Define a state
-### 1) state function
+### state function
 val textState = state{"Hello"}
 
 You can use the state function to create a state. state{T} will return a MutableState`<T>`
-
-### 2) @Model
-You can also use @Model, when you annotate classes with it, you can use the whole class as a state and observe all properties.
-
-
-
-```kotlin
-@Model
-class TestState{
-    var count = 0
-}
-```
-
-```kotlin
-val textState = TestState()
-```
-
-You can then create a object of the class and use it as a state. In this example you would then use "textState.count" to get/set the value of count.
 
 
 ## Example

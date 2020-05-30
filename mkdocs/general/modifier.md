@@ -23,6 +23,3 @@ Modifies the width of a Compose UI layout element.
 
 ###  Modifier.preferredSize()
 Modifies the width and height of a Compose UI layout element together
-
-### Modifier.padding()
-See [LayoutPadding](/Jetpack-Compose-Playground/core/layoutpadding)
