@@ -99,6 +99,10 @@ the demo classes i copied out of the AndroidX repo (https://android.googlesource
 
 ## Conference Talks
 
+[![](https://img.youtube.com/vi/U5BwfqBpiWU/0.jpg)](https://www.youtube.com/watch?v=U5BwfqBpiWU "")
+
+- [Jetpack Compose](https://www.youtube.com/watch?v=U5BwfqBpiWU)
+
 
 [![](https://i.vimeocdn.com/video/884655121.jpg?mw=1800&mh=1013)](https://www.droidcon.com/media-detail?video=412304809 "")
 
