@@ -23,26 +23,23 @@ import androidx.animation.PhysicsBuilder
 import androidx.animation.TargetAnimation
 import androidx.animation.fling
 import androidx.compose.Composable
-import androidx.compose.remember
 import androidx.compose.state
 import androidx.ui.animation.animatedFloat
 import androidx.ui.core.DensityAmbient
-import androidx.ui.core.DrawScope
 import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.DragObserver
 import androidx.ui.core.gesture.rawDragGestureFilter
 import androidx.ui.core.onPositioned
 import androidx.ui.foundation.Canvas
 import androidx.ui.foundation.Text
-import androidx.ui.geometry.Rect
+import androidx.ui.geometry.Offset
+import androidx.ui.geometry.Size
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.Paint
+import androidx.ui.graphics.drawscope.DrawScope
 import androidx.ui.layout.Column
 import androidx.ui.layout.fillMaxWidth
 import androidx.ui.layout.padding
 import androidx.ui.layout.preferredHeight
-import androidx.ui.text.TextStyle
-import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
 import androidx.ui.unit.sp
 import kotlin.math.sign
@@ -53,7 +50,7 @@ fun SwipeToDismissDemo() {
         SwipeToDismiss()
         Text(
             "Swipe up to dismiss",
-            style = TextStyle(fontSize = 30.sp),
+            fontSize = 30.sp,
             modifier = Modifier.padding(40.dp)
         )
     }
@@ -70,7 +67,7 @@ private fun SwipeToDismiss() {
     val itemWidth = state { 0f }
     val isFlinging = state { false }
     val modifier = Modifier.rawDragGestureFilter(dragObserver = object : DragObserver {
-        override fun onStart(downPosition: PxPosition) {
+        override fun onStart(downPosition: Offset) {
             itemBottom.setBounds(0f, height)
             if (isFlinging.value && itemBottom.targetValue < 100f) {
                 reset()
@@ -85,8 +82,8 @@ private fun SwipeToDismiss() {
             }
         }
 
-        override fun onDrag(dragDistance: PxPosition): PxPosition {
-            itemBottom.snapTo(itemBottom.targetValue + dragDistance.y.value)
+        override fun onDrag(dragDistance: Offset): Offset {
+            itemBottom.snapTo(itemBottom.targetValue + dragDistance.y)
             return dragDistance
         }
 
@@ -107,11 +104,11 @@ private fun SwipeToDismiss() {
             }
         }
 
-        override fun onStop(velocity: PxPosition) {
+        override fun onStop(velocity: Offset) {
             isFlinging.value = true
-            itemBottom.fling(velocity.y.value,
+            itemBottom.fling(velocity.y,
                 ExponentialDecay(3.0f),
-                adjustTarget(velocity.y.value),
+                adjustTarget(velocity.y),
                 onEnd = { endReason, final, _ ->
                     isFlinging.value = false
                     if (endReason != AnimationEndReason.Interrupted && final == 0f) {
@@ -122,77 +119,55 @@ private fun SwipeToDismiss() {
     })
 
     val heightDp = with(DensityAmbient.current) { height.toDp() }
-    val paint = remember { Paint() }
 
     Canvas(
         modifier.fillMaxWidth()
             .preferredHeight(heightDp)
             .onPositioned { coordinates ->
-                itemWidth.value = coordinates.size.width.value * 2 / 3f
+                itemWidth.value = coordinates.size.width * 2 / 3f
             }
     ) {
         val progress = 1 - itemBottom.value / height
         // TODO: this progress can be used to drive state transitions
         val alpha = 1f - FastOutSlowInEasing(progress)
         val horizontalOffset = progress * itemWidth.value
-        drawLeftItems(
-            paint, horizontalOffset, itemWidth.value, itemHeight, index.value
-        )
-        drawDismissingItem(
-            paint,
-            itemBottom.value, itemWidth.value, itemHeight, index.value + 1,
-            alpha
-        )
+        drawLeftItems(horizontalOffset, itemWidth.value, itemHeight, index.value)
+        drawDismissingItem(itemBottom.value, itemWidth.value, itemHeight, index.value + 1, alpha)
     }
 }
 
 private fun DrawScope.drawLeftItems(
-    paint: Paint,
     horizontalOffset: Float,
     width: Float,
     height: Float,
     index: Int
 ) {
-    paint.color = colors[index % colors.size]
-    paint.alpha = 1f
-    val centerX = size.width.value / 2
-    val itemRect =
-        Rect(
-            centerX - width * 1.5f + horizontalOffset + padding,
-            size.height.value - height,
-            centerX - width * 0.5f + horizontalOffset - padding,
-            size.height.value
-        )
-    drawRect(itemRect, paint)
+    val offset = Offset(center.x - width * 1.5f + horizontalOffset + padding, size.height - height)
+    val rectSize = Size(width - (2 * padding), height)
+    drawRect(colors[index % colors.size], offset, rectSize)
 
-    if (itemRect.left >= 0) {
+    if (offset.x >= 0) {
         // draw another item
-        paint.color = colors[(index - 1 + colors.size) % colors.size]
-        drawRect(itemRect.translate(-width, 0f), paint)
+        drawRect(
+            colors[(index - 1 + colors.size) % colors.size],
+            offset - Offset(width, 0.0f),
+            rectSize
+        )
     }
 }
 
 private fun DrawScope.drawDismissingItem(
-    paint: Paint,
     bottom: Float,
     width: Float,
     height: Float,
     index: Int,
     alpha: Float
-) {
-    paint.color = colors[index % colors.size]
-    paint.alpha = alpha
-    val centerX = size.width.value / 2
-    drawRect(
-        Rect(
-            centerX - width / 2 + padding,
-            bottom - height,
-            centerX + width / 2 - padding,
-            bottom
-        ),
-        paint
+) = drawRect(
+        colors[index % colors.size],
+        topLeft = Offset(center.x - width / 2 + padding, bottom - height),
+        size = Size(width - (2 * padding), height),
+        alpha = alpha
     )
-}
 
 private val colors = listOf(
     Color(0xFFffd7d7),

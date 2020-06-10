@@ -28,7 +28,7 @@ import androidx.ui.core.gesture.tapGestureFilter
 import androidx.ui.foundation.Canvas
 import androidx.ui.foundation.Text
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.Paint
+import androidx.ui.graphics.drawscope.rotate
 import androidx.ui.layout.Arrangement
 import androidx.ui.layout.Column
 import androidx.ui.layout.fillMaxSize
@@ -37,7 +37,6 @@ import androidx.ui.layout.wrapContentSize
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.dp
 import androidx.ui.unit.sp
-import androidx.ui.unit.toRect
 
 @Composable
 fun RepeatedRotationDemo() {
@@ -63,12 +62,9 @@ fun RepeatedRotationDemo() {
             toState = state.value
         ) { state ->
             Canvas(Modifier.preferredSize(100.dp)) {
-                // TODO (njawad) replace with save lambda when multi children DrawNodes are supported
-                save()
-                rotate(state[rotation])
-                drawRect(size.toRect(), Paint().apply { color = Color(0xFF00FF00) })
-                // TODO (njawad) replace with save lambda when multi children DrawNodes are supported
-                restore()
+                rotate(state[rotation], 0.0f, 0.0f) {
+                    drawRect(Color(0xFF00FF00))
+                }
             }
         }
     }

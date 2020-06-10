@@ -21,7 +21,6 @@ import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.VerticalScroller
-import androidx.ui.graphics.Color
 import androidx.ui.layout.Column
 import androidx.ui.layout.Spacer
 import androidx.ui.layout.Stack
@@ -36,43 +35,39 @@ import androidx.ui.unit.dp
  * The Bills screen.
  */
 @Composable
-fun BillsBody() {
+fun BillsBody(bills: List<Bill>) {
     VerticalScroller {
-        Column {
-            Stack(Modifier.padding(16.dp)) {
-                val accountsProportion = listOf(0.65f, 0.25f, 0.03f, 0.05f)
-                val colors = listOf(0xFF1EB980, 0xFF005D57, 0xFF04B97F, 0xFF37EFBA).map {
-                    Color(it)
-                }
-                AnimatedCircle(
-                    Modifier.gravity(Alignment.Center).preferredHeight(300.dp).fillMaxWidth(),
-                    accountsProportion,
-                    colors
+        Stack(Modifier.padding(16.dp)) {
+            val accountsProportion = bills.extractProportions { it.amount }
+            val colors = bills.map { it.color }
+            AnimatedCircle(
+                Modifier.gravity(Alignment.Center).preferredHeight(300.dp).fillMaxWidth(),
+                accountsProportion,
+                colors
+            )
+            Column(modifier = Modifier.gravity(Alignment.Center)) {
+                Text(
+                    text = "Due",
+                    style = MaterialTheme.typography.body1,
+                    modifier = Modifier.gravity(Alignment.CenterHorizontally)
                 )
-                Column(modifier = Modifier.gravity(Alignment.Center)) {
-                    Text(
-                        text = "Due",
-                        style = MaterialTheme.typography.body1,
-                        modifier = Modifier.gravity(Alignment.CenterHorizontally)
-                    )
-                    Text(
-                        text = "$1,810.00",
-                        style = MaterialTheme.typography.h2,
-                        modifier = Modifier.gravity(Alignment.CenterHorizontally)
-                    )
-                }
+                Text(
+                    text = "$1,810.00",
+                    style = MaterialTheme.typography.h2,
+                    modifier = Modifier.gravity(Alignment.CenterHorizontally)
+                )
             }
-            Spacer(Modifier.preferredHeight(10.dp))
-            Card {
-                Column(modifier = Modifier.padding(12.dp)) {
-                    UserData.bills.forEach { bill ->
-                        BillRow(
-                            name = bill.name,
-                            due = bill.due,
-                            amount = bill.amount,
-                            color = bill.color
-                        )
-                    }
+        }
+        Spacer(Modifier.preferredHeight(10.dp))
+        Card {
+            Column(modifier = Modifier.padding(12.dp)) {
+                bills.forEach { bill ->
+                    BillRow(
+                        name = bill.name,
+                        due = bill.due,
+                        amount = bill.amount,
+                        color = bill.color
+                    )
                 }
             }
         }

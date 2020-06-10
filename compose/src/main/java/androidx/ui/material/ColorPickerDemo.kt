@@ -50,6 +50,7 @@ import androidx.ui.graphics.ImageAsset
 import androidx.ui.graphics.Paint
 import androidx.ui.graphics.Shader
 import androidx.ui.graphics.SolidColor
+import androidx.ui.graphics.isSet
 import androidx.ui.graphics.toArgb
 import androidx.ui.graphics.toPixelMap
 import androidx.ui.layout.Column
@@ -68,7 +69,6 @@ import androidx.ui.material.Surface
 import androidx.ui.material.TopAppBar
 import androidx.ui.text.style.TextAlign
 import androidx.ui.unit.Dp
-import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
 import java.util.Locale
 
@@ -94,9 +94,9 @@ private fun ColorPicker(onColorChange: (Color) -> Unit) {
         Modifier.padding(50.dp)
             .fillMaxSize()
             .aspectRatio(1f)
-    ) { constraints, _ ->
-        val diameter = constraints.maxWidth.value
-        var position by state { PxPosition.Origin }
+    ) {
+        val diameter = constraints.maxWidth
+        var position by state { Offset.Zero }
         val colorWheel = remember(diameter) { ColorWheel(diameter) }
 
         var isDragging by state { false }
@@ -106,7 +106,7 @@ private fun ColorPicker(onColorChange: (Color) -> Unit) {
                 // Work out if the new position is inside the circle we are drawing, and has a
                 // valid color associated to it. If not, keep the current position
                 val newColor = colorWheel.colorForPosition(newPosition)
-                if (newColor != null) {
+                if (newColor.isSet) {
                     position = newPosition
                     onColorChange(newColor)
                 }
@@ -117,7 +117,7 @@ private fun ColorPicker(onColorChange: (Color) -> Unit) {
         Stack(Modifier.fillMaxSize()) {
             Image(modifier = inputModifier, asset = colorWheel.image)
             val color = colorWheel.colorForPosition(position)
-            if (color != null) {
+            if (color.isSet) {
                 Magnifier(visible = isDragging, position = position, color = color)
             }
         }
@@ -135,17 +135,17 @@ private fun ColorPicker(onColorChange: (Color) -> Unit) {
  */
 @Composable
 private fun SimplePointerInput(
-    position: PxPosition,
-    onPositionChange: (PxPosition) -> Unit,
+    position: Offset,
+    onPositionChange: (Offset) -> Unit,
     onDragStateChange: (Boolean) -> Unit
 ): Modifier {
     val observer = object : DragObserver {
-        override fun onStart(downPosition: PxPosition) {
+        override fun onStart(downPosition: Offset) {
             onDragStateChange(true)
             onPositionChange(downPosition)
         }
 
-        override fun onDrag(dragDistance: PxPosition): PxPosition {
+        override fun onDrag(dragDistance: Offset): Offset {
             onPositionChange(position + dragDistance)
             return dragDistance
         }
@@ -154,7 +154,7 @@ private fun SimplePointerInput(
             onDragStateChange(false)
         }
 
-        override fun onStop(velocity: PxPosition) {
+        override fun onStop(velocity: Offset) {
             onDragStateChange(false)
         }
     }
@@ -166,7 +166,7 @@ private fun SimplePointerInput(
  * Magnifier displayed on top of [position] with the currently selected [color].
  */
 @Composable
-private fun Magnifier(visible: Boolean, position: PxPosition, color: Color) {
+private fun Magnifier(visible: Boolean, position: Offset, color: Color) {
     val offset = with(DensityAmbient.current) {
         Modifier.offset(
             position.x.toDp() - MagnifierWidth / 2,
@@ -212,7 +212,7 @@ private fun MagnifierTransition(
     visible: Boolean,
     maxWidth: Dp,
     maxDiameter: Dp,
-    children: @Composable() (labelWidth: Dp, selectionDiameter: Dp, opacity: Float) -> Unit
+    children: @Composable (labelWidth: Dp, selectionDiameter: Dp, opacity: Float) -> Unit
 ) {
     val transitionDefinition = remember {
         transitionDefinition {
@@ -291,8 +291,8 @@ private fun MagnifierSelectionCircle(modifier: Modifier, color: Color) {
  * A [GenericShape] that draws a box with a triangle at the bottom center to indicate a popup.
  */
 private val MagnifierPopupShape = GenericShape { size ->
-    val width = size.width.value
-    val height = size.height.value
+    val width = size.width
+    val height = size.height
 
     val arrowY = height * 0.8f
     val arrowXOffset = width * 0.4f
@@ -339,11 +339,11 @@ private class ColorWheel(diameter: Int) {
  * @return the matching color for [position] inside [ColorWheel], or `null` if there is no color
  * or the color is partially transparent.
  */
-private fun ColorWheel.colorForPosition(position: PxPosition): Color? {
-    val x = position.x.value.toInt().coerceAtLeast(0)
-    val y = position.y.value.toInt().coerceAtLeast(0)
+private fun ColorWheel.colorForPosition(position: Offset): Color {
+    val x = position.x.toInt().coerceAtLeast(0)
+    val y = position.y.toInt().coerceAtLeast(0)
     with(image.toPixelMap()) {
-        if (x >= width || y >= height) return null
-        return this[x, y].takeIf { it.alpha == 1f }
+        if (x >= width || y >= height) return Color.Unset
+        return this[x, y].takeIf { it.alpha == 1f } ?: Color.Unset
     }
 }

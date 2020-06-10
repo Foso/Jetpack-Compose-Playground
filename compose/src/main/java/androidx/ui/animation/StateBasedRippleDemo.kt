@@ -33,9 +33,7 @@ import androidx.ui.foundation.Box
 import androidx.ui.foundation.Canvas
 import androidx.ui.geometry.Offset
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.Paint
 import androidx.ui.layout.fillMaxSize
-import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
 
 @Composable
@@ -49,10 +47,10 @@ fun StateBasedRippleDemo() {
 private fun RippleRect() {
     val radius = with(DensityAmbient.current) { TargetRadius.toPx() }
     val toState = state { ButtonStatus.Initial }
-    val rippleTransDef = remember { createTransDef(radius.value) }
-    val onPress: (PxPosition) -> Unit = { position ->
-        down.x = position.x.value
-        down.y = position.y.value
+    val rippleTransDef = remember { createTransDef(radius) }
+    val onPress: (Offset) -> Unit = { position ->
+        down.x = position.x
+        down.y = position.y
         toState.value = ButtonStatus.Pressed
     }
 
@@ -71,21 +69,16 @@ private fun RippleRect() {
 private fun RippleRectFromState(modifier: Modifier = Modifier, state: TransitionState) {
     Canvas(modifier.fillMaxSize()) {
         // TODO: file bug for when "down" is not a file level val, it's not memoized correctly
-        val x = down.x
-        val y = down.y
-
-        val paint =
-            Paint().apply {
-                color = Color(
-                    alpha = (state[androidx.ui.animation.demos.alpha] * 255).toInt(),
-                    red = 0,
-                    green = 235,
-                    blue = 224
-                )
-            }
-
-        val radius = state[radius]
-        drawCircle(Offset(x, y), radius, paint)
+        drawCircle(
+            Color(
+                alpha = (state[alpha] * 255).toInt(),
+                red = 0,
+                green = 235,
+                blue = 224
+            ),
+            center = Offset(down.x, down.y),
+            radius = state[radius]
+        )
     }
 }
 

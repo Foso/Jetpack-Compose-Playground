@@ -21,25 +21,22 @@ import androidx.animation.DEBUG
 import androidx.animation.PhysicsBuilder
 import androidx.animation.fling
 import androidx.compose.Composable
-import androidx.compose.remember
 import androidx.compose.state
 import androidx.ui.animation.animatedFloat
-import androidx.ui.core.DrawScope
 import androidx.ui.core.Modifier
 import androidx.ui.core.gesture.DragObserver
 import androidx.ui.core.gesture.rawDragGestureFilter
 import androidx.ui.foundation.Canvas
 import androidx.ui.foundation.Text
-import androidx.ui.geometry.Rect
+import androidx.ui.geometry.Offset
+import androidx.ui.geometry.Size
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.Paint
+import androidx.ui.graphics.drawscope.DrawScope
 import androidx.ui.layout.Column
 import androidx.ui.layout.fillMaxHeight
 import androidx.ui.layout.fillMaxWidth
 import androidx.ui.layout.padding
 import androidx.ui.layout.preferredHeight
-import androidx.ui.text.TextStyle
-import androidx.ui.unit.PxPosition
 import androidx.ui.unit.dp
 import androidx.ui.unit.sp
 import kotlin.math.roundToInt
@@ -49,28 +46,27 @@ fun SpringBackScrollingDemo() {
     Column(Modifier.fillMaxHeight()) {
         Text(
             "<== Scroll horizontally ==>",
-            style = TextStyle(fontSize = 20.sp),
+            fontSize = 20.sp,
             modifier = Modifier.padding(40.dp)
         )
         val animScroll = animatedFloat(0f)
         val itemWidth = state { 0f }
         val isFlinging = state { false }
         val gesture = Modifier.rawDragGestureFilter(dragObserver = object : DragObserver {
-            override fun onDrag(dragDistance: PxPosition): PxPosition {
-                animScroll.snapTo(animScroll.targetValue + dragDistance.x.value)
+            override fun onDrag(dragDistance: Offset): Offset {
+                animScroll.snapTo(animScroll.targetValue + dragDistance.x)
                 return dragDistance
             }
 
-            override fun onStop(velocity: PxPosition) {
+            override fun onStop(velocity: Offset) {
                 isFlinging.value = true
-                animScroll.fling(velocity.x.value, onEnd = { _, _, _ ->
+                animScroll.fling(velocity.x, onEnd = { _, _, _ ->
                     isFlinging.value = false
                 })
             }
         })
-        val paint = remember { Paint() }
         Canvas(gesture.fillMaxWidth().preferredHeight(400.dp)) {
-            itemWidth.value = size.width.value / 2f
+            itemWidth.value = size.width / 2f
             if (isFlinging.value) {
                 // Figure out what position to spring back to
                 val target = animScroll.targetValue
@@ -102,13 +98,13 @@ fun SpringBackScrollingDemo() {
                             " scroll value: ${animScroll.value}"
                 )
             }
-            drawRects(paint, animScroll.value)
+            drawRects(animScroll.value)
         }
     }
 }
 
-private fun DrawScope.drawRects(paint: Paint, animScroll: Float) {
-    val width = size.width.value / 2f
+private fun DrawScope.drawRects(animScroll: Float) {
+    val width = size.width / 2f
     val scroll = animScroll + width / 2
     var startingPos = scroll % width
     if (startingPos > 0) {
@@ -118,26 +114,25 @@ private fun DrawScope.drawRects(paint: Paint, animScroll: Float) {
     if (startingColorIndex < 0) {
         startingColorIndex += colors.size
     }
-    paint.color = colors[startingColorIndex]
+
+    val rectSize = Size(width - 20.0f, size.height)
+
     drawRect(
-        Rect(
-            startingPos + 10, 0f, startingPos + width - 10,
-            size.height.value
-        ), paint
+        colors[startingColorIndex],
+        topLeft = Offset(startingPos + 10, 0f),
+        size = rectSize
     )
-    paint.color = colors[(startingColorIndex + colors.size - 1) % colors.size]
+
     drawRect(
-        Rect(
-            startingPos + width + 10, 0f, startingPos + width * 2 - 10,
-            size.height.value
-        ), paint
+        colors[(startingColorIndex + colors.size - 1) % colors.size],
+        topLeft = Offset(startingPos + width + 10, 0f),
+        size = rectSize
     )
-    paint.color = colors[(startingColorIndex + colors.size - 2) % colors.size]
+
     drawRect(
-        Rect(
-            startingPos + width * 2 + 10, 0f, startingPos + width * 3 - 10,
-            size.height.value
-        ), paint
+        colors[(startingColorIndex + colors.size - 2) % colors.size],
+        topLeft = Offset(startingPos + width * 2 + 10, 0.0f),
+        size = rectSize
     )
 }
 

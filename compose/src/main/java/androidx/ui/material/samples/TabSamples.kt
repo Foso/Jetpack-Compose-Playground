@@ -55,7 +55,6 @@ import androidx.ui.material.TabRow
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 import androidx.ui.unit.dp
-import androidx.ui.unit.toPx
 
 @Sampled
 @Composable
@@ -298,8 +297,8 @@ fun FancyIndicatorContainer(tabPositions: List<TabRow.TabPosition>, selectedInde
             transitionDefinition {
                 tabPositions.forEachIndexed { index, position ->
                     state(index) {
-                        this[indicatorStart] = position.left.toPx()
-                        this[indicatorEnd] = position.right.toPx()
+                        this[indicatorStart] = position.left.toFloat()
+                        this[indicatorEnd] = position.right.toFloat()
                         this[indicatorColor] = colors[index % colors.size]
                     }
                 }

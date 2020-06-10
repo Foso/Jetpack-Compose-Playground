@@ -22,9 +22,9 @@ import androidx.ui.material.icons.Icons
 
 enum class RallyScreenState(
     val icon: VectorAsset,
-    val body: @Composable() () -> Unit
+    val body: @Composable () -> Unit
 ) {
     Overview(Icons.Filled.PieChart, { OverviewBody() }),
-    Accounts(Icons.Filled.AttachMoney, { AccountsBody() }),
-    Bills(Icons.Filled.MoneyOff, { BillsBody() })
+    Accounts(Icons.Filled.AttachMoney, { AccountsBody(UserData.accounts) }),
+    Bills(Icons.Filled.MoneyOff, { BillsBody(UserData.bills) })
 }

@@ -22,16 +22,18 @@ import androidx.animation.FloatPropKey
 import androidx.animation.TransitionState
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
-import androidx.compose.Recompose
+import androidx.compose.getValue
+import androidx.compose.mutableStateOf
+import androidx.compose.setValue
 import androidx.ui.animation.ColorPropKey
 import androidx.ui.animation.Transition
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.Canvas
 import androidx.ui.foundation.drawBackground
-import androidx.ui.geometry.Rect
+import androidx.ui.geometry.Offset
+import androidx.ui.geometry.Size
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.Paint
 import androidx.ui.layout.fillMaxSize
 
 @Composable
@@ -74,21 +76,18 @@ private val handler = Handler(Looper.getMainLooper())
 
 @Composable
 private fun ColorRect() {
-    var toState = OverlayState.Closed
-    Recompose { recompose ->
-        handler.postDelayed(object : Runnable {
-            override fun run() {
-                if ((0..1).random() == 0) {
-                    toState = OverlayState.Open
-                } else {
-                    toState = OverlayState.Closed
-                }
-                recompose()
+    var toState by mutableStateOf(OverlayState.Closed)
+    handler.postDelayed(object : Runnable {
+        override fun run() {
+            if ((0..1).random() == 0) {
+                toState = OverlayState.Open
+            } else {
+                toState = OverlayState.Closed
             }
-        }, (200..800).random().toLong())
-        Transition(definition = definition, toState = toState) { state ->
-            ColorRectState(state = state)
         }
+    }, (200..800).random().toLong())
+    Transition(definition = definition, toState = toState) { state ->
+        ColorRectState(state = state)
     }
 }
 
@@ -97,14 +96,10 @@ private fun ColorRectState(state: TransitionState) {
     val color = state[background]
     val scaleY = state[y]
     Canvas(Modifier.fillMaxSize().drawBackground(color = color)) {
-        val paint = Paint().apply {
-            this.color = Color(alpha = 255, red = 255, green = 255, blue = 255)
-        }
         drawRect(
-            Rect(
-                100f, 0f, size.width.value - 100f,
-                scaleY * size.height.value
-            ), paint
+            Color(alpha = 255, red = 255, green = 255, blue = 255),
+            topLeft = Offset(100f, 0f),
+            size = Size(size.width - 200f, scaleY * size.height)
         )
     }
 }

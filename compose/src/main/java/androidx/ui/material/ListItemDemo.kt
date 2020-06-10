@@ -18,12 +18,10 @@ package androidx.ui.material.demos
 
 import androidx.compose.Composable
 import androidx.ui.foundation.VerticalScroller
-import androidx.ui.layout.Column
 import androidx.ui.material.samples.OneLineListItems
 import androidx.ui.material.samples.ThreeLineListItems
 import androidx.ui.material.samples.TwoLineListItems
 import androidx.ui.res.imageResource
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
 @Composable
 fun ListItemDemo() {
@@ -31,10 +29,8 @@ fun ListItemDemo() {
     val icon40 = imageResource(R.drawable.ic_account_box)
     val icon56 = imageResource(R.drawable.ic_android)
     VerticalScroller {
-        Column {
-            OneLineListItems(icon24, icon40, icon56)
-            TwoLineListItems(icon24, icon40)
-            ThreeLineListItems(icon24, icon40)
-        }
+        OneLineListItems(icon24, icon40, icon56)
+        TwoLineListItems(icon24, icon40)
+        ThreeLineListItems(icon24, icon40)
     }
 }

@@ -18,6 +18,7 @@ package androidx.ui.animation.demos
 
 import androidx.animation.transitionDefinition
 import androidx.compose.Composable
+import androidx.compose.StructurallyEqual
 import androidx.compose.remember
 import androidx.compose.state
 import androidx.ui.animation.ColorPropKey
@@ -25,10 +26,11 @@ import androidx.ui.animation.RectPropKey
 import androidx.ui.animation.Transition
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Canvas
-import androidx.ui.foundation.Clickable
+import androidx.ui.foundation.clickable
+import androidx.ui.geometry.Offset
 import androidx.ui.geometry.Rect
+import androidx.ui.geometry.Size
 import androidx.ui.graphics.Color
-import androidx.ui.graphics.Paint
 import androidx.ui.layout.fillMaxSize
 
 @Composable
@@ -42,23 +44,24 @@ fun MultiDimensionalAnimationDemo() {
             AnimState.PutAway -> AnimState.Collapsed
         }
     }
-    Clickable(onClick) {
-        val width = state { 0f }
-        val height = state { 0f }
-        Transition(
-            definition = remember(width.value, height.value) {
-                createTransDef(width.value, height.value)
-            },
-            toState = currentState.value
-        ) { state ->
-            val paint = remember { Paint() }
-            Canvas(modifier = Modifier.fillMaxSize()) {
-                width.value = size.width.value
-                height.value = size.height.value
+    val width = state(areEquivalent = StructurallyEqual) { 0f }
+    val height = state(areEquivalent = StructurallyEqual) { 0f }
+    Transition(
+        definition = remember(width.value, height.value) {
+            createTransDef(width.value, height.value)
+        },
+        toState = currentState.value
+    ) { state ->
+        Canvas(modifier = Modifier.fillMaxSize().clickable(onClick = onClick, indication = null)) {
+            width.value = size.width
+            height.value = size.height
 
-                paint.color = state[background]
-                drawRect(state[bounds], paint)
-            }
+            val bounds = state[bounds]
+            drawRect(
+                state[background],
+                topLeft = Offset(bounds.left, bounds.top),
+                size = Size(bounds.width, bounds.height)
+            )
         }
     }
 }

@@ -17,9 +17,10 @@
 package androidx.ui.demos
 
 import androidx.ui.animation.demos.AnimationDemos
+import androidx.ui.core.demos.CoreDemos
 import androidx.ui.demos.common.DemoCategory
 import androidx.ui.foundation.demos.FoundationDemos
-import androidx.ui.framework.demos.FrameworkDemos
+
 import androidx.ui.layout.demos.LayoutDemos
 import androidx.ui.material.demos.MaterialDemos
 import androidx.ui.material.studies.MaterialStudies
@@ -36,7 +37,7 @@ val AllDemosCategory = DemoCategory(
         //AndroidViewDemos,
         AnimationDemos,
         FoundationDemos,
-        FrameworkDemos,
+        CoreDemos,
         LayoutDemos,
         MaterialDemos,
         MaterialStudies,
