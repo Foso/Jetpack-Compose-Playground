@@ -1,6 +1,9 @@
 # Text
 You can use **Text** to display text. You can use the **style** argument to define things like textdecoration or fontfamily.
 
+!!! info
+    This is the API of version dev14. Newer versions may have a different one
+
 <p align="left">
   <img src ="../../images/foundation/text/TextExample.png" height=500 />
 </p>
@@ -10,7 +13,7 @@ You can use **Text** to display text. You can use the **style** argument to defi
 fun TextExample(){
     Column {
         Text("Just Text")
-        Text("Text with cursive font", style = TextStyle(fontFamily = FontFamily.Cursive))
+        Text("Text with cursive font", style = TextStyle(fontFamily = Cursive))
         Text(
             text = "Text with LineThrough",
             style = TextStyle(textDecoration = TextDecoration.LineThrough)
@@ -56,7 +59,7 @@ fun NormalTextExample(){
 ```kotlin
 @Composable
 fun CursiveTextExample(){
-    Text("Text with cursive font", style = TextStyle(fontFamily = FontFamily.Cursive))
+    Text("Text with cursive font", style = TextStyle(fontFamily = Cursive))
 }
 ```
 
