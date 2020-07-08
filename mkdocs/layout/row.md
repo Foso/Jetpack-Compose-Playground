@@ -66,3 +66,7 @@ Row takes an Arrangement parameter. When you set it to **Arrangement.End**, the 
   <img src ="../../images/layout/row/arrangement_end.png" />
 </p>
 
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/layout/package-summary#row)
+* [Compose Academy/Row](https://compose.academy/academy/layout/row/)
