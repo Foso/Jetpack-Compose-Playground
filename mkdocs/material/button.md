@@ -12,3 +12,11 @@ A [Button](https://developer.android.com/reference/kotlin/androidx/ui/material/p
     }
 }
 ```
+
+
+<hr>
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/material/Button)
+* [Compose Academy/Button](https://compose.academy/academy/material/button/)
+* [Learn-Jetpack-Compose-By-Example/ButtonActivity](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/material/ButtonActivity.kt)
+

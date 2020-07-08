@@ -25,3 +25,10 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [Compose Backstack](https://github.com/zach-klippenstein/compose-backstack)  		    | Simple composable for rendering transitions between backstacks.|
 | [SwipeReveal-Compose](https://github.com/kacmacuna/SwipeReveal-Compose)  		    | A layout that you can swipe to show action buttons.|
 
+
+# Websites
+
+| Name                                    | Description  |
+| ----------------------------------------- | ------------------------------------ |
+| [Compose.Academy](https://compose.academy/)  		    |  |
+| [Jetpackcompose.app](https://Jetpackcompose.app)  		    |  |

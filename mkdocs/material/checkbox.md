@@ -1,5 +1,5 @@
 !!! info
-    This is the API of version dev09. Newer versions may have a different one
+    This is the API of version dev14. Newer versions may have a different one
 
 <p align="left">
   <img src ="../../images/material/checkbox/CheckboxDemo.png" height=500 />
@@ -15,3 +15,6 @@ fun CheckBoxDemo() {
         )
 }
 ```
+<hr>
+## See also:
+* [Compose Academy/Checkbox](https://compose.academy/academy/material/checkbox/)
