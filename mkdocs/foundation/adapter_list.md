@@ -2,7 +2,7 @@
 # AdapterList
 
 !!! info
-    This is the API of version dev09. Newer versions may have a different one
+    This is the API of version dev14. Newer versions may have a different one
     
 A [AdapterList](https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#adapterlist 
 ) is a vertically scrolling list that only composes and lays out the currently visible items.
@@ -57,3 +57,6 @@ Here you can specify some modifiers
 ## itemCallback
 This will be called every time a item from the **data**-List gets visible. 
 Then you can create your composable that should be displayed.  
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#adapterlist)
