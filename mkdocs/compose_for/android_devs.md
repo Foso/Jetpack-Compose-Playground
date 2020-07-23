@@ -40,16 +40,17 @@ You can achieve the result of a RelativeLayout by using a combination of Column,
 
 In Android, use a ScrollView to lay out your widgets—if the user’s device has a smaller screen than your content, it scrolls.
 
-In Compose, you can use a VerticalScroller.
+In Compose, you can use a ScrollableColumn.
 
 ```kotlin
 @Composable
-fun VerticalScrollerExample() {
-    VerticalScroller {
-        //Only one child is allowed in a VerticalScroller
+fun ScrollableColumnExample() {
+    ScrollableColumn {
+        //Only one child is allowed in a ScrollableColumn
         Column {
-            Text("Hello World!")
-            Text("Hello World!2")
+            for (i in 0..100) {
+                Text("$i Hello World!", style =(MaterialTheme.typography()).body1)
+            }
         }
     }
 }

@@ -12,13 +12,14 @@
         <span class=n>Text</span><span class=p>(</span><span class=s>&quot;Hello World!2&quot;</span><span class=p>)</span>
     <span class=p>}</span>
 <span class=p>}</span>
-</code></pre></div> <h3 id=what-is-the-equivalent-of-a-relativelayout>What is the equivalent of a RelativeLayout?<a class=headerlink href=#what-is-the-equivalent-of-a-relativelayout title="Permanent link">&para;</a></h3> <p>A RelativeLayout lays your widgets out relative to each other. In Compose, there are a few ways to achieve the same result.</p> <p>You can achieve the result of a RelativeLayout by using a combination of Column, Row, and Stack widgets</p> <h3 id=what-is-the-equivalent-of-a-scrollview>What is the equivalent of a ScrollView?<a class=headerlink href=#what-is-the-equivalent-of-a-scrollview title="Permanent link">&para;</a></h3> <p>In Android, use a ScrollView to lay out your widgets—if the user’s device has a smaller screen than your content, it scrolls.</p> <p>In Compose, you can use a VerticalScroller.</p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
-<span class=k>fun</span> <span class=nf>VerticalScrollerExample</span><span class=p>()</span> <span class=p>{</span>
-    <span class=n>VerticalScroller</span> <span class=p>{</span>
-        <span class=c1>//Only one child is allowed in a VerticalScroller</span>
+</code></pre></div> <h3 id=what-is-the-equivalent-of-a-relativelayout>What is the equivalent of a RelativeLayout?<a class=headerlink href=#what-is-the-equivalent-of-a-relativelayout title="Permanent link">&para;</a></h3> <p>A RelativeLayout lays your widgets out relative to each other. In Compose, there are a few ways to achieve the same result.</p> <p>You can achieve the result of a RelativeLayout by using a combination of Column, Row, and Stack widgets</p> <h3 id=what-is-the-equivalent-of-a-scrollview>What is the equivalent of a ScrollView?<a class=headerlink href=#what-is-the-equivalent-of-a-scrollview title="Permanent link">&para;</a></h3> <p>In Android, use a ScrollView to lay out your widgets—if the user’s device has a smaller screen than your content, it scrolls.</p> <p>In Compose, you can use a ScrollableColumn.</p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
+<span class=k>fun</span> <span class=nf>ScrollableColumnExample</span><span class=p>()</span> <span class=p>{</span>
+    <span class=n>ScrollableColumn</span> <span class=p>{</span>
+        <span class=c1>//Only one child is allowed in a ScrollableColumn</span>
         <span class=n>Column</span> <span class=p>{</span>
-            <span class=n>Text</span><span class=p>(</span><span class=s>&quot;Hello World!&quot;</span><span class=p>)</span>
-            <span class=n>Text</span><span class=p>(</span><span class=s>&quot;Hello World!2&quot;</span><span class=p>)</span>
+            <span class=k>for</span> <span class=p>(</span><span class=n>i</span> <span class=k>in</span> <span class=m>0.</span><span class=p>.</span><span class=m>100</span><span class=p>)</span> <span class=p>{</span>
+                <span class=n>Text</span><span class=p>(</span><span class=s>&quot;$i Hello World!&quot;</span><span class=p>,</span> <span class=n>style</span> <span class=p>=(</span><span class=n>MaterialTheme</span><span class=p>.</span><span class=n>typography</span><span class=p>()).</span><span class=n>body1</span><span class=p>)</span>
+            <span class=p>}</span>
         <span class=p>}</span>
     <span class=p>}</span>
 <span class=p>}</span>
