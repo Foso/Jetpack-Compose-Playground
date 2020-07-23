@@ -1,7 +1,7 @@
 # HorizontalScroller
 
 !!! warning
-    HorizontalScroller is deprecated, use [ScrollableRow](/foundation/scrollablerow)
+    HorizontalScroller is deprecated, use [ScrollableRow](/Jetpack-Compose-Playground/foundation/scrollablerow)
 
 When an app has layout content that might be longer than the width of the device and that content should be horizontal scrollable, then we need to use a HorizontalScroller. It is the horizontal equivalent of [VerticalScroller](/foundation/vertical_scroller)
 

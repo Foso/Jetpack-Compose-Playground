@@ -1,7 +1,7 @@
 # VerticalScroller
 
 !!! warning
-    VerticalScroller is deprecated, use [ScrollableColumn](/foundation/scrollablecolumn)
+    VerticalScroller is deprecated, use [ScrollableColumn](/Jetpack-Compose-Playground/foundation/scrollablecolumn)
 
 https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#verticalscroller
 
