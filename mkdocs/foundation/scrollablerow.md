@@ -3,7 +3,7 @@
 !!! info
     This is the API of version dev15. Newer versions may have a different one
 
-When an app has layout content that might be longer than the width of the device and that content should be horizontal scrollable, then we need to use a ScrollableRow. It is the horizontal equivalent of [VerticalScroller](/foundation/vertical_scroller)
+When an app has layout content that might be longer than the width of the device and that content should be horizontal scrollable, then we need to use a ScrollableRow. It is the horizontal equivalent of [ScrollableColumn](/Jetpack-Compose-Playground/foundation/scrollablecolumn)
 
 ```kotlin
 
