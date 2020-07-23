@@ -1,7 +1,7 @@
 # ModalDrawerLayout
 
 !!! info
-    This is the API of version dev09. Newer versions may have a different one
+    This is the API of version dev15. Newer versions may have a different one
 
 With a ModalDrawerLayout you can create a navigation drawer. You can define a drawer state and an onStateChange function.
 You define the content of the drawer with **drawerContent** and the rest of your layout in **bodyContent**

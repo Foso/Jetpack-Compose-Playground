@@ -2,10 +2,13 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
 import android.util.Log
 import androidx.compose.Composable
+import androidx.compose.state
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.AdapterList
-import androidx.ui.material.Button
+import androidx.ui.graphics.Color
+import androidx.ui.layout.Column
+import androidx.ui.material.*
 import androidx.ui.text.TextStyle
 import androidx.ui.unit.sp
 

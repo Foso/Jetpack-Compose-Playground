@@ -1,5 +1,8 @@
 # Scaffold
 
+!!! info
+    This is the API of version dev15. Newer versions may have a different one
+    
 A Scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or a Drawer.
 
 ```kotlin
@@ -8,14 +11,14 @@ fun ScaffoldDemo() {
     val materialBlue700= Color(0xFF1976D2)
     Scaffold(
            scaffoldState = ScaffoldState(DrawerState.Opened),
-           topAppBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
+           topBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
            floatingActionButtonPosition = Scaffold.FabPosition.End,
            floatingActionButton = { FloatingActionButton(onClick = {}){
                Text("X")
            } },
            drawerContent = { Text(text = "drawerContent") },
            bodyContent = { Text("BodyContent") },
-           bottomAppBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
+           bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
        )
 }
 ```
@@ -31,7 +34,7 @@ fun ScaffoldDemo() {
 With the scaffoldState you can set the opening state of the drawer(DrawerState.Opened or DrawerState.Closed)
 
 
-## topAppBar
+## topBar
 
 <p align="left">
   <img src ="../../images/material/scaffold/topappbar.png"  />
@@ -54,7 +57,7 @@ Here you can set the content of your drawer.
 ## bodyContent
 This is the primary content of the scaffold. You can add any Composable here.
 
-## bottomAppBar
+## bottomBar
 
 <p align="left">
   <img src ="../../images/material/scaffold/bottomappbar.png"  />

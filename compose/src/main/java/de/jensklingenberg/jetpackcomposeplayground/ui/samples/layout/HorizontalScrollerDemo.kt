@@ -8,20 +8,21 @@ import androidx.ui.layout.Row
 import androidx.ui.material.MaterialTheme
 
 import androidx.compose.Composable
+import androidx.ui.foundation.ScrollableRow
 
 
-        /**
+/**
          * @see wiki [https://github.com/Foso/Jetpack-Compose-Playground/wiki/HorizontalScroller]
          */
 
 @Composable
-fun HorizontalScrollerExample() {
-    HorizontalScroller {
+fun ScrollableRowExample() {
+    ScrollableRow(children = {
         //Only one child is allowed in a VerticalScroller
         Row {
             for (i in 0..100) {
                 Text(text = "$i Hello World!", style =(MaterialTheme.typography).body1)
             }
         }
-    }
+    })
 }

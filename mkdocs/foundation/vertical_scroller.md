@@ -1,7 +1,7 @@
 # VerticalScroller
 
-!!! info
-    This is the API of version dev08. Newer versions may have a different one
+!!! warning
+    VerticalScroller is deprecated, use [ScrollableColumn](/foundation/scrollablecolumn)
 
 https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#verticalscroller
 

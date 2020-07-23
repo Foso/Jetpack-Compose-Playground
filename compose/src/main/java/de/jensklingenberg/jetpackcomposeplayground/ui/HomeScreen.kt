@@ -34,9 +34,9 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.unit.dp
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.ColumnExample
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.HorizontalScrollerExample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.ScrollableRowExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.PaddingDemo
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.VerticalScrollerExample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.ScrollableColumnExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.material.CheckBoxDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.RowExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.RadioGroupSample
@@ -158,8 +158,8 @@ enum class ScreenState( ) {
 fun ScreenState.body() = when (this) {
     ScreenState.AndroidContextComposeDemo -> AndroidContextComposeDemo()
     ScreenState.ColumnExample -> ColumnExample()
-    ScreenState.VerticalScroller -> VerticalScrollerExample()
-    ScreenState.HorizontalScrollerExample -> HorizontalScrollerExample()
+    ScreenState.VerticalScroller -> ScrollableColumnExample()
+    ScreenState.HorizontalScrollerExample -> ScrollableRowExample()
     ScreenState.RowExample -> RowExample()
     ScreenState.PaddingDemo -> PaddingDemo()
 

@@ -55,8 +55,8 @@ nav:
               - 'AdapterList': foundation/adapter_list.md
               - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md
-              - 'HorizontalScroller': foundation/horizontal_scroller.md
-              - 'VerticalScroller': foundation/vertical_scroller.md
+              - 'ScrollableRow': foundation/scrollablerow.md
+              - 'ScrollableColumn': foundation/scrollablecolumn.md
               - 'Shape' : foundation/shape.md
               - 'Text': foundation/text.md
               - 'TextField': foundation/textfield.md
