@@ -16,7 +16,7 @@
 
 package androidx.ui.core.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
 import androidx.ui.core.DropDownAlignment
@@ -29,7 +29,7 @@ import androidx.ui.graphics.Color
 import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun PopupSample() {
     Box {
@@ -48,7 +48,7 @@ fun PopupSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun DropdownPopupSample() {
     Box(Modifier.preferredSize(400.dp, 200.dp)) {

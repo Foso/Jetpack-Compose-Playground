@@ -1,5 +1,7 @@
 # Recompose
 
+//TODO: GOT DELETED IN dev14
+
 You can use Recompose when you need to manually trigger an recomposition/update of a part of your composable tree.
 Wrap **Recompose** around the part where you need the functionality. When you execute the **recompose** function, the whole code inside Recompose will be rendered again.
 

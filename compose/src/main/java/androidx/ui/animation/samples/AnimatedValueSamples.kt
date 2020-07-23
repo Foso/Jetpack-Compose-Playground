@@ -18,7 +18,7 @@ package androidx.ui.animation.samples
 
 import androidx.animation.AnimationVector2D
 import androidx.animation.TwoWayConverter
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.animation.animate
@@ -39,7 +39,7 @@ enum class VisibilityState {
     Invisible
 }
 
-@Sampled
+
 @Composable
 fun VisibilityTransition(visibility: VisibilityState) {
     Box(Modifier.fillMaxSize(), gravity = ContentGravity.Center) {
@@ -48,7 +48,7 @@ fun VisibilityTransition(visibility: VisibilityState) {
     }
 }
 
-@Sampled
+
 @Composable
 fun ColorTransition(enabled: Boolean) {
     Box(Modifier.fillMaxSize(), gravity = ContentGravity.Center) {
@@ -59,7 +59,7 @@ fun ColorTransition(enabled: Boolean) {
 
 data class MySize(val width: Dp, val height: Dp)
 
-@Sampled
+
 @Composable
 fun ArbitraryValueTypeTransition(enabled: Boolean) {
     val mySize = remember(enabled) {

@@ -18,7 +18,7 @@
 
 package androidx.ui.core.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Text
@@ -30,7 +30,7 @@ import androidx.ui.layout.padding
 import androidx.ui.material.Button
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun ModifierUsageSample() {
     Text(
@@ -41,7 +41,7 @@ fun ModifierUsageSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun ModifierFactorySample() {
     class FancyModifier(val level: Float) : Modifier.Element
@@ -53,7 +53,7 @@ fun ModifierFactorySample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun ModifierParameterSample() {
     @Composable
@@ -64,7 +64,7 @@ fun ModifierParameterSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SubcomponentModifierSample() {
     @Composable

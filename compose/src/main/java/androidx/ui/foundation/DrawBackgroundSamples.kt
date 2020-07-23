@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Text
@@ -29,7 +29,7 @@ import androidx.ui.layout.padding
 import androidx.ui.unit.dp
 
 @Composable
-@Sampled
+
 fun DrawBackgroundColor() {
     Text(
         "Text with background",
@@ -38,7 +38,7 @@ fun DrawBackgroundColor() {
 }
 
 @Composable
-@Sampled
+
 fun DrawBackgroundShapedBrush() {
     val gradientBrush = HorizontalGradient(
         colors = listOf(Color.Red, Color.Blue, Color.Green),

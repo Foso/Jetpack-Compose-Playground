@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.core.Modifier
@@ -36,7 +36,7 @@ import androidx.ui.layout.preferredSize
 import androidx.ui.res.loadVectorResource
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun ImageSample() {
     val imageAsset = createTestImage()
@@ -44,7 +44,7 @@ fun ImageSample() {
     Image(asset = imageAsset)
 }
 
-@Sampled
+
 @Composable
 fun ImagePainterSubsectionSample() {
     val imageAsset = createTestImage()
@@ -58,7 +58,7 @@ fun ImagePainterSubsectionSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun ImageVectorAssetSample() {
     val vectorAsset = loadVectorResource(R.drawable.ic_sample_vector)
@@ -72,7 +72,7 @@ fun ImageVectorAssetSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun ImagePainterSample() {
     val customPainter = remember {

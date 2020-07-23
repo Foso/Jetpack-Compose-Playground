@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
@@ -43,7 +43,7 @@ import androidx.ui.layout.wrapContentSize
 import androidx.ui.layout.wrapContentWidth
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun SimpleSizeModifier() {
     // The result is a 50.dp x 50.dp red box centered in a 100.dp x 100.dp space.
@@ -57,7 +57,7 @@ fun SimpleSizeModifier() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SimpleWidthModifier() {
     // The result is a 50.dp x 50.dp magenta box centered in a 100.dp x 100.dp space.
@@ -72,7 +72,7 @@ fun SimpleWidthModifier() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SimpleHeightModifier() {
     // The result is a 50.dp x 50.dp blue box centered in a 100.dp x 100.dp space.
@@ -87,7 +87,7 @@ fun SimpleHeightModifier() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SimplePreferredSizeModifier() {
     Stack {
@@ -95,7 +95,7 @@ fun SimplePreferredSizeModifier() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimplePreferredWidthModifier() {
     Stack {
@@ -103,7 +103,7 @@ fun SimplePreferredWidthModifier() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimplePreferredHeightModifier() {
     Stack {
@@ -111,7 +111,7 @@ fun SimplePreferredHeightModifier() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleFillWidthModifier() {
     Box(Modifier.fillMaxWidth(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
@@ -119,7 +119,7 @@ fun SimpleFillWidthModifier() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleFillHeightModifier() {
     Box(Modifier.fillMaxHeight(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
@@ -127,7 +127,7 @@ fun SimpleFillHeightModifier() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleFillModifier() {
     Box(Modifier.fillMaxSize(), backgroundColor = Color.Red, gravity = ContentGravity.Center) {
@@ -135,7 +135,7 @@ fun SimpleFillModifier() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleWrapContentAlignedModifier() {
     // Here the result will be a 20.dp x 20.dp blue box top-centered in a 40.dp x 40.dp space.
@@ -152,7 +152,7 @@ fun SimpleWrapContentAlignedModifier() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SimpleWrapContentVerticallyAlignedModifier() {
     // Here the result will be a 50.dp x 20.dp blue box centered vertically in a 50.dp x 50.dp
@@ -169,7 +169,7 @@ fun SimpleWrapContentVerticallyAlignedModifier() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SimpleWrapContentHorizontallyAlignedModifier() {
     // Here the result will be a 20.dp x 50.dp blue box centered vertically in a 50.dp x 50.dp
@@ -187,7 +187,7 @@ fun SimpleWrapContentHorizontallyAlignedModifier() {
     )
 }
 
-@Sampled
+
 @Composable
 fun DefaultMinSizeConstraintsSample() {
     @Composable

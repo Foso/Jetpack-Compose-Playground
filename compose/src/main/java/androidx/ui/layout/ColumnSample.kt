@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
 import androidx.ui.core.Layout
@@ -34,7 +34,7 @@ import androidx.ui.unit.dp
 import kotlin.math.max
 import kotlin.math.min
 
-@Sampled
+
 @Composable
 fun SimpleColumn() {
     Column {
@@ -52,7 +52,7 @@ fun SimpleColumn() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleGravityInColumn() {
     Column(Modifier.fillMaxWidth()) {
@@ -83,7 +83,7 @@ fun SimpleGravityInColumn() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleRelativeToSiblings() {
     Column {
@@ -104,7 +104,7 @@ fun SimpleRelativeToSiblings() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleRelativeToSiblingsInColumn() {
     // Alignment lines provided by the RectangleWithStartEnd layout. We need to create these

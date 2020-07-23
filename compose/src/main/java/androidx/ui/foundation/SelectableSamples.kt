@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.setValue
@@ -32,7 +32,7 @@ import androidx.ui.layout.Row
 import androidx.ui.layout.size
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun SelectableSample() {
     val option1 = Color.Red

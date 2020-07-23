@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.StructurallyEqual
 import androidx.compose.getValue
@@ -38,7 +38,7 @@ import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 import androidx.ui.unit.sp
 
-@Sampled
+
 @Composable
 fun ZoomableSample() {
     Box(

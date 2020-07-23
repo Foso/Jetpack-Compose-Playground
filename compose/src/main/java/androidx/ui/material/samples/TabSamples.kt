@@ -17,7 +17,7 @@
 package androidx.ui.material.samples
 
 import androidx.animation.transitionDefinition
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.emptyContent
 import androidx.compose.getValue
@@ -56,7 +56,7 @@ import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun TextTabs() {
     var state by state { 0 }
@@ -141,7 +141,7 @@ fun ScrollingTextTabs() {
     }
 }
 
-@Sampled
+
 @Composable
 fun FancyTabs() {
     var state by state { 0 }
@@ -158,7 +158,7 @@ fun FancyTabs() {
     }
 }
 
-@Sampled
+
 @Composable
 fun FancyIndicatorTabs() {
     var state by state { 0 }
@@ -187,7 +187,7 @@ fun FancyIndicatorTabs() {
     }
 }
 
-@Sampled
+
 @Composable
 fun FancyIndicatorContainerTabs() {
     var state by state { 0 }
@@ -249,7 +249,7 @@ fun ScrollingFancyIndicatorContainerTabs() {
     }
 }
 
-@Sampled
+
 @Composable
 fun FancyTab(title: String, onClick: () -> Unit, selected: Boolean) {
     Tab(selected, onClick) {
@@ -272,7 +272,7 @@ fun FancyTab(title: String, onClick: () -> Unit, selected: Boolean) {
     }
 }
 
-@Sampled
+
 @Composable
 fun FancyIndicator(color: Color) {
     // Draws a rounded rectangular with border around the Tab, with a 5.dp padding from the edges
@@ -284,7 +284,7 @@ fun FancyIndicator(color: Color) {
     ) {}
 }
 
-@Sampled
+
 @Composable
 fun FancyIndicatorContainer(tabPositions: List<TabRow.TabPosition>, selectedIndex: Int) {
     val indicatorStart = remember { PxPropKey() }

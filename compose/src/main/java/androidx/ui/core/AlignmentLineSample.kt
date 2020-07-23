@@ -16,14 +16,14 @@
 
 package androidx.ui.core.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.core.HorizontalAlignmentLine
 import androidx.ui.core.Layout
 import kotlin.math.min
 
-@Sampled
+
 @Composable
 fun AlignmentLineSample() {
     // Create a horizontal alignment line. Note it is not common for alignment lines to be created

@@ -16,7 +16,7 @@
 
 package androidx.ui.core.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.core.drawShadow
@@ -25,7 +25,7 @@ import androidx.ui.graphics.RectangleShape
 import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun DrawShadowSample() {
     Box(

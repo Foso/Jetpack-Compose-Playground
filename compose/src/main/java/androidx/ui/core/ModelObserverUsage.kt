@@ -16,7 +16,7 @@
 
 package androidx.ui.core.samples
 
-import androidx.annotation.Sampled
+
 import androidx.ui.core.ModelObserver
 
 private val modelObserver = ModelObserver { it() }
@@ -26,7 +26,7 @@ private val onCommitListener: (MyTargetType) -> Unit = { target ->
     handleCommit(target)
 }
 
-@Sampled
+
 fun modelObserverExample(target: MyTargetType) {
     modelObserver.observeReads(target, onCommitListener) {
         // do stuff with target for which we want to track model reads

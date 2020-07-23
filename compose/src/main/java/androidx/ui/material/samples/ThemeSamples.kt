@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
@@ -35,7 +35,7 @@ import androidx.ui.text.TextStyle
 import androidx.ui.text.font.FontWeight
 import androidx.ui.unit.sp
 
-@Sampled
+
 @Composable
 fun MaterialThemeSample() {
     val lightColors = lightColorPalette(
@@ -68,14 +68,14 @@ fun MaterialThemeSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun ThemeColorSample() {
     val colors = MaterialTheme.colors
     Box(Modifier.aspectRatio(1f).fillMaxSize().drawBackground(colors.primary))
 }
 
-@Sampled
+
 @Composable
 fun ThemeTextStyleSample() {
     val typography = MaterialTheme.typography

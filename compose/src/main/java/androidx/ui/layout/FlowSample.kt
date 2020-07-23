@@ -16,7 +16,7 @@
 
 package androidx.ui.layout.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
@@ -32,7 +32,7 @@ val sizes = listOf(
     20.dp, 70.dp, 50.dp, 100.dp, 20.dp, 60.dp, 60.dp, 50.dp, 60.dp
 )
 
-@Sampled
+
 @Composable
 @OptIn(ExperimentalLayout::class)
 fun SimpleFlowRow() {
@@ -46,7 +46,7 @@ fun SimpleFlowRow() {
     }
 }
 
-@Sampled
+
 @Composable
 @OptIn(ExperimentalLayout::class)
 fun SimpleFlowColumn() {

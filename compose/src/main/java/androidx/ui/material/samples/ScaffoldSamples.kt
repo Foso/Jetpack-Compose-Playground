@@ -17,7 +17,7 @@
 package androidx.ui.material.samples
 
 import androidx.animation.TweenBuilder
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.remember
 import androidx.ui.animation.animatedFloat
@@ -55,7 +55,7 @@ private val colors = listOf(
     Color(0xFFd0fff8.toInt())
 )
 
-@Sampled
+
 @Composable
 fun SimpleScaffoldWithTopBar() {
     val scaffoldState = remember { ScaffoldState() }
@@ -96,7 +96,7 @@ fun SimpleScaffoldWithTopBar() {
     )
 }
 
-@Sampled
+
 @Composable
 fun ScaffoldWithBottomBarAndCutout() {
     val scaffoldState = remember { ScaffoldState() }

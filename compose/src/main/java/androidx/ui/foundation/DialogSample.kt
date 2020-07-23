@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Modifier
@@ -26,7 +26,7 @@ import androidx.ui.graphics.Color
 import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun DialogSample() {
     val openDialog = state { true }

@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.setValue
@@ -24,7 +24,7 @@ import androidx.ui.foundation.TextField
 import androidx.ui.foundation.TextFieldValue
 import androidx.ui.savedinstancestate.savedInstanceState
 
-@Sampled
+
 @Composable
 fun TextFieldSample() {
     var value by savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }

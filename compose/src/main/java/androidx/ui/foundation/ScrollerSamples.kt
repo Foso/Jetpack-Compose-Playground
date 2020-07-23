@@ -16,7 +16,7 @@
 
 package androidx.ui.foundation.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.MutableState
 import androidx.compose.state
@@ -78,7 +78,7 @@ private val phrases = listOf(
     "Go For Broke"
 )
 
-@Sampled
+
 @Composable
 fun VerticalScrollerSample() {
     val style = TextStyle(fontSize = 30.sp)
@@ -90,7 +90,7 @@ fun VerticalScrollerSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleHorizontalScrollerSample() {
     HorizontalScroller {
@@ -102,7 +102,7 @@ fun SimpleHorizontalScrollerSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun ControlledHorizontalScrollerSample() {
     // Create and own ScrollerPosition to call `smoothScrollTo` later

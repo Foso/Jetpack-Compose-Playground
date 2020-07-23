@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.remember
@@ -37,7 +37,7 @@ import androidx.ui.material.Switch
 import androidx.ui.material.TriStateCheckbox
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun TriStateCheckboxSample() {
     Column {
@@ -66,7 +66,7 @@ fun TriStateCheckboxSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun CheckboxSample() {
     val checkedState = state { true }
@@ -76,7 +76,7 @@ fun CheckboxSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SwitchSample() {
     val checkedState = state { true }
@@ -86,7 +86,7 @@ fun SwitchSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun RadioButtonSample() {
     // we have two radio buttons and only one can be selected
@@ -106,7 +106,7 @@ fun RadioButtonSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun DefaultRadioGroupSample() {
     val radioOptions = listOf("Calls", "Missed", "Friends")
@@ -118,7 +118,7 @@ fun DefaultRadioGroupSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun CustomRadioGroupSample() {
     val radioOptions = listOf("Disagree", "Neutral", "Agree")

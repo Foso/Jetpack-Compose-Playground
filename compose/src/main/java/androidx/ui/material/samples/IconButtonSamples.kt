@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.setValue
@@ -29,7 +29,7 @@ import androidx.ui.material.IconToggleButton
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 
-@Sampled
+
 @Composable
 fun IconButtonSample() {
     IconButton(onClick = { /* doSomething() */ }) {
@@ -37,7 +37,7 @@ fun IconButtonSample() {
     }
 }
 
-@Sampled
+
 @Composable
 fun IconToggleButtonSample() {
     var checked by state { false }

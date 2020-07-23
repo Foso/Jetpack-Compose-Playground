@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.setValue
@@ -39,7 +39,7 @@ import androidx.ui.savedinstancestate.savedInstanceState
 import androidx.ui.text.TextRange
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun SimpleFilledTextFieldSample() {
     var text by savedInstanceState { "" }
@@ -51,7 +51,7 @@ fun SimpleFilledTextFieldSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun FilledTextFieldWithIcons() {
     var text by savedInstanceState { "" }
@@ -65,7 +65,7 @@ fun FilledTextFieldWithIcons() {
     )
 }
 
-@Sampled
+
 @Composable
 fun FilledTextFieldWithPlaceholder() {
     var text by savedInstanceState { "" }
@@ -78,7 +78,7 @@ fun FilledTextFieldWithPlaceholder() {
     )
 }
 
-@Sampled
+
 @Composable
 fun FilledTextFieldWithErrorState() {
     var text by savedInstanceState { "" }
@@ -95,7 +95,7 @@ fun FilledTextFieldWithErrorState() {
     )
 }
 
-@Sampled
+
 @Composable
 fun TextFieldWithHelperMessage() {
     var text by savedInstanceState { "" }
@@ -124,7 +124,7 @@ fun TextFieldWithHelperMessage() {
     }
 }
 
-@Sampled
+
 @Composable
 fun PasswordFilledTextField() {
     var password by savedInstanceState { "" }
@@ -137,7 +137,7 @@ fun PasswordFilledTextField() {
     )
 }
 
-@Sampled
+
 @Composable
 fun FilledTextFieldSample() {
     var text by savedInstanceState(saver = TextFieldValue.Saver) {
@@ -151,7 +151,7 @@ fun FilledTextFieldSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun TextFieldWithHideKeyboardOnImeAction() {
     var text by savedInstanceState { "" }

@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Icon
@@ -29,7 +29,7 @@ import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 import androidx.ui.material.icons.filled.Menu
 
-@Sampled
+
 @Composable
 fun SimpleTopAppBar() {
     TopAppBar(
@@ -51,7 +51,7 @@ fun SimpleTopAppBar() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SimpleBottomAppBar() {
     BottomAppBar {

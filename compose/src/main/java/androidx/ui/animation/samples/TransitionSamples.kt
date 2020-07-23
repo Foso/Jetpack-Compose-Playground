@@ -17,7 +17,7 @@
 package androidx.ui.animation.samples
 
 import androidx.animation.transitionDefinition
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.animation.ColorPropKey
 import androidx.ui.animation.DpPropKey
@@ -34,7 +34,7 @@ private enum class State {
     Second
 }
 
-@Sampled
+
 fun TransitionSample() {
     val colorKey = ColorPropKey()
     val widthKey = DpPropKey()

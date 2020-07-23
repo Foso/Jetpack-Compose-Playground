@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.compose.state
 import androidx.ui.core.Modifier
@@ -34,7 +34,7 @@ import androidx.ui.material.DrawerState
 import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun ModalDrawerSample() {
     val (state, onStateChange) = state { DrawerState.Closed }
@@ -48,7 +48,7 @@ fun ModalDrawerSample() {
     )
 }
 
-@Sampled
+
 @Composable
 fun BottomDrawerSample() {
     val (state, onStateChange) = state { DrawerState.Closed }

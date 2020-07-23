@@ -16,11 +16,10 @@
 
 package androidx.ui.layout.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.core.Alignment
-import androidx.ui.text.FirstBaseline
-import androidx.ui.core.Modifier
+import androidx.ui.textimport androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.drawBackground
@@ -31,7 +30,7 @@ import androidx.ui.layout.preferredHeight
 import androidx.ui.layout.preferredSize
 import androidx.ui.unit.dp
 
-@Sampled
+
 @Composable
 fun SimpleRow() {
     Row {
@@ -48,7 +47,7 @@ fun SimpleRow() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleGravityInRow() {
     Row(Modifier.fillMaxHeight()) {
@@ -79,7 +78,7 @@ fun SimpleGravityInRow() {
     }
 }
 
-@Sampled
+
 @Composable
 fun SimpleRelativeToSiblingsInRow() {
     Row(Modifier.fillMaxHeight()) {

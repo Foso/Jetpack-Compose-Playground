@@ -16,7 +16,7 @@
 
 package androidx.ui.material.samples
 
-import androidx.annotation.Sampled
+
 import androidx.compose.Composable
 import androidx.ui.foundation.Icon
 import androidx.ui.foundation.Text
@@ -25,7 +25,7 @@ import androidx.ui.material.FloatingActionButton
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 
-@Sampled
+
 @Composable
 fun SimpleFab() {
     FloatingActionButton(onClick = { /*do something*/ }) {
@@ -41,7 +41,7 @@ fun SimpleExtendedFabNoIcon() {
     )
 }
 
-@Sampled
+
 @Composable
 fun SimpleExtendedFabWithIcon() {
     ExtendedFloatingActionButton(
