@@ -26,7 +26,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcher
 import androidx.compose.Composable
-import androidx.compose.frames.modelListOf
 import androidx.compose.getValue
 import androidx.compose.mutableStateOf
 import androidx.compose.onCommit
@@ -46,6 +45,10 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.darkColorPalette
 import androidx.ui.material.lightColorPalette
 
+import androidx.ui.savedinstancestate.Saver
+import androidx.ui.savedinstancestate.listSaver
+import androidx.ui.savedinstancestate.rememberSavedInstanceState
+
 /**
  * Main [Activity] containing all Compose related demos.
  */
@@ -54,13 +57,13 @@ class DemoActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val navigator = remember {
-                Navigator(
-                    initialDemo = AllDemosCategory,
-                    backDispatcher = onBackPressedDispatcher
-                ) { activityDemo ->
-                    startActivity(Intent(this, activityDemo.activityClass.java))
-                }
+            val activityStarter = fun(demo: ActivityDemo<*>) {
+                startActivity(Intent(this, demo.activityClass.java))
+            }
+            val navigator = rememberSavedInstanceState(
+                saver = Navigator.Saver(AllDemosCategory, onBackPressedDispatcher, activityStarter)
+            ) {
+                Navigator(AllDemosCategory, onBackPressedDispatcher, activityStarter)
             }
             val demoColors = remember {
                 DemoColorPalette().also {
@@ -72,7 +75,11 @@ class DemoActivity : ComponentActivity() {
                 }
             }
             DemoTheme(demoColors, window) {
-                val filteringMode = remember { FilterMode(onBackPressedDispatcher) }
+                val filteringMode = rememberSavedInstanceState(
+                    saver = FilterMode.Saver(onBackPressedDispatcher)
+                ) {
+                    FilterMode(onBackPressedDispatcher)
+                }
                 val onStartFiltering = { filteringMode.isFiltering = true }
                 val onEndFiltering = { filteringMode.isFiltering = false }
                 DemoApp(
@@ -105,7 +112,7 @@ class DemoActivity : ComponentActivity() {
 private fun DemoTheme(
     demoColors: DemoColorPalette,
     window: Window,
-    children: @Composable() () -> Unit
+    children: @Composable () -> Unit
 ) {
     MaterialTheme(demoColors.colors) {
         val statusBarColor = with(MaterialTheme.colors) {
@@ -127,22 +134,29 @@ private val ColorPalette.darkenedPrimary: Int
         )
     }.toArgb()
 
-private class Navigator(
-    private val initialDemo: DemoCategory,
+private class Navigator private constructor(
     private val backDispatcher: OnBackPressedDispatcher,
-    val launchActivityDemo: (ActivityDemo<*>) -> Unit
+    private val launchActivityDemo: (ActivityDemo<*>) -> Unit,
+    private val rootDemo: Demo,
+    initialDemo: Demo,
+    private val backStack: MutableList<Demo>
 ) {
-    private val backStack: MutableList<Demo> = modelListOf()
+    constructor(
+        rootDemo: Demo,
+        backDispatcher: OnBackPressedDispatcher,
+        launchActivityDemo: (ActivityDemo<*>) -> Unit
+    ) : this(backDispatcher, launchActivityDemo, rootDemo, rootDemo, mutableListOf<Demo>())
 
     private val onBackPressed = object : OnBackPressedCallback(false) {
         override fun handleOnBackPressed() {
             popBackStack()
         }
     }.apply {
+        isEnabled = !isRoot
         backDispatcher.addCallback(this)
     }
 
-    private var _currentDemo by mutableStateOf<Demo>(initialDemo)
+    private var _currentDemo by mutableStateOf(initialDemo)
     var currentDemo: Demo
         get() = _currentDemo
         private set(value) {
@@ -168,24 +182,58 @@ private class Navigator(
     fun popAll() {
         if (!isRoot) {
             backStack.clear()
-            currentDemo = initialDemo
+            currentDemo = rootDemo
         }
     }
 
     private fun popBackStack() {
         currentDemo = backStack.removeAt(backStack.lastIndex)
     }
+
+    companion object {
+        fun Saver(
+            rootDemo: DemoCategory,
+            backDispatcher: OnBackPressedDispatcher,
+            launchActivityDemo: (ActivityDemo<*>) -> Unit
+        ): Saver<Navigator, *> = listSaver<Navigator, String>(
+            save = { navigator ->
+                (navigator.backStack + navigator.currentDemo).map { it.title }
+            },
+            restore = { restored ->
+                require(restored.isNotEmpty())
+                val backStack = restored.mapTo(mutableListOf()) {
+                    requireNotNull(findDemo(rootDemo, it))
+                }
+                val initial = backStack.removeAt(backStack.lastIndex)
+                Navigator(backDispatcher, launchActivityDemo, rootDemo, initial, backStack)
+            }
+        )
+
+        private fun findDemo(demo: Demo, title: String): Demo? {
+            if (demo.title == title) {
+                return demo
+            }
+            if (demo is DemoCategory) {
+                demo.demos.forEach { child ->
+                    findDemo(child, title)
+                        ?.let { return it }
+                }
+            }
+            return null
+        }
+    }
 }
 
-private class FilterMode(backDispatcher: OnBackPressedDispatcher) {
+private class FilterMode(backDispatcher: OnBackPressedDispatcher, initialValue: Boolean = false) {
 
-    private var _isFiltering by mutableStateOf(false)
+    private var _isFiltering by mutableStateOf(initialValue)
 
     private val onBackPressed = object : OnBackPressedCallback(false) {
         override fun handleOnBackPressed() {
             isFiltering = false
         }
     }.apply {
+        isEnabled = initialValue
         backDispatcher.addCallback(this)
     }
 
@@ -195,6 +243,13 @@ private class FilterMode(backDispatcher: OnBackPressedDispatcher) {
             _isFiltering = value
             onBackPressed.isEnabled = value
         }
+
+    companion object {
+        fun Saver(backDispatcher: OnBackPressedDispatcher) = Saver<FilterMode, Boolean>(
+            save = { it.isFiltering },
+            restore = { FilterMode(backDispatcher, it) }
+        )
+    }
 }
 
 /**
@@ -202,24 +257,67 @@ private class FilterMode(backDispatcher: OnBackPressedDispatcher) {
  * not present in the [SharedPreferences], its default value as defined in [ColorPalette]
  * will be returned.
  */
-fun DemoColorPalette.loadColorsFromSharedPreferences(context: Context) {
-    val sharedPreferences =
-        PreferenceManager.getDefaultSharedPreferences(context)
 
-    fun getColorsFromSharedPreferences(isLightTheme: Boolean): ColorPalette {
-        val function = if (isLightTheme) ::lightColorPalette else ::darkColorPalette
-        val parametersToSet = function.parameters.mapNotNull { parameter ->
-            val savedValue = sharedPreferences.getString(parameter.name + isLightTheme, "")
-            if (savedValue.isNullOrBlank()) {
-                null
-            } else {
-                val parsedColor = Color(savedValue.toLong(16))
-                parameter to parsedColor
-            }
-        }.toMap()
-        return function.callBy(parametersToSet)
-    }
+/**
+ * TODO: remove after b/154329050 is fixed
+ * Inline classes don't play well with reflection, so we want boxed classes for our
+ * call to [lightColorPalette].
+ */
+internal fun reflectLightColorPalette(
+    primary: Long = 0xFF6200EE,
+    primaryVariant: Long = 0xFF3700B3,
+    secondary: Long = 0xFF03DAC6,
+    secondaryVariant: Long = 0xFF018786,
+    background: Long = 0xFFFFFFFF,
+    surface: Long = 0xFFFFFFFF,
+    error: Long = 0xFFB00020,
+    onPrimary: Long = 0xFFFFFFFF,
+    onSecondary: Long = 0xFF000000,
+    onBackground: Long = 0xFF000000,
+    onSurface: Long = 0xFF000000,
+    onError: Long = 0xFFFFFFFF
+) = lightColorPalette(
+    primary = Color(primary),
+    primaryVariant = Color(primaryVariant),
+    secondary = Color(secondary),
+    secondaryVariant = Color(secondaryVariant),
+    background = Color(background),
+    surface = Color(surface),
+    error = Color(error),
+    onPrimary = Color(onPrimary),
+    onSecondary = Color(onSecondary),
+    onBackground = Color(onBackground),
+    onSurface = Color(onSurface),
+    onError = Color(onError)
+)
 
-    lightColors = getColorsFromSharedPreferences(true)
-    darkColors = getColorsFromSharedPreferences(false)
-}
+/**
+ * TODO: remove after b/154329050 is fixed
+ * Inline classes don't play well with reflection, so we want boxed classes for our
+ * call to [darkColorPalette].
+ */
+internal fun reflectDarkColorPalette(
+    primary: Long = 0xFFBB86FC,
+    primaryVariant: Long = 0xFF3700B3,
+    secondary: Long = 0xFF03DAC6,
+    background: Long = 0xFF121212,
+    surface: Long = 0xFF121212,
+    error: Long = 0xFFCF6679,
+    onPrimary: Long = 0xFF000000,
+    onSecondary: Long = 0xFF000000,
+    onBackground: Long = 0xFFFFFFFF,
+    onSurface: Long = 0xFFFFFFFF,
+    onError: Long = 0xFF000000
+) = darkColorPalette(
+    primary = Color(primary),
+    primaryVariant = Color(primaryVariant),
+    secondary = Color(secondary),
+    background = Color(background),
+    surface = Color(surface),
+    error = Color(error),
+    onPrimary = Color(onPrimary),
+    onSecondary = Color(onSecondary),
+    onBackground = Color(onBackground),
+    onSurface = Color(onSurface),
+    onError = Color(onError)
+)

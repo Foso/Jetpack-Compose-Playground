@@ -18,7 +18,11 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.compose.animation.demos.AnimatableSeekBarDemo
+
 import androidx.ui.core.setContent
+import androidx.ui.foundation.Text
+import androidx.ui.semantics.SemanticsProperties.Text
 
 class MyComposeActivity : ComponentActivity() {
 

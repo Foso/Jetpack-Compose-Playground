@@ -11,13 +11,13 @@ fun ScaffoldDemo() {
 
      Scaffold(
           scaffoldState = ScaffoldState(DrawerState.Opened),
-          topAppBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
+          topBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
           floatingActionButtonPosition = Scaffold.FabPosition.End,
           floatingActionButton = { FloatingActionButton(onClick = {}){
               Text("X")
           } },
           drawerContent = { Text(text = "drawerContent") },
           bodyContent = { Text("BodyContent") },
-          bottomAppBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
+          bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
       )
 }

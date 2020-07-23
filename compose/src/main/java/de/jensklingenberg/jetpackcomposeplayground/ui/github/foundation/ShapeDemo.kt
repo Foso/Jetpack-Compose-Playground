@@ -21,14 +21,15 @@ import androidx.ui.core.Alignment
 import androidx.ui.core.Modifier
 import androidx.ui.foundation.Box
 import androidx.ui.foundation.shape.GenericShape
-import androidx.ui.foundation.shape.RectangleShape
+
 import androidx.ui.foundation.shape.corner.CircleShape
 import androidx.ui.foundation.shape.corner.CutCornerShape
 import androidx.ui.foundation.shape.corner.RoundedCornerShape
+import androidx.ui.geometry.Size
 import androidx.ui.graphics.*
 import androidx.ui.layout.*
 import androidx.ui.unit.Density
-import androidx.ui.unit.PxSize
+
 import androidx.ui.unit.dp
 
 
@@ -101,27 +102,27 @@ private val TriangleShape = GenericShape { size ->
    /**
     * 1)
     */
-    moveTo(size.width.value / 2f, 0f)
+    moveTo(size.width / 2f, 0f)
     //This will draw a line from the cursor to the x/y coordinates
 
     /**
      * 2)
      */
-    lineTo(size.width.value, size.height.value)
+    lineTo(size.width, size.height)
 
     /**
      * 3)
      */
-    lineTo(0f, size.height.value)
+    lineTo(0f, size.height)
 }
 
 
 class CustomShape : Shape {
-    override fun createOutline(size: PxSize, density: Density): Outline {
+    override fun createOutline(size: Size, density: Density): Outline {
         val path = Path().apply {
-            moveTo(size.width.value / 2f, 0f)
-            lineTo(size.width.value, size.height.value)
-            lineTo(0f, size.height.value)
+            moveTo(size.width / 2f, 0f)
+            lineTo(size.width, size.height)
+            lineTo(0f, size.height)
             close()
         }
         return Outline.Generic(path)
