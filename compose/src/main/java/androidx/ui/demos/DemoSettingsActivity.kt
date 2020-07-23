@@ -28,6 +28,7 @@ import androidx.ui.material.darkColorPalette
 import androidx.ui.material.lightColorPalette
 import kotlin.reflect.full.memberProperties
 
+
 /** Adds `preference` to this preference group. */
 inline operator fun PreferenceGroup.plusAssign(preference: Preference) {
     addPreference(preference)

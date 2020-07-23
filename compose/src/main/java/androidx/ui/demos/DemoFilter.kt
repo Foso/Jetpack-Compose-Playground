@@ -20,16 +20,16 @@ import androidx.compose.Composable
 import androidx.compose.key
 import androidx.compose.onCommit
 import androidx.ui.core.Alignment
-import androidx.ui.core.FocusManagerAmbient
 import androidx.ui.core.Modifier
+import androidx.ui.core.focus.FocusModifier
 import androidx.ui.demos.common.Demo
 import androidx.ui.foundation.Icon
+import androidx.ui.foundation.ScrollableColumn
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.TextField
-import androidx.ui.foundation.TextFieldValue
-import androidx.ui.foundation.VerticalScroller
 import androidx.ui.graphics.compositeOver
-import androidx.ui.layout.Column
+import androidx.ui.input.TextFieldValue
+import androidx.ui.layout.fillMaxWidth
 import androidx.ui.layout.preferredHeight
 import androidx.ui.layout.wrapContentSize
 import androidx.ui.material.IconButton
@@ -38,8 +38,8 @@ import androidx.ui.material.MaterialTheme
 import androidx.ui.material.TopAppBar
 import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Close
-import androidx.ui.text.AnnotatedString
 import androidx.ui.text.SpanStyle
+import androidx.ui.text.annotatedString
 import androidx.ui.text.withStyle
 import androidx.ui.unit.dp
 
@@ -51,16 +51,14 @@ fun DemoFilter(launchableDemos: List<Demo>, filterText: String, onNavigate: (Dem
     val filteredDemos = launchableDemos
         .filter { it.title.contains(filterText, ignoreCase = true) }
         .sortedBy { it.title }
-    VerticalScroller {
-        Column {
-            filteredDemos.forEach { demo ->
-                FilteredDemoListItem(demo,
-                    filterText = filterText,
-                    onNavigate = {
-                        onNavigate(it)
-                    }
-                )
-            }
+    ScrollableColumn {
+        filteredDemos.forEach { demo ->
+            FilteredDemoListItem(demo,
+                filterText = filterText,
+                onNavigate = {
+                    onNavigate(it)
+                }
+            )
         }
     }
 }
@@ -86,7 +84,11 @@ fun FilterAppBar(
             IconButton(modifier = Modifier.gravity(Alignment.CenterVertically), onClick = onClose) {
                 Icon(Icons.Filled.Close)
             }
-            FilterField(filterText, onFilter, Modifier.gravity(Alignment.CenterVertically))
+            FilterField(
+                filterText,
+                onFilter,
+                Modifier.fillMaxWidth().gravity(Alignment.CenterVertically)
+            )
         }
     }
 }
@@ -100,18 +102,18 @@ private fun FilterField(
     onFilter: (TextFieldValue) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val identifier = "filter"
-    val manager = FocusManagerAmbient.current
-    onCommit(manager) {
-        manager.requestFocusById(identifier)
-    }
+    // TODO(b/161297615): Replace the deprecated FocusModifier with the new Focus API.
+    @Suppress("DEPRECATION")
+    val focusModifier = FocusModifier()
     // TODO: replace with Material text field when available
     TextField(
-        modifier = modifier,
+        modifier = modifier + focusModifier,
         value = filterText,
-        focusIdentifier = identifier,
         onValueChange = onFilter
     )
+    onCommit {
+        focusModifier.requestFocus()
+    }
 }
 
 /**
@@ -124,7 +126,7 @@ private fun FilteredDemoListItem(
     onNavigate: (Demo) -> Unit
 ) {
     val primary = MaterialTheme.colors.primary
-    val annotatedString = AnnotatedString {
+    val annotatedString = annotatedString {
         val title = demo.title
         var currentIndex = 0
         val pattern = filterText.toRegex(option = RegexOption.IGNORE_CASE)
