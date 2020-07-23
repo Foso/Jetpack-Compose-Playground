@@ -2,7 +2,7 @@
 A Shape can be used to draw a composable in specific shape.
 
 !!! info
-    This is the API of version dev09. Newer versions may have a different one
+    This is the API of version dev15. Newer versions may have a different one
     
 ## RectangleShape
 
@@ -119,21 +119,21 @@ You can create custom shapes. One way to do it, is to use **GenericShape**.  Let
 
 
 ```kotlin
-private val TriangleShape = GenericShape { size ->     
-      // 1)
-       moveTo(size.width.value / 2f, 0f)
-   
-       // 2)
-       lineTo(size.width.value, size.height.value)
-   
-       // 3)
-       lineTo(0f, size.height.value)
+private val TriangleShape = GenericShape { size ->
+    // 1)
+    moveTo(size.width / 2f, 0f)
+
+    // 2)
+    lineTo(size.width, size.height)
+
+    // 3)
+    lineTo(0f, size.height)
 }
 ```
 
 Inside the GenericShape you can draw your custom shape.
 You have access to the **size**-object. This is size of the composable that the shape is applied to. 
-You can get the height with **size.height.value** and the width with **size.width.value** 
+You can get the height with **size.height** and the width with **size.width**
 
 
 1) Initially the painter will start at the top left of the parent composable(0x,0y). 
@@ -153,6 +153,7 @@ The painter coordinates are then automatically set to this corner.
  */
 interface Shape {
     /**
+     /**
      * Creates [Outline] of this shape for the given [size].
      *
      * @param size the size of the shape boundary.
@@ -160,7 +161,7 @@ interface Shape {
      *
      * @return [Outline] of this shape for the given [size].
      */
-    fun createOutline(size: PxSize, density: Density): Outline
+    fun createOutline(size: Size, density: Density): Outline
 }
 ```
 You can extend the Shape interface to create your own implementation of Shape. Inside **createOutline** you get the size of the composable, which the shape is applied to and the density of the screen.
@@ -174,11 +175,11 @@ Take a look at the GenericShape example when you want to understand, how the dra
 
 ```kotlin
 class CustomShape : Shape {
-    override fun createOutline(size: PxSize, density: Density): Outline {
+    override fun createOutline(size: Size, density: Density): Outline {
         val path = Path().apply {
-            moveTo(size.width.value / 2f, 0f)
-            lineTo(size.width.value, size.height.value)
-            lineTo(0f, size.height.value)
+            moveTo(size.width / 2f, 0f)
+            lineTo(size.width, size.height)
+            lineTo(0f, size.height)
             close()
         }
         return Outline.Generic(path)
