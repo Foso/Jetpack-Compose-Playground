@@ -11,3 +11,8 @@ You can use **imageResource** to load an image from the resources
     }
 }
 ```
+
+
+<hr>
+## See also:
+* [How to load an image from the resource folder?](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/image/ImageActivity.kt#L87)

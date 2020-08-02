@@ -52,9 +52,9 @@ nav:
           - 'Compose':
               - 'Recompose': compose/recompose.md
           - 'Foundation':
-              - 'AdapterList': foundation/adapter_list.md
               - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md
+              - 'LazyColumnItems': foundation/lazycolumnitems.md
               - 'ScrollableRow': foundation/scrollablerow.md
               - 'ScrollableColumn': foundation/scrollablecolumn.md
               - 'Shape' : foundation/shape.md

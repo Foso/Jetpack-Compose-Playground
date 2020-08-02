@@ -22,7 +22,7 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 " Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. "
 
 ## Composable of the week!! 🎉
-The [AdapterList](foundation/adapter_list)
+The [LazyColumnItems](foundation/lazycolumnitems)
 
 
 ## New to Compose?

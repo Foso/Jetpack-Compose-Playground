@@ -25,6 +25,7 @@ import androidx.compose.state
 import androidx.ui.core.Modifier
 import androidx.ui.demos.common.ComposableDemo
 import androidx.ui.demos.common.DemoCategory
+import androidx.ui.foundation.ScrollableColumn
 import androidx.ui.foundation.Text
 import androidx.ui.foundation.VerticalScroller
 import androidx.ui.layout.*
@@ -33,6 +34,7 @@ import androidx.ui.material.DrawerState
 import androidx.ui.material.MaterialTheme
 import androidx.ui.material.ModalDrawerLayout
 import androidx.ui.unit.dp
+import de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation.LazyColumnItemsDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.ColumnExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.ScrollableRowExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.PaddingDemo
@@ -111,7 +113,7 @@ fun HomeScreen() {
 fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(ScreenState)->Unit) {
     val allScreens = ScreenState.values().toList()
 
-    VerticalScroller {
+    ScrollableColumn(children = {
         Column() {
             allScreens.forEach {
                 Spacer(Modifier.preferredHeight(10.dp))
@@ -125,14 +127,15 @@ fun myDrawerContent(onDrawerStateChange: (DrawerState) -> Unit, fn:(ScreenState)
             }
 
         }
-    }
+    })
 }
 
 @Composable
 fun myOverView(fn:(ScreenState)->Unit){
     val allScreens = ScreenState.values().toList()
 
-    VerticalScroller {
+
+    ScrollableColumn(children = {
         Column() {
             allScreens.forEach {
                 Spacer(Modifier.preferredHeight(10.dp))
@@ -145,12 +148,12 @@ fun myOverView(fn:(ScreenState)->Unit){
             }
 
         }
-    }
+    })
 }
 
 
 enum class ScreenState( ) {
-    Overview, AndroidContextComposeDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample
+    Overview, AndroidContextComposeDemo,LazyColumnItemsDemo, ColumnExample,VerticalScroller,HorizontalScrollerExample,RowExample,PaddingDemo,SwitchDemo,CheckBoxDemo,RadioGroupSample,AlertDialogSample
     //,DrawlayerDemo
 }
 
@@ -167,6 +170,8 @@ fun ScreenState.body() = when (this) {
     ScreenState.CheckBoxDemo -> CheckBoxDemo()
     ScreenState.RadioGroupSample -> RadioGroupSample()
     ScreenState.AlertDialogSample -> AlertDialogSample()
-  //  ScreenState.DrawlayerDemo -> DrawLayerDemo()
+    ScreenState.LazyColumnItemsDemo -> LazyColumnItemsDemo()
+
+    //  ScreenState.DrawlayerDemo -> DrawLayerDemo()
     ScreenState.Overview -> TODO()
 }

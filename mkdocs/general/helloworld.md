@@ -1,5 +1,9 @@
 # Hello World Compose
 
+### Setup the project
+First setup your [Project Setup](getting_started.md)
+
+
 ### Write a simple Compose function
 
 A basic Compose View is using a normal Kotlin function which is annotated with @Composable

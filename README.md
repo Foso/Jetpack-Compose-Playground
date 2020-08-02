@@ -19,7 +19,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 
 
 ## Composable of the week!! 🎉
-The [AdapterList](https://foso.github.io/Jetpack-Compose-Playground/foundation/adapter_list)
+The [LazyColumnItems](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumnitems/)
 
 
 ## New to Compose?
