@@ -1,5 +1,8 @@
 # Column
 
+!!! info
+    This is the API of version dev16. Newer versions may have a different one
+
 A Column will show each children below the previous children. It' similar to a LinearLayout with vertical orientation.
 
 <p align="left">

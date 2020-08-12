@@ -1,7 +1,7 @@
 # LayoutPadding
 
 !!! info
-    This is the API of version dev12. Newer versions may have a different one
+    This is the API of version dev16. Newer versions may have a different one
 
 You can use **Modifier.padding** to set padding to composables that take a modifier as an argument.
 

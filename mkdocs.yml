@@ -49,12 +49,11 @@ nav:
               - 'Modifier': general/modifier.md
               - 'Project Setup': general/getting_started.md
               - 'State': general/state.md
-          - 'Compose':
-              - 'Recompose': compose/recompose.md
           - 'Foundation':
               - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md
-              - 'LazyColumnItems': foundation/lazycolumnitems.md
+              - 'LazyColumnFor': foundation/lazycolumnfor.md
+              - 'LazyRowFor': foundation/lazyrowfor.md
               - 'ScrollableRow': foundation/scrollablerow.md
               - 'ScrollableColumn': foundation/scrollablecolumn.md
               - 'Shape' : foundation/shape.md
