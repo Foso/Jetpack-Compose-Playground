@@ -2,4 +2,4 @@
 # AdapterList
 
 !!! warning
-   AdapterList was renamed, use [LazyColumnItems](../lazycolumnitems)
+   AdapterList was renamed, use [LazyColumnFor](../lazycolumnfor)
