@@ -1,7 +1,7 @@
 # How to use Compose in a ViewGroup
 
 !!! info
-    This is the API of version dev08. Newer versions may have a different one
+    This is the API of version dev16. Newer versions may have a different one
 
 Compose has a **setContent()**-extension function on ViewGroup which can be used, to use Compose inside a ViewGroup.
 This example will show you, how you can use Compose inside a FrameLayout. It should also work in other layouts like LinearLayout. As long as it's a layout that extends the **ViewGroup** class.
@@ -9,16 +9,18 @@ This example will show you, how you can use Compose inside a FrameLayout. It sho
 ```kotlin
 //Extension function from Compose
 fun ViewGroup.setContent(
-    content: @Composable() () -> Unit
+    recomposer: Recomposer,
+    parentComposition: CompositionReference? = null,
+    content: @Composable () -> Unit
 ): Composition {
+    FrameManager.ensureStarted()
     val composeView =
         if (childCount > 0) {
-            getChildAt(0) as? Owner
+            getChildAt(0) as? AndroidOwner
         } else {
             removeAllViews(); null
-        }
-            ?: createOwner(context).also { addView(it.view) }
-    return doSetContent(composeView, context, content)
+        } ?: AndroidOwner(context).also { addView(it.view, DefaultLayoutParams) }
+    return doSetContent(composeView, recomposer, parentComposition, content)
 }
 ```
 
@@ -32,10 +34,10 @@ class ComposeFrameLayout @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     init {
-          setContent {
-              Button(onClick = {}) {
-                  Text("ComposeButton")
-              }
+        setContent(Recomposer.current(),null){
+            Button(onClick = {}) {
+                Text("ComposeButton")
+            }
         }
     }
 }
@@ -53,7 +55,7 @@ Just add your FrameLayout like any other layout.
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <de.jensklingenberg.jetpackcomposeplayground.ui.ComposeFrameLayout
+    <ComposeFrameLayout
         android:id="@+id/composeFrame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,7 +69,6 @@ Just add your FrameLayout like any other layout.
 </LinearLayout>
 ```
 
-
-<p align="left">
-  <img src ="../../images/cookbook/viewgroup/viewgroupExample.png" height=500  />
+<p align="center">
+  <img src ="../../images/cookbook/viewgroup/viewgroupExample.png"  height=100 width=200  />
 </p>

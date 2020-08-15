@@ -6,7 +6,7 @@
 ## How to draw on Canvas
 
 <p align="left">
-  <img src ="../../images/foundation/canvas/CanvasDrawExample.png" height=500 />
+  <img src ="../../images/foundation/canvas/CanvasDrawExample.png" height=100 width=300 />
 </p>
 
 

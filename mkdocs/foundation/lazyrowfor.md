@@ -8,7 +8,7 @@ A [LazyRowFor](https://developer.android.com/reference/kotlin/androidx/compose/f
 
 
 <p align="left">
-  <img src ="../../images/foundation/lazyrowfor/lazyrowfor.png" height=300 />
+  <img src ="../../images/foundation/lazyrowfor/lazyrowfor.png" height=100 width=300 />
 </p>
 
 ```kotlin

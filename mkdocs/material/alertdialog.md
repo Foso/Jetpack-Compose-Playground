@@ -3,8 +3,8 @@
 !!! info
     This is the API of version dev09. Newer versions may have a different one
 
-<p align="left">
-  <img src ="../../images/material/alertdialog/AlertDialogSample.png" height=500 />
+<p align="center">
+  <img src ="../../images/material/alertdialog/AlertDialogSample.png"  height=100 width=300/>
 </p>
 
 ```kotlin

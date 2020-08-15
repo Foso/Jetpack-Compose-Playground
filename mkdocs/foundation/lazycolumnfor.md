@@ -8,7 +8,7 @@ A [LazyColumnFor](https://developer.android.com/reference/kotlin/androidx/compos
 
 
 <p align="left">
-  <img src ="../../images/foundation/lazycolumnitems.png" height=500 />
+  <img src ="../../images/foundation/lazycolumnitems.png" height=100 width=300 />
 </p>
 
 ```kotlin

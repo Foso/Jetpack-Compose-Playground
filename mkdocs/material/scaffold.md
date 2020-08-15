@@ -24,8 +24,8 @@ fun ScaffoldDemo() {
 ```
 
 <p align="left">
-  <img src ="../../images/material/scaffold/scaffold.png" height="500"  />
-  <img src ="../../images/material/scaffold/scaffoldwithdrawer.png" height="500"  />
+  <img src ="../../images/material/scaffold/scaffold.png"  height=100 width=300  />
+  <img src ="../../images/material/scaffold/scaffoldwithdrawer.png"  height=100 width=300/>
 
 </p>
 

@@ -1,11 +1,14 @@
 # Text
-You can use **Text** to display text. You can use the **style** argument to define things like textdecoration or fontfamily.
 
 !!! info
     This is the API of version dev14. Newer versions may have a different one
 
+You can use **Text** to display text. You can use the **style** argument to define things like textdecoration or fontfamily.
+
+
+
 <p align="left">
-  <img src ="../../images/foundation/text/TextExample.png" height=500 />
+  <img src ="../../images/foundation/text/TextExample.png" height=100 width=300 />
 </p>
 
 ```kotlin

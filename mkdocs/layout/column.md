@@ -3,10 +3,10 @@
 !!! info
     This is the API of version dev16. Newer versions may have a different one
 
-A Column will show each children below the previous children. It' similar to a LinearLayout with vertical orientation.
+A Column will show each children below the previous children. It's similar to a LinearLayout with vertical orientation.
 
 <p align="left">
-  <img src ="../../images/layout/column/ColumnExample.png" height=500 />
+  <img src ="../../images/layout/column/ColumnExample.png" height=100 width=300 />
 </p>
 
 ```kotlin

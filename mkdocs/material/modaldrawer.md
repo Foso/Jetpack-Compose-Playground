@@ -7,8 +7,8 @@ With a ModalDrawerLayout you can create a navigation drawer. You can define a dr
 You define the content of the drawer with **drawerContent** and the rest of your layout in **bodyContent**
 
 <p align="left">
-  <img src ="../../images/modaldrawerClosed.png" height=500 />
-    <img src ="../../images/ModaldrawerOpened.png" height=500 />
+  <img src ="../../images/modaldrawerClosed.png" height=100 width=300 />
+    <img src ="../../images/ModaldrawerOpened.png" height=100 width=300 />
 
 </p>
 

@@ -6,7 +6,7 @@
 You can use **Modifier.padding** to set padding to composables that take a modifier as an argument.
 
 <p align="left">
-  <img src ="../../images/PaddingExample.png" height=500 />
+  <img src ="../../images/PaddingExample.png" height=100 width=300 />
 </p>
 
 ```kotlin
