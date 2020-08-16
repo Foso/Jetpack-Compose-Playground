@@ -31,4 +31,11 @@
         android:layout_alignParentRight="true"
         style="@android:style/TextAppearance.DeviceDefault.Large"
         />
+
+    <androidx.ui.tooling.preview.ComposeViewAdapter
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         xmlns:tools="http://schemas.android.com/tools"
+       tools:composableName="de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.RowExampleKt.RowExample" />
 </RelativeLayout>

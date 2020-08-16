@@ -47,6 +47,7 @@ nav:
               - 'How to get Android Context': general/get_android_context.md
               - 'How to load an Image': general/loadimage.md
               - 'How to detect dark mode': general/detect_darkmode.md
+              - 'Ambient': general/ambient.md
               - 'Modifier': general/modifier.md
               - 'Project Setup': general/getting_started.md
               - 'State': general/state.md

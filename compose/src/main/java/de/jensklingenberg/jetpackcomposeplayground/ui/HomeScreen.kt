@@ -40,7 +40,7 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.ScrollableR
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.PaddingDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.ScrollableColumnExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.material.CheckBoxDemo
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.layout.RowExample
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout.RowExample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.RadioGroupSample
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other.SwitchDemo
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.other.AlertDialogSample
