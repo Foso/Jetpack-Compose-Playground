@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui.github
+package de.jensklingenberg.jetpackcomposeplayground.ui.github.general
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
