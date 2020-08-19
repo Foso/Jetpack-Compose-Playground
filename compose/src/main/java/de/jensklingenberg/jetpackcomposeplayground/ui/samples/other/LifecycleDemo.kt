@@ -19,10 +19,14 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
 import android.util.Log
 import androidx.compose.*
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Column
-import androidx.ui.material.Button
-import androidx.ui.material.MaterialTheme
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.onActive
+import androidx.compose.runtime.onDispose
+import androidx.compose.runtime.state
 
 
 @Composable

@@ -16,20 +16,23 @@
 
 package androidx.compose.foundation.demos
 
-import androidx.compose.Composable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.preferredSize
 import androidx.compose.foundation.samples.SimpleCircleBox
-
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Border
-import androidx.ui.foundation.Box
-import androidx.ui.foundation.ContentGravity
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.shape.corner.CutCornerShape
-import androidx.ui.foundation.shape.corner.RoundedCornerShape
-import androidx.ui.graphics.Color
-import androidx.ui.layout.*
-
-import androidx.ui.unit.dp
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun BoxDemo() {
@@ -39,7 +42,7 @@ fun BoxDemo() {
         Box(
             modifier = Modifier.preferredSize(200.dp, 100.dp),
             shape = RoundedCornerShape(10.dp),
-            border = Border(5.dp, Color.Gray),
+            border = BorderStroke(5.dp, Color.Gray),
             paddingStart = 20.dp,
             backgroundColor = Color.White
         ) {
@@ -47,7 +50,7 @@ fun BoxDemo() {
                 modifier = Modifier.padding(10.dp).fillMaxSize(),
                 backgroundColor = Color.DarkGray,
                 shape = CutCornerShape(10.dp),
-                border = Border(10.dp, Color.LightGray),
+                border = BorderStroke(10.dp, Color.LightGray),
                 gravity = ContentGravity.Center
             ) {
                 Text("Nested boxes")

@@ -14,35 +14,41 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Slider
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.setValue
-import androidx.compose.state
-import androidx.ui.foundation.Text
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.Slider
-
-
+@Sampled
 @Composable
 fun SliderSample() {
-    var sliderPosition by state { 0f }
+    var sliderPosition by remember { mutableStateOf(0f) }
     Text(text = sliderPosition.toString())
     Slider(value = sliderPosition, onValueChange = { sliderPosition = it })
 }
 
-
+@Sampled
 @Composable
 fun StepsSliderSample() {
-    var sliderPosition by state { 0f }
+    var sliderPosition by remember { mutableStateOf(0f) }
     Text(text = sliderPosition.toString())
     Slider(
         value = sliderPosition,
         onValueChange = { sliderPosition = it },
         valueRange = 0f..100f,
+        onValueChangeEnd = {
+            // launch some business logic update with the state you hold
+            // viewModel.updateSelectedSliderValue(sliderPosition)
+        },
         steps = 5,
-        color = MaterialTheme.colors.secondary
+        thumbColor = MaterialTheme.colors.secondary,
+        activeTrackColor = MaterialTheme.colors.secondary
     )
 }

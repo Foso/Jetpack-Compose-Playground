@@ -1,10 +1,10 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other
 
-import androidx.compose.Composable
-import androidx.compose.state
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Switch
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.state
 
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.Switch
 
 @Composable
 fun SwitchDemo() {

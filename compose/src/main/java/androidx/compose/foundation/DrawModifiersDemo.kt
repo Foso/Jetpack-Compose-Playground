@@ -16,13 +16,19 @@
 
 package androidx.compose.foundation.demos
 
-import androidx.compose.Composable
-import androidx.compose.foundation.samples.*
-import androidx.ui.core.Modifier
-
-
-import androidx.ui.layout.*
-import androidx.ui.unit.dp
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.samples.BorderSample
+import androidx.compose.foundation.samples.BorderSampleWithBrush
+import androidx.compose.foundation.samples.BorderSampleWithDataClass
+import androidx.compose.foundation.samples.DrawBackgroundColor
+import androidx.compose.foundation.samples.DrawBackgroundShapedBrush
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun DrawModifiersDemo() {

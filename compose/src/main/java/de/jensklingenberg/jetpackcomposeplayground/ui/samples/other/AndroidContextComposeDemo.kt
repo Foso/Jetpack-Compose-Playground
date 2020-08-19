@@ -1,13 +1,11 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
-import androidx.compose.Composable
-import androidx.compose.state
-
-import androidx.ui.core.ContextAmbient
-import androidx.ui.foundation.Text
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.Switch
+import androidx.compose.foundation.Text
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.ContextAmbient
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
+
 
 @Composable
 fun AndroidContextComposeDemo() {

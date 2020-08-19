@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.layout.Arrangement
-import androidx.ui.layout.Column
-import androidx.ui.layout.fillMaxHeight
-import androidx.ui.material.samples.MaterialThemeSample
-import androidx.ui.material.samples.ThemeColorSample
-import androidx.ui.material.samples.ThemeTextStyleSample
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.material.samples.MaterialThemeSample
+import androidx.compose.material.samples.ThemeColorSample
+import androidx.compose.material.samples.ThemeTextStyleSample
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 
 @Composable
 fun MaterialThemeDemo() {

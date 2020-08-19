@@ -16,19 +16,20 @@
 
 package androidx.compose.foundation.layout.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.InnerPadding
+import androidx.compose.foundation.layout.Stack
+import androidx.compose.foundation.layout.absolutePadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.ui.background
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
-
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.*
-
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun PaddingModifier() {
     Stack(Modifier.background(color = Color.Gray)) {
@@ -40,7 +41,7 @@ fun PaddingModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SymmetricPaddingModifier() {
     Stack(Modifier.background(color = Color.Gray)) {
@@ -51,7 +52,7 @@ fun SymmetricPaddingModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun PaddingAllModifier() {
     Stack(Modifier.background(color = Color.Gray)) {
@@ -59,7 +60,7 @@ fun PaddingAllModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun PaddingInnerPaddingModifier() {
     val innerPadding = InnerPadding(top = 10.dp, start = 15.dp)
@@ -68,7 +69,7 @@ fun PaddingInnerPaddingModifier() {
     }
 }
 
-
+@Sampled
 @Composable
 fun AbsolutePaddingModifier() {
     Stack(Modifier.background(color = Color.Gray)) {

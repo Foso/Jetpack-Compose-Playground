@@ -51,10 +51,8 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerVersion "1.4.0-dev-withExperimentalGoogleExtensions-20200720"
-        kotlinCompilerExtensionVersion "0.1.0-dev15"
-
-
+        kotlinCompilerVersion "1.4.0"
+        kotlinCompilerExtensionVersion "0.1.0-dev17"
     }
 
 }
@@ -67,14 +65,14 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 }
 
 dependencies {
-    def compose_version = "0.1.0-dev15"
+    def compose_version = "0.1.0-dev17"
 
-
+    api "androidx.compose.ui:ui:$compose_version"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$project.ext.kotlin_version"
     implementation "androidx.appcompat:appcompat:1.1.0"
     implementation "androidx.core:core-ktx:1.2.0"
-    api "androidx.compose.ui:ui:$compose_version"
+
 
     implementation("androidx.compose.runtime:runtime-dispatch:$compose_version")
     implementation("androidx.compose.runtime:runtime:$compose_version")
@@ -94,12 +92,11 @@ dependencies {
     implementation("androidx.compose.ui:ui-text:$compose_version")
     implementation("androidx.compose.ui:ui-text-android:$compose_version")
     implementation("androidx.compose.ui:ui-util:$compose_version")
+    implementation ("androidx.compose.ui:ui-viewbinding:0.1.0-$compose_version")
 
 
 
-
-
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.4-M3'
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.4.0'
 
 
     implementation "androidx.preference:preference:1.1.1"

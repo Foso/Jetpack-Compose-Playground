@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
+import androidx.compose.material.samples.AlertDialogSample
+import androidx.compose.material.samples.BottomDrawerSample
+import androidx.compose.material.samples.CustomAlertDialogSample
+import androidx.compose.material.samples.EmphasisSample
+import androidx.compose.material.samples.ModalDrawerSample
+import androidx.compose.material.samples.ScaffoldWithBottomBarAndCutout
+import androidx.compose.material.samples.ScaffoldWithCoroutinesSnackbar
 import androidx.ui.demos.common.ActivityDemo
 import androidx.ui.demos.common.ComposableDemo
 import androidx.ui.demos.common.DemoCategory
-import androidx.ui.material.samples.BottomDrawerSample
-import androidx.ui.material.samples.CustomAlertDialogSample
-import androidx.ui.material.samples.EmphasisSample
-import androidx.ui.material.samples.ModalDrawerSample
-import androidx.ui.material.samples.ScaffoldWithBottomBarAndCutout
-import androidx.ui.material.samples.SideBySideAlertDialogSample
-import androidx.ui.material.samples.StackedAlertDialogSample
 
 val MaterialDemos = DemoCategory("Material", listOf(
     DemoCategory("AlertDialog", listOf(
-        ComposableDemo("Side by side buttons") { SideBySideAlertDialogSample() },
-        ComposableDemo("Stacked buttons") { StackedAlertDialogSample() },
+        ComposableDemo("Default dialog") { AlertDialogSample() },
         ComposableDemo("Custom buttons") { CustomAlertDialogSample() }
     )),
     ComposableDemo("App Bars") { AppBarDemo() },
@@ -46,20 +45,23 @@ val MaterialDemos = DemoCategory("Material", listOf(
         ComposableDemo("ListItems") { ListItemDemo() },
         ComposableDemo("Mixing RTL and LTR") { MixedRtlLtrListItemDemo() }
     )),
-    DemoCategory("TextFields", listOf(
-        ComposableDemo("FilledTextField/OutlinedTextField") { MaterialTextFieldDemo() },
-        ComposableDemo("Multiple text fields") { TextFieldsDemo() }
-    )),
     ComposableDemo("Material Theme") { MaterialThemeDemo() },
     ComposableDemo("Menus") { MenuDemo() },
-    DemoCategory("Playground", listOf(
-       // ComposableDemo("Color Picker") { ColorPickerDemo() },
-        ActivityDemo("Dynamic Theme", DynamicThemeActivity::class)
-    )),
+    DemoCategory(
+        "Playground", listOf(
+            ComposableDemo("Color Picker") { ColorPickerDemo() },
+            ActivityDemo("Dynamic Theme", DynamicThemeActivity::class)
+        )
+    ),
     ComposableDemo("Progress Indicators") { ProgressIndicatorDemo() },
     ComposableDemo("Scaffold") { ScaffoldWithBottomBarAndCutout() },
     ComposableDemo("Selection Controls") { SelectionControlsDemo() },
     ComposableDemo("Slider") { SliderDemo() },
-    ComposableDemo("Snackbar") { SnackbarDemo() },
-    ComposableDemo("Tabs") { TabDemo() }
+    ComposableDemo("Snackbar") { ScaffoldWithCoroutinesSnackbar() },
+    ComposableDemo("Swipe to dismiss") { SwipeToDismissDemo() },
+    ComposableDemo("Tabs") { TabDemo() },
+    DemoCategory("TextFields", listOf(
+        ComposableDemo("FilledTextField/OutlinedTextField") { MaterialTextFieldDemo() },
+        ComposableDemo("Multiple text fields") { TextFieldsDemo() }
+    ))
 ))

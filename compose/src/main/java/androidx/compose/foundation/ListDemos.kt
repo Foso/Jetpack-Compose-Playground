@@ -16,34 +16,58 @@
 
 package androidx.compose.foundation.demos
 
-import androidx.compose.Composable
-import androidx.compose.Providers
-import androidx.compose.getValue
-import androidx.compose.remember
-import androidx.compose.setValue
-import androidx.compose.state
-import androidx.ui.core.Modifier
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.ContentColorAmbient
+import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.currentTextStyle
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.ExperimentalLazyDsl
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyColumnFor
+import androidx.compose.foundation.lazy.LazyColumnForIndexed
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.LazyRowFor
+import androidx.compose.foundation.lazy.LazyRowForIndexed
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Providers
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LayoutDirectionAmbient
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.ui.demos.common.ComposableDemo
-
-import androidx.ui.foundation.*
-import androidx.ui.foundation.lazy.LazyColumnItems
-import androidx.ui.foundation.lazy.LazyRowItems
-import androidx.ui.foundation.shape.corner.RoundedCornerShape
-import androidx.ui.graphics.Color
-import androidx.ui.layout.*
-import androidx.ui.unit.dp
-import androidx.ui.unit.sp
 import kotlin.random.Random
 
 val LazyListDemos = listOf(
     ComposableDemo("Simple column") { LazyColumnDemo() },
     ComposableDemo("Add/remove items") { ListAddRemoveItemsDemo() },
-    ComposableDemo("Horizontal list") { LazyRowItemsDemo() }
+    ComposableDemo("Horizontal list") { LazyRowItemsDemo() },
+    ComposableDemo("List with indexes") { ListWithIndexSample() },
+    ComposableDemo("Pager-like list") { PagerLikeDemo() },
+    ComposableDemo("Rtl list") { RtlListDemo() },
+    ComposableDemo("LazyColumn DSL") { LazyColumnScope() },
+    ComposableDemo("LazyRow DSL") { LazyRowScope() }
 )
 
 @Composable
 private fun LazyColumnDemo() {
-    LazyColumnItems(
+    LazyColumnFor(
         items = listOf(
             "Hello,", "World:", "It works!", "",
             "this one is really long and spans a few lines for scrolling purposes",
@@ -60,8 +84,8 @@ private fun LazyColumnDemo() {
 
 @Composable
 private fun ListAddRemoveItemsDemo() {
-    var numItems by state { 0 }
-    var offset by state { 0 }
+    var numItems by remember { mutableStateOf(0) }
+    var offset by remember { mutableStateOf(0) }
     Column {
         Row {
             val buttonModifier = Modifier.padding(8.dp)
@@ -70,7 +94,7 @@ private fun ListAddRemoveItemsDemo() {
             Button(modifier = buttonModifier, onClick = { offset++ }) { Text("Offset") }
         }
         Column {
-            LazyColumnItems((1..numItems).map { it + offset }.toList()) {
+            LazyColumnFor((1..numItems).map { it + offset }.toList()) {
                 Text("$it", style = currentTextStyle().copy(fontSize = 20.sp))
             }
         }
@@ -96,7 +120,7 @@ fun Button(modifier: Modifier, onClick: () -> Unit, children: @Composable () -> 
 
 @Composable
 private fun LazyRowItemsDemo() {
-    LazyRowItems(items = (1..1000).toList()) {
+    LazyRowFor(items = (1..1000).toList()) {
         Square(it)
     }
 }
@@ -113,6 +137,41 @@ private fun Square(index: Int) {
     }
 }
 
+@Composable
+private fun ListWithIndexSample() {
+    val friends = listOf("Alex", "John", "Danny", "Sam")
+    Column {
+        LazyRowForIndexed(friends, Modifier.fillMaxWidth()) { index, friend ->
+            Text("$friend at index $index", Modifier.padding(16.dp))
+        }
+        LazyColumnForIndexed(friends, Modifier.fillMaxWidth()) { index, friend ->
+            Text("$friend at index $index", Modifier.padding(16.dp))
+        }
+    }
+}
+
+@Composable
+private fun RtlListDemo() {
+    Providers(LayoutDirectionAmbient provides LayoutDirection.Rtl) {
+        LazyRowForIndexed((0..100).toList(), Modifier.fillMaxWidth()) { index, item ->
+            Text(
+                "$item", Modifier
+                    .size(100.dp)
+                    .background(if (index % 2 == 0) Color.LightGray else Color.Transparent)
+                    .padding(16.dp)
+            )
+        }
+    }
+}
+
+@Composable
+private fun PagerLikeDemo() {
+    val pages = listOf(Color.LightGray, Color.White, Color.DarkGray)
+    LazyRowFor(pages) {
+        Spacer(Modifier.fillParentMaxSize().background(it))
+    }
+}
+
 private val colors = listOf(
     Color(0xFFffd7d7.toInt()),
     Color(0xFFffe9d6.toInt()),
@@ -120,3 +179,43 @@ private val colors = listOf(
     Color(0xFFe3ffd9.toInt()),
     Color(0xFFd0fff8.toInt())
 )
+
+@Composable
+@OptIn(ExperimentalLazyDsl::class)
+private fun LazyColumnScope() {
+    LazyColumn {
+        items((1..10).toList()) {
+            Text("$it", fontSize = 40.sp)
+        }
+
+        item {
+            Text("Single item", fontSize = 40.sp)
+        }
+
+        val items = listOf("A", "B", "C")
+        itemsIndexed(items) { index, item ->
+            Text("Item $item has index $index", fontSize = 40.sp)
+        }
+    }
+}
+
+@Composable
+@OptIn(ExperimentalLazyDsl::class)
+private fun LazyRowScope() {
+    LazyRow {
+        items((1..10).toList()) {
+            Text("$it", fontSize = 40.sp)
+        }
+
+        item {
+            Text("Single item", fontSize = 40.sp)
+        }
+
+        val items = listOf(Color.Cyan, Color.Blue, Color.Magenta)
+        itemsIndexed(items) { index, item ->
+            Box(modifier = Modifier.background(item).size(40.dp), gravity = ContentGravity.Center) {
+                Text("$index", fontSize = 30.sp)
+            }
+        }
+    }
+}

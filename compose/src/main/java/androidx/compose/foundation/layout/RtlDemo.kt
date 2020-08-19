@@ -16,19 +16,29 @@
 
 package androidx.compose.foundation.layout.demos
 
-import androidx.compose.Composable
-import androidx.ui.background
-import androidx.ui.core.Alignment
-import androidx.ui.core.Layout
-import androidx.ui.core.LayoutDirection
-import androidx.ui.core.Modifier
-import androidx.ui.core.WithConstraints
-import androidx.ui.foundation.Text
-import androidx.ui.graphics.Color
-import androidx.ui.layout.*
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Stack
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Providers
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Layout
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.WithConstraints
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LayoutDirectionAmbient
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.LayoutDirection
+import androidx.compose.ui.unit.dp
 
-import androidx.ui.unit.IntOffset
-import androidx.ui.unit.dp
 @Composable
 fun RtlDemo() {
     Column(verticalArrangement = Arrangement.SpaceEvenly) {
@@ -36,7 +46,7 @@ fun RtlDemo() {
         testText()
         Text("ROW", Modifier.gravity(Alignment.CenterHorizontally))
         testRow()
-        Text("ROW WITH LTR MODIFIER", Modifier.gravity(Alignment.CenterHorizontally))
+        Text("ROW WITH LTR ROW IN BETWEEN", Modifier.gravity(Alignment.CenterHorizontally))
         testRow_modifier()
         Text("RELATIVE TO SIBLINGS", Modifier.gravity(Alignment.CenterHorizontally))
         testSiblings()
@@ -51,19 +61,40 @@ fun RtlDemo() {
         )
         CustomLayout(false)
         Text("WITH CONSTRAINTS", Modifier.gravity(Alignment.CenterHorizontally))
-        LayoutWithConstraints(Modifier.ltr, "LD: LTR modifier")
-        LayoutWithConstraints(Modifier.rtl, "LD: RTL modifier")
+        Providers(LayoutDirectionAmbient provides LayoutDirection.Ltr) {
+            LayoutWithConstraints("LD: set LTR via ambient")
+        }
+        Providers(LayoutDirectionAmbient provides LayoutDirection.Rtl) {
+            LayoutWithConstraints("LD: set RTL via ambient")
+        }
         LayoutWithConstraints(text = "LD: locale")
+        Text("STACK EXAMPLE", Modifier.gravity(Alignment.CenterHorizontally))
+        StackExample()
     }
 }
 
-private val boxSize = Modifier.preferredSize(50.dp, 30.dp)
+@Composable
+fun StackExample() {
+    Stack(Modifier.fillMaxSize().background(Color.LightGray)) {
+        Stack(Modifier.fillMaxSize().wrapContentSize(Alignment.TopStart)) {
+            Stack(boxSize.then(Modifier.background(Color.Red))) {}
+        }
+        Stack(Modifier.fillMaxSize().wrapContentHeight(Alignment.CenterVertically)) {
+            Stack(boxSize.then(Modifier.background(Color.Green))) {}
+        }
+        Stack(Modifier.fillMaxSize().wrapContentSize(Alignment.BottomEnd)) {
+            Stack(boxSize.then(Modifier.background(Color.Blue))) {}
+        }
+    }
+}
+
+private val boxSize = Modifier.preferredSize(50.dp, 20.dp)
 private val size = Modifier.preferredSize(10.dp, 10.dp)
 
 @Composable
 private fun testRow() {
     Row {
-        Stack(modifier = boxSize.background(color = Color.Red)) {}
+        Stack(boxSize.background(color = Color.Red)) {}
         Stack(boxSize.background(color = Color.Green)) {}
         Row {
             Stack(boxSize.background(color = Color.Magenta)) {}
@@ -77,12 +108,14 @@ private fun testRow() {
 @Composable
 private fun testRow_modifier() {
     Row {
-        Stack(boxSize.background(color = Color.Red)) {}
-        Stack(boxSize.background(color = Color.Green)) {}
-        Row(Modifier.ltr) {
-            Stack(boxSize.background(color = Color.Magenta)) {}
-            Stack(boxSize.background(color = Color.Yellow)) {}
-            Stack(boxSize.background(color = Color.Cyan)) {}
+        Stack(boxSize.background(Color.Red)) {}
+        Stack(boxSize.background(Color.Green)) {}
+        Providers(LayoutDirectionAmbient provides LayoutDirection.Ltr) {
+            Row {
+                Stack(boxSize.background(Color.Magenta)) {}
+                Stack(boxSize.background(Color.Yellow)) {}
+                Stack(boxSize.background(Color.Cyan)) {}
+            }
         }
         Stack(boxSize.background(color = Color.Blue)) {}
     }
@@ -91,13 +124,8 @@ private fun testRow_modifier() {
 @Composable
 private fun testText() {
     Column {
-        Row {
-            Stack(size.background(color = Color.Red)) {}
-            Stack(size.background(color = Color.Green)) {}
-            Stack(size.background(color = Color.Blue)) {}
-        }
         Text("Text.")
-        Text("Width filled text.", Modifier.fillMaxWidth())
+        Text("Text filling max width.", Modifier.fillMaxWidth())
         Text("שלום!")
         Text("שלום!", Modifier.fillMaxWidth())
         Text("-->")
@@ -132,11 +160,11 @@ private fun CustomLayout(rtlSupport: Boolean) {
         layout(w, h) {
             var xPosition = 0
             for (child in p) {
-                child.placeAbsolute(IntOffset(xPosition, 0))
+                child.place(IntOffset(xPosition, 0))
                 if (rtlSupport) {
-                    child.place(IntOffset(xPosition, 0))
+                    child.placeRelative(IntOffset(xPosition, 0))
                 } else {
-                    child.placeAbsolute(IntOffset(xPosition, 0))
+                    child.place(IntOffset(xPosition, 0))
                 }
                 xPosition += child.width
             }
@@ -145,12 +173,15 @@ private fun CustomLayout(rtlSupport: Boolean) {
 }
 
 @Composable
-private fun LayoutWithConstraints(modifier: Modifier = Modifier, text: String) {
-    WithConstraints(modifier) {
+private fun LayoutWithConstraints(text: String) {
+    WithConstraints {
         val w = maxWidth / 3
-        val h = maxHeight / 2
-        val color = if (layoutDirection == LayoutDirection.Ltr) Color.Red else Color.Magenta
-        Stack(Modifier.preferredSize(w, h).background(color = color)) {
+        val color = if (LayoutDirectionAmbient.current == LayoutDirection.Ltr) {
+            Color.Red
+        } else {
+            Color.Magenta
+        }
+        Stack(Modifier.preferredSize(w, 20.dp).background(color)) {
             Text(text, Modifier.gravity(Alignment.Center))
         }
     }

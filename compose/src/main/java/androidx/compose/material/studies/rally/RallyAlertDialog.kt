@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.studies.rally
+package androidx.compose.material.studies.rally
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Text
-import androidx.ui.graphics.RectangleShape
-import androidx.ui.layout.Column
-import androidx.ui.layout.InnerPadding
-import androidx.ui.layout.fillMaxWidth
-import androidx.ui.layout.padding
-
-import androidx.ui.material.AlertDialog
-import androidx.ui.material.Divider
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.TextButton
-import androidx.ui.unit.dp
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.InnerPadding
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.AlertDialog
+import androidx.compose.material.Divider
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun RallyAlertDialog(
@@ -39,7 +38,7 @@ fun RallyAlertDialog(
 ) {
     RallyDialogThemeOverlay {
         AlertDialog(
-            onCloseRequest = onDismiss,
+            onDismissRequest = onDismiss,
             text = { Text(bodyText) },
             buttons = {
                 Column {
@@ -50,7 +49,7 @@ fun RallyAlertDialog(
                     TextButton(
                         onClick = onDismiss,
                         shape = RectangleShape,
-                        padding = InnerPadding(16.dp),
+                        contentPadding = InnerPadding(16.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(buttonText)

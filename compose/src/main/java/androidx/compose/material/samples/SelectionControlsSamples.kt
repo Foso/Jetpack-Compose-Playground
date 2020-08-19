@@ -14,40 +14,39 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.selection.ToggleableState
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material.Checkbox
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.RadioButton
+import androidx.compose.material.Switch
+import androidx.compose.material.TriStateCheckbox
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.remember
-import androidx.compose.setValue
-import androidx.compose.state
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.selection.ToggleableState
-import androidx.ui.foundation.selection.selectable
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Column
-import androidx.ui.layout.Row
-import androidx.ui.layout.fillMaxWidth
-import androidx.ui.layout.padding
-import androidx.ui.layout.preferredHeight
-import androidx.ui.material.Checkbox
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.RadioButton
-import androidx.ui.material.Switch
-import androidx.ui.material.TriStateCheckbox
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun TriStateCheckboxSample() {
     Column {
         // define dependent checkboxes states
-        val (state, onStateChange) = state { true }
-        val (state2, onStateChange2) = state { true }
+        val (state, onStateChange) = remember { mutableStateOf(true) }
+        val (state2, onStateChange2) = remember { mutableStateOf(true) }
 
         // TriStateCheckbox state reflects state of dependent checkboxes
         val parentState = remember(state, state2) {
@@ -74,32 +73,32 @@ fun TriStateCheckboxSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun CheckboxSample() {
-    val checkedState = state { true }
+    val checkedState = remember { mutableStateOf(true) }
     Checkbox(
         checked = checkedState.value,
         onCheckedChange = { checkedState.value = it }
     )
 }
 
-
+@Sampled
 @Composable
 fun SwitchSample() {
-    val checkedState = state { true }
+    val checkedState = remember { mutableStateOf(true) }
     Switch(
         checked = checkedState.value,
         onCheckedChange = { checkedState.value = it }
     )
 }
 
-
+@Sampled
 @Composable
 fun RadioButtonSample() {
     // we have two radio buttons and only one can be selected
     // let's emulate binary choice here
-    var enterTheMatrix by state { true }
+    var enterTheMatrix by remember { mutableStateOf(true) }
     Row {
         RadioButton(
             selected = enterTheMatrix,
@@ -114,11 +113,11 @@ fun RadioButtonSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun RadioGroupSample() {
     val radioOptions = listOf("Calls", "Missed", "Friends")
-    val (selectedOption, onOptionSelected) = state { radioOptions[0] }
+    val (selectedOption, onOptionSelected) = remember { mutableStateOf(radioOptions[0]) }
     Column {
         radioOptions.forEach { text ->
             Row(Modifier

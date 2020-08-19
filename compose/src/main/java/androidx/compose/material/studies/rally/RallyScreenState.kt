@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.studies.rally
+package androidx.compose.material.studies.rally
 
-import androidx.compose.Composable
-import androidx.ui.graphics.vector.VectorAsset
-import androidx.ui.material.icons.Icons
+import androidx.compose.material.icons.Icons
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.vector.VectorAsset
 
 enum class RallyScreenState(
     val icon: VectorAsset,

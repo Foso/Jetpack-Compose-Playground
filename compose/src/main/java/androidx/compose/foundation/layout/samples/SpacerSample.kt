@@ -16,21 +16,18 @@
 
 package androidx.compose.foundation.layout.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Row
-import androidx.ui.layout.Spacer
-import androidx.ui.layout.preferredSize
-import androidx.ui.layout.preferredWidth
-
-
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun SpacerExample() {
     Row {

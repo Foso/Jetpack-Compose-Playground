@@ -14,27 +14,30 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.studies.rally
+package androidx.compose.material.studies.rally
 
-import androidx.animation.LinearEasing
-import androidx.animation.transitionDefinition
-import androidx.animation.tween
-import androidx.compose.Composable
-
-import androidx.compose.remember
-import androidx.ui.animation.ColorPropKey
-import androidx.ui.animation.transition
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.selection.selectable
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.vector.VectorAsset
-import androidx.ui.layout.*
-
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.Surface
-import androidx.ui.material.ripple.RippleIndication
-import androidx.ui.unit.dp
+import androidx.compose.animation.ColorPropKey
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.transitionDefinition
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.transition
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.ripple.RippleIndication
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.VectorAsset
+import androidx.compose.ui.unit.dp
 import java.util.Locale
 
 @Composable
@@ -43,7 +46,7 @@ fun RallyTopAppBar(
     onTabSelected: (RallyScreenState) -> Unit,
     currentScreen: RallyScreenState
 ) {
-    Surface(modifier = Modifier.preferredHeight(TabHeight).fillMaxWidth()) {
+    Surface(Modifier.preferredHeight(TabHeight).fillMaxWidth()) {
         Row {
             allScreens.forEachIndexed { index, screen ->
                 RallyTab(
@@ -59,10 +62,10 @@ fun RallyTopAppBar(
 
 @Composable
 private fun RallyTab(
-        text: String,
-        icon: VectorAsset,
-        onSelected: () -> Unit,
-        selected: Boolean
+    text: String,
+    icon: VectorAsset,
+    onSelected: () -> Unit,
+    selected: Boolean
 ) {
     TabTransition(selected = selected) { tabTintColor ->
         Row(
@@ -91,7 +94,7 @@ private fun TabTransition(
 ) {
     val color = MaterialTheme.colors.onSurface
     val transitionDefinition = remember {
-        transitionDefinition {
+        transitionDefinition<Boolean> {
             state(true) {
                 this[TabTintColorKey] = color
             }

@@ -1,10 +1,10 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.material
 
-import androidx.compose.Composable
-import androidx.compose.state
+import androidx.compose.material.Checkbox
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.state
 
-import androidx.ui.material.Checkbox
-import androidx.ui.material.MaterialTheme
 
 @Composable
 fun CheckBoxDemo() {

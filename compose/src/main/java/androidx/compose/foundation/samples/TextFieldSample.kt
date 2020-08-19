@@ -16,34 +16,35 @@
 
 package androidx.compose.foundation.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.BaseTextField
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Stack
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.savedinstancestate.savedInstanceState
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.input.TextFieldValue
 
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.setValue
-
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.TextField
-import androidx.ui.input.TextFieldValue
-import androidx.ui.layout.Stack
-import androidx.ui.savedinstancestate.savedInstanceState
-
-
+@Sampled
 @Composable
-
+@OptIn(ExperimentalFoundationApi::class)
 fun TextFieldSample() {
     var value by savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
-    TextField(
+    BaseTextField(
         value = value,
         onValueChange = { value = it }
     )
 }
 
-
+@Sampled
 @Composable
+@OptIn(ExperimentalFoundationApi::class)
 fun PlaceholderTextFieldSample() {
     val state = savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
     Stack {
-        TextField(
+        BaseTextField(
             value = state.value,
             onValueChange = { state.value = it }
         )

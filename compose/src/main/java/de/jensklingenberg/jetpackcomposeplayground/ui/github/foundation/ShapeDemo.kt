@@ -16,26 +16,32 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
-import androidx.compose.Composable
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
-import androidx.ui.foundation.shape.GenericShape
-
-import androidx.ui.foundation.shape.corner.CircleShape
-import androidx.ui.foundation.shape.corner.CutCornerShape
-import androidx.ui.foundation.shape.corner.RoundedCornerShape
-import androidx.ui.geometry.Size
-import androidx.ui.graphics.*
-import androidx.ui.layout.*
-import androidx.ui.unit.Density
-
-import androidx.ui.unit.dp
-
+import android.util.Log
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.lazy.LazyColumnItems
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.foundation.shape.GenericShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.*
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun CircleShapeDemo(){
-    BoxDemo(shape = CircleShape)
+    BoxDemo(CircleShape)
 }
 
 @Composable
@@ -99,6 +105,28 @@ private val TriangleShape = GenericShape { size ->
     3) This will draw a line to the bottom left corner. GenericShape will implicit execute the **close()**-function. **close()** will draw a line from the last painter coordinates to the first definied.
      */
 
+    /**
+    * 1)
+    */
+    /**
+     *
+    Inside the GenericShape you can draw your custom shape.
+    You have access to the **size**-object. This is size of the composable that the shape is applied to.
+    You can get the height with **size.height.value** and the width with **size.width.value**
+
+
+    1) Initially the painter will start at the top left of the parent composable(0x,0y).
+    With **moveTo()** you can set the coordinates of the painter. Here the coordinates will be set to the half width of the parent layout
+    and a 0y coordinate.
+
+    2) This will draw a line from the painter coordinates, which were set in **1)**, to the bottom right corner of the parent layout.
+    The painter coordinates are then automatically set to this corner.
+
+    3) This will draw a line to the bottom left corner. GenericShape will implicit execute the **close()**-function. **close()** will draw a line from the last painter coordinates to the first definied.
+     */
+
+
+
    /**
     * 1)
     */
@@ -108,7 +136,15 @@ private val TriangleShape = GenericShape { size ->
     /**
      * 2)
      */
+
+    /**
+     * 2)
+     */
     lineTo(size.width, size.height)
+
+    /**
+     * 3)
+     */
 
     /**
      * 3)
@@ -118,6 +154,8 @@ private val TriangleShape = GenericShape { size ->
 
 
 class CustomShape : Shape {
+
+
     override fun createOutline(size: Size, density: Density): Outline {
         val path = Path().apply {
             moveTo(size.width / 2f, 0f)
@@ -126,5 +164,6 @@ class CustomShape : Shape {
             close()
         }
         return Outline.Generic(path)
+
     }
 }

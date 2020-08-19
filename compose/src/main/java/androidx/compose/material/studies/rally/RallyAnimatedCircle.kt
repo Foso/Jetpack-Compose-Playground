@@ -14,26 +14,29 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.studies.rally
+package androidx.compose.material.studies.rally
 
-
-import androidx.animation.*
-import androidx.compose.Composable
-import androidx.ui.animation.transition
-import androidx.ui.core.DensityAmbient
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Canvas
-import androidx.ui.geometry.Offset
-import androidx.ui.geometry.Size
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.drawscope.Stroke
-import androidx.ui.unit.dp
+import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.FloatPropKey
+import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.transitionDefinition
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.transition
+import androidx.compose.foundation.Canvas
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.platform.DensityAmbient
+import androidx.compose.ui.unit.dp
 
 private const val DividerLengthInDegrees = 1.8f
 private val AngleOffset = FloatPropKey()
 private val Shift = FloatPropKey()
 
-private val CircularTransition = transitionDefinition {
+private val CircularTransition = transitionDefinition<Int> {
     state(0) {
         this[AngleOffset] = 0f
         this[Shift] = 0f
@@ -60,9 +63,9 @@ private val CircularTransition = transitionDefinition {
  * because there will be N dividers of size 1.8 degrees */
 @Composable
 fun AnimatedCircle(
-        modifier: Modifier = Modifier,
-        proportions: List<Float>,
-        colors: List<Color>
+    modifier: Modifier = Modifier,
+    proportions: List<Float>,
+    colors: List<Color>
 ) {
     val stroke = Stroke(5.dp.value * DensityAmbient.current.density)
     val state = transition(definition = CircularTransition, initState = 0, toState = 1)

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.EmphasisAmbient
+import androidx.compose.material.ProvideEmphasis
+import androidx.compose.runtime.Composable
 
-import androidx.compose.Composable
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Column
-import androidx.ui.material.EmphasisAmbient
-import androidx.ui.material.ProvideEmphasis
-
-
+@Sampled
 @Composable
 fun EmphasisSample() {
     Column {

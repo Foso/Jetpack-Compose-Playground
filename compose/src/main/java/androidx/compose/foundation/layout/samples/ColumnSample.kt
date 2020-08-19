@@ -16,28 +16,25 @@
 
 package androidx.compose.foundation.layout.samples
 
-
-import androidx.compose.Composable
-import androidx.ui.background
-import androidx.ui.core.Alignment
-import androidx.ui.core.Layout
-import androidx.ui.core.Modifier
-import androidx.ui.core.VerticalAlignmentLine
-import androidx.ui.foundation.Box
-
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Column
-import androidx.ui.layout.fillMaxWidth
-import androidx.ui.layout.preferredSize
-import androidx.ui.layout.preferredWidth
-
-import androidx.ui.unit.Dp
-import androidx.ui.unit.dp
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Layout
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.VerticalAlignmentLine
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import kotlin.math.max
 import kotlin.math.min
 
-
+@Sampled
 @Composable
 fun SimpleColumn() {
     Column {
@@ -55,7 +52,7 @@ fun SimpleColumn() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleGravityInColumn() {
     Column(Modifier.fillMaxWidth()) {
@@ -86,7 +83,7 @@ fun SimpleGravityInColumn() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleRelativeToSiblings() {
     Column {
@@ -107,7 +104,7 @@ fun SimpleRelativeToSiblings() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleRelativeToSiblingsInColumn() {
     // Alignment lines provided by the RectangleWithStartEnd layout. We need to create these

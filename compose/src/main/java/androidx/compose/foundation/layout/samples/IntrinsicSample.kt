@@ -16,19 +16,26 @@
 
 package androidx.compose.foundation.layout.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayout
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Stack
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
-import androidx.ui.foundation.Text
-
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.*
-
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 @OptIn(ExperimentalLayout::class)
 fun SameWidthBoxes() {
@@ -57,7 +64,7 @@ fun SameWidthBoxes() {
     }
 }
 
-
+@Sampled
 @Composable
 @OptIn(ExperimentalLayout::class)
 fun MatchParentDividerForText() {
@@ -85,7 +92,7 @@ fun MatchParentDividerForText() {
     }
 }
 
-
+@Sampled
 @Composable
 @OptIn(ExperimentalLayout::class)
 fun SameWidthTextBoxes() {
@@ -112,7 +119,7 @@ fun SameWidthTextBoxes() {
     }
 }
 
-
+@Sampled
 @Composable
 @OptIn(ExperimentalLayout::class)
 fun MatchParentDividerForAspectRatio() {

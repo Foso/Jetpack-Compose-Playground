@@ -14,20 +14,19 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
-import androidx.compose.Composable
-import androidx.ui.foundation.ScrollableColumn
-
-import androidx.ui.material.icons.Icons
-import androidx.ui.material.icons.filled.Call
-import androidx.ui.material.samples.OneLineListItems
-import androidx.ui.material.samples.OneLineRtlLtrListItems
-import androidx.ui.material.samples.ThreeLineListItems
-import androidx.ui.material.samples.ThreeLineRtlLtrListItems
-import androidx.ui.material.samples.TwoLineListItems
-import androidx.ui.material.samples.TwoLineRtlLtrListItems
-import androidx.ui.res.imageResource
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Call
+import androidx.compose.material.samples.OneLineListItems
+import androidx.compose.material.samples.OneLineRtlLtrListItems
+import androidx.compose.material.samples.ThreeLineListItems
+import androidx.compose.material.samples.ThreeLineRtlLtrListItems
+import androidx.compose.material.samples.TwoLineListItems
+import androidx.compose.material.samples.TwoLineRtlLtrListItems
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.imageResource
 import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
 @Composable

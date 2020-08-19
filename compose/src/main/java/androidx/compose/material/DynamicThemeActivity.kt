@@ -14,37 +14,40 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.animation.FastOutSlowInEasing
-
-import androidx.compose.Composable
-import androidx.compose.MutableState
-import androidx.compose.mutableStateOf
-import androidx.compose.remember
-import androidx.ui.core.Modifier
-import androidx.ui.core.setContent
-import androidx.ui.foundation.*
-import androidx.ui.foundation.shape.corner.CircleShape
-import androidx.ui.foundation.shape.corner.RoundedCornerShape
-
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.lerp
-import androidx.ui.graphics.toArgb
-import androidx.ui.layout.Column
-import androidx.ui.layout.fillMaxWidth
-import androidx.ui.layout.padding
-import androidx.ui.layout.preferredHeight
-import androidx.ui.material.BottomAppBar
-import androidx.ui.material.ColorPalette
-import androidx.ui.material.ExtendedFloatingActionButton
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.Scaffold
-import androidx.ui.material.TopAppBar
-import androidx.ui.material.lightColorPalette
-import androidx.ui.unit.dp
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.BottomAppBar
+import androidx.compose.material.Colors
+import androidx.compose.material.ExtendedFloatingActionButton
+import androidx.compose.material.FabPosition
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.TopAppBar
+import androidx.compose.material.lightColors
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.setContent
+import androidx.compose.ui.unit.dp
 import kotlin.math.round
 
 /**
@@ -66,7 +69,7 @@ class DynamicThemeActivity : ComponentActivity() {
         }
     }
 
-    private val ColorPalette.darkenedPrimary: Int
+    private val Colors.darkenedPrimary: Int
         get() {
             return with(primary) {
                 copy(
@@ -81,7 +84,7 @@ class DynamicThemeActivity : ComponentActivity() {
 private typealias ScrollFraction = MutableState<Float>
 
 @Composable
-private fun DynamicThemeApp(scrollFraction: ScrollFraction, palette: ColorPalette) {
+private fun DynamicThemeApp(scrollFraction: ScrollFraction, palette: Colors) {
     MaterialTheme(palette) {
         val scrollState = rememberScrollState()
         val fraction =
@@ -91,7 +94,7 @@ private fun DynamicThemeApp(scrollFraction: ScrollFraction, palette: ColorPalett
             topBar = { TopAppBar({ Text("Scroll down!") }) },
             bottomBar = { BottomAppBar(cutoutShape = CircleShape) {} },
             floatingActionButton = { Fab(scrollFraction) },
-            floatingActionButtonPosition = Scaffold.FabPosition.Center,
+            floatingActionButtonPosition = FabPosition.Center,
             isFloatingActionButtonDocked = true,
             bodyContent = { innerPadding ->
                 ScrollableColumn(scrollState = scrollState, children = {
@@ -132,14 +135,14 @@ private fun Card(index: Int) {
     }
 }
 
-private fun interpolateTheme(fraction: Float): ColorPalette {
+private fun interpolateTheme(fraction: Float): Colors {
     val interpolatedFraction = FastOutSlowInEasing(fraction)
 
     val primary = lerp(Color(0xFF6200EE), Color(0xFF303030), interpolatedFraction)
     val secondary = lerp(Color(0xFF03DAC6), Color(0xFFBB86FC), interpolatedFraction)
     val background = lerp(Color.White, Color(0xFF121212), interpolatedFraction)
 
-    return lightColorPalette(
+    return lightColors(
         primary = primary,
         secondary = secondary,
         background = background

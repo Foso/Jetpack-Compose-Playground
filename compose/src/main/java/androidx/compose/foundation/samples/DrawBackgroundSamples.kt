@@ -16,19 +16,19 @@
 
 package androidx.compose.foundation.samples
 
-
-import androidx.compose.Composable
-import androidx.ui.background
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.shape.corner.CutCornerShape
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.HorizontalGradient
-import androidx.ui.layout.padding
-import androidx.ui.unit.dp
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.HorizontalGradient
+import androidx.compose.ui.unit.dp
 
 @Composable
-
+@Sampled
 fun DrawBackgroundColor() {
     Text(
         "Text with background",
@@ -37,7 +37,7 @@ fun DrawBackgroundColor() {
 }
 
 @Composable
-
+@Sampled
 fun DrawBackgroundShapedBrush() {
     val gradientBrush = HorizontalGradient(
         colors = listOf(Color.Red, Color.Blue, Color.Green),

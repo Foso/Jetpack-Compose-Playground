@@ -14,16 +14,14 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-
-import androidx.ui.layout.Column
-import androidx.ui.layout.Spacer
-import androidx.ui.material.samples.SimpleBottomAppBar
-import androidx.ui.material.samples.SimpleTopAppBar
-
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.material.samples.SimpleBottomAppBar
+import androidx.compose.material.samples.SimpleTopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 
 @Composable
 fun AppBarDemo() {

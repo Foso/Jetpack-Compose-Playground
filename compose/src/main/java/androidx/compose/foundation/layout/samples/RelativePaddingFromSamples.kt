@@ -16,17 +16,15 @@
 
 package androidx.compose.foundation.layout.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.relativePaddingFrom
+import androidx.compose.foundation.text.FirstBaseline
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Text
-import androidx.ui.layout.relativePaddingFrom
-import androidx.ui.text.FirstBaseline
-
-
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun RelativePaddingFromSample() {
     Text(

@@ -14,45 +14,48 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.setValue
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.*
-import androidx.ui.foundation.selection.selectable
-
-
-import androidx.ui.graphics.Color
-import androidx.ui.input.TextFieldValue
-import androidx.ui.layout.Column
-import androidx.ui.layout.ColumnScope.gravity
-import androidx.ui.layout.InnerPadding
-import androidx.ui.layout.Row
-import androidx.ui.layout.Spacer
-import androidx.ui.layout.fillMaxHeight
-import androidx.ui.layout.fillMaxWidth
-import androidx.ui.layout.padding
-import androidx.ui.layout.preferredHeight
-import androidx.ui.layout.preferredWidth
-import androidx.ui.material.*
-
-import androidx.ui.material.icons.Icons
-import androidx.ui.material.icons.filled.Favorite
-import androidx.ui.material.icons.filled.Info
-import androidx.ui.material.samples.FilledTextFieldSample
-import androidx.ui.material.samples.FilledTextFieldWithErrorState
-import androidx.ui.material.samples.FilledTextFieldWithIcons
-import androidx.ui.material.samples.FilledTextFieldWithPlaceholder
-import androidx.ui.material.samples.PasswordFilledTextField
-import androidx.ui.material.samples.SimpleOutlinedTextFieldSample
-import androidx.ui.material.samples.TextFieldWithHelperMessage
-import androidx.ui.material.samples.TextFieldWithHideKeyboardOnImeAction
-import androidx.ui.savedinstancestate.savedInstanceState
-
-import androidx.ui.unit.dp
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.Icon
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope.gravity
+import androidx.compose.foundation.layout.InnerPadding
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material.Checkbox
+import androidx.compose.material.EmphasisAmbient
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.RadioButton
+import androidx.compose.material.TextField
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.samples.PasswordTextField
+import androidx.compose.material.samples.SimpleOutlinedTextFieldSample
+import androidx.compose.material.samples.TextFieldSample
+import androidx.compose.material.samples.TextFieldWithErrorState
+import androidx.compose.material.samples.TextFieldWithHelperMessage
+import androidx.compose.material.samples.TextFieldWithHideKeyboardOnImeAction
+import androidx.compose.material.samples.TextFieldWithIcons
+import androidx.compose.material.samples.TextFieldWithPlaceholder
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.savedinstancestate.savedInstanceState
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun TextFieldsDemo() {
@@ -61,21 +64,21 @@ fun TextFieldsDemo() {
         contentPadding = InnerPadding(10.dp)
     ) {
         Text("Password text field")
-        PasswordFilledTextField()
+        PasswordTextField()
         Text("Text field with leading and trailing icons")
-        FilledTextFieldWithIcons()
+        TextFieldWithIcons()
         Text("Outlined text field")
         SimpleOutlinedTextFieldSample()
         Text("Text field with placeholder")
-        FilledTextFieldWithPlaceholder()
+        TextFieldWithPlaceholder()
         Text("Text field with error state handling")
-        FilledTextFieldWithErrorState()
+        TextFieldWithErrorState()
         Text("Text field with helper/error message")
         TextFieldWithHelperMessage()
         Text("Hide keyboard on IME action")
         TextFieldWithHideKeyboardOnImeAction()
         Text("TextFieldValue overload")
-        FilledTextFieldSample()
+        TextFieldSample()
     }
 }
 
@@ -92,9 +95,9 @@ fun MaterialTextFieldDemo() {
         val textField: @Composable () -> Unit = @Composable {
             when (selectedTextField) {
                 TextFieldType.Filled ->
-                    FilledTextField(
-                        value = TextFieldValue(text),
-                        onValueChange = { it },
+                    TextField(
+                        value = text,
+                        onValueChange = { text = it },
                         label = {
                             val label =
                                 "Label" + if (selectedOption == Option.Error) "*" else ""
@@ -220,7 +223,7 @@ private fun TextFieldWithMessage(
     }
 
     Column {
-        textField()
+        Box(modifier = Modifier.weight(1f), children = textField)
         Text(
             text = "Helper message",
             style = typography.copy(color = color),

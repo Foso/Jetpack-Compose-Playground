@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Icon
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.ExtendedFloatingActionButton
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Icon
-import androidx.ui.foundation.Text
-import androidx.ui.layout.fillMaxWidth
-import androidx.ui.material.ExtendedFloatingActionButton
-import androidx.ui.material.FloatingActionButton
-import androidx.ui.material.icons.Icons
-import androidx.ui.material.icons.filled.Favorite
-
-
+@Sampled
 @Composable
 fun SimpleFab() {
     FloatingActionButton(onClick = { /*do something*/ }) {
@@ -43,7 +43,7 @@ fun SimpleExtendedFabNoIcon() {
     )
 }
 
-
+@Sampled
 @Composable
 fun SimpleExtendedFabWithIcon() {
     ExtendedFloatingActionButton(
@@ -53,7 +53,7 @@ fun SimpleExtendedFabWithIcon() {
     )
 }
 
-
+@Sampled
 @Composable
 fun FluidExtendedFab() {
     ExtendedFloatingActionButton(

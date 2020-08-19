@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Icon
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.material.BottomAppBar
+import androidx.compose.material.IconButton
+import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Menu
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-
-import androidx.ui.foundation.Icon
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Spacer
-import androidx.ui.material.BottomAppBar
-import androidx.ui.material.IconButton
-import androidx.ui.material.TopAppBar
-import androidx.ui.material.icons.Icons
-import androidx.ui.material.icons.filled.Favorite
-import androidx.ui.material.icons.filled.Menu
-
-
+@Sampled
 @Composable
 fun SimpleTopAppBar() {
     TopAppBar(
@@ -52,7 +51,7 @@ fun SimpleTopAppBar() {
     )
 }
 
-
+@Sampled
 @Composable
 fun SimpleBottomAppBar() {
     BottomAppBar {

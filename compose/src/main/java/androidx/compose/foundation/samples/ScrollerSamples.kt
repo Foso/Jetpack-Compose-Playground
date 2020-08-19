@@ -16,22 +16,33 @@
 
 package androidx.compose.foundation.samples
 
-
-import androidx.compose.Composable
-import androidx.ui.background
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.*
-
-
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.HorizontalGradient
-import androidx.ui.graphics.TileMode
-import androidx.ui.graphics.VerticalGradient
-import androidx.ui.layout.*
-
-import androidx.ui.unit.dp
-import androidx.ui.unit.sp
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.ScrollableRow
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.HorizontalGradient
+import androidx.compose.ui.graphics.TileMode
+import androidx.compose.ui.graphics.VerticalGradient
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 private val colors = listOf(
     Color(0xFFffd7d7.toInt()),
@@ -74,7 +85,7 @@ private val phrases = listOf(
     "Go For Broke"
 )
 
-
+@Sampled
 @Composable
 fun HorizontalScrollSample() {
     val scrollState = rememberScrollState()
@@ -89,7 +100,7 @@ fun HorizontalScrollSample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun VerticalScrollExample() {
     val scrollState = rememberScrollState()
@@ -105,7 +116,7 @@ fun VerticalScrollExample() {
     )
 }
 
-
+@Sampled
 @Composable
 fun ScrollableColumnSample() {
     ScrollableColumn {
@@ -115,7 +126,7 @@ fun ScrollableColumnSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun ScrollableRowSample() {
     ScrollableRow {
@@ -125,7 +136,7 @@ fun ScrollableRowSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun ControlledScrollableRowSample() {
     // Create ScrollState to own it and be able to control scroll behaviour of ScrollableRow below

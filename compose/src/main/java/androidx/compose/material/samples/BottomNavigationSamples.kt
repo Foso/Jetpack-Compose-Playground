@@ -14,33 +14,34 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Icon
+import androidx.compose.foundation.Text
+import androidx.compose.material.BottomNavigation
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.setValue
-import androidx.compose.state
-import androidx.ui.foundation.Icon
-import androidx.ui.foundation.Text
-import androidx.ui.material.BottomNavigation
-import androidx.ui.material.BottomNavigationItem
-import androidx.ui.material.icons.Icons
-import androidx.ui.material.icons.filled.Favorite
-
-
+@Sampled
 @Composable
 fun BottomNavigationSample() {
-    var selectedItem by state { 0 }
+    var selectedItem by remember { mutableStateOf(0) }
     val items = listOf("Songs", "Artists", "Playlists")
 
     BottomNavigation {
         items.forEachIndexed { index, item ->
             BottomNavigationItem(
                 icon = { Icon(Icons.Filled.Favorite) },
-                text = { Text(item) },
+                label = { Text(item) },
                 selected = selectedItem == index,
-                onSelected = { selectedItem = index }
+                onSelect = { selectedItem = index }
             )
         }
     }
@@ -48,16 +49,16 @@ fun BottomNavigationSample() {
 
 @Composable
 fun BottomNavigationWithOnlySelectedLabelsSample() {
-    var selectedItem by state { 0 }
+    var selectedItem by remember { mutableStateOf(0) }
     val items = listOf("Songs", "Artists", "Playlists")
 
     BottomNavigation {
         items.forEachIndexed { index, item ->
             BottomNavigationItem(
                 icon = { Icon(Icons.Filled.Favorite) },
-                text = { Text(item) },
+                label = { Text(item) },
                 selected = selectedItem == index,
-                onSelected = { selectedItem = index },
+                onSelect = { selectedItem = index },
                 alwaysShowLabels = false
             )
         }

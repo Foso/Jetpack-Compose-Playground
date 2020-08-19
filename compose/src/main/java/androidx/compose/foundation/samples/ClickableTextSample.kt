@@ -17,21 +17,23 @@
 package androidx.compose.foundation.samples
 
 import android.util.Log
+import androidx.annotation.Sampled
+import androidx.compose.foundation.ClickableText
+import androidx.compose.foundation.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.gesture.longPressGestureFilter
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextOverflow
 
-import androidx.compose.Composable
-import androidx.compose.state
-import androidx.ui.core.Modifier
-import androidx.ui.core.gesture.longPressGestureFilter
-import androidx.ui.foundation.Text
-import androidx.ui.text.AnnotatedString
-import androidx.ui.text.TextLayoutResult
-import androidx.ui.text.TextStyle
-import androidx.ui.text.style.TextOverflow
-
-
+@Sampled
 @Composable
 fun ClickableText() {
-    androidx.ui.foundation.ClickableText(
+    ClickableText(
         text = AnnotatedString("Click Me"),
         onClick = { offset ->
             Log.d("ClickableText", "$offset -th character is clicked.")
@@ -39,7 +41,7 @@ fun ClickableText() {
     )
 }
 
-
+@Sampled
 @Composable
 fun LongClickableText(
     text: AnnotatedString,
@@ -51,7 +53,7 @@ fun LongClickableText(
     onTextLayout: (TextLayoutResult) -> Unit = {},
     onLongClick: (offset: Int) -> Unit
 ) {
-    val layoutResult = state<TextLayoutResult?> { null }
+    val layoutResult = remember { mutableStateOf<TextLayoutResult?>(null) }
     val gesture = Modifier.longPressGestureFilter(
         onLongPress = { pos ->
             layoutResult.value?.let { layout ->
@@ -61,7 +63,7 @@ fun LongClickableText(
     )
 
     Text(text = text,
-        modifier = modifier + gesture,
+        modifier = modifier.then(gesture),
         style = style,
         softWrap = softWrap,
         overflow = overflow,

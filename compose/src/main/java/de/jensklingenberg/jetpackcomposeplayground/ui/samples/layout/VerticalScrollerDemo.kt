@@ -1,12 +1,11 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout
 
-import androidx.compose.Composable
-import androidx.ui.foundation.ScrollableColumn
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.VerticalScroller
-import androidx.ui.layout.Column
-import androidx.ui.material.MaterialTheme
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
 
 
 /**

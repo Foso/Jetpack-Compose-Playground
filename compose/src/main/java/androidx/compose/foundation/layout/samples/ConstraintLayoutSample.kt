@@ -16,20 +16,18 @@
 
 package androidx.compose.foundation.layout.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.ConstraintLayout
+import androidx.compose.foundation.layout.ConstraintSet
+import androidx.compose.foundation.layout.Dimension
+import androidx.compose.foundation.layout.atMost
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.layoutId
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.core.layoutId
-import androidx.ui.foundation.Text
-import androidx.ui.layout.ConstraintLayout
-import androidx.ui.layout.ConstraintSet2
-import androidx.ui.layout.Dimension
-import androidx.ui.layout.atMost
-
-
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun DemoInlineDSL() {
     ConstraintLayout {
@@ -51,10 +49,10 @@ fun DemoInlineDSL() {
     }
 }
 
-
+@Sampled
 @Composable
 fun DemoConstraintSet() {
-    ConstraintLayout(ConstraintSet2 {
+    ConstraintLayout(ConstraintSet {
         val text1 = createRefFor("text1")
         val text2 = createRefFor("text2")
         val text3 = createRefFor("text3")

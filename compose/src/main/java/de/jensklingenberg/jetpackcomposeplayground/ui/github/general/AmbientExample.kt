@@ -2,13 +2,13 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.github.general
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.compose.Composable
-import androidx.compose.Providers
-import androidx.compose.ambientOf
-import androidx.ui.core.setContent
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Column
-import androidx.ui.tooling.preview.Preview
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Providers
+import androidx.compose.runtime.ambientOf
+import androidx.compose.ui.platform.setContent
+
 
 data class User(val name: String, val age: Int)
 
@@ -33,7 +33,7 @@ private fun MyUserScreen() {
     }
 }
 
-@Preview
+
 @Composable
 fun UserInfo() {
     Column {

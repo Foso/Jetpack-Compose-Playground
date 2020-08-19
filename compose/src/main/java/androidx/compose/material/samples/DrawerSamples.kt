@@ -14,92 +14,79 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.material.BottomDrawerLayout
+import androidx.compose.material.BottomDrawerValue
+import androidx.compose.material.Button
+import androidx.compose.material.DrawerValue
+import androidx.compose.material.ModalDrawerLayout
+import androidx.compose.material.rememberBottomDrawerState
+import androidx.compose.material.rememberDrawerState
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.compose.state
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
-import androidx.ui.foundation.ContentGravity
-
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Column
-import androidx.ui.layout.Spacer
-import androidx.ui.layout.fillMaxHeight
-import androidx.ui.layout.fillMaxSize
-import androidx.ui.layout.preferredHeight
-import androidx.ui.material.BottomDrawerLayout
-import androidx.ui.material.BottomDrawerState
-import androidx.ui.material.Button
-import androidx.ui.material.DrawerState
-import androidx.ui.material.ModalDrawerLayout
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun ModalDrawerSample() {
-    val (state, onStateChange) = state { DrawerState.Closed }
-    val appContentText =
-        if (state == DrawerState.Closed) {
-            ">>> Pull to open >>>"
-        } else {
-            "<<< Swipe to close <<<"
-        }
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
     ModalDrawerLayout(
-        drawerState = state,
-        onStateChange = onStateChange,
+        drawerState = drawerState,
         drawerContent = {
-            YourDrawerContent(onClose = { onStateChange(DrawerState.Closed) })
+            Button(
+                modifier = Modifier.gravity(Alignment.CenterHorizontally).padding(top = 16.dp),
+                onClick = { drawerState.close() },
+                content = { Text("Close Drawer") }
+            )
         },
         bodyContent = {
-            YourAppContent(appContentText, onOpen = { onStateChange(DrawerState.Opened) })
-        }
-    )
-}
-
-
-@Composable
-fun BottomDrawerSample() {
-    val (state, onStateChange) = state { BottomDrawerState.Closed }
-    val appContentText =
-        if (state == BottomDrawerState.Closed) {
-            "▲▲▲ Pull to open ▲▲▲"
-        } else {
-            "▼▼▼ Drag down to close ▼▼▼"
-        }
-    BottomDrawerLayout(
-        drawerState = state,
-        onStateChange = onStateChange,
-        drawerContent = {
-            YourDrawerContent(onClose = { onStateChange(BottomDrawerState.Closed) })
-        },
-        bodyContent = {
-            YourAppContent(appContentText, onOpen = { onStateChange(BottomDrawerState.Opened) })
-        }
-    )
-}
-
-@Composable
-private fun YourDrawerContent(onClose: () -> Unit) {
-    Box(Modifier.fillMaxSize(), gravity = ContentGravity.Center) {
-        Column(Modifier.fillMaxHeight()) {
-            Text(text = "Drawer Content")
-            Spacer(Modifier.preferredHeight(20.dp))
-            Button(onClick = onClose) {
-                Text("Close Drawer")
+            Column(
+                modifier = Modifier.fillMaxSize().padding(16.dp),
+                horizontalGravity = Alignment.CenterHorizontally
+            ) {
+                Text(text = if (drawerState.isClosed) ">>> Swipe >>>" else "<<< Swipe <<<")
+                Spacer(Modifier.preferredHeight(20.dp))
+                Button(onClick = { drawerState.open() }) {
+                    Text("Click to open")
+                }
             }
         }
-    }
+    )
 }
 
+@Sampled
 @Composable
-private fun YourAppContent(text: String, onOpen: () -> Unit) {
-    Column(Modifier.fillMaxHeight()) {
-        Text(text = text)
-        Spacer(Modifier.preferredHeight(20.dp))
-        Button(onClick = onOpen) {
-            Text("Click to open")
+fun BottomDrawerSample() {
+    val drawerState = rememberBottomDrawerState(BottomDrawerValue.Closed)
+    BottomDrawerLayout(
+        drawerState = drawerState,
+        drawerContent = {
+            Button(
+                modifier = Modifier.gravity(Alignment.CenterHorizontally).padding(top = 16.dp),
+                onClick = { drawerState.close() },
+                content = { Text("Close Drawer") }
+            )
+        },
+        bodyContent = {
+            Column(
+                modifier = Modifier.fillMaxSize().padding(16.dp),
+                horizontalGravity = Alignment.CenterHorizontally
+            ) {
+                Text(text = if (drawerState.isClosed) "▲▲▲ Pull up ▲▲▲" else "▼▼▼ Drag down ▼▼▼")
+                Spacer(Modifier.preferredHeight(20.dp))
+                Button(onClick = { drawerState.open() }) {
+                    Text("Click to open")
+                }
+            }
         }
-    }
+    )
 }

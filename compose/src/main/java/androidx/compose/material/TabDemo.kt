@@ -14,33 +14,34 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
-import androidx.compose.Composable
-import androidx.compose.state
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.ScrollableColumn
-import androidx.ui.foundation.Text
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Spacer
-import androidx.ui.layout.height
-import androidx.ui.layout.preferredHeight
-import androidx.ui.material.Button
-import androidx.ui.material.samples.FancyIndicatorContainerTabs
-import androidx.ui.material.samples.FancyIndicatorTabs
-import androidx.ui.material.samples.FancyTabs
-import androidx.ui.material.samples.IconTabs
-import androidx.ui.material.samples.ScrollingFancyIndicatorContainerTabs
-import androidx.ui.material.samples.ScrollingTextTabs
-import androidx.ui.material.samples.TextAndIconTabs
-import androidx.ui.material.samples.TextTabs
-import androidx.ui.unit.dp
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.material.Button
+import androidx.compose.material.samples.FancyIndicatorContainerTabs
+import androidx.compose.material.samples.FancyIndicatorTabs
+import androidx.compose.material.samples.FancyTabs
+import androidx.compose.material.samples.IconTabs
+import androidx.compose.material.samples.ScrollingFancyIndicatorContainerTabs
+import androidx.compose.material.samples.ScrollingTextTabs
+import androidx.compose.material.samples.TextAndIconTabs
+import androidx.compose.material.samples.TextTabs
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun TabDemo() {
     ScrollableColumn {
-        val showingSimple = state { true }
+        val showingSimple = remember { mutableStateOf(true) }
         val buttonText = "Show ${if (showingSimple.value) "custom" else "simple"} tabs"
 
         Spacer(Modifier.height(24.dp))

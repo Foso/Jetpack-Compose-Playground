@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Text
+import androidx.compose.material.Card
+import androidx.compose.runtime.Composable
 
-import androidx.compose.Composable
-import androidx.ui.foundation.Text
-import androidx.ui.material.Card
-
-
+@Sampled
 @Composable
 fun CardSample() {
     Card {

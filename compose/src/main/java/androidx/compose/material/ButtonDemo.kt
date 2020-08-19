@@ -14,41 +14,38 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-
-
-import androidx.ui.foundation.Border
-import androidx.ui.foundation.Text
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Arrangement
-
-import androidx.ui.layout.Row
-import androidx.ui.layout.Spacer
-import androidx.ui.layout.fillMaxWidth
-import androidx.ui.layout.preferredHeight
-import androidx.ui.layout.preferredSize
-import androidx.ui.foundation.ScrollableColumn
-import androidx.ui.foundation.shape.GenericShape
-import androidx.ui.layout.InnerPadding
-import androidx.ui.material.Button
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.OutlinedButton
-import androidx.ui.material.TextButton
-import androidx.ui.material.samples.ButtonSample
-import androidx.ui.material.samples.ButtonWithIconSample
-import androidx.ui.material.samples.FluidExtendedFab
-import androidx.ui.material.samples.IconButtonSample
-import androidx.ui.material.samples.IconToggleButtonSample
-import androidx.ui.material.samples.OutlinedButtonSample
-import androidx.ui.material.samples.SimpleExtendedFabNoIcon
-import androidx.ui.material.samples.SimpleExtendedFabWithIcon
-import androidx.ui.material.samples.SimpleFab
-import androidx.ui.material.samples.TextButtonSample
-import androidx.ui.unit.dp
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.InnerPadding
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.shape.GenericShape
+import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedButton
+import androidx.compose.material.TextButton
+import androidx.compose.material.samples.ButtonSample
+import androidx.compose.material.samples.ButtonWithIconSample
+import androidx.compose.material.samples.FluidExtendedFab
+import androidx.compose.material.samples.IconButtonSample
+import androidx.compose.material.samples.IconToggleButtonSample
+import androidx.compose.material.samples.OutlinedButtonSample
+import androidx.compose.material.samples.SimpleExtendedFabNoIcon
+import androidx.compose.material.samples.SimpleExtendedFabWithIcon
+import androidx.compose.material.samples.SimpleFab
+import androidx.compose.material.samples.TextButtonSample
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 private val DefaultSpace = 20.dp
 
@@ -130,12 +127,15 @@ private fun CustomShapeButton() {
     Spacer(Modifier.preferredHeight(DefaultSpace))
     OutlinedButton(
         onClick = {},
-        modifier = Modifier.preferredSize(100.dp),
+        modifier = Modifier.preferredSize(110.dp),
         shape = TriangleShape,
         backgroundColor = Color.Yellow,
-        border = Border(size = 2.dp, color = Color.Black)
+        border = BorderStroke(width = 2.dp, color = Color.Black)
     ) {
-        Text("Ok")
+        Column {
+            Text("Click")
+            Text("here")
+        }
     }
 }
 

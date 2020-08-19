@@ -14,28 +14,29 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Icon
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.contentColor
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.Checkbox
+import androidx.compose.material.Divider
+import androidx.compose.material.ListItem
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.ImageAsset
+import androidx.compose.ui.graphics.vector.VectorAsset
 
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.setValue
-import androidx.compose.state
-import androidx.ui.foundation.Icon
-
-import androidx.ui.foundation.Text
-
-import androidx.ui.foundation.Image
-import androidx.ui.foundation.contentColor
-import androidx.ui.graphics.ColorFilter
-import androidx.ui.graphics.ImageAsset
-import androidx.ui.graphics.vector.VectorAsset
-import androidx.ui.layout.Column
-import androidx.ui.material.Checkbox
-import androidx.ui.material.Divider
-import androidx.ui.material.ListItem
-
-
+@Sampled
 @Composable
 fun OneLineListItems(
     icon24x24: ImageAsset,
@@ -64,7 +65,7 @@ fun OneLineListItems(
         ListItem(
             text = { Text("One line clickable list item") },
             icon = { Image(icon56x56, colorFilter = ColorFilter.tint(contentColor())) },
-            onClick = {}
+            modifier = Modifier.clickable { }
         )
         Divider()
         ListItem(
@@ -81,7 +82,7 @@ fun OneLineListItems(
     }
 }
 
-
+@Sampled
 @Composable
 // TODO(popam, b/159689286): material icons instead of ImageAsset when they can have custom sizes
 fun TwoLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
@@ -115,7 +116,7 @@ fun TwoLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
             icon = { Image(icon40x40, colorFilter = ColorFilter.tint(contentColor())) }
         )
         Divider()
-        var checked by state { false }
+        var checked by remember { mutableStateOf(false) }
         ListItem(
             text = { Text("Two line list item") },
             secondaryText = { Text("Secondary text") },
@@ -128,7 +129,7 @@ fun TwoLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
     }
 }
 
-
+@Sampled
 @Composable
 fun ThreeLineListItems(icon24x24: ImageAsset, vectorIcon: VectorAsset) {
     Column {
@@ -222,9 +223,9 @@ fun TwoLineRtlLtrListItems(icon40x40: ImageAsset) {
             secondaryText = { Text("نص ثانوي") })
         Divider()
         ListItem(
+            modifier = Modifier.clickable { },
             text = { Text("Clickable") },
-            secondaryText = { Text("Short item") },
-            onClick = {}
+            secondaryText = { Text("Short item") }
         )
         Divider()
         ListItem(
@@ -238,17 +239,17 @@ fun TwoLineRtlLtrListItems(icon40x40: ImageAsset) {
             secondaryText = { Text("Secondary text") },
             icon = { Image(icon40x40, colorFilter = ColorFilter.tint(contentColor())) },
             trailing = {
-                var checked by state { false }
+                var checked by remember { mutableStateOf(false) }
                 Checkbox(checked, onCheckedChange = { checked = !checked })
             },
-            onClick = {}
+            modifier = Modifier.clickable { }
         )
         Divider()
         ListItem(
             text = { Text("بندان قابلان للنقر") },
             secondaryText = { Text("نص ثانوي") },
             icon = { Image(icon40x40, colorFilter = ColorFilter.tint(contentColor())) },
-            onClick = {}
+            modifier = Modifier.clickable { }
         )
         Divider()
     }

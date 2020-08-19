@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.samples
+package androidx.compose.material.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Icon
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonConstants
+import androidx.compose.material.OutlinedButton
+import androidx.compose.material.TextButton
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Icon
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Spacer
-import androidx.ui.layout.size
-import androidx.ui.material.Button
-import androidx.ui.material.ButtonConstants
-import androidx.ui.material.OutlinedButton
-import androidx.ui.material.TextButton
-import androidx.ui.material.icons.Icons
-import androidx.ui.material.icons.filled.Favorite
-
-
+@Sampled
 @Composable
 fun ButtonSample() {
     Button(onClick = { /* Do something! */ }) {
@@ -38,7 +38,7 @@ fun ButtonSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun OutlinedButtonSample() {
     OutlinedButton(onClick = { /* Do something! */ }) {
@@ -46,7 +46,7 @@ fun OutlinedButtonSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun TextButtonSample() {
     TextButton(onClick = { /* Do something! */ }) {
@@ -54,7 +54,7 @@ fun TextButtonSample() {
     }
 }
 
-
+@Sampled
 @Composable
 fun ButtonWithIconSample() {
     Button(onClick = { /* Do something! */ }) {

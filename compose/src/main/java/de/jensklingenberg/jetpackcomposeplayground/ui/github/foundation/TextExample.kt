@@ -1,12 +1,17 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
-import androidx.ui.text.font.FontFamily
-import androidx.compose.Composable
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Column
-import androidx.ui.text.TextStyle
-import androidx.ui.text.font.FontWeight
-import androidx.ui.text.style.TextDecoration
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontSynthesis
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.font
+import androidx.compose.ui.text.font.fontFamily
+import androidx.compose.ui.text.style.TextDecoration
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
 @Composable
 fun TextExample(){

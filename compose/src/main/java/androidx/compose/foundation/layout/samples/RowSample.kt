@@ -16,25 +16,22 @@
 
 package androidx.compose.foundation.layout.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.text.FirstBaseline
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.ui.background
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
-import androidx.ui.foundation.Text
-
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.Row
-import androidx.ui.layout.fillMaxHeight
-import androidx.ui.layout.preferredHeight
-import androidx.ui.layout.preferredSize
-import androidx.ui.text.FirstBaseline
-
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun SimpleRow() {
     Row {
@@ -51,7 +48,7 @@ fun SimpleRow() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleGravityInRow() {
     Row(Modifier.fillMaxHeight()) {
@@ -82,7 +79,7 @@ fun SimpleGravityInRow() {
     }
 }
 
-
+@Sampled
 @Composable
 fun SimpleRelativeToSiblingsInRow() {
     Row(Modifier.fillMaxHeight()) {

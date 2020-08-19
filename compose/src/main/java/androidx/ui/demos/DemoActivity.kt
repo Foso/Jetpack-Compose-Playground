@@ -25,29 +25,28 @@ import android.view.Window
 import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.OnBackPressedDispatcher
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.mutableStateOf
-import androidx.compose.onCommit
-import androidx.compose.remember
-import androidx.compose.setValue
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.onCommit
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.preference.PreferenceManager
-import androidx.ui.core.setContent
+import androidx.compose.ui.platform.setContent
 import androidx.ui.demos.common.ActivityDemo
 import androidx.ui.demos.common.Demo
 import androidx.ui.demos.common.DemoCategory
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.toArgb
-import androidx.ui.material.ColorPalette
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.darkColorPalette
-import androidx.ui.material.lightColorPalette
-
-import androidx.ui.savedinstancestate.Saver
-import androidx.ui.savedinstancestate.listSaver
-import androidx.ui.savedinstancestate.rememberSavedInstanceState
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.material.Colors
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.darkColors
+import androidx.compose.material.lightColors
+import androidx.compose.runtime.savedinstancestate.Saver
+import androidx.compose.runtime.savedinstancestate.listSaver
+import androidx.compose.runtime.savedinstancestate.rememberSavedInstanceState
+import androidx.compose.ui.graphics.Color
 
 /**
  * Main [Activity] containing all Compose related demos.
@@ -66,10 +65,10 @@ class DemoActivity : ComponentActivity() {
                 Navigator(AllDemosCategory, onBackPressedDispatcher, activityStarter)
             }
             val demoColors = remember {
-                DemoColorPalette().also {
+                DemoColors().also {
                     lifecycle.addObserver(LifecycleEventObserver { _, event ->
                         if (event == Lifecycle.Event.ON_RESUME) {
-                            //it.loadColorsFromSharedPreferences(this)
+                          //  it.loadColorsFromSharedPreferences(this)
                         }
                     })
                 }
@@ -110,7 +109,7 @@ class DemoActivity : ComponentActivity() {
 
 @Composable
 private fun DemoTheme(
-    demoColors: DemoColorPalette,
+    demoColors: DemoColors,
     window: Window,
     children: @Composable () -> Unit
 ) {
@@ -125,7 +124,8 @@ private fun DemoTheme(
     }
 }
 
-private val ColorPalette.darkenedPrimary: Int
+
+private val Colors.darkenedPrimary: Int
     get() = with(primary) {
         copy(
             red = red * 0.75f,
@@ -252,18 +252,14 @@ private class FilterMode(backDispatcher: OnBackPressedDispatcher, initialValue: 
     }
 }
 
-/**
- * Returns a [DemoColorPalette] from the values saved to [SharedPreferences]. If a given color is
- * not present in the [SharedPreferences], its default value as defined in [ColorPalette]
- * will be returned.
- */
+
 
 /**
  * TODO: remove after b/154329050 is fixed
  * Inline classes don't play well with reflection, so we want boxed classes for our
- * call to [lightColorPalette].
+ * call to [lightColors].
  */
-internal fun reflectLightColorPalette(
+internal fun reflectLightColors(
     primary: Long = 0xFF6200EE,
     primaryVariant: Long = 0xFF3700B3,
     secondary: Long = 0xFF03DAC6,
@@ -276,7 +272,7 @@ internal fun reflectLightColorPalette(
     onBackground: Long = 0xFF000000,
     onSurface: Long = 0xFF000000,
     onError: Long = 0xFFFFFFFF
-) = lightColorPalette(
+) = lightColors(
     primary = Color(primary),
     primaryVariant = Color(primaryVariant),
     secondary = Color(secondary),
@@ -294,9 +290,9 @@ internal fun reflectLightColorPalette(
 /**
  * TODO: remove after b/154329050 is fixed
  * Inline classes don't play well with reflection, so we want boxed classes for our
- * call to [darkColorPalette].
+ * call to [darkColors].
  */
-internal fun reflectDarkColorPalette(
+internal fun reflectDarkColors(
     primary: Long = 0xFFBB86FC,
     primaryVariant: Long = 0xFF3700B3,
     secondary: Long = 0xFF03DAC6,
@@ -308,7 +304,7 @@ internal fun reflectDarkColorPalette(
     onBackground: Long = 0xFFFFFFFF,
     onSurface: Long = 0xFFFFFFFF,
     onError: Long = 0xFF000000
-) = darkColorPalette(
+) = darkColors(
     primary = Color(primary),
     primaryVariant = Color(primaryVariant),
     secondary = Color(secondary),

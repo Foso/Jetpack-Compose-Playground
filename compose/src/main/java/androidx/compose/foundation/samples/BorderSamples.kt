@@ -16,32 +16,31 @@
 
 package androidx.compose.foundation.samples
 
-
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-
-import androidx.ui.graphics.Color
-import androidx.ui.graphics.HorizontalGradient
-import androidx.ui.graphics.TileMode
-import androidx.ui.foundation.Border
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.drawBorder
-import androidx.ui.foundation.shape.corner.CircleShape
-import androidx.ui.foundation.shape.corner.CutCornerShape
-import androidx.ui.layout.padding
-import androidx.ui.unit.dp
+import androidx.annotation.Sampled
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.HorizontalGradient
+import androidx.compose.ui.graphics.TileMode
+import androidx.compose.ui.unit.dp
 
 @Composable
-
+@Sampled
 fun BorderSample() {
     Text(
         "Text with  square border",
-        modifier = Modifier.drawBorder(4.dp, Color.Magenta).padding(10.dp)
+        modifier = Modifier.border(4.dp, Color.Magenta).padding(10.dp)
     )
 }
 
 @Composable
-
+@Sampled
 fun BorderSampleWithBrush() {
     val gradientBrush = HorizontalGradient(
         colors = listOf(Color.Red, Color.Blue, Color.Green),
@@ -51,18 +50,18 @@ fun BorderSampleWithBrush() {
     )
     Text(
         "Text with gradient border",
-        modifier = Modifier.drawBorder(size = 2.dp, brush = gradientBrush, shape = CircleShape)
+        modifier = Modifier.border(width = 2.dp, brush = gradientBrush, shape = CircleShape)
             .padding(10.dp)
     )
 }
 
 @Composable
-
+@Sampled
 fun BorderSampleWithDataClass() {
     Text(
         "Text with gradient border",
-        modifier = Modifier.drawBorder(
-            border = Border(2.dp, Color.Blue),
+        modifier = Modifier.border(
+            border = BorderStroke(2.dp, Color.Blue),
             shape = CutCornerShape(8.dp)
         )
             .padding(10.dp)

@@ -14,26 +14,33 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.demos
+package androidx.compose.material.demos
 
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.setValue
-import androidx.compose.state
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.selection.selectable
-import androidx.ui.layout.*
-
-import androidx.ui.material.RadioButton
-import androidx.ui.material.samples.BottomNavigationSample
-import androidx.ui.material.samples.BottomNavigationWithOnlySelectedLabelsSample
-import androidx.ui.unit.dp
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.material.RadioButton
+import androidx.compose.material.samples.BottomNavigationSample
+import androidx.compose.material.samples.BottomNavigationWithOnlySelectedLabelsSample
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun BottomNavigationDemo() {
-    var alwaysShowLabels by state { false }
+    var alwaysShowLabels by remember { mutableStateOf(false) }
     Column(Modifier.fillMaxHeight(), verticalArrangement = Arrangement.Bottom) {
         Row(
             modifier = Modifier

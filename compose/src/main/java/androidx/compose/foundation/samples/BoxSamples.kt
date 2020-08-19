@@ -16,27 +16,25 @@
 
 package androidx.compose.foundation.samples
 
+import androidx.annotation.Sampled
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-
-
-import androidx.ui.foundation.Border
-import androidx.ui.foundation.Box
-import androidx.ui.foundation.ContentGravity
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.shape.corner.CircleShape
-import androidx.ui.graphics.Color
-import androidx.ui.layout.preferredSize
-import androidx.ui.unit.dp
-
-
+@Sampled
 @Composable
 fun SimpleCircleBox() {
     Box(
         modifier = Modifier.preferredSize(100.dp),
         backgroundColor = Color.Cyan,
-        border = Border(10.dp, Color.Red),
+        border = BorderStroke(10.dp, Color.Red),
         shape = CircleShape,
         gravity = ContentGravity.Center
     ) {

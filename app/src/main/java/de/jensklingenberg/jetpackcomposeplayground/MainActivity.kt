@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
         startActivity(Intent(this, DemoActivity::class.java))
-        //startActivity(Intent(this, MyComposeActivity::class.java))
+       // startActivity(Intent(this, MyComposeActivity::class.java))
 
     }
 

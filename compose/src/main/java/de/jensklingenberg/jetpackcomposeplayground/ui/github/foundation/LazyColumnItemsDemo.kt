@@ -1,13 +1,13 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
 import android.util.Log
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Text
-import androidx.ui.foundation.lazy.LazyColumnItems
-import androidx.ui.material.Button
-import androidx.ui.text.TextStyle
-import androidx.ui.unit.sp
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.lazy.LazyColumnItems
+import androidx.compose.material.Button
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.sp
 
 
 @Composable

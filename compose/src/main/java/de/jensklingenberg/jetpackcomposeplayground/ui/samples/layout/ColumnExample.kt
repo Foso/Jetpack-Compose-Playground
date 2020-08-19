@@ -1,11 +1,11 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout
 
-import androidx.compose.Composable
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.MaterialTheme
+import androidx.compose.runtime.Composable
 
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Column
 
-import androidx.ui.material.MaterialTheme
 
 
 @Composable

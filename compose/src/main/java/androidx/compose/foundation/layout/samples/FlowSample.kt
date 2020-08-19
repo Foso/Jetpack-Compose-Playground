@@ -16,28 +16,25 @@
 
 package androidx.compose.foundation.layout.samples
 
-
-import androidx.compose.Composable
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.Box
-
-import androidx.ui.graphics.Color
-import androidx.ui.layout.ExperimentalLayout
-import androidx.ui.layout.FlowColumn
-import androidx.ui.layout.FlowRow
-import androidx.ui.layout.preferredSize
-
-import androidx.ui.unit.dp
+import androidx.annotation.Sampled
+import androidx.compose.foundation.Box
+import androidx.compose.foundation.layout.ExperimentalLayout
+import androidx.compose.foundation.layout.FlowColumn
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.preferredSize
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 
 val sizes = listOf(
     50.dp, 50.dp, 50.dp, 30.dp, 40.dp, 110.dp, 100.dp, 40.dp, 30.dp,
     20.dp, 70.dp, 50.dp, 100.dp, 20.dp, 60.dp, 60.dp, 50.dp, 60.dp
 )
 
-
+@Sampled
 @Composable
 @OptIn(ExperimentalLayout::class)
-
 fun SimpleFlowRow() {
     FlowRow(
         mainAxisSpacing = 10.dp,
@@ -49,7 +46,7 @@ fun SimpleFlowRow() {
     }
 }
 
-
+@Sampled
 @Composable
 @OptIn(ExperimentalLayout::class)
 fun SimpleFlowColumn() {

@@ -14,26 +14,33 @@
  * limitations under the License.
  */
 
-package androidx.ui.material.studies.rally
+package androidx.compose.material.studies.rally
 
 import android.annotation.SuppressLint
-import androidx.compose.Composable
-import androidx.compose.getValue
-import androidx.compose.setValue
-import androidx.compose.state
-import androidx.ui.core.Alignment
-import androidx.ui.core.Modifier
-import androidx.ui.foundation.ScrollableColumn
-import androidx.ui.foundation.Text
-import androidx.ui.layout.*
-
-import androidx.ui.material.Card
-import androidx.ui.material.Divider
-import androidx.ui.material.IconButton
-import androidx.ui.material.MaterialTheme
-import androidx.ui.material.TextButton
-import androidx.ui.material.icons.Icons
-import androidx.ui.unit.dp
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.InnerPadding
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.material.Card
+import androidx.compose.material.Divider
+import androidx.compose.material.IconButton
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.TextButton
+import androidx.compose.material.icons.Icons
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import java.util.Locale
 
 @Composable
@@ -52,7 +59,7 @@ fun OverviewBody() {
  */
 @Composable
 private fun AlertCard() {
-    var openDialog by state { false }
+    var openDialog by remember { mutableStateOf(false) }
     val alertMessage = "Heads up, you've used up 90% of your Shopping budget for this month."
 
     if (openDialog) {
@@ -88,7 +95,7 @@ private fun AlertHeader(onClickSeeAll: () -> Unit) {
         )
         TextButton(
             onClick = onClickSeeAll,
-            padding = InnerPadding(0.dp),
+            contentPadding = InnerPadding(0.dp),
             modifier = Modifier.gravity(Alignment.CenterVertically)
         ) {
             Text("SEE ALL")

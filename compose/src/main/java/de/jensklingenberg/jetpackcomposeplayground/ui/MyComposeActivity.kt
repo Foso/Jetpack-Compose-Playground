@@ -18,14 +18,14 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.ui.core.setContent
+import androidx.compose.ui.platform.setContent
 
 class MyComposeActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            HomeScreen()
+           // HomeScreen()
         }
     }
 }

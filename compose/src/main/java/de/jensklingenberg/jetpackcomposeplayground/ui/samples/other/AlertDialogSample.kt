@@ -1,13 +1,14 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
-import androidx.compose.Composable
-import androidx.compose.state
-import androidx.ui.foundation.Text
-import androidx.ui.layout.Column
-import androidx.ui.material.AlertDialog
-import androidx.ui.material.AlertDialogButtonLayout
-import androidx.ui.material.Button
-import androidx.ui.material.MaterialTheme
+import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material.AlertDialog
+import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.state
+
 
 @Composable
 fun AlertDialogSample() {
@@ -22,10 +23,12 @@ fun AlertDialogSample() {
             }
 
             if (openDialog.value) {
+
                 AlertDialog(
-                    onCloseRequest = {
-                        // In this example we allow the dialog to be closed by other actions
-                        // such as taping outside or pressing the back button.
+                    onDismissRequest = {
+                        // Dismiss the dialog when the user clicks outside the dialog or on the back
+                        // button. If you want to disable that functionality, simply use an empty
+                        // onCloseRequest.
                         openDialog.value = false
                     },
                     title = {
@@ -51,9 +54,10 @@ fun AlertDialogSample() {
                             }) {
                             Text("This is the dismiss Button")
                         }
-                    },
-                    buttonLayout = AlertDialogButtonLayout.Stacked
+                    }
                 )
+
+
             }
         }
 

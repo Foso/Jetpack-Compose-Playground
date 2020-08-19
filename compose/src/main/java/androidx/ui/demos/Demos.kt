@@ -16,17 +16,14 @@
 
 package androidx.ui.demos
 
-
 import androidx.compose.animation.demos.AnimationDemos
 import androidx.compose.foundation.demos.FoundationDemos
 import androidx.compose.foundation.layout.demos.LayoutDemos
 import androidx.compose.foundation.text.demos.TextDemos
-import androidx.ui.core.demos.CoreDemos
+import androidx.compose.ui.demos.CoreDemos
 import androidx.ui.demos.common.DemoCategory
-import androidx.ui.material.demos.MaterialDemos
-import androidx.ui.material.studies.MaterialStudies
-import de.jensklingenberg.jetpackcomposeplayground.ui.MyHomeScreen
-
+import androidx.compose.material.demos.MaterialDemos
+import androidx.compose.material.studies.MaterialStudies
 
 /**
  * [DemoCategory] containing all the top level demo categories.
@@ -35,21 +32,12 @@ val AllDemosCategory = DemoCategory(
     "Jetpack Compose Demos",
     listOf(
        // AndroidViewDemos,
-        MaterialDemos,
+        AnimationDemos,
         FoundationDemos,
-        LayoutDemos,  CoreDemos,
-        AnimationDemos, MaterialStudies,
-                TextDemos,MyHomeScreen
-
-        /***
-         *
-         *  ,
-
-
-
-
-
-
-         */
+        CoreDemos,
+        LayoutDemos,
+        MaterialDemos,
+        MaterialStudies,
+        TextDemos,
     )
 )
