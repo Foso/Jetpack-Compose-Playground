@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Fri, 21 Aug 2020 19:45:31 -0000</pubDate>
-    <lastBuildDate>Fri, 21 Aug 2020 19:45:31 -0000</lastBuildDate>
+    <pubDate>Fri, 21 Aug 2020 21:12:20 -0000</pubDate>
+    <lastBuildDate>Fri, 21 Aug 2020 21:12:20 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,19 +29,6 @@
     <!-- Entries -->
     
     <item>
-      <title>Compose for SwiftUI Developers</title>
-      <description># Compose for Swift Ui Developers
-
-
-| SwiftUi                                    | Compose  |
-| ----------------------------------------- | ----------</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
-      <pubDate>Fri, 21 Aug 2020 19:45:32 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
       <title>Overview</title>
       <description># Jetpack Compose Playground 
 
@@ -49,7 +36,20 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Fos</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
-      <pubDate>Wed, 19 Aug 2020 21:32:32 -0000</pubDate>
+      <pubDate>Fri, 21 Aug 2020 19:46:36 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Compose for SwiftUI Developers</title>
+      <description># Compose for Swift Ui Developers
+
+
+| SwiftUi                                    | Compose  |
+| ----------------------------------------- | ----------</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
+      <pubDate>Fri, 21 Aug 2020 19:46:36 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>

@@ -31,7 +31,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 ## Layouts
 * [ConstraintLayout](/layout/constraintlayout/)
 * [Scaffold](/material/scaffold/)
-* [Column]/layout/column/)
+* [Column](/layout/column/)
 * [Row](/layout/row/)
 * [Stack](/layout/stack/)
 * [LayoutPadding](/core/layoutpadding/)
