@@ -41,6 +41,7 @@ nav:
           - 'General':
               - 'Codelabs': general/codelabs.md
               - 'Compose for Android Developers': compose_for/android_devs.md
+              - 'Compose for SwiftUI Developers': compose_for/swiftui_devs.md
               - 'Compose Lifecycle': general/compose_lifecycle.md
               - 'Compose Preview': general/compose_preview.md
               - 'Hello World Compose': general/helloworld.md
@@ -102,6 +103,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - rss
   - git-revision-date-localized:
       type: date
   - minify:

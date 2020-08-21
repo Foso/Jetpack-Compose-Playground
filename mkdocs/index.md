@@ -29,12 +29,12 @@ The [LazyColumnFor](foundation/lazycolumnfor)
 Check [Project Setup](general/getting_started.md) or [Hello World Compose](general/helloworld/)
 
 ## Layouts
-* [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout/)
-* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold/)
-* [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column/)
-* [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row/)
-* [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack/)
-* [LayoutPadding](https://foso.github.io/Jetpack-Compose-Playground/core/layoutpadding/)
+* [ConstraintLayout](/layout/constraintlayout/)
+* [Scaffold](/material/scaffold/)
+* [Column]/layout/column/)
+* [Row](/layout/row/)
+* [Stack](/layout/stack/)
+* [LayoutPadding](/core/layoutpadding/)
 
 
 ## Looking for tutorials/sample code
