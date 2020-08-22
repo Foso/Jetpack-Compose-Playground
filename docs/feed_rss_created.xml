@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 22 Aug 2020 09:18:21 -0000</pubDate>
-    <lastBuildDate>Sat, 22 Aug 2020 09:18:21 -0000</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2020 13:13:07 -0000</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2020 13:13:07 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,16 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Providers</title>
+      <description># Providers
+Providers are used to provide a value for an [Ambient](./ambient.md)</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/providers/</link>
+      <pubDate>Sat, 22 Aug 2020 13:13:10 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Image</title>
@@ -300,20 +310,6 @@ TextField can be used to insert text. This is the equivalent to **EditText** fro
   &lt;img src =&#34;</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/textfield/</link>
       <pubDate>Wed, 01 Apr 2020 20:44:52 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>LayoutPadding</title>
-      <description># LayoutPadding
-
-!!! info
-    This is the API of version dev16. Newer versions may have a different one
-
-You can use **Modifier.padding** to set paddi</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/core/layoutpadding/</link>
-      <pubDate>Wed, 01 Apr 2020 20:38:54 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>

@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 22 Aug 2020 09:18:21 -0000</pubDate>
-    <lastBuildDate>Sat, 22 Aug 2020 09:18:21 -0000</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2020 13:13:07 -0000</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2020 13:13:07 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,26 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Providers</title>
+      <description># Providers
+Providers are used to provide a value for an [Ambient](./ambient.md)</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/providers/</link>
+      <pubDate>Sat, 22 Aug 2020 13:13:10 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Project Setup</title>
+      <description>!!! info
+        Note: Jetpack Compose is currently in Developer Preview. The API surface is not yet finalized, and changes are planned and expected. </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/getting_started/</link>
+      <pubDate>Sat, 22 Aug 2020 09:23:51 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Compose for SwiftUI Developers</title>
@@ -81,16 +101,6 @@ Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</descriptio
 [![GitHub stars](https://img.shields.io/github/stars/Fos</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
       <pubDate>Fri, 21 Aug 2020 21:13:11 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Project Setup</title>
-      <description>!!! info
-        Note: Jetpack Compose is currently in Developer Preview. The API surface is not yet finalized, and changes are planned and expected. </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/getting_started/</link>
-      <pubDate>Wed, 19 Aug 2020 21:32:32 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -238,15 +248,9 @@ You can use **Text** to display text. You can use the </description>
     
     <item>
       <title>Compose Preview</title>
-      <description># @Preview
-You can use the @Preview annotation to preview compose functions inside Android Studio.
-
-```kotlin
-
-@Preview
-@Composable
-fun TextDemo(){
-  </description>
+      <description># Preview
+You can use the **@Preview** annotation to preview compose functions inside Android Studio.
+Preview can not be used on Composables that have</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_preview/</link>
       <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -287,21 +291,6 @@ A Row will show each children next to the previous chil</description>
 
 The children of the Stack layout will be stacked over each other. You can use the gravity modifier to specify where the composable should be </description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/stack/</link>
-      <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>AlertDialog</title>
-      <description># AlertDialog
-
-!!! info
-    This is the API of version dev09. Newer versions may have a different one
-
-&lt;p align=&#34;center&#34;&gt;
-  &lt;img src =&#34;../../images/ma</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/alertdialog/</link>
       <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

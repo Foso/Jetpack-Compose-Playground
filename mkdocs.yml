@@ -49,6 +49,7 @@ nav:
               - 'How to load an Image': general/loadimage.md
               - 'How to detect dark mode': general/detect_darkmode.md
               - 'Ambient': general/ambient.md
+              - 'Providers': general/providers.md
               - 'Modifier': general/modifier.md
               - 'Roadmap' : general/roadmap.md
               - 'Project Setup': general/getting_started.md
