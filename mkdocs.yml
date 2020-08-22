@@ -50,6 +50,7 @@ nav:
               - 'How to detect dark mode': general/detect_darkmode.md
               - 'Ambient': general/ambient.md
               - 'Modifier': general/modifier.md
+              - 'Roadmap' : general/roadmap.md
               - 'Project Setup': general/getting_started.md
               - 'State': general/state.md
           - 'Foundation':

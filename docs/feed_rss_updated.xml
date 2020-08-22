@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Fri, 21 Aug 2020 21:12:20 -0000</pubDate>
-    <lastBuildDate>Fri, 21 Aug 2020 21:12:20 -0000</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2020 06:54:50 -0000</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2020 06:54:50 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,6 +29,21 @@
     <!-- Entries -->
     
     <item>
+      <title>Roadmap</title>
+      <description># Roadmap
+
+&lt;p align=&#34;left&#34;&gt;
+  &lt;img src =&#34;../../images/general/Roadmap.png&#34;   /&gt;
+&lt;/p&gt;
+
+Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/roadmap/</link>
+      <pubDate>Sat, 22 Aug 2020 06:54:53 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Overview</title>
       <description># Jetpack Compose Playground 
 
@@ -36,7 +51,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Fos</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
-      <pubDate>Fri, 21 Aug 2020 19:46:36 -0000</pubDate>
+      <pubDate>Fri, 21 Aug 2020 21:13:11 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -285,21 +300,6 @@ The children of the Stack layout will be stacked over each other. You can use th
 
 A [Button](https://developer.android.com/reference/k</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/button/</link>
-      <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Checkbox</title>
-      <description># Checkbox
-
-!!! info
-    This is the API of version dev14. Newer versions may have a different one
-
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;../../images/materia</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/checkbox/</link>
       <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

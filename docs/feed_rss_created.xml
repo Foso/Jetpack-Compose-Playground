@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Fri, 21 Aug 2020 21:12:20 -0000</pubDate>
-    <lastBuildDate>Fri, 21 Aug 2020 21:12:20 -0000</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2020 06:54:50 -0000</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2020 06:54:50 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,21 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Roadmap</title>
+      <description># Roadmap
+
+&lt;p align=&#34;left&#34;&gt;
+  &lt;img src =&#34;../../images/general/Roadmap.png&#34;   /&gt;
+&lt;/p&gt;
+
+Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/roadmap/</link>
+      <pubDate>Sat, 22 Aug 2020 06:54:53 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Compose for SwiftUI Developers</title>
@@ -297,18 +312,6 @@ You can use **Modifier.padding** to set paddi</description>
 You can use **Text** to display text. You can use the </description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/text/</link>
       <pubDate>Wed, 01 Apr 2020 20:38:54 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>ConstraintLayout</title>
-      <description># ConstraintLayout
-A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System
-
-A ConstraintLayout requires a </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/constraintlayout/</link>
-      <pubDate>Tue, 31 Mar 2020 20:19:49 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>
