@@ -7,7 +7,7 @@ To use Jetpack Compose you need to use at least a [version >=4.2 Canary 7](https
 ## Gradle Dependencies
 
 
-Add this inside in the android{} block your build.gradle
+Add this inside in the **android{}** block your build.gradle
 ```groovy
 buildFeatures {
     compose true
@@ -44,7 +44,8 @@ dependencies {
       implementation("androidx.compose.ui:ui-text:$compose_version")
       implementation("androidx.compose.ui:ui-text-android:$compose_version")
       implementation("androidx.compose.ui:ui-util:$compose_version")
-      implementation ("androidx.compose.ui:ui-viewbinding:0.1.0-$compose_version")
+      implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
+
 }
 
 ```

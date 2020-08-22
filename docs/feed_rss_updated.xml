@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 22 Aug 2020 07:32:35 -0000</pubDate>
-    <lastBuildDate>Sat, 22 Aug 2020 07:32:35 -0000</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2020 09:18:21 -0000</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2020 09:18:21 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,19 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Compose for SwiftUI Developers</title>
+      <description># Compose for Swift Ui Developers
+
+
+| SwiftUi                                    | Compose  |
+| ----------------------------------------- | ----------</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
+      <pubDate>Sat, 22 Aug 2020 07:33:43 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Image</title>
@@ -39,7 +52,7 @@
 &lt;p align=&#34;left&#34;&gt;
   &lt;img src =&#34;../../images/foundatio</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
-      <pubDate>Sat, 22 Aug 2020 07:32:37 -0000</pubDate>
+      <pubDate>Sat, 22 Aug 2020 07:33:43 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -68,19 +81,6 @@ Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</descriptio
 [![GitHub stars](https://img.shields.io/github/stars/Fos</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
       <pubDate>Fri, 21 Aug 2020 21:13:11 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Compose for SwiftUI Developers</title>
-      <description># Compose for Swift Ui Developers
-
-
-| SwiftUi                                    | Compose  |
-| ----------------------------------------- | ----------</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
-      <pubDate>Fri, 21 Aug 2020 19:46:36 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
