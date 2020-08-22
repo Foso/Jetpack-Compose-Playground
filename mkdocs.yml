@@ -56,6 +56,7 @@ nav:
           - 'Foundation':
               - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md
+              - 'Image': foundation/image.md
               - 'LazyColumnFor': foundation/lazycolumnfor.md
               - 'LazyRowFor': foundation/lazyrowfor.md
               - 'ScrollableRow': foundation/scrollablerow.md

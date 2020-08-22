@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 22 Aug 2020 06:54:50 -0000</pubDate>
-    <lastBuildDate>Sat, 22 Aug 2020 06:54:50 -0000</lastBuildDate>
+    <pubDate>Sat, 22 Aug 2020 07:32:35 -0000</pubDate>
+    <lastBuildDate>Sat, 22 Aug 2020 07:32:35 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,6 +29,22 @@
     <!-- Entries -->
     
     <item>
+      <title>Image</title>
+      <description># Image
+
+!!! info
+    This is the API of version dev17. Newer versions may have a different one
+
+
+&lt;p align=&#34;left&#34;&gt;
+  &lt;img src =&#34;../../images/foundatio</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
+      <pubDate>Sat, 22 Aug 2020 07:32:37 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Roadmap</title>
       <description># Roadmap
 
@@ -38,7 +54,7 @@
 
 Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/roadmap/</link>
-      <pubDate>Sat, 22 Aug 2020 06:54:53 -0000</pubDate>
+      <pubDate>Sat, 22 Aug 2020 06:55:44 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -297,20 +313,6 @@ TextField can be used to insert text. This is the equivalent to **EditText** fro
 
 You can use **Modifier.padding** to set paddi</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/core/layoutpadding/</link>
-      <pubDate>Wed, 01 Apr 2020 20:38:54 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Text</title>
-      <description># Text
-
-!!! info
-    This is the API of version dev14. Newer versions may have a different one
-
-You can use **Text** to display text. You can use the </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/text/</link>
       <pubDate>Wed, 01 Apr 2020 20:38:54 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
