@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 23 Aug 2020 08:22:48 -0000</pubDate>
-    <lastBuildDate>Sun, 23 Aug 2020 08:22:48 -0000</lastBuildDate>
+    <pubDate>Sun, 23 Aug 2020 08:57:27 -0000</pubDate>
+    <lastBuildDate>Sun, 23 Aug 2020 08:57:27 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,10 +29,64 @@
     <!-- Entries -->
     
     <item>
+      <title>Compose for Android Developers</title>
+      <description># Compose for Android Developers
+This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
+The goal is to show how comm</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/android_devs/</link>
+      <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Image</title>
+      <description># Image
+
+!!! info
+    This is the API of version dev17. Newer versions may have a different one
+
+Image is used to display Images. It&#39;s similar to an I</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
+      <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>LazyColumnFor</title>
+      <description># LazyColumnFor
+
+!!! info
+    This is the API of version dev16. Newer versions may have a different one
+    
+A [LazyColumnFor](https://developer.andro</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumnfor/</link>
+      <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>LazyRowFor</title>
+      <description># LazyRowFor
+
+!!! info
+    This is the API of version dev16. Newer versions may have a different one
+    
+A [LazyRowFor](https://developer.android.com</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
+      <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Compose Preview</title>
       <description># Preview
+## Preview
 You can use the **@Preview** annotation to preview compose functions inside Android Studio.
-Preview can not be used on Composables that have</description>
+Preview can not be used on Composable</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_preview/</link>
       <pubDate>Sat, 22 Aug 2020 13:14:38 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -67,20 +121,6 @@ Providers are used to provide a value for an [Ambient](./ambient.md)</descriptio
 | SwiftUi                                    | Compose  |
 | ----------------------------------------- | ----------</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
-      <pubDate>Sat, 22 Aug 2020 07:33:43 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Image</title>
-      <description># Image
-
-!!! info
-    This is the API of version dev17. Newer versions may have a different one
-
-Image is used to display Images. It&#39;s similar to an I</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
       <pubDate>Sat, 22 Aug 2020 07:33:43 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
@@ -199,34 +239,6 @@ You can use **Modifier.padding** to set paddi</description>
     </item>
     
     <item>
-      <title>LazyColumnFor</title>
-      <description># LazyColumnFor
-
-!!! info
-    This is the API of version dev16. Newer versions may have a different one
-    
-A [LazyColumnFor](https://developer.andro</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumnfor/</link>
-      <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>LazyRowFor</title>
-      <description># LazyRowFor
-
-!!! info
-    This is the API of version dev16. Newer versions may have a different one
-    
-A [LazyRowFor](https://developer.android.com</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
-      <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
       <title>ScrollableColumn</title>
       <description># ScrollableColumn
 
@@ -278,17 +290,6 @@ A Column will show each children below the previous </description>
 
 A Row will show each children next to the previous chil</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/row/</link>
-      <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Stack</title>
-      <description># Stack
-
-The children of the Stack layout will be stacked over each other. You can use the gravity modifier to specify where the composable should be </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/stack/</link>
       <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

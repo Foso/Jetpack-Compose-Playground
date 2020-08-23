@@ -1,4 +1,5 @@
 # Preview
+## Preview
 You can use the **@Preview** annotation to preview compose functions inside Android Studio.
 Preview can not be used on Composables that have parameters without a default parameter.
 
@@ -22,7 +23,7 @@ Android Studio Preview
   <img src ="../../images/general/preview/ComposePreview.png"  height=100 width=300 />
 </p>
 
-# PreviewParameter
+## PreviewParameter
 
 You can use **@PreviewParameter** to provide sample data for your Composables.
 Let's say you have the following Composable and you want to generate a preview.
@@ -56,7 +57,7 @@ fun UserInfo(@PreviewParameter(SampleUserProvider::class) user:User) {
     Text(user.name+ " "+user.age)
 }
 ```
-## Create PreviewParameterProvider
+### Create PreviewParameterProvider
 
 **SampleUserProvider::class** will be the class which provides a User.
 To create a PreviewParameterProvider you need to implement the interface PreviewParameterProvider.
@@ -72,7 +73,7 @@ class SampleUserProvider: PreviewParameterProvider<User> {
 }
 ```
 
-## Use PreviewParameterProvider
+### Use PreviewParameterProvider
 You can annotate your parameter with @PreviewParameter and the class which provides the sample data.
 
 ```kotlin
