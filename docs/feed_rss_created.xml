@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 22 Aug 2020 13:13:07 -0000</pubDate>
-    <lastBuildDate>Sat, 22 Aug 2020 13:13:07 -0000</lastBuildDate>
+    <pubDate>Sun, 23 Aug 2020 08:22:48 -0000</pubDate>
+    <lastBuildDate>Sun, 23 Aug 2020 08:22:48 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -33,7 +33,7 @@
       <description># Providers
 Providers are used to provide a value for an [Ambient](./ambient.md)</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/providers/</link>
-      <pubDate>Sat, 22 Aug 2020 13:13:10 -0000</pubDate>
+      <pubDate>Sat, 22 Aug 2020 13:14:38 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -45,9 +45,7 @@ Providers are used to provide a value for an [Ambient](./ambient.md)</descriptio
 !!! info
     This is the API of version dev17. Newer versions may have a different one
 
-
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;../../images/foundatio</description>
+Image is used to display Images. It&#39;s similar to an I</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
       <pubDate>Sat, 22 Aug 2020 07:33:43 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
