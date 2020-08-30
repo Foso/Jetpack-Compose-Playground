@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 30 Aug 2020 16:04:28 -0000</pubDate>
-    <lastBuildDate>Sun, 30 Aug 2020 16:04:28 -0000</lastBuildDate>
+    <pubDate>Sun, 30 Aug 2020 16:33:05 -0000</pubDate>
+    <lastBuildDate>Sun, 30 Aug 2020 16:33:05 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,20 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Modifier</title>
+      <description># Modifier
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
+Modifiers can be used modify certain aspects of </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</link>
+      <pubDate>Sun, 30 Aug 2020 16:05:13 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Compose Preview</title>
@@ -56,9 +70,9 @@ The goal is to show how comm</description>
       <description># Image
 
 !!! info
-    This is the API of version dev17. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
-Image is used to display Images. It&#39;s similar to an I</description>
+Image is used to display Images. It&#39;s similar to an</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
       <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -70,9 +84,9 @@ Image is used to display Images. It&#39;s similar to an I</description>
       <description># LazyColumnFor
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
     
-A [LazyColumnFor](https://developer.andro</description>
+A [LazyColumnFor](https://developer.and</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumnfor/</link>
       <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -84,9 +98,9 @@ A [LazyColumnFor](https://developer.andro</description>
       <description># LazyRowFor
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
     
-A [LazyRowFor](https://developer.android.com</description>
+A [LazyRowFor](https://developer.android.c</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
       <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -170,9 +184,9 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
       <title>Ambient</title>
       <description># Ambient
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
-Ambient is useful when you want to create a dependen</description>
+Ambient is useful when you want to create a depend</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</link>
       <pubDate>Sun, 16 Aug 2020 17:54:28 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -243,10 +257,10 @@ You can use **Modifier.padding** to set paddi</description>
       <description># ScrollableColumn
 
 !!! info
-    This is the API of version dev15. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
 
-When an app has layout content that might</description>
+When an app has layout content that mig</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
       <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -272,24 +286,10 @@ You can use **Text** to display text. You can use the </description>
       <description># Column
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
-A Column will show each children below the previous </description>
+A Column will show each children below the previou</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/column/</link>
-      <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Row</title>
-      <description># Row
-
-!!! info
-    This is the API of version dev16. Newer versions may have a different one
-
-A Row will show each children next to the previous chil</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/row/</link>
       <pubDate>Sat, 15 Aug 2020 12:34:52 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

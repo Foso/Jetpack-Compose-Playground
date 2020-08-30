@@ -1,5 +1,7 @@
+#Compose Lifecycle
+
 !!! info
-    This is the API of version dev09. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
     
 Compose has some "effects"-function that can be used in compose function to track the lifecycle of a function.
 

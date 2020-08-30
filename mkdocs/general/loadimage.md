@@ -1,12 +1,15 @@
 # How to load an image
 
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
 You can use **imageResource** to load an image from the resources
 
 ```kotlin
 @Composable fun LoadImageResourceDemo(){
     val imRes: ImageAsset = imageResource(id = R.drawable.placeholder_1_1)
 
-    Box(modifier = Modifier.preferredHeight(50.dp) + Modifier.preferredWidth(50.dp)) {
+    Box(modifier = Modifier.preferredHeight(50.dp).then(Modifier.preferredWidth(50.dp))) {
         Image(imRes)
     }
 }

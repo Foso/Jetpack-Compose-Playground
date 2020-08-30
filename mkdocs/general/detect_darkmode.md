@@ -1,5 +1,8 @@
 # How to detect dark mode
 
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
 Inside your composable you can use **isSystemInDarkTheme** to detect if the device is running in dark mode.
 
 ```kotlin

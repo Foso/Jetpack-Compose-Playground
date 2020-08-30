@@ -1,7 +1,7 @@
 # Image
 
 !!! info
-    This is the API of version dev17. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
 Image is used to display Images. It's similar to an ImageView in the classic Android View system.
 

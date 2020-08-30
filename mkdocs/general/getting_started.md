@@ -14,7 +14,7 @@ buildFeatures {
 }
  composeOptions {
         kotlinCompilerVersion "1.4.0"
-        kotlinCompilerExtensionVersion "0.1.0-dev17"
+        kotlinCompilerExtensionVersion "1.0.0-alpha01"
     }
 
 ```

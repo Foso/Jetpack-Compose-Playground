@@ -1,7 +1,7 @@
 # Row
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
 A Row will show each children next to the previous children. It' similar to a LinearLayout with horizontal orientation.
 
@@ -41,7 +41,7 @@ Row takes an **Arrangement** parameter. When you set it to **Arrangement.SpaceEv
 ```kotlin
 @Composable
 fun RowExample() {
-    Row(arrangement = Arrangement.Center) {
+    Row(horizontalArrangement = Arrangement.Center) {
         Text("Hello World!")
         Text("Hello World!2")
     }
@@ -57,7 +57,7 @@ Row takes an Arrangement parameter. When you set it to **Arrangement.Center**, t
 ```kotlin
 @Composable
 fun RowExample() {
-    Row(arrangement = Arrangement.End) {
+    Row(horizontalArrangement = Arrangement.End) {
         Text("Hello World!")
         Text("Hello World!2")
     }

@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 30 Aug 2020 16:04:28 -0000</pubDate>
-    <lastBuildDate>Sun, 30 Aug 2020 16:04:28 -0000</lastBuildDate>
+    <pubDate>Sun, 30 Aug 2020 16:33:05 -0000</pubDate>
+    <lastBuildDate>Sun, 30 Aug 2020 16:33:05 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -43,9 +43,9 @@ Providers are used to provide a value for an [Ambient](./ambient.md)</descriptio
       <description># Image
 
 !!! info
-    This is the API of version dev17. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
-Image is used to display Images. It&#39;s similar to an I</description>
+Image is used to display Images. It&#39;s similar to an</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
       <pubDate>Sat, 22 Aug 2020 07:33:43 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
@@ -84,9 +84,9 @@ Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</descriptio
       <title>Ambient</title>
       <description># Ambient
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
-Ambient is useful when you want to create a dependen</description>
+Ambient is useful when you want to create a depend</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</link>
       <pubDate>Sun, 16 Aug 2020 17:50:50 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
@@ -112,9 +112,9 @@ Altough Compose itsel</description>
       <description># LazyColumnFor
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
     
-A [LazyColumnFor](https://developer.andro</description>
+A [LazyColumnFor](https://developer.and</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumnfor/</link>
       <pubDate>Wed, 12 Aug 2020 20:39:24 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
@@ -126,9 +126,9 @@ A [LazyColumnFor](https://developer.andro</description>
       <description># LazyRowFor
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
     
-A [LazyRowFor](https://developer.android.com</description>
+A [LazyRowFor](https://developer.android.c</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
       <pubDate>Wed, 12 Aug 2020 20:39:24 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
@@ -155,10 +155,10 @@ A [LazyRowFor](https://developer.android.com</description>
       <description># ScrollableColumn
 
 !!! info
-    This is the API of version dev15. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
 
-When an app has layout content that might</description>
+When an app has layout content that mig</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
       <pubDate>Thu, 23 Jul 2020 17:33:15 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
@@ -170,9 +170,9 @@ When an app has layout content that might</description>
       <description># ScrollableRow
 
 !!! info
-    This is the API of version dev15. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
-When an app has layout content that might be </description>
+When an app has layout content that might b</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablerow/</link>
       <pubDate>Thu, 23 Jul 2020 17:33:15 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
