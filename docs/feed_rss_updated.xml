@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 23 Aug 2020 08:57:27 -0000</pubDate>
-    <lastBuildDate>Sun, 23 Aug 2020 08:57:27 -0000</lastBuildDate>
+    <pubDate>Sun, 30 Aug 2020 16:04:28 -0000</pubDate>
+    <lastBuildDate>Sun, 30 Aug 2020 16:04:28 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,18 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Compose Preview</title>
+      <description># Preview
+## Preview
+You can use the **@Preview** annotation to preview compose functions inside Android Studio.
+Preview can not be used on Composable</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_preview/</link>
+      <pubDate>Sun, 23 Aug 2020 08:57:52 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Compose for Android Developers</title>
@@ -77,18 +89,6 @@ A [LazyColumnFor](https://developer.andro</description>
 A [LazyRowFor](https://developer.android.com</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
       <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Compose Preview</title>
-      <description># Preview
-## Preview
-You can use the **@Preview** annotation to preview compose functions inside Android Studio.
-Preview can not be used on Composable</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_preview/</link>
-      <pubDate>Sat, 22 Aug 2020 13:14:38 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
