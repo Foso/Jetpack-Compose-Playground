@@ -2,10 +2,9 @@
         Note: Jetpack Compose is currently in Developer Preview. The API surface is not yet finalized, and changes are planned and expected. See the Compose Compiler and Runtime release notes and the Compose UI release notes for the latest updates.
 
 ## Android Studio
-To use Jetpack Compose you need to use at least a [version >=4.2 Canary 7](https://developer.android.com/studio/preview)
+To use Jetpack Compose you need to use at least a [version >=4.2 Canary 8](https://developer.android.com/studio/preview)
 
 ## Gradle Dependencies
-
 
 Add this inside in the **android{}** block your build.gradle
 ```groovy
@@ -24,7 +23,7 @@ Below are all compose dependencies that are online available, you don't need to 
 ```groovy
 
 dependencies {
-    def compose_version = "0.1.0-dev17"
+    def compose_version = "1.0.0-alpha01"
 
       implementation("androidx.compose.runtime:runtime-dispatch:$compose_version")
       implementation("androidx.compose.runtime:runtime:$compose_version")

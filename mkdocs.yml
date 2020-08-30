@@ -65,8 +65,6 @@ nav:
               - 'Shape' : foundation/shape.md
               - 'Text': foundation/text.md
               - 'TextField': foundation/textfield.md
-          - 'Core':
-              - 'LayoutPadding': core/layoutpadding.md
           - 'Layout':
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
