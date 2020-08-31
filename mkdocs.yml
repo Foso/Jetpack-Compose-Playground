@@ -44,6 +44,7 @@ nav:
           - 'General':
               - 'Ambient': general/ambient.md
               - 'Codelabs': general/codelabs.md
+              - 'Compiler Plugin': general/compiler_plugin.md
               - 'Compose for:':
                   - 'Compose for Android Developers': compose_for/android_devs.md
                   - 'Compose for SwiftUI Developers': compose_for/swiftui_devs.md

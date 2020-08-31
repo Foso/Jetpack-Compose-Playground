@@ -1,10 +1,9 @@
 # Compose State
 
 ## Define a state
-### state function
-val textState = state{"Hello"}
+val textState = mutableStateOf("Hello")
 
-You can use the state function to create a state. state{T} will return a MutableState`<T>`
+You can use the mutableStateOf function to create a mutable state.
 
 
 ## Example
@@ -25,21 +24,24 @@ After Button click:<br>
 ```kotlin
 @Composable
 fun StateDemo(){
-    val countState = state{0}
+    val countState = remember { mutableStateOf(0) }
     Column {
-        Button(backgroundColor = MaterialTheme.colors().secondary, onClick = {countState.value++}) {
+        Button(backgroundColor = MaterialTheme.colors.secondary, onClick = { countState.value++ }) {
             Text("count up")
         }
-        Text("You have clicked the Button "+countState.value.toString() +" times")
+        Text("You have clicked the Button " + countState.value.toString() + " times")
     }
 }
 ```
 
 ```kotlin
-val countState = state{0}
+    val countState = remember { mutableStateOf(0) }
 ```
 
-Here we define the state for the click counter. 0 will be the initial value. Because 0 is an Int, the counterState will only allow values which are Int.
+Here we define the state for the click counter with **mutableStateOf(0)**. 0 will be the initial value. Because 0 is an Int, the counterState will only allow values which are Int.
+
+**remember** is used to remember the countstate. Without remember, every time the value of countstate would change, the StateDemo Composable will be recomposed and your state will also
+get recreated with the initial value. When you use remember it will remember the last value and not be recreated.
 
 ```kotlin
 countState.value

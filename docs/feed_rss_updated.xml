@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Mon, 31 Aug 2020 19:33:40 -0000</pubDate>
-    <lastBuildDate>Mon, 31 Aug 2020 19:33:40 -0000</lastBuildDate>
+    <pubDate>Mon, 31 Aug 2020 22:14:46 -0000</pubDate>
+    <lastBuildDate>Mon, 31 Aug 2020 22:14:46 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,13 +29,104 @@
     <!-- Entries -->
     
     <item>
+      <title>Compiler Plugin</title>
+      <description># Compiler Plugin
+
+Compose works by transforming all Kotlin functions that are annotated with @Composable.
+To do that it uses a Kotlin Compiler Plugin</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compiler_plugin/</link>
+      <pubDate>Mon, 31 Aug 2020 22:14:52 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <description># Jetpack Compose Playground 
+
+## Show some :heart: and star the repo to support the project
+
+[![GitHub stars](https://img.shields.io/github/stars/Fos</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>How to detect dark mode</title>
+      <description># How to detect dark mode
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
+Inside your composable you can us</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>How to get Android Context</title>
+      <description>!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+    
+You can use ContextAmbient.current to receive the contex</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/get_android_context/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>How to load an Image</title>
+      <description># How to load an image
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
+You can use **imageResource** to loa</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>TextField</title>
+      <description># TextField
+
+!!! info
+    This is the API of version dev10. Newer versions may have a different one
+
+TextField can be used to insert text. This is the</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/textfield/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Preview</title>
+      <description># Preview
+## Preview
+You can use the **@Preview** annotation to preview compose functions inside Android Studio.
+Preview can not be used on Composable</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/preview/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>PreviewParameter</title>
       <description># PreviewParameter
 
 You can use **@PreviewParameter** to provide sample data for your Composables.
 Let&#39;s say you have the following Composable and you</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/previewparameter/</link>
-      <pubDate>Mon, 31 Aug 2020 19:33:44 -0000</pubDate>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -50,59 +141,37 @@ Let&#39;s say you have the following Composable and you</description>
 Card is the implementation of a CardView in Compose
 </description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</link>
-      <pubDate>Mon, 31 Aug 2020 19:33:44 -0000</pubDate>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
     
     <item>
-      <title>Preview</title>
-      <description># Preview
-## Preview
-You can use the **@Preview** annotation to preview compose functions inside Android Studio.
-Preview can not be used on Composable</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/preview/</link>
-      <pubDate>Mon, 31 Aug 2020 19:33:43 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>How to load an Image</title>
-      <description># How to load an image
+      <title>Checkbox</title>
+      <description># Checkbox
 
 !!! info
     This is the API of version alpha01. Newer versions may have a different one
 
-You can use **imageResource** to loa</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</link>
-      <pubDate>Mon, 31 Aug 2020 19:33:42 -0000</pubDate>
+&lt;p align=&#34;left&#34;&gt;
+  &lt;img src =&#34;../../images/mater</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/checkbox/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
     
     <item>
-      <title>How to detect dark mode</title>
-      <description># How to detect dark mode
+      <title>Switch</title>
+      <description># Switch
 
 !!! info
     This is the API of version alpha01. Newer versions may have a different one
-
-Inside your composable you can us</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</link>
-      <pubDate>Mon, 31 Aug 2020 19:33:41 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
     
-    <item>
-      <title>How to get Android Context</title>
-      <description>!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-    
-You can use ContextAmbient.current to receive the contex</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/get_android_context/</link>
-      <pubDate>Mon, 31 Aug 2020 19:33:41 -0000</pubDate>
+&lt;p align=&#34;left&#34;&gt;
+  &lt;img src =&#34;../../images/mat</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/switch/</link>
+      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -225,72 +294,6 @@ When an app has layout content that mig</description>
 When an app has layout content that might b</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablerow/</link>
       <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Ambient</title>
-      <description># Ambient
-!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-
-Ambient is useful when you want to create a depend</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Compose Lifecycle</title>
-      <description>#Compose Lifecycle
-
-!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-    
-Compose has some &#34;effects&#34;-function </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_lifecycle/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Column</title>
-      <description># Column
-
-!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-
-A Column will show each children below the previou</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/column/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Row</title>
-      <description># Row
-
-!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-
-A Row will show each children next to the previous ch</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/row/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Compose for Android Developers</title>
-      <description># Compose for Android Developers
-This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
-The goal is to show how comm</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/android_devs/</link>
-      <pubDate>Sun, 23 Aug 2020 08:23:35 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
