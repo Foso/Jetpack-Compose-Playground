@@ -22,7 +22,7 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 " Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. "
 
 ## Composable of the week!! 🎉
-The [LazyColumnFor](foundation/lazycolumnfor)
+The [Card](material/card)
 
 
 ## New to Compose?
@@ -34,7 +34,6 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Column](/layout/column/)
 * [Row](/layout/row/)
 * [Stack](/layout/stack/)
-* [LayoutPadding](/core/layoutpadding/)
 
 
 ## Looking for tutorials/sample code

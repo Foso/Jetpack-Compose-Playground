@@ -1,7 +1,7 @@
 # Switch
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
     
 <p align="left">
   <img src ="../../images/material/switch/SwitchDemo.png" height=100 width=300 />
@@ -11,7 +11,7 @@
 ```kotlin
 @Composable
 fun SwitchDemo() {
-        val checkedState = state { true }
+        val checkedState = remember { mutableStateOf(true) }
         Switch(
             checked = checkedState.value,
             onCheckedChange = { checkedState.value = it }

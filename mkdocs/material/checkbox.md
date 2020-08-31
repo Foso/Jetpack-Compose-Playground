@@ -1,7 +1,7 @@
 # Checkbox
 
 !!! info
-    This is the API of version dev14. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
 <p align="left">
   <img src ="../../images/material/checkbox/CheckboxDemo.png" height=100 width=300 />
@@ -10,7 +10,7 @@
 ```kotlin
 @Composable
 fun CheckBoxDemo() {
-        val checkedState = state { true }
+        val checkedState = remember { mutableStateOf(true) }
         Checkbox(
             checked = checkedState.value,
             onCheckedChange = { checkedState.value = it }

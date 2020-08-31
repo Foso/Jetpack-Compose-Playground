@@ -36,21 +36,24 @@ nav:
            - 'Handle changes to a text field': cookbook/textfield_changes.md
            - 'How to use Compose in a ViewGroup': cookbook/how_to_use_compose_in_viewgroup.md
            - 'How to create HintTextField': cookbook/hint_edit_text.md
+           - 'How to load an Image': cookbook/loadimage.md
            - 'How to use an Android View in Compose': cookbook/how_to_use_an_android_view_in_compose.md
+           - 'How to get Android Context': cookbook/get_android_context.md
+           - 'How to detect dark mode': cookbook/detect_darkmode.md
       - 'Guides & Samples':
           - 'General':
-              - 'Codelabs': general/codelabs.md
-              - 'Compose for Android Developers': compose_for/android_devs.md
-              - 'Compose for SwiftUI Developers': compose_for/swiftui_devs.md
-              - 'Compose Lifecycle': general/compose_lifecycle.md
-              - 'Compose Preview': general/compose_preview.md
-              - 'Hello World Compose': general/helloworld.md
-              - 'How to get Android Context': general/get_android_context.md
-              - 'How to load an Image': general/loadimage.md
-              - 'How to detect dark mode': general/detect_darkmode.md
               - 'Ambient': general/ambient.md
+              - 'Codelabs': general/codelabs.md
+              - 'Compose for:':
+                  - 'Compose for Android Developers': compose_for/android_devs.md
+                  - 'Compose for SwiftUI Developers': compose_for/swiftui_devs.md
+              - 'Compose Lifecycle': general/compose_lifecycle.md
+              - 'Hello World Compose': general/helloworld.md
               - 'Providers': general/providers.md
               - 'Modifier': general/modifier.md
+              - 'Preview':
+                  - 'Preview': general/preview/preview.md
+                  - 'PreviewParameter': general/preview/previewparameter.md
               - 'Roadmap' : general/roadmap.md
               - 'Project Setup': general/getting_started.md
               - 'State': general/state.md
@@ -73,6 +76,7 @@ nav:
           - 'Material':
               - 'AlertDialog': material/alertdialog.md
               - 'Button': material/button.md
+              - 'Card': material/card.md
               - 'Checkbox': material/checkbox.md
               - 'ModalDrawerLayout': material/modaldrawer.md
               - 'RadioGroup': material/radiogroup.md

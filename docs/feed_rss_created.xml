@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 30 Aug 2020 16:57:30 -0000</pubDate>
-    <lastBuildDate>Sun, 30 Aug 2020 16:57:30 -0000</lastBuildDate>
+    <pubDate>Mon, 31 Aug 2020 19:33:40 -0000</pubDate>
+    <lastBuildDate>Mon, 31 Aug 2020 19:33:40 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,85 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>PreviewParameter</title>
+      <description># PreviewParameter
+
+You can use **@PreviewParameter** to provide sample data for your Composables.
+Let&#39;s say you have the following Composable and you</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/previewparameter/</link>
+      <pubDate>Mon, 31 Aug 2020 19:33:44 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Card</title>
+      <description># Card
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
+Card is the implementation of a CardView in Compose
+</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</link>
+      <pubDate>Mon, 31 Aug 2020 19:33:44 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Preview</title>
+      <description># Preview
+## Preview
+You can use the **@Preview** annotation to preview compose functions inside Android Studio.
+Preview can not be used on Composable</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/preview/</link>
+      <pubDate>Mon, 31 Aug 2020 19:33:43 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>How to load an Image</title>
+      <description># How to load an image
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
+You can use **imageResource** to loa</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</link>
+      <pubDate>Mon, 31 Aug 2020 19:33:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>How to detect dark mode</title>
+      <description># How to detect dark mode
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
+Inside your composable you can us</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</link>
+      <pubDate>Mon, 31 Aug 2020 19:33:41 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>How to get Android Context</title>
+      <description>!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+    
+You can use ContextAmbient.current to receive the contex</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/get_android_context/</link>
+      <pubDate>Mon, 31 Aug 2020 19:33:41 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Providers</title>
@@ -180,18 +259,6 @@ When an app has layout content that might b</description>
     </item>
     
     <item>
-      <title>TextField</title>
-      <description># TextField
-TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
-
-TextField was moved to: [https</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/core/textfield/</link>
-      <pubDate>Fri, 24 Apr 2020 07:58:39 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
       <title>Scaffold</title>
       <description># Scaffold
 
@@ -237,77 +304,6 @@ fun BoxDemo(){
     Column(modifier = Mod</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
       <pubDate>Sun, 12 Apr 2020 18:37:44 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Canvas</title>
-      <description># Canvas
-
-!!! info
-    This is the API of version dev09. Newer versions may have a different one
-
-## How to draw on Canvas
-
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img sr</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/canvas/</link>
-      <pubDate>Sun, 12 Apr 2020 16:56:38 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Shape</title>
-      <description># Shape
-A Shape can be used to draw a composable in specific shape.
-
-!!! info
-    This is the API of version dev15. Newer versions may have a differen</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/shape/</link>
-      <pubDate>Sat, 11 Apr 2020 20:44:38 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>How to create HintTextField</title>
-      <description># How to show hint with underline in a TextField
-
-!!! info
-    This is the API of version dev08. Newer versions may have a different one
-
-We have all </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/hint_edit_text/</link>
-      <pubDate>Fri, 03 Apr 2020 21:24:29 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>How to use Compose in a ViewGroup</title>
-      <description># How to use Compose in a ViewGroup
-
-!!! info
-    This is the API of version dev16. Newer versions may have a different one
-
-Compose has a **setConten</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_compose_in_viewgroup/</link>
-      <pubDate>Thu, 02 Apr 2020 18:05:37 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>TextField</title>
-      <description># TextField
-TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
-
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/textfield/</link>
-      <pubDate>Wed, 01 Apr 2020 20:44:52 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>
