@@ -28,14 +28,35 @@ Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Pl
 ## 📙 Jetpack Compose examples/tutorials and demos
 Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
 
-### Layout
-* [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout/)
-* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold/)
-* [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column/)
-* [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row/)
-* [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack/)
-* [LayoutPadding](https://foso.github.io/Jetpack-Compose-Playground/core/layoutpadding/)
 
+### Layouts
+* [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout)
+* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold)
+* [Column](https://foso.github.io/Jetpack-Compose-Playground/layout/column)
+* [Row](https://foso.github.io/Jetpack-Compose-Playground/layout/row)
+* [Stack](https://foso.github.io/Jetpack-Compose-Playground/layout/stack)
+
+### Foundation
+* [Box](https://foso.github.io/Jetpack-Compose-Playground/foundation/box.md)
+* [Canvas](https://foso.github.io/Jetpack-Compose-Playground/foundation/canvas.md)
+* [Image](https://foso.github.io/Jetpack-Compose-Playground/foundation/image.md)
+* [LazyColumnFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumnfor.md)
+* [LazyRowFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazyrowfor.md)
+* [ScrollableRow](https://foso.github.io/Jetpack-Compose-Playground/foundation/scrollablerow.md)
+* [ScrollableColumn](https://foso.github.io/Jetpack-Compose-Playground/foundation/scrollablecolumn.md)
+* [Shape](https://foso.github.io/Jetpack-Compose-Playground/foundation/shape.md)
+* [Text](https://foso.github.io/Jetpack-Compose-Playground/foundation/text.md)
+* [TextField](https://foso.github.io/Jetpack-Compose-Playground/foundation/textfield.md)
+
+### Material
+* [AlertDialog](https://foso.github.io/Jetpack-Compose-Playground/material/alertdialog.md)
+* [Button](https://foso.github.io/Jetpack-Compose-Playground/material/button.md)
+* [Card](https://foso.github.io/Jetpack-Compose-Playground/material/card.md)
+* [Checkbox](https://foso.github.io/Jetpack-Compose-Playground/material/checkbox.md)
+* [ModalDrawerLayout](https://foso.github.io/Jetpack-Compose-Playground/material/modaldrawer.md)
+* [RadioGroup](https://foso.github.io/Jetpack-Compose-Playground/material/radiogroup.md)
+* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold.md)
+* [Switch](https://foso.github.io/Jetpack-Compose-Playground/material/switch.md)
 
 ### Cookbook
 
