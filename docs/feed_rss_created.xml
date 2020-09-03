@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Mon, 31 Aug 2020 22:14:46 -0000</pubDate>
-    <lastBuildDate>Mon, 31 Aug 2020 22:14:46 -0000</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2020 15:55:20 -0000</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2020 15:55:20 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -35,7 +35,7 @@
 Compose works by transforming all Kotlin functions that are annotated with @Composable.
 To do that it uses a Kotlin Compiler Plugin</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compiler_plugin/</link>
-      <pubDate>Mon, 31 Aug 2020 22:14:52 -0000</pubDate>
+      <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>

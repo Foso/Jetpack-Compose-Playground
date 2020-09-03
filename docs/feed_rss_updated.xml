@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Mon, 31 Aug 2020 22:14:46 -0000</pubDate>
-    <lastBuildDate>Mon, 31 Aug 2020 22:14:46 -0000</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2020 15:55:20 -0000</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2020 15:55:20 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,13 +29,43 @@
     <!-- Entries -->
     
     <item>
+      <title>Shape</title>
+      <description># Shape
+A Shape can be used to draw a composable in specific shape.
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a differ</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/shape/</link>
+      <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Compiler Plugin</title>
       <description># Compiler Plugin
 
 Compose works by transforming all Kotlin functions that are annotated with @Composable.
 To do that it uses a Kotlin Compiler Plugin</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compiler_plugin/</link>
-      <pubDate>Mon, 31 Aug 2020 22:14:52 -0000</pubDate>
+      <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>State</title>
+      <description># Compose State
+
+## Define a state
+val textState = mutableStateOf(&#34;Hello&#34;)
+
+You can use the mutableStateOf function to create a mutable state.
+
+
+## Ex</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/state/</link>
+      <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -264,35 +294,6 @@ A [LazyColumnFor](https://developer.and</description>
     
 A [LazyRowFor](https://developer.android.c</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>ScrollableColumn</title>
-      <description># ScrollableColumn
-
-!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-
-
-When an app has layout content that mig</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>ScrollableRow</title>
-      <description># ScrollableRow
-
-!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-
-When an app has layout content that might b</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablerow/</link>
       <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

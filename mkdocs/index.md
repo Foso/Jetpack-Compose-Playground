@@ -29,11 +29,11 @@ The [Card](material/card)
 Check [Project Setup](general/getting_started.md) or [Hello World Compose](general/helloworld/)
 
 ## Layouts
-* [ConstraintLayout](/layout/constraintlayout/)
-* [Scaffold](/material/scaffold/)
-* [Column](/layout/column/)
-* [Row](/layout/row/)
-* [Stack](/layout/stack/)
+* [ConstraintLayout](layout/constraintlayout)
+* [Scaffold](material/scaffold)
+* [Column](layout/column)
+* [Row](layout/row)
+* [Stack](layout/stack)
 
 
 ## Looking for tutorials/sample code

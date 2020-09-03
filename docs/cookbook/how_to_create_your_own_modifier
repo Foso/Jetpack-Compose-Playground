@@ -1,0 +1,54 @@
+# How to create your own Modifier
+
+!!! info
+    This is the API of version alpha01. Newer versions may have a different one
+
+Compose is using Modifiers to set certain aspects of a Composable like backgrounds, size or click events.
+Compose already comes with
+
+In this example i want to explain how you can create your own Modifier.
+We will create a Modifier that scales the size of the Composable where it's applied to.
+
+To create a Modifier you need to create a class that implements Modifier.Element.
+
+
+
+```kotlin
+   /**
+    * A [Modifier.Element] that changes how its wrapped content is measured and laid out.
+    * It has the same measurement and layout functionality as the [androidx.compose.ui.Layout]
+    * component, while wrapping exactly one layout due to it being a modifier. In contrast,
+    * the [androidx.compose.ui.Layout] component is used to define the layout behavior of
+    * multiple children.
+    *
+    * @see androidx.compose.ui.Layout
+    */
+   interface LayoutModifier : Modifier.Element {
+```
+
+
+```kotlin
+    class ScaleSizeModifier(val scale: Int) : LayoutModifier {
+
+       //1
+        override fun MeasureScope.measure(
+            measurable: Measurable,
+            constraints: Constraints
+        ): MeasureScope.MeasureResult {
+
+            val pl = measurable.measure(constraints)
+
+            measurable.measure(
+                Constraints(
+                    pl.width * scale,
+                    pl.width * scale,
+                    pl.height * scale,
+                    pl.height * scale
+                )
+            )
+            return layout(pl.width, pl.height) {
+                pl.place(0, 0)
+            }
+        }
+    }
+```
