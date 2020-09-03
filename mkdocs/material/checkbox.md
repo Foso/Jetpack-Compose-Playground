@@ -1,7 +1,7 @@
 # Checkbox
 
 !!! info
-    This is the API of version alpha01. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
 <p align="left">
   <img src ="../../images/material/checkbox/CheckboxDemo.png" height=100 width=300 />

@@ -1,6 +1,6 @@
 # Ambient
 !!! info
-    This is the API of version alpha01. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
 Ambient is useful when you want to create a dependency in a higher node of the layout tree and use it on lower node without having to
 pass it down the tree through every child composable.

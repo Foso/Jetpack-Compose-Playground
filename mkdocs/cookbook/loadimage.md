@@ -1,7 +1,7 @@
 # How to load an image
 
 !!! info
-    This is the API of version alpha01. Newer versions may have a different one
+    This is the API of version alpha02. Newer versions may have a different one
 
 You can use **imageResource** to load an image from the resources
 

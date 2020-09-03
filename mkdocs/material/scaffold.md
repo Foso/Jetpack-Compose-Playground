@@ -1,7 +1,7 @@
 # Scaffold
 
 !!! info
-    This is the API of version dev15. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
     
 A Scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or a Drawer.
 
@@ -9,17 +9,18 @@ A Scaffold is a layout which implements the basic material design layout structu
 @Composable
 fun ScaffoldDemo() {
     val materialBlue700= Color(0xFF1976D2)
-    Scaffold(
-           scaffoldState = ScaffoldState(DrawerState.Opened),
-           topBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
-           floatingActionButtonPosition = Scaffold.FabPosition.End,
-           floatingActionButton = { FloatingActionButton(onClick = {}){
-               Text("X")
-           } },
-           drawerContent = { Text(text = "drawerContent") },
-           bodyContent = { Text("BodyContent") },
-           bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
-       )
+        val scaffoldState = rememberScaffoldState(rememberDrawerState(DrawerValue.Open))
+        Scaffold(
+                scaffoldState = scaffoldState,
+                topBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
+                floatingActionButtonPosition = FabPosition.End,
+                floatingActionButton = { FloatingActionButton(onClick = {}){
+                    Text("X")
+                } },
+                drawerContent = { Text(text = "drawerContent") },
+                bodyContent = { Text("BodyContent") },
+                bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
+        )
 }
 ```
 

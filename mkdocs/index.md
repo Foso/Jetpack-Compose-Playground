@@ -10,7 +10,7 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![jCenter](https://img.shields.io/badge/Compose-1.0.0-alpha02-green.svg
+[![jCenter](https://img.shields.io/badge/Compose-1.0.0alpha02-green.svg
 )](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-range.svg?style=flat-square)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
@@ -20,6 +20,8 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 
 ## What is Jetpack Compose?
 "Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. "
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SMOhl9RK0BA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Composable of the week!! 🎉
 The [Card](material/card)

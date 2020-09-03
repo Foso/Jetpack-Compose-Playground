@@ -1,7 +1,7 @@
 # Modifier
 
 !!! info
-    This is the API of version alpha01. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
 Modifiers can be used modify certain aspects of a composable.
 To set them, a composable needs to accept a modifier as a parameter.

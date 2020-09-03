@@ -1,7 +1,7 @@
 # ModalDrawerLayout
 
 !!! info
-    This is the API of version dev15. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
 With a ModalDrawerLayout you can create a navigation drawer. You can define a drawer state and an onStateChange function.
 You define the content of the drawer with **drawerContent** and the rest of your layout in **bodyContent**
@@ -15,27 +15,26 @@ You define the content of the drawer with **drawerContent** and the rest of your
 ```kotlin
 @Composable
 fun ModalDrawerLayoutSample() {
-    val (state, onStateChange) = state { DrawerState.Closed }
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
 
     ModalDrawerLayout(
-        drawerState = state,
-        onStateChange = onStateChange,
-        drawerContent = {
-            Column {
-                Text("Text in Drawer")
-                Button(onClick = { onStateChange(DrawerState.Closed) }) {
-                    Text("Close Drawer")
+            drawerState = drawerState,
+            drawerContent = {
+                Column {
+                    Text("Text in Drawer")
+                    Button(onClick = { drawerState.close() }) {
+                        Text("Close Drawer")
+                    }
+                }
+            },
+            bodyContent = {
+                Column {
+                    Text("Text in Bodycontext")
+                    Button(onClick = { drawerState.open() }) {
+                        Text("Click to open")
+                    }
                 }
             }
-        },
-        bodyContent = {
-           Column {
-               Text("Text in Bodycontext")
-               Button(onClick = { onStateChange(DrawerState.Opened) }) {
-                   Text("Click to open")
-               }
-           }
-        }
     )
 }
 ```

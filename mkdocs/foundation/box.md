@@ -1,7 +1,9 @@
 # Box
 
 WIP
-
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    
 <p align="left">
   <img src ="../../images/foundation/box/box.png" />
 </p>

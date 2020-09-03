@@ -1,12 +1,11 @@
 !!! info
-    This is the API of version alpha01. Newer versions may have a different one
+    This is the API of version alpha02. Newer versions may have a different one
     
 You can use ContextAmbient.current to receive the context of your Android App inside a Compose Function
 
 ```kotlin 
 @Composable
 fun AndroidContextComposeDemo() {
-        val context = ContextAmbient.current
-        Text("Read this string from Context: "+context.getString(R.string.app_name))
+    Text("Read this string from Context: " + ContextAmbient.current.getString(R.string.app_name))
 }
 ```
