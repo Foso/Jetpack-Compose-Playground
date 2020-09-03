@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Thu, 03 Sep 2020 15:55:20 -0000</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2020 15:55:20 -0000</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2020 17:58:54 -0000</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2020 17:58:54 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,21 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Overview</title>
+      <description># Jetpack Compose Playground 
+
+
+## Introduction
+This is a collection of Jetpack Compose examples/tutorials and demos.
+
+## Show some :heart: and star t</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
+      <pubDate>Thu, 03 Sep 2020 15:56:08 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Shape</title>
@@ -66,19 +81,6 @@ You can use the mutableStateOf function to create a mutable state.
 ## Ex</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/state/</link>
       <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Overview</title>
-      <description># Jetpack Compose Playground 
-
-## Show some :heart: and star the repo to support the project
-
-[![GitHub stars](https://img.shields.io/github/stars/Fos</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
