@@ -23,7 +23,7 @@ In "Jetpack Compose" Views are called **Composable**. They are Kotlin functions 
 ```
 
 ## How to define a state?
-In SwiftUI you can use the @State property wrapper to create a state.
+In SwiftUI you can use the **@State** property wrapper to create a state.
 
 ```swift
 //SwiftUI

@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 05 Sep 2020 19:50:13 -0000</pubDate>
-    <lastBuildDate>Sat, 05 Sep 2020 19:50:13 -0000</lastBuildDate>
+    <pubDate>Sat, 05 Sep 2020 20:32:12 -0000</pubDate>
+    <lastBuildDate>Sat, 05 Sep 2020 20:32:12 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,33 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Compose for SwiftUI Developers</title>
+      <description># Compose for SwiftUI Developers
+
+
+| SwiftUi                                    | Compose  |
+| ----------------------------------------- | -----------</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
+      <pubDate>Sat, 05 Sep 2020 19:51:07 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Modifier</title>
+      <description># Modifier
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+Modifiers can be used modify certain aspec</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</link>
+      <pubDate>Sat, 05 Sep 2020 19:51:07 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Overview</title>
@@ -225,20 +252,6 @@ Ambient is useful when you want to create a </description>
     </item>
     
     <item>
-      <title>Modifier</title>
-      <description># Modifier
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-Modifiers can be used modify certain aspec</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</link>
-      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
       <title>Column</title>
       <description># Column
 
@@ -289,21 +302,6 @@ A [Button](https://developer.android.com/ref</description>
 
 Card is the implementation of a CardView in Co</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</link>
-      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Checkbox</title>
-      <description># Checkbox
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;../../images</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/checkbox/</link>
       <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

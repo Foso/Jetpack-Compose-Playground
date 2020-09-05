@@ -11,7 +11,7 @@ WIP
 ```kotlin
 @Composable
 fun BoxDemo(){
-    Column(modifier = Modifier.fillMaxWidth() + Modifier.wrapContentSize(Alignment.Center)) {
+    Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
             modifier = Modifier.preferredSize(100.dp),
             backgroundColor = Color.Red,

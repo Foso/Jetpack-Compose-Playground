@@ -5,7 +5,7 @@
     
 Compose has some "effects"-function that can be used in compose function to track the lifecycle of a function.
 
-* onActive {} 
+* onActive {}
 willl be called the first time a compose function is applied.
 
 * onDispose { }
