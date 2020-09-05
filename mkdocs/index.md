@@ -60,6 +60,8 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [ModalDrawerLayout](material/modaldrawer.md)
 * [RadioGroup](material/radiogroup.md)
 * [Scaffold](material/scaffold.md)
+* [Slider](material/slider.md)
+* [Snackbar](material/snackbar.md)
 * [Switch](material/switch.md)
 
 ## Looking for tutorials/sample code

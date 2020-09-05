@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 05 Sep 2020 20:32:12 -0000</pubDate>
-    <lastBuildDate>Sat, 05 Sep 2020 20:32:12 -0000</lastBuildDate>
+    <pubDate>Sat, 05 Sep 2020 21:21:06 -0000</pubDate>
+    <lastBuildDate>Sat, 05 Sep 2020 21:21:06 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,34 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Slider</title>
+      <description># Slider
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+&#34;Sliders allow users to make selections from</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/slider/</link>
+      <pubDate>Sat, 05 Sep 2020 21:21:12 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Snackbar</title>
+      <description># Snackbar
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+&#34;Snackbars provide brief messages about ap</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/snackbar/</link>
+      <pubDate>Sat, 05 Sep 2020 21:21:12 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Compiler Plugin</title>
@@ -265,36 +293,6 @@ When an app has layout content th</description>
 When an app has layout content that m</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablerow/</link>
       <pubDate>Thu, 23 Jul 2020 17:33:15 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Scaffold</title>
-      <description># Scaffold
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-    
-A Scaffold is a layout which implement</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/scaffold/</link>
-      <pubDate>Wed, 15 Apr 2020 20:22:14 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Transistion</title>
-      <description># Transistion
-
-WORK IN PROGRESS
-
-# Working with Transistion
-
-&lt;video width=&#34;320&#34; height=&#34;240&#34; controls&gt;
-  &lt;source src=&#34;../../images/animation/transisti</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/animation/transistion/</link>
-      <pubDate>Wed, 15 Apr 2020 20:01:18 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>

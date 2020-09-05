@@ -84,6 +84,8 @@ nav:
               - 'ModalDrawerLayout': material/modaldrawer.md
               - 'RadioGroup': material/radiogroup.md
               - 'Scaffold': material/scaffold.md
+              - 'Slider': material/slider.md
+              - 'Snackbar': material/snackbar.md
               - 'Switch': material/switch.md
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
