@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Thu, 03 Sep 2020 20:03:43 -0000</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2020 20:03:43 -0000</lastBuildDate>
+    <pubDate>Sat, 05 Sep 2020 19:50:13 -0000</pubDate>
+    <lastBuildDate>Sat, 05 Sep 2020 19:50:13 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -38,59 +38,7 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 
 ## Show some :heart: and star t</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
-      <pubDate>Thu, 03 Sep 2020 18:32:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Project Setup</title>
-      <description>!!! info
-        Note: Jetpack Compose is currently in Developer Preview. The API surface is not yet finalized, and changes are planned and expected. </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/getting_started/</link>
-      <pubDate>Thu, 03 Sep 2020 18:32:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Shape</title>
-      <description># Shape
-A Shape can be used to draw a composable in specific shape.
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/shape/</link>
-      <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Compiler Plugin</title>
-      <description># Compiler Plugin
-
-Compose works by transforming all Kotlin functions that are annotated with @Composable.
-To do that it uses a Kotlin Compiler Plugin</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compiler_plugin/</link>
-      <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>State</title>
-      <description># Compose State
-
-## Define a state
-val textState = mutableStateOf(&#34;Hello&#34;)
-
-You can use the mutableStateOf function to create a mutable state.
-
-
-## Ex</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/state/</link>
-      <pubDate>Mon, 31 Aug 2020 22:16:41 -0000</pubDate>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -104,7 +52,7 @@ You can use the mutableStateOf function to create a mutable state.
 
 Inside your composable you can us</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -116,7 +64,7 @@ Inside your composable you can us</description>
     
 You can use ContextAmbient.current to receive the contex</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/get_android_context/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -130,45 +78,204 @@ You can use ContextAmbient.current to receive the contex</description>
 
 You can use **imageResource** to loa</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
     
     <item>
-      <title>TextField</title>
-      <description># TextField
+      <title>Handle changes to a text field</title>
+      <description># Handle changes to a TextField
 
 !!! info
-    This is the API of version dev10. Newer versions may have a different one
+    This is the API of version alpha01. Newer versions may have a different one
 
-TextField can be used to insert text. This is the</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/textfield/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+In some cases, it’s useful </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/textfield_changes/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
     
     <item>
-      <title>Preview</title>
-      <description># Preview
-## Preview
-You can use the **@Preview** annotation to preview compose functions inside Android Studio.
-Preview can not be used on Composable</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/preview/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <title>Box</title>
+      <description># Box
+
+WIP
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    
+&lt;p align=&#34;left&#34;&gt;
+  &lt;img src =&#34;../../ima</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
     
     <item>
-      <title>PreviewParameter</title>
-      <description># PreviewParameter
+      <title>Image</title>
+      <description># Image
 
-You can use **@PreviewParameter** to provide sample data for your Composables.
-Let&#39;s say you have the following Composable and you</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/previewparameter/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+Image is used to display Images. It&#39;s similar</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>LazyColumnFor</title>
+      <description># LazyColumnFor
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    
+A [LazyColumnFor](https://develop</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumnfor/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>LazyRowFor</title>
+      <description># LazyRowFor
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    
+A [LazyRowFor](https://developer.and</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>ScrollableColumn</title>
+      <description># ScrollableColumn
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+
+When an app has layout content th</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>ScrollableRow</title>
+      <description># ScrollableRow
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+When an app has layout content that m</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablerow/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Shape</title>
+      <description># Shape
+A Shape can be used to draw a composable in specific shape.
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/shape/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Text</title>
+      <description># Text
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+You can use **Text** to display text. You can </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/text/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Ambient</title>
+      <description># Ambient
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+Ambient is useful when you want to create a </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Modifier</title>
+      <description># Modifier
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+Modifiers can be used modify certain aspec</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Column</title>
+      <description># Column
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+A Column will show each children below the p</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/column/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Row</title>
+      <description># Row
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+A Row will show each children next to the previ</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/layout/row/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Button</title>
+      <description># Button
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+A [Button](https://developer.android.com/ref</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/button/</link>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -182,7 +289,7 @@ Let&#39;s say you have the following Composable and you</description>
 
 Card is the implementation of a CardView in Co</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -197,105 +304,7 @@ Card is the implementation of a CardView in Co</description>
 &lt;p align=&#34;left&#34;&gt;
   &lt;img src =&#34;../../images</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/checkbox/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Switch</title>
-      <description># Switch
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-    
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;../../imag</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/switch/</link>
-      <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Modifier</title>
-      <description># Modifier
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-Modifiers can be used modify certain aspec</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</link>
-      <pubDate>Sun, 30 Aug 2020 17:24:55 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Roadmap</title>
-      <description># Roadmap
-
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;../../images/general/Roadmap.png&#34;   /&gt;
-&lt;/p&gt;
-
-Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/roadmap/</link>
-      <pubDate>Sun, 30 Aug 2020 17:24:55 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Compose Projects</title>
-      <description># Compose Projects
-A list of projects that are related to Jetpack Compose. If you want to add an entry, please edit the table and send PR.
-
-# Example </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_projects/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Image</title>
-      <description># Image
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-Image is used to display Images. It&#39;s similar</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>LazyColumnFor</title>
-      <description># LazyColumnFor
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-    
-A [LazyColumnFor](https://develop</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumnfor/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>LazyRowFor</title>
-      <description># LazyRowFor
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-    
-A [LazyRowFor](https://developer.and</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
-      <pubDate>Sun, 30 Aug 2020 16:36:24 -0000</pubDate>
+      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>

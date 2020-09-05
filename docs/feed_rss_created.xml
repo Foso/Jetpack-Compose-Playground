@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Thu, 03 Sep 2020 20:03:43 -0000</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2020 20:03:43 -0000</lastBuildDate>
+    <pubDate>Sat, 05 Sep 2020 19:50:13 -0000</pubDate>
+    <lastBuildDate>Sat, 05 Sep 2020 19:50:13 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -159,11 +159,11 @@ Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</descriptio
     
     <item>
       <title>Compose for SwiftUI Developers</title>
-      <description># Compose for Swift Ui Developers
+      <description># Compose for SwiftUI Developers
 
 
 | SwiftUi                                    | Compose  |
-| ----------------------------------------- | ----------</description>
+| ----------------------------------------- | -----------</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
       <pubDate>Fri, 21 Aug 2020 19:46:36 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
