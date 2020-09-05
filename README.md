@@ -188,6 +188,7 @@ the demo classes i copied out of the AndroidX repo (https://android.googlesource
 - [Shifting Paradigms](https://speakerdeck.com/ragunathjawahar/shifting-paradigms)
 
 ## Podcasts
+- [**Android Developer backstage** - Episode 147: Jetpack Compose Alpha](http://androidbackstage.blogspot.com/2020/08/episode-147-jetpack-compose-alpha.html)
 - [**Android Developer backstage** - Episode 115: Jetpack Compose](http://androidbackstage.blogspot.com/2019/06/episode-115-jetpack-compose.html)
 - [**Fragmented Podcast** - Episode 171: Jetpack Compose with Leland Richardson](https://fragmentedpodcast.com/episodes/172/)
 - [**Google podcast** - Romain Guy – Podcast S09 E09](https://podcasts.google.com/?feed=aHR0cHM6Ly93d3cucmF5d2VuZGVybGljaC5jb20vY2F0ZWdvcnkvcG9kY2FzdC9mZWVk&episode=aHR0cHM6Ly93d3cucmF5d2VuZGVybGljaC5jb20vP3A9MjMxMjI0&hl=en-IN&ep=6&at=1567914736470)
