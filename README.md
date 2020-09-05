@@ -118,7 +118,21 @@ the demo classes i copied out of the AndroidX repo (https://android.googlesource
 ## Other Documentation
 - [FAQ about Jetpack Compose – Android’s modern toolkit for building native UI](https://github.com/Mishkun/jetpack-compose-faq)
 
-## Conference Talks
+## Talks
+
+
+[![](https://img.youtube.com/vi/SMOhl9RK0BA/0.jpg)](https://www.youtube.com/watch?v=SMOhl9RK0BA "")
+
+- [Thinking in Compose](https://www.youtube.com/watch?v=SMOhl9RK0BA)
+
+[![](https://img.youtube.com/vi/DDd6IOlH3io/0.jpg)](https://www.youtube.com/watch?v=DDd6IOlH3io "")
+
+- [Compose by example](https://www.youtube.com/watch?v=DDd6IOlH3io)
+
+[![](https://img.youtube.com/vi/PjQdFmiDgwk/0.jpg)](https://www.youtube.com/watch?v=PjQdFmiDgwk "")
+
+- [Compose for existing apps](https://www.youtube.com/watch?v=PjQdFmiDgwk)
+
 
 [![](https://img.youtube.com/vi/U5BwfqBpiWU/0.jpg)](https://www.youtube.com/watch?v=U5BwfqBpiWU "")
 
