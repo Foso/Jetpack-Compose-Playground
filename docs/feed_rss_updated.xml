@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 06 Sep 2020 21:31:47 -0000</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2020 21:31:47 -0000</lastBuildDate>
+    <pubDate>Sun, 06 Sep 2020 21:33:53 -0000</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2020 21:33:53 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,20 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Box</title>
+      <description># Box
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+A Box can be used as wrapper Composable around </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
+      <pubDate>Sun, 06 Sep 2020 21:32:08 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Compose for Android Developers</title>
@@ -47,20 +61,6 @@ The goal is to show how comm</description>
 | SwiftUI           | Compose  |
 | ----------------------------------------- | ------------------------------------</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
-      <pubDate>Sun, 06 Sep 2020 21:29:18 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Box</title>
-      <description># Box
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-A Box can be used as wrapper Composable around </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
       <pubDate>Sun, 06 Sep 2020 21:29:18 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

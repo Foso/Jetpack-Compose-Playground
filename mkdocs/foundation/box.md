@@ -3,10 +3,10 @@
 !!! info
     This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
-A Box can be used as wrapper Composable around Composables where want to apply things like backgroundColor, a [Shape](../foundation/shape/) or padding.
+A Box can be used as wrapper Composable around Composables where want to apply things like backgroundColor, a [Shape](.././foundation/shape/) or padding.
 If you wrap your composable in a Box without any parameters, you won't notice any difference. This is because by default the Box has the width/height of the child composables.
 
-The **padding** parameters will be applied to the child composable. When you want to apply padding to the Box, you have to use the padding [Modifier](../general/modifier/).
+The **padding** parameters will be applied to the child composable. When you want to apply padding to the Box, you have to use the padding [Modifier](.././general/modifier/).
 <p align="center">
   <img src ="../../images/foundation/box/boxdemo.png" />
 </p>
