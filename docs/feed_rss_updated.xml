@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 06 Sep 2020 21:33:53 -0000</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2020 21:33:53 -0000</lastBuildDate>
+    <pubDate>Sun, 06 Sep 2020 21:36:04 -0000</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2020 21:36:04 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -37,7 +37,7 @@
 
 A Box can be used as wrapper Composable around </description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
-      <pubDate>Sun, 06 Sep 2020 21:32:08 -0000</pubDate>
+      <pubDate>Sun, 06 Sep 2020 21:34:21 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
