@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 06 Sep 2020 21:28:41 -0000</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2020 21:28:41 -0000</lastBuildDate>
+    <pubDate>Sun, 06 Sep 2020 21:31:47 -0000</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2020 21:31:47 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,44 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Compose for Android Developers</title>
+      <description># Compose for Android Developers
+This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
+The goal is to show how comm</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/android_devs/</link>
+      <pubDate>Sun, 06 Sep 2020 21:29:18 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Compose for SwiftUI Developers</title>
+      <description># Compose for SwiftUI Developers
+
+
+| SwiftUI           | Compose  |
+| ----------------------------------------- | ------------------------------------</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
+      <pubDate>Sun, 06 Sep 2020 21:29:18 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Box</title>
+      <description># Box
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+A Box can be used as wrapper Composable around </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
+      <pubDate>Sun, 06 Sep 2020 21:29:18 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Overview</title>
@@ -102,19 +140,6 @@ Card is the implementation of a CardView in Co</description>
     </item>
     
     <item>
-      <title>Compose for SwiftUI Developers</title>
-      <description># Compose for SwiftUI Developers
-
-
-| SwiftUI           | Compose  |
-| ----------------------------------------- | ------------------------------------</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
-      <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
       <title>Overview</title>
       <description># Cookbook
 
@@ -122,20 +147,6 @@ Card is the implementation of a CardView in Co</description>
 * [How to use Compose in a ViewGroup](./how_to_use_compose_in_viewgroup.md)
 * [</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/overview/</link>
-      <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Box</title>
-      <description># Box
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-A Box can be used as wrapper Composable around </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
       <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
@@ -287,21 +298,6 @@ A [LazyColumnFor](https://develop</description>
     
 A [LazyRowFor](https://developer.and</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
-      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>ScrollableColumn</title>
-      <description># ScrollableColumn
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-
-When an app has layout content th</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
       <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
