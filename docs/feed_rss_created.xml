@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 05 Sep 2020 21:21:06 -0000</pubDate>
-    <lastBuildDate>Sat, 05 Sep 2020 21:21:06 -0000</lastBuildDate>
+    <pubDate>Sun, 06 Sep 2020 21:28:41 -0000</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2020 21:28:41 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -37,7 +37,7 @@
 
 &#34;Sliders allow users to make selections from</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/slider/</link>
-      <pubDate>Sat, 05 Sep 2020 21:21:12 -0000</pubDate>
+      <pubDate>Sat, 05 Sep 2020 21:27:53 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -51,7 +51,7 @@
 
 &#34;Snackbars provide brief messages about ap</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/snackbar/</link>
-      <pubDate>Sat, 05 Sep 2020 21:21:12 -0000</pubDate>
+      <pubDate>Sat, 05 Sep 2020 21:27:53 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -190,8 +190,8 @@ Source: https://www.youtube.com/watch?v=U5BwfqBpiWU&amp;feature=yout</descriptio
       <description># Compose for SwiftUI Developers
 
 
-| SwiftUi                                    | Compose  |
-| ----------------------------------------- | -----------</description>
+| SwiftUI           | Compose  |
+| ----------------------------------------- | ------------------------------------</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
       <pubDate>Fri, 21 Aug 2020 19:46:36 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>

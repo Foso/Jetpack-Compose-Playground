@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sat, 05 Sep 2020 21:21:06 -0000</pubDate>
-    <lastBuildDate>Sat, 05 Sep 2020 21:21:06 -0000</lastBuildDate>
+    <pubDate>Sun, 06 Sep 2020 21:28:41 -0000</pubDate>
+    <lastBuildDate>Sun, 06 Sep 2020 21:28:41 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,6 +29,35 @@
     <!-- Entries -->
     
     <item>
+      <title>Overview</title>
+      <description># Jetpack Compose Playground 
+
+
+## Introduction
+This is a collection of Jetpack Compose examples/tutorials and demos.
+
+## Show some :heart: and star t</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
+      <pubDate>Sat, 05 Sep 2020 21:27:53 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Card</title>
+      <description># Card
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+Card is the implementation of a CardView in Co</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</link>
+      <pubDate>Sat, 05 Sep 2020 21:27:53 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Slider</title>
       <description># Slider
 
@@ -37,7 +66,7 @@
 
 &#34;Sliders allow users to make selections from</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/slider/</link>
-      <pubDate>Sat, 05 Sep 2020 21:21:12 -0000</pubDate>
+      <pubDate>Sat, 05 Sep 2020 21:27:53 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -51,7 +80,7 @@
 
 &#34;Snackbars provide brief messages about ap</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/snackbar/</link>
-      <pubDate>Sat, 05 Sep 2020 21:21:12 -0000</pubDate>
+      <pubDate>Sat, 05 Sep 2020 21:27:53 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -77,8 +106,8 @@
       <description># Compose for SwiftUI Developers
 
 
-| SwiftUi                                    | Compose  |
-| ----------------------------------------- | -----------</description>
+| SwiftUI           | Compose  |
+| ----------------------------------------- | ------------------------------------</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</link>
       <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -102,12 +131,10 @@
       <title>Box</title>
       <description># Box
 
-WIP
 !!! info
     This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-    
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;../../ima</description>
+
+A Box can be used as wrapper Composable around </description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
       <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
@@ -156,20 +183,6 @@ A ConstraintLayout in Compose is similar t</description>
     </item>
     
     <item>
-      <title>Card</title>
-      <description># Card
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-Card is the implementation of a CardView in Co</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</link>
-      <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
       <title>Modifier</title>
       <description># Modifier
 
@@ -179,21 +192,6 @@ Card is the implementation of a CardView in Co</description>
 Modifiers can be used modify certain aspec</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</link>
       <pubDate>Sat, 05 Sep 2020 19:51:07 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Overview</title>
-      <description># Jetpack Compose Playground 
-
-
-## Introduction
-This is a collection of Jetpack Compose examples/tutorials and demos.
-
-## Show some :heart: and star t</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
-      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>

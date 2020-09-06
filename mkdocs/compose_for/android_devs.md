@@ -2,6 +2,21 @@
 This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
 The goal is to show how common use cases with the classic Android View system, can be done with Compose.
 
+| Android View                                    | Compose  |
+| ----------------------------------------- | ------------------------------------ |
+| Button  		    | [Button](../material/button.md)  |
+| TextView  		    | [Text](../foundation/text.md)  |
+| TextField  		    | [TextField](../foundation/textfield.md)  |
+| ImageView  		    | [Image](../foundation/image.md)  |
+| LinearLayout(horizontally)  		    | [Row](../layout/row.md)  |
+|  LinearLayout(vertically)  		    | [Column](../layout/column.md)  |
+| FrameLayout  		    | [Stack](../layout/stack.md)  |
+| RecyclerView  		    | [LazyColumnFor](../foundation/lazycolumnfor.md)  |
+| RecyclerView(horizontally)  		    | [LazyRowFor](../foundation/lazyrowfor.md)  |
+| Snackbar  		    | [Snackbar](../material/snackbar.md)  |
+| ScrollView  		    | [ScrollableRow](../foundation/scrollablerow.md)/[ScrollableColumn](../foundation/scrollablecolumn.md)  |
+
+
 ## Layouts
 ### What is the equivalent of a LinearLayout?
 

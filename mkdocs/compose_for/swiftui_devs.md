@@ -1,18 +1,18 @@
 # Compose for SwiftUI Developers
 
 
-| SwiftUi                                    | Compose  |
+| SwiftUI           | Compose  |
 | ----------------------------------------- | ------------------------------------ |
-| Button  		    | Button  |
-| Text  		    | Text  |
-| TextField  		    | TextField  |
-| Image  		    | Image  |
-| HStack  		    | Row  |
-| VStack  		    | Column  |
-| ZStack  		    | Stack  |
-| LazyVStack  		    | LazyColumnFor  |
-| LazyHStack  		    | LazyRowFor  |
-| ScrollView  		    | ScrollableRow/ScrollableColumn  |
+| Button  		    | [Button](../material/button.md)  |
+| Text  		    | [Text](../foundation/text.md)  |
+| EditText  	    | [TextField](../foundation/textfield.md)  |
+| Image  		    | [Image](../foundation/image.md)  |
+| HStack  		    | [Row](../layout/row.md)  |
+| VStack  		    | [Column](../layout/column.md)  |
+| ZStack  		    | [Stack](../layout/stack.md)  |
+| LazyVStack  		| [LazyColumnFor](../foundation/lazycolumnfor.md)   |
+| LazyHStack  		| [LazyRowFor](../foundation/lazyrowfor.md)  |
+| ScrollView  		| [ScrollableRow](../foundation/scrollablerow.md)/[ScrollableColumn](../foundation/scrollablecolumn.md)  |
 
 ## What is the equivalent of a View?
 In "Jetpack Compose" Views are called **Composable**. They are Kotlin functions that are annotated with @Composable.
@@ -61,3 +61,6 @@ In Compose a ViewModifier is called [Modifier](/general/modifier/). You can't di
 //Compose
 Text("Hello, World", modifier = Modifier.background(Color.Red).padding(100.dp))
 ```
+
+## What is the equivalent of EnvironmentObject?
+For data that should be shared with all views in your entire app, in SwiftUI you can use EnvironmentObject. In Compose this can be done with [Ambients](/general/ambient/)
