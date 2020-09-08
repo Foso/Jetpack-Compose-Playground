@@ -11,5 +11,5 @@ Inside your composable you can use **isSystemInDarkTheme** to detect if the devi
 
 <hr>
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#issystemindarktheme)
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/package-summary#issystemindarktheme)
 * [Learn-Jetpack-Compose-By-Example/DarkModeActivity](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/theme/DarkModeActivity.kt)

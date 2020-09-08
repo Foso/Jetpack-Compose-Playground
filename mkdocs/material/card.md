@@ -13,7 +13,7 @@ Card is the implementation of a CardView in Compose
 }
 ```
 
-<p align="left">
+<p align="center">
   <img src ="../../images/material/card/carddemo.png"  />
 </p>
 

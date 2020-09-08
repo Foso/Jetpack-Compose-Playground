@@ -22,5 +22,5 @@ fun ColumnExample() {
 
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/layout/package-summary#column)
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/package-summary#column)
 * [Compose Academy/Column](https://compose.academy/academy/layout/column/)

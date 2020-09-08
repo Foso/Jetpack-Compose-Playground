@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 06 Sep 2020 21:36:04 -0000</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2020 21:36:04 -0000</lastBuildDate>
+    <pubDate>Tue, 08 Sep 2020 19:13:55 -0000</pubDate>
+    <lastBuildDate>Tue, 08 Sep 2020 19:13:55 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,6 +29,21 @@
     <!-- Entries -->
     
     <item>
+      <title>How to create a custom shape</title>
+      <description>## How to draw a custom shape?
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+&lt;p align=&#34;center&#34;&gt;
+  &lt;</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_create_custom_shape/</link>
+      <pubDate>Tue, 08 Sep 2020 19:13:56 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Box</title>
       <description># Box
 
@@ -37,7 +52,7 @@
 
 A Box can be used as wrapper Composable around </description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/box/</link>
-      <pubDate>Sun, 06 Sep 2020 21:34:21 -0000</pubDate>
+      <pubDate>Sun, 06 Sep 2020 21:36:25 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -284,20 +299,6 @@ Image is used to display Images. It&#39;s similar</description>
     
 A [LazyColumnFor](https://develop</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumnfor/</link>
-      <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>LazyRowFor</title>
-      <description># LazyRowFor
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-    
-A [LazyRowFor](https://developer.and</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
       <pubDate>Thu, 03 Sep 2020 20:04:42 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

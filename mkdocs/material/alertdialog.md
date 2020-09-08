@@ -57,3 +57,6 @@ fun AlertDialogSample() {
     }
 }
 ```
+
+## See also:
+* [How do I display an alert dialog/popup modal?](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/material/AlertDialogActivity.kt)

@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 06 Sep 2020 21:36:04 -0000</pubDate>
-    <lastBuildDate>Sun, 06 Sep 2020 21:36:04 -0000</lastBuildDate>
+    <pubDate>Tue, 08 Sep 2020 19:13:55 -0000</pubDate>
+    <lastBuildDate>Tue, 08 Sep 2020 19:13:55 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,21 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>How to create a custom shape</title>
+      <description>## How to draw a custom shape?
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+&lt;p align=&#34;center&#34;&gt;
+  &lt;</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_create_custom_shape/</link>
+      <pubDate>Tue, 08 Sep 2020 19:13:56 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Slider</title>
@@ -278,20 +293,6 @@ A [LazyRowFor](https://developer.and</description>
 
 When an app has layout content th</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
-      <pubDate>Thu, 23 Jul 2020 17:33:15 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>ScrollableRow</title>
-      <description># ScrollableRow
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-When an app has layout content that m</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablerow/</link>
       <pubDate>Thu, 23 Jul 2020 17:33:15 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       

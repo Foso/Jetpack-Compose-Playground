@@ -42,6 +42,7 @@ nav:
            - 'How to use an Android View in Compose': cookbook/how_to_use_an_android_view_in_compose.md
            - 'How to get Android Context': cookbook/get_android_context.md
            - 'How to detect dark mode': cookbook/detect_darkmode.md
+           - 'How to create a custom shape': cookbook/how_to_create_custom_shape.md
       - 'Guides & Samples':
           - 'General':
               - 'Ambient': general/ambient.md

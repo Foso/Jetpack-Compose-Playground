@@ -28,3 +28,6 @@ fun StackExample() {
        }
 }
 ```
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/package-summary#stack)

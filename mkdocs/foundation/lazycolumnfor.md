@@ -57,4 +57,4 @@ This will be called every time a item from the **items**-List gets visible.
 Then you can create your composable that should be displayed.  
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/foundation/lazy/package-summary#lazycolumnitems)
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazycolumnfor)

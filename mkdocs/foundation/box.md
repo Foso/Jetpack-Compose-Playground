@@ -24,3 +24,6 @@ fun BoxDemo(){
     }
 }
 ```
+
+## See also:
+* [Official Docs/Box](https://developer.android.com/reference/kotlin/androidx/compose/foundation/package-summary#box)
