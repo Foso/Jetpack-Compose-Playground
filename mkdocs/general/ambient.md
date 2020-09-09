@@ -64,6 +64,6 @@ The ambient containing the current [ViewModelStoreOwner].
 
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/Ambient)
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/runtime/Ambient)
 * [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/general/AmbientExample.kt)
 

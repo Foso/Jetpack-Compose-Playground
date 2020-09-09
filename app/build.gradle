@@ -85,6 +85,7 @@ dependencies {
 
     implementation("androidx.compose.runtime:runtime:$compose_version")
     implementation("androidx.compose.ui:ui-text:$compose_version")
+    implementation "androidx.ui:ui-tooling:$compose_version"
 
 
     testImplementation "junit:junit:4.12"
