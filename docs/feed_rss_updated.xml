@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Tue, 08 Sep 2020 20:08:59 -0000</pubDate>
-    <lastBuildDate>Tue, 08 Sep 2020 20:08:59 -0000</lastBuildDate>
+    <pubDate>Wed, 09 Sep 2020 16:17:47 -0000</pubDate>
+    <lastBuildDate>Wed, 09 Sep 2020 16:17:47 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,18 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Preview</title>
+      <description># Preview
+## Preview
+You can use the **@Preview** annotation to preview compose functions inside Android Studio.
+Preview can not be used on Composable</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/preview/</link>
+      <pubDate>Tue, 08 Sep 2020 20:09:50 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>How to detect dark mode</title>
@@ -192,6 +204,18 @@ Card is the implementation of a CardView in Co</description>
     </item>
     
     <item>
+      <title>Compose Projects</title>
+      <description># Compose Projects
+A list of projects that are related to Jetpack Compose. If you want to add an entry, please edit the table and send PR.
+
+# Example </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_projects/</link>
+      <pubDate>Tue, 08 Sep 2020 17:04:50 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Compose for Android Developers</title>
       <description># Compose for Android Developers
 This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
@@ -269,33 +293,6 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 
 - [Conference talks](#Conf</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/resources/</link>
-      <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Overview</title>
-      <description># Cookbook
-
-* [Handle changes to a text field](./textfield_changes.md)
-* [How to use Compose in a ViewGroup](./how_to_use_compose_in_viewgroup.md)
-* [</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/overview/</link>
-      <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Compose Lifecycle</title>
-      <description>#Compose Lifecycle
-
-!!! info
-    This is the API of version alpha01. Newer versions may have a different one
-    
-Compose has some &#34;effects&#34;-function </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_lifecycle/</link>
       <pubDate>Sat, 05 Sep 2020 20:33:11 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
