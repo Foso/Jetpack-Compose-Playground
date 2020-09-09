@@ -12,6 +12,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [ComposeClock](https://github.com/adibfara/composeclock)  		    | Particle clock created with Jetpack Compose framework |
 | [JetDelivery](https://github.com/vipulasri/JetDelivery)  		    | JetDelivery is a sample food delivery app, built with Jetpack Compose.|
 | [Learn Jetpack Compose By Example](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example)  		    | This project contains various examples that show how you would do things the "Jetpack Compose" way|
+| [Full Compose Cookbook with Demo UIs](https://github.com/Gurupreet/ComposeCookBook)  		  | This project showcase all UI, Widgets, Animations and Demo UI samples.
 
 
 
