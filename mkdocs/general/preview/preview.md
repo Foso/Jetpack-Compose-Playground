@@ -35,3 +35,15 @@ The Preview annotation has a group parameter. You can use it to set a group name
 </p>
 
 The layout preview will now have an option to filter all the previews by the group name.
+
+## Interactive Previews
+<p align="center">
+  <img src ="../../../images/general/preview/interactivepreview.png"   />
+</p>
+
+Above a generated preview in Android Studio you will find an "Interactive" Button. It will open your Composable in an interactive preview mode where can try your Composable directly inside
+Android Studio.
+
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/tooling/preview/Preview)
