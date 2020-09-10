@@ -12,12 +12,12 @@ When an app has layout content that might be longer than the height of the devic
 
 ```kotlin
 @Composable
-fun ScrollableColumnExample() {
+fun ScrollableColumnDemo() {
     ScrollableColumn {
         //Only one child is allowed in a ScrollableColumn
         Column {
             for (i in 0..100) {
-                Text("$i Hello World!", style =(MaterialTheme.typography()).body1)
+                Text("$i Hello World!", style =MaterialTheme.typography.body1)
             }
         }
     }
@@ -30,3 +30,4 @@ Note that a ScrollableColumn can only contain a single child element so if you n
 ### See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/foundation/package-summary#scrollablecolumn)
 * [Video](https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/foundation/verticalscroller/VerticalScroller.webm)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/foundation/scrollablecolumn/ScrollableColumnDemo.kt)

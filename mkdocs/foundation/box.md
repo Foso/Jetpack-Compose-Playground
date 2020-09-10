@@ -27,3 +27,4 @@ fun BoxDemo(){
 
 ## See also:
 * [Official Docs/Box](https://developer.android.com/reference/kotlin/androidx/compose/foundation/package-summary#box)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/foundation/BoxDemo.kt)

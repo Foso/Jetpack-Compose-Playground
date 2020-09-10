@@ -1,25 +1,20 @@
-# Canvas
+package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
+import androidx.ui.tooling.preview.Preview
 
-## How to draw on Canvas
-
-<p align="left">
-  <img src ="../../images/foundation/canvas/CanvasDrawExample.png" height=100 width=300 />
-</p>
-
-
-
-```kotlin
 @Preview(showBackground = true)
 @Composable
 fun CanvasDrawExample() {
     Canvas(modifier = Modifier.fillMaxSize()) {
         drawRect(Color.Blue, topLeft = Offset(0f, 0f), size = Size(this.size.width, 55f))
-
         drawCircle(Color.Red, center = Offset(50f, 200f), radius = 40f)
-
         drawLine(
             Color.Green, Offset(20f, 0f),
             Offset(200f, 200f), strokeWidth = 5f
@@ -35,7 +30,3 @@ fun CanvasDrawExample() {
         )
     }
 }
-```
-
-## See also:
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/foundation/CanvasDrawExample.kt)

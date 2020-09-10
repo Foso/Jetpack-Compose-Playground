@@ -8,7 +8,7 @@ When an app has layout content that might be longer than the width of the device
 ```kotlin
 
 @Composable
-fun ScrollableRowExample() {
+fun ScrollableRowDemo() {
     ScrollableRow(children = {
         //Only one child is allowed in a VerticalScroller
         Row {
@@ -19,3 +19,8 @@ fun ScrollableRowExample() {
     })
 }
 ```
+
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/package-summary#scrollablerow)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/foundation/scrollablerow/ScrollableRowDemo.kt)
