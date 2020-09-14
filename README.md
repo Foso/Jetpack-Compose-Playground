@@ -28,6 +28,8 @@ Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Pl
 ## 📙 Jetpack Compose examples/tutorials and demos
 Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose) or take a look at the github page: https://foso.github.io/compose
 
+### Animation
+* [Crossfade](https://foso.github.io/Jetpack-Compose-Playground/animation/crossfade)
 
 ### Layouts
 * [ConstraintLayout](https://foso.github.io/Jetpack-Compose-Playground/layout/constraintlayout)

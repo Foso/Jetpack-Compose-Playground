@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Thu, 10 Sep 2020 17:36:25 -0000</pubDate>
-    <lastBuildDate>Thu, 10 Sep 2020 17:36:25 -0000</lastBuildDate>
+    <pubDate>Mon, 14 Sep 2020 21:42:13 -0000</pubDate>
+    <lastBuildDate>Mon, 14 Sep 2020 21:42:13 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,19 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Crossfade</title>
+      <description># Crossfade
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+Crossfade can be used to switch between Co</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/animation/crossfade/</link>
+      <pubDate>Mon, 14 Sep 2020 21:42:18 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>How to create a custom shape</title>
@@ -116,7 +129,9 @@ You can use ContextAmbient.current to receive the contex</description>
 !!! info
     This is the API of version alpha02. Newer versions may have a different one
 
-You can use **imageResource** to loa</description>
+
+## Load Image Drawable
+You can use </description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</link>
       <pubDate>Mon, 31 Aug 2020 19:38:46 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
@@ -279,21 +294,6 @@ A [LazyRowFor](https://developer.and</description>
   &lt;img src =&#34;../../images/mate</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/radiobutton/</link>
       <pubDate>Wed, 12 Aug 2020 20:39:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>ScrollableColumn</title>
-      <description># ScrollableColumn
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-
-When an app has layout content th</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
-      <pubDate>Thu, 23 Jul 2020 17:33:15 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       
     </item>

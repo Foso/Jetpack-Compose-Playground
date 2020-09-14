@@ -10,7 +10,9 @@ Image is used to display Images. It's similar to an ImageView in the classic And
   <img src ="../../images/foundation/image/imagedemo.png" height=100 width=300 />
 </p>
 
+
 ## Load Image Drawable
+You can use **loadImageResource** to load an drawable image from the resources
 
 ```kotlin
 @Composable
@@ -24,6 +26,7 @@ fun ImageResourceDrawableDemo() {
 ```
 
 ## Load Vector Drawable
+You can use **loadVectorResource** to load an vector image from the resources
 
 ```kotlin
 @Composable

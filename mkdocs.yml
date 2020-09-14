@@ -61,6 +61,8 @@ nav:
               - 'Roadmap' : general/roadmap.md
               - 'Project Setup': general/getting_started.md
               - 'State': general/state.md
+          - 'Animation':
+              - 'Crossfade': animation/crossfade.md
           - 'Foundation':
               - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md

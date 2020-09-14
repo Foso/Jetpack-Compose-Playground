@@ -24,11 +24,14 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SMOhl9RK0BA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Composable of the week!! 🎉
-The [Card](material/card)
+The [Crossfade](animation/crossfade)
 
 
 ## New to Compose?
 Check [Project Setup](general/getting_started.md) or [Hello World Compose](general/helloworld/)
+
+### Animation
+* [Crossfade](animation/crossfade)
 
 ## Layouts
 ---

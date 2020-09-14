@@ -4,7 +4,6 @@ You can use the **@Preview** annotation to preview compose functions inside Andr
 Preview can not be used on Composables that have parameters without a default parameter.
 
 ```kotlin
-
 @Preview
 @Composable
 fun TextDemo(){

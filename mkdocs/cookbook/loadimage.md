@@ -3,14 +3,31 @@
 !!! info
     This is the API of version alpha02. Newer versions may have a different one
 
-You can use **imageResource** to load an image from the resources
+
+## Load Image Drawable
+You can use **loadImageResource** to load an drawable image from the resources
 
 ```kotlin
-@Composable fun LoadImageResourceDemo(){
-    val imRes: ImageAsset = imageResource(id = R.drawable.placeholder_1_1)
+@Composable
+fun ImageResourceDrawableDemo() {
+     val image = loadImageResource(id = R.drawable.composelogo)
+     //loadImageResource will load the drawable asynchronous
+        image.resource.resource?.let {
+            Image(asset = it)
+        }
+}
+```
 
-    Box(modifier = Modifier.preferredHeight(50.dp).then(Modifier.preferredWidth(50.dp))) {
-        Image(imRes)
+## Load Vector Drawable
+You can use **loadVectorResource** to load an vector image from the resources
+
+```kotlin
+@Composable
+fun ImageVectorResourceDemo() {
+    val image = loadVectorResource(id = R.drawable.favorite)
+    //loadVectorResource will load the vector image asynchronous
+    image.resource.resource?.let {
+        Image(asset = it)
     }
 }
 ```
