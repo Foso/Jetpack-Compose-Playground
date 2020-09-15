@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Tue, 15 Sep 2020 16:18:30 -0000</pubDate>
-    <lastBuildDate>Tue, 15 Sep 2020 16:18:30 -0000</lastBuildDate>
+    <pubDate>Tue, 15 Sep 2020 19:26:05 -0000</pubDate>
+    <lastBuildDate>Tue, 15 Sep 2020 19:26:05 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,6 +29,20 @@
     <!-- Entries -->
     
     <item>
+      <title>Crossfade</title>
+      <description># Crossfade
+
+!!! info
+    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+
+Crossfade can be used to switch between C</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/animation/crossfade/</link>
+      <pubDate>Tue, 15 Sep 2020 16:22:21 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
       <title>Overview</title>
       <description># Jetpack Compose Playground 
 
@@ -38,20 +52,6 @@ This is a collection of Jetpack Compose examples/tutorials and demos.
 
 ## Show some :heart: and star t</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
-      <pubDate>Mon, 14 Sep 2020 21:46:21 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Crossfade</title>
-      <description># Crossfade
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-Crossfade can be used to switch between C</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/animation/crossfade/</link>
       <pubDate>Mon, 14 Sep 2020 21:46:21 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
