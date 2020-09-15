@@ -1,4 +1,5 @@
 # Crossfade
+
 !!! info
     This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
@@ -47,7 +48,7 @@ Crossfade(current = currentColor, animation = tween(3000)) { selectedColor ->
 }
 ```
 
-Crossfade expect some kind of state to detect when it should recompose. In this example, this is **currentColor**, which is a state with the selected color enum. This state will be set to the **current** parameter.
+Crossfade expects some kind of state to detect when it should recompose. In this example, this is **currentColor**, which is a state with the selected color enum. This state will be set to the **current** parameter.
 
 With the **animation** parameter, you can set which animation should be used to switch between the Composables. The default parameter here is the **tween** animation. You can choose between any class that implements **AnimationSpec**.
 The **3000** in this example is the duration that the tween animation will have.
@@ -56,5 +57,5 @@ The last parameter is the body of the Crossfade Composable. Here you have to cre
 Everytime one of the 3 buttons is clicked, the value of currentColor will change and the Crossfade will recompose with an animation between the old and new UI.
 
 
-### See also:
+## See also:
 * [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/animation/crossfade/CrossfadeDemo.kt)
