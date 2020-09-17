@@ -60,6 +60,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Button](material/button.md)
 * [Card](material/card.md)
 * [Checkbox](material/checkbox.md)
+* [FloatingActionButton](material/floatingactionbutton.md)
 * [ModalDrawerLayout](material/modaldrawer.md)
 * [RadioGroup](material/radiogroup.md)
 * [Scaffold](material/scaffold.md)
