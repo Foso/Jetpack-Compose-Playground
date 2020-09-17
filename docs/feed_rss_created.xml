@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Thu, 17 Sep 2020 17:49:58 -0000</pubDate>
-    <lastBuildDate>Thu, 17 Sep 2020 17:49:58 -0000</lastBuildDate>
+    <pubDate>Thu, 17 Sep 2020 19:25:13 -0000</pubDate>
+    <lastBuildDate>Thu, 17 Sep 2020 19:25:13 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,23 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>FloatingActionButton</title>
+      <description># FloatingActionButton
+
+!!! info
+    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
+
+## FloatingActionButton
+
+
+```k</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/floatingactionbutton/</link>
+      <pubDate>Thu, 17 Sep 2020 19:25:18 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Crossfade</title>
@@ -279,21 +296,6 @@ A [LazyColumnFor](https://develop</description>
     
 A [LazyRowFor](https://developer.and</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrowfor/</link>
-      <pubDate>Wed, 12 Aug 2020 20:39:24 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>RadioButton</title>
-      <description># RadioButton
-
-!!! info
-    This is the API of version dev16. Newer versions may have a different one
-
-&lt;p align=&#34;left&#34;&gt;
-  &lt;img src =&#34;../../images/mate</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/radiobutton/</link>
       <pubDate>Wed, 12 Aug 2020 20:39:24 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_created.xml">Jetpack Compose Playground</source>
       

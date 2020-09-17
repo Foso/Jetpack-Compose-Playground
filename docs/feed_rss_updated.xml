@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Thu, 17 Sep 2020 17:49:58 -0000</pubDate>
-    <lastBuildDate>Thu, 17 Sep 2020 17:49:58 -0000</lastBuildDate>
+    <pubDate>Thu, 17 Sep 2020 19:25:13 -0000</pubDate>
+    <lastBuildDate>Thu, 17 Sep 2020 19:25:13 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,59 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>FloatingActionButton</title>
+      <description># FloatingActionButton
+
+!!! info
+    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
+
+## FloatingActionButton
+
+
+```k</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/floatingactionbutton/</link>
+      <pubDate>Thu, 17 Sep 2020 19:25:18 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <description># Jetpack Compose Playground 
+
+
+## Introduction
+This is a collection of Jetpack Compose examples/tutorials and demos.
+
+## Show some :heart: and star t</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
+      <pubDate>Thu, 17 Sep 2020 17:52:58 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Codelabs</title>
+      <description># Codelabs
+* [Jetpack Compose basics](https://codelabs.developers.google.com/codelabs/jetpack-compose-basics/index.html?index=..%2F..index#0)
+* [Migra</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/codelabs/</link>
+      <pubDate>Thu, 17 Sep 2020 17:52:58 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Project Setup</title>
+      <description>!!! info
+        Note: Jetpack Compose is currently in Developer Preview. The API surface is not yet finalized, and changes are planned and expected. </description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/getting_started/</link>
+      <pubDate>Thu, 17 Sep 2020 17:52:58 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Modifier</title>
@@ -78,21 +131,6 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 Crossfade can be used to switch between C</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/animation/crossfade/</link>
       <pubDate>Tue, 15 Sep 2020 16:22:21 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Overview</title>
-      <description># Jetpack Compose Playground 
-
-
-## Introduction
-This is a collection of Jetpack Compose examples/tutorials and demos.
-
-## Show some :heart: and star t</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/</link>
-      <pubDate>Mon, 14 Sep 2020 21:46:21 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
@@ -262,47 +300,6 @@ Card is the implementation of a CardView in Co</description>
 &#34;Snackbars provide brief messages about ap</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/material/snackbar/</link>
       <pubDate>Thu, 10 Sep 2020 10:55:28 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>How to use an Android View in Compose</title>
-      <description># How to use an Android View in Compose
-
-!!! info
-    This is the API of version alpha02. Newer versions may have a different one
-
-Altough Compose its</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_an_android_view_in_compose/</link>
-      <pubDate>Wed, 09 Sep 2020 19:29:01 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Ambient</title>
-      <description># Ambient
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-Ambient is useful when you want to create a </description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</link>
-      <pubDate>Wed, 09 Sep 2020 19:29:01 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>How to detect dark mode</title>
-      <description># How to detect dark mode
-
-!!! info
-    This is the API of version alpha02. Newer versions may have a different one
-
-Inside your composable you can us</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</link>
-      <pubDate>Tue, 08 Sep 2020 19:19:20 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
     </item>
