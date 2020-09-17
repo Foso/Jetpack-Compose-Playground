@@ -3,10 +3,17 @@
 <span class=o>}</span>
  <span class=n>composeOptions</span> <span class=o>{</span>
         <span class=n>kotlinCompilerVersion</span> <span class=s2>&quot;1.4.0&quot;</span>
-        <span class=n>kotlinCompilerExtensionVersion</span> <span class=s2>&quot;1.0.0-alpha02&quot;</span>
+        <span class=n>kotlinCompilerExtensionVersion</span> <span class=s2>&quot;1.0.0-alpha03&quot;</span>
     <span class=o>}</span>
+
+<span class=n>tasks</span><span class=o>.</span><span class=na>withType</span><span class=o>(</span><span class=n>org</span><span class=o>.</span><span class=na>jetbrains</span><span class=o>.</span><span class=na>kotlin</span><span class=o>.</span><span class=na>gradle</span><span class=o>.</span><span class=na>tasks</span><span class=o>.</span><span class=na>KotlinCompile</span><span class=o>).</span><span class=na>configureEach</span> <span class=o>{</span>
+    <span class=n>kotlinOptions</span> <span class=o>{</span>
+        <span class=n>jvmTarget</span> <span class=o>=</span> <span class=s2>&quot;1.8&quot;</span>
+        <span class=n>freeCompilerArgs</span> <span class=o>+=</span> <span class=o>[</span><span class=s2>&quot;-Xallow-jvm-ir-dependencies&quot;</span><span class=o>,</span> <span class=s2>&quot;-Xskip-prerelease-check&quot;</span><span class=o>]</span>
+    <span class=o>}</span>
+<span class=o>}</span>
 </code></pre></div></p> <p>Below are all compose dependencies that are online available, you don&rsquo;t need to add all of them.</p> <div class=highlight><pre><span></span><code><span class=n>dependencies</span> <span class=o>{</span>
-    <span class=kt>def</span> <span class=n>compose_version</span> <span class=o>=</span> <span class=s2>&quot;1.0.0-alpha02&quot;</span>
+    <span class=kt>def</span> <span class=n>compose_version</span> <span class=o>=</span> <span class=s2>&quot;1.0.0-alpha03&quot;</span>
 
       <span class=n>implementation</span><span class=o>(</span><span class=s2>&quot;androidx.compose.runtime:runtime-dispatch:$compose_version&quot;</span><span class=o>)</span>
       <span class=n>implementation</span><span class=o>(</span><span class=s2>&quot;androidx.compose.runtime:runtime:$compose_version&quot;</span><span class=o>)</span>

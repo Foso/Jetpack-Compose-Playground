@@ -13,8 +13,16 @@ buildFeatures {
 }
  composeOptions {
         kotlinCompilerVersion "1.4.0"
-        kotlinCompilerExtensionVersion "1.0.0-alpha02"
+        kotlinCompilerExtensionVersion "1.0.0-alpha03"
     }
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs += ["-Xallow-jvm-ir-dependencies", "-Xskip-prerelease-check"]
+    }
+}
+
 
 ```
 
@@ -23,7 +31,7 @@ Below are all compose dependencies that are online available, you don't need to 
 ```groovy
 
 dependencies {
-    def compose_version = "1.0.0-alpha02"
+    def compose_version = "1.0.0-alpha03"
 
       implementation("androidx.compose.runtime:runtime-dispatch:$compose_version")
       implementation("androidx.compose.runtime:runtime:$compose_version")
