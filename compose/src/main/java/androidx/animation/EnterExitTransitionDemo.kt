@@ -228,7 +228,7 @@ fun FadeOptions(selectedOption: Int, onOptionSelected: (Int) -> Unit) {
                     onClick = { onOptionSelected(i) }
                 )
                 .padding(horizontal = 16.dp),
-                verticalGravity = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 RadioButton(
                     selected = (i == selectedOption),

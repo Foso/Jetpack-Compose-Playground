@@ -50,7 +50,7 @@ fun ProgressIndicatorDemo() {
         Row(
             modifier,
             horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalGravity = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically
         ) {
             // Indeterminate indicators
             LinearProgressIndicator()
