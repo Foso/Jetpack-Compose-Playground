@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Fri, 18 Sep 2020 21:50:07 -0000</pubDate>
-    <lastBuildDate>Fri, 18 Sep 2020 21:50:07 -0000</lastBuildDate>
+    <pubDate>Fri, 18 Sep 2020 21:56:00 -0000</pubDate>
+    <lastBuildDate>Fri, 18 Sep 2020 21:56:00 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -27,6 +27,43 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Compose for Android Developers</title>
+      <description># Compose for Android Developers
+This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
+The goal is to show how comm</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/android_devs/</link>
+      <pubDate>Fri, 18 Sep 2020 21:51:39 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>TextField</title>
+      <description># TextField
+
+!!! info
+    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
+
+TextField can be used to insert text. Thi</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/textfield/</link>
+      <pubDate>Fri, 18 Sep 2020 21:51:39 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Compiler Plugin</title>
+      <description># Compiler Plugin
+
+Compose works by transforming all Kotlin functions that are annotated with @Composable.
+To do that it uses a Kotlin Compiler Plugin</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/general/compiler_plugin/</link>
+      <pubDate>Fri, 18 Sep 2020 21:51:39 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
     
     <item>
       <title>Overview</title>
@@ -257,48 +294,6 @@ A [LazyRowFor](https://developer.and</description>
 
 When an app has layout content th</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablecolumn/</link>
-      <pubDate>Thu, 10 Sep 2020 10:55:28 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>ScrollableRow</title>
-      <description># ScrollableRow
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-When an app has layout content that m</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/scrollablerow/</link>
-      <pubDate>Thu, 10 Sep 2020 10:55:28 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Card</title>
-      <description># Card
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-Card is the implementation of a CardView in Co</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</link>
-      <pubDate>Thu, 10 Sep 2020 10:55:28 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
-      <title>Snackbar</title>
-      <description># Snackbar
-
-!!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
-
-&#34;Snackbars provide brief messages about ap</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/material/snackbar/</link>
       <pubDate>Thu, 10 Sep 2020 10:55:28 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       

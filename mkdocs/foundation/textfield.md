@@ -1,7 +1,7 @@
 # TextField
 
 !!! info
-    This is the API of version alpha03. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
 
 TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
 
