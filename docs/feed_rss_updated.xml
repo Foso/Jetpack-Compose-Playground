@@ -16,8 +16,8 @@
     
 
     <!-- Timestamps and frequency -->
-    <pubDate>Fri, 18 Sep 2020 21:56:00 -0000</pubDate>
-    <lastBuildDate>Fri, 18 Sep 2020 21:56:00 -0000</lastBuildDate>
+    <pubDate>Fri, 18 Sep 2020 22:02:16 -0000</pubDate>
+    <lastBuildDate>Fri, 18 Sep 2020 22:02:16 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -29,17 +29,6 @@
     <!-- Entries -->
     
     <item>
-      <title>Compose for Android Developers</title>
-      <description># Compose for Android Developers
-This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
-The goal is to show how comm</description>
-      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/android_devs/</link>
-      <pubDate>Fri, 18 Sep 2020 21:51:39 -0000</pubDate>
-      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
-      
-    </item>
-    
-    <item>
       <title>TextField</title>
       <description># TextField
 
@@ -48,6 +37,17 @@ The goal is to show how comm</description>
 
 TextField can be used to insert text. Thi</description>
       <link>https://github.com/Foso/Jetpack-Compose-Playground/foundation/textfield/</link>
+      <pubDate>Fri, 18 Sep 2020 21:56:58 -0000</pubDate>
+      <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
+      
+    </item>
+    
+    <item>
+      <title>Compose for Android Developers</title>
+      <description># Compose for Android Developers
+This page is inspired by https://flutter.dev/docs/get-started/flutter-for/android-devs. 
+The goal is to show how comm</description>
+      <link>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/android_devs/</link>
       <pubDate>Fri, 18 Sep 2020 21:51:39 -0000</pubDate>
       <source url="https://github.com/Foso/Jetpack-Compose-Playground/feed_rss_updated.xml">Jetpack Compose Playground</source>
       
