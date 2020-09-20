@@ -12,6 +12,7 @@ This is a community-driven collection of Jetpack Compose documentation/examples/
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![jCenter](https://img.shields.io/badge/Compose-1.0.0alpha03-green.svg
 )](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
+![Android Weekly](https://androidweekly.net/issues/issue-431/badge)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-range.svg?style=flat-square)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
@@ -52,7 +53,6 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [ScrollableColumn](foundation/scrollablecolumn.md)
 * [Shape](foundation/shape.md)
 * [Text](foundation/text.md)
-* [TextField](foundation/textfield.md)
 
 ## Material
 ---
@@ -67,6 +67,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Slider](material/slider.md)
 * [Snackbar](material/snackbar.md)
 * [Switch](material/switch.md)
+* [TextField](material/textfield.md)
 
 ## Looking for tutorials/sample code
 Take a look at the sidebar under "Guides & Samples" or check [Compose projects](compose_projects)

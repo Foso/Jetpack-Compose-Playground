@@ -26,7 +26,7 @@ private val TriangleShape = GenericShape { size ->
 ```
 
 Inside the GenericShape you can draw your custom shape.
-You have access to the **size**-object. This is size of the composable that the shape is applied to.
+You have access to the **size**-object. This is size of the Composable that the shape is applied to.
 You can get the height with **size.height** and the width with **size.width**
 
 
@@ -58,7 +58,7 @@ interface Shape {
     fun createOutline(size: Size, density: Density): Outline
 }
 ```
-You can extend the Shape interface to create your own implementation of Shape. Inside **createOutline** you get the size of the composable, which the shape is applied to and the density of the screen.
+You can extend the Shape interface to create your own implementation of Shape. Inside **createOutline** you get the size of the Composable, which the shape is applied to and the density of the screen.
 You have to return an instance of **Outline**. Outline is a sealed class with the following subclasses:
 
 * Rectangle(val rect: Rect)

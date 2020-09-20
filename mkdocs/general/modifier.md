@@ -3,8 +3,8 @@
 !!! info
     This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
-Modifiers can be used modify certain aspects of a composable.
-To set them, a composable needs to accept a modifier as a parameter.
+Modifiers can be used modify certain aspects of a Composable.
+To set them, a Composable needs to accept a modifier as a parameter.
 
 ## Combine modifiers    
 ```kotlin
@@ -48,7 +48,7 @@ This will set the width of the Composable to the maximum available width. This i
 This will set the height/width of the Composable to the maximum available height/width
 
 ####  Modifier.padding()
-You can use **Modifier.padding** to set padding to composables that take a modifier as an argument.
+You can use **Modifier.padding** to set padding to Composables that take a modifier as an argument.
 
 <p align="left">
   <img src ="../../images/general/modifier/PaddingExample.png" height=100 width=300 />

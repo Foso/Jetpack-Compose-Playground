@@ -3,14 +3,14 @@
     This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
 Ambient is useful when you want to create a dependency in a higher node of the layout tree and use it on lower node without having to
-pass it down the tree through every child composable.
+pass it down the tree through every child Composable.
 
 ## How to create an Ambient?
 ```kotlin
 data class User(val name: String, val age: Int)
 val ActiveUser = ambientOf<User> { error("No user found!") }
 ```
-Let's say you want to create an ambient with an User. You can use **ambientOf()**. Inside the function you can return an initial user object
+Let's say you want to create an Ambient with an User. You can use **ambientOf()**. Inside the function you can return an initial user object
  or you can throw an exception when the user is missing.
 
 ## How to provide a value for an Ambient?
