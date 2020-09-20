@@ -109,4 +109,4 @@ In Compose you can use a **[Text](https://foso.github.io/Jetpack-Compose-Playgro
 
 ### What is the equivalent of a EditText?
 The EditText is the standard text entry view in the Android View system. If the user needs to enter text into an app, this is the primary way for them to do that. 
-In Compose you can use **[TextField](https://foso.github.io/Jetpack-Compose-Playground/foundation/textfield/)**
+In Compose you can use **[TextField](https://foso.github.io/Jetpack-Compose-Playground/material/textfield/)**
