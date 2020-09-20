@@ -52,6 +52,21 @@ Provides a [Context] that can be used by Android applications.
 ### ConfigurationAmbient
 The [Configuration] is useful for determining how to organize the UI.
 
+#### Device orientation
+One of the things you can get from the ConfigurationAmbient is the orientation of your device. This can be used to give the user a different ui when the device is rotated.
+
+```kotlin
+val configuration = ConfigurationAmbient.current
+when (configuration.orientation) {
+    Configuration.ORIENTATION_LANDSCAPE -> {
+        Text("Landscape")
+    }
+    else -> {
+        Text("Portrait")
+    }
+}
+```
+
 ### LifecycleOwnerAmbient
 The ambient containing the current [LifecycleOwner].
 
