@@ -5,24 +5,25 @@
 
 In some cases, it’s useful to get the value of a textfield every time the text in a text field changes. For example, you might want to build a search screen with autocomplete functionality where you want to update the results as the user types.
 
-With Compose you have the following options:
+Here is an example how you can do it with Compose:
 
-## Supply an onValueChange() callback to a BaseTextField
+
 
 <p align="left">
   <img src ="../../images/TextFieldDemo.png"  />
 </p>
 
 ```kotlin
-
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun HandleTextFieldChanges() {
-    var textState by remember { mutableStateOf(TextFieldValue()) }
-
-    BaseTextField(value = textState, onValueChange = {
-        textState = it
-    })
+fun TextFieldDemo() {
+    Column(Modifier.padding(16.dp)) {
+        val textState = remember { mutableStateOf(TextFieldValue()) }
+        TextField(
+                value = textState.value,
+                onValueChange = { textState.value = it }
+        )
+        Text("The textfield has this text: " + textState.value.text)
+    }
 }
 ```
 

@@ -1,23 +1,30 @@
 # Contributing
 
 ## to Jetpack Compose
-If you want to improve Compose, join the Kotlin Slack and the #compose channel or file a bug at https://issuetracker.google.com/issues?q=componentid:612128
+If you want to improve Compose, join the Kotlin Slack and the **#compose** channel or file a bug at https://issuetracker.google.com/issues?q=componentid:612128
 
 ## to this project
-This project is using [MkDocs](https://www.mkdocs.org/) to generate the pages for Github. 
+This project is using [MkDocs](https://www.mkdocs.org/) and the [MkDocs-Material Theme](https://squidfunk.github.io/mkdocs-material/) to generate the pages for Github.
 The markdown files are located in [/mkdocs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs).
 The generated files for the github page are in [/docs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/docs). Do not make changes in this folder, they will be overriden
+
+* Install plugins
+
+```kotlin
+pip3 install mkdocs-minify-plugin
+pip3 install mkdocs-git-revision-date-localized-plugin
+```
 
 * Run docs locally
 
 To start the mkdocs server locally, run **mkdocs serve** in a terminal in the project folder.
 
-pip3 install mkdocs-minify-plugin
-pip3 install mkdocs-git-revision-date-localized-plugin
 
 * Add/Change docs
 
-The docs are written in markdown files which are all in [/mkdocs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs). To change the navigation sidebar, you need to edit the mkdocs.yml.
+The docs are written in markdown files which are all in [/mkdocs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mkdocs). To change the navigation sidebar, you need to edit the **mkdocs.yml**.
+
+* Build the docs
 
 When you run **mkdocs build** in a terminal in the project folder, the html files be generated to [/docs](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/docs)
 

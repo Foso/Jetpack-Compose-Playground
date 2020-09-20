@@ -36,3 +36,6 @@ fun ExtendedFloatingActionButtonDemo() {
 <p align="center">
   <img src ="../../images/material/floatingactionbutton/exfab.png" height=100 width=300 />
 </p>
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#floatingactionbutton)

@@ -1,15 +1,13 @@
 # ModalDrawerLayout
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
 
-With a ModalDrawerLayout you can create a navigation drawer. You can define a drawer state and an onStateChange function.
-You define the content of the drawer with **drawerContent** and the rest of your layout in **bodyContent**
+With a ModalDrawerLayout you can create a navigation drawer.
 
 <p align="left">
-  <img src ="../../images/modaldrawerClosed.png" height=100 width=300 />
-    <img src ="../../images/ModaldrawerOpened.png" height=100 width=300 />
-
+  <img src ="../../images/material/modaldrawer/modaldrawerClosed.png" height=100 width=300 />
+  <img src ="../../images/material/modaldrawer/ModaldrawerOpened.png" height=100 width=300 />
 </p>
 
 ```kotlin
@@ -38,3 +36,7 @@ fun ModalDrawerLayoutSample() {
     )
 }
 ```
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#modaldrawerlayout)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/material/modaldrawer/ModalDrawerLayoutSample.kt)

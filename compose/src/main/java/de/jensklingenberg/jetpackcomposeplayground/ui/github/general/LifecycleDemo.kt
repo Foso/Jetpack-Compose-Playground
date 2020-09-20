@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
+package de.jensklingenberg.jetpackcomposeplayground.ui.github.general
 
 
 import android.util.Log
@@ -23,16 +23,13 @@ import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.onActive
-import androidx.compose.runtime.onDispose
-import androidx.compose.runtime.state
+import androidx.compose.runtime.*
 
 
 @Composable
 fun LifecycleDemo() {
-    MaterialTheme {
-        val count = state { 0 }
+
+    val count = remember { mutableStateOf(0) }
 
         Column {
             Button( onClick = {
@@ -47,5 +44,5 @@ fun LifecycleDemo() {
                 Text(text = "You have clicked the button: " + count.value.toString())
             }
         }
-    }
+
 }

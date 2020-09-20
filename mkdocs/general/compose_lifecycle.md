@@ -1,9 +1,9 @@
-#Compose Lifecycle
+# Lifecycle
 
 !!! info
     This is the API of version alpha01. Newer versions may have a different one
     
-Compose has some "effects"-function that can be used in compose function to track the lifecycle of a function.
+Compose has some "effects"-functions that can be used in Composables to track the lifecycle of a function.
 
 * onActive {}
 willl be called the first time a compose function is applied.
@@ -21,7 +21,7 @@ When the count value gets 3 +onDispose{} inside the if-clause will be called.
 ```kotlin
 @Composable
 fun LifecycleDemo() {
-        val count = state { 0 }
+      val count = remember { mutableStateOf(0) }
 
         Column {
             Button(onClick = {
@@ -38,3 +38,8 @@ fun LifecycleDemo() {
         }
 }
 ```
+
+
+## See also:
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/general/LifecycleDemo.kt)
+

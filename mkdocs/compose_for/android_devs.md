@@ -6,7 +6,7 @@ The goal is to show how common use cases with the classic Android View system, c
 | ----------------------------------------- | ------------------------------------ |
 | Button  		    | [Button](../material/button.md)  |
 | TextView  		    | [Text](../foundation/text.md)  |
-| EditText  		    | [TextField](../foundation/textfield.md)  |
+| EditText  		    | [TextField](../material/textfield.md)  |
 | ImageView  		    | [Image](../foundation/image.md)  |
 | LinearLayout(horizontally)  		    | [Row](../layout/row.md)  |
 | LinearLayout(vertically)  		    | [Column](../layout/column.md)  |

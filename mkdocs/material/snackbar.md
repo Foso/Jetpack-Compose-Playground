@@ -1,7 +1,7 @@
 # Snackbar
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
 
 "Snackbars provide brief messages about app processes at the bottom of the screen."
     

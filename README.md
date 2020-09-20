@@ -48,7 +48,6 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [ScrollableColumn](https://foso.github.io/Jetpack-Compose-Playground/foundation/scrollablecolumn)
 * [Shape](https://foso.github.io/Jetpack-Compose-Playground/foundation/shape)
 * [Text](https://foso.github.io/Jetpack-Compose-Playground/foundation/text)
-* [TextField](https://foso.github.io/Jetpack-Compose-Playground/foundation/textfield)
 
 ### Material
 * [AlertDialog](https://foso.github.io/Jetpack-Compose-Playground/material/alertdialog)
@@ -59,6 +58,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [RadioGroup](https://foso.github.io/Jetpack-Compose-Playground/material/radiogroup)
 * [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold)
 * [Switch](https://foso.github.io/Jetpack-Compose-Playground/material/switch)
+* [TextField](https://foso.github.io/Jetpack-Compose-Playground/material/textfield)
 
 ### Cookbook
 
@@ -71,15 +71,15 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 | Overview | Material Studies > Rally |  Material Studies > Rally |
 | ------------------ | --------------------------- | ------------------ |
-|<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity.png" height="400" alt="Screenshot"/> | 
+|<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/RallyActivity.png" height="400" alt="Screenshot"/> |
 
 | Material Studies > Buttons & FABs | DialogExample | ControlledScrollDemo |
 | ------------------ | --------------------------- | ------------------ |
-| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
+| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
 
 | Material Studies > ListItems |
 | ------------------ |
-| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/ListItemActivity.png" height="400" alt="Screenshot"/> 
+| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/ListItemActivity.png" height="400" alt="Screenshot"/>
 
 
 </p>

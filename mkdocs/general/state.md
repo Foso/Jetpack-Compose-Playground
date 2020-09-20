@@ -1,4 +1,4 @@
-# Compose State
+# State
 
 ## Define a state
 val textState = mutableStateOf("Hello")
@@ -11,12 +11,12 @@ In this example we will create a composable with a Text and a Button. On a click
 
 <p align="center">
 Initial state:<br>
-  <img src ="../../images/state1.png"  />
+  <img src ="../../images/general/state/state1.png"  />
 </p>
 
 <p align="center">
 After Button click:<br>
-  <img src ="../../images/state2.png"  />
+  <img src ="../../images/general/state/state2.png"  />
 </p>
 
 
@@ -35,7 +35,7 @@ fun StateDemo(){
 ```
 
 ```kotlin
-    val countState = remember { mutableStateOf(0) }
+val countState = remember { mutableStateOf(0) }
 ```
 
 Here we define the state for the click counter with **mutableStateOf(0)**. 0 will be the initial value. Because 0 is an Int, the counterState will only allow values which are Int.

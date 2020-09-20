@@ -1,10 +1,10 @@
 # RadioButton
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
 
 <p align="left">
-  <img src ="../../images/material/radiogroup/RadioGroupExample.png" height=500 />
+  <img src ="../../images/material/radiobutton/RadioGroupExample.png" height=100 width=300 />
 </p>
 
 ```kotlin
@@ -40,3 +40,7 @@ fun RadioGroupSample() {
 }
 ```
 
+
+## See also:
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#radiobutton)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/material/radiobutton/RadioGroupSample.kt)

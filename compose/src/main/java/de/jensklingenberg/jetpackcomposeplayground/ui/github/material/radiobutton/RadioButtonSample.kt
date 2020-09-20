@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other
+package de.jensklingenberg.jetpackcomposeplayground.ui.github.material.radiobutton
 
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column

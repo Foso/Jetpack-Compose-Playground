@@ -63,6 +63,7 @@ nav:
           - 'Animation':
               - 'Crossfade': animation/crossfade.md
           - 'Foundation':
+              - 'BaseTextField': foundation/basetextfield.md
               - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md
               - 'Image': foundation/image.md
@@ -72,7 +73,6 @@ nav:
               - 'ScrollableColumn': foundation/scrollablecolumn.md
               - 'Shape' : foundation/shape.md
               - 'Text': foundation/text.md
-              - 'TextField': foundation/textfield.md
           - 'Layout':
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
@@ -85,11 +85,12 @@ nav:
               - 'Checkbox': material/checkbox.md
               - 'FloatingActionButton': material/floatingactionbutton.md
               - 'ModalDrawerLayout': material/modaldrawer.md
-              - 'RadioGroup': material/radiogroup.md
+              - 'RadioButton': material/radiobutton.md
               - 'Scaffold': material/scaffold.md
               - 'Slider': material/slider.md
               - 'Snackbar': material/snackbar.md
               - 'Switch': material/switch.md
+              - 'TextField': material/textfield.md
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
       - 'Resources': resources.md
@@ -116,7 +117,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - rss
   - git-revision-date-localized:
       type: date
   - minify:

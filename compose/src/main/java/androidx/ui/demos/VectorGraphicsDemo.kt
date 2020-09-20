@@ -47,7 +47,7 @@ fun VectorGraphicsDemo() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceEvenly,
-        horizontalGravity = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         val vectorAsset = loadVectorResource(R.drawable.ic_crane)
         vectorAsset.resource.resource?.let {

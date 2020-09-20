@@ -51,7 +51,7 @@ This will set the height/width of the Composable to the maximum available height
 You can use **Modifier.padding** to set padding to composables that take a modifier as an argument.
 
 <p align="left">
-  <img src ="../../images/PaddingExample.png" height=100 width=300 />
+  <img src ="../../images/general/modifier/PaddingExample.png" height=100 width=300 />
 </p>
 
 ```kotlin
