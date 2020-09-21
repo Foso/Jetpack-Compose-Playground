@@ -4,12 +4,12 @@ repo_name: Jetpack Compose Playground
 repo_url: https://github.com/Foso/Jetpack-Compose-Playground
 site_url: https://github.com/Foso/Jetpack-Compose-Playground
 site_dir: 'docs'
-docs_dir: 'mkdocs'
-edit_uri: 'tree/master/mkdocs/'
+docs_dir: 'docs'
+edit_uri: 'tree/master/docs/'
 theme:
   name: 'material'
   language: en
-  custom_dir: 'mkdocs/theme'
+  custom_dir: 'docs/theme'
   font:
     text: Ubuntu
     code: Jetbrains Mono
