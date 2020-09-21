@@ -5,7 +5,7 @@
 | ----------------------------------------- | ------------------------------------ |
 | Button  		    | [Button](../material/button.md)  |
 | Text  		    | [Text](../foundation/text.md)  |
-| EditText  	    | [TextField](../foundation/textfield.md)  |
+| EditText  	    | [TextField](../material/textfield.md)  |
 | Image  		    | [Image](../foundation/image.md)  |
 | HStack  		    | [Row](../layout/row.md)  |
 | VStack  		    | [Column](../layout/column.md)  |
