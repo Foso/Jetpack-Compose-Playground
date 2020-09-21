@@ -3,7 +3,6 @@ repo_name: Jetpack Compose Playground
 
 repo_url: https://github.com/Foso/Jetpack-Compose-Playground
 site_url: https://github.com/Foso/Jetpack-Compose-Playground
-site_dir: 'docs'
 docs_dir: 'docs'
 edit_uri: 'tree/master/docs/'
 theme:
