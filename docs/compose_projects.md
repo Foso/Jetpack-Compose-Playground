@@ -13,7 +13,8 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [JetDelivery](https://github.com/vipulasri/JetDelivery)  		    | JetDelivery is a sample food delivery app, built with Jetpack Compose.|
 | [Learn Jetpack Compose By Example](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example)  		    | This project contains various examples that show how you would do things the "Jetpack Compose" way|
 | [Full Compose Cookbook with Demo UIs](https://github.com/Gurupreet/ComposeCookBook)  		  | This project showcase all UI, Widgets, Animations and Demo UI samples.
-| [JetInstagram](https://github.com/vipulasri/JetInstagram)  		  | An Instagram UI clone app built with "Jetpack Compose" with Like Button Animation and instagram reels feature with exoplayer. 
+| [JetInstagram](https://github.com/vipulasri/JetInstagram)  		  | An Instagram UI clone app built with "Jetpack Compose" with Like Button Animation and instagram reels feature with exoplayer.
+| [DisneyCompose](https://github.com/skydoves/DisneyCompose) | A demo Disney app using compose and Hilt based on modern Android tech-stacks and MVVM architecture. Fetching data from the network and integrating persisted data in the database via repository pattern. Declarative UI version of the DisneyMotions using compose. 
 
 
 
