@@ -24,29 +24,29 @@
         <span class=p>)</span>
     <span class=p>}</span>
 <span class=p>}</span>
-</code></pre></div> <h1 id=working-with-text>Working with Text<a class=headerlink href=#working-with-text title="Permanent link">&para;</a></h1> <h2 id=normal-text>Normal text<a class=headerlink href=#normal-text title="Permanent link">&para;</a></h2> <p><p align=center> <img src=../../images/foundation/text/normal_text.png> </p></p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
+</code></pre></div> <h1 id=working-with-text>Working with Text<a class=headerlink href=#working-with-text title="Permanent link">&para;</a></h1> <h2 id=normal-text>Normal text<a class=headerlink href=#normal-text title="Permanent link">&para;</a></h2> <p align=center> <img src=../../images/foundation/text/normal_text.png> </p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
 <span class=k>fun</span> <span class=nf>NormalTextExample</span><span class=p>(){</span>
     <span class=n>Text</span><span class=p>(</span><span class=s>&quot;Just Text&quot;</span><span class=p>)</span>
 <span class=p>}</span>
-</code></pre></div> <h2 id=cursive-text>Cursive text<a class=headerlink href=#cursive-text title="Permanent link">&para;</a></h2> <p><p align=center> <img src=../../images/foundation/text/cursive_text.png> </p></p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
+</code></pre></div> <h2 id=cursive-text>Cursive text<a class=headerlink href=#cursive-text title="Permanent link">&para;</a></h2> <p align=center> <img src=../../images/foundation/text/cursive_text.png> </p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
 <span class=k>fun</span> <span class=nf>CursiveTextExample</span><span class=p>(){</span>
     <span class=n>Text</span><span class=p>(</span><span class=s>&quot;Text with cursive font&quot;</span><span class=p>,</span> <span class=n>style</span> <span class=p>=</span> <span class=n>TextStyle</span><span class=p>(</span><span class=n>fontFamily</span> <span class=p>=</span> <span class=n>Cursive</span><span class=p>))</span>
 <span class=p>}</span>
-</code></pre></div> <h2 id=text-with-linethrough>Text with LineThrough<a class=headerlink href=#text-with-linethrough title="Permanent link">&para;</a></h2> <p><p align=center> <img src=../../images/foundation/text/linethrough_text.png> </p></p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
+</code></pre></div> <h2 id=text-with-linethrough>Text with LineThrough<a class=headerlink href=#text-with-linethrough title="Permanent link">&para;</a></h2> <p align=center> <img src=../../images/foundation/text/linethrough_text.png> </p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
 <span class=k>fun</span> <span class=nf>TextWithLineThroughExample</span><span class=p>(){</span>
     <span class=n>Text</span><span class=p>(</span>
         <span class=n>text</span> <span class=p>=</span> <span class=s>&quot;Text with LineThrough&quot;</span><span class=p>,</span>
         <span class=n>style</span> <span class=p>=</span> <span class=n>TextStyle</span><span class=p>(</span><span class=n>textDecoration</span> <span class=p>=</span> <span class=n>TextDecoration</span><span class=p>.</span><span class=n>LineThrough</span><span class=p>)</span>
     <span class=p>)</span>
 <span class=p>}</span>
-</code></pre></div> <h2 id=text-with-underline>Text with underline<a class=headerlink href=#text-with-underline title="Permanent link">&para;</a></h2> <p><p align=center> <img src=../../images/foundation/text/underline_text.png> </p></p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
+</code></pre></div> <h2 id=text-with-underline>Text with underline<a class=headerlink href=#text-with-underline title="Permanent link">&para;</a></h2> <p align=center> <img src=../../images/foundation/text/underline_text.png> </p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
 <span class=k>fun</span> <span class=nf>TextWithUnderline</span><span class=p>(){</span>
     <span class=n>Text</span><span class=p>(</span>
         <span class=n>text</span> <span class=p>=</span> <span class=s>&quot;Text with underline&quot;</span><span class=p>,</span>
         <span class=n>style</span> <span class=p>=</span> <span class=n>TextStyle</span><span class=p>(</span><span class=n>textDecoration</span> <span class=p>=</span> <span class=n>TextDecoration</span><span class=p>.</span><span class=n>Underline</span><span class=p>)</span>
     <span class=p>)</span>
 <span class=p>}</span>
-</code></pre></div> <h2 id=text-with-underline-bold-and-linethrough>Text with underline, bold and linethrough<a class=headerlink href=#text-with-underline-bold-and-linethrough title="Permanent link">&para;</a></h2> <p><p align=center> <img src=../../images/foundation/text/underline_bold_linethrough_text.png> </p></p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
+</code></pre></div> <h2 id=text-with-underline-bold-and-linethrough>Text with underline, bold and linethrough<a class=headerlink href=#text-with-underline-bold-and-linethrough title="Permanent link">&para;</a></h2> <p align=center> <img src=../../images/foundation/text/underline_bold_linethrough_text.png> </p> <div class=highlight><pre><span></span><code><span class=n>@Composable</span>
 <span class=k>fun</span> <span class=nf>TextWithUnderlineStrikeThroughAndBold</span><span class=p>(){</span>
     <span class=n>Text</span><span class=p>(</span>
         <span class=n>text</span> <span class=p>=</span> <span class=s>&quot;Text with underline, linethrough and bold&quot;</span><span class=p>,</span>
