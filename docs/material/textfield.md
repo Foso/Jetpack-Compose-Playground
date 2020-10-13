@@ -23,7 +23,7 @@ fun TextFieldDemo() {
 }
 ```
 
-<hr>
+-------------
 ## See also:
 * [Handle changes in a TextField](https://foso.github.io/Jetpack-Compose-Playground/cookbook/textfield_changes/)
 * [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/material/textfield/TextFieldDemo.kt)
