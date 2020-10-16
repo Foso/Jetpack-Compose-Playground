@@ -1,7 +1,7 @@
 # LazyRowFor
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
     
 A [LazyRowFor](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary.html#LazyRowFor) is a horizontal scrolling list that only composes and lays out the currently visible items.
 It's similar to a  horizontal Recyclerview in the classic Android View system.
