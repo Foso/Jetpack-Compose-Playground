@@ -2,7 +2,7 @@
 A Shape can be used to draw a Composable in specific shape.
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
     
 ## RectangleShape
 
@@ -22,10 +22,8 @@ fun RectangleShapeDemo(){
 fun ExampleBox(shape: Shape){
     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp),
-            backgroundColor = Color.Red,
-            shape = shape
-        ) {}
+            modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
+        )
     }
 }
 ```
@@ -48,10 +46,8 @@ fun CircleShapeDemo(){
 fun ExampleBox(shape: Shape){
      Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp),
-            backgroundColor = Color.Red,
-            shape = shape
-        ) {}
+           modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
+        )
     }
 }
 ```
@@ -74,10 +70,8 @@ fun RoundedCornerShapeDemo(){
 fun ExampleBox(shape: Shape){
      Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp),
-            backgroundColor = Color.Red,
-            shape = shape
-        ) {}
+           modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
+        )
     }
 }
 ```
@@ -99,10 +93,8 @@ fun CutCornerShapeDemo(){
 fun ExampleBox(shape: Shape){
      Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp),
-            backgroundColor = Color.Red,
-            shape = shape
-        ) {}
+            modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
+        )
     }
 }
 ```
