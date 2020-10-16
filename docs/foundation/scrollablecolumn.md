@@ -1,7 +1,7 @@
 # ScrollableColumn
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
 
 
 When an app has layout content that might be longer than the height of the device and that content should be vertically scrollable, then we need to use a ScrollableColumn. It's similar to a ScrollView

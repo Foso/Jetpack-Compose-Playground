@@ -1,7 +1,7 @@
 # Scaffold
 
 !!! info
-    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
     
 A Scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or a Drawer.
 
