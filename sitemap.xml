@@ -136,6 +136,10 @@
      <lastmod>2020-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/box/</loc>
+     <lastmod>2020-10-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/column/</loc>
      <lastmod>2020-10-16</lastmod>
      <changefreq>daily</changefreq>
@@ -145,10 +149,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/row/</loc>
-     <lastmod>2020-10-16</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/stack/</loc>
      <lastmod>2020-10-16</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
