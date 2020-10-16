@@ -40,7 +40,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Scaffold](material/scaffold)
 * [Column](layout/column)
 * [Row](layout/row)
-* [Stack](layout/stack)
+* [Box](layout/box)
 
 ## Foundation
 ---

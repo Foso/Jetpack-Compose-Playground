@@ -9,7 +9,7 @@
 | Image  		    | [Image](../foundation/image.md)  |
 | HStack  		    | [Row](../layout/row.md)  |
 | VStack  		    | [Column](../layout/column.md)  |
-| ZStack  		    | [Stack](../layout/stack.md)  |
+| ZStack  		    | [Box](../layout/box.md)  |
 | LazyVStack  		| [LazyColumnFor](../foundation/lazycolumnfor.md)   |
 | LazyHStack  		| [LazyRowFor](../foundation/lazyrowfor.md)  |
 | ScrollView  		| [ScrollableRow](../foundation/scrollablerow.md)/[ScrollableColumn](../foundation/scrollablecolumn.md)  |

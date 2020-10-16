@@ -73,10 +73,10 @@ nav:
               - 'Shape' : foundation/shape.md
               - 'Text': foundation/text.md
           - 'Layout':
+              - 'Box': layout/box.md
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
               - 'Row': layout/row.md
-              - 'Stack': layout/stack.md
           - 'Material':
               - 'AlertDialog': material/alertdialog.md
               - 'Button': material/button.md
