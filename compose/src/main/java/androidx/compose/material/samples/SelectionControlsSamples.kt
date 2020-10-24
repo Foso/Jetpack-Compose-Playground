@@ -64,7 +64,7 @@ fun TriStateCheckboxSample() {
         TriStateCheckbox(
             state = parentState,
             onClick = onParentClick,
-            checkedColor = MaterialTheme.colors.primary
+            checkMarkColor = MaterialTheme.colors.primary
         )
         Column(Modifier.padding(10.dp, 0.dp, 0.dp, 0.dp)) {
             Checkbox(state, onStateChange)
@@ -103,12 +103,12 @@ fun RadioButtonSample() {
         RadioButton(
             selected = enterTheMatrix,
             onClick = { enterTheMatrix = true },
-            selectedColor = Color.Red
+            color = Color.Red
         )
         RadioButton(
             selected = !enterTheMatrix,
             onClick = { enterTheMatrix = false },
-            selectedColor = Color.Blue
+            color = Color.Blue
         )
     }
 }
