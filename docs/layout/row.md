@@ -3,7 +3,7 @@
 !!! info
     This is the API of version 1.0.0-alpha02. Newer versions may have a different one
 
-A Row will show each children next to the previous children. It' similar to a LinearLayout with horizontal orientation.
+A Row will show each child next to the previous children. It's similar to a LinearLayout with a horizontal orientation.
 
 
 <p align="left">
@@ -47,7 +47,7 @@ fun RowExample() {
     }
 }
 ```
-Row takes an Arrangement parameter. When you set it to **Arrangement.Center**, the children of Row will aligned in the center of Row.
+Row takes an Arrangement parameter. When you set it to **Arrangement.Center**, the children of Row will be aligned in the center of Row.
 
 <p align="left">
   <img src ="../../images/layout/row/arrange_center.png" />
@@ -63,7 +63,7 @@ fun RowExample() {
     }
 }
 ```
-Row takes an Arrangement parameter. When you set it to **Arrangement.End**, the children of Row will aligned at the end of Row.
+Row takes an Arrangement parameter. When you set it to **Arrangement.End**, the children of Row will be aligned at the end of Row.
 
 <p align="left">
   <img src ="../../images/layout/row/arrangement_end.png" />
