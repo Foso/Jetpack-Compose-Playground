@@ -32,12 +32,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.PointerEventPass
-import androidx.compose.ui.input.pointer.PointerInputChange
-import androidx.compose.ui.input.pointer.PointerInputFilter
-import androidx.compose.ui.input.pointer.PointerInputModifier
-import androidx.compose.ui.input.pointer.changedToDownIgnoreConsumed
-import androidx.compose.ui.input.pointer.changedToUpIgnoreConsumed
+import androidx.compose.ui.input.pointer.*
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
@@ -102,19 +97,19 @@ internal class PointerCounterGestureFilter : PointerInputFilter() {
 
     lateinit var onPointerCountChanged: (resultingPointerCount: Int) -> Unit
 
-    override fun onPointerInput(
-        changes: List<PointerInputChange>,
+    override fun onPointerEvent(
+        pointerEvent: PointerEvent,
         pass: PointerEventPass,
         bounds: IntSize
     ): List<PointerInputChange> {
         if (pass == PointerEventPass.Main) {
-            if (changes.any {
+            if (pointerEvent.changes.any {
                     it.changedToDownIgnoreConsumed() || it.changedToUpIgnoreConsumed()
                 }) {
-                onPointerCountChanged.invoke(changes.count { it.current.down })
+                onPointerCountChanged.invoke(pointerEvent.changes.count { it.current.down })
             }
         }
-        return changes
+        return pointerEvent.changes
     }
 
     override fun onCancel() {}

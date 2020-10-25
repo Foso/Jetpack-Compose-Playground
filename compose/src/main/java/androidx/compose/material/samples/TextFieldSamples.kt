@@ -21,10 +21,7 @@ import androidx.compose.foundation.Icon
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.EmphasisAmbient
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.TextField
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Info
@@ -124,7 +121,7 @@ fun TextFieldWithHelperMessage() {
         val textColor = if (invalidInput) {
             MaterialTheme.colors.error
         } else {
-            EmphasisAmbient.current.medium.applyEmphasis(MaterialTheme.colors.onSurface)
+            AmbientEmphasisLevels.current.medium.applyEmphasis(MaterialTheme.colors.onSurface)
         }
         Text(
             text = if (invalidInput) "Requires '@' and at least 5 symbols" else "Helper message",
