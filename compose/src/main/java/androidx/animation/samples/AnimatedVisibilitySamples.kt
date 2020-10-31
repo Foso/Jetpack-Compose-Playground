@@ -44,7 +44,6 @@ import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope.gravity
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.Stack
@@ -166,7 +165,6 @@ fun AnimatedFloatingActionButton() {
     var expanded by remember { mutableStateOf(true) }
     FloatingActionButton(
         onClick = { expanded = !expanded },
-        modifier = Modifier.gravity(Alignment.CenterHorizontally)
     ) {
         Row(Modifier.padding(start = 12.dp, end = 12.dp)) {
             Icon(Icons.Default.Favorite, Modifier.gravity(Alignment.CenterVertically))

@@ -20,23 +20,9 @@ import androidx.compose.foundation.Box
 import androidx.compose.foundation.Icon
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope.gravity
-import androidx.compose.foundation.layout.InnerPadding
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.preferredHeight
-import androidx.compose.foundation.layout.preferredWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.material.Checkbox
-import androidx.compose.material.EmphasisAmbient
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.RadioButton
-import androidx.compose.material.TextField
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Info
@@ -216,7 +202,7 @@ private fun TextFieldWithMessage(
     val typography = MaterialTheme.typography.caption
     val color = when (helperMessageOption) {
         Option.Helper -> {
-            EmphasisAmbient.current.medium.applyEmphasis(MaterialTheme.colors.onSurface)
+            AmbientEmphasisLevels.current.medium.applyEmphasis(MaterialTheme.colors.onSurface)
         }
         Option.Error -> MaterialTheme.colors.error
         else -> Color.Unset
@@ -234,11 +220,15 @@ private fun TextFieldWithMessage(
 
 @Composable
 private fun Title(title: String) {
-    Text(
-        text = title,
-        style = MaterialTheme.typography.body1,
-        modifier = Modifier.gravity(Alignment.CenterHorizontally)
-    )
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.body1,
+        )
+    }
     Spacer(Modifier.preferredHeight(10.dp))
 }
 

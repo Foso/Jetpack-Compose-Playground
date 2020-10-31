@@ -16,13 +16,7 @@
 
 package androidx.compose.foundation.demos
 
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.ContentColorAmbient
-import androidx.compose.foundation.ContentGravity
-import androidx.compose.foundation.Text
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.currentTextStyle
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -112,7 +106,7 @@ fun Button(modifier: Modifier, onClick: () -> Unit, children: @Composable () -> 
         paddingTop = 8.dp,
         paddingBottom = 8.dp
     ) {
-        Providers(ContentColorAmbient provides Color.White) {
+        Providers(AmbientContentColor provides Color.White) {
             children()
         }
     }
