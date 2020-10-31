@@ -18,11 +18,11 @@ package androidx.compose.animation.samples
 
 import androidx.annotation.Sampled
 import androidx.compose.animation.animateContentSize
-import androidx.compose.foundation.Box
 import androidx.compose.foundation.Text
+import androidx.compose.foundation.AmbientTextStyle
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.currentTextStyle
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -41,14 +41,16 @@ fun AnimateContent() {
     val shortText = "Hi"
     val longText = "Very long text\nthat spans across\nmultiple lines"
     var short by remember { mutableStateOf(true) }
-    Box(modifier = Modifier
-        .background(Color.Blue,
-            RoundedCornerShape(15.dp)
-        )
-        .clickable { short = !short }
-        .padding(20.dp)
-        .wrapContentSize()
-        .animateContentSize()
+    Box(
+        modifier = Modifier
+            .background(
+                Color.Blue,
+                RoundedCornerShape(15.dp)
+            )
+            .clickable { short = !short }
+            .padding(20.dp)
+            .wrapContentSize()
+            .animateContentSize()
     ) {
         Text(
             if (short) {
@@ -56,7 +58,7 @@ fun AnimateContent() {
             } else {
                 longText
             },
-            style = currentTextStyle().copy(color = Color.White)
+            style = AmbientTextStyle.current.copy(color = Color.White)
         )
     }
 }

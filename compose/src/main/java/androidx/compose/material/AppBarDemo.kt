@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package androidx.compose.material.demos
+package androidx.compose.material
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

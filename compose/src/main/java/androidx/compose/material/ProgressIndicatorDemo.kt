@@ -16,8 +16,7 @@
 
 package androidx.compose.material.demos
 
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -37,14 +36,14 @@ import androidx.compose.ui.unit.dp
 fun ProgressIndicatorDemo() {
     ScrollableColumn {
         val modifier = Modifier.weight(1f, true)
-            .gravity(Alignment.CenterHorizontally)
+            .align(Alignment.CenterHorizontally)
             .fillMaxWidth()
             .border(1.dp, MaterialTheme.colors.primary)
         // Determinate indicators
-        Box(modifier, gravity = ContentGravity.Center) {
+        Box(modifier, alignment = Alignment.Center) {
             LinearProgressIndicatorSample()
         }
-        Box(modifier, gravity = ContentGravity.Center) {
+        Box(modifier, alignment = Alignment.Center) {
             CircularProgressIndicatorSample()
         }
         Row(

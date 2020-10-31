@@ -14,20 +14,29 @@
  * limitations under the License.
  */
 
-package androidx.compose.foundation.demos
+package androidx.compose.foundation
 
+import androidx.compose.foundation.demos.DrawModifiersDemo
+import androidx.compose.foundation.demos.HighLevelGesturesDemo
+import androidx.compose.foundation.demos.LazyListDemos
 import androidx.compose.foundation.samples.ControlledScrollableRowSample
-import androidx.compose.foundation.samples.InteractionStateSample
+import androidx.compose.foundation.samples.MultipleInteractionStateSample
+import androidx.compose.foundation.samples.PriorityInteractionStateSample
 import androidx.compose.foundation.samples.ScrollableColumnSample
-import androidx.ui.demos.common.ComposableDemo
-import androidx.ui.demos.common.DemoCategory
+import androidx.ui.ComposableDemo
 
-val FoundationDemos = DemoCategory("Foundation", listOf(
-    ComposableDemo("Draggable, Scrollable, Zoomable") { HighLevelGesturesDemo() },
-    ComposableDemo("Scrollable Column") { ScrollableColumnSample() },
-    ComposableDemo("Controlled Scrollable Row") { ControlledScrollableRowSample() },
-    ComposableDemo("Draw Modifiers") { DrawModifiersDemo() },
-    ComposableDemo("Boxes") { BoxDemo() },
-    DemoCategory("Lazy lists", LazyListDemos),
-    ComposableDemo("InteractionState") { InteractionStateSample() }
-))
+
+import androidx.ui.DemoCategory
+
+val FoundationDemos = DemoCategory(
+    "Foundation",
+    listOf(
+        ComposableDemo("Draggable, Scrollable, Zoomable") { HighLevelGesturesDemo() },
+        ComposableDemo("Scrollable Column") { ScrollableColumnSample() },
+        ComposableDemo("Controlled Scrollable Row") { ControlledScrollableRowSample() },
+        ComposableDemo("Draw Modifiers") { DrawModifiersDemo() },
+        DemoCategory("Lazy lists", LazyListDemos),
+        ComposableDemo("Priority InteractionState") { PriorityInteractionStateSample() },
+        ComposableDemo("Multiple-interaction InteractionState") { MultipleInteractionStateSample() }
+    )
+)

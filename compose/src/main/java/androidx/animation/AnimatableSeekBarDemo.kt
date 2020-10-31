@@ -24,7 +24,7 @@ import androidx.compose.animation.core.TweenSpec
 import androidx.compose.animation.core.transitionDefinition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.transition
-import androidx.compose.foundation.Box
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
@@ -120,7 +120,10 @@ fun MovingTargetExample(clock: ManualAnimationClock) {
 fun DrawSeekBar(modifier: Modifier = Modifier, x: Float, clock: ManualAnimationClock) {
     Canvas(modifier.fillMaxWidth().preferredHeight(60.dp)) {
         val xConstraint = x.coerceIn(0f, size.width)
-        clock.clockTimeMillis = (400 * (x / size.width)).toLong().coerceIn(0, 399)
+        val clockTimeMillis = (400 * (x / size.width)).toLong().coerceIn(0, 399)
+        if (clock.clockTimeMillis != clockTimeMillis) {
+            clock.clockTimeMillis = clockTimeMillis
+        }
         // draw bar
         val barHeight = 10.0f
         val offset = Offset(0.0f, center.y - 5)

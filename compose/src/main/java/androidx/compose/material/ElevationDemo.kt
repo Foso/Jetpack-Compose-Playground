@@ -17,13 +17,12 @@
 package androidx.compose.material.demos
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.InnerPadding
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -32,6 +31,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
@@ -40,13 +40,13 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ElevationDemo() {
     Column {
-        Box(Modifier.padding(20.dp).fillMaxWidth(), gravity = ContentGravity.Center) {
+        Box(Modifier.padding(20.dp).fillMaxWidth(), alignment = Alignment.Center) {
             val text = getMessage(MaterialTheme.colors.isLight)
             Text(text)
         }
         ScrollableColumn(
             modifier = Modifier.fillMaxSize(),
-            contentPadding = InnerPadding(25.dp)
+            contentPadding = PaddingValues(25.dp)
         ) {
             elevations.forEach { elevation ->
                 ElevatedCard(elevation)
@@ -68,7 +68,7 @@ private fun ElevatedCard(elevation: Dp) {
                 .fillMaxWidth()
                 .preferredHeight(150.dp)
                 .clickable(onClick = {}),
-            gravity = ContentGravity.Center
+            alignment = Alignment.Center
         ) {
             Text("$elevation", style = MaterialTheme.typography.h4)
         }
@@ -88,10 +88,12 @@ private val elevations = listOf(
     24.dp
 )
 
-private fun getMessage(isLight: Boolean) = (if (isLight) {
-    "In a light theme elevation is represented by shadows"
-} else {
-    "In a dark theme elevation is represented by shadows and a translucent white overlay " +
+private fun getMessage(isLight: Boolean) = (
+    if (isLight) {
+        "In a light theme elevation is represented by shadows"
+    } else {
+        "In a dark theme elevation is represented by shadows and a translucent white overlay " +
             "applied to the surface"
-}) + "\n\nnote: drawing a small border around 0.dp elevation to make it visible where the card " +
-        "edges end"
+    }
+    ) + "\n\nnote: drawing a small border around 0.dp elevation to make it visible where the " +
+    "card edges end"

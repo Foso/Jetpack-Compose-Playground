@@ -17,14 +17,15 @@
 package androidx.compose.ui.demos.autofill
 
 import android.graphics.Rect
-import androidx.compose.foundation.BaseTextField
-import androidx.compose.foundation.Box
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Text
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.preferredHeight
+
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -37,7 +38,8 @@ import androidx.compose.ui.focusObserver
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.toComposeRect
 import androidx.compose.ui.layout.LayoutCoordinates
-import androidx.compose.ui.onPositioned
+import androidx.compose.ui.onGloballyPositioned
+
 import androidx.compose.ui.platform.AutofillAmbient
 import androidx.compose.ui.platform.AutofillTreeAmbient
 import androidx.compose.ui.text.input.ImeAction
@@ -63,7 +65,7 @@ fun ExplicitAutofillTypesDemo() {
             autofillTypes = listOf(AutofillType.PersonFullName),
             onFill = { nameState.value = TextFieldValue(it) }
         ) { autofillNode ->
-            BaseTextField(
+            TextField(
                 modifier = Modifier.focusObserver {
                     autofill?.apply {
                         if (it.isFocused) {
@@ -88,7 +90,7 @@ fun ExplicitAutofillTypesDemo() {
             autofillTypes = listOf(AutofillType.EmailAddress),
             onFill = { emailState.value = TextFieldValue(it) }
         ) { autofillNode ->
-            BaseTextField(
+            TextField(
                 modifier = Modifier.focusObserver {
                     autofill?.run {
                         if (it.isFocused) {
@@ -119,9 +121,11 @@ private fun Autofill(
     val autofillTree = AutofillTreeAmbient.current
     autofillTree += autofillNode
 
-    Box(Modifier.onPositioned {
-        autofillNode.boundingBox = it.boundingBox().toComposeRect()
-    }) {
+    Box(
+        Modifier.onGloballyPositioned {
+            autofillNode.boundingBox = it.boundingBox().toComposeRect()
+        }
+    ) {
         children(autofillNode)
     }
 }

@@ -23,8 +23,7 @@ import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.transitionDefinition
 import androidx.compose.animation.transition
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.Icon
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -39,6 +38,7 @@ import androidx.compose.foundation.layout.preferredSize
 import androidx.compose.foundation.layout.preferredWidth
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.ScrollableTabRow
 import androidx.compose.material.Tab
@@ -48,7 +48,6 @@ import androidx.compose.material.TabRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.emptyContent
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -74,7 +73,7 @@ fun TextTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Text tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -96,7 +95,7 @@ fun IconTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Icon tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -123,7 +122,7 @@ fun TextAndIconTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Text and icon tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -156,7 +155,7 @@ fun ScrollingTextTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Scrolling text tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -175,7 +174,7 @@ fun FancyTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Fancy tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -207,7 +206,7 @@ fun FancyIndicatorTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Fancy indicator tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -238,7 +237,7 @@ fun FancyIndicatorContainerTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Fancy transition tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -278,7 +277,7 @@ fun ScrollingFancyIndicatorContainerTabs() {
             }
         }
         Text(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = "Scrolling fancy transition tab ${state + 1} selected",
             style = MaterialTheme.typography.body1
         )
@@ -295,14 +294,13 @@ fun FancyTab(title: String, onClick: () -> Unit, selected: Boolean) {
         ) {
             Box(
                 Modifier.preferredSize(10.dp)
-                    .gravity(Alignment.CenterHorizontally)
-                    .background(color = if (selected) Color.Red else Color.White),
-                children = emptyContent()
+                    .align(Alignment.CenterHorizontally)
+                    .background(color = if (selected) Color.Red else Color.White)
             )
             Text(
                 text = title,
                 style = MaterialTheme.typography.body1,
-                modifier = Modifier.gravity(Alignment.CenterHorizontally)
+                modifier = Modifier.align(Alignment.CenterHorizontally)
             )
         }
     }
@@ -313,10 +311,11 @@ fun FancyTab(title: String, onClick: () -> Unit, selected: Boolean) {
 fun FancyIndicator(color: Color, modifier: Modifier = Modifier) {
     // Draws a rounded rectangular with border around the Tab, with a 5.dp padding from the edges
     // Color is passed in as a parameter [color]
-    Box(modifier
-        .padding(5.dp)
-        .fillMaxSize()
-        .border(BorderStroke(2.dp, color), RoundedCornerShape(5.dp))
+    Box(
+        modifier
+            .padding(5.dp)
+            .fillMaxSize()
+            .border(BorderStroke(2.dp, color), RoundedCornerShape(5.dp))
     )
 }
 

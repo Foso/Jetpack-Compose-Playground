@@ -18,10 +18,12 @@
 
 package androidx.compose.ui.demos
 
-import androidx.compose.foundation.Box
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Layout
+
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.id
@@ -35,8 +37,8 @@ fun HeaderFooterLayout(
     content: @Composable () -> Unit
 ) {
     Layout({
-        Box(Modifier.layoutId("header"), children = header)
-        Box(Modifier.layoutId("footer"), children = footer)
+        Box(Modifier.layoutId("header")) { header() }
+        Box(Modifier.layoutId("footer")) { footer() }
         content()
     }) { measurables, constraints ->
         val headerPlaceable = measurables.first { it.id == "header" }.measure(
@@ -50,7 +52,7 @@ fun HeaderFooterLayout(
         val contentMeasurables = measurables.filter { it.id == null }
         val itemHeight =
             (constraints.maxHeight - headerPlaceable.height - footerPlaceable.height) /
-                    contentMeasurables.size
+                contentMeasurables.size
         val contentPlaceables = contentMeasurables.map { measurable ->
             measurable.measure(Constraints.fixed(constraints.maxWidth, itemHeight))
         }
@@ -73,13 +75,13 @@ fun HeaderFooterLayout(
 @Composable
 fun MultipleCollectTest() {
     val header = @Composable {
-        Box(Modifier.fillMaxSize(), backgroundColor = Color(android.graphics.Color.GRAY))
+        Box(Modifier.fillMaxSize().background(Color(android.graphics.Color.GRAY)))
     }
     val footer = @Composable {
-        Box(Modifier.fillMaxSize(), backgroundColor = Color(android.graphics.Color.BLUE))
+        Box(Modifier.fillMaxSize().background(Color(android.graphics.Color.BLUE)))
     }
     HeaderFooterLayout(header = header, footer = footer) {
-        Box(Modifier.fillMaxSize(), backgroundColor = Color(android.graphics.Color.GREEN))
-        Box(Modifier.fillMaxSize(), backgroundColor = Color(android.graphics.Color.YELLOW))
+        Box(Modifier.fillMaxSize().background(Color(android.graphics.Color.GREEN)))
+        Box(Modifier.fillMaxSize().background(Color(android.graphics.Color.YELLOW)))
     }
 }

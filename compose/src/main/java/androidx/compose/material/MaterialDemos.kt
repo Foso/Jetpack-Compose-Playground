@@ -14,54 +14,88 @@
  * limitations under the License.
  */
 
-package androidx.compose.material.demos
+package androidx.compose.material
 
+
+
+import androidx.compose.material.demos.*
 import androidx.compose.material.samples.AlertDialogSample
+import androidx.compose.material.samples.BackdropScaffoldSample
 import androidx.compose.material.samples.BottomDrawerSample
 import androidx.compose.material.samples.CustomAlertDialogSample
 import androidx.compose.material.samples.EmphasisSample
+import androidx.compose.material.samples.ModalBottomSheetSample
 import androidx.compose.material.samples.ModalDrawerSample
+import androidx.compose.material.samples.BottomSheetScaffoldSample
 import androidx.compose.material.samples.ScaffoldWithBottomBarAndCutout
-import androidx.compose.material.samples.ScaffoldWithCoroutinesSnackbar
-import androidx.ui.demos.common.ActivityDemo
-import androidx.ui.demos.common.ComposableDemo
-import androidx.ui.demos.common.DemoCategory
 
-val MaterialDemos = DemoCategory("Material", listOf(
-    DemoCategory("AlertDialog", listOf(
-        ComposableDemo("Default dialog") { AlertDialogSample() },
-        ComposableDemo("Custom buttons") { CustomAlertDialogSample() }
-    )),
-    ComposableDemo("App Bars") { AppBarDemo() },
-    ComposableDemo("Bottom Navigation") { BottomNavigationDemo() },
-    ComposableDemo("Buttons & FABs") { ButtonDemo() },
-    DemoCategory("Navigation drawer", listOf(
-        ComposableDemo("Modal drawer") { ModalDrawerSample() },
-        ComposableDemo("Bottom drawer") { BottomDrawerSample() }
-    )),
-    ComposableDemo("Elevation") { ElevationDemo() },
-    ComposableDemo("Emphasis") { EmphasisSample() },
-    DemoCategory("ListItems", listOf(
-        ComposableDemo("ListItems") { ListItemDemo() },
-        ComposableDemo("Mixing RTL and LTR") { MixedRtlLtrListItemDemo() }
-    )),
-    ComposableDemo("Material Theme") { MaterialThemeDemo() },
-    ComposableDemo("Menus") { MenuDemo() },
-    DemoCategory(
-        "Playground", listOf(
-            ComposableDemo("Color Picker") { ColorPickerDemo() },
-            ActivityDemo("Dynamic Theme", DynamicThemeActivity::class)
+import androidx.compose.material.samples.ScaffoldWithSimpleSnackbar
+import androidx.compose.material.samples.SimpleScaffoldWithTopBar
+import androidx.ui.ActivityDemo
+import androidx.ui.ComposableDemo
+import androidx.ui.DemoCategory
+
+val MaterialDemos = DemoCategory(
+    "Material",
+    listOf(
+        DemoCategory(
+            "AlertDialog",
+            listOf(
+                ComposableDemo("Default dialog") { AlertDialogSample() },
+                ComposableDemo("Custom buttons") { CustomAlertDialogSample() }
+            )
+        ),
+        ComposableDemo("App Bars") { AppBarDemo() },
+        ComposableDemo("Backdrop") { BackdropScaffoldSample() },
+        ComposableDemo("Bottom Navigation") { BottomNavigationDemo() },
+        ComposableDemo("Bottom Sheet") { BottomSheetScaffoldSample() },
+        ComposableDemo("Buttons & FABs") { ButtonDemo() },
+        DemoCategory(
+            "Navigation drawer",
+            listOf(
+                ComposableDemo("Modal drawer") { ModalDrawerSample() },
+                ComposableDemo("Bottom drawer") { BottomDrawerSample() }
+            )
+        ),
+        ComposableDemo("Elevation") { ElevationDemo() },
+        ComposableDemo("Emphasis") { EmphasisSample() },
+        DemoCategory(
+            "ListItems",
+            listOf(
+                ComposableDemo("ListItems") { ListItemDemo() },
+                ComposableDemo("Mixing RTL and LTR") { MixedRtlLtrListItemDemo() }
+            )
+        ),
+        ComposableDemo("Material Theme") { MaterialThemeDemo() },
+        ComposableDemo("Menus") { MenuDemo() },
+        DemoCategory(
+            "Playground",
+            listOf(
+                ComposableDemo("Color Picker") { ColorPickerDemo() },
+                ActivityDemo("Dynamic Theme", DynamicThemeActivity::class)
+            )
+        ),
+        ComposableDemo("Modal bottom sheet") { ModalBottomSheetSample() },
+        ComposableDemo("Progress Indicators") { ProgressIndicatorDemo() },
+        DemoCategory(
+            "Scaffold",
+            listOf(
+                ComposableDemo("Scaffold with top bar") { SimpleScaffoldWithTopBar() },
+                ComposableDemo("Scaffold with docked FAB") { ScaffoldWithBottomBarAndCutout() },
+                ComposableDemo("Scaffold with snackbar") { ScaffoldWithSimpleSnackbar() }
+            )
+        ),
+        ComposableDemo("Selection Controls") { SelectionControlsDemo() },
+        ComposableDemo("Slider") { SliderDemo() },
+
+        ComposableDemo("Swipe to dismiss") { SwipeToDismissDemo() },
+        ComposableDemo("Tabs") { TabDemo() },
+        DemoCategory(
+            "TextFields",
+            listOf(
+                ComposableDemo("FilledTextField/OutlinedTextField") { MaterialTextFieldDemo() },
+                ComposableDemo("Multiple text fields") { TextFieldsDemo() }
+            )
         )
-    ),
-    ComposableDemo("Progress Indicators") { ProgressIndicatorDemo() },
-    ComposableDemo("Scaffold") { ScaffoldWithBottomBarAndCutout() },
-    ComposableDemo("Selection Controls") { SelectionControlsDemo() },
-    ComposableDemo("Slider") { SliderDemo() },
-    ComposableDemo("Snackbar") { ScaffoldWithCoroutinesSnackbar() },
-    ComposableDemo("Swipe to dismiss") { SwipeToDismissDemo() },
-    ComposableDemo("Tabs") { TabDemo() },
-    DemoCategory("TextFields", listOf(
-        ComposableDemo("FilledTextField/OutlinedTextField") { MaterialTextFieldDemo() },
-        ComposableDemo("Multiple text fields") { TextFieldsDemo() }
-    ))
-))
+    )
+)

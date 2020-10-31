@@ -4,10 +4,12 @@
     <application>
 
         <activity android:name="de.jensklingenberg.jetpackcomposeplayground.ui.MyComposeActivity" />
-        <activity android:name="androidx.ui.demos.DemoActivity" />
-        <activity android:name="androidx.ui.demos.DemoSettingsActivity" />
+
+
         <activity android:name="androidx.compose.material.demos.DynamicThemeActivity" />
-        <activity android:name="androidx.compose.material.studies.rally.RallyActivity" />
+
+        <activity android:name="androidx.compose.integration.demos.DemoActivity" />
+        <activity android:name="androidx.compose.integration.demos.DemoSettingsActivity" />
 
     </application>
 </manifest>

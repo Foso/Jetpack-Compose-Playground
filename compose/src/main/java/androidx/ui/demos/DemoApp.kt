@@ -24,12 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
-import androidx.ui.demos.common.ActivityDemo
-import androidx.ui.demos.common.ComposableDemo
-import androidx.ui.demos.common.Demo
-import androidx.ui.demos.common.DemoCategory
-import androidx.ui.demos.common.allLaunchableDemos
-import androidx.compose.foundation.Icon
+
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.clickable
@@ -38,6 +33,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.integration.demos.AllDemosCategory
+import androidx.compose.integration.demos.DemoFilter
+import androidx.compose.integration.demos.FilterAppBar
+import androidx.compose.integration.demos.Tags
+import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.ListItem
 import androidx.compose.material.MaterialTheme
@@ -52,6 +52,7 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.savedinstancestate.savedInstanceState
 import androidx.compose.ui.platform.LayoutDirectionAmbient
 import androidx.compose.ui.unit.dp
+import androidx.ui.*
 
 @Composable
 fun DemoApp(
@@ -69,18 +70,20 @@ fun DemoApp(
 
     var filterText by savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
 
-    Scaffold(topBar = {
-        DemoAppBar(
-            title = backStackTitle,
-            navigationIcon = navigationIcon,
-            launchSettings = launchSettings,
-            isFiltering = isFiltering,
-            filterText = filterText,
-            onFilter = { filterText = it },
-            onStartFiltering = onStartFiltering,
-            onEndFiltering = onEndFiltering
-        )
-    }) { innerPadding ->
+    Scaffold(
+        topBar = {
+            DemoAppBar(
+                title = backStackTitle,
+                navigationIcon = navigationIcon,
+                launchSettings = launchSettings,
+                isFiltering = isFiltering,
+                filterText = filterText,
+                onFilter = { filterText = it },
+                onStartFiltering = onStartFiltering,
+                onEndFiltering = onEndFiltering
+            )
+        }
+    ) { innerPadding ->
         val modifier = Modifier.padding(innerPadding)
         DemoContent(modifier, currentDemo, isFiltering, filterText.text, onNavigateToDemo)
     }

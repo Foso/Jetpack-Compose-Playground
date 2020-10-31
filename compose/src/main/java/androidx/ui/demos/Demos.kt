@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-package androidx.ui.demos
+package androidx.compose.integration.demos
 
-import androidx.compose.animation.demos.AnimationDemos
-import androidx.compose.foundation.demos.FoundationDemos
+
+
+import androidx.animation.AnimationDemos
+import androidx.compose.foundation.FoundationDemos
 import androidx.compose.foundation.layout.demos.LayoutDemos
 import androidx.compose.foundation.text.demos.TextDemos
+import androidx.compose.material.MaterialDemos
 import androidx.compose.ui.demos.CoreDemos
-import androidx.ui.demos.common.DemoCategory
-import androidx.compose.material.demos.MaterialDemos
-import androidx.compose.material.studies.MaterialStudies
+import androidx.ui.DemoCategory
 
 /**
  * [DemoCategory] containing all the top level demo categories.
@@ -31,13 +32,12 @@ import androidx.compose.material.studies.MaterialStudies
 val AllDemosCategory = DemoCategory(
     "Jetpack Compose Demos",
     listOf(
-       // AndroidViewDemos,
         AnimationDemos,
         FoundationDemos,
         CoreDemos,
         LayoutDemos,
         MaterialDemos,
-        MaterialStudies,
-        TextDemos,
+
+        TextDemos
     )
 )

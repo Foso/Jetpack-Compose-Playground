@@ -17,11 +17,14 @@
 package androidx.compose.material.samples
 
 import androidx.annotation.Sampled
-import androidx.compose.foundation.Icon
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.*
+import androidx.compose.material.AmbientEmphasisLevels
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.TextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Info
@@ -42,7 +45,8 @@ import androidx.compose.ui.unit.dp
 fun SimpleTextFieldSample() {
     var text by savedInstanceState { "" }
 
-    TextField(value = text,
+    TextField(
+        value = text,
         onValueChange = { text = it },
         label = { Text("Label") }
     )
@@ -65,9 +69,10 @@ fun SimpleOutlinedTextFieldSample() {
 fun TextFieldWithIcons() {
     var text by savedInstanceState { "" }
 
-    TextField(value = text,
+    TextField(
+        value = text,
         onValueChange = { text = it },
-        label = { Text("Label") },
+        placeholder = { Text("placeholder") },
         leadingIcon = { Icon(Icons.Filled.Favorite) },
         trailingIcon = { Icon(Icons.Filled.Info) }
     )
@@ -78,7 +83,8 @@ fun TextFieldWithIcons() {
 fun TextFieldWithPlaceholder() {
     var text by savedInstanceState { "" }
 
-    TextField(value = text,
+    TextField(
+        value = text,
         onValueChange = { text = it },
         label = { Text("Email") },
         placeholder = { Text("example@gmail.com") }
@@ -151,7 +157,8 @@ fun TextFieldSample() {
         TextFieldValue("example", TextRange(0, 7))
     }
 
-    TextField(value = text,
+    TextField(
+        value = text,
         onValueChange = { text = it },
         label = { Text("Label") }
     )
@@ -176,7 +183,8 @@ fun OutlinedTextFieldSample() {
 fun TextFieldWithHideKeyboardOnImeAction() {
     var text by savedInstanceState { "" }
 
-    TextField(value = text,
+    TextField(
+        value = text,
         onValueChange = { text = it },
         label = { Text("Label") },
         imeAction = ImeAction.Done,

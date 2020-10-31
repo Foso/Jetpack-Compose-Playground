@@ -32,16 +32,20 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.node.Ref
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.viewinterop.AndroidViewBinding
 
 @Composable
 fun ViewInteropDemo() {
     Column {
         // This is a collection of multiple ways to include Android Views in Compose UI hierarchies
         // and Compose in Android ViewGroups. Note that these APIs are subject to change.
+
+        // Compose and inflate a layout with ViewBinding.
 
 
 
@@ -68,12 +72,14 @@ fun ViewInteropDemo() {
             Text("Increase size of Android view")
         }
         val colorIndex = remember { mutableStateOf(0) }
-        Button(onClick = {
-            colorIndex.value = (colorIndex.value + 1) % 4
-            squareRef.value!!.color = arrayOf(
-                Color.Blue, Color.LightGray, Color.Yellow, Color.Cyan
-            )[colorIndex.value]
-        }) {
+        Button(
+            onClick = {
+                colorIndex.value = (colorIndex.value + 1) % 4
+                squareRef.value!!.color = arrayOf(
+                    Color.Blue, Color.LightGray, Color.Yellow, Color.Cyan
+                )[colorIndex.value]
+            }
+        ) {
             Text("Change color of Android view")
         }
     }

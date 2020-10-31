@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-package androidx.compose.material.demos
+package androidx.compose.material
+import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.material.icons.Icons
@@ -27,7 +28,6 @@ import androidx.compose.material.samples.TwoLineListItems
 import androidx.compose.material.samples.TwoLineRtlLtrListItems
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.imageResource
-import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 
 @Composable
 fun ListItemDemo() {

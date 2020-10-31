@@ -16,13 +16,27 @@
 
 package androidx.compose.material.demos
 
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.Icon
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.preferredWidth
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.material.*
+import androidx.compose.material.Checkbox
+import androidx.compose.material.AmbientEmphasisLevels
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.RadioButton
+import androidx.compose.material.TextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Info
@@ -47,7 +61,7 @@ import androidx.compose.ui.unit.dp
 fun TextFieldsDemo() {
     ScrollableColumn(
         modifier = Modifier.fillMaxHeight(),
-        contentPadding = InnerPadding(10.dp)
+        contentPadding = PaddingValues(10.dp)
     ) {
         Text("Password text field")
         PasswordTextField()
@@ -70,7 +84,7 @@ fun TextFieldsDemo() {
 
 @Composable
 fun MaterialTextFieldDemo() {
-    ScrollableColumn(contentPadding = InnerPadding(10.dp)) {
+    ScrollableColumn(contentPadding = PaddingValues(10.dp)) {
         var text by savedInstanceState { "" }
         var leadingChecked by savedInstanceState { false }
         var trailingChecked by savedInstanceState { false }
@@ -109,7 +123,7 @@ fun MaterialTextFieldDemo() {
             }
         }
 
-        Box(Modifier.preferredHeight(150.dp).gravity(Alignment.CenterHorizontally)) {
+        Box(Modifier.preferredHeight(150.dp).align(Alignment.CenterHorizontally)) {
             if (selectedOption == Option.None) {
                 textField()
             } else {
@@ -121,15 +135,16 @@ fun MaterialTextFieldDemo() {
             Title("Text field type")
             Column {
                 TextFieldType.values().map { it.name }.forEach { textType ->
-                    Row(Modifier
-                        .fillMaxWidth()
-                        .selectable(
-                            selected = (textType == selectedTextField.name),
-                            onClick = {
-                                selectedTextField = TextFieldType.valueOf(textType)
-                            }
-                        )
-                        .padding(horizontal = 16.dp)
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = (textType == selectedTextField.name),
+                                onClick = {
+                                    selectedTextField = TextFieldType.valueOf(textType)
+                                }
+                            )
+                            .padding(horizontal = 16.dp)
                     ) {
                         RadioButton(
                             selected = (textType == selectedTextField.name),
@@ -167,13 +182,14 @@ fun MaterialTextFieldDemo() {
             Title("Assistive text")
             Column {
                 Option.values().map { it.name }.forEach { text ->
-                    Row(Modifier
-                        .fillMaxWidth()
-                        .selectable(
-                            selected = (text == selectedOption.name),
-                            onClick = { selectedOption = Option.valueOf(text) }
-                        )
-                        .padding(horizontal = 16.dp)
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = (text == selectedOption.name),
+                                onClick = { selectedOption = Option.valueOf(text) }
+                            )
+                            .padding(horizontal = 16.dp)
                     ) {
                         RadioButton(
                             selected = (text == selectedOption.name),
@@ -205,11 +221,11 @@ private fun TextFieldWithMessage(
             AmbientEmphasisLevels.current.medium.applyEmphasis(MaterialTheme.colors.onSurface)
         }
         Option.Error -> MaterialTheme.colors.error
-        else -> Color.Unset
+        else -> Color.Unspecified
     }
 
     Column {
-        Box(modifier = Modifier.weight(1f), children = textField)
+        Box(modifier = Modifier.weight(1f, fill = false)) { textField() }
         Text(
             text = "Helper message",
             style = typography.copy(color = color),
@@ -219,16 +235,12 @@ private fun TextFieldWithMessage(
 }
 
 @Composable
-private fun Title(title: String) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.Center
-    ) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.body1,
-        )
-    }
+private fun ColumnScope.Title(title: String) {
+    Text(
+        text = title,
+        style = MaterialTheme.typography.body1,
+        modifier = Modifier.align(Alignment.CenterHorizontally)
+    )
     Spacer(Modifier.preferredHeight(10.dp))
 }
 

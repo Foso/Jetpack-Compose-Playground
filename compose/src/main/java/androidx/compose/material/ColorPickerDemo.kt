@@ -23,15 +23,14 @@ import androidx.compose.animation.core.transitionDefinition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.transition
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.ContentGravity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.Text
-import androidx.compose.foundation.currentTextStyle
+import androidx.compose.foundation.AmbientTextStyle
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.Stack
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -50,11 +49,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.WithConstraints
+
 import androidx.compose.ui.draw.drawOpacity
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Radius
 import androidx.compose.ui.geometry.RoundRect
 import androidx.compose.ui.gesture.DragObserver
 import androidx.compose.ui.gesture.dragGestureFilter
@@ -63,7 +64,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageAsset
 import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.graphics.isSet
+import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.platform.DensityAmbient
@@ -106,7 +107,7 @@ private fun ColorPicker(onColorChange: (Color) -> Unit) {
                 // Work out if the new position is inside the circle we are drawing, and has a
                 // valid color associated to it. If not, keep the current position
                 val newColor = colorWheel.colorForPosition(newPosition)
-                if (newColor.isSet) {
+                if (newColor.isSpecified) {
                     position = newPosition
                     onColorChange(newColor)
                 }
@@ -114,10 +115,10 @@ private fun ColorPicker(onColorChange: (Color) -> Unit) {
             onDragStateChange = { isDragging = it }
         )
 
-        Stack(Modifier.fillMaxSize()) {
+        Box(Modifier.fillMaxSize()) {
             Image(modifier = inputModifier, asset = colorWheel.image)
             val color = colorWheel.colorForPosition(position)
-            if (color.isSet) {
+            if (color.isSpecified) {
                 Magnifier(visible = isDragging, position = position, color = color)
             }
         }
@@ -184,13 +185,13 @@ private fun Magnifier(visible: Boolean, position: Offset, color: Color) {
             offset.preferredSize(width = MagnifierWidth, height = MagnifierHeight)
                 .drawOpacity(opacity)
         ) {
-            Box(Modifier.fillMaxWidth(), gravity = ContentGravity.Center) {
+            Box(Modifier.fillMaxWidth(), alignment = Alignment.Center) {
                 MagnifierLabel(Modifier.preferredSize(labelWidth, MagnifierLabelHeight), color)
             }
             Spacer(Modifier.weight(1f))
             Box(
                 Modifier.fillMaxWidth().preferredHeight(SelectionCircleDiameter),
-                gravity = ContentGravity.Center
+                alignment = Alignment.Center
             ) {
                 MagnifierSelectionCircle(Modifier.preferredSize(selectionDiameter), color)
             }
@@ -257,10 +258,10 @@ private val OpacityPropKey = FloatPropKey()
 private fun MagnifierLabel(modifier: Modifier, color: Color) {
     Surface(shape = MagnifierPopupShape, elevation = 4.dp) {
         Row(modifier) {
-            Box(Modifier.weight(0.25f).fillMaxHeight(), backgroundColor = color)
+            Box(Modifier.weight(0.25f).fillMaxHeight().background(color))
             // Add `#` and drop alpha characters
             val text = "#" + Integer.toHexString(color.toArgb()).toUpperCase(Locale.ROOT).drop(2)
-            val textStyle = currentTextStyle().copy(textAlign = TextAlign.Center)
+            val textStyle = AmbientTextStyle.current.copy(textAlign = TextAlign.Center)
             Text(
                 text = text,
                 modifier = Modifier.weight(0.75f).padding(top = 10.dp, bottom = 20.dp),
@@ -296,7 +297,7 @@ private val MagnifierPopupShape = GenericShape { size ->
     val arrowY = height * 0.8f
     val arrowXOffset = width * 0.4f
 
-    addRoundRect(RoundRect(0f, 0f, width, arrowY, radius = Radius(20f, 20f)))
+    addRoundRect(RoundRect(0f, 0f, width, arrowY, cornerRadius = CornerRadius(20f, 20f)))
 
     moveTo(arrowXOffset, arrowY)
     lineTo(width / 2f, height)
@@ -342,7 +343,7 @@ private fun ColorWheel.colorForPosition(position: Offset): Color {
     val x = position.x.toInt().coerceAtLeast(0)
     val y = position.y.toInt().coerceAtLeast(0)
     with(image.toPixelMap()) {
-        if (x >= width || y >= height) return Color.Unset
-        return this[x, y].takeIf { it.alpha == 1f } ?: Color.Unset
+        if (x >= width || y >= height) return Color.Unspecified
+        return this[x, y].takeIf { it.alpha == 1f } ?: Color.Unspecified
     }
 }

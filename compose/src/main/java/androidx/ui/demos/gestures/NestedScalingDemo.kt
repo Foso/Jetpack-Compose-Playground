@@ -25,6 +25,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Layout
+
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.gesture.RawScaleObserver
 import androidx.compose.ui.gesture.rawScaleGestureFilter
@@ -38,16 +39,19 @@ import kotlin.math.roundToInt
 fun NestedScalingDemo() {
     Column {
         Text("Demonstrates nested scaling.")
-        Text("As of now, this works the same way that nested scrolling does.  There is a scaling " +
+        Text(
+            "As of now, this works the same way that nested scrolling does.  There is a scaling " +
                 "region inside another scaling region. If you scale the inner region far " +
                 "enough, it will actually stop scaling and the outer region will scale instead. " +
-                "Or you can just scale the outer region (Scale out to get started)")
+                "Or you can just scale the outer region (Scale out to get started)"
+        )
         Layout(
             children = {
                 Scalable(.66666666f, Color(0xFFffeb3b.toInt())) {
                     Scalable(.5f, Color(0xFF4caf50.toInt())) {}
                 }
-            }) { measurables, constraints ->
+            }
+        ) { measurables, constraints ->
             val placeable = measurables.first().measure(constraints)
 
             layout(constraints.maxWidth, constraints.maxHeight) {
@@ -108,5 +112,6 @@ private fun Scalable(
                     (newConstraints.maxHeight - placeable.height) / 2
                 )
             }
-        })
+        }
+    )
 }

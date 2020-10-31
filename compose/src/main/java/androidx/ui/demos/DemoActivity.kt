@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package androidx.ui.demos
+package androidx.compose.integration.demos
 
 import android.app.Activity
 import android.content.Context
@@ -35,9 +35,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.preference.PreferenceManager
 import androidx.compose.ui.platform.setContent
-import androidx.ui.demos.common.ActivityDemo
-import androidx.ui.demos.common.Demo
-import androidx.ui.demos.common.DemoCategory
+
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
@@ -47,6 +45,10 @@ import androidx.compose.runtime.savedinstancestate.Saver
 import androidx.compose.runtime.savedinstancestate.listSaver
 import androidx.compose.runtime.savedinstancestate.rememberSavedInstanceState
 import androidx.compose.ui.graphics.Color
+import androidx.ui.ActivityDemo
+import androidx.ui.Demo
+import androidx.ui.DemoCategory
+import androidx.ui.demos.DemoApp
 
 /**
  * Main [Activity] containing all Compose related demos.
@@ -66,11 +68,13 @@ class DemoActivity : ComponentActivity() {
             }
             val demoColors = remember {
                 DemoColors().also {
-                    lifecycle.addObserver(LifecycleEventObserver { _, event ->
-                        if (event == Lifecycle.Event.ON_RESUME) {
-                          //  it.loadColorsFromSharedPreferences(this)
+                    lifecycle.addObserver(
+                        LifecycleEventObserver { _, event ->
+                            if (event == Lifecycle.Event.ON_RESUME) {
+                                it.loadColorsFromSharedPreferences(this)
+                            }
                         }
-                    })
+                    )
                 }
             }
             DemoTheme(demoColors, window) {
@@ -123,7 +127,6 @@ private fun DemoTheme(
         children()
     }
 }
-
 
 private val Colors.darkenedPrimary: Int
     get() = with(primary) {
@@ -252,7 +255,33 @@ private class FilterMode(backDispatcher: OnBackPressedDispatcher, initialValue: 
     }
 }
 
+/**
+ * Returns a [DemoColors] from the values saved to [SharedPreferences]. If a given color is
+ * not present in the [SharedPreferences], its default value as defined in [Colors]
+ * will be returned.
+ */
+fun DemoColors.loadColorsFromSharedPreferences(context: Context) {
+    val sharedPreferences =
+        PreferenceManager.getDefaultSharedPreferences(context)
 
+    fun getColorsFromSharedPreferences(isLightTheme: Boolean): Colors {
+        val function = if (isLightTheme) ::reflectLightColors else ::reflectDarkColors
+        val parametersToSet = function.parameters.mapNotNull { parameter ->
+            val savedValue = sharedPreferences.getString(parameter.name + isLightTheme, "")
+            if (savedValue.isNullOrBlank()) {
+                null
+            } else {
+                // TODO: should be a Color(savedValue.toLong(16)) when b/154329050 is fixed
+                val parsedColor = savedValue.toLong(16)
+                parameter to parsedColor
+            }
+        }.toMap()
+        return function.callBy(parametersToSet)
+    }
+
+    light = getColorsFromSharedPreferences(true)
+    dark = getColorsFromSharedPreferences(false)
+}
 
 /**
  * TODO: remove after b/154329050 is fixed

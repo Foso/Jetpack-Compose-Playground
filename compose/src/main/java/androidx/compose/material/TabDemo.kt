@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonConstants
 import androidx.compose.material.samples.FancyIndicatorContainerTabs
 import androidx.compose.material.samples.FancyIndicatorTabs
 import androidx.compose.material.samples.FancyTabs
@@ -64,11 +65,11 @@ fun TabDemo() {
         }
         Spacer(Modifier.height(24.dp))
         Button(
-            modifier = Modifier.gravity(Alignment.CenterHorizontally),
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             onClick = {
                 showingSimple.value = !showingSimple.value
             },
-            backgroundColor = Color.Cyan
+            colors = ButtonConstants.defaultButtonColors(backgroundColor = Color.Cyan)
         ) {
             Text(buttonText)
         }

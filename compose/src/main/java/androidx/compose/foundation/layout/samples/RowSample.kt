@@ -17,81 +17,93 @@
 package androidx.compose.foundation.layout.samples
 
 import androidx.annotation.Sampled
-import androidx.compose.foundation.Box
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.foundation.layout.preferredSize
-import androidx.compose.foundation.text.FirstBaseline
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Sampled
 @Composable
 fun SimpleRow() {
     Row {
         // The child with no weight will have the specified size.
-        Box(Modifier.preferredSize(40.dp, 80.dp), backgroundColor = Color.Magenta)
+        Box(Modifier.preferredSize(40.dp, 80.dp).background(Color.Magenta))
         // Has weight, the child will occupy half of the remaining width.
-        Box(Modifier.preferredHeight(40.dp).weight(1f), backgroundColor = Color.Yellow)
+        Box(Modifier.preferredHeight(40.dp).weight(1f).background(Color.Yellow))
         // Has weight and does not fill, the child will occupy at most half of the remaining width.
         // Therefore it will occupy 80.dp (its preferred width) if the assigned width is larger.
         Box(
-            Modifier.preferredSize(80.dp, 40.dp).weight(1f, fill = false),
-            backgroundColor = Color.Green
+            Modifier.preferredSize(80.dp, 40.dp)
+                .weight(1f, fill = false)
+                .background(Color.Green)
         )
     }
 }
 
 @Sampled
 @Composable
-fun SimpleGravityInRow() {
+fun SimpleAlignInRow() {
     Row(Modifier.fillMaxHeight()) {
-        // The child with no gravity modifier is positioned by default so that its top edge is
+        // The child with no align modifier is positioned by default so that its top edge is
         // aligned to the top of the vertical axis.
-        Box(Modifier.preferredSize(80.dp, 40.dp), backgroundColor = Color.Magenta)
+        Box(Modifier.preferredSize(80.dp, 40.dp).background(Color.Magenta))
         // Gravity.Top, the child will be positioned so that its top edge is aligned to the top
         // of the vertical axis.
         Box(
             Modifier.preferredSize(80.dp, 40.dp)
-                .gravity(Alignment.Top),
-            backgroundColor = Color.Red
+                .align(Alignment.Top)
+                .background(Color.Red)
         )
         // Gravity.Center, the child will be positioned so that its center is in the middle of
         // the vertical axis.
         Box(
             Modifier.preferredSize(80.dp, 40.dp)
-                .gravity(Alignment.CenterVertically),
-            backgroundColor = Color.Yellow
+                .align(Alignment.CenterVertically)
+                .background(Color.Yellow)
         )
         // Gravity.Bottom, the child will be positioned so that its bottom edge is aligned to the
         // bottom of the vertical axis.
         Box(
             Modifier.preferredSize(80.dp, 40.dp)
-                .gravity(Alignment.Bottom),
-            backgroundColor = Color.Green
+                .align(Alignment.Bottom)
+                .background(Color.Green)
         )
     }
 }
 
 @Sampled
 @Composable
-fun SimpleRelativeToSiblingsInRow() {
+fun SimpleAlignByInRow() {
     Row(Modifier.fillMaxHeight()) {
-        // Center of the colored rectangle is aligned to first baseline of the text.
+        // The center of the magenta Box and the baselines of the two texts will be
+        // vertically aligned. Note that alignBy() or alignByBaseline() has to be specified
+        // for all children we want to take part in the alignment. For example, alignByBaseline()
+        // means that the baseline of the text should be aligned with the alignment line
+        // (possibly another baseline) specified for siblings using alignBy or alignByBaseline.
+        // If no other sibling had alignBy() or alignByBaseline(), the modifier would have no
+        // effect.
         Box(
-            backgroundColor = Color.Red,
             modifier = Modifier.preferredSize(80.dp, 40.dp)
-                .alignWithSiblings { it.height / 2 }
+                .alignBy { it.height / 2 }
+                .background(Color.Magenta)
         )
         Text(
-            text = "Text.",
-            modifier = Modifier.alignWithSiblings(FirstBaseline).background(color = Color.Cyan)
+            text = "Text 1",
+            fontSize = 40.sp,
+            modifier = Modifier.alignByBaseline().background(color = Color.Red)
+        )
+        Text(
+            text = "Text 2",
+            modifier = Modifier.alignByBaseline().background(color = Color.Cyan)
         )
     }
 }

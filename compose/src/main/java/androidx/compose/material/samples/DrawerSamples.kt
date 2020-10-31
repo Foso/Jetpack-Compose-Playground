@@ -43,7 +43,7 @@ fun ModalDrawerSample() {
         drawerState = drawerState,
         drawerContent = {
             Button(
-                modifier = Modifier.gravity(Alignment.CenterHorizontally).padding(top = 16.dp),
+                modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 16.dp),
                 onClick = { drawerState.close() },
                 content = { Text("Close Drawer") }
             )
@@ -71,7 +71,7 @@ fun BottomDrawerSample() {
         drawerState = drawerState,
         drawerContent = {
             Button(
-                modifier = Modifier.gravity(Alignment.CenterHorizontally).padding(top = 16.dp),
+                modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 16.dp),
                 onClick = { drawerState.close() },
                 content = { Text("Close Drawer") }
             )

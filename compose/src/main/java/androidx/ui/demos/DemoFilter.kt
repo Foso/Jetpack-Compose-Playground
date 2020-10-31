@@ -14,38 +14,33 @@
  * limitations under the License.
  */
 
-package androidx.ui.demos
+package androidx.compose.integration.demos
 
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.material.*
+import androidx.compose.material.Icon
+import androidx.compose.material.TextField
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.key
 import androidx.compose.runtime.onCommit
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.ui.demos.common.Demo
-import androidx.compose.foundation.Icon
-import androidx.compose.foundation.ScrollableColumn
-import androidx.compose.foundation.Text
-import androidx.compose.foundation.BaseTextField
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.clickable
-import androidx.compose.ui.graphics.compositeOver
-import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.preferredHeight
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.IconButton
-import androidx.compose.material.ListItem
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.TopAppBar
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.ui.focus.ExperimentalFocus
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focusRequester
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.annotatedString
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.ui.Demo
 
 /**
  * A scrollable list of [launchableDemos], filtered by [filterText].
@@ -57,7 +52,8 @@ fun DemoFilter(launchableDemos: List<Demo>, filterText: String, onNavigate: (Dem
         .sortedBy { it.title }
     ScrollableColumn {
         filteredDemos.forEach { demo ->
-            FilteredDemoListItem(demo,
+            FilteredDemoListItem(
+                demo,
                 filterText = filterText,
                 onNavigate = {
                     onNavigate(it)
@@ -85,20 +81,20 @@ fun FilterAppBar(
             primary.copy(alpha = 0.08f).compositeOver(surface)
         }
         TopAppBar(backgroundColor = appBarColor, contentColor = onSurface) {
-            IconButton(modifier = Modifier.gravity(Alignment.CenterVertically), onClick = onClose) {
+            IconButton(modifier = Modifier.align(Alignment.CenterVertically), onClick = onClose) {
                 Icon(Icons.Filled.Close)
             }
             FilterField(
                 filterText,
                 onFilter,
-                Modifier.fillMaxWidth().gravity(Alignment.CenterVertically)
+                Modifier.fillMaxWidth().align(Alignment.CenterVertically)
             )
         }
     }
 }
 
 /**
- * [BaseTextField] that edits the current [filterText], providing [onFilter] when edited.
+ * [BasicTextField] that edits the current [filterText], providing [onFilter] when edited.
  */
 @Composable
 @OptIn(

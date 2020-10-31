@@ -18,11 +18,11 @@ package androidx.compose.animation.demos
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Box
 import androidx.compose.foundation.Text
+import androidx.compose.foundation.AmbientTextStyle
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.currentTextStyle
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -65,14 +65,16 @@ fun text() {
     val shortText = "Click me"
     val longText = "Very long text\nthat spans across\nmultiple lines"
     var short by remember { mutableStateOf(true) }
-    Box(modifier = Modifier
-        .background(Color.Blue,
-            RoundedCornerShape(15.dp)
-        )
-        .clickable { short = !short }
-        .padding(20.dp)
-        .wrapContentSize()
-        .animateContentSize { startSize, endSize -> println("$startSize -> $endSize") }
+    Box(
+        modifier = Modifier
+            .background(
+                Color.Blue,
+                RoundedCornerShape(15.dp)
+            )
+            .clickable { short = !short }
+            .padding(20.dp)
+            .wrapContentSize()
+            .animateContentSize { startSize, endSize -> println("$startSize -> $endSize") }
     ) {
         Text(
             if (short) {
@@ -80,7 +82,7 @@ fun text() {
             } else {
                 longText
             },
-            style = currentTextStyle().copy(color = Color.White)
+            style = AmbientTextStyle.current.copy(color = Color.White)
         )
     }
 }
@@ -99,7 +101,7 @@ fun button() {
             } else {
                 longText
             },
-            style = currentTextStyle().copy(color = Color.White),
+            style = AmbientTextStyle.current.copy(color = Color.White),
             modifier = Modifier.animateContentSize()
         )
     }
@@ -121,7 +123,7 @@ fun image() {
             } else {
                 "16 : 9"
             },
-            style = currentTextStyle().copy(color = Color.Black)
+            style = AmbientTextStyle.current.copy(color = Color.Black)
         )
     }
 }

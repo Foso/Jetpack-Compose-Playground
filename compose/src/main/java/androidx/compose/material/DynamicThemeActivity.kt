@@ -19,10 +19,10 @@ package androidx.compose.material.demos
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.compose.animation.core.FastOutSlowInEasing
-import androidx.compose.foundation.Box
-import androidx.compose.foundation.ContentGravity
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -42,6 +42,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
@@ -97,13 +98,16 @@ private fun DynamicThemeApp(scrollFraction: ScrollFraction, palette: Colors) {
             floatingActionButtonPosition = FabPosition.Center,
             isFloatingActionButtonDocked = true,
             bodyContent = { innerPadding ->
-                ScrollableColumn(scrollState = scrollState, children = {
-                    Column(Modifier.padding(innerPadding)) {
-                        repeat(20) { index ->
-                            Card(index)
+                ScrollableColumn(
+                    scrollState = scrollState,
+                    children = {
+                        Column(Modifier.padding(innerPadding)) {
+                            repeat(20) { index ->
+                                Card(index)
+                            }
                         }
                     }
-                })
+                )
             }
         )
     }
@@ -126,10 +130,9 @@ private fun Card(index: Int) {
     // colour from the Material theme to work out text colour, so we end up doing a
     // large amount of work here when the top level theme changes
     Box(
-        Modifier.padding(25.dp).fillMaxWidth().preferredHeight(150.dp),
-        shape = RoundedCornerShape(10.dp),
-        backgroundColor = shapeColor,
-        gravity = ContentGravity.Center
+        Modifier.padding(25.dp).fillMaxWidth().preferredHeight(150.dp)
+            .background(shapeColor, RoundedCornerShape(10.dp)),
+        alignment = Alignment.Center
     ) {
         Text("Card ${index + 1}", color = textColor)
     }

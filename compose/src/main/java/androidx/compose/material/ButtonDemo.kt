@@ -21,7 +21,7 @@ import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.InnerPadding
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -29,6 +29,7 @@ import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.foundation.layout.preferredSize
 import androidx.compose.foundation.shape.GenericShape
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonConstants
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedButton
 import androidx.compose.material.TextButton
@@ -51,7 +52,7 @@ private val DefaultSpace = 20.dp
 
 @Composable
 fun ButtonDemo() {
-    ScrollableColumn(contentPadding = InnerPadding(10.dp)) {
+    ScrollableColumn(contentPadding = PaddingValues(10.dp)) {
         Buttons()
         Spacer(Modifier.preferredHeight(DefaultSpace))
         Fabs()
@@ -75,7 +76,12 @@ private fun Buttons() {
     Spacer(Modifier.preferredHeight(DefaultSpace))
 
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
-        Button(onClick = {}, backgroundColor = MaterialTheme.colors.secondary) {
+        Button(
+            onClick = {},
+            colors = ButtonConstants.defaultButtonColors(
+                backgroundColor = MaterialTheme.colors.secondary
+            )
+        ) {
             Text("Secondary Color")
         }
         ButtonWithIconSample()
@@ -129,7 +135,9 @@ private fun CustomShapeButton() {
         onClick = {},
         modifier = Modifier.preferredSize(110.dp),
         shape = TriangleShape,
-        backgroundColor = Color.Yellow,
+        colors = ButtonConstants.defaultOutlinedButtonColors(
+            backgroundColor = Color.Yellow
+        ),
         border = BorderStroke(width = 2.dp, color = Color.Black)
     ) {
         Column {
