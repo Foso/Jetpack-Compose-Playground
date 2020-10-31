@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.layout
+package de.jensklingenberg.jetpackcomposeplayground.ui.github.general
 
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column

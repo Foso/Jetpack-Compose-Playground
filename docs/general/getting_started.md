@@ -15,7 +15,7 @@ buildFeatures {
 }
  composeOptions {
         kotlinCompilerVersion "1.4.0"
-        kotlinCompilerExtensionVersion "1.0.0-alpha04"
+        kotlinCompilerExtensionVersion "1.0.0-alpha06"
     }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
@@ -31,7 +31,7 @@ Below are all Compose dependencies that are online available, you don't need to 
 ```groovy
 
 dependencies {
-    def compose_version = "1.0.0-alpha05"
+    def compose_version = "1.0.0-alpha06"
 
      implementation("androidx.compose.runtime:runtime-dispatch:$compose_version")
      implementation("androidx.compose.runtime:runtime:$compose_version")
