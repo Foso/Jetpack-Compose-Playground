@@ -1,7 +1,7 @@
 # Button
 
 !!! info
-    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha06. Newer versions may have a different one
 
 A [Button](https://developer.android.com/reference/kotlin/androidx/ui/material/package-summary#button) has a onClick-Function. You can add a Text-Composable or any other composables as child elements of the Button.
 
@@ -12,7 +12,9 @@ A [Button](https://developer.android.com/reference/kotlin/androidx/ui/material/p
 ```kotlin
 @Composable
 fun ButtonExample() {
-    Button(onClick = { /* Do something! */ },backgroundColor = Color.Red) {
+    Button(onClick = { /* Do something! */ }, colors = ButtonConstants.defaultButtonColors(
+            backgroundColor = Color.Red
+    )) {
         Text("Button")
     }
 }
