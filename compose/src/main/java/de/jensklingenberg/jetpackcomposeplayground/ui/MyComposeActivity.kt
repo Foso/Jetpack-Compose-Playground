@@ -19,13 +19,14 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.platform.setContent
+import de.jensklingenberg.jetpackcomposeplayground.ui.github.animation.crossfade.CrossfadeDemo
 
 class MyComposeActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-           // HomeScreen()
+            CrossfadeDemo()
         }
     }
 }

@@ -1,7 +1,7 @@
 # Crossfade
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha06. Newer versions may have a different one
 
 Crossfade can be used to switch between Composables with an crossfade animation.
 
@@ -24,16 +24,18 @@ fun CrossfadeDemo() {
         Row {
             MyColors.values().forEach { myColors ->
                 Button(
-                    onClick = { currentColor = myColors },
-                    Modifier.weight(1f, true)
-                        .preferredHeight(48.dp), backgroundColor = myColors.color
+                        onClick = { currentColor = myColors },
+                        Modifier.weight(1f, true)
+                                .preferredHeight(48.dp), colors = ButtonConstants.defaultButtonColors(
+                        backgroundColor = myColors.color
+                )
                 ) {
                     Text(myColors.name)
                 }
             }
         }
         Crossfade(current = currentColor, animation = tween(3000)) { selectedColor ->
-            Box(Modifier.fillMaxSize(), backgroundColor = selectedColor.color)
+            Box(modifier = Modifier.fillMaxSize().background(selectedColor.color))
         }
     }
 }
@@ -44,7 +46,7 @@ As you can see in the video above, this demo consists of a screen with 3 buttons
 
 ```kotlin
 Crossfade(current = currentColor, animation = tween(3000)) { selectedColor ->
- Box(Modifier.fillMaxSize(), backgroundColor = selectedColor.color)
+    Box(modifier = Modifier.fillMaxSize().background(selectedColor.color))
 }
 ```
 
