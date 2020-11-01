@@ -2,7 +2,6 @@ package de.jensklingenberg.jetpackcomposeplayground.ui.github.animation.crossfad
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.tween
-
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

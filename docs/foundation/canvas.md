@@ -1,15 +1,13 @@
 # Canvas
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha06. Newer versions may have a different one
 
 ## How to draw on Canvas
 
 <p align="left">
   <img src ="../../images/foundation/canvas/CanvasDrawExample.png" height=100 width=300 />
 </p>
-
-
 
 ```kotlin
 @Preview(showBackground = true)

@@ -63,7 +63,6 @@ nav:
               - 'Crossfade': animation/crossfade.md
           - 'Foundation':
               - 'BaseTextField': foundation/basetextfield.md
-              - 'Box': foundation/box.md
               - 'Canvas': foundation/canvas.md
               - 'Image': foundation/image.md
               - 'LazyColumnFor': foundation/lazycolumnfor.md
