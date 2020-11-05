@@ -4,38 +4,6 @@
      <lastmod>2020-11-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/overview/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/textfield_changes/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_compose_in_viewgroup/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_an_android_view_in_compose/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/get_android_context/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_create_custom_shape/</loc>
-     <lastmod>2020-11-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</loc>
      <lastmod>2020-11-05</lastmod>
      <changefreq>daily</changefreq>
@@ -89,6 +57,42 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/state/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/desktop/overview/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/overview/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/textfield_changes/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_compose_in_viewgroup/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_an_android_view_in_compose/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/get_android_context/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</loc>
+     <lastmod>2020-11-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_create_custom_shape/</loc>
      <lastmod>2020-11-05</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
