@@ -32,6 +32,25 @@ extra:
 nav:
   - 'Jetpack Compose':
       - 'Overview': index.md
+      - 'General':
+          - 'Ambient': general/ambient.md
+          - 'Codelabs': general/codelabs.md
+          - 'Compiler Plugin': general/compiler_plugin.md
+          - 'Compose for:':
+            - 'Compose for Android Developers': compose_for/android_devs.md
+            - 'Compose for SwiftUI Developers': compose_for/swiftui_devs.md
+          - 'Compose Lifecycle': general/compose_lifecycle.md
+          - 'Hello World Compose': general/helloworld.md
+          - 'Providers': general/providers.md
+          - 'Modifier': general/modifier.md
+          - 'Preview':
+            - 'Preview': general/preview/preview.md
+            - 'PreviewParameter': general/preview/previewparameter.md
+            - 'Roadmap': general/roadmap.md
+            - 'Project Setup': general/getting_started.md
+            - 'State': general/state.md
+      - 'Desktop':
+           - 'Overview': desktop/overview.md
       - 'Cookbook':
            - 'Overview': cookbook/overview.md
            - 'Handle changes to a text field': cookbook/textfield_changes.md
@@ -42,23 +61,6 @@ nav:
            - 'How to detect dark mode': cookbook/detect_darkmode.md
            - 'How to create a custom shape': cookbook/how_to_create_custom_shape.md
       - 'Guides & Samples':
-          - 'General':
-              - 'Ambient': general/ambient.md
-              - 'Codelabs': general/codelabs.md
-              - 'Compiler Plugin': general/compiler_plugin.md
-              - 'Compose for:':
-                  - 'Compose for Android Developers': compose_for/android_devs.md
-                  - 'Compose for SwiftUI Developers': compose_for/swiftui_devs.md
-              - 'Compose Lifecycle': general/compose_lifecycle.md
-              - 'Hello World Compose': general/helloworld.md
-              - 'Providers': general/providers.md
-              - 'Modifier': general/modifier.md
-              - 'Preview':
-                  - 'Preview': general/preview/preview.md
-                  - 'PreviewParameter': general/preview/previewparameter.md
-              - 'Roadmap' : general/roadmap.md
-              - 'Project Setup': general/getting_started.md
-              - 'State': general/state.md
           - 'Animation':
               - 'Crossfade': animation/crossfade.md
           - 'Foundation':

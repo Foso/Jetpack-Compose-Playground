@@ -10,7 +10,7 @@ The goal is to show how common use cases with the classic Android View system, c
 | ImageView  		    | [Image](../foundation/image.md)  |
 | LinearLayout(horizontally)  		    | [Row](../layout/row.md)  |
 | LinearLayout(vertically)  		    | [Column](../layout/column.md)  |
-| FrameLayout  		    | [Stack](../layout/stack.md)  |
+| FrameLayout  		    | [Box](../layout/box.md)  |
 | RecyclerView  		    | [LazyColumnFor](../foundation/lazycolumnfor.md)  |
 | RecyclerView(horizontally)  		    | [LazyRowFor](../foundation/lazyrowfor.md)  |
 | Snackbar  		    | [Snackbar](../material/snackbar.md)  |
