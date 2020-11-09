@@ -1,4 +1,4 @@
-<h1 align="center">Jetpack Compose Playground</h1>
+<h1 align="center">Jetpack/JetBrains Compose Playground</h1>
 
 ## Introduction 🙋‍♂️
 This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the github page https://foso.github.io/compose. You can find the code samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)

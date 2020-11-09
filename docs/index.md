@@ -1,8 +1,8 @@
-# Jetpack Compose Playground 
+# Jetpack/JetBrains Compose Playground
 
 
 ## Introduction
-This is a community-driven collection of Jetpack Compose documentation/examples/tutorials and demos.
+This is a community-driven collection of Jetpack/JetBrains Compose documentation/examples/tutorials and demos.
 
 ## Show some :heart: and star the repo to support the project
 

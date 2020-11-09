@@ -30,7 +30,7 @@ extra:
     - icon: fontawesome/solid/external-link-alt
       link: 'http://www.jensklingenberg.de'
 nav:
-  - 'Jetpack Compose':
+  - 'Jetpack/JetBrains Compose':
       - 'Overview': index.md
       - 'General':
           - 'Ambient': general/ambient.md
@@ -51,6 +51,12 @@ nav:
             - 'State': general/state.md
       - 'Desktop':
            - 'Overview': desktop/overview.md
+           - 'General':
+               - 'Getting started': desktop/general/gettingstarted.md
+               - 'Keyboard': desktop/general/keyboard.md
+               - 'Window': desktop/general/window.md
+               - 'Mouse': desktop/general/mouse.md
+               - 'Scrollbar': desktop/general/scrollbar.md
       - 'Cookbook':
            - 'Overview': cookbook/overview.md
            - 'Handle changes to a text field': cookbook/textfield_changes.md
