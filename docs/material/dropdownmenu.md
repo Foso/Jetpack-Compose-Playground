@@ -3,9 +3,49 @@
 !!! info
     This is the API of version 1.0.0-alpha06. Newer versions may have a different one
 
+The DropdownMenu Composable can be used to create DropdownMenu.
+
 <p align="center">
   <img src ="../../images/material/dropdownmenu/dropdown.png"  />
 </p>
+
+```kotlin
+@Composable
+fun DropdownMenu(
+    toggle: @Composable () -> Unit,
+    expanded: Boolean,
+    onDismissRequest: () -> Unit,
+    toggleModifier: Modifier = Modifier,
+    dropdownOffset: Position = Position(0.dp, 0.dp),
+    dropdownModifier: Modifier = Modifier,
+    dropdownContent: @Composable ColumnScope.() -> Unit
+)
+```
+
+**toggle**
+
+This is the layout of the DropdownMenu.
+
+**expanded**
+
+If true, the popupmenu with the dropdownContent will be shown
+
+**onDismissRequest**
+
+Called when the menu should be dismiss
+
+**toggleModifier**
+
+Here you can apply a modifier for **toggle**
+
+**dropdownModifier**
+
+Here you can apply a modifier for the popupmenu that shows the dropdownContent
+
+**dropdownContent**
+
+This is the content that will be shown inside the menu. You can use any Composable, but you can use DropdownMenuItem, for a item that follows material design spec
+
 
 ```kotlin
 @Preview
