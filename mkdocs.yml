@@ -88,6 +88,7 @@ nav:
               - 'AlertDialog': material/alertdialog.md
               - 'Button': material/button.md
               - 'Card': material/card.md
+              - 'DropdownMenu': material/dropdownmenu.md
               - 'Checkbox': material/checkbox.md
               - 'FloatingActionButton': material/floatingactionbutton.md
               - 'ModalDrawerLayout': material/modaldrawer.md

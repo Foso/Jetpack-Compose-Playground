@@ -19,15 +19,19 @@ package de.jensklingenberg.jetpackcomposeplayground.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.platform.setContent
-import de.jensklingenberg.jetpackcomposeplayground.ui.github.animation.crossfade.CrossfadeDemo
+import de.jensklingenberg.jetpackcomposeplayground.ui.github.material.dropdown.DropdownDemo
+
 
 class MyComposeActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CrossfadeDemo()
+            DropdownDemo()
         }
     }
-}
 
+
+
+
+}
