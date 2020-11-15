@@ -16,14 +16,22 @@
 
 package androidx.compose.integration.demos
 
-import androidx.compose.foundation.*
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.ScrollableColumn
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.*
-import androidx.compose.material.Icon
-import androidx.compose.material.TextField
+import androidx.compose.foundation.text.BasicTextField
 
+import androidx.compose.material.AmbientContentColor
+import androidx.compose.material.AmbientTextStyle
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
+import androidx.compose.material.ListItem
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.Composable
@@ -55,9 +63,7 @@ fun DemoFilter(launchableDemos: List<Demo>, filterText: String, onNavigate: (Dem
             FilteredDemoListItem(
                 demo,
                 filterText = filterText,
-                onNavigate = {
-                    onNavigate(it)
-                }
+                onNavigate = onNavigate
             )
         }
     }
@@ -108,10 +114,12 @@ private fun FilterField(
 ) {
     val focusRequester = FocusRequester()
     // TODO: replace with Material text field when available
-    BaseTextField(
+    BasicTextField(
         modifier = modifier.focusRequester(focusRequester),
         value = filterText,
-        onValueChange = onFilter
+        onValueChange = onFilter,
+        textStyle = AmbientTextStyle.current,
+        cursorColor = AmbientContentColor.current
     )
     onCommit { focusRequester.requestFocus() }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Android Open Source Project
+ * Copyright 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package androidx.compose.foundation.text.demos
+package androidx.compose.foundation.demos.text
 
 import androidx.compose.foundation.ScrollableColumn
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.TextField
-
+import androidx.compose.material.Text
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.savedinstancestate.savedInstanceState
 import androidx.compose.ui.Modifier
@@ -244,11 +244,14 @@ private fun VariousEditLine(
     visualTransformation: VisualTransformation
 ) {
     val state = savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
-    TextField(
+    BasicTextField(
         modifier = demoTextFieldModifiers,
         value = state.value,
-        keyboardType = keyboardType,
-        imeAction = imeAction,
+        maxLines = 1,
+        keyboardOptions = KeyboardOptions(
+            keyboardType = keyboardType,
+            imeAction = imeAction
+        ),
         visualTransformation = visualTransformation,
         onValueChange = {
             val value = onValueChange(state.value.text, it.text)
@@ -274,7 +277,7 @@ private fun HintEditText(hintText: @Composable () -> Unit) {
     val state = savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
 
     Box(demoTextFieldModifiers) {
-        TextField(
+        BasicTextField(
             modifier = Modifier.fillMaxWidth(),
             value = state.value,
             onValueChange = { state.value = it },

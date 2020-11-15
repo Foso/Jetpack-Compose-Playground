@@ -17,13 +17,14 @@
 package androidx.compose.material.samples
 
 import androidx.annotation.Sampled
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.AmbientEmphasisLevels
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.ContentAlpha
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
@@ -40,17 +41,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 
-@Sampled
-@Composable
-fun SimpleTextFieldSample() {
-    var text by savedInstanceState { "" }
 
-    TextField(
-        value = text,
-        onValueChange = { text = it },
-        label = { Text("Label") }
-    )
-}
 
 @Sampled
 @Composable
@@ -127,7 +118,7 @@ fun TextFieldWithHelperMessage() {
         val textColor = if (invalidInput) {
             MaterialTheme.colors.error
         } else {
-            AmbientEmphasisLevels.current.medium.applyEmphasis(MaterialTheme.colors.onSurface)
+            MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.medium)
         }
         Text(
             text = if (invalidInput) "Requires '@' and at least 5 symbols" else "Helper message",
@@ -146,7 +137,7 @@ fun PasswordTextField() {
         onValueChange = { password = it },
         label = { Text("Enter password") },
         visualTransformation = PasswordVisualTransformation(),
-        keyboardType = KeyboardType.Password
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
     )
 }
 
@@ -187,7 +178,7 @@ fun TextFieldWithHideKeyboardOnImeAction() {
         value = text,
         onValueChange = { text = it },
         label = { Text("Label") },
-        imeAction = ImeAction.Done,
+        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
         onImeActionPerformed = { action, softwareController ->
             if (action == ImeAction.Done) {
                 softwareController?.hideSoftwareKeyboard()

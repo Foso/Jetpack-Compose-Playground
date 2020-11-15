@@ -7,14 +7,15 @@ import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.state
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 
 
 @Composable
 fun AlertDialogSample() {
     MaterialTheme {
         Column {
-            val openDialog = state { false }
+            val openDialog = remember { mutableStateOf(false)  }
 
             Button(onClick = {
                 openDialog.value = true

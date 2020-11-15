@@ -16,6 +16,7 @@
 
 package androidx.compose.ui.demos.autofill
 
+
 import android.graphics.Rect
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Text
@@ -23,7 +24,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.preferredHeight
-
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
@@ -38,12 +38,9 @@ import androidx.compose.ui.focusObserver
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.toComposeRect
 import androidx.compose.ui.layout.LayoutCoordinates
-import androidx.compose.ui.onGloballyPositioned
-
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.AutofillAmbient
 import androidx.compose.ui.platform.AutofillTreeAmbient
-import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 
@@ -76,9 +73,7 @@ fun ExplicitAutofillTypesDemo() {
                     }
                 },
                 value = nameState.value,
-                keyboardType = KeyboardType.Text,
-                imeAction = ImeAction.Unspecified,
-                onValueChange = { nameState.value = it },
+                onValueChange = {value-> nameState.value = value },
                 textStyle = textStyle
             )
         }
@@ -101,9 +96,7 @@ fun ExplicitAutofillTypesDemo() {
                     }
                 },
                 value = emailState.value,
-                keyboardType = KeyboardType.Text,
-                imeAction = ImeAction.Unspecified,
-                onValueChange = { emailState.value = it },
+                onValueChange = {value-> emailState.value = value },
                 textStyle = textStyle
             )
         }

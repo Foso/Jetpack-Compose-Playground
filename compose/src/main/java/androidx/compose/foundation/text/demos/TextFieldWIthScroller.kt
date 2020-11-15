@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package androidx.compose.foundation.text.demos
+package androidx.compose.foundation.demos.text
 
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.TextField
-
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -37,7 +36,7 @@ fun TextFieldWithScrollerDemo() {
                 )
             )
         }
-        TextField(
+        BasicTextField(
             value = state.value,
             onValueChange = { state.value = it },
             modifier = Modifier

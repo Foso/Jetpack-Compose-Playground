@@ -23,11 +23,11 @@ repositories {
 
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     defaultConfig {
         applicationId "de.jensklingenberg.jetpackcomposeplayground"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -55,7 +55,7 @@ android {
     }
     composeOptions {
         kotlinCompilerVersion "1.4.0"
-        kotlinCompilerExtensionVersion "1.0.0-alpha06"
+        kotlinCompilerExtensionVersion "1.0.0-alpha07"
 
     }
 }
@@ -71,13 +71,13 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 
 
 dependencies {
-    def compose_version = "1.0.0-alpha06"
+    def compose_version = "1.0.0-alpha07"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation project(path: ':compose')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$project.ext.kotlin_version"
-    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "androidx.appcompat:appcompat:1.2.0"
     implementation "androidx.core:core-ktx:1.1.0"
     implementation "androidx.compose.runtime:runtime:$compose_version"
 

@@ -20,8 +20,9 @@ package androidx.compose.integration.demos
 
 import androidx.animation.AnimationDemos
 import androidx.compose.foundation.FoundationDemos
+import androidx.compose.foundation.demos.text.TextDemos
 import androidx.compose.foundation.layout.demos.LayoutDemos
-import androidx.compose.foundation.text.demos.TextDemos
+
 import androidx.compose.material.MaterialDemos
 import androidx.compose.ui.demos.CoreDemos
 import androidx.ui.DemoCategory

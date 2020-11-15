@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 The Android Open Source Project
+ * Copyright 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package androidx.compose.foundation.text.demos
+package androidx.compose.foundation.demos.text
 
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.TextField
-
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -48,19 +48,23 @@ fun InputFieldDemo() {
 @Composable
 internal fun EditLine(
     keyboardType: KeyboardType = KeyboardType.Text,
-    imeAction: ImeAction = ImeAction.Unspecified
+    imeAction: ImeAction = ImeAction.Unspecified,
+    singleLine: Boolean = true
 ) {
     val controller = remember { mutableStateOf<SoftwareKeyboardController?>(null) }
     val state = savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
-    TextField(
+    BasicTextField(
         modifier = demoTextFieldModifiers,
         value = state.value,
-        keyboardType = keyboardType,
-        imeAction = imeAction,
+        maxLines = if(singleLine){1}else{Int.MAX_VALUE},
+        keyboardOptions = KeyboardOptions(
+            keyboardType = keyboardType,
+            imeAction = imeAction
+        ),
         onValueChange = { state.value = it },
         textStyle = TextStyle(fontSize = fontSize8),
         onTextInputStarted = { controller.value = it },
-        onImeActionPerformed = {_,_->
+        onImeActionPerformed = {
             controller.value?.hideSoftwareKeyboard()
         }
     )

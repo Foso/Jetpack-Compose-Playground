@@ -18,7 +18,6 @@ package androidx.compose.ui.demos
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.ScrollableColumn
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -35,10 +34,11 @@ import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.foundation.layout.preferredSize
 import androidx.compose.foundation.layout.preferredWidth
 import androidx.compose.foundation.shape.CircleShape
-
+import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Button
 import androidx.compose.material.Card
-import androidx.compose.material.TextField
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -95,14 +95,14 @@ fun PopupDemo() {
                             "Insert an email in the popup and then click outside to dismiss"
                         7 ->
                             "[bug] Undesired visual effect caused by" +
-                                " having a new size content displayed at the old" +
-                                " position, until the new one is calculated"
+                                    " having a new size content displayed at the old" +
+                                    " position, until the new one is calculated"
                         8 ->
                             "The popup is aligning to its parent when the parent is" +
-                                " inside a Scroller"
+                                    " inside a Scroller"
                         9 ->
                             "[bug] The popup is not repositioned " +
-                                "when the parent is moved by the keyboard"
+                                    "when the parent is moved by the keyboard"
                         else -> "Demo description here"
                     }
                 }.invoke()
@@ -520,11 +520,13 @@ private fun EditLine(
     color: Color = Color.White
 ) {
     val state = remember { mutableStateOf(TextFieldValue(initialText)) }
-    TextField(
+    BasicTextField(
         value = state.value,
         modifier = modifier.background(color = color),
-        keyboardType = keyboardType,
-        imeAction = imeAction,
+        keyboardOptions = KeyboardOptions(
+            keyboardType = keyboardType,
+            imeAction = imeAction
+        ),
         onValueChange = {
             state.value = it
             onValueChange(it.text)

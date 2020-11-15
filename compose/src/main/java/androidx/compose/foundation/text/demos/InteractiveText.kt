@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package androidx.compose.foundation.text.demos
+package androidx.compose.foundation.demos.text
 
 import androidx.compose.foundation.ClickableText
 import androidx.compose.foundation.ScrollableColumn
-import androidx.compose.foundation.Text
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember

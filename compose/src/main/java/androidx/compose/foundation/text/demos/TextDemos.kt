@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package androidx.compose.foundation.text.demos
+package androidx.compose.foundation.demos.text
 
-
+import androidx.compose.foundation.text.demos.TextAccessibilityDemo
 import androidx.ui.ComposableDemo
 import androidx.ui.DemoCategory
 
@@ -35,12 +35,14 @@ val TextDemos = DemoCategory(
                 ComposableDemo("Keyboard Types") { KeyboardTypeDemo() },
                 ComposableDemo("Ime Action") { ImeActionDemo() },
                 ComposableDemo("Various input fields") { VariousInputFieldDemo() },
-
+                ComposableDemo("Tricky input field") { InputFieldTrickyUseCase() },
+                ComposableDemo("Focus transition") { TextFieldFocusTransition() },
                 ComposableDemo("Tail Following Text Field") { TailFollowingTextFieldDemo() },
                 ComposableDemo("TextField in Scroller") { TextFieldWithScrollerDemo() },
                 ComposableDemo("Soft Wrap") { SoftWrapDemo() },
                 ComposableDemo("Min/Max Lines") { CoreTextFieldMinMaxDemo() },
-
+                ComposableDemo("Ime SingleLine") { ImeSingleLineDemo() },
+                ComposableDemo("Capitalization/AutoCorrect") { CapitalizationAutoCorrectDemo() }
             )
         ),
         ComposableDemo("Text Accessibility") { TextAccessibilityDemo() }
