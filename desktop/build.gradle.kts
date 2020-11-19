@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.4.0"
-    id("org.jetbrains.compose") version "0.1.0-build114"
+    id("org.jetbrains.compose") version "0.2.0-build124"
     application
 }
 
@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.compose.desktop:desktop-jvm-all:0.1.0-build114")
+    implementation("org.jetbrains.compose.desktop:desktop-jvm-all:0.2.0-build124")
 }
 
 tasks.withType<KotlinCompile>() {
