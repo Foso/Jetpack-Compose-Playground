@@ -2,8 +2,8 @@ import org.jetbrains.compose.compose
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.0"
-    id("org.jetbrains.compose") version "0.2.0-build124"
+    kotlin("jvm") version "1.4.20"
+    id("org.jetbrains.compose") version "0.2.0-build128"
     application
 }
 
@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.compose.desktop:desktop-jvm-all:0.2.0-build124")
+    implementation(compose.desktop.currentOs)
 }
 
 tasks.withType<KotlinCompile>() {

@@ -1,5 +1,6 @@
-import androidx.compose.foundation.Text
+
 import androidx.compose.material.Slider
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
 
 @Composable

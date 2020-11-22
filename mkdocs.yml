@@ -47,8 +47,8 @@ nav:
             - 'Preview': general/preview/preview.md
             - 'PreviewParameter': general/preview/previewparameter.md
             - 'Roadmap': general/roadmap.md
-            - 'Project Setup': general/getting_started.md
-            - 'State': general/state.md
+          - 'Project Setup': general/getting_started.md
+          - 'State': general/state.md
       - 'Desktop':
            - 'Overview': desktop/overview.md
            - 'General':
