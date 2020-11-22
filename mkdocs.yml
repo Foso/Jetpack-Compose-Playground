@@ -32,6 +32,21 @@ extra:
 nav:
   - 'Jetpack/JetBrains Compose':
       - 'Overview': index.md
+      - 'Components':
+          - 'Cards':
+              - 'Card': material/card.md
+          - 'Dialogs':
+              - 'AlertDialog': material/alertdialog.md
+          - 'Menus':
+              - 'DropdownMenu': material/dropdownmenu.md
+          - 'Selection controls':
+              - 'Checkbox': material/checkbox.md
+              - 'RadioButton': material/radiobutton.md
+              - 'Switch': material/switch.md
+          - 'Snackbars':
+              - 'Snackbar': material/snackbar.md
+          - 'Text fields':
+              - 'TextField': material/textfield.md
       - 'General':
           - 'Ambient': general/ambient.md
           - 'Codelabs': general/codelabs.md
@@ -91,6 +106,7 @@ nav:
               - 'DropdownMenu': material/dropdownmenu.md
               - 'Checkbox': material/checkbox.md
               - 'FloatingActionButton': material/floatingactionbutton.md
+              - 'LinearProgressIndicator' : material/linearprogressindicator.md
               - 'ModalDrawerLayout': material/modaldrawer.md
               - 'RadioButton': material/radiobutton.md
               - 'Scaffold': material/scaffold.md
@@ -101,6 +117,7 @@ nav:
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
       - 'Resources': resources.md
+
 
 markdown_extensions:
   - smarty

@@ -1,7 +1,7 @@
 # AlertDialog
 
 !!! info
-    This is the API of version dev09. Newer versions may have a different one
+    This is the API of 1.0.0-alpha07. Newer versions may have a different one
 
 <p align="center">
   <img src ="../../images/material/alertdialog/AlertDialogSample.png"  height=100 width=300/>
@@ -12,21 +12,25 @@
 fun AlertDialogSample() {
     MaterialTheme {
         Column {
-            val openDialog = state { false }
+            val openDialog = remember { mutableStateOf(false)  }
 
-            Button( onClick = {
+            Button(onClick = {
                 openDialog.value = true
-            }){
+            }) {
                 Text("Click me")
             }
 
             if (openDialog.value) {
+
                 AlertDialog(
-                    onCloseRequest = {
+                    onDismissRequest = {
+                        // Dismiss the dialog when the user clicks outside the dialog or on the back
+                        // button. If you want to disable that functionality, simply use an empty
+                        // onCloseRequest.
                         openDialog.value = false
                     },
                     title = {
-                        Text("Dialog Title")
+                        Text(text = "Dialog Title")
                     },
                     text = {
                         Text("Here is a text ")
@@ -36,7 +40,7 @@ fun AlertDialogSample() {
 
                             onClick = {
                                 openDialog.value = false
-                            }){
+                            }) {
                             Text("This is the Confirm Button")
                         }
                     },
@@ -45,11 +49,10 @@ fun AlertDialogSample() {
 
                             onClick = {
                                 openDialog.value = false
-                            }){
+                            }) {
                             Text("This is the dismiss Button")
                         }
-                    },
-                    buttonLayout = AlertDialogButtonLayout.Stacked
+                    }
                 )
             }
         }

@@ -1,11 +1,8 @@
 package de.jensklingenberg.jetpackcomposeplayground.ui.samples.other
 
-import androidx.compose.foundation.Text
+
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material.AlertDialog
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.TextButton
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -57,8 +54,6 @@ fun AlertDialogSample() {
                         }
                     }
                 )
-
-
             }
         }
 
