@@ -39,6 +39,9 @@ nav:
               - 'AlertDialog': material/alertdialog.md
           - 'Menus':
               - 'DropdownMenu': material/dropdownmenu.md
+          - 'Progress indicators':
+              - 'LinearProgressIndicator': material/linearprogressindicator.md
+              - 'CircularProgressIndicator': material/circularprogressindicator.md
           - 'Selection controls':
               - 'Checkbox': material/checkbox.md
               - 'RadioButton': material/radiobutton.md
@@ -103,6 +106,7 @@ nav:
               - 'AlertDialog': material/alertdialog.md
               - 'Button': material/button.md
               - 'Card': material/card.md
+              - 'CircularProgressIndicator': material/circularprogressindicator.md
               - 'DropdownMenu': material/dropdownmenu.md
               - 'Checkbox': material/checkbox.md
               - 'FloatingActionButton': material/floatingactionbutton.md
