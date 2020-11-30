@@ -20,7 +20,7 @@ This is an Jetpack Compose  example project. I'm collecting a bunch of sample co
 
 
 ## Composable of the week!! 🎉
-The [LazyColumnFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumnfor/)
+The [LinearProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/linearprogressindicator/)
 
 
 ## New to Compose?

@@ -25,7 +25,7 @@ This is a community-driven collection of Jetpack/JetBrains Compose documentation
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SMOhl9RK0BA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Composable of the week!! 🎉
-The [Crossfade](animation/crossfade)
+The [LinearProgressIndicator](material/linearprogressindicator)
 
 
 ## New to Compose?
