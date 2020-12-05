@@ -1,7 +1,11 @@
 # State
+!!! info
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
 
 ## Define a state
+```kotlin
 val textState = mutableStateOf("Hello")
+```
 
 You can use the mutableStateOf function to create a mutable state.
 

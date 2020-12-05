@@ -1,6 +1,6 @@
 # Ambient
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
 
 Ambient is useful when you want to create a dependency in a higher node of the layout tree and use it on lower node without having to
 pass it down the tree through every child Composable.
@@ -46,17 +46,17 @@ Now you can use your ambient in your @Composable. Every ambient has a **current*
 ## Predifinied Ambients
 The Compose libraries already contain some useful ambients. You can directly use them without needing add a Providers.
 
-### ContextAmbient
+### AmbientContext
 Provides a [Context] that can be used by Android applications.
 
-### ConfigurationAmbient
+### AmbientConfiguration
 The [Configuration] is useful for determining how to organize the UI.
 
 #### Device orientation
-One of the things you can get from the ConfigurationAmbient is the orientation of your device. This can be used to give the user a different ui when the device is rotated.
+One of the things you can get from the AmbientConfiguration is the orientation of your device. This can be used to give the user a different ui when the device is rotated.
 
 ```kotlin
-val configuration = ConfigurationAmbient.current
+val configuration = AmbientConfiguration.current
 when (configuration.orientation) {
     Configuration.ORIENTATION_LANDSCAPE -> {
         Text("Landscape")
@@ -67,13 +67,13 @@ when (configuration.orientation) {
 }
 ```
 
-### LifecycleOwnerAmbient
+### AmbientLifecycleOwner
 The ambient containing the current [LifecycleOwner].
 
-### ViewAmbient
+### AmbientView
  The ambient containing the current Compose [View].
 
-### ViewModelStoreOwnerAmbient
+### AmbientViewModelStoreOwner
 The ambient containing the current [ViewModelStoreOwner].
 
 

@@ -1,7 +1,7 @@
 # How to use an Android View in Compose
 
 !!! info
-    This is the API of version alpha02. Newer versions may have a different one
+    This is the API of version alpha08. Newer versions may have a different one
 
 Altough Compose itself is independent from the classic Android View system, in Android Apps it is possible to use Views(any class extends android.view.View) inside of Compose.
 This example will show you, how you can use a **android.widget.Button**, an **android.widget.TextView** and an **android.widget.ImageView** alongside with an Compose Button.

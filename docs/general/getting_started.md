@@ -4,7 +4,7 @@
         Note: Jetpack Compose is currently in Developer Preview. The API surface is not yet finalized, and changes are planned and expected. See the Compose Compiler and Runtime release notes and the Compose UI release notes for the latest updates.
 
 ## Android Studio
-To use Jetpack Compose you need to use at least a [version >=4.2 Canary 15](https://developer.android.com/studio/preview)
+To use Jetpack Compose you need to use at least a [version >= Android Studio Arctic Fox Canary 2](https://developer.android.com/studio/preview)
 
 ## Gradle Dependencies
 
