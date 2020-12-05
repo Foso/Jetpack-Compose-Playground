@@ -1,7 +1,7 @@
 # FloatingActionButton
 
 !!! info
-    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
 
 ## FloatingActionButton
 
@@ -28,7 +28,7 @@ fun ExtendedFloatingActionButtonDemo() {
          icon = { Icon(Icons.Filled.Favorite) },                 
          text = { Text("FloatingActionButton") },                
          onClick = { /*do something*/ },
-         elevation = 8.dp                              
+         elevation = FloatingActionButtonConstants.defaultElevation(8.dp)
      )                                                                                                             
 }                                                         
 ```

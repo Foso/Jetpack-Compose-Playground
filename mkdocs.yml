@@ -46,6 +46,8 @@ nav:
               - 'Checkbox': material/checkbox.md
               - 'RadioButton': material/radiobutton.md
               - 'Switch': material/switch.md
+          - 'Sliders':
+              - 'Slider': material/slider.md
           - 'Snackbars':
               - 'Snackbar': material/snackbar.md
           - 'Text fields':
