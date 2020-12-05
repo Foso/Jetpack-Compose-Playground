@@ -8,5 +8,5 @@ import de.jensklingenberg.jetpackcomposeplayground.ui.samples.R
 @Composable
 fun ImageResourceDemo() {
     val image = imageResource(id = R.drawable.composelogo)
-    Image(asset = image)
+    Image(bitmap = image)
 }

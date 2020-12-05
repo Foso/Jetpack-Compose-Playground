@@ -152,30 +152,7 @@ private fun testSiblings() {
 
 @Composable
 private fun CustomLayout(rtlSupport: Boolean) {
-    Layout(
-        children = @Composable {
-            Box(boxSize.background(color = Color.Red)) {}
-            Box(boxSize.background(color = Color.Green)) {}
-            Box(boxSize.background(color = Color.Blue)) {}
-        }
-    ) { measurables, constraints ->
-        val p = measurables.map { e ->
-            e.measure(constraints.copy(minWidth = 0, minHeight = 0))
-        }
-        val w = p.fold(0) { sum, e -> sum + e.width }
-        val h = p.maxByOrNull { it.height }!!.height
-        layout(w, h) {
-            var xPosition = 0
-            for (child in p) {
-                if (rtlSupport) {
-                    child.placeRelative(IntOffset(xPosition, 0))
-                } else {
-                    child.place(IntOffset(xPosition, 0))
-                }
-                xPosition += child.width
-            }
-        }
-    }
+
 }
 
 @Composable

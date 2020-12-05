@@ -40,7 +40,6 @@ val TextDemos = DemoCategory(
                 ComposableDemo("Tail Following Text Field") { TailFollowingTextFieldDemo() },
                 ComposableDemo("TextField in Scroller") { TextFieldWithScrollerDemo() },
                 ComposableDemo("Soft Wrap") { SoftWrapDemo() },
-                ComposableDemo("Min/Max Lines") { CoreTextFieldMinMaxDemo() },
                 ComposableDemo("Ime SingleLine") { ImeSingleLineDemo() },
                 ComposableDemo("Capitalization/AutoCorrect") { CapitalizationAutoCorrectDemo() }
             )

@@ -16,20 +16,19 @@
 
 package androidx.compose.ui.demos.gestures
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.layout.Layout
-
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.gesture.RawScaleObserver
 import androidx.compose.ui.gesture.rawScaleGestureFilter
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.Layout
 import kotlin.math.roundToInt
 
 /**
@@ -41,12 +40,12 @@ fun NestedScalingDemo() {
         Text("Demonstrates nested scaling.")
         Text(
             "As of now, this works the same way that nested scrolling does.  There is a scaling " +
-                "region inside another scaling region. If you scale the inner region far " +
-                "enough, it will actually stop scaling and the outer region will scale instead. " +
-                "Or you can just scale the outer region (Scale out to get started)"
+                    "region inside another scaling region. If you scale the inner region far " +
+                    "enough, it will actually stop scaling and the outer region will scale instead. " +
+                    "Or you can just scale the outer region (Scale out to get started)"
         )
         Layout(
-            children = {
+            content = {
                 Scalable(.66666666f, Color(0xFFffeb3b.toInt())) {
                     Scalable(.5f, Color(0xFF4caf50.toInt())) {}
                 }
@@ -68,7 +67,7 @@ fun NestedScalingDemo() {
 private fun Scalable(
     minPercent: Float,
     color: Color,
-    children: @Composable () -> Unit
+    content: @Composable () -> Unit
 ) {
 
     val currentPercent = remember { mutableStateOf(1f) }
@@ -87,7 +86,7 @@ private fun Scalable(
     }
 
     Layout(
-        children = children,
+        content = content,
         modifier = Modifier.wrapContentSize(Alignment.Center)
             .rawScaleGestureFilter(outerScaleObserver)
             .background(color = color),

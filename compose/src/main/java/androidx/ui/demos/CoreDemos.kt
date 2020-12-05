@@ -24,7 +24,7 @@ import androidx.compose.ui.demos.gestures.DoubleTapInTapDemo
 import androidx.compose.ui.demos.gestures.DragAndScaleGestureFilterDemo
 import androidx.compose.ui.demos.gestures.DragGestureFilterDemo
 import androidx.compose.ui.demos.gestures.DragSlopExceededGestureFilterDemo
-import androidx.compose.ui.demos.gestures.HorizontalScrollersInVerticalScrollersDemo
+
 import androidx.compose.ui.demos.gestures.LongPressDragGestureFilterDemo
 import androidx.compose.ui.demos.gestures.LongPressGestureDetectorDemo
 import androidx.compose.ui.demos.gestures.NestedLongPressDemo
@@ -72,9 +72,7 @@ private val GestureDemos = DemoCategory(
             "Combinations / Case Studies",
             listOf(
                 ComposableDemo("Nested Pressing") { NestedPressingDemo() },
-                ComposableDemo("Horizontal Scrollers In Vertical Scroller") {
-                    HorizontalScrollersInVerticalScrollersDemo()
-                },
+
                 ComposableDemo("Vertical Scroller in Nav Drawer") {
                     VerticalScrollerInDrawerDemo()
                 },

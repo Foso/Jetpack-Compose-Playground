@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-ext.kotlin_version = "1.4.0"
+ext.kotlin_version = "1.4.20"
 
 repositories {
     // maven { url "$androidx_home/out/ui/build/support_repo/" }
@@ -48,14 +48,15 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
+        useIR = true
     }
 
     buildFeatures {
         compose true
     }
     composeOptions {
-        kotlinCompilerVersion "1.4.0"
-        kotlinCompilerExtensionVersion "1.0.0-alpha07"
+        kotlinCompilerVersion "1.4.20"
+        kotlinCompilerExtensionVersion "1.0.0-alpha08"
 
     }
 }
@@ -71,7 +72,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 
 
 dependencies {
-    def compose_version = "1.0.0-alpha07"
+    def compose_version = "1.0.0-alpha08"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.compose.ui:ui:$compose_version"
@@ -85,7 +86,7 @@ dependencies {
 
     implementation("androidx.compose.runtime:runtime:$compose_version")
     implementation("androidx.compose.ui:ui-text:$compose_version")
-    implementation "androidx.ui:ui-tooling:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling:$compose_version"
 
 
     testImplementation "junit:junit:4.12"

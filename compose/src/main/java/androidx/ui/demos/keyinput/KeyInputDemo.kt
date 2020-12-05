@@ -15,12 +15,12 @@
  */
 package androidx.compose.ui.demos.keyinput
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
@@ -92,10 +92,10 @@ private fun FocusableText(text: MutableState<String>) {
 }
 
 @Composable
-private fun CenteredRow(children: @Composable RowScope.() -> Unit) {
+private fun CenteredRow(content: @Composable RowScope.() -> Unit) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center,
-        children = children
+        content = content
     )
 }

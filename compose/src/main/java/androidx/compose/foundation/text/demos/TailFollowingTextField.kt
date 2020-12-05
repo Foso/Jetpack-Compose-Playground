@@ -69,33 +69,7 @@ private fun HorizontalTailFollowingTextField(
     modifier: Modifier,
     textStyle: TextStyle = TextStyle(fontSize = fontSize8)
 ) {
-    Layout(
-        children = @Composable {
-            BasicTextField(
-                value = value,
-                onValueChange = onValueChange,
-                textStyle = textStyle
-            )
-        },
-        modifier = modifier
-    ) { measurable, constraints ->
 
-        val p = measurable[0].measure(
-            Constraints(
-                minWidth = 0,
-                maxWidth = Constraints.Infinity,
-                minHeight = constraints.minHeight,
-                maxHeight = constraints.maxHeight
-            )
-        )
-
-        val width = constraints.constrainWidth(p.width)
-        val xOffset = min(0, constraints.maxWidth - p.width)
-
-        layout(width, p.height) {
-            p.placeRelative(xOffset, 0)
-        }
-    }
 }
 
 @Composable
@@ -105,31 +79,5 @@ private fun VerticalTailFollowintTextField(
     modifier: Modifier,
     textStyle: TextStyle = TextStyle(fontSize = fontSize8)
 ) {
-    Layout(
-        children = @Composable {
-            BasicTextField(
-                value = value,
-                onValueChange = onValueChange,
-                textStyle = textStyle
-            )
-        },
-        modifier = modifier
-    ) { measurable, constraints ->
 
-        val p = measurable[0].measure(
-            Constraints(
-                minWidth = constraints.minWidth,
-                maxWidth = constraints.maxWidth,
-                minHeight = 0,
-                maxHeight = Constraints.Infinity
-            )
-        )
-
-        val height = min(p.height, constraints.maxHeight)
-        val yOffset = min(0, constraints.maxHeight - p.height)
-
-        layout(p.width, height) {
-            p.placeRelative(0, yOffset)
-        }
-    }
 }

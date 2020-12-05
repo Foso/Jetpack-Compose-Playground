@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 
 @Preview(showBackground = true)
 @Composable

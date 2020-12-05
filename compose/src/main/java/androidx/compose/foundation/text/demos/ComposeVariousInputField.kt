@@ -16,18 +16,21 @@
 
 package androidx.compose.foundation.demos.text
 
+import androidx.compose.foundation.Interaction
+import androidx.compose.foundation.InteractionState
 import androidx.compose.foundation.ScrollableColumn
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Text
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.savedinstancestate.savedInstanceState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -156,7 +159,7 @@ private val phoneNumberFilter = object : VisualTransformation {
         val trimmed = if (text.text.length >= 10) text.text.substring(0..9) else text.text
         val filled = trimmed + "_".repeat(10 - trimmed.length)
         val res = "(" + filled.substring(0..2) + ") " + filled.substring(3..5) + "-" +
-            filled.substring(6..9)
+                filled.substring(6..9)
         return TransformedText(AnnotatedString(text = res), phoneNumberOffsetTranslater)
     }
 }
@@ -233,6 +236,7 @@ fun VariousInputFieldDemo() {
                 style = TextStyle(fontSize = fontSize8)
             )
         }
+
     }
 }
 
@@ -243,38 +247,27 @@ private fun VariousEditLine(
     onValueChange: (String, String) -> String = { _, new -> new },
     visualTransformation: VisualTransformation
 ) {
-    val state = savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
+    val state = savedInstanceState { "" }
     BasicTextField(
         modifier = demoTextFieldModifiers,
         value = state.value,
-        maxLines = 1,
+        singleLine = true,
         keyboardOptions = KeyboardOptions(
             keyboardType = keyboardType,
             imeAction = imeAction
         ),
         visualTransformation = visualTransformation,
         onValueChange = {
-            val value = onValueChange(state.value.text, it.text)
-            val selection = it.selection.constrain(0, value.length)
-            val composition = it.composition?.constrain(0, value.length)
-            state.value = TextFieldValue(value, selection, composition)
+            val value = onValueChange(state.value, it)
+            state.value = value
         },
         textStyle = TextStyle(fontSize = fontSize8)
     )
 }
 
-private fun TextRange.constrain(minimumValue: Int, maximumValue: Int): TextRange {
-    val newStart = start.coerceIn(minimumValue, maximumValue)
-    val newEnd = end.coerceIn(minimumValue, maximumValue)
-    if (newStart != start || newEnd != end) {
-        return TextRange(newStart, newEnd)
-    }
-    return this
-}
-
 @Composable
-private fun HintEditText(hintText: @Composable () -> Unit) {
-    val state = savedInstanceState(saver = TextFieldValue.Saver) { TextFieldValue() }
+private fun HintEditText(content: @Composable () -> Unit) {
+    val state = savedInstanceState { "" }
 
     Box(demoTextFieldModifiers) {
         BasicTextField(
@@ -283,8 +276,8 @@ private fun HintEditText(hintText: @Composable () -> Unit) {
             onValueChange = { state.value = it },
             textStyle = TextStyle(fontSize = fontSize8)
         )
-        if (state.value.text.isEmpty()) {
-            hintText()
+        if (state.value.isEmpty()) {
+            content()
         }
     }
 }

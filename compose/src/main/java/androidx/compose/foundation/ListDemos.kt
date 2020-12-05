@@ -156,8 +156,7 @@ private fun LazyRowItemsDemo() {
 private fun Square(index: Int) {
     val width = remember { Random.nextInt(50, 150).dp }
     Box(
-        Modifier.preferredWidth(width).fillMaxHeight().background(colors[index % colors.size]),
-        alignment = Alignment.Center
+        Modifier.preferredWidth(width).fillMaxHeight().background(colors[index % colors.size])
     ) {
         Text(index.toString())
     }
@@ -238,7 +237,7 @@ private fun LazyRowScope() {
 
         val items = listOf(Color.Cyan, Color.Blue, Color.Magenta)
         itemsIndexed(items) { index, item ->
-            Box(modifier = Modifier.background(item).size(40.dp), alignment = Alignment.Center) {
+            Box(modifier = Modifier.background(item).size(40.dp)) {
                 Text("$index", fontSize = 30.sp)
             }
         }

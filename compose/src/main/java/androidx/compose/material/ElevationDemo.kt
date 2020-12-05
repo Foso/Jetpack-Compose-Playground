@@ -17,10 +17,9 @@
 package androidx.compose.material.demos
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.ScrollableColumn
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -30,6 +29,7 @@ import androidx.compose.foundation.layout.preferredHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,7 +40,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ElevationDemo() {
     Column {
-        Box(Modifier.padding(20.dp).fillMaxWidth(), alignment = Alignment.Center) {
+        Box(Modifier.padding(20.dp).fillMaxWidth(), contentAlignment = Alignment.Center) {
             val text = getMessage(MaterialTheme.colors.isLight)
             Text(text)
         }
@@ -68,7 +68,7 @@ private fun ElevatedCard(elevation: Dp) {
                 .fillMaxWidth()
                 .preferredHeight(150.dp)
                 .clickable(onClick = {}),
-            alignment = Alignment.Center
+            contentAlignment = Alignment.Center
         ) {
             Text("$elevation", style = MaterialTheme.typography.h4)
         }
@@ -89,11 +89,11 @@ private val elevations = listOf(
 )
 
 private fun getMessage(isLight: Boolean) = (
-    if (isLight) {
-        "In a light theme elevation is represented by shadows"
-    } else {
-        "In a dark theme elevation is represented by shadows and a translucent white overlay " +
-            "applied to the surface"
-    }
-    ) + "\n\nnote: drawing a small border around 0.dp elevation to make it visible where the " +
-    "card edges end"
+        if (isLight) {
+            "In a light theme elevation is represented by shadows"
+        } else {
+            "In a dark theme elevation is represented by shadows and a translucent white overlay " +
+                    "applied to the surface"
+        }
+        ) + "\n\nnote: drawing a small border around 0.dp elevation to make it visible where the " +
+        "card edges end"

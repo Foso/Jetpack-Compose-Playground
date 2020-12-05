@@ -17,19 +17,17 @@
 package androidx.compose.ui.demos.gestures
 
 import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.preferredHeight
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.layout.Layout
-
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.Offset
@@ -42,6 +40,7 @@ import androidx.compose.ui.gesture.scrollGestureFilter
 import androidx.compose.ui.gesture.scrollorientationlocking.Orientation
 import androidx.compose.ui.gesture.tapGestureFilter
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -56,7 +55,7 @@ fun NestedScrollingDemo() {
         Text("Demonstrates nested scrolling.")
         Text(
             "There are 3 fake vertical scrollers inside another vertical scroller.  Try " +
-                "scrolling with 1 or many fingers."
+                    "scrolling with 1 or many fingers."
         )
         Scrollable {
             RepeatingColumn(repetitions = 3) {
@@ -80,7 +79,7 @@ fun NestedScrollingDemo() {
  * A very simple ScrollView like implementation that allows for vertical scrolling.
  */
 @Composable
-private fun Scrollable(children: @Composable () -> Unit) {
+private fun Scrollable(content: @Composable () -> Unit) {
     val offset = remember { mutableStateOf(0f) }
     val maxOffset = remember { mutableStateOf(0f) }
 
@@ -113,7 +112,7 @@ private fun Scrollable(children: @Composable () -> Unit) {
     }
 
     Layout(
-        children = children,
+        content = content,
         modifier = Modifier
             .scrollGestureFilter(scrollObserver, Orientation.Vertical, canDrag)
             .clipToBounds(),
@@ -185,10 +184,10 @@ private fun Pressable(
  * times.
  */
 @Composable
-private fun RepeatingColumn(repetitions: Int, row: @Composable () -> Unit) {
+private fun RepeatingColumn(repetitions: Int, content: @Composable () -> Unit) {
     Column(Modifier.border(border = BorderStroke(2.dp, BorderColor))) {
         for (i in 1..repetitions) {
-            row()
+            content()
             if (i != repetitions) {
                 Box(
                     Modifier

@@ -17,15 +17,19 @@
 package androidx.compose.material.samples
 
 import androidx.annotation.Sampled
-import androidx.compose.foundation.AmbientContentColor
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.selection.toggleable
+import androidx.compose.material.AmbientContentColor
 import androidx.compose.material.Checkbox
 import androidx.compose.material.Divider
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
+import androidx.compose.material.Switch
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -33,16 +37,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.ImageAsset
-import androidx.compose.ui.graphics.vector.VectorAsset
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.vector.ImageVector
+
+
 
 @Sampled
 @Composable
 fun OneLineListItems(
-    icon24x24: ImageAsset,
-    icon40x40: ImageAsset,
-    icon56x56: ImageAsset,
-    vectorIcon: VectorAsset
+    icon24x24: ImageBitmap,
+    icon40x40: ImageBitmap,
+    icon56x56: ImageBitmap,
+    vectorIcon: ImageVector
 ) {
     Column {
         ListItem(text = { Text("One line list item with no icon") })
@@ -94,8 +100,8 @@ fun OneLineListItems(
 
 @Sampled
 @Composable
-// TODO(popam, b/159689286): material icons instead of ImageAsset when they can have custom sizes
-fun TwoLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
+// TODO(popam, b/159689286): material icons instead of ImageBitmap when they can have custom sizes
+fun TwoLineListItems(icon24x24: ImageBitmap, icon40x40: ImageBitmap) {
     Column {
         ListItem(
             text = { Text("Two line list item") },
@@ -131,34 +137,19 @@ fun TwoLineListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
             }
         )
         Divider()
-        var checked by remember { mutableStateOf(false) }
-        ListItem(
-            text = { Text("Two line list item") },
-            secondaryText = { Text("Secondary text") },
-            icon = {
-                Image(
-                    icon40x40,
-                    colorFilter = ColorFilter.tint(AmbientContentColor.current)
-                )
-            },
-            trailing = {
-                Checkbox(checked, onCheckedChange = { checked = !checked })
-            }
-        )
-        Divider()
     }
 }
 
 @Sampled
 @Composable
-fun ThreeLineListItems(icon24x24: ImageAsset, vectorIcon: VectorAsset) {
+fun ThreeLineListItems(icon24x24: ImageBitmap, vectorIcon: ImageVector) {
     Column {
         ListItem(
             text = { Text("Three line list item") },
             secondaryText = {
                 Text(
                     "This is a long secondary text for the current list item, " +
-                        "displayed on two lines"
+                            "displayed on two lines"
                 )
             },
             singleLineSecondaryText = false,
@@ -176,7 +167,7 @@ fun ThreeLineListItems(icon24x24: ImageAsset, vectorIcon: VectorAsset) {
             secondaryText = {
                 Text(
                     "This is a long secondary text for the current list item " +
-                        "displayed on two lines"
+                            "displayed on two lines"
                 )
             },
             singleLineSecondaryText = false,
@@ -188,7 +179,7 @@ fun ThreeLineListItems(icon24x24: ImageAsset, vectorIcon: VectorAsset) {
             secondaryText = {
                 Text(
                     "This is a long secondary text for the current list" +
-                        " item, displayed on two lines"
+                            " item, displayed on two lines"
                 )
             },
             singleLineSecondaryText = false,
@@ -208,7 +199,7 @@ fun ThreeLineListItems(icon24x24: ImageAsset, vectorIcon: VectorAsset) {
 // Demos for mixing RTL and LTR ListItems:
 
 @Composable
-fun OneLineRtlLtrListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
+fun OneLineRtlLtrListItems(icon24x24: ImageBitmap, icon40x40: ImageBitmap) {
     Column {
         ListItem(text = { Text("One line list item with no icon") })
         Divider()
@@ -236,7 +227,7 @@ fun OneLineRtlLtrListItems(icon24x24: ImageAsset, icon40x40: ImageAsset) {
 }
 
 @Composable
-fun TwoLineRtlLtrListItems(icon40x40: ImageAsset) {
+fun TwoLineRtlLtrListItems(icon40x40: ImageBitmap) {
     Column {
         ListItem(
             text = { Text("Two line list item") },
@@ -266,22 +257,6 @@ fun TwoLineRtlLtrListItems(icon40x40: ImageAsset) {
         )
         Divider()
         ListItem(
-            text = { Text("Clickable two line item") },
-            secondaryText = { Text("Secondary text") },
-            icon = {
-                Image(
-                    icon40x40,
-                    colorFilter = ColorFilter.tint(AmbientContentColor.current)
-                )
-            },
-            trailing = {
-                var checked by remember { mutableStateOf(false) }
-                Checkbox(checked, onCheckedChange = { checked = !checked })
-            },
-            modifier = Modifier.clickable { }
-        )
-        Divider()
-        ListItem(
             text = { Text("بندان قابلان للنقر") },
             secondaryText = { Text("نص ثانوي") },
             icon = {
@@ -297,7 +272,7 @@ fun TwoLineRtlLtrListItems(icon40x40: ImageAsset) {
 }
 
 @Composable
-fun ThreeLineRtlLtrListItems(icon40x40: ImageAsset) {
+fun ThreeLineRtlLtrListItems(icon40x40: ImageBitmap) {
     Column {
         ListItem(
             text = { Text("Three line list item") },
@@ -311,7 +286,7 @@ fun ThreeLineRtlLtrListItems(icon40x40: ImageAsset) {
             secondaryText = {
                 Text(
                     "هذا نص ثانوي طويل لعنصر القائمة الحالي ، معروض على سطرين. " +
-                        "في لغات أخرى قد نحتاج إلى المزيد من النص"
+                            "في لغات أخرى قد نحتاج إلى المزيد من النص"
                 )
             },
             singleLineSecondaryText = false

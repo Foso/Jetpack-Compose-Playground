@@ -16,7 +16,7 @@
 
 package de.jensklingenberg.jetpackcomposeplayground.ui.github.foundation
 
-import androidx.compose.foundation.Box
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.preferredSize
@@ -32,6 +32,8 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.*
+import androidx.compose.ui.draw.clip
 
 @Composable
 fun CircleShapeDemo(){
@@ -40,11 +42,9 @@ fun CircleShapeDemo(){
 
 @Composable
 fun BoxDemo(shape: Shape){
-    Column(modifier = Modifier.fillMaxWidth() + Modifier.wrapContentSize(Alignment.Center)) {
+    Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp),
-            backgroundColor = Color.Red,
-            shape = shape
+            modifier = Modifier.preferredSize(100.dp).background(Color.Red).clip(shape)
         ) {
 
                     }

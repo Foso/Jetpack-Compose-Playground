@@ -32,7 +32,6 @@ val AnimationDemos = DemoCategory(
         ComposableDemo("Animate Visibility Lazy Column Demo") {
             AnimatedVisibilityLazyColumnDemo()
         },
-        ComposableDemo("Cross Fade") { CrossfadeDemo() },
         ComposableDemo("Enter/Exit Transition Demo") { EnterExitTransitionDemo() },
         ComposableDemo("Gesture based animation") { GestureBasedAnimationDemo() },
         ComposableDemo("Manual animation clock") { AnimatableSeekBarDemo() },
