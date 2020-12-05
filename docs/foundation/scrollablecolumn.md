@@ -1,13 +1,13 @@
 # ScrollableColumn
 
 !!! info
-    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
 
 
 When an app has layout content that might be longer than the height of the device and that content should be vertically scrollable, then we need to use a ScrollableColumn. It's similar to a ScrollView
 
 <video width="320" height="300" align="center" controls>
-  <source src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/foundation/verticalscroller/VerticalScroller.webm" type="video/webm">
+  <source src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/foundation/scrollablerow/VerticalScroller.webm" type="video/webm">
 </video>
 
 ```kotlin

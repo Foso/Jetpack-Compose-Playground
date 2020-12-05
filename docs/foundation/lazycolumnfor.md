@@ -1,7 +1,7 @@
 # LazyColumnFor
 
 !!! info
-    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
     
 A [LazyColumnFor](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary.html#LazyColumnFor) is a vertically scrolling list that only composes and lays out the currently visible items.
 It's similar to a Recyclerview in the classic Android View system.
