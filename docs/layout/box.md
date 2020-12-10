@@ -3,7 +3,7 @@
 The children of the Box layout will be stacked over each other. You can use the gravity modifier to specify where the composable should be drawn.
 
 !!! info
-    This is the API of version 1.0.0-alpha05. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
 
 
 <p align="center">
