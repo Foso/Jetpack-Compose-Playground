@@ -1,7 +1,7 @@
 # Text
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
 
 You can use **Text** to display text. You can use the **style** argument to define things like textdecoration or fontfamily.
 
