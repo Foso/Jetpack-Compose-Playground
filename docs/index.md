@@ -34,7 +34,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 ### Animation
 * [Crossfade](animation/crossfade)
 
-## Layouts
+### Layouts
 ---
 * [ConstraintLayout](layout/constraintlayout)
 * [Scaffold](material/scaffold)
@@ -42,7 +42,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Row](layout/row)
 * [Box](layout/box)
 
-## Foundation
+### Foundation
 ---
 * [Box](foundation/box.md)
 * [Canvas](foundation/canvas.md)
@@ -54,7 +54,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Shape](foundation/shape.md)
 * [Text](foundation/text.md)
 
-## Material
+### Material
 ---
 * [AlertDialog](material/alertdialog.md)
 * [Button](material/button.md)
