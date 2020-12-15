@@ -45,8 +45,6 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [Image](https://foso.github.io/Jetpack-Compose-Playground/foundation/image)
 * [LazyColumnFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumnfor)
 * [LazyRowFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazyrowfor)
-* [ScrollableRow](https://foso.github.io/Jetpack-Compose-Playground/foundation/scrollablerow)
-* [ScrollableColumn](https://foso.github.io/Jetpack-Compose-Playground/foundation/scrollablecolumn)
 * [Shape](https://foso.github.io/Jetpack-Compose-Playground/foundation/shape)
 * [Text](https://foso.github.io/Jetpack-Compose-Playground/foundation/text)
 

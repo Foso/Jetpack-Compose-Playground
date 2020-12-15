@@ -49,8 +49,6 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Image](foundation/image.md)
 * [LazyColumnFor](foundation/lazycolumnfor.md)
 * [LazyRowFor](foundation/lazyrowfor.md)
-* [ScrollableRow](foundation/scrollablerow.md)
-* [ScrollableColumn](foundation/scrollablecolumn.md)
 * [Shape](foundation/shape.md)
 * [Text](foundation/text.md)
 

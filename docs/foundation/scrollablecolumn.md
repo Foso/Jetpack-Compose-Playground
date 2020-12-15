@@ -1,7 +1,14 @@
 # ScrollableColumn
 
-!!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+!!! warning
+    ScrollableColumn/Row were deprecated. Using ScrollableColumn is less efficient comparing to LazyColumn when you have a large scrolling content because with LazyColumn we can only compose/measure/draw visible elements.
+    To prevent users from going inefficient way we decided to deprecate ScrollableColumn and ScrollableRow and promote usages of
+    LazyColumn and LazyRow instead. Users can still decide they don't need the lazy behaviour and use the modifiers directly like this:
+    Column(Modifier.verticalScroll(rememberScrollState()))
+
+    Use [LazyColumnFor](/foundation/lazycolumnfor)
+    
+    https://android-review.googlesource.com/c/platform/frameworks/support/+/1530328
 
 
 When an app has layout content that might be longer than the height of the device and that content should be vertically scrollable, then we need to use a ScrollableColumn. It's similar to a ScrollView
