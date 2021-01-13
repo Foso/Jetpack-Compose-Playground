@@ -1,9 +1,9 @@
 # LazyRowFor
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha09. Newer versions may have a different one
     
-A [LazyRowFor](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary.html#LazyRowFor) is a horizontal scrolling list that only composes and lays out the currently visible items.
+A [LazyRow](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary.html#LazyRowFor) is a horizontal scrolling list that only composes and lays out the currently visible items.
 It's similar to a  horizontal Recyclerview in the classic Android View system.
 
 
@@ -13,11 +13,11 @@ It's similar to a  horizontal Recyclerview in the classic Android View system.
 
 ```kotlin
 @Composable
-fun LazyRowForDemo() {
-    LazyRowFor(items = listOf(
+fun LazyRowDemo() {
+    LazyRow( modifier = Modifier)
+        items(items = listOf(
             "A", "B", "C", "D"
-    ) + ((0..100).map { it.toString() }),
-            modifier = Modifier,
+        ) + ((0..100).map { it.toString() }),  
             itemContent = { item ->
                 Log.d("COMPOSE", "This get rendered $item")
                 when (item) {
@@ -40,6 +40,7 @@ fun LazyRowForDemo() {
                     }
                 }
             })
+       }
 }
 
 
