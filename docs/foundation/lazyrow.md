@@ -1,4 +1,4 @@
-# LazyRowFor
+# LazyRow
 
 !!! info
     This is the API of version 1.0.0-alpha09. Newer versions may have a different one
