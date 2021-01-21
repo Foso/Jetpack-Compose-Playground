@@ -10,19 +10,21 @@ To use Jetpack Compose you need to use at least a [version >= Android Studio Arc
 
 Add this inside in the **android{}** block your build.gradle
 ```groovy
-buildFeatures {
-    compose true
-}
- composeOptions {
-        kotlinCompilerVersion "1.4.0"
-        kotlinCompilerExtensionVersion "1.0.0-alpha07"
+android{
+//YOUR OTHER CODE
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.0.0-alpha10"
+        kotlinCompilerVersion '1.4.21'
     }
 
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
-    kotlinOptions {
-        jvmTarget = "1.8"
-        freeCompilerArgs += ["-Xallow-jvm-ir-dependencies", "-Xskip-prerelease-check"]
-    }
 }
 ```
 
@@ -31,7 +33,7 @@ Below are all Compose dependencies that are online available, you don't need to 
 ```groovy
 
 dependencies {
-    def compose_version = "1.0.0-alpha07"
+    def compose_version = "1.0.0-alpha10"
 
      implementation("androidx.compose.runtime:runtime-dispatch:$compose_version")
      implementation("androidx.compose.runtime:runtime:$compose_version")
@@ -50,7 +52,8 @@ dependencies {
      implementation("androidx.compose.ui:ui-text:$compose_version")
      implementation("androidx.compose.ui:ui-util:$compose_version")
      implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
-     implementation "androidx.ui:ui-tooling:$compose_version"
+     implementation "androidx.compose.ui:ui-tooling:$compose_version"
+
 
 }
 
