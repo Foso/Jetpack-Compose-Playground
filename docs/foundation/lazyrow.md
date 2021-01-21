@@ -1,23 +1,23 @@
-# LazyRowFor
+# LazyRow
 
 !!! info
-    This is the API of version 1.0.0-alpha09. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha10. Newer versions may have a different one
     
-A [LazyRow](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary.html#LazyRowFor) is a horizontal scrolling list that only composes and lays out the currently visible items.
-It's similar to a  horizontal Recyclerview in the classic Android View system.
+A [LazyRow](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazyrow) is a horizontal scrolling list that only composes and lays out the currently visible items.
+It's similar to a horizontal Recyclerview in the classic Android View system.
 
 
 <p align="left">
-  <img src ="../../images/foundation/lazyrowfor/lazyrowfor.png" height=100 width=300 />
+  <img src ="../../images/foundation/lazyrow/lazyrow.png" height=100 width=300 />
 </p>
 
 ```kotlin
 @Composable
 fun LazyRowDemo() {
-    LazyRow( modifier = Modifier)
+    LazyRow {
         items(items = listOf(
             "A", "B", "C", "D"
-        ) + ((0..100).map { it.toString() }),  
+        ) + ((0..100).map { it.toString() }),
             itemContent = { item ->
                 Log.d("COMPOSE", "This get rendered $item")
                 when (item) {
@@ -40,13 +40,9 @@ fun LazyRowDemo() {
                     }
                 }
             })
-       }
+    }
 }
-
-
-
 ```
-
 
 ## items
 This is the data of items that should be displayed. It expects a List of T
@@ -59,5 +55,5 @@ This will be called every time a item from the **items**-List gets visible.
 Then you can create your composable that should be displayed.  
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazyrowfor)
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazyrow)
 * [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/foundation/LazyRowForDemo.kt)

@@ -94,7 +94,7 @@ nav:
               - 'Canvas': foundation/canvas.md
               - 'Image': foundation/image.md
               - 'LazyColumn': foundation/lazycolumn.md
-              - 'LazyRowFor': foundation/lazyrowfor.md
+              - 'LazyRow': foundation/lazyrow.md
               - 'Shape' : foundation/shape.md
               - 'Text': foundation/text.md
           - 'Layout':
