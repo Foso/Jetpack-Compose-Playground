@@ -1,7 +1,7 @@
 # Crossfade
 
 !!! info
-    This is the API of version 1.0.0-alpha06. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha10. Newer versions may have a different one
 
 Crossfade can be used to switch between Composables with an crossfade animation.
 
