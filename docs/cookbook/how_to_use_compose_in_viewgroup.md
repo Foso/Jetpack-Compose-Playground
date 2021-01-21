@@ -1,31 +1,14 @@
 # How to use Compose in a ViewGroup
 
 !!! info
-    This is the API of version dev16. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha10. Newer versions may have a different one
 
-Compose has a **setContent()**-extension function on ViewGroup which can be used, to use Compose inside a ViewGroup.
-This example will show you, how you can use Compose inside a FrameLayout. It should also work in other layouts like LinearLayout. As long as it's a layout that extends the **ViewGroup** class.
+You can use ComposeView to use Compose inside a ViewGroup.
+This example will show you, how you can use ComposeView inside a FrameLayout. It should also work in other layouts like LinearLayout
 
-```kotlin
-//Extension function from Compose
-fun ViewGroup.setContent(
-    recomposer: Recomposer,
-    parentComposition: CompositionReference? = null,
-    content: @Composable () -> Unit
-): Composition {
-    FrameManager.ensureStarted()
-    val composeView =
-        if (childCount > 0) {
-            getChildAt(0) as? AndroidOwner
-        } else {
-            removeAllViews(); null
-        } ?: AndroidOwner(context).also { addView(it.view, DefaultLayoutParams) }
-    return doSetContent(composeView, recomposer, parentComposition, content)
-}
-```
 
 ## Create a custom FrameLayout
-Create a custom FrameLayout, then you can use the **setContent()** for example inside **init()**. 
+Create a custom FrameLayout, then you can use the **ComposeView** and **setContent()** for example inside **init()**.
 Inside **setContent()** you can then add your Compose code.
 ```kotlin
 class ComposeFrameLayout @JvmOverloads constructor(
@@ -34,10 +17,10 @@ class ComposeFrameLayout @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     init {
-        setContent(Recomposer.current(),null){
-            Button(onClick = {}) {
-                Text("ComposeButton")
-            }
+        ComposeView(context).setContent {
+                    Button(onClick = {}) {
+                        Text("ComposeButton")
+                    }
         }
     }
 }
