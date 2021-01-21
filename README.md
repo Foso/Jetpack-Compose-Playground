@@ -43,8 +43,8 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [Box](https://foso.github.io/Jetpack-Compose-Playground/foundation/box)
 * [Canvas](https://foso.github.io/Jetpack-Compose-Playground/foundation/canvas)
 * [Image](https://foso.github.io/Jetpack-Compose-Playground/foundation/image)
-* [LazyColumnFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumnfor)
-* [LazyRowFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazyrowfor)
+* [LazyColumn](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumn)
+* [LazyRow](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazyrow)
 * [Shape](https://foso.github.io/Jetpack-Compose-Playground/foundation/shape)
 * [Text](https://foso.github.io/Jetpack-Compose-Playground/foundation/text)
 
