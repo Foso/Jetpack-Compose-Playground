@@ -10,8 +10,8 @@
 | HStack  		    | [Row](../layout/row.md)  |
 | VStack  		    | [Column](../layout/column.md)  |
 | ZStack  		    | [Box](../layout/box.md)  |
-| LazyVStack  		| [LazyColumnFor](../foundation/lazycolumnfor.md)   |
-| LazyHStack  		| [LazyRowFor](../foundation/lazyrowfor.md)  |
+| LazyVStack  		| [LazyColumn](../foundation/lazycolumn.md)   |
+| LazyHStack  		| [LazyRow](../foundation/lazyrow.md)  |
 | ScrollView  		| [ScrollableRow](../foundation/scrollablerow.md)/[ScrollableColumn](../foundation/scrollablecolumn.md)  |
 
 ## What is the equivalent of a View?
