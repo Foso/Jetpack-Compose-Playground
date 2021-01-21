@@ -93,7 +93,7 @@ nav:
               - 'BaseTextField': foundation/basetextfield.md
               - 'Canvas': foundation/canvas.md
               - 'Image': foundation/image.md
-              - 'LazyColumnFor': foundation/lazycolumnfor.md
+              - 'LazyColumn': foundation/lazycolumn.md
               - 'LazyRowFor': foundation/lazyrowfor.md
               - 'Shape' : foundation/shape.md
               - 'Text': foundation/text.md

@@ -6,7 +6,7 @@
     LazyColumn and LazyRow instead. Users can still decide they don't need the lazy behaviour and use the modifiers directly like this:
     Column(Modifier.verticalScroll(rememberScrollState()))
 
-    Use [LazyColumnFor](/foundation/lazycolumnfor)
+    Use [LazyColumn](/foundation/lazycolumn)
     
     https://android-review.googlesource.com/c/platform/frameworks/support/+/1530328
 
