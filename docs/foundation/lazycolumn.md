@@ -59,4 +59,5 @@ Then you can create your composable that should be displayed.
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazycolumn)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/foundation/LazyColumnForDemo.kt)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/foundation/LazyColumnForDemo.kt
+)

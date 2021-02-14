@@ -89,4 +89,4 @@ fun DropdownDemo() {
 ## See also:
 * [Material.io](https://material.io/components/menus#dropdown-menu)
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#dropdownmenu)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/material/dropdown/DropdownDemo.kt)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/material/dropdown/DropdownDemo.kt)

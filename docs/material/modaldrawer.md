@@ -39,4 +39,4 @@ fun ModalDrawerLayoutSample() {
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#modaldrawerlayout)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/material/modaldrawer/ModalDrawerLayoutSample.kt)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/material/modaldrawer/ModalDrawerLayoutSample.kt)

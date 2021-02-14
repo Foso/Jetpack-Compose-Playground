@@ -85,4 +85,5 @@ In the **update** function you will get the View that was created in **ctor**. T
 
 ### See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/ui/viewinterop/package-summary#androidview)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/cookbook/androidview/embeddedAndroidViewDemo.kt)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/androidview/embeddedAndroidViewDemo.kt)
+

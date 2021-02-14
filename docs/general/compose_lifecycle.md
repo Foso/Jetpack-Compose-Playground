@@ -41,5 +41,5 @@ fun LifecycleDemo() {
 
 
 ## See also:
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/general/LifecycleDemo.kt)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/general/LifecycleDemo.kt)
 

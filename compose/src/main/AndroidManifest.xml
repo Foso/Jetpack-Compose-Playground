@@ -3,7 +3,7 @@
 
     <application>
 
-        <activity android:name="de.jensklingenberg.jetpackcomposeplayground.ui.MyComposeActivity" />
+        <activity android:name="de.jensklingenberg.jetpackcomposeplayground.mysamples.MyComposeActivity" />
 
 
         <activity android:name="androidx.compose.material.demos.DynamicThemeActivity" />

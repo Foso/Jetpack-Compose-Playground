@@ -60,4 +60,4 @@ Everytime one of the 3 buttons is clicked, the value of currentColor will change
 
 
 ## See also:
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/compose/src/main/java/de/jensklingenberg/jetpackcomposeplayground/ui/github/animation/crossfade/CrossfadeDemo.kt)
+* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/animation/crossfade/CrossfadeDemo.kt)
