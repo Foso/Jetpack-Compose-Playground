@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.*
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.unit.LayoutDirection
 
 @Composable
 fun CircleShapeDemo(){
@@ -81,7 +82,7 @@ fun TriangleShapeDemo(){
 
 
 
-private val TriangleShape = GenericShape { size ->
+private val TriangleShape = GenericShape { size,direction ->
     /**
      *
     Inside the GenericShape you can draw your custom shape.
@@ -150,7 +151,11 @@ private val TriangleShape = GenericShape { size ->
 class CustomShape : Shape {
 
 
-    override fun createOutline(size: Size, density: Density): Outline {
+    override fun createOutline(
+        size: Size,
+        layoutDirection: LayoutDirection,
+        density: Density
+    ): Outline {
         val path = Path().apply {
             moveTo(size.width / 2f, 0f)
             lineTo(size.width, size.height)

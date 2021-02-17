@@ -1,11 +1,7 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modaldrawer
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Button
-import androidx.compose.material.DrawerValue
-import androidx.compose.material.ModalDrawerLayout
-import androidx.compose.material.rememberDrawerState
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 
 @Composable

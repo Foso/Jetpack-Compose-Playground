@@ -1,9 +1,9 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.card
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Card
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp

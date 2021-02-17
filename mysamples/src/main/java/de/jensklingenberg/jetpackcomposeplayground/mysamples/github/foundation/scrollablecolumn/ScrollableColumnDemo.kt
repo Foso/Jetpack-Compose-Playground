@@ -1,9 +1,10 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.scrollablecolumn
 
 import androidx.compose.foundation.ScrollableColumn
-import androidx.compose.foundation.Text
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 

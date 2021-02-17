@@ -1,42 +1,25 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+
 buildscript {
-    ext.kotlin_version = "1.4.20"
-
+    ext {
+        compose_version = '1.0.0-alpha12'
+        kotlin_version = "1.4.30"
+    }
     repositories {
-        maven {
-            url "http://dl.bintray.com/kotlin/kotlin-eap"
-        }
-
-        mavenCentral()
-        maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots/'
-        }
-        maven { url 'https://jitpack.io' }
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.0-alpha04'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.android.tools.build:gradle:7.0.0-alpha06"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30"
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-    }
-}
-
-
-
-allprojects {
-    ext.kotlin_version = "1.4.20"
-    repositories {
-        maven {
-            url "https://dl.bintray.com/kotlin/kotlin-eap/"
-        }
-        google()
-        jcenter()
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

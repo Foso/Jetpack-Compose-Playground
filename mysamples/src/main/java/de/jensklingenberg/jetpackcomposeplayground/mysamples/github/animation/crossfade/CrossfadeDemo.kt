@@ -2,11 +2,11 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.animation.c
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
-import androidx.compose.material.ButtonConstants
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -28,15 +28,13 @@ fun CrossfadeDemo() {
                 Button(
                         onClick = { currentColor = myColors },
                         Modifier.weight(1f, true)
-                                .preferredHeight(48.dp), colors = ButtonConstants.defaultButtonColors(
-                        backgroundColor = myColors.color
-                )
+                                .preferredHeight(48.dp).background(myColors.color),colors = ButtonDefaults.buttonColors(backgroundColor = myColors.color)
                 ) {
                     Text(myColors.name)
                 }
             }
         }
-        Crossfade(current = currentColor, animation = tween(3000)) { selectedColor ->
+        Crossfade(targetState = currentColor, animationSpec = tween(3000)) { selectedColor ->
             Box(modifier = Modifier.fillMaxSize().background(selectedColor.color))
         }
     }

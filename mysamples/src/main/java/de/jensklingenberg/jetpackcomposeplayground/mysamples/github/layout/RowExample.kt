@@ -1,8 +1,8 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.layout
 
-import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 

@@ -1,10 +1,9 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.textfield
 
-import androidx.compose.foundation.BaseTextField
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Text
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.unit.dp
@@ -24,12 +23,3 @@ fun TextFieldDemo() {
 }
 
 
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun HandleTextFieldChanges() {
-    var textState by remember { mutableStateOf(TextFieldValue()) }
-
-    BaseTextField(value = textState, onValueChange = {
-        textState = it
-    })
-}

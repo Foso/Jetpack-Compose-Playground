@@ -27,32 +27,33 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
-        useIR = true
-
+        jvmTarget = '1.8'
     }
 
     buildFeatures {
         compose true
     }
-
-    lintOptions {
-        abortOnError false
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerVersion '1.4.30'
     }
-
 }
+
 dependencies {
-    def compose_version = "1.0.0-alpha08"
 
-    api "androidx.compose.ui:ui:$compose_version"
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$project.ext.kotlin_version"
-    implementation "androidx.appcompat:appcompat:1.2.0"
-    implementation "androidx.core:core-ktx:1.3.2"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    implementation("androidx.compose.runtime:runtime-dispatch:$compose_version")
-    implementation("androidx.compose.runtime:runtime:$compose_version")
+
     implementation "androidx.compose.animation:animation-core:$compose_version"
     implementation "androidx.compose.animation:animation:$compose_version"
     implementation("androidx.compose.ui:ui:$compose_version")
@@ -69,15 +70,4 @@ dependencies {
     implementation("androidx.compose.ui:ui-util:$compose_version")
     implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
-
-
-
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.4.20'
-
-
-    implementation "androidx.preference:preference-ktx:1.1.1"
-
-    testImplementation "junit:junit:4.12"
-    androidTestImplementation "androidx.test:runner:1.1.1"
-
 }

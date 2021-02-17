@@ -1,1 +1,8 @@
-include ':app', ':compose', ':mysamples'
+dependencyResolutionManagement {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+include ':app'
+include ':mysamples'

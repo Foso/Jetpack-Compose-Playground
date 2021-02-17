@@ -1,9 +1,10 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation
 
 import android.util.Log
-import androidx.compose.foundation.Text
+
 import androidx.compose.foundation.lazy.LazyRowFor
 import androidx.compose.material.Button
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle

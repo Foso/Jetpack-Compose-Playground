@@ -18,9 +18,10 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.general
 
 
 import android.util.Log
-import androidx.compose.foundation.Text
+
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
 
 
@@ -29,18 +30,25 @@ fun LifecycleDemo() {
 
     val count = remember { mutableStateOf(0) }
 
-        Column {
-            Button( onClick = {
-                count.value++
-            }){
-                Text("Click me")
+    Column {
+        Button(onClick = {
+            count.value++
+        }) {
+            Text("Click me")
+        }
+
+        if (count.value < 3) {
+            SideEffect() {
+                Log.d("Compose", "onactive with value: " + count.value)
+            }
+            DisposableEffect("") {
+                onDispose {
+                    Log.d("Compose", "onDispose because value=" + count.value)
+                }
             }
 
-            if (count.value < 3) {
-                onActive { Log.d("Compose", "onactive with value: " + count.value) }
-                onDispose { Log.d("Compose", "onDispose because value=" + count.value) }
-                Text(text = "You have clicked the button: " + count.value.toString())
-            }
+            Text(text = "You have clicked the button: " + count.value.toString())
         }
+    }
 
 }

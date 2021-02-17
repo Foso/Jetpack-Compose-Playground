@@ -1,30 +1,28 @@
-package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.general
+package de.jensklingenberg.jetpackcomposeplayground.mysamples
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Providers
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.platform.setContent
-
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.linearprogress.LinearProgressIndicatorSample
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.other.AlertDialogSample
 
 data class User(val name: String, val age: Int)
 
 val LocalActiveUser = compositionLocalOf<User> { error("No user found!") }
 
-class MainActivity : ComponentActivity() {
-
+class DemoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
-            MyUserScreen()
+            AlertDialogSample()
         }
     }
 }
-
 @Composable
 private fun MyUserScreen() {
     val user = User("Jens", 31)
