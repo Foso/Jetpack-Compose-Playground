@@ -1,5 +1,5 @@
 # Providers
-Providers are used to provide a value for an [CompositionLocal](/general/compositionlocal)
+Providers are used to provide a value for an [CompositionLocal](../compositionlocal)
 
 ## How to provide a value for an CompositionLocal?
 

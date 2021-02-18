@@ -1,2 +1,2 @@
 # Ambient
-Ambient was renamed to [CompositionLocal](/general/compositionlocal)
+Ambient was renamed to [CompositionLocal](../compositionlocal)
