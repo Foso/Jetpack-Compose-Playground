@@ -15,7 +15,7 @@ data class User(val name: String, val age: Int)
 
 val LocalActiveUser = compositionLocalOf<User> { error("No user found!") }
 
-class DemoActivity : AppCompatActivity() {
+class MyTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

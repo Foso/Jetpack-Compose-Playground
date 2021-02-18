@@ -3,6 +3,6 @@
     package="de.jensklingenberg.jetpackcomposeplayground.mysamples">
 
     <application>
-        <activity android:name="de.jensklingenberg.jetpackcomposeplayground.mysamples.DemoActivity" />
+        <activity android:name="de.jensklingenberg.jetpackcomposeplayground.mysamples.MyTestActivity" />
     </application>
 </manifest>

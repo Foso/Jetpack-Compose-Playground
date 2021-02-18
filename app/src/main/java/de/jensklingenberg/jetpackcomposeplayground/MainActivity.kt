@@ -4,7 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.DemoActivity
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.MyTestActivity
+
+//import androidx.ui.demos.DemoActivity
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity)
 
         findViewById<Button>(R.id.button1).setOnClickListener {
-            startActivity(Intent(this, DemoActivity::class.java))
+           // startActivity(Intent(this, DemoActivity::class.java))
         }
 
         findViewById<Button>(R.id.button2).setOnClickListener {
-         //   startActivity(Intent(this, MyComposeActivity::class.java))
+            startActivity(Intent(this, MyTestActivity::class.java))
         }
 
     }

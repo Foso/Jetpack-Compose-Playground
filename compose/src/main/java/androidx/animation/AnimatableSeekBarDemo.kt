@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package androidx.compose.animation.demos
+package androidx.animation
 
 import androidx.compose.animation.animatedFloat
 import androidx.compose.animation.core.FastOutSlowInEasing

@@ -53,8 +53,8 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerVersion "1.4.20"
-        kotlinCompilerExtensionVersion "1.0.0-alpha08"
+        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerVersion '1.4.30'
     }
 
 }
@@ -67,11 +67,10 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 }
 
 dependencies {
-    def compose_version = "1.0.0-alpha08"
+    def compose_version = "1.0.0-alpha09"
 
     api "androidx.compose.ui:ui:$compose_version"
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$project.ext.kotlin_version"
     implementation "androidx.appcompat:appcompat:1.2.0"
     implementation "androidx.core:core-ktx:1.3.2"
 
@@ -95,9 +94,6 @@ dependencies {
     implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
 
-
-
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.4.20'
 
 
     implementation "androidx.preference:preference-ktx:1.1.1"
