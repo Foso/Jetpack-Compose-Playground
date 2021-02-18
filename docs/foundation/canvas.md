@@ -1,7 +1,7 @@
 # Canvas
 
 !!! info
-    This is the API of version 1.0.0-alpha10. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 ## How to draw on Canvas
 
@@ -15,9 +15,7 @@
 fun CanvasDrawExample() {
     Canvas(modifier = Modifier.fillMaxSize()) {
         drawRect(Color.Blue, topLeft = Offset(0f, 0f), size = Size(this.size.width, 55f))
-
         drawCircle(Color.Red, center = Offset(50f, 200f), radius = 40f)
-
         drawLine(
             Color.Green, Offset(20f, 0f),
             Offset(200f, 200f), strokeWidth = 5f

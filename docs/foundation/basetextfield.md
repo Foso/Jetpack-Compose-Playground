@@ -1,7 +1,7 @@
 # BaseTextField
 
 !!! info
-    This is the API of version 1.0.0-alpha03. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 BaseTextField can be used to insert text. See [TextField](../material/textfield.md) for a material version.
 
@@ -16,7 +16,7 @@ fun BaseTextFieldDemo() {
     var textState by remember { mutableStateOf(TextFieldValue()) }
 
     Column {
-        BaseTextField(value = textState, onValueChange = {
+        TextField(value = textState, onValueChange = {
             textState = it
         })
         Text("The textfield has this text: " + textState.text)
