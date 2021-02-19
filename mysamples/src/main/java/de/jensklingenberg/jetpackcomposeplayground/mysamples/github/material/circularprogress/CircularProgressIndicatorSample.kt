@@ -15,31 +15,30 @@ import androidx.compose.ui.unit.dp
 fun CircularProgressIndicatorSample() {
     var progress by remember { mutableStateOf(0.1f) }
     val animatedProgress = animate(
-            target = progress,
-            animSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
+        target = progress,
+        animSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
     )
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-
         Spacer(Modifier.height(30.dp))
-        Text("LinearProgressIndicator with undefined progress")
-        LinearProgressIndicator()
+        Text("CircularProgressIndicator with undefined progress")
+        CircularProgressIndicator()
         Spacer(Modifier.height(30.dp))
-        Text("LinearProgressIndicator with progress set by buttons")
-        LinearProgressIndicator(progress = animatedProgress)
+        Text("CircularProgressIndicator with progress set by buttons")
+        CircularProgressIndicator(progress = animatedProgress)
         Spacer(Modifier.height(30.dp))
         OutlinedButton(
-                onClick = {
-                    if (progress < 1f) progress += 0.1f
-                }
+            onClick = {
+                if (progress < 1f) progress += 0.1f
+            }
         ) {
             Text("Increase")
         }
 
         OutlinedButton(
-                onClick = {
-                    if (progress > 0f) progress -= 0.1f
-                }
+            onClick = {
+                if (progress > 0f) progress -= 0.1f
+            }
         ) {
             Text("Decrease")
         }

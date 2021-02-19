@@ -1,7 +1,7 @@
 # TextField
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
 
@@ -13,12 +13,12 @@ TextField can be used to insert text. This is the equivalent to **EditText** fro
 @Composable
 fun TextFieldDemo() {
     Column(Modifier.padding(16.dp)) {
-        val textState = remember { mutableStateOf(TextFieldValue()) }
-        TextField(
-                value = textState.value,
-                onValueChange = { textState.value = it }
-        )
-        Text("The textfield has this text: " + textState.value.text)
+            val textState = remember { mutableStateOf(TextFieldValue()) }
+            TextField(
+                    value = textState.value,
+                    onValueChange = { textState.value = it }
+            )
+            Text("The textfield has this text: " + textState.value.text)
     }
 }
 ```
