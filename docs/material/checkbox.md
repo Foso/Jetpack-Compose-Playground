@@ -21,3 +21,4 @@ fun CheckBoxDemo() {
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#checkbox)
+* [Full Example Code]({{ site.samplefolder }}/material/card/CardDemo.kt)
