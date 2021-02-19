@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.ui.samples.mysamples.other
+package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.switch
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Switch
