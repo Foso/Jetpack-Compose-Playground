@@ -21,7 +21,7 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.R
 
 @Preview(showBackground = true)
 @Composable
-fun embeddedAndroidViewDemo() {
+fun EmbeddedAndroidViewDemo() {
     Column {
         val state = remember { mutableStateOf(0) }
 
