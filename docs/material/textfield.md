@@ -26,4 +26,4 @@ fun TextFieldDemo() {
 -------------
 ## See also:
 * [Handle changes in a TextField](https://foso.github.io/Jetpack-Compose-Playground/cookbook/textfield_changes/)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/other/TextFieldDemo.kt)
+* [Full Example Code]({{ site.samplefolder }}/other/TextFieldDemo.kt)

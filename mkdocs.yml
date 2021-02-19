@@ -22,6 +22,8 @@ theme:
     logo: material/cloud
 extra:
   manifest: manifest.webmanifest
+  site:
+    samplefolder: 'https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github'
   social:
     - icon: fontawesome/brands/github-alt
       link: 'https://github.com/foso'
@@ -145,6 +147,7 @@ markdown_extensions:
   - admonition
 
 plugins:
+  - macros
   - search
   - git-revision-date-localized:
       type: date

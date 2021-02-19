@@ -27,4 +27,4 @@ fun BaseTextFieldDemo() {
 
 -------------
 ## See also:
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/foundation/basetextfield/BaseTextFieldDemo.kt)
+* [Full Example Code]({{ site.samplefolder }}/foundation/basetextfield/BaseTextFieldDemo.kt)

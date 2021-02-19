@@ -24,5 +24,5 @@ fun ButtonExample() {
 <hr>
 ### See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/material/Button)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/material/button/ButtonExample.kt)
+* [Full Example Code]({{ site.samplefolder }}/material/button/ButtonExample.kt)
 

@@ -79,5 +79,5 @@ The CompositionLocal containing the current [ViewModelStoreOwner].
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/runtime/CompositionLocal)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/general/CompositionLocalExample.kt)
+* [Full Example Code]({{ site.samplefolder }}/general/CompositionLocalExample.kt)
 

@@ -56,4 +56,4 @@ Then you can create your composable that should be displayed.
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazyrow)
-* [Full Example Code](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/foundation/LazyRowForDemo.kt)
+* [Full Example Code]({{ site.samplefolder }}/foundation/LazyRowForDemo.kt)
