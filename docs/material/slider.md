@@ -1,7 +1,7 @@
 # Slider
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 "Sliders allow users to make selections from a range of values."
     
@@ -23,3 +23,4 @@ fun MySliderDemo() {
 ## See also:
 * [Material.io](https://material.io/components/sliders)
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#slider)
+* [Full Example Code]({{ site.samplefolder }}/material/slider/MySliderDemo.kt)
