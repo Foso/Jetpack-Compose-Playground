@@ -1,7 +1,7 @@
 # DropdownMenu
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 The DropdownMenu Composable can be used to create DropdownMenu.
 
@@ -10,75 +10,49 @@ The DropdownMenu Composable can be used to create DropdownMenu.
 </p>
 
 ```kotlin
-@Composable
 fun DropdownMenu(
-    toggle: @Composable () -> Unit,
     expanded: Boolean,
     onDismissRequest: () -> Unit,
-    toggleModifier: Modifier = Modifier,
-    dropdownOffset: Position = Position(0.dp, 0.dp),
-    dropdownModifier: Modifier = Modifier,
-    dropdownContent: @Composable ColumnScope.() -> Unit
+    modifier: Modifier = Modifier,
+    offset: DpOffset = DpOffset(0.dp, 0.dp),
+    properties: PopupProperties = PopupProperties(focusable = true),
+    content: @Composable ColumnScope.() -> Unit
 )
 ```
 
-**toggle**
-
-This is the layout of the DropdownMenu.
-
 **expanded**
-
 If true, the popupmenu with the dropdownContent will be shown
 
 **onDismissRequest**
-
 Called when the menu should be dismiss
 
-**toggleModifier**
-
-Here you can apply a modifier for **toggle**
-
-**dropdownModifier**
-
-Here you can apply a modifier for the popupmenu that shows the dropdownContent
-
-**dropdownContent**
-
-This is the content that will be shown inside the menu. You can use any Composable, but you can use DropdownMenuItem, for a item that follows material design spec
-
-
 ```kotlin
-@Preview
-@Composable
 fun DropdownDemo() {
+    var expanded by remember { mutableStateOf(false) }
     val items = listOf("A", "B", "C", "D", "E", "F")
     val disabledValue = "B"
-    var showMenu by remember { mutableStateOf( false ) }
     var selectedIndex by remember { mutableStateOf(0) }
-
-    DropdownMenu(
-            toggle = {
-                Text(items[selectedIndex], modifier = Modifier.fillMaxWidth().clickable(onClick = { showMenu = true }))
-            },
-            expanded = showMenu,
-            onDismissRequest = { showMenu = false },
-            toggleModifier = Modifier.fillMaxWidth().background(Color.Gray),
-            dropdownModifier = Modifier.fillMaxWidth().background(Color.Red)
-    ) {
-        items.forEachIndexed { index, s ->
-            DropdownMenuItem(
-                    enabled = (s != disabledValue),
-                    onClick = {
-                        selectedIndex = index
-                        showMenu = false
+    Box(modifier = Modifier.fillMaxSize().wrapContentSize(Alignment.TopStart)) {
+        Text(items[selectedIndex],modifier = Modifier.fillMaxWidth().clickable(onClick = { expanded = true }).background(
+            Color.Gray))
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+            modifier = Modifier.fillMaxWidth().background(
+                Color.Red)
+        ) {
+            items.forEachIndexed { index, s ->
+                DropdownMenuItem(onClick = {
+                    selectedIndex = index
+                    expanded = false
+                }) {
+                    val disabledText = if (s == disabledValue) {
+                        " (Disabled)"
+                    } else {
+                        ""
                     }
-            ) {
-                val disabledText = if (s == disabledValue) {
-                    " (Disabled)"
-                } else {
-                    ""
+                    Text(text = s + disabledText)
                 }
-                Text(text = s + disabledText)
             }
         }
     }

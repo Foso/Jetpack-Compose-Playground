@@ -65,3 +65,6 @@ This is the primary content of the scaffold. You can add any Composable here.
 </p>
 
 Here you can set the part of your layout is on bottom of the screen. You can set any Composable, but **BottomAppBar** is already made for this usecase.
+
+## See also:
+* [Full Example Code]({{ site.samplefolder }}/material/scaffold/ScaffoldDemo.kt)
