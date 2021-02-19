@@ -1,18 +1,18 @@
 # FloatingActionButton
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 ## FloatingActionButton
 
 
 ```kotlin
 @Composable                                               
-fun FloatingActionButtonDemo() {                          
-    FloatingActionButton(onClick = { /*do something*/}) { 
-        Text("FloatingActionButton")                      
-    }                                                     
-}                                                         
+fun FloatingActionButtonDemo() {
+    FloatingActionButton(onClick = { /*do something*/}) {
+        Text("FloatingActionButton")
+    }
+}
 ```
 
 <p align="center">
@@ -23,14 +23,14 @@ fun FloatingActionButtonDemo() {
 
 ```kotlin
 @Composable                                               
-fun ExtendedFloatingActionButtonDemo() {                          
-     ExtendedFloatingActionButton(                               
-         icon = { Icon(Icons.Filled.Favorite) },                 
-         text = { Text("FloatingActionButton") },                
-         onClick = { /*do something*/ },
-         elevation = FloatingActionButtonConstants.defaultElevation(8.dp)
-     )                                                                                                             
-}                                                         
+fun ExtendedFloatingActionButtonDemo() {
+    ExtendedFloatingActionButton(
+        icon = { Icon(Icons.Filled.Favorite,"") },
+        text = { Text("FloatingActionButton") },
+        onClick = { /*do something*/ },
+        elevation = FloatingActionButtonDefaults.elevation(8.dp)
+    )
+}
 ```
 
 <p align="center">
@@ -39,3 +39,4 @@ fun ExtendedFloatingActionButtonDemo() {
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#floatingactionbutton)
+* [Full Example Code]({{ site.samplefolder }}/material/floatingactionbutton/FabDemo.kt)
