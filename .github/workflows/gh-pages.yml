@@ -23,6 +23,7 @@ jobs:
           python3 -m pip install mkdocs-material   # install material theme
           python3 -m pip install mkdocs-git-revision-date-localized-plugin
           python3 -m pip install mkdocs-minify-plugin
+          python3 -m pip install mkdocs-macros-plugin
       - name: Build site
         run: mkdocs build
       - name: Deploy
