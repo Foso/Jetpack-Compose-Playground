@@ -4,7 +4,7 @@
     This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 
-## Load Image Drawable
+## Load Image
 You can use **painterResource** to load an image from the resources
 
 ```kotlin

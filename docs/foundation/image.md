@@ -1,7 +1,7 @@
 # Image
 
 !!! info
-    This is the API of version 1.0.0-alpha02. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 Image is used to display Images. It's similar to an ImageView in the classic Android View system.
 
@@ -11,32 +11,23 @@ Image is used to display Images. It's similar to an ImageView in the classic And
 </p>
 
 
-## Load Image Drawable
-You can use **loadImageResource** to load an drawable image from the resources
+## Load Image
+You can use **painterResource** to load an image from the resources
 
 ```kotlin
 @Composable
-fun ImageResourceDrawableDemo() {
-     val image = loadImageResource(id = R.drawable.composelogo)
-     //loadImageResource will load the drawable asynchronous
-        image.resource.resource?.let {
-            Image(asset = it)
-        }
+fun ImageResourceDemo() {
+    val image: Painter = painterResource(id = R.drawable.composelogo)
+    Image(painter = image,contentDescription = "")
 }
 ```
 
-## Load Vector Drawable
-You can use **loadVectorResource** to load an vector image from the resources
 
-```kotlin
-@Composable
-fun ImageVectorResourceDemo() {
-    val image = loadVectorResource(id = R.drawable.favorite)
-    //loadVectorResource will load the vector image asynchronous
-    image.resource.resource?.let {
-        Image(asset = it)
-    }
-}
-```
+<hr>
+
+## See also:
+
+* [Full Example Code]({{ site.samplefolder }}/foundation/ImageResourceDemo.kt)
+
 
 
