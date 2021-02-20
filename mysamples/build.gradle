@@ -53,7 +53,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha02'
     implementation "androidx.compose.animation:animation-core:$compose_version"
     implementation "androidx.compose.animation:animation:$compose_version"
     implementation("androidx.compose.ui:ui:$compose_version")
@@ -70,4 +69,8 @@ dependencies {
     implementation("androidx.compose.ui:ui-util:$compose_version")
     implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+    //Compose Constraintlayout
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha02'
+
 }
