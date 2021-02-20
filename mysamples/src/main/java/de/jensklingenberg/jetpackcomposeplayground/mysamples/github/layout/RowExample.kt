@@ -7,9 +7,6 @@ import androidx.compose.runtime.Composable
 
 
 @Composable
-        /**
-         * @see wiki [https://github.com/Foso/Jetpack-Compose-Playground/wiki/Row]
-         */
 fun RowDemo() {
     MaterialTheme {
         RowExample()

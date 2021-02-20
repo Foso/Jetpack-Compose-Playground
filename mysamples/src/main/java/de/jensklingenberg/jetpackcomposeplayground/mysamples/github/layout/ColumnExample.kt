@@ -10,9 +10,6 @@ import androidx.compose.runtime.Composable
 
 
 @Composable
-        /**
-         * @see wiki [https://github.com/Foso/Jetpack-Compose-Playground/wiki/Column]
-         */
 fun ColumnDemo() {
 
     MaterialTheme {
