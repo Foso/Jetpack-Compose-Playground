@@ -44,7 +44,6 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 
 ### Foundation
 ---
-* [Box](foundation/box.md)
 * [Canvas](foundation/canvas.md)
 * [Image](foundation/image.md)
 * [LazyColumnFor](foundation/lazycolumn.md)
