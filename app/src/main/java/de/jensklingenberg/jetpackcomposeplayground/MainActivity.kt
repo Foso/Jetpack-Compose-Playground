@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.MyTestActivity
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.DemoActivity
 
 //import androidx.ui.demos.DemoActivity
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.button2).setOnClickListener {
-            startActivity(Intent(this, MyTestActivity::class.java))
+            startActivity(Intent(this, DemoActivity::class.java))
         }
 
     }

@@ -44,11 +44,11 @@ fun CircleShapeDemo(){
 
 @Composable
 fun ExampleBox(shape: Shape){
-     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
-        Box(
-           modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
-        )
-    }
+     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center).clip(shape)) {
+             Box(
+                 modifier = Modifier.preferredSize(100.dp).background(Color.Red)
+             ) { }
+     }
 }
 ```
 

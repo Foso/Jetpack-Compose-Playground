@@ -33,44 +33,62 @@ import androidx.compose.ui.graphics.*
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Text
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.LayoutDirection
 
 @Composable
-fun CircleShapeDemo(){
+fun CircleShapeDemo() {
     BoxDemo(CircleShape)
 }
 
 @Composable
-fun BoxDemo(shape: Shape){
-    Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
+fun ShapeDemo() {
+    Column {
+        Text("CircleShapeDemo:")
+        CircleShapeDemo()
+        Text("RoundedCornerShapeDemo:")
+        RoundedCornerShapeDemo()
+        Text("CutCornerShapeDemo:")
+        CutCornerShapeDemo()
+        Text("RectangleShapeDemo:")
+        RectangleShapeDemo()
+        Text("TriangleShapeDemo:")
+        TriangleShapeDemo()
+    }
+
+
+}
+
+@Composable
+fun BoxDemo(shape: Shape) {
+    Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center).clip(shape)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp).background(Color.Red).clip(shape)
+            modifier = Modifier.preferredSize(100.dp).background(Color.Red)
         ) {
 
-                    }
+        }
     }
 }
 
 @Composable
-fun RoundedCornerShapeDemo(){
+fun RoundedCornerShapeDemo() {
     BoxDemo(shape = RoundedCornerShape(10.dp))
 }
 
 @Composable
-fun CutCornerShapeDemo(){
+fun CutCornerShapeDemo() {
     BoxDemo(shape = CutCornerShape(10.dp))
 }
 
 
-
 @Composable
-fun RectangleShapeDemo(){
+fun RectangleShapeDemo() {
     BoxDemo(shape = RectangleShape)
 }
 
 @Composable
-fun TriangleShapeDemo(){
+fun TriangleShapeDemo() {
     BoxDemo(shape = CustomShape())
 }
 
@@ -81,8 +99,7 @@ fun TriangleShapeDemo(){
  */
 
 
-
-private val TriangleShape = GenericShape { size,direction ->
+private val TriangleShape = GenericShape { size, direction ->
     /**
      *
     Inside the GenericShape you can draw your custom shape.
@@ -101,8 +118,8 @@ private val TriangleShape = GenericShape { size,direction ->
      */
 
     /**
-    * 1)
-    */
+     * 1)
+     */
     /**
      *
     Inside the GenericShape you can draw your custom shape.
@@ -121,10 +138,9 @@ private val TriangleShape = GenericShape { size,direction ->
      */
 
 
-
-   /**
-    * 1)
-    */
+    /**
+     * 1)
+     */
     moveTo(size.width / 2f, 0f)
     //This will draw a line from the cursor to the x/y coordinates
 

@@ -7,7 +7,7 @@ Crossfade can be used to switch between Composables with an crossfade animation.
 
 <div>
 <video height="500" align="center" controls>
-  <source src="../../images/animation/crossfade/crossfadedemo.webm" type="video/webm" align="center">
+  <source src="{{ site.images }}/animation/crossfade/crossfadedemo.webm" type="video/webm" align="center">
 </video>
 </div>
 Example video of the code below. On every button click, the content of the screen will change with an animation duration of 3 seconds.

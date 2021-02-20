@@ -6,7 +6,7 @@
 A Column will show each child below the previous children. It's similar to a LinearLayout with vertical orientation.
 
 <p align="left">
-  <img src ="../../images/layout/column/ColumnExample.png" height=100 width=300 />
+  <img src ="{{ site.images }}/layout/column/ColumnExample.png" height=100 width=300 />
 </p>
 
 ```kotlin
@@ -23,3 +23,4 @@ fun ColumnExample() {
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/package-summary#column)
+* [Full Example Code]({{ site.samplefolder }}/layout/ColumnExample.kt)

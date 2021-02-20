@@ -4,5 +4,6 @@
 
     <application>
         <activity android:name="de.jensklingenberg.jetpackcomposeplayground.mysamples.MyTestActivity" />
+        <activity android:name=".demo.DemoActivity" />
     </application>
 </manifest>

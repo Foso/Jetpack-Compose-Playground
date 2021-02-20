@@ -72,7 +72,7 @@ fun ScrollableColumnExample() {
 ```
 
 ### What is the equivalent of a RecyclerView?
-In Compose, you can use a **[LazyColumnFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumnfor/)** or **[LazyRowFor](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazyrowfor/)**.
+In Compose, you can use a **[LazyColumn](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumn/)** or **[LazyRow](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazyrow/)**.
 
 
 ### What is the equivalent of wrap_content?
