@@ -27,6 +27,8 @@ val LayoutDemos = DemoCategory(
     "LayoutDemos",
     listOf(
         ComposableDemo("BoxExample") { BoxExample() },
+        ComposableDemo("ConstraintLayoutDemo") { ConstraintLayoutDemo() },
+
         ComposableDemo("ColumnExample") { ColumnExample() },
         ComposableDemo("RowExample") { RowExample() },
         )

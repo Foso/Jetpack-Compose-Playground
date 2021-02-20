@@ -1,15 +1,15 @@
-# ConstraintLayout
+package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.layout
 
-!!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
-A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System
 
-<p align="left">
-  <img src ="../../images/layout/constraintlayout/constraintlayout.png" height=100 width=300 />
-</p>
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.layoutId
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.ConstraintSet
 
-```kotlin
+
 @Composable
 fun ConstraintLayoutDemo() {
     ConstraintSet {
@@ -36,7 +36,3 @@ fun ConstraintLayoutDemo() {
         Text("This is a very long text", Modifier.layoutId("text3"))
     }
 }
-```
-
-## See also:
-* [Full Example Code]({{ site.samplefolder }}/layout/ConstraintLayoutDemo.kt)
