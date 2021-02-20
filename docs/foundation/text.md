@@ -1,14 +1,13 @@
 # Text
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 You can use **Text** to display text. You can use the **style** argument to define things like textdecoration or fontfamily.
 
 
-
 <p align="left">
-  <img src ="../../images/foundation/text/TextExample.png" height=100 width=300 />
+  <img src ="{{ site.images }}/foundation/text/TextExample.png" height=100 width=300 />
 </p>
 
 ```kotlin
@@ -117,3 +116,7 @@ fun TextWithUnderlineStrikeThroughAndBold(){
     )
 }
 ```
+
+
+## See also:
+* [Full Example Code]({{ site.samplefolder }}/foundation/TextExample.kt)
