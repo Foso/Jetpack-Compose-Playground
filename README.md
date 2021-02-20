@@ -1,7 +1,7 @@
 <h1 align="center">Jetpack/JetBrains Compose Playground</h1>
 
 ## Introduction 🙋‍♂️
-This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the github page https://foso.github.io/compose. You can find the code samples i got from the Google AndroidX git [here](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/compose/src/main/java/androidx/ui)
+This is an Jetpack Compose  example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the github page https://foso.github.io/compose.
 
 > :information_source: Please be aware that Compose is still experimental and should not be used in a production application.
 
@@ -67,13 +67,9 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 > Some of the code samples in this Repository:
 
-| Overview | Material Studies > Rally |  Material Studies > Rally |
+| Overview | DialogExample |  CircularProgress |
 | ------------------ | --------------------------- | ------------------ |
-|<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/RallyActivity2.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/RallyActivity.png" height="400" alt="Screenshot"/> |
-
-| Material Studies > Buttons & FABs | DialogExample | ControlledScrollDemo |
-| ------------------ | --------------------------- | ------------------ |
-| <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/ButtonActivity.png" height="400" alt="Screenshot"/>  | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/> | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/ControlledScrollDemo.png" height="400" alt="Screenshot"/> |
+|<img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/DemoActivity.png" height="400" alt="Screenshot"/> | <img src="https://raw.githubusercontent.com/Foso/Jetpack-Compose-Playground/master/docs/images/DialogExample.png" height="400" alt="Screenshot"/>  | <img src="https://github.com/Foso/Jetpack-Compose-Playground/blob/master/docs/images/readme/circprog.png" height="400" alt="Screenshot"/> |
 
 </p>
 
@@ -86,11 +82,11 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 
 ### Project Structure
-You need at least Android Studio 4.2 canary 13 to build this project https://developer.android.com/studio/preview/
+You need at least [version >= Android Studio Arctic Fox Canary 7](https://developer.android.com/studio/preview) to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Base android project directory
-* <kbd>compose</kbd> - a android library module that is using the compose libraries. It contains my example/test functions and
-the demo classes i copied out of the AndroidX repo (https://android.googlesource.com/platform/frameworks/support/+/androidx-master-dev/ui/material/integration-tests/)
+* <kbd>mysamples</kbd> - a android library module that is using my compose samples for the github page
+* <kbd>compose</kbd> - a android library module that is using the compose alpha08 libraries with samples from the AndroidX Github project. You can find newer samples [here](https://github.com/androidx/androidx/tree/androidx-main/compose)
 
 
 # Resources
