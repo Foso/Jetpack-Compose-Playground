@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Providers
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.platform.setContent
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.LazyRowDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.linearprogress.LinearProgressIndicatorSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.other.AlertDialogSample
 
@@ -19,7 +20,7 @@ class MyTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AlertDialogSample()
+            LazyRowDemo()
         }
     }
 }
