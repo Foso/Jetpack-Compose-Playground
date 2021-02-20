@@ -1,7 +1,7 @@
 # Modifier
 
 !!! info
-    This is the API of version 1.0.0-alpha06. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 Modifiers can be used modify certain aspects of a Composable.
 To set them, a Composable needs to accept a modifier as a parameter.
@@ -78,11 +78,9 @@ With this modifier you can set a background color/shape for the Composable
 
 ### GestureModifier
 
-#### Modifier.tapGestureFilter
-You can use this to set an onTap-Listener to a Composable
+#### Modifier.clickable
+Configure component to receive clicks via input or accessibility "click" event.
 
-#### Modifier.doubleTapGestureFilter 
-You can use this to set an doubleTap-Listener to a Composable
 
 #### Modifier.scrollable
 You can use this to make a Composable scrollable
