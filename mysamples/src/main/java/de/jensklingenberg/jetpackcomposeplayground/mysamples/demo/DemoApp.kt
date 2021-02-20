@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package androidx.compose.integration.demos
+package de.jensklingenberg.jetpackcomposeplayground.mysamples.demo
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.clickable
@@ -25,6 +25,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.integration.demos.DemoFilter
+import androidx.compose.integration.demos.FilterAppBar
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
@@ -50,7 +52,6 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.*
 
 @Composable
 fun DemoApp(
@@ -167,7 +168,6 @@ private fun DemoAppBar(
             navigationIcon = navigationIcon,
             actions = {
                 AppBarIcons.Filter(onClick = onStartFiltering)
-                AppBarIcons.Settings(onClick = launchSettings)
             }
         )
     }

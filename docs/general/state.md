@@ -1,6 +1,6 @@
 # State
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
 
 ## Define a state
 ```kotlin
@@ -30,12 +30,13 @@ After Button click:<br>
 fun StateDemo(){
     val countState = remember { mutableStateOf(0) }
     Column {
-        Button(backgroundColor = MaterialTheme.colors.secondary, onClick = { countState.value++ }) {
+        Button(colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.secondary), onClick = { countState.value++ }) {
             Text("count up")
         }
         Text("You have clicked the Button " + countState.value.toString() + " times")
     }
 }
+
 ```
 
 ```kotlin

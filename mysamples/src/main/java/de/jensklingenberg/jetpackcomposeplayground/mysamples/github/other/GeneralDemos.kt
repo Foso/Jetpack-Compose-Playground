@@ -14,24 +14,16 @@
  * limitations under the License.
  */
 
-package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation
+package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.other
 
 
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.ComposableDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.DemoCategory
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.basetextfield.BaseTextFieldDemo
 
 
-val FoundationDemos = DemoCategory(
-    "Foundation",
+val OtherDemos = DemoCategory(
+    "Other",
     listOf(
-        ComposableDemo("BaseTextFieldDemo") { BaseTextFieldDemo() },
-        ComposableDemo("Canvas") { CanvasDrawExample() },
-        ComposableDemo("LazyRowDemo") { LazyRowDemo() },
-        ComposableDemo("LazyColumnDemo") { LazyColumnDemo() },
-        ComposableDemo("TextDemo") { TextExample() },
-        ComposableDemo("CircleShapeDemo") { ShapeDemo() },
-        ComposableDemo("ImageResourceDemo") { ImageResourceDemo() },
-
+        ComposableDemo("TextFieldDemo") { TextFieldDemo() },
         )
 )

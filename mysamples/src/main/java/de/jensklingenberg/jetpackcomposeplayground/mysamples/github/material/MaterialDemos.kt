@@ -19,8 +19,6 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material
 
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.ComposableDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.DemoCategory
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.animation.crossfade.CrossfadeDemo
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.basetextfield.BaseTextFieldDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.button.ButtonExample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.card.CardDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.checkbox.CheckBoxDemo
@@ -30,11 +28,13 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.flo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.linearprogress.LinearProgressIndicatorSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modaldrawer.ModalDrawerLayoutSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.radiobutton.RadioButtonSample
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.alertdialog.AlertDialogSample
 
 
 val MaterialDemos = DemoCategory(
     "MaterialDemos",
     listOf(
+        ComposableDemo("AlertDialogSample") { AlertDialogSample() },
         ComposableDemo("ButtonExample") { ButtonExample() },
         ComposableDemo("CardDemo") { CardDemo() },
         ComposableDemo("CheckBoxDemo") { CheckBoxDemo() },

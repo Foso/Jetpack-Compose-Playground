@@ -18,20 +18,23 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.demo
 
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.animation.AnimationDemos
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.FoundationDemos
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.general.GeneralDemos
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.layout.LayoutDemos
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.MaterialDemos
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.other.OtherDemos
 
 
 /**
  * [DemoCategory] containing all the top level demo categories.
  */
 val AllDemosCategory = DemoCategory(
-    "Jetpack Compose Demos",
+    "Jetpack Compose Playground Demos",
     listOf(
         AnimationDemos,
         FoundationDemos,
         LayoutDemos,
-        MaterialDemos
-
+        MaterialDemos,
+        GeneralDemos,
+        OtherDemos
     )
 )

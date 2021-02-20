@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.other
+package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.alertdialog
 
 
 import androidx.compose.foundation.layout.Column

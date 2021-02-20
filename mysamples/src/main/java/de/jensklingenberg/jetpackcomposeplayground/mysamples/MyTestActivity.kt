@@ -9,8 +9,6 @@ import androidx.compose.runtime.Providers
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.platform.setContent
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.LazyRowDemo
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.linearprogress.LinearProgressIndicatorSample
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.other.AlertDialogSample
 
 data class User(val name: String, val age: Int)
 
