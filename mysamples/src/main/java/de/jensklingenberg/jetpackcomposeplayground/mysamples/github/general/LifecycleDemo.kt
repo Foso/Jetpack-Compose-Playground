@@ -38,10 +38,10 @@ fun LifecycleDemo() {
         }
 
         if (count.value < 3) {
-            SideEffect() {
+            SideEffect {
                 Log.d("Compose", "onactive with value: " + count.value)
             }
-            DisposableEffect("") {
+            DisposableEffect(Unit) {
                 onDispose {
                     Log.d("Compose", "onDispose because value=" + count.value)
                 }
@@ -50,5 +50,4 @@ fun LifecycleDemo() {
             Text(text = "You have clicked the button: " + count.value.toString())
         }
     }
-
 }
