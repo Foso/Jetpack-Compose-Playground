@@ -13,6 +13,8 @@ The generated files for the GitHub page are in [/site](https://github.com/Foso/J
     ```
     pip3 install mkdocs-minify-plugin
     pip3 install mkdocs-git-revision-date-localized-plugin
+    pip3 install mkdocs-minify-plugin
+    pip3 install mkdocs-macros-plugin
     ```
 
 * Run docs locally

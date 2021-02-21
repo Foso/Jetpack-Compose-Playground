@@ -2,12 +2,12 @@
 A Shape can be used to draw a Composable in specific shape.
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
     
 ## RectangleShape
 
 <p align="center">
-  <img src ="../../images/foundation/shape/rectangleshape.png"  />
+  <img src ="{{ site.images }}/foundation/shape/rectangleshape.png"  />
 </p>
 
 A shape describing the rectangle.
@@ -31,7 +31,7 @@ fun ExampleBox(shape: Shape){
 ## CircleShape
 
 <p align="center">
-  <img src ="../../images/foundation/shape/circleshape.png"  />
+  <img src ="{{ site.images }}/foundation/shape/circleshape.png"  />
 </p>
 
 Circular Shape with all the corners sized as the 50 percent of the shape size.
@@ -55,7 +55,7 @@ fun ExampleBox(shape: Shape){
 ## RoundedCornerShape
 
 <p align="center">
-  <img src ="../../images/foundation/shape/roundedcornershape.png"  />
+  <img src ="{{ site.images }}/foundation/shape/roundedcornershape.png"  />
 </p>
 
 A shape describing the rectangle with rounded corners.
@@ -78,7 +78,7 @@ fun ExampleBox(shape: Shape){
 
 ## CutCornerShape
 <p align="center">
-  <img src ="../../images/foundation/shape/cutcornershape.png"  />
+  <img src ="{{ site.images }}/foundation/shape/cutcornershape.png"  />
 </p>
 
 A shape describing the rectangle with cut corners.

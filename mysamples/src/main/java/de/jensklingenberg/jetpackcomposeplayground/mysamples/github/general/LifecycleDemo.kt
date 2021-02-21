@@ -18,7 +18,6 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.general
 
 
 import android.util.Log
-
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Button
 import androidx.compose.material.Text

@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.DemoActivity
 
 
-
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
