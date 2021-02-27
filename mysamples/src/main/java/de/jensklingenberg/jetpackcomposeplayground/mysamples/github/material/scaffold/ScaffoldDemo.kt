@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material
+package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.scaffold
 
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
@@ -17,7 +17,7 @@ fun ScaffoldDemo() {
               Text("X")
           } },
           drawerContent = { Text(text = "drawerContent") },
-          bodyContent = { Text("BodyContent") },
+          content = { Text("BodyContent") },
           bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
       )
 }

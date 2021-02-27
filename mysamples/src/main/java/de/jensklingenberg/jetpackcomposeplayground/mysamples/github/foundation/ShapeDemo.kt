@@ -19,7 +19,6 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.preferredSize
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CutCornerShape
@@ -64,7 +63,7 @@ fun ShapeDemo() {
 fun BoxDemo(shape: Shape) {
     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center).clip(shape)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp).background(Color.Red)
+            modifier = Modifier.size(100.dp).background(Color.Red)
         ) {
 
         }

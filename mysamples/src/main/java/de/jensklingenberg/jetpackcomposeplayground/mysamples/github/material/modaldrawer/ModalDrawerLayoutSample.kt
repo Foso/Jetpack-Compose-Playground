@@ -3,28 +3,41 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.mo
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
 
 @Composable
 fun ModalDrawerLayoutSample() {
     val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val scope = rememberCoroutineScope()
 
-    ModalDrawerLayout(
-            drawerState = drawerState,
-            drawerContent = {
-                Column {
-                    Text("Text in Drawer")
-                    Button(onClick = { drawerState.close() }) {
-                        Text("Close Drawer")
+    ModalDrawer(
+        drawerState = drawerState,
+        drawerContent = {
+            Column {
+                Text("Text in Drawer")
+                Button(onClick = {
+                    scope.launch {
+                        drawerState.close()
                     }
-                }
-            },
-            bodyContent = {
-                Column {
-                    Text("Text in Bodycontext")
-                    Button(onClick = { drawerState.open() }) {
-                        Text("Click to open")
-                    }
+                }) {
+                    Text("Close Drawer")
                 }
             }
+        },
+        content = {
+            Column {
+                Text("Text in Bodycontext")
+                Button(onClick = {
+
+                    scope.launch {
+                        drawerState.open()
+                    }
+
+                }) {
+                    Text("Click to open")
+                }
+            }
+        }
     )
 }

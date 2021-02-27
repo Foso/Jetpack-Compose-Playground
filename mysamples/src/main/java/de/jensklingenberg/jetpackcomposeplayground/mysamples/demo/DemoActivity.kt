@@ -109,7 +109,7 @@ private fun DemoTheme(
     window: Window,
     content: @Composable () -> Unit
 ) {
-    MaterialTheme(demoColors.colors) {
+    MaterialTheme() {
         val statusBarColor = with(MaterialTheme.colors) {
             (if (isLight) primaryVariant else Color.Black).toArgb()
         }

@@ -2,12 +2,12 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.general
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Providers
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.compositionLocalOf
-import androidx.compose.ui.platform.setContent
 
 
 data class User(val name: String, val age: Int)
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun MyUserScreen() {
     val user = User("Jens", 31)
-    Providers(LocalActiveUser provides user) {
+    CompositionLocalProvider(LocalActiveUser provides user) {
         UserInfo()
     }
 }

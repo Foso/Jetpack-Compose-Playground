@@ -18,7 +18,7 @@ fun BoxExample() {
     Box(Modifier.fillMaxSize()) {
         Text("This text is drawn first", modifier = Modifier.align(Alignment.TopCenter))
         Box(
-            Modifier.align(Alignment.TopCenter).fillMaxHeight().preferredWidth(
+            Modifier.align(Alignment.TopCenter).fillMaxHeight().width(
                 50.dp
             ).background( Color.Blue)
         )

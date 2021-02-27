@@ -23,14 +23,14 @@ fun SnackbarDemo() {
         }
         if (snackbarVisibleState.value) {
             Snackbar(
-                text = { Text(text = "This is a snackbar!") },
+
                 action = {
                     Button(onClick = {}) {
                         Text("MyAction")
                     }
                 },
                 modifier = Modifier.padding(8.dp)
-            )
+            ) { Text(text = "This is a snackbar!") }
         }
     }
 }

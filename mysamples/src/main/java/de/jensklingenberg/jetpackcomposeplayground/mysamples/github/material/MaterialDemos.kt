@@ -17,6 +17,7 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material
 
 
+import SnackbarDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.ComposableDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.DemoCategory
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.button.ButtonExample
@@ -29,6 +30,7 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.lin
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modaldrawer.ModalDrawerLayoutSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.radiobutton.RadioButtonSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.alertdialog.AlertDialogSample
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.scaffold.ScaffoldDemo
 
 
 val MaterialDemos = DemoCategory(
@@ -45,6 +47,7 @@ val MaterialDemos = DemoCategory(
         ComposableDemo("ModalDrawerLayoutSample") { ModalDrawerLayoutSample() },
         ComposableDemo("RadioButtonSample") { RadioButtonSample() },
         ComposableDemo("ScaffoldDemo") { ScaffoldDemo() },
+        ComposableDemo("SnackbarDemo") { SnackbarDemo() },
 
         )
 )

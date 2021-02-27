@@ -26,7 +26,7 @@ fun EmbeddedAndroidViewDemo() {
         val state = remember { mutableStateOf(0) }
 
         //widget.ImageView
-        AndroidView(viewBlock = { ctx ->
+        AndroidView(factory = { ctx ->
             ImageView(ctx).apply {
                 val drawable = ContextCompat.getDrawable(ctx, R.drawable.composelogo)
                 setImageDrawable(drawable)
@@ -39,7 +39,7 @@ fun EmbeddedAndroidViewDemo() {
         }
 
         //widget.Button
-        AndroidView(viewBlock = { ctx ->
+        AndroidView(factory = { ctx ->
             //Here you can construct your View
             android.widget.Button(ctx).apply {
                 text = "MyAndroidButton"
@@ -51,7 +51,7 @@ fun EmbeddedAndroidViewDemo() {
         }, modifier = Modifier.padding(8.dp))
 
         //widget.TextView
-        AndroidView(viewBlock = { ctx ->
+        AndroidView(factory = { ctx ->
             //Here you can construct your View
             TextView(ctx).apply {
                 layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT)
