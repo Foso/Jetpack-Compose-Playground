@@ -1,7 +1,7 @@
 # Scaffold
 
 !!! info
-    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01. Newer versions may have a different one
     
 A Scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or a Drawer.
 
@@ -18,7 +18,7 @@ fun ScaffoldDemo() {
                     Text("X")
                 } },
                 drawerContent = { Text(text = "drawerContent") },
-                bodyContent = { Text("BodyContent") },
+                content = { Text("BodyContent") },
                 bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
         )
 }
@@ -55,7 +55,7 @@ When you have added a FAB, you can use this specify the position of it. The defa
 ## drawerContent
 Here you can set the content of your drawer.
 
-## bodyContent
+## Content
 This is the primary content of the scaffold. You can add any Composable here.
 
 ## bottomBar
