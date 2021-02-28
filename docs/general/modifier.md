@@ -8,7 +8,7 @@ To set them, a Composable needs to accept a modifier as a parameter.
 
 ## Combine modifiers    
 ```kotlin
-Column(modifier = Modifier.preferredHeight(500.dp).padding(100.dp)) {
+Column(modifier = Modifier.height(500.dp).padding(100.dp)) {
     Text("Hello")
 }
 ```
@@ -29,11 +29,6 @@ You can use this to set the height of a Composable.
 #### Modifier.size()
 You can use this to set the width and height of a Composable.
 
-#### Modifier.preferredHeight()
-Modifies the height of a Composable.
-
-#### Modifier.preferredWidth()
-Modifies the width of a Composable.
 
 ####  Modifier.preferredSize()
 Modifies the width and height of a Compose UI layout element together

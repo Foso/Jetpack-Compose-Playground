@@ -1,6 +1,6 @@
 # CompositionLocal
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01
 
 CompositionLocal is useful when you want to create a dependency in a higher node of the layout tree and use it on lower node without having to
 pass it down the tree through every child Composable.
@@ -19,14 +19,14 @@ Let's say you want to create an CompositionLocal with an User. You can use **com
 @Composable
 private fun MyUserScreen() {
     val user = User("Jens", 31)
-    Providers(LocalActiveUser provides user) {
+    CompositionLocalProvider(LocalActiveUser provides user) {
         UserInfo()
     }
 }
 ```
-Somewhere above in your hierarchy you have to use Providers to provide a value for your CompositionLocal. You can provide the values of multiple CompositionLocals inside Providers.
+Somewhere above in your hierarchy you have to use CompositionLocalProvider to provide a value for your CompositionLocal.
 The syntax is: "**CompositionLocal`<T>`** provides **T**".
-All child @Composable of Providers will implicitly be able to get the value of the CompositionLocals.
+All child @Composable of CompositionLocalProvider will implicitly be able to get the value of the CompositionLocals.
 
 ## How to use a value of an CompositionLocal?
 

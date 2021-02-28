@@ -65,6 +65,7 @@ nav:
             - 'Compose for SwiftUI Developers': compose_for/swiftui_devs.md
           - 'Compose Lifecycle': general/compose_lifecycle.md
           - 'CompositionLocal' : general/compositionlocal.md
+          - 'CompositionLocalProvider': general/compositionlocalprovider.md
           - 'Hello World Compose': general/helloworld.md
           - 'Providers': general/providers.md
           - 'Modifier': general/modifier.md
