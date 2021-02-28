@@ -22,7 +22,7 @@ CircularProgressIndicator(progress = 0.5f)
 ```
 
 <p align="left">
-  <img src ="../../images/material/circularprogressindicator/progresshalf.png"  />
+  <img src ="{{ site.images }}/material/circularprogressindicator/progresshalf.png"  />
 </p>
 When you set a value to the **progress** parameter, the indicator will be shown with that progress.
 E.g. a progress of 0.5f will fill it to the half.
@@ -30,7 +30,7 @@ E.g. a progress of 0.5f will fill it to the half.
 # Example
 <div>
 <video height="500" align="center" controls>
-  <source src="../../images/material/circularprogressindicator/circularprogress.mp4" type="video/mp4" align="center">
+  <source src="{{ site.images }}/material/circularprogressindicator/circularprogress.mp4" type="video/mp4" align="center">
 </video>
 </div>
 

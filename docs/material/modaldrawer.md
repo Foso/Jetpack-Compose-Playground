@@ -1,38 +1,49 @@
 # ModalDrawerLayout
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01.
 
 With a ModalDrawerLayout you can create a navigation drawer.
 
 <p align="left">
-  <img src ="../../images/material/modaldrawer/modaldrawerClosed.png" height=100 width=300 />
-  <img src ="../../images/material/modaldrawer/ModaldrawerOpened.png" height=100 width=300 />
+  <img src ="{{ site.images }}/material/modaldrawer/modaldrawerClosed.png" height=100 width=300 />
+  <img src ="{{ site.images }}/material/modaldrawer/ModaldrawerOpened.png" height=100 width=300 />
 </p>
 
 ```kotlin
 @Composable
-fun ModalDrawerLayoutSample() {
+fun ModalDrawerSample() {
     val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val scope = rememberCoroutineScope()
 
-    ModalDrawerLayout(
-            drawerState = drawerState,
-            drawerContent = {
-                Column {
-                    Text("Text in Drawer")
-                    Button(onClick = { drawerState.close() }) {
-                        Text("Close Drawer")
+    ModalDrawer(
+        drawerState = drawerState,
+        drawerContent = {
+            Column {
+                Text("Text in Drawer")
+                Button(onClick = {
+                    scope.launch {
+                        drawerState.close()
                     }
-                }
-            },
-            bodyContent = {
-                Column {
-                    Text("Text in Bodycontext")
-                    Button(onClick = { drawerState.open() }) {
-                        Text("Click to open")
-                    }
+                }) {
+                    Text("Close Drawer")
                 }
             }
+        },
+        content = {
+            Column {
+                Text("Text in Bodycontext")
+                Button(onClick = {
+
+                    scope.launch {
+                        drawerState.open()
+                    }
+
+                }) {
+                    Text("Click to open")
+                }
+            }
+        }
     )
 }
 ```

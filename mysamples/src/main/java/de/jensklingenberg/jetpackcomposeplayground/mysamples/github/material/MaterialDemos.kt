@@ -27,7 +27,7 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.cir
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.dropdown.DropdownDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.floatingactionbutton.FloatingActionButtonDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.linearprogress.LinearProgressIndicatorSample
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modaldrawer.ModalDrawerLayoutSample
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modaldrawer.ModalDrawerSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.radiobutton.RadioButtonSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.alertdialog.AlertDialogSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.scaffold.ScaffoldDemo
@@ -44,7 +44,7 @@ val MaterialDemos = DemoCategory(
         ComposableDemo("DropdownDemo") { DropdownDemo() },
         ComposableDemo("FloatingActionButtonDemo") { FloatingActionButtonDemo() },
         ComposableDemo("LinearProgressIndicatorSample") { LinearProgressIndicatorSample() },
-        ComposableDemo("ModalDrawerLayoutSample") { ModalDrawerLayoutSample() },
+        ComposableDemo("ModalDrawerLayoutSample") { ModalDrawerSample() },
         ComposableDemo("RadioButtonSample") { RadioButtonSample() },
         ComposableDemo("ScaffoldDemo") { ScaffoldDemo() },
         ComposableDemo("SnackbarDemo") { SnackbarDemo() },

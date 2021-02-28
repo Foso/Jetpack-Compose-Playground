@@ -1,9 +1,9 @@
 # Card
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01.
 
-Card is the implementation of a CardView in Compose
+Card is the equivalent of a CardView in Compose
 
 ```kotlin
  @Composable fun CardDemo(){
@@ -14,7 +14,7 @@ Card is the implementation of a CardView in Compose
 ```
 
 <p align="center">
-  <img src ="../../images/material/card/carddemo.png"  />
+  <img src ="{{ site.images }}/material/card/carddemo.png"  />
 </p>
 
 
