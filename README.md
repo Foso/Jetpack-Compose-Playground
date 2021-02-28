@@ -83,7 +83,6 @@ You need at least [version >= Android Studio Arctic Fox Canary 7](https://develo
 
 * <kbd>app</kbd> - Base android project directory
 * <kbd>mysamples</kbd> - a android library module that is using my compose samples for the github page
-* <kbd>compose</kbd> - a android library module that is using the compose alpha08 libraries with samples from the AndroidX Github project. You can find newer samples [here](https://github.com/androidx/androidx/tree/androidx-main/compose)
 
 
 # Resources
