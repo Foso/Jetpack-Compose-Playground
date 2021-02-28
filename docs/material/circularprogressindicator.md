@@ -1,7 +1,7 @@
 # CircularProgressIndicator
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01
 
 A CircularProgressIndicator can be used to display a progress in circular shape.
 There are two kinds:
@@ -38,10 +38,10 @@ E.g. a progress of 0.5f will fill it to the half.
 @Composable
 fun CircularProgressIndicatorSample() {
     var progress by remember { mutableStateOf(0.1f) }
-    val animatedProgress = animate(
-        target = progress,
-        animSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
-    )
+    val animatedProgress = animateFloatAsState(
+        targetValue = progress,
+        animationSpec = ProgressIndicatorDefaults.ProgressAnimationSpec
+    ).value
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(Modifier.height(30.dp))

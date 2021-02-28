@@ -117,7 +117,7 @@ nav:
               - 'Checkbox': material/checkbox.md
               - 'FloatingActionButton': material/floatingactionbutton.md
               - 'LinearProgressIndicator' : material/linearprogressindicator.md
-              - 'ModalDrawerLayout': material/modaldrawer.md
+              - 'ModalDrawer': material/modaldrawer.md
               - 'RadioButton': material/radiobutton.md
               - 'Scaffold': material/scaffold.md
               - 'Slider': material/slider.md

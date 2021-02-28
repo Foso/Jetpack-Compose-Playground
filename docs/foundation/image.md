@@ -7,7 +7,7 @@ Image is used to display Images. It's similar to an ImageView in the classic And
 
 
 <p align="left">
-  <img src ="../../images/foundation/image/imagedemo.png" height=100 width=300 />
+  <img src ="{{ site.images }}/foundation/image/imagedemo.png" height=100 width=300 />
 </p>
 
 

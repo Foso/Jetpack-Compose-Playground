@@ -1,7 +1,7 @@
 # Text
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01
 
 You can use **Text** to display text. You can use the **style** argument to define things like textdecoration or fontfamily.
 
@@ -13,29 +13,29 @@ You can use **Text** to display text. You can use the **style** argument to defi
 ```kotlin
 @Composable
 fun TextExample(){
-    Column {
-        Text("Just Text")
-        Text("Text with cursive font", style = TextStyle(fontFamily = Cursive))
-        Text(
-            text = "Text with LineThrough",
-            style = TextStyle(textDecoration = TextDecoration.LineThrough)
-        )
-        Text(
-            text = "Text with underline",
-            style = TextStyle(textDecoration = TextDecoration.Underline)
-        )
-        Text(
-            text = "Text with underline, linethrough and bold",
-            style = TextStyle(
-                textDecoration = TextDecoration.combine(
-                    listOf(
-                        TextDecoration.Underline,
-                        TextDecoration.LineThrough
-                    )
-                ), fontWeight = FontWeight.Bold
+     Column {
+            Text("Just Text")
+            Text("Text with cursive font", style = TextStyle(fontFamily = FontFamily.Cursive))
+            Text(
+                text = "Text with LineThrough",
+                style = TextStyle(textDecoration = TextDecoration.LineThrough)
             )
-        )
-    }
+            Text(
+                text = "Text with underline",
+                style = TextStyle(textDecoration = TextDecoration.Underline)
+            )
+            Text(
+                text = "Text with underline, linethrough and bold",
+                style = TextStyle(
+                    textDecoration = TextDecoration.combine(
+                        listOf(
+                            TextDecoration.Underline,
+                            TextDecoration.LineThrough
+                        )
+                    ), fontWeight = FontWeight.Bold
+                )
+            )
+        }
 }
 ```
 
@@ -43,7 +43,7 @@ fun TextExample(){
 
 ## Normal text
 <p align="center">
-  <img src ="../../images/foundation/text/normal_text.png"  />
+  <img src ="{{ site.images }}/foundation/text/normal_text.png"  />
 </p>
 
 ```kotlin
@@ -55,7 +55,7 @@ fun NormalTextExample(){
 
 ## Cursive text
 <p align="center">
-  <img src ="../../images/foundation/text/cursive_text.png"  />
+  <img src ="{{ site.images }}/foundation/text/cursive_text.png"  />
 </p>
 
 ```kotlin
@@ -67,7 +67,7 @@ fun CursiveTextExample(){
 
 ## Text with LineThrough
 <p align="center">
-  <img src ="../../images/foundation/text/linethrough_text.png"  />
+  <img src ="{{ site.images }}/foundation/text/linethrough_text.png"  />
 </p>
 
 ```kotlin
@@ -82,7 +82,7 @@ fun TextWithLineThroughExample(){
 
 ## Text with underline
 <p align="center">
-  <img src ="../../images/foundation/text/underline_text.png"  />
+  <img src ="{{ site.images }}/foundation/text/underline_text.png"  />
 </p>
 
 ```kotlin
@@ -97,7 +97,7 @@ fun TextWithUnderline(){
 
 ## Text with underline, bold and linethrough
 <p align="center">
-  <img src ="../../images/foundation/text/underline_bold_linethrough_text.png"  />
+  <img src ="{{ site.images }}/foundation/text/underline_bold_linethrough_text.png"  />
 </p>
 
 ```kotlin

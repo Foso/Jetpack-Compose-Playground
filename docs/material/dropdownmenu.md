@@ -1,12 +1,12 @@
 # DropdownMenu
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01
 
 The DropdownMenu Composable can be used to create DropdownMenu.
 
 <p align="center">
-  <img src ="../../images/material/dropdownmenu/dropdown.png"  />
+  <img src ="{{ site.images }}/material/dropdownmenu/dropdown.png"  />
 </p>
 
 ```kotlin
@@ -27,6 +27,7 @@ If true, the popupmenu with the dropdownContent will be shown
 Called when the menu should be dismiss
 
 ```kotlin
+@Composable
 fun DropdownDemo() {
     var expanded by remember { mutableStateOf(false) }
     val items = listOf("A", "B", "C", "D", "E", "F")

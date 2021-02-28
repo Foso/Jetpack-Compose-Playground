@@ -25,8 +25,8 @@ fun ScaffoldDemo() {
 ```
 
 <p align="left">
-  <img src ="../../images/material/scaffold/scaffold.png"  height=100 width=300  />
-  <img src ="../../images/material/scaffold/scaffoldwithdrawer.png"  height=100 width=300/>
+  <img src ="{{ site.images }}/material/scaffold/scaffold.png"  height=100 width=300  />
+  <img src ="{{ site.images }}/material/scaffold/scaffoldwithdrawer.png"  height=100 width=300/>
 
 </p>
 
@@ -38,14 +38,14 @@ With the scaffoldState you can set the opening state of the drawer(DrawerState.O
 ## topBar
 
 <p align="left">
-  <img src ="../../images/material/scaffold/topappbar.png"  />
+  <img src ="{{ site.images }}/material/scaffold/topappbar.png"  />
 </p>
 
 Here you can set the part of your layout that should be displayed on top of the screen. You can use it for things like a toolbar. You can set any Composable, but **TopAppBar** is already made for this usecase.
 
 ## floatingActionButton
 <p align="left">
-  <img src ="../../images/material/scaffold/floatingactionbutton.png"  />
+  <img src ="{{ site.images }}/material/scaffold/floatingactionbutton.png"  />
 </p>
 Here you can add FloatingActionButton. You can set any Composable, but **FloatingActionButton** is already made for this usecase
 
@@ -61,7 +61,7 @@ This is the primary content of the scaffold. You can add any Composable here.
 ## bottomBar
 
 <p align="left">
-  <img src ="../../images/material/scaffold/bottomappbar.png"  />
+  <img src ="{{ site.images }}/material/scaffold/bottomappbar.png"  />
 </p>
 
 Here you can set the part of your layout is on bottom of the screen. You can set any Composable, but **BottomAppBar** is already made for this usecase.
