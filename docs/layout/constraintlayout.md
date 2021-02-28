@@ -6,7 +6,7 @@
 A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System
 
 <p align="left">
-  <img src ="../../images/layout/constraintlayout/constraintlayout.png" height=100 width=300 />
+  <img src ="{{ site.images }}/layout/constraintlayout/constraintlayout.png" height=100 width=300 />
 </p>
 
 ```kotlin

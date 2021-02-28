@@ -7,7 +7,7 @@ A Row will show each child next to the previous children. It's similar to a Line
 
 
 <p align="left">
-  <img src ="../../images/layout/row/RowExample.png" height=100 width=300 />
+  <img src ="{{ site.images }}/layout/row/RowExample.png" height=100 width=300 />
 </p>
 
 ```kotlin
