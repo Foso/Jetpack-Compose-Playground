@@ -1,12 +1,12 @@
 # Slider
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01
 
 "Sliders allow users to make selections from a range of values."
     
 <p align="center">
-  <img src ="../../images/material/slider/sliderdemo.png" height=100 width=300 />
+  <img src ="{{ site.images }}/material/slider/sliderdemo.png" height=100 width=300 />
 </p>
 
 
