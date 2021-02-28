@@ -28,7 +28,7 @@ fun CrossfadeDemo() {
                 Button(
                         onClick = { currentColor = myColors },
                         Modifier.weight(1f, true)
-                                .requiredHeight(48.dp).background(myColors.color),colors = ButtonDefaults.buttonColors(backgroundColor = myColors.color)
+                                .height(48.dp).background(myColors.color),colors = ButtonDefaults.buttonColors(backgroundColor = myColors.color)
                 ) {
                     Text(myColors.name)
                 }

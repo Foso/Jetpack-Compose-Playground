@@ -1,7 +1,7 @@
 # Crossfade
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01
 
 Crossfade can be used to switch between Composables with an crossfade animation.
 
@@ -26,7 +26,9 @@ fun CrossfadeDemo() {
                 Button(
                         onClick = { currentColor = myColors },
                         Modifier.weight(1f, true)
-                                .preferredHeight(48.dp).background(myColors.color),colors = ButtonDefaults.buttonColors(backgroundColor = myColors.color)
+                                .height(48.dp)
+                                .background(myColors.color),
+                                colors = ButtonDefaults.buttonColors(backgroundColor = myColors.color)
                 ) {
                     Text(myColors.name)
                 }
