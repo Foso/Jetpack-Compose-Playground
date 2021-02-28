@@ -1,7 +1,7 @@
 # LazyColumn
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta01
     
 A [LazyColumn](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazycolumn) is a vertically scrolling list that only composes and lays out the currently visible items.
 It's similar to a Recyclerview in the classic Android View system.
@@ -11,7 +11,6 @@ It's similar to a Recyclerview in the classic Android View system.
 </p>
 
 ```kotlin
-@Composable
 fun LazyColumnDemo() {
     val list = listOf(
         "A", "B", "C", "D"
