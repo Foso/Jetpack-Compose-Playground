@@ -5,14 +5,14 @@
 | ----------------------------------------- | ------------------------------------ |
 | Button  		    | [Button](../material/button.md)  |
 | Text  		    | [Text](../foundation/text.md)  |
-| EditText  	    | [TextField](../material/textfield.md)  |
+| TextEditor  	    | [TextField](../material/textfield.md)  |
 | Image  		    | [Image](../foundation/image.md)  |
 | HStack  		    | [Row](../layout/row.md)  |
 | VStack  		    | [Column](../layout/column.md)  |
 | ZStack  		    | [Box](../layout/box.md)  |
 | LazyVStack  		| [LazyColumn](../foundation/lazycolumn.md)   |
 | LazyHStack  		| [LazyRow](../foundation/lazyrow.md)  |
-| ScrollView  		| [ScrollableRow](../foundation/scrollablerow.md)/[ScrollableColumn](../foundation/scrollablecolumn.md)  |
+| ScrollView  		| [LazyColumn](../foundation/lazycolumn.md)  |
 
 ## What is the equivalent of a View?
 In "Jetpack Compose" Views are called **Composable**. They are Kotlin functions that are annotated with @Composable.
