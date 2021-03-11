@@ -1,6 +1,6 @@
 # State
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta02
 
 ## Define a state
 ```kotlin
@@ -15,12 +15,12 @@ In this example we will create a composable with a Text and a Button. On a click
 
 <p align="center">
 Initial state:<br>
-  <img src ="../../images/general/state/state1.png"  />
+  <img src ="{{ site.images }}/general/state/state1.png"  />
 </p>
 
 <p align="center">
 After Button click:<br>
-  <img src ="../../images/general/state/state2.png"  />
+  <img src ="{{ site.images }}/general/state/state2.png"  />
 </p>
 
 
