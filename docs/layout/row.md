@@ -1,7 +1,7 @@
 # Row
 
 !!! info
-    This is the API of version 1.0.0-beta01
+    This is the API of version 1.0.0-beta02
 
 A Row will show each child next to the previous children. It's similar to a LinearLayout with a horizontal orientation.
 
@@ -34,7 +34,7 @@ fun RowExample() {
 Row takes an **horizontalArrangement** parameter. When you set it to **Arrangement.SpaceEvenly**, the children of Row will equal a width.
 
 <p align="left">
-  <img src ="../../images/layout/row/row_arrangement_space_evenly.png" />
+  <img src ="{{ site.images }}/layout/row/row_arrangement_space_evenly.png" />
 </p>
 
 ## How to align row childrens in center
@@ -50,7 +50,7 @@ fun RowExample() {
 Row takes an Arrangement parameter. When you set it to **Arrangement.Center**, the children of Row will be aligned in the center of Row.
 
 <p align="left">
-  <img src ="../../images/layout/row/arrange_center.png" />
+  <img src ="{{ site.images }}/layout/row/arrange_center.png" />
 </p>
 
 ## How to align row childrens at end
@@ -66,7 +66,7 @@ fun RowExample() {
 Row takes an Arrangement parameter. When you set it to **Arrangement.End**, the children of Row will be aligned at the end of Row.
 
 <p align="left">
-  <img src ="../../images/layout/row/arrangement_end.png" />
+  <img src ="{{ site.images }}/layout/row/arrangement_end.png" />
 </p>
 
 

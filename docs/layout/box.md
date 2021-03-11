@@ -3,11 +3,11 @@
 The children of the Box layout will be stacked over each other. You can use the align modifier to specify where the composable should be drawn.
 
 !!! info
-    This is the API of version 1.0.0-beta01
+    This is the API of version 1.0.0-beta02
 
 
 <p align="center">
-  <img src ="{{ site.images }}/layout/box/stackdemo.png" height=100 width=300 />
+  <img src ="{{ site.images }}/layout/box/boxdemo.png" height=100 width=300 />
 </p>
 
 
@@ -33,6 +33,6 @@ fun BoxExample() {
 ```
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/package-summary#Box)
+* [Official Docs]({{ site.composedoc }}/foundation/layout/package-summary#Box)
 * [Full Example Code]({{ site.samplefolder }}/layout/BoxExample.kt)
 

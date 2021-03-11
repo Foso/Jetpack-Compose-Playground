@@ -1,13 +1,12 @@
 # FloatingActionButton
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta02
 
 ## FloatingActionButton
 
 
 ```kotlin
-@Composable                                               
 fun FloatingActionButtonDemo() {
     FloatingActionButton(onClick = { /*do something*/}) {
         Text("FloatingActionButton")
@@ -16,13 +15,13 @@ fun FloatingActionButtonDemo() {
 ```
 
 <p align="center">
-  <img src ="../../images/material/floatingactionbutton/fab.png" height=100 width=300 />
+  <img src ="{{ site.images }}/material/floatingactionbutton/fab.png" height=100 width=300 />
 </p>
 
 ## ExtendedFloatingActionButton
 
 ```kotlin
-@Composable                                               
+@Composable
 fun ExtendedFloatingActionButtonDemo() {
     ExtendedFloatingActionButton(
         icon = { Icon(Icons.Filled.Favorite,"") },
@@ -34,7 +33,7 @@ fun ExtendedFloatingActionButtonDemo() {
 ```
 
 <p align="center">
-  <img src ="../../images/material/floatingactionbutton/exfab.png" height=100 width=300 />
+  <img src ="{{ site.images }}/material/floatingactionbutton/exfab.png" height=100 width=300 />
 </p>
 
 ## See also:

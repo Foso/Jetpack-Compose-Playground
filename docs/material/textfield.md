@@ -1,12 +1,12 @@
 # TextField
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta02
 
 TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
 
 <p align="center">
-  <img src ="../../images/material/textfield/textfield.png"  />
+  <img src ="{{ site.images }}/material/textfield/textfield.png"  />
 </p>
 
 ```kotlin

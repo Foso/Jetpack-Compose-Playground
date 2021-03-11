@@ -1,7 +1,7 @@
 # LinearProgressIndicator
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta02
 
 A LinearProgressIndicator can be used to display a progress in linear line, also known as a progress bar.
 There are two kinds:
@@ -22,7 +22,7 @@ LinearProgressIndicator(progress = 0.5f)
 ```
 
 <p align="left">
-  <img src ="../../images/material/linearprogressindicator/progresshalf.png"  />
+  <img src ="{{ site.images }}/material/linearprogressindicator/progresshalf.png"  />
 </p>
 When you set a value to the **progress** parameter, the indicator will be shown with that progress.
 E.g. a progress of 0.5f will fill it to the half.
@@ -30,7 +30,7 @@ E.g. a progress of 0.5f will fill it to the half.
 # Example
 <div>
 <video height="500" align="center" controls>
-  <source src="../../images/material/linearprogressindicator/linearprogress.mp4" type="video/mp4" align="center">
+  <source src="{{ site.images }}/material/linearprogressindicator/linearprogress.mp4" type="video/mp4" align="center">
 </video>
 </div>
 

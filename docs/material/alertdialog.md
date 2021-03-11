@@ -1,7 +1,7 @@
 # AlertDialog
 
 !!! info
-    This is the API of 1.0.0-beta01
+    This is the API of 1.0.0-beta02
 
 <p align="center">
   <img src ="{{ site.images }}/material/alertdialog/AlertDialogSample.png"  height=100 width=300/>
