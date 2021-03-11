@@ -71,5 +71,5 @@ Row takes an Arrangement parameter. When you set it to **Arrangement.End**, the 
 
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/package-summary#row)
+* [Official Docs]({{ site.composedoc }}/foundation/layout/package-summary#row)
 * [Full Example Code]({{ site.samplefolder }}/layout/RowExample.kt)

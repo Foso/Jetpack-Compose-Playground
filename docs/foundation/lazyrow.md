@@ -1,9 +1,9 @@
 # LazyRow
 
 !!! info
-    This is the API of version 1.0.0-beta01
+    This is the API of version 1.0.0-beta02
     
-A [LazyRow](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazyrow) is a horizontal scrolling list that only composes and lays out the currently visible items.
+A [LazyRow]({{ site.composedoc }}/foundation/lazy/package-summary#lazyrow) is a horizontal scrolling list that only composes and lays out the currently visible items.
 It's similar to a horizontal Recyclerview in the classic Android View system.
 
 
@@ -45,5 +45,5 @@ fun LazyRowDemo() {
 ```
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/package-summary#lazyrow)
+* [Official Docs]({{ site.composedoc }}/foundation/lazy/package-summary#lazyrow)
 * [Full Example Code]({{ site.samplefolder }}/foundation/LazyRowDemo.kt)
