@@ -3,7 +3,7 @@
 !!! info
     This is the API of version 1.0.0-beta02.
 
-With a ModalDrawerLayout you can create a navigation drawer.
+With a ModalDrawer you can create a navigation drawer.
 
 <p align="left">
   <img src ="{{ site.images }}/material/modaldrawer/modaldrawerClosed.png" height=100 width=300 />
