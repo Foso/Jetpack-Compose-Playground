@@ -25,7 +25,7 @@ The [LinearProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/
 Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld/)
 
 ## 📙 Jetpack Compose examples/tutorials and demos
-Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mysamples) or take a look at the github page: https://foso.github.io/compose
+Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github) or take a look at the github page: https://foso.github.io/compose
 
 ### Animation
 * [Crossfade](https://foso.github.io/Jetpack-Compose-Playground/animation/crossfade)
