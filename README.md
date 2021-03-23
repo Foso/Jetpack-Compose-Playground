@@ -79,7 +79,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 
 ### Project Structure
-You need at least [version >= Android Studio Arctic Fox Canary 7](https://developer.android.com/studio/preview) to build this project https://developer.android.com/studio/preview/
+You need at least [version >= Android Studio Arctic Fox Canary 11](https://developer.android.com/studio/preview) to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Base android project directory
 * <kbd>mysamples</kbd> - a android library module that is using my compose samples for the github page
