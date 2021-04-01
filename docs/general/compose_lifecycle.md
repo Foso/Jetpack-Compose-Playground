@@ -6,7 +6,7 @@
 Compose has some "effects"-functions that can be used in Composables to track the lifecycle of a function.
 
 * SideEffect {}
-willl be called the first time a compose function is applied.
+will be called the first time a compose function is applied.
 
 * DisposableEffect { }
 Has a onDispose() which will be called when the compose function isn't part of the composition anymore.
