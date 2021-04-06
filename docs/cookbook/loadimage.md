@@ -14,6 +14,13 @@ fun ImageResourceDemo() {
     Image(painter = image,contentDescription = "")
 }
 ```
+Or load an Icon from Material Icons
+```kotlin
+@Composable
+fun ImageResourceDemo() {
+    Icon(Icons.Rounded.Home,contentDescription = "")
+}
+```
 
 
 <hr>
