@@ -14,11 +14,11 @@ fun ImageResourceDemo() {
     Image(painter = image,contentDescription = "")
 }
 ```
-Or load an image from Material Icons
+Or load an Icon from Material Icons
 ```kotlin
 @Composable
 fun ImageResourceDemo() {
-    Image(Icons.Rounded.Home,contentDescription = "")
+    Icon(Icons.Rounded.Home,contentDescription = "")
 }
 ```
 
