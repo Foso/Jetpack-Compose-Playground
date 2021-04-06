@@ -15,11 +15,18 @@ fun ImageResourceDemo() {
 }
 ```
 Or load an Icon from Material Icons
+
 ```kotlin
 @Composable
 fun ImageResourceDemo() {
     Icon(Icons.Rounded.Home,contentDescription = "")
 }
+```
+
+Remember to add dependencies to build.gradle
+
+```
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
 ```
 
 
