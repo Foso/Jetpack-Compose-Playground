@@ -23,13 +23,6 @@ fun ImageResourceDemo() {
 }
 ```
 
-Remember to add dependencies to build.gradle
-
-```
-    implementation "androidx.compose.material:material-icons-extended:$compose_version"
-```
-
-
 <hr>
 
 ## See also:
