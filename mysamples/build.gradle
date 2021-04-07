@@ -43,9 +43,9 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerVersion "1.4.31"
+        kotlinCompilerVersion "1.4.32"
 
-        kotlinCompilerExtensionVersion "1.0.0-beta02"
+        kotlinCompilerExtensionVersion "1.0.0-beta04"
     }
 
     lintOptions {
@@ -61,11 +61,11 @@ dependencies {
     implementation "androidx.compose.ui:ui:$compose_version"
     implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation "androidx.activity:activity-compose:1.3.0-alpha04"
+    implementation "androidx.activity:activity-compose:1.3.0-alpha06"
 
 
     implementation "androidx.compose.animation:animation-core:$compose_version"
@@ -104,8 +104,8 @@ dependencies {
 
     androidTestImplementation ("androidx.test:rules:1.3.0")
     androidTestImplementation ("org.mockito:mockito-core:3.4.4")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0-beta02")
-    androidTestImplementation("androidx.compose.ui:ui-test:1.0.0-beta02")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0-beta04")
+    androidTestImplementation("androidx.compose.ui:ui-test:1.0.0-beta04")
 
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("com.schibsted.spain:barista:3.9.0")
