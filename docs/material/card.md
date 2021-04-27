@@ -14,7 +14,7 @@ Card is the equivalent of a CardView in Compose
 ```
 
 <p align="center">
-  <img src ="{{ site.images }}/material/card/carddemo.png"  />
+  <img src ="{{ site.images }}/material/card/card.png"  />
 </p>
 
 ``` kotlin
