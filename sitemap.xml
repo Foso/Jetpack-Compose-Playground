@@ -1,291 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/alertdialog/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/dropdownmenu/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/linearprogressindicator/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/circularprogressindicator/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/checkbox/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/radiobutton/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/switch/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/slider/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/snackbar/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/textfield/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/codelabs/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/compiler_plugin/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/android_devs/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/compose_for/swiftui_devs/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/compose_lifecycle/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/compositionlocal/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/compositionlocalprovider/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/helloworld/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/providers/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/modifier/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/preview/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/preview/previewparameter/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/roadmap/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/getting_started/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/state/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/desktop/overview/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/desktop/general/gettingstarted/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/desktop/general/keyboard/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/desktop/general/window/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/desktop/general/mouse/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/desktop/general/scrollbar/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/overview/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/textfield_changes/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_compose_in_viewgroup/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/loadimage/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_use_an_android_view_in_compose/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/get_android_context/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/detect_darkmode/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/cookbook/how_to_create_custom_shape/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/animation/crossfade/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/basetextfield/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/canvas/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/image/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazycolumn/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/lazyrow/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/shape/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/text/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/box/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/column/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/constraintlayout/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/layout/row/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/alertdialog/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/button/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/card/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/circularprogressindicator/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/dropdownmenu/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/checkbox/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/floatingactionbutton/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/linearprogressindicator/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/modaldrawer/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/radiobutton/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/scaffold/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/slider/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/snackbar/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/switch/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/textfield/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/compose_projects/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/contributing/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/Foso/Jetpack-Compose-Playground/resources/</loc>
-     <lastmod>2021-04-23</lastmod>
+     <lastmod>2021-04-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
