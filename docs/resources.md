@@ -43,5 +43,6 @@
 | [Release Notes](https://developer.android.com/jetpack/androidx/releases/ui)  		    | |
 | [Compse UI Docu](https://developer.android.com/reference/kotlin/androidx/ui/packages)  		    | |
 | [Jetpack Compose Twitter Bot](https://twitter.com/ComposeBot)  		    | |
+| [Jetpack Compose 中文文档](https://docs.compose.net.cn/) |
 
 Feel free to contribute!
