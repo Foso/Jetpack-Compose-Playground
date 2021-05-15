@@ -3,6 +3,8 @@
 !!! info
     This is the API of 1.0.0-beta02
 
+    Alert dialog is a Dialog which interrupts the user with urgent information, details or actions.
+
 <p align="center">
   <img src ="{{ site.images }}/material/alertdialog/AlertDialogSample.png"  height=100 width=300/>
 </p>

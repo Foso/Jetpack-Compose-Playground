@@ -30,6 +30,7 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.lin
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modaldrawer.ModalDrawerSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.radiobutton.RadioButtonSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.alertdialog.AlertDialogSample
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.appbar.topappbar.TopAppBarSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.scaffold.ScaffoldDemo
 
 
@@ -48,6 +49,7 @@ val MaterialDemos = DemoCategory(
         ComposableDemo("RadioButtonSample") { RadioButtonSample() },
         ComposableDemo("ScaffoldDemo") { ScaffoldDemo() },
         ComposableDemo("SnackbarDemo") { SnackbarDemo() },
+        ComposableDemo("TopAppBarSample") { TopAppBarSample() },
 
         )
 )

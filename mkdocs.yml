@@ -126,6 +126,7 @@ nav:
               - 'Snackbar': material/snackbar.md
               - 'Switch': material/switch.md
               - 'TextField': material/textfield.md
+              - 'TopAppBar': material/topappbar.md
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
       - 'Resources': resources.md
