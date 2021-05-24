@@ -52,4 +52,9 @@ get recreated with the initial value. When you use remember it will remember the
 countState.value
 ```
 With the value property you can get/set the value of the counterstate. In the onClick() function of the Button, the value will be incremented. The Text shows the value of the counterstate. When counterstate is changed, 
-"Text" will also change. 
+"Text" will also change.
+
+
+## See also:
+* [Codelab: Using state in Jetpack Compose](https://developer.android.com/codelabs/jetpack-compose-state#0)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mymWGMy9pYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

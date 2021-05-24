@@ -69,6 +69,7 @@ nav:
           - 'CompositionLocalProvider': general/compositionlocalprovider.md
           - 'Hello World Compose': general/helloworld.md
           - 'Modifier': general/modifier.md
+          - 'Navigation': general/navigation.md
           - 'Preview':
             - 'Preview': general/preview/preview.md
             - 'PreviewParameter': general/preview/previewparameter.md
