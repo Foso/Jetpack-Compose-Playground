@@ -1,7 +1,7 @@
 # Project Setup
 
 ## Android Studio
-To use Jetpack Compose you need to use at least a [version >= Android Studio Arctic Fox Canary 7](https://developer.android.com/studio/preview)
+To use Jetpack Compose you need to use at least a [version >= Android Studio Arctic Fox ](https://developer.android.com/studio/preview)
 
 ## Gradle Dependencies
 
@@ -18,7 +18,7 @@ android{
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion "1.0.0-beta02"
+        kotlinCompilerExtensionVersion "1.0.0-beta07"
         kotlinCompilerVersion '1.4.31'
     }
 
@@ -30,7 +30,7 @@ Below are some Compose dependencies that are online available, can find the othe
 ```groovy
 
 dependencies {
-    def compose_version = "1.0.0-beta02"
+    def compose_version = "1.0.0-beta07"
 
     implementation "androidx.compose.animation:animation-core:$compose_version"
     implementation "androidx.compose.animation:animation:$compose_version"
@@ -50,7 +50,7 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
 
     //Compose Constraintlayout
-    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha03'
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha07'
 
 
 }
