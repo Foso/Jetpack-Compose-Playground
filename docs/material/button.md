@@ -1,9 +1,9 @@
 # Button
 
 !!! info
-    This is the API of version 1.0.0-beta02
+    This is the API of version 1.0.0-beta07
 
-A [Button](https://developer.android.com/reference/kotlin/androidx/ui/material/package-summary#button) has a onClick-Function. You can add a Text-Composable or any other composables as child elements of the Button.
+A [Button](https://developer.android.com/reference/kotlin/androidx/ui/material/package-summary#button) has a onClick-Function. You can add a Text-Composable or any other Composables as child elements of the Button.
 
 <p align="left">
   <img src ="{{ site.images }}/material/button/buttonExample.png"  />

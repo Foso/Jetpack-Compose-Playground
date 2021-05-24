@@ -1,7 +1,7 @@
 # ConstraintLayout
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta07. Newer versions may have a different one
 
 A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System
 
