@@ -5,7 +5,7 @@ WORK IN PROGRESS
 # Working with Transistion
 
 <video width="320" height="240" controls>
-  <source src="../../images/animation/transistion/rotation.mp4" type="video/webm">
+  <source src="{{ site.images }}/animation/transistion/rotation.mp4" type="video/webm">
 Your browser does not support the video tag.
 </video>
 

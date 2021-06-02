@@ -14,7 +14,6 @@ The goal is to show how common use cases with the classic Android View system, c
 | RecyclerView  		    | [LazyColumnFor](../foundation/lazycolumn.md)  |
 | RecyclerView(horizontally)  		    | [LazyRowFor](../foundation/lazyrow.md)  |
 | Snackbar  		    | [Snackbar](../material/snackbar.md)  |
-| ScrollView  		    | [ScrollableRow](../foundation/scrollablerow.md)/[ScrollableColumn](../foundation/scrollablecolumn.md)  |
 
 
 ## Layouts

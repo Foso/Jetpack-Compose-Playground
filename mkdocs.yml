@@ -59,7 +59,6 @@ nav:
           - 'Text fields':
               - 'TextField': material/textfield.md
       - 'General':
-          - 'Ambient': general/ambient.md
           - 'Codelabs': general/codelabs.md
           - 'Compiler Plugin': general/compiler_plugin.md
           - 'Compose for:':
@@ -69,8 +68,8 @@ nav:
           - 'CompositionLocal' : general/compositionlocal.md
           - 'CompositionLocalProvider': general/compositionlocalprovider.md
           - 'Hello World Compose': general/helloworld.md
-          - 'Providers': general/providers.md
           - 'Modifier': general/modifier.md
+          - 'Navigation': general/navigation.md
           - 'Preview':
             - 'Preview': general/preview/preview.md
             - 'PreviewParameter': general/preview/previewparameter.md
@@ -94,7 +93,7 @@ nav:
            - 'How to get Android Context': cookbook/get_android_context.md
            - 'How to detect dark mode': cookbook/detect_darkmode.md
            - 'How to create a custom shape': cookbook/how_to_create_custom_shape.md
-      - 'Guides & Samples':
+      - 'Compose UI':
           - 'Animation':
               - 'Crossfade': animation/crossfade.md
           - 'Foundation':
@@ -130,6 +129,7 @@ nav:
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
       - 'Resources': resources.md
+      - 'Web' : web/overview.md
 
 
 markdown_extensions:

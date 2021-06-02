@@ -1,7 +1,7 @@
 # AlertDialog
 
 !!! info
-    This is the API of 1.0.0-beta02
+    This is the API of 1.0.0-beta07
 
 Alert dialog is a Dialog which interrupts the user with urgent information, details or actions.
 
@@ -64,5 +64,4 @@ fun AlertDialogSample() {
 ```
 
 ## See also:
-* [How do I display an alert dialog/popup modal?](https://github.com/vinaygaba/Learn-Jetpack-Compose-By-Example/blob/master/app/src/main/java/com/example/jetpackcompose/material/AlertDialogActivity.kt)
 * [Full Example Code]({{ site.samplefolder }}/material/alertdialog/AlertDialogSample.kt)
