@@ -17,7 +17,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [DisneyCompose](https://github.com/skydoves/DisneyCompose) | A demo Disney app using compose and Hilt based on modern Android tech-stacks and MVVM architecture. Fetching data from the network and integrating persisted data in the database via repository pattern. Declarative UI version of the DisneyMotions using compose. 
 | [JetBrains Compose](https://github.com/JetBrains/compose-jb) | Compose Kotlin UI framework port for desktop platforms (macOS, Linux, Windows), components outside of the core .
 | [Compose Slack Desktop](https://github.com/vipulasri/ComposeSlackDesktop)  		  | A Slack demo app for desktop using Jetpack Compose UI toolkit
-| [Compose Note](https://github.com/Nthily/compose-note) | A software that can be used to remember little things about you, built with Jetpack Compose + room
+| [FlappyBird](https://github.com/Nthily/FlappyBird) | FlappyBird made with Jetpack Compose.
 | [Compose-Snake-Web](https://github.com/Foso/compose-snake-web) | This is a Compose for Web port of CompoSnake.
 
 # Libraries
