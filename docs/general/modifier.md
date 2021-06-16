@@ -1,7 +1,7 @@
 # Modifier
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0-beta08. Newer versions may have a different one
 
 Modifiers can be used modify certain aspects of a Composable.
 To set them, a Composable needs to accept a modifier as a parameter.
@@ -28,10 +28,6 @@ You can use this to set the height of a Composable.
 
 #### Modifier.size()
 You can use this to set the width and height of a Composable.
-
-
-####  Modifier.preferredSize()
-Modifies the width and height of a Compose UI layout element together
 
 #### Modifier.fillMaxHeight()
 This will set the height of the Composable to the maximum available height. This is similar to **MATCH_PARENT** from the classic View system.
@@ -71,6 +67,9 @@ fun PaddingDemo() {
 #### Modifier.background()
 With this modifier you can set a background color/shape for the Composable
 
+#### Modifier.clip()
+This modifier can clip the Composable to rectangle, rounded, or circle
+
 ### GestureModifier
 
 #### Modifier.clickable
@@ -82,6 +81,12 @@ You can use this to make a Composable scrollable
 
 #### Modifier.draggable
 You can use this to make a Composable draggable
+
+#### Modifier.swipeable
+You drag elements which, when released, animate towards typically two or more anchor points defined in an orientation
+
+#### Multitouch: Panning, zooming, rotating
+To detect multitouch gestures used for panning, zooming and rotating, you can use the ``transformable`` modifier. This modifier does not transform elements by itself, it only detects the gestures.
 
 
 ## See also:

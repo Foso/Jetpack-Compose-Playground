@@ -11,6 +11,7 @@ It's similar to a Recyclerview in the classic Android View system.
 </p>
 
 ```kotlin
+@Composable
 fun LazyColumnDemo() {
     val list = listOf(
         "A", "B", "C", "D"
