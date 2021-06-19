@@ -20,12 +20,14 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.ComposableDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.DemoCategory
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.basetextfield.BaseTextFieldDemo
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.layout.BoxWithConstraintsDemo
 
 
 val FoundationDemos = DemoCategory(
     "Foundation",
     listOf(
         ComposableDemo("BaseTextFieldDemo") { BaseTextFieldDemo() },
+        ComposableDemo("BoxWithConstraints") { BoxWithConstraintsDemo() },
         ComposableDemo("Canvas") { CanvasDrawExample() },
         ComposableDemo("LazyRowDemo") { LazyRowDemo() },
         ComposableDemo("LazyColumnDemo") { LazyColumnDemo() },

@@ -25,7 +25,7 @@ This is a community-driven collection of Jetpack/JetBrains Compose documentation
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ef1xKWjA9E8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Composable of the week!! 🎉
-The [LinearProgressIndicator](material/linearprogressindicator)
+The [BoxWithConstraints](foundation/layout/boxwithconstraints)
 
 
 ## New to Compose?

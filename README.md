@@ -18,7 +18,7 @@ This is an Jetpack Compose example project. I'm collecting a bunch of sample cod
 
 
 ## Composable of the week!! 🎉
-The [LinearProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/linearprogressindicator/)
+The [BoxWithConstraints](https://foso.github.io/Jetpack-Compose-Playground/foundation/layout/boxwithconstraints/)
 
 
 ## New to Compose?
