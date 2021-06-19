@@ -50,4 +50,4 @@ private fun MyBoxWithConstraintsDemo() {
 
 ## See also:
 * [Official Docs]({{ site.composedoc }}/foundation/layout/package-summary#BoxWithConstraints(androidx.compose.ui.Modifier,androidx.compose.ui.Alignment,kotlin.Boolean,kotlin.Function1))
-* [Full Example Code]({{ site.samplefolder }}/foundation/layout/BoxWithConstrainsExample.kt)
+* [Full Example Code]({{ site.samplefolder }}/foundation/layout/BoxWithConstraintsExample.kt)
