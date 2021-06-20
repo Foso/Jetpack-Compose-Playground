@@ -34,7 +34,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/jklingenberg_'
     - icon: fontawesome/solid/external-link-alt
-      link: 'http://www.jensklingenberg.de'
+      link: 'https://jensklingenberg.de/'
 nav:
   - 'Jetpack/JetBrains Compose':
       - 'Overview': index.md
