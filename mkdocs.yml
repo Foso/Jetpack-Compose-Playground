@@ -106,7 +106,7 @@ nav:
               - 'Text': foundation/text.md
           - 'Layout':
               - 'Box': layout/box.md
-              - 'BoxWithConstraints': foundation/boxwithconstraints.md
+              - 'BoxWithConstraints': foundation/layout/boxwithconstraints.md
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
               - 'Row': layout/row.md
