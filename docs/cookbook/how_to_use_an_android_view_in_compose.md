@@ -22,7 +22,7 @@ fun EmbeddedAndroidViewDemo() {
         val state = remember { mutableStateOf(0) }
 
         //widget.ImageView
-        AndroidView(viewBlock = { ctx ->
+        AndroidView(factory = { ctx ->
             ImageView(ctx).apply {
                 val drawable = ContextCompat.getDrawable(ctx, R.drawable.composelogo)
                 setImageDrawable(drawable)
