@@ -1,7 +1,7 @@
 # How to use an Android View in Compose
 
 !!! info
-    This is the API of 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of 1.0.0-beta09. Newer versions may have a different one
 
 Altough Compose itself is independent from the classic Android View system, in Android Apps it is possible to use Views(any class extends android.view.View) inside of Compose.
 This example will show you, how you can use a **android.widget.Button**, an **android.widget.TextView** and an **android.widget.ImageView** alongside with an Compose Button.
@@ -35,7 +35,7 @@ fun EmbeddedAndroidViewDemo() {
         }
 
         //widget.Button
-        AndroidView(viewBlock = { ctx ->
+        AndroidView(factory = { ctx ->
             //Here you can construct your View
             android.widget.Button(ctx).apply {
                 text = "MyAndroidButton"
@@ -66,7 +66,7 @@ fun EmbeddedAndroidViewDemo() {
 //androidx.compose.ui.viewinterop
 @Composable
 fun <T : View> AndroidView(
-    viewBlock: (Context) -> T,
+    factory: (Context) -> T,
     modifier: Modifier = Modifier,
     update: (T) -> Unit = NoOpUpdate
 ) {
@@ -75,7 +75,7 @@ fun <T : View> AndroidView(
 ```
 **AndroidView()** is a Composable that can be used to add Android Views inside of a @Composable function.
 
-**viewBlock** expects a function that gets an Android Context and will return a class that extends an Android View. This constructor function will only be executed at initial rendering and when a parent composable triggers a new execution.
+**factory** expects a function that gets an Android Context and will return a class that extends an Android View. This constructor function will only be executed at initial rendering and when a parent composable triggers a new execution.
 You can use the value of a state in here, but it will not observe any changes.
 
 **modifier** can be used to apply modifiers to the layout that will host the created View
