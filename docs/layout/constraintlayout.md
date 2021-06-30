@@ -1,7 +1,14 @@
 # ConstraintLayout
 
 !!! info
-    This is the API of version 1.0.0-beta07. Newer versions may have a different one
+    This is the API of version 1.0.0-alpha08. Newer versions may have a different one
+
+
+Remember to add dependencies to build.gradle
+
+```
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha08'
+```
 
 A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System
 
@@ -12,28 +19,19 @@ A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic 
 ```kotlin
 @Composable
 fun ConstraintLayoutDemo() {
-    ConstraintSet {
-        val text1 = createRefFor("text1")
-        val text2 = createRefFor("text2")
-        val text3 = createRefFor("text3")
+    ConstraintLayout {
+        val (text1,text2,text3) = createRefs()
 
-        constrain(text1) {
+        Text("Text1", Modifier.constrainAs(text1){
             start.linkTo(text2.end)
-        }
-        constrain(text2) {
+        })
+        Text("Text2", Modifier.constrainAs(text2){
             top.linkTo(text1.bottom)
-        }
-
-        constrain(text3) {
+        })
+        Text("This is a very long text", Modifier.constrainAs(text3){
             start.linkTo(text2.end)
             top.linkTo(text2.bottom)
-        }
-
-    }
-    ConstraintLayout {
-        Text("Text1", Modifier.layoutId("text1"))
-        Text("Text2", Modifier.layoutId("text2"))
-        Text("This is a very long text", Modifier.layoutId("text3"))
+        })
     }
 }
 ```
