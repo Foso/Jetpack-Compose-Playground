@@ -110,6 +110,7 @@ nav:
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
               - 'Row': layout/row.md
+              - 'Spacer': foundation/layout/spacer.md
           - 'Material':
               - 'AlertDialog': material/alertdialog.md
               - 'Button': material/button.md
