@@ -34,7 +34,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/jklingenberg_'
     - icon: fontawesome/solid/external-link-alt
-      link: 'http://www.jensklingenberg.de'
+      link: 'https://jensklingenberg.de/'
 nav:
   - 'Jetpack/JetBrains Compose':
       - 'Overview': index.md
@@ -106,7 +106,7 @@ nav:
               - 'Text': foundation/text.md
           - 'Layout':
               - 'Box': layout/box.md
-              - 'BoxWithConstraints': foundation/boxwithconstraints.md
+              - 'BoxWithConstraints': foundation/layout/boxwithconstraints.md
               - 'Column': layout/column.md
               - 'ConstraintLayout': layout/constraintlayout.md
               - 'Row': layout/row.md

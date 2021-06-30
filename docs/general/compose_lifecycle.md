@@ -5,7 +5,7 @@
     
 Compose has some "effects"-functions that can be used in Composables to track the lifecycle of a function.
 
-* SideEffect {}
+* LaunchedEffect {}
 will be called the first time a compose function is applied.
 
 * DisposableEffect { }
@@ -31,7 +31,7 @@ fun LifecycleDemo() {
         }
 
         if (count.value < 3) {
-            SideEffect {
+            LaunchedEffect(Unit)
                 Log.d("Compose", "onactive with value: " + count.value)
             }
             DisposableEffect(Unit) {
