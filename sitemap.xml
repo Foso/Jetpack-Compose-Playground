@@ -171,6 +171,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/Foso/Jetpack-Compose-Playground/foundation/layout/spacer/</loc>
+         <lastmod>2021-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/Foso/Jetpack-Compose-Playground/general/ambient/</loc>
          <lastmod>2021-06-30</lastmod>
          <changefreq>daily</changefreq>
