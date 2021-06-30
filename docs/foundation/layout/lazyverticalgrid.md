@@ -1,4 +1,4 @@
-# Grid
+# LazyVerticalGrid
 
 !!! info
     This is the API of version 1.0.0-beta09
