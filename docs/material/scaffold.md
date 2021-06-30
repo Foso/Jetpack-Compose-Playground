@@ -1,7 +1,7 @@
 # Scaffold
 
 !!! info
-    This is the API of version 1.0.0-beta07
+    This is the API of version 1.0.0-beta09
     
 A Scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or a Drawer.
 
@@ -65,6 +65,13 @@ This is the primary content of the scaffold. You can add any Composable here.
 </p>
 
 Here you can set the part of your layout is on bottom of the screen. You can set any Composable, but **BottomAppBar** is already made for this usecase.
+
+
+## Tips
+
+* The bottombar is overlapping the content
+
+Inside the content lambda you have access to the PaddingValues. You can use **calculateBottomPadding()** to get the height of the bottombar and then set an extra padding to your content
 
 ## See also:
 * [Full Example Code]({{ site.samplefolder }}/material/scaffold/ScaffoldDemo.kt)
