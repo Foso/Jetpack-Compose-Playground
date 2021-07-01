@@ -1,7 +1,7 @@
 # TopAppBar
 
 !!! info
-    This is the API of 1.0.0-beta6
+    This is the API of 1.0.0-beta09
 
 
 A TopAppBar displays information and actions relating to the current screen and is placed at the top of the screen.
