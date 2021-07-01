@@ -11,8 +11,8 @@ The goal is to show how common use cases with the classic Android View system, c
 | LinearLayout(horizontally)  		    | [Row](../layout/row.md)  |
 | LinearLayout(vertically)  		    | [Column](../layout/column.md)  |
 | FrameLayout  		    | [Box](../layout/box.md)  |
-| RecyclerView  		    | [LazyColumnFor](../foundation/lazycolumn.md)  |
-| RecyclerView(horizontally)  		    | [LazyRowFor](../foundation/lazyrow.md)  |
+| RecyclerView  		    | [LazyColumn](../foundation/lazycolumn.md)  |
+| RecyclerView(horizontally)  		    | [LazyRow](../foundation/lazyrow.md)  |
 | Snackbar  		    | [Snackbar](../material/snackbar.md)  |
 
 
