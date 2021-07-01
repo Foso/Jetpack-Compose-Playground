@@ -1,7 +1,7 @@
 # Card
 
 !!! info
-    This is the API of version 1.0.0-rc01.
+    This is the API of version 1.0.0-rc01
 
 Card is the equivalent of a CardView in Compose
 
