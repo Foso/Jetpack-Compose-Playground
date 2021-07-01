@@ -5,14 +5,6 @@
 
 Card is the equivalent of a CardView in Compose
 
-```kotlin
- @Composable fun CardDemo(){
-    Card(Modifier.fillMaxWidth().padding(8.dp),elevation = 8.dp){
-        Text("This is a Card")
-    }
-}
-```
-
 <p align="center">
   <img src ="{{ site.images }}/material/card/card.png"  />
 </p>
