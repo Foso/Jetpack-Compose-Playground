@@ -128,6 +128,10 @@ nav:
               - 'Switch': material/switch.md
               - 'TextField': material/textfield.md
               - 'TopAppBar': material/topappbar.md
+          - 'Platform':
+              - 'ComposeView': platform/composeview.md
+          - 'ViewInterop':
+              - 'AndroidView': viewinterop/androidview.md
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
       - 'Resources': resources.md
