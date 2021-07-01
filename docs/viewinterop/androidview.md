@@ -8,7 +8,7 @@ This example will show you, how you can use a **android.widget.Button**, an **an
 
 
 <p align="center">
-  <img src ="{{ site.samplefolder }}/viewinterop/androidview/androidview.png" height=100 width=300  />
+  <img src ="{{ site.images }}/viewinterop/androidview/androidview.png" height=100 width=300  />
 </p>
 
 In the example above you can see a @Composable() with a Column and a counter state. The ImageView is loading an drawable.
