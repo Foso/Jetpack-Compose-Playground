@@ -53,5 +53,5 @@ Just add your FrameLayout like any other layout.
 ```
 
 <p align="center">
-  <img src ="{{ site.images }}/platform/viewgroupExample.png"  height=100 width=200  />
+  <img src ="{{ site.images }}/platform/composeview/viewgroupExample.png"  height=100 width=200  />
 </p>
