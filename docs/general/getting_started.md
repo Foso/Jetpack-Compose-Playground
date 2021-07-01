@@ -48,9 +48,10 @@ dependencies {
     implementation("androidx.compose.ui:ui-util:$compose_version")
     implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "androidx.activity:activity-compose:1.3.0-rc01"
 
     //Compose Constraintlayout
-    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha07'
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-alpha08'
 
 
 }
