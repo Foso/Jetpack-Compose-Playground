@@ -1,7 +1,7 @@
 # BoxWithConstraints
 
 !!! info
-    This is the API of version 1.0.0-beta09
+    This is the API of version 1.0.0-rc01
 
 BoxWithConstraints is a layout similar to the [Box](../../../layout/box) layout, but it has the advantage that you can get the minimum/maximum available width and height for the Composable on the screen.
 You can use it to show a different content depending on the available space.

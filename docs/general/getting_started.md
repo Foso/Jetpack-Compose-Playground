@@ -18,7 +18,7 @@ android{
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion "1.0.0-beta09"
+        kotlinCompilerExtensionVersion "1.0.0-rc01"
         kotlinCompilerVersion '1.5.10'
     }
 
@@ -30,7 +30,7 @@ Below are some Compose dependencies that are online available, can find the othe
 ```groovy
 
 dependencies {
-    def compose_version = "1.0.0-beta09"
+    def compose_version = "1.0.0-rc01"
 
     implementation "androidx.compose.animation:animation-core:$compose_version"
     implementation "androidx.compose.animation:animation:$compose_version"
