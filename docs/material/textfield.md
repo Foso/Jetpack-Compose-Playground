@@ -1,7 +1,7 @@
 # TextField
 
 !!! info
-    This is the API of version 1.0.0-beta02
+    This is the API of version 1.0.0-rc01
 
 TextField can be used to insert text. This is the equivalent to **EditText** from the Android View system.
 
