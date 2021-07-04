@@ -1,7 +1,7 @@
 # CircularProgressIndicator
 
 !!! info
-    This is the API of version 1.0.0-beta06
+    This is the API of version 1.0.0-rc01
 
 A CircularProgressIndicator can be used to display a progress in circular shape.
 There are two kinds:
