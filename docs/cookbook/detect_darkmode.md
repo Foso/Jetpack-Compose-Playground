@@ -1,7 +1,7 @@
 # How to detect dark mode
 
 !!! info
-    This is the API of 1.0.0-rc01. Newer versions may have a different one
+    This is the API of 1.0.0-rc02. Newer versions may have a different one
 
 Inside your composable you can use **isSystemInDarkTheme** to detect if the device is running in dark mode.
 

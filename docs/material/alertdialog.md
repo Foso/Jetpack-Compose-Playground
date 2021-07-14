@@ -1,7 +1,7 @@
 # AlertDialog
 
 !!! info
-    This is the API of 1.0.0-rc01
+    This is the API of 1.0.0-rc02
 
 Alert dialog is a Dialog which interrupts the user with urgent information, details or actions.
 

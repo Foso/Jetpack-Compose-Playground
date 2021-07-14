@@ -3,7 +3,7 @@
 The children of the Box layout will be stacked over each other. You can use the align modifier to specify where the composable should be drawn.
 
 !!! info
-    This is the API of version 1.0.0-rc01
+    This is the API of version 1.0.0-rc02
 
 
 <p align="center">
