@@ -19,6 +19,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [Compose Slack Desktop](https://github.com/vipulasri/ComposeSlackDesktop)  		  | A Slack demo app for desktop using Jetpack Compose UI toolkit
 | [FlappyBird](https://github.com/Nthily/FlappyBird) | FlappyBird made with Jetpack Compose.
 | [Compose-Snake-Web](https://github.com/Foso/compose-snake-web) | This is a Compose for Web port of CompoSnake.
+| [JetSpotify](https://github.com/sunny52525/JetSpotify) | This is a Spotify App made in Jetpack Compose having Spotify Android UI and functionality using Spotify SDK and web API.
 
 # Libraries
 
