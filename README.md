@@ -75,11 +75,11 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.4.30-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.5.10-green.svg)]()
 
 
 ### Project Structure
-You need at least [version >= Android Studio Arctic Fox Canary 11](https://developer.android.com/studio/preview) to build this project https://developer.android.com/studio/preview/
+You need at least [version >= Android Studio Arctic Fox](https://developer.android.com/studio/preview) to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Base android project directory
 * <kbd>mysamples</kbd> - a android library module that is using my compose samples for the github page
