@@ -1,7 +1,7 @@
 # LazyVerticalGrid
 
 !!! info
-    This is the API of version 1.0.0-rc02
+    This is the API of version 1.0.0
 
 Jetpack Compose provides an API for displaying grid or grid elements. With Composable ``LazyVerticalGrid`` you can create a grid view even though until this article was written this API is still ***experimental*** or not yet stable.
 

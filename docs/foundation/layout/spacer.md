@@ -1,7 +1,7 @@
 # Spacer
 
 !!! info
-    This is the API of version 1.0.0-rc02
+    This is the API of version 1.0.0
 
 Spacer is a Composable that can be used when you want to add an additional space between Composables
 

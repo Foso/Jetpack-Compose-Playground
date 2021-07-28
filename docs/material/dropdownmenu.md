@@ -1,7 +1,7 @@
 # DropdownMenu
 
 !!! info
-    This is the API of version 1.0.0-rc02
+    This is the API of version 1.0.0
 
 The DropdownMenu Composable can be used to create DropdownMenu.
 

@@ -1,7 +1,7 @@
 # Column
 
 !!! info
-    This is the API of version 1.0.0-rc02
+    This is the API of version 1.0.0
 
 A Column will show each child below the previous children. It's similar to a LinearLayout with vertical orientation.
 

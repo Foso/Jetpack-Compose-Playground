@@ -1,7 +1,7 @@
 # BaseTextField
 
 !!! info
-    This is the API of version 1.0.0-rc02
+    This is the API of version 1.0.0
 
 BaseTextField can be used to insert text. See [TextField](../material/textfield.md) for a material version.
 

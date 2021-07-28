@@ -1,7 +1,7 @@
 # Lifecycle
 
 !!! info
-    This is the API of version 1.0.0-rc02. Newer versions may have a different one
+    This is the API of version 1.0.0. Newer versions may have a different one
     
 Compose has some "effects"-functions that can be used in Composables to track the lifecycle of a function.
 
