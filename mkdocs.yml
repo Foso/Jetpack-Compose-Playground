@@ -18,6 +18,7 @@ theme:
   feature:
     - tabs: true
     - instant
+    - search.suggest
   icon:
     logo: material/cloud
 extra:
