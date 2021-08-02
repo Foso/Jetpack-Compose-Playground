@@ -22,7 +22,9 @@ This is a community-driven collection of Jetpack/JetBrains Compose documentation
 ## What is Jetpack Compose?
 "Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. "
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ef1xKWjA9E8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ef1xKWjA9E8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kLA1QwDjioc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Composable of the week!! 🎉
 The [BoxWithConstraints](foundation/layout/boxwithconstraints)
