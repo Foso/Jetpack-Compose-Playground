@@ -1,7 +1,7 @@
 # Canvas
 
 !!! info
-    This is the API of version 1.0.0-rc01
+    This is the API of version 1.0.0
 
 ## How to draw on Canvas
 
