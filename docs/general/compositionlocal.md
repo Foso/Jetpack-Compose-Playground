@@ -1,6 +1,6 @@
 # CompositionLocal
 !!! info
-    This is the API of version 1.0.0-rc01
+    This is the API of version 1.0.1
 
 CompositionLocal is useful when you want to create a dependency in a higher node of the layout tree and use it on lower node without having to
 pass it down the tree through every child Composable.

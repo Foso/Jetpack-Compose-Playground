@@ -1,13 +1,13 @@
 # ConstraintLayout
 
 !!! info
-    This is the API of version 1.0.0-beta01. Newer versions may have a different one
+    This is the API of version 1.0.1-beta01. Newer versions may have a different one
 
 
 Remember to add dependencies to build.gradle
 
 ```
-    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-beta02'
 ```
 
 A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic Android View System

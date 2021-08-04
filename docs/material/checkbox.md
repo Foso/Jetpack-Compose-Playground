@@ -1,7 +1,7 @@
 # Checkbox
 
 !!! info
-    This is the API of version 1.0.0
+    This is the API of version 1.0.1
 
 <p align="left">
   <img src ="{{ site.images }}/material/checkbox/CheckboxDemo.png" height=100 width=300 />

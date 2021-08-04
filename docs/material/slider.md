@@ -1,7 +1,7 @@
 # Slider
 
 !!! info
-    This is the API of version 1.0.0
+    This is the API of version 1.0.1
 
 "Sliders allow users to make selections from a range of values."
     

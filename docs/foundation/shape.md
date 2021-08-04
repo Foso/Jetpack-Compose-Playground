@@ -2,7 +2,7 @@
 A Shape can be used to draw a Composable in specific shape.
 
 !!! info
-    This is the API of version 1.0.0
+    This is the API of version 1.0.1
     
 ## RectangleShape
 

@@ -1,7 +1,7 @@
 # LazyRow
 
 !!! info
-    This is the API of version 1.0.0
+    This is the API of version 1.0.1
     
 A [LazyRow]({{ site.composedoc }}/foundation/lazy/package-summary#lazyrow) is a horizontal scrolling list that only composes and lays out the currently visible items.
 It's similar to a horizontal Recyclerview in the classic Android View system.
