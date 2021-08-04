@@ -2,7 +2,7 @@
 A Shape can be used to draw a Composable in specific shape.
 
 !!! info
-    This is the API of version 1.0.0-alpha12. Newer versions may have a different one
+    This is the API of version 1.0.0
     
 ## RectangleShape
 
@@ -22,7 +22,7 @@ fun RectangleShapeDemo(){
 fun ExampleBox(shape: Shape){
     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
+            modifier = Modifier.size(100.dp).clip(shape).background(Color.Red)
         )
     }
 }
@@ -44,11 +44,11 @@ fun CircleShapeDemo(){
 
 @Composable
 fun ExampleBox(shape: Shape){
-     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center).clip(shape)) {
-             Box(
-                 modifier = Modifier.preferredSize(100.dp).background(Color.Red)
-             ) { }
-     }
+    Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
+        Box(
+            modifier = Modifier.size(100.dp).clip(shape).background(Color.Red)
+        )
+    }
 }
 ```
 
@@ -68,9 +68,9 @@ fun RoundedCornerShapeDemo(){
 
 @Composable
 fun ExampleBox(shape: Shape){
-     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
+    Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-           modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
+            modifier = Modifier.size(100.dp).clip(shape).background(Color.Red)
         )
     }
 }
@@ -91,9 +91,9 @@ fun CutCornerShapeDemo(){
 
 @Composable
 fun ExampleBox(shape: Shape){
-     Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
+    Column(modifier = Modifier.fillMaxWidth().wrapContentSize(Alignment.Center)) {
         Box(
-            modifier = Modifier.preferredSize(100.dp).clip(shape).background(Color.Red)
+            modifier = Modifier.size(100.dp).clip(shape).background(Color.Red)
         )
     }
 }
