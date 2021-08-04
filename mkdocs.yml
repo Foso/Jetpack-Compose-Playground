@@ -13,12 +13,23 @@ theme:
     text: Ubuntu
     code: Jetbrains Mono
   palette:
-    primary: 'deep-blue'
-    accent: 'deep-purple'
+    - scheme: default
+      primary: deep-blue
+      accent: deep-purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
   feature:
     - tabs: true
     - instant
     - search.suggest
+    - search.highlight
   icon:
     logo: material/cloud
 extra:
