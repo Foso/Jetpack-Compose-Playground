@@ -1,7 +1,7 @@
 # RadioButton
 
 !!! info
-    This is the API of version 1.0.0-beta02
+    This is the API of version 1.0.0
 
 <p align="left">
   <img src ="{{ site.images }}/material/radiobutton/RadioGroupExample.png" height=100 width=300 />
