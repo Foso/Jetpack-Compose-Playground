@@ -17,13 +17,13 @@ theme:
       primary: deep-blue
       accent: deep-purple
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
       primary: red
       accent: red
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-sunny
         name: Switch to light mode
   feature:
     - tabs: true
