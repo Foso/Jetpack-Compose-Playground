@@ -27,7 +27,7 @@ This is a community-driven collection of Jetpack/JetBrains Compose documentation
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kLA1QwDjioc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Composable of the week!! 🎉
-The [BoxWithConstraints](foundation/layout/boxwithconstraints)
+The [LazyVerticalGrid](foundation/lazyverticalgrid.md)
 
 
 ## New to Compose?
