@@ -50,6 +50,7 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Image](foundation/image.md)
 * [LazyColumn](foundation/lazycolumn.md)
 * [LazyRow](foundation/lazyrow.md)
+* [LazyVerticalGrid](foundation/lazyverticalgrid.md)
 * [Shape](foundation/shape.md)
 * [Text](foundation/text.md)
 

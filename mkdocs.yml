@@ -114,6 +114,7 @@ nav:
               - 'Image': foundation/image.md
               - 'LazyColumn': foundation/lazycolumn.md
               - 'LazyRow': foundation/lazyrow.md
+              - 'LazyVerticalGrid': foundation/lazyverticalgrid.md
               - 'Shape' : foundation/shape.md
               - 'Text': foundation/text.md
           - 'Layout':

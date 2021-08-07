@@ -31,6 +31,7 @@ val FoundationDemos = DemoCategory(
         ComposableDemo("Canvas") { CanvasDrawExample() },
         ComposableDemo("LazyRowDemo") { LazyRowDemo() },
         ComposableDemo("LazyColumnDemo") { LazyColumnDemo() },
+        ComposableDemo("LazyVerticalGridDemo") { LazyVerticalGridDemo() },
         ComposableDemo("TextDemo") { TextExample() },
         ComposableDemo("CircleShapeDemo") { ShapeDemo() },
         ComposableDemo("ImageResourceDemo") { ImageResourceDemo() },
