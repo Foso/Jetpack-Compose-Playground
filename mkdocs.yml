@@ -139,6 +139,7 @@ nav:
               - 'Slider': material/slider.md
               - 'Snackbar': material/snackbar.md
               - 'Switch': material/switch.md
+              - 'Surface': material/surface.md
               - 'TextField': material/textfield.md
               - 'TopAppBar': material/topappbar.md
           - 'Platform':

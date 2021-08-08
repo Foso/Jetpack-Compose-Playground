@@ -6,14 +6,15 @@ This is the API of version 1.0.1
 
 
 !!! warning
-    Caution: Experimental APIs can change in the future or may be removed entirely.
+    Caution:  The API is still ***experimental***. Experimental APIs can change in the future or may be removed entirely.
 
 
-Jetpack Compose provides an API for displaying grid or grid elements. With Composable ``LazyVerticalGrid`` you can create a grid view even though until this article was written this API is still ***experimental*** or not yet stable.
+Jetpack Compose provides an API for displaying grid or grid elements.
 
 # Example
 
-To arrange list items in a grid, ``LazyVerticalGrid`` provides a cells parameter that controls how cells are formed into columns. The following example displays the items in a grid, using ``GridCells.Adaptive`` to set the width of each column at least 128.dp:
+To arrange list items in a grid, ``LazyVerticalGrid`` provides a cells parameter that controls how cells are formed into columns.
+The following example displays the items in a grid, using ``GridCells.Adaptive`` to set the width of each column at least 128.dp:
 
 
 

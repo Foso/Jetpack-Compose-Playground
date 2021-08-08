@@ -1,8 +1,7 @@
+<!---
+This is the API of version 1.0.1
+-->
 # ConstraintLayout
-
-!!! info
-    This is the API of version 1.0.1-beta01. Newer versions may have a different one
-
 
 Remember to add dependencies to build.gradle
 

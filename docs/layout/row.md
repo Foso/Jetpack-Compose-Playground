@@ -1,7 +1,7 @@
+<!---
+This is the API of version 1.0.1
+-->
 # Row
-
-!!! info
-    This is the API of version 1.0.1
 
 A Row will show each child next to the previous children. It's similar to a LinearLayout with a horizontal orientation.
 
