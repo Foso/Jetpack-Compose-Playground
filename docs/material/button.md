@@ -1,7 +1,7 @@
+<!---
+This is the API of version 1.0.1
+-->
 # Button
-
-!!! info
-    This is the API of version 1.0.1
 
 A [Button](https://developer.android.com/reference/kotlin/androidx/ui/material/package-summary#button) has a onClick-Function. You can add a Text-Composable or any other Composables as child elements of the Button.
 

@@ -1,7 +1,8 @@
-# Canvas
+<!---
+This is the API of version 1.0.1
+-->
 
-!!! info
-    This is the API of version 1.0.1
+# Canvas
 
 ## How to draw on Canvas
 

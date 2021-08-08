@@ -1,8 +1,7 @@
+<!---
+This is the API of version 1.0.1
+-->
 # TopAppBar
-
-!!! info
-    This is the API of 1.0.1
-
 
 A TopAppBar displays information and actions relating to the current screen and is placed at the top of the screen.
 

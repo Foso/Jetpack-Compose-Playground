@@ -1,8 +1,8 @@
+<!---
+This is the API of version 1.0.1
+-->
 # Scaffold
 
-!!! info
-    This is the API of version 1.0.1
-    
 A Scaffold is a layout which implements the basic material design layout structure. You can add things like a TopBar, BottomBar, FAB or a Drawer.
 
 ```kotlin

@@ -1,9 +1,7 @@
+<!---
+This is the API of version 1.0.1
+-->
 # FloatingActionButton
-
-!!! info
-    This is the API of version 1.0.1
-
-## FloatingActionButton
 
 
 ```kotlin
