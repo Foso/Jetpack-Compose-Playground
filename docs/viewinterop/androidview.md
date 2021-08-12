@@ -47,7 +47,7 @@ fun EmbeddedAndroidViewDemo() {
         }, modifier = Modifier.padding(8.dp))
 
         //widget.TextView
-        AndroidView(viewBlock = { ctx ->
+        AndroidView(factory = { ctx ->
             //Here you can construct your View
             TextView(ctx).apply {
                 layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT)
