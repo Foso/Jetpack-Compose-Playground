@@ -24,11 +24,15 @@ fun ScaffoldDemo() {
 }
 ```
 
-<p align="left">
-  <img src ="{{ site.images }}/material/scaffold/scaffold.png"  height=100 width=300  />
-  <img src ="{{ site.images }}/material/scaffold/scaffoldwithdrawer.png"  height=100 width=300/>
+=== "Default"
 
-</p>
+    <img src ="{{ site.images }}/material/scaffold/scaffold.png"  height=100 width=300  />
+
+
+=== "With Drawer open"
+
+    <img src ="{{ site.images }}/material/scaffold/scaffoldwithdrawer.png"  height=100 width=300/>
+
 
 
 ## scaffoldState
