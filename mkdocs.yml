@@ -28,8 +28,6 @@ theme:
   feature:
     - navigation.top
     - toc.integrate
-    - tabs: true
-    - instant
     - search.suggest
     - search.highlight
   icon:
