@@ -26,6 +26,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   feature:
+    - navigation.top
     - tabs: true
     - instant
     - search.suggest
