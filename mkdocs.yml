@@ -17,7 +17,7 @@ theme:
     - navigation.top
     - toc.integrate
     - search.suggest
-    - search.highlight
+    - search.share
   palette:
     - scheme: default
       primary: deep-blue
