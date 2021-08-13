@@ -27,6 +27,7 @@ theme:
         name: Switch to light mode
   feature:
     - navigation.top
+    - toc.integrate
     - tabs: true
     - instant
     - search.suggest
