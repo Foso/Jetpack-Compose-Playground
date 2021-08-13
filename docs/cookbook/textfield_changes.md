@@ -1,7 +1,7 @@
+<!---
+This is the API of version 1.0.1
+-->
 # Handle changes to a TextField
-
-!!! info
-    This is the API of 1.0.1. Newer versions may have a different one
 
 In some cases, it’s useful to get the value of a textfield every time the text in a text field changes. For example, you might want to build a search screen with autocomplete functionality where you want to update the results as the user types.
 
