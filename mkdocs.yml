@@ -127,6 +127,7 @@ nav:
               - 'Spacer': foundation/layout/spacer.md
           - 'Material':
               - 'AlertDialog': material/alertdialog.md
+              - 'BadgeBox': material/badgedbox.md
               - 'Button': material/button.md
               - 'Card': material/card.md
               - 'CircularProgressIndicator': material/circularprogressindicator.md
