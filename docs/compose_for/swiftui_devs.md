@@ -63,4 +63,4 @@ Text("Hello, World", modifier = Modifier.background(Color.Red).padding(100.dp))
 ```
 
 ## What is the equivalent of EnvironmentObject?
-For data that should be shared with all views in your entire app, in SwiftUI you can use EnvironmentObject. In Compose this can be done with [Ambients](/general/ambient/)
+For data that should be shared with all views in your entire app, in SwiftUI you can use EnvironmentObject. In Compose this can be done with [CompositionLocal](/general/compositionlocal/)

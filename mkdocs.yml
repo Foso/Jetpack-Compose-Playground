@@ -5,6 +5,10 @@ repo_url: https://github.com/Foso/Jetpack-Compose-Playground
 site_url: https://github.com/Foso/Jetpack-Compose-Playground
 docs_dir: 'docs'
 edit_uri: 'tree/master/docs/'
+
+# Copyright
+copyright: Copyright &copy; MIT License 2019 - 2021 Jens Klingenberg
+
 theme:
   name: 'material'
   language: en
