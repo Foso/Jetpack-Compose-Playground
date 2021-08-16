@@ -114,7 +114,7 @@ nav:
           - 'Animation':
               - 'Crossfade': animation/crossfade.md
           - 'Foundation':
-              - 'BaseTextField': foundation/basetextfield.md
+              - 'BasicTextField': foundation/basictextfield.md
               - 'Canvas': foundation/canvas.md
               - 'Image': foundation/image.md
               - 'LazyColumn': foundation/lazycolumn.md

@@ -19,8 +19,6 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.layout
 
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.ComposableDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.demo.DemoCategory
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.animation.crossfade.CrossfadeDemo
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.basetextfield.BaseTextFieldDemo
 
 
 val LayoutDemos = DemoCategory(
