@@ -54,24 +54,10 @@ You can achieve the result of a RelativeLayout by using a combination of Column,
 
 In Android, use a ScrollView to lay out your widgets—if the user’s device has a smaller screen than your content, it scrolls.
 
-In Compose, you can use a **[ScrollableColumn](https://foso.github.io/Jetpack-Compose-Playground/foundation/scrollablecolumn/)**
-
-```kotlin
-@Composable
-fun ScrollableColumnExample() {
-    ScrollableColumn {
-        //Only one child is allowed in a ScrollableColumn
-        Column {
-            for (i in 0..100) {
-                Text("$i Hello World!", style =(MaterialTheme.typography()).body1)
-            }
-        }
-    }
-}
-```
+In Compose, you can use a **[LazyColumn](../foundation/lazycolumn.md)**
 
 ### What is the equivalent of a RecyclerView?
-In Compose, you can use a **[LazyColumn](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazycolumn/)** or **[LazyRow](https://foso.github.io/Jetpack-Compose-Playground/foundation/lazyrow/)**.
+In Compose, you can use a **[LazyColumn](../foundation/lazycolumn/)** or **[LazyRow](../foundation/lazyrow/)**.
 
 
 ### What is the equivalent of wrap_content?
