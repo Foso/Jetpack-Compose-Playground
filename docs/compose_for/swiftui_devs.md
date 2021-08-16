@@ -55,7 +55,7 @@ struct ContentView: View {
 }
 ```
 
-In Compose a ViewModifier is called [Modifier](/general/modifier/). You can't directly append it to a View, you need to apply your modifier as a parameter to a Composable that expects a modifier.
+In Compose a ViewModifier is called [Modifier](../general/modifier/). You can't directly append it to a View, you need to apply your modifier as a parameter to a Composable that expects a modifier.
 
 ```kotlin
 //Compose
