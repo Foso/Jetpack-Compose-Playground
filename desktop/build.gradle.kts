@@ -12,7 +12,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     google()
-    jcenter()
+
     mavenCentral()
     maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
 }
