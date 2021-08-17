@@ -4,13 +4,9 @@ apply plugin: 'kotlin-android'
 
 
 repositories {
-    // maven { url "$androidx_home/out/ui/build/support_repo/" }
     mavenCentral()
     maven {
         url 'https://oss.sonatype.org/content/repositories/snapshots/'
-    }
-    maven {
-        url "https://dl.bintray.com/kotlin/kotlin-eap/"
     }
 
     maven { url 'https://jitpack.io' }
