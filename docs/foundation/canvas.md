@@ -3,6 +3,7 @@ This is the API of version 1.0.1
 -->
 
 # Canvas
+A Canvas is a Composable that allows you to draw inside of it.
 
 ## How to draw on Canvas
 
