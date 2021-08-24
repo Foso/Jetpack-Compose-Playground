@@ -37,12 +37,12 @@ theme:
         name: Switch to light mode
   icon:
     logo: material/cloud
+    repo: fontawesome/brands/github
 extra:
   manifest: manifest.webmanifest
   site:
     samplefolder: 'https://github.com/Foso/Jetpack-Compose-Playground/blob/master/mysamples/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github'
     composedoc: 'https://developer.android.com/reference/kotlin/androidx/compose'
-
     images: '../../images'
 
   social:
