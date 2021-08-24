@@ -36,7 +36,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   icon:
-    logo: material/cloud
+    logo: fontawesome/solid/code
     repo: fontawesome/brands/github
 extra:
   manifest: manifest.webmanifest
