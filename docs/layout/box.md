@@ -31,6 +31,9 @@ fun BoxExample() {
 }
 ```
 
+## Content Alignment
+You can use the **align** modifier to set the position of a Composable inside the Box
+
 ## See also:
 * [Official Docs]({{ site.composedoc }}/foundation/layout/package-summary#Box)
 * [Full Example Code]({{ site.samplefolder }}/layout/BoxExample.kt)
