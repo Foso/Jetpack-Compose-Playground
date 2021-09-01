@@ -57,7 +57,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion "1.0.1"
+        kotlinCompilerExtensionVersion "1.0.2"
     }
 }
 
@@ -72,7 +72,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
 
 dependencies {
     implementation project(path: ':mysamples')
-    def compose_version = "1.0.1"
+    def compose_version = "1.0.2"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.compose.ui:ui:$compose_version"

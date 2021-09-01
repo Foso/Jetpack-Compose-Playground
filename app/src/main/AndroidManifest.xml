@@ -18,7 +18,7 @@
         </activity>
         <activity android:name="androidx.activity.ComponentActivity" />
 
-
+        <activity android:name=".mysamples.demo.DemoActivity"/>
 
     </application>
 
