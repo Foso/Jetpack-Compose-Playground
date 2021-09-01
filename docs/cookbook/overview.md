@@ -7,3 +7,4 @@
 * [How to use an Android View in Compose](./how_to_use_an_android_view_in_compose.md)
 * [How to get Android Context](./get_android_context.md)
 * [How to detect dark mode](./detect_darkmode.md)
+* [How to make a Composable invisible?](./how_to_make_composable_invisible.md)
