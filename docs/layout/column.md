@@ -27,7 +27,7 @@ You can use **horizontalAlignment** to set the horizontal alignment of the conte
 === "Alignment.Start"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/start.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/start.png" height=100 width=300  style="border: 1px solid black;" />
     </p>
     ```kotlin
 
@@ -60,7 +60,7 @@ You can use **horizontalAlignment** to set the horizontal alignment of the conte
 === "Alignment.End"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/end.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/end.png" height=100 width=300  style="border: 1px solid black;" />
     </p>
     ```kotlin
 
@@ -78,7 +78,7 @@ You can also use the *align* modifier:
 === "Modifier.align(Alignment.Start)"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/modifierStart.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/modifierStart.png" height=100 width=300  style="border: 1px solid black;" />
     </p>
     ```kotlin
 
@@ -94,7 +94,7 @@ You can also use the *align* modifier:
 === "Modifier.align(Alignment.CenterHorizontally)"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/modifierCenterH.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/modifierCenterH.png" height=100 width=300  style="border: 1px solid black;" />
     </p>
     ```kotlin
 
@@ -109,7 +109,7 @@ You can also use the *align* modifier:
 === "Modifier.align(Alignment.End)"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/modifierEnd.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/modifierEnd.png" height=100 width=300  style="border: 1px solid black;"/>
     </p>
     ```kotlin
 
@@ -128,7 +128,7 @@ You can use **verticalArrangement** to set the vertical alignment of the content
 === "Arrangement.Top"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/top.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/top.png" height=100 width=300  style="border: 1px solid black;"/>
     </p>
     ```kotlin
 
@@ -144,7 +144,7 @@ You can use **verticalArrangement** to set the vertical alignment of the content
 === "Arrangement.Center"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/vcenter.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/vcenter.png" height=100 width=300  style="border: 1px solid black;"/>
     </p>
     ```kotlin
 
@@ -159,7 +159,7 @@ You can use **verticalArrangement** to set the vertical alignment of the content
 === "Arrangement.Bottom"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/vbottom.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/vbottom.png" height=100 width=300  style="border: 1px solid black;"/>
     </p>
     ```kotlin
 
