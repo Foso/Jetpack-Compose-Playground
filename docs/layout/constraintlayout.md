@@ -11,7 +11,7 @@ A ConstraintLayout in Compose is similar to a ConstraintLayout from the classic 
 
 ## Example:
 <p align="left">
-  <img src ="{{ site.images }}/layout/constraintlayout/constraintlayout.png" height=100 width=300 />
+  <img src ="{{ site.images }}/layout/constraintlayout/constraintlayout.png" height=100 width=300 style="border: 1px solid black;" />
 </p>
 
 ```kotlin
