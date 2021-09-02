@@ -44,7 +44,7 @@ You can use **horizontalAlignment** to set the horizontal alignment of the conte
 === "Alignment.CenterHorizontally"
 
     <p align="left">
-      <img src ="{{ site.images }}/layout/column/centerhorizontal.png" height=100 width=300 />
+      <img src ="{{ site.images }}/layout/column/centerhorizontal.png" height=100 width=300 style="border: 1px solid black;" />
     </p>
     ```kotlin
 
