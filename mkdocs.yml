@@ -143,6 +143,7 @@ nav:
               - 'FloatingActionButton': material/floatingactionbutton.md
               - 'LinearProgressIndicator' : material/linearprogressindicator.md
               - 'ModalDrawer': material/modaldrawer.md
+              - 'OutlinedButton': material/button.md
               - 'RadioButton': material/radiobutton.md
               - 'Scaffold': material/scaffold.md
               - 'Slider': material/slider.md

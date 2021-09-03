@@ -1,14 +1,18 @@
 <!---
 This is the API of version 1.0.2
 -->
-# ModalDrawerLayout
+# ModalDrawer
 
 With a ModalDrawer you can create a navigation drawer.
 
-<p align="left">
-  <img src ="{{ site.images }}/material/modaldrawer/modaldrawerClosed.png" height=100 width=300 />
-  <img src ="{{ site.images }}/material/modaldrawer/ModaldrawerOpened.png" height=100 width=300 />
-</p>
+=== "Default"
+
+    <img src ="{{ site.images }}/material/modaldrawer/modaldrawerClosed.png" height=100 width=300 />
+
+
+=== "With Drawer open"
+
+    <img src ="{{ site.images }}/material/modaldrawer/ModaldrawerOpened.png" height=100 width=300 />
 
 ```kotlin
 @Composable

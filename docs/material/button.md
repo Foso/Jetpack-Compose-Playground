@@ -21,6 +21,21 @@ fun ButtonExample() {
 ```
 
 
+# OutlinedButton
+
+<p align="left">
+  <img src ="{{ site.images }}/material/outlinedbutton/outlinedbutton.png"  />
+</p>
+
+```kotlin
+@Composable
+fun OutlinedButtonExample() {
+    OutlinedButton(onClick = { /* Do something! */ }) {
+       Text("I'm an Outlined Button")
+   }
+}
+```
+
 <hr>
 ### See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Button(kotlin.Function0,androidx.compose.ui.Modifier,kotlin.Boolean,androidx.compose.foundation.interaction.MutableInteractionSource,androidx.compose.material.ButtonElevation,androidx.compose.ui.graphics.Shape,androidx.compose.foundation.BorderStroke,androidx.compose.material.ButtonColors,androidx.compose.foundation.layout.PaddingValues,kotlin.Function1))
