@@ -1,8 +1,7 @@
+<!---
+This is the API of version 1.0.2
+-->
 # How to load an image
-
-!!! info
-    This is the API of version 1.0.2-alpha12. Newer versions may have a different one
-
 
 ## Load Image
 You can use **painterResource** to load an image from the resources
