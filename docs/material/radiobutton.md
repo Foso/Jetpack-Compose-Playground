@@ -3,9 +3,13 @@ This is the API of version 1.0.2
 -->
 # RadioButton
 
+Radio buttons allow users to select one option from a set.
+
 <p align="left">
-  <img src ="{{ site.images }}/material/radiobutton/RadioGroupExample.png" height=100 width=300 />
+  <img src ="{{ site.images }}/material/radiobutton/radiobutton.png" height=100 width=300 style="border: 1px solid black;" />
 </p>
+
+## Example
 
 ```kotlin
 @Composable
@@ -20,8 +24,7 @@ fun RadioButtonSample() {
                 .selectable(
                     selected = (text == selectedOption),
                     onClick = {
-                        onOptionSelected
-                        (text)
+                        onOptionSelected(text)
                     }
                 )
                 .padding(horizontal = 16.dp)

@@ -117,21 +117,22 @@ nav:
           - 'Animation':
               - 'Crossfade': animation/crossfade.md
           - 'Foundation':
-              - 'BasicTextField': foundation/basictextfield.md
+              - 'Layout':
+                 - 'Box': layout/box.md
+                 - 'BoxWithConstraints': foundation/layout/boxwithconstraints.md
+                 - 'Column': layout/column.md
+                 - 'ConstraintLayout': layout/constraintlayout.md
+                 - 'Row': layout/row.md
+                 - 'Spacer': foundation/layout/spacer.md
               - 'Canvas': foundation/canvas.md
               - 'Image': foundation/image.md
-              - 'LazyColumn': foundation/lazycolumn.md
-              - 'LazyRow': foundation/lazyrow.md
-              - 'LazyVerticalGrid': foundation/lazyverticalgrid.md
+              - 'Lazy':
+                 - 'LazyColumn': foundation/lazycolumn.md
+                 - 'LazyRow': foundation/lazyrow.md
+                 - 'LazyVerticalGrid': foundation/lazyverticalgrid.md
+              - 'Text':
+                 - 'BasicTextField': foundation/basictextfield.md
               - 'Shape' : foundation/shape.md
-              - 'Text': foundation/text.md
-          - 'Layout':
-              - 'Box': layout/box.md
-              - 'BoxWithConstraints': foundation/layout/boxwithconstraints.md
-              - 'Column': layout/column.md
-              - 'ConstraintLayout': layout/constraintlayout.md
-              - 'Row': layout/row.md
-              - 'Spacer': foundation/layout/spacer.md
           - 'Material':
               - 'AlertDialog': material/alertdialog.md
               - 'BadgeBox': material/badgedbox.md
@@ -150,6 +151,7 @@ nav:
               - 'Snackbar': material/snackbar.md
               - 'Switch': material/switch.md
               - 'Surface': material/surface.md
+              - 'Text': foundation/text.md
               - 'TextField': material/textfield.md
               - 'TopAppBar': material/topappbar.md
           - 'Platform':
