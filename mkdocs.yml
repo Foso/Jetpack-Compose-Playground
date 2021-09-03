@@ -112,6 +112,8 @@ nav:
            - 'How to create a custom shape': cookbook/how_to_create_custom_shape.md
            - 'How to make a Composable invisible?': cookbook/how_to_make_composable_invisible.md
       - 'Compose UI':
+          - 'Activity':
+              - 'BackHandler': activity/backhandler.md
           - 'Animation':
               - 'Crossfade': animation/crossfade.md
           - 'Foundation':
