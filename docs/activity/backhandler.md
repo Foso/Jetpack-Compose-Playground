@@ -1,3 +1,7 @@
+<!---
+This is the API of version 1.0.2
+-->
+
 # BackHandler
 
 You can use BackHandler to detect the presses on the device back button inside of Compose

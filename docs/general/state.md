@@ -1,6 +1,7 @@
+<!---
+This is the API of version 1.0.2
+-->
 # State
-!!! info
-    This is the API of version 1.0.2
 
 ## Define a state
 ```kotlin
