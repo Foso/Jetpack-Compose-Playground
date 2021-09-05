@@ -1,17 +1,17 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.button
 
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.*
 import androidx.compose.material.OutlinedButton
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 @Composable
 fun ButtonExample() {
-    Button(onClick = { /* Do something! */ }, colors = ButtonDefaults.textButtonColors(
-        backgroundColor = Color.Red
-    )) {
+    Button(
+        onClick = { /* Do something! */ }, colors = ButtonDefaults.textButtonColors(
+            backgroundColor = Color.Red
+        )
+    ) {
         Text("Button")
     }
 }
@@ -20,5 +20,12 @@ fun ButtonExample() {
 fun OutlinedButtonExample() {
     OutlinedButton(onClick = { /* Do something! */ }) {
         Text("I'm an Outlined Button")
+    }
+}
+
+@Composable
+fun TextButtonExample() {
+    TextButton(onClick = { /* Do something! */ }) {
+        Text("I'm a Text Button")
     }
 }

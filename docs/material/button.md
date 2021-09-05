@@ -36,6 +36,21 @@ fun OutlinedButtonExample() {
 }
 ```
 
+# TextButton
+
+<p align="left">
+  <img src ="{{ site.images }}/material/textbutton/textbutton.png"  />
+</p>
+
+```kotlin
+@Composable
+fun TextButtonExample() {
+    TextButton(onClick = { /* Do something! */ }) {
+        Text("I'm a Text Button")
+    }
+}
+```
+
 <hr>
 ### See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Button(kotlin.Function0,androidx.compose.ui.Modifier,kotlin.Boolean,androidx.compose.foundation.interaction.MutableInteractionSource,androidx.compose.material.ButtonElevation,androidx.compose.ui.graphics.Shape,androidx.compose.foundation.BorderStroke,androidx.compose.material.ButtonColors,androidx.compose.foundation.layout.PaddingValues,kotlin.Function1))
