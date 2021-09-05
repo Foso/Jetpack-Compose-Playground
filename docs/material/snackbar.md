@@ -14,16 +14,16 @@ This is the API of version 1.0.2
 @Composable
 fun SnackbarDemo() {
     Column {
-        val snackbarVisibleState = remember { mutableStateOf(false) }
+        val (snackbarVisibleState, setSnackBarState) = remember { mutableStateOf(false) }
 
-        Button(onClick = { snackbarVisibleState.value = !snackbarVisibleState.value }) {
-            if (snackbarVisibleState.value) {
+        Button(onClick = { setSnackBarState(!snackbarVisibleState) }) {
+            if (snackbarVisibleState) {
                 Text("Hide Snackbar")
             } else {
                 Text("Show Snackbar")
             }
         }
-        if (snackbarVisibleState.value) {
+        if (snackbarVisibleState) {
             Snackbar(
 
                 action = {
