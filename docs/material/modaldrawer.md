@@ -54,4 +54,4 @@ fun ModalDrawerSample() {
 
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#modaldrawerlayout)
-* [Full Example Code]({{ site.samplefolder }}/material/modaldrawer/ModalDrawerLayoutSample.kt)
+* [Full Example Code]({{ site.samplefolder }}/material/modaldrawer/ModalDrawerSample.kt)
