@@ -153,7 +153,7 @@ nav:
               - 'Switch': material/switch.md
               - 'Surface': material/surface.md
               - 'Text': foundation/text.md
-              - 'TextButton': material/textbutton.md
+              - 'TextButton': material/button.md
               - 'TextField': material/textfield.md
               - 'TopAppBar': material/topappbar.md
           - 'Platform':
