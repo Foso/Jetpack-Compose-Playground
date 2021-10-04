@@ -1,5 +1,5 @@
 <!---
-This is the API of version 1.0.2
+This is the API of version 1.0.3
 -->
 # Shape
 A Shape can be used to draw a Composable in specific shape.
