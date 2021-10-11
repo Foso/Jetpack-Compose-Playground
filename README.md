@@ -1,4 +1,4 @@
-<h1 align="center">Jetpack/JetBrains Compose Playground</h1>
+<h1 align="center">Jetpack Compose Playground</h1>
 
 ## Introduction 🙋‍♂️
 This is an Jetpack Compose example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the github page https://foso.github.io/compose.
