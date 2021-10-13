@@ -1,5 +1,5 @@
 !!! info
-    This is the API of version 1.0.3. Newer versions may have a different one
+    This is the API of version 1.0.4. Newer versions may have a different one
     
 You can use LocalContext.current to receive the context of your Android App inside a Compose Function
 
