@@ -13,7 +13,7 @@ You can create custom shapes. One way to do it, is to use **GenericShape**.  Let
 
 
 ```kotlin
-private val TriangleShape = GenericShape { size ->
+private val TriangleShape = GenericShape { size, _ ->
     // 1)
     moveTo(size.width / 2f, 0f)
 
