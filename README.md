@@ -84,6 +84,7 @@ You need at least [version >= Android Studio Arctic Fox](https://developer.andro
 * <kbd>app</kbd> - Base android project directory
 * <kbd>mysamples</kbd> - a android library module that is using my compose samples for the github page
 * <kbd>desktop</kbd> - an example compose desktop app
+* <kbd>web</kbd> - an example compose web app
 
 
 # Resources
