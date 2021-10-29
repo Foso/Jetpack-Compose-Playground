@@ -180,4 +180,3 @@ SOFTWARE.
 Projects that helped me understand how to setup the project:
 * [Mishkun/try-compose
 ](https://github.com/Mishkun/try-compose)
-
