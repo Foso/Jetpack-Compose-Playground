@@ -64,7 +64,7 @@ fun LazyVerticalGridDemo(){
 
 Apart from ``GridCells.Adaptive`` there are other types of cells that provide the number of columns per row. As follows
 ```
-cels = GridCells.Fixed(2)
+cells = GridCells.Fixed(2)
 ```
 The above code will display 2 columns in 1 row.
 
