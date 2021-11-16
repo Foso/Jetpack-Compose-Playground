@@ -1,5 +1,5 @@
 <!---
-This is the API of version 1.0.4
+This is the API of version 1.0.5
 -->
 # Box
 
