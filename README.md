@@ -175,7 +175,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-
 ## Acknowledgments
 Projects that helped me understand how to setup the project:
 * [Mishkun/try-compose
