@@ -20,54 +20,60 @@ fun RowExample() {
 }
 ```
 
-## How to align row childrens with equal width
-```kotlin
-@Composable
-fun RowExample() {
-    Row(horizontalArrangement = Arrangement.SpaceEvenly) {
-        Text("Hello World!")
-        Text("Hello World!2")
+
+## Content Arrangement
+### Horizontal
+
+You can use **horizontalArrangement** to set the horizontal arrangement of the content in the Row
+
+=== "Arrangement.SpaceEvenly"
+
+    <p align="left">
+      <img src ="{{ site.images }}/layout/row/row_arrangement_space_evenly.png" height=100 width=300  style="border: 1px solid black;" />
+    </p>
+    ```kotlin
+
+    @Composable
+    fun RowExample() {
+        Row(horizontalArrangement = Arrangement.SpaceEvenly) {
+            Text("Hello World!")
+            Text("Hello World!2")
+        }
     }
-}
-```
+    ```
 
-Row takes an **horizontalArrangement** parameter. When you set it to **Arrangement.SpaceEvenly**, the children of Row will equal a width.
+=== "Arrangement.Center"
 
-<p align="left">
-  <img src ="{{ site.images }}/layout/row/row_arrangement_space_evenly.png" />
-</p>
+    <p align="left">
+      <img src ="{{ site.images }}/layout/row/arrange_center.png" height=100 width=300  style="border: 1px solid black;" />
+    </p>
+    ```kotlin
 
-## How to align row childrens in center
-```kotlin
-@Composable
-fun RowExample() {
-    Row(horizontalArrangement = Arrangement.Center) {
-        Text("Hello World!")
-        Text("Hello World!2")
+    @Composable
+    fun RowExample() {
+        Row(horizontalArrangement = Arrangement.End) {
+            Text("Hello World!")
+            Text("Hello World!2")
+        }
     }
-}
-```
-Row takes an Arrangement parameter. When you set it to **Arrangement.Center**, the children of Row will be aligned in the center of Row.
+    ```
 
-<p align="left">
-  <img src ="{{ site.images }}/layout/row/arrange_center.png" />
-</p>
 
-## How to align row childrens at end
-```kotlin
-@Composable
-fun RowExample() {
-    Row(horizontalArrangement = Arrangement.End) {
-        Text("Hello World!")
-        Text("Hello World!2")
+=== "Arrangement.End"
+
+    <p align="left">
+      <img src ="{{ site.images }}/layout/row/arrangement_end.png" height=100 width=300  style="border: 1px solid black;" />
+    </p>
+    ```kotlin
+
+    @Composable
+    fun RowExample() {
+        Row(horizontalArrangement = Arrangement.End) {
+            Text("Hello World!")
+            Text("Hello World!2")
+        }
     }
-}
-```
-Row takes an Arrangement parameter. When you set it to **Arrangement.End**, the children of Row will be aligned at the end of Row.
-
-<p align="left">
-  <img src ="{{ site.images }}/layout/row/arrangement_end.png" />
-</p>
+    ```
 
 
 ## See also:
