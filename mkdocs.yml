@@ -182,7 +182,6 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.smartsymbols
   - pymdownx.tabbed
-      alternate_style: true 
   - pymdownx.superfences
   - pymdownx.emoji
   - tables
