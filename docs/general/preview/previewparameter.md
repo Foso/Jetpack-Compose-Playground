@@ -39,12 +39,10 @@ To create a PreviewParameterProvider you need to implement the interface Preview
 The interface has two properties.
 
 **values** is a sequence of your sample data.
-**count** is the number of elements of **values**
 
 ```kotlin
 class SampleUserProvider: PreviewParameterProvider<User> {
     override val values = sequenceOf(User("Jens",31),User("Jim",44))
-    override val count: Int = values.count()
 }
 ```
 
