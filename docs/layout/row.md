@@ -51,7 +51,7 @@ You can use **horizontalArrangement** to set the horizontal arrangement of the c
 
     @Composable
     fun RowExample() {
-        Row(horizontalArrangement = Arrangement.End) {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text("Hello World!")
             Text("Hello World!2")
         }
