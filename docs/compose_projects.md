@@ -49,4 +49,4 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 
 | Name                                    | Description  |
 | ----------------------------------------- | ------------------------------------ |
-| [HtmlToComposeWebConverter](https://github.com/Foso/HtmlToComposeWebConverter) 
+| [HtmlToComposeWebConverter](https://github.com/Foso/HtmlToComposeWebConverter) | Intellij Idea Plugin that can convert HTML to Compose for Web code. https://plugins.jetbrains.com/plugin/18261-html-to-compose-web-converter
