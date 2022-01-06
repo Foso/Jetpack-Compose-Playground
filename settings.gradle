@@ -6,4 +6,4 @@ dependencyResolutionManagement {
     }
 }
 include ':app'
-include ':mysamples'
+

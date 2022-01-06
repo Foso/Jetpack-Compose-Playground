@@ -4,7 +4,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.R
+import de.jensklingenberg.jetpackcomposeplayground.R
 
 
 @Composable

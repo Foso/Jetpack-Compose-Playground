@@ -4,7 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.R
+import de.jensklingenberg.jetpackcomposeplayground.R
 
 
 @Composable
