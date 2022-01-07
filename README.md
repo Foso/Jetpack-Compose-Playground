@@ -81,8 +81,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 ### Project Structure
 You need at least [version >= Android Studio Arctic Fox](https://developer.android.com/studio/preview) to build this project https://developer.android.com/studio/preview/
 
-* <kbd>app</kbd> - Base android project directory
-* <kbd>mysamples</kbd> - a android library module that is using my compose samples for the github page
+* <kbd>app</kbd> - Android project directory
 * <kbd>desktop</kbd> - an example compose desktop app
 * <kbd>web</kbd> - an example compose web app
 
