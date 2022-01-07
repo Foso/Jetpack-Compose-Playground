@@ -20,6 +20,7 @@
         <activity android:name="androidx.activity.ComponentActivity" />
 
         <activity android:name=".mysamples.demo.DemoActivity"/>
+        <activity android:name=".UiTestingDemoActivity" />
 
     </application>
 

@@ -7,7 +7,7 @@ docs_dir: 'docs'
 edit_uri: 'tree/master/docs/'
 
 # Copyright
-copyright: Copyright &copy; MIT License 2019 - 2021 Jens Klingenberg
+copyright: Copyright &copy; MIT License 2019 - 2022 Jens Klingenberg
 
 theme:
   name: 'material'
@@ -94,6 +94,7 @@ nav:
           - 'Roadmap': general/roadmap.md
           - 'Project Setup': general/getting_started.md
           - 'State': general/state.md
+          - 'UI Testing': general/testing.md
       - 'Desktop':
            - 'Overview': desktop/overview.md
            - 'General':
