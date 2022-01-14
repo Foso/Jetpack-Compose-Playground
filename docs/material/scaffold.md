@@ -9,18 +9,18 @@ A Scaffold is a layout which implements the basic material design layout structu
 @Composable
 fun ScaffoldDemo() {
     val materialBlue700= Color(0xFF1976D2)
-        val scaffoldState = rememberScaffoldState(rememberDrawerState(DrawerValue.Open))
-        Scaffold(
-                scaffoldState = scaffoldState,
-                topBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
-                floatingActionButtonPosition = FabPosition.End,
-                floatingActionButton = { FloatingActionButton(onClick = {}){
-                    Text("X")
-                } },
-                drawerContent = { Text(text = "drawerContent") },
-                content = { Text("BodyContent") },
-                bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
-        )
+    val scaffoldState = rememberScaffoldState(rememberDrawerState(DrawerValue.Open))
+    Scaffold(
+            scaffoldState = scaffoldState,
+            topBar = { TopAppBar(title = {Text("TopAppBar")},backgroundColor = materialBlue700)  },
+            floatingActionButtonPosition = FabPosition.End,
+            floatingActionButton = { FloatingActionButton(onClick = {}){
+                Text("X")
+            } },
+            drawerContent = { Text(text = "drawerContent") },
+            content = { Text("BodyContent") },
+            bottomBar = { BottomAppBar(backgroundColor = materialBlue700) { Text("BottomAppBar") } }
+    )
 }
 ```
 
