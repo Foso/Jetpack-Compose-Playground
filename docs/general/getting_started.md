@@ -10,15 +10,12 @@ Add this inside in the **android{}** block your build.gradle
 android{
 //YOUR OTHER CODE
 
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
     buildFeatures {
-        compose true
+        compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion "1.0.5"
-        kotlinCompilerVersion '1.5.31'
+        kotlinCompilerExtensionVersion = "1.0.5"
+        kotlinCompilerVersion = "1.5.31"
     }
 
 }
