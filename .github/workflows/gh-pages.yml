@@ -1,5 +1,6 @@
 name: build and deploy mkdocs to github pages
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
