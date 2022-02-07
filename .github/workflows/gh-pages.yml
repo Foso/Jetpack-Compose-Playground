@@ -1,5 +1,7 @@
 name: build and deploy mkdocs to github pages
 on:
+  # schedule:
+  # - cron:  '30 5,17 * * *'
   workflow_dispatch:
   push:
     branches:
