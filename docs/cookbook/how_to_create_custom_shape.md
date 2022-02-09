@@ -1,7 +1,7 @@
 ## How to draw a custom shape?
 
 !!! info
-    This is the API of version 1.0.5-alpha02. Newer versions may have a different one
+    This is the API of version 1.1.0. Newer versions may have a different one
 
 <p align="center">
   <img src ="../../images/foundation/shape/triangleshape.png"  />

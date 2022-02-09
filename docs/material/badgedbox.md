@@ -17,7 +17,7 @@ fun BadgeBoxDemo() {
     BottomNavigation {
         BottomNavigationItem(
             icon = {
-                BadgeBox(badgeContent = { Text("8") }) {
+                BadgedBox(badge = { Badge { Text("8") } }) {
                     Icon(
                         Icons.Filled.Favorite,
                         contentDescription = "Favorite"
