@@ -50,7 +50,7 @@ extra:
       link: 'https://github.com/foso'
     - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/jklingenberg_'
-    - icon: fontawesome/solid/external-link-alt
+    - icon: fontawesome/solid/arrow-up-right-from-square
       link: 'https://jensklingenberg.de/'
 nav:
   - 'Jetpack/JetBrains Compose':
