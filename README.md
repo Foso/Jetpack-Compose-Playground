@@ -131,6 +131,7 @@ You need at least [version >= Android Studio Arctic Fox](https://developer.andro
 | [AndroidX Git Compose](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)  		    | |
 | [Release Notes](https://developer.android.com/jetpack/androidx/releases/ui)  		    | |
 | [Compse UI Docu](https://developer.android.com/reference/kotlin/androidx/ui/packages)  		    | |
+| [Video - Jetpack compose - MVVM State management in a simple way](https://youtu.be/KTvP27FpXd0)  		    | |
 | [Jetpack Compose Twitter Bot](https://twitter.com/ComposeBot)  		    | |
 
 Feel free to contribute!
