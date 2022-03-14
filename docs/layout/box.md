@@ -18,7 +18,7 @@ fun BoxExample() {
         Box(
             Modifier.align(Alignment.TopCenter).fillMaxHeight().width(
                 50.dp
-            ).background( Color.Blue)
+            ).background(Color.Blue)
         )
         Text("This text is drawn last", modifier = Modifier.align(Alignment.Center))
         FloatingActionButton(
