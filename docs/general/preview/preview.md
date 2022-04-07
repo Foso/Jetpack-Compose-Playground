@@ -45,4 +45,4 @@ Android Studio.
 
 
 ## See also:
-* [Official Docs](https://developer.android.com/reference/kotlin/androidx/ui/tooling/preview/Preview)
+* [Official Docs](https://developer.android.com/jetpack/compose/tooling#preview-features)
