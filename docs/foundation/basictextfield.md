@@ -1,5 +1,5 @@
 <!---
-This is the API of version 1.1.0
+This is the API of version 1.1.1
 -->
 
 # BasicTextField
