@@ -145,6 +145,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
+## 
+
+<p>
+  <div style="vertical-align: baseline;">This project is proudly supported by JetBrains OSS License</div>
+  <a href="https://jb.gg/OpenSourceSupport"><img src="https://github.com/cherryleafroad/kmagick/blob/main/readme_files/jb_beam.png" height="150px" width="150px"/></a>
+</p>
 
 License
 -------
