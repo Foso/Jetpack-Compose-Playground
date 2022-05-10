@@ -27,6 +27,7 @@ An other way is to use @PreviewParameter on the parameter. With PreviewParameter
 which will provide values for the needed User
 
 ```kotlin
+@Preview
 @Composable
 fun UserInfo(@PreviewParameter(SampleUserProvider::class) user:User) {
     Text(user.name+ " "+user.age)
