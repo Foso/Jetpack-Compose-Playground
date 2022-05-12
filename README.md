@@ -75,7 +75,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.6.10-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.6.21-green.svg)]()
 
 
 ### Project Structure

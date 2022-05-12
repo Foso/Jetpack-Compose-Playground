@@ -23,13 +23,12 @@ The following example displays the items in a grid, using ``GridCells.Adaptive``
 </p>
 
 ```kotlin
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LazyVerticalGridDemo(){
     val list = (1..10).map { it.toString() }
 
     LazyVerticalGrid(
-        cells = GridCells.Adaptive(128.dp),
+        columns = GridCells.Adaptive(128.dp),
 
         // content padding
         contentPadding = PaddingValues(
