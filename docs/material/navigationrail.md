@@ -64,4 +64,4 @@ fun NavigationRailSample() {
 ## See also:
 * [Material.io](https://material.io/components/navigation-rail)
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#NavigationRail)
-* [Full Example Code]({{ site.samplefolder }}/material/navigationrail/CardDemo.kt)
+* [Full Example Code]({{ site.samplefolder }}/material/navigationrail/NavigationRailSample.kt)
