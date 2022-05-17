@@ -8,9 +8,9 @@ This is an Jetpack Compose example project. I'm collecting a bunch of sample cod
 ![Android Weekly](https://androidweekly.net/issues/issue-431/badge)
 [![jCenter](https://img.shields.io/badge/Compose-1.1.1-green.svg
 )](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/Foso/Jetpack-Compose-Playground.svg)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
-
 
 ### Show some :heart: and star the repo to support the project
 
@@ -19,7 +19,6 @@ This is an Jetpack Compose example project. I'm collecting a bunch of sample cod
 
 ## Composable of the week!! 🎉
 The [BoxWithConstraints](https://foso.github.io/Jetpack-Compose-Playground/foundation/layout/boxwithconstraints/)
-
 
 ## New to Compose?
 Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld/)
@@ -51,10 +50,11 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [Card](https://foso.github.io/Jetpack-Compose-Playground/material/card)
 * [Checkbox](https://foso.github.io/Jetpack-Compose-Playground/material/checkbox)
 * [ModalDrawerLayout](https://foso.github.io/Jetpack-Compose-Playground/material/modaldrawer)
-* [RadioGroup](https://foso.github.io/Jetpack-Compose-Playground/material/radiogroup)
+* [RadioButton](https://foso.github.io/Jetpack-Compose-Playground/material/radiobutton)
 * [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold)
 * [Switch](https://foso.github.io/Jetpack-Compose-Playground/material/switch)
 * [TextField](https://foso.github.io/Jetpack-Compose-Playground/material/textfield)
+
 
 ### Cookbook
 
@@ -79,7 +79,6 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 
 ### Project Structure
-You need at least [version >= Android Studio Arctic Fox](https://developer.android.com/studio/preview) to build this project https://developer.android.com/studio/preview/
 
 * <kbd>app</kbd> - Android project directory
 * <kbd>desktop</kbd> - an example compose desktop app
@@ -130,6 +129,7 @@ You need at least [version >= Android Studio Arctic Fox](https://developer.andro
 | [AndroidX Git Compose](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androidx-master-dev/compose/)  		    | |
 | [Release Notes](https://developer.android.com/jetpack/androidx/releases/ui)  		    | |
 | [Compse UI Docu](https://developer.android.com/reference/kotlin/androidx/ui/packages)  		    | |
+| [Video - Jetpack compose - MVVM State management in a simple way](https://youtu.be/KTvP27FpXd0)  		    | |
 | [Jetpack Compose Twitter Bot](https://twitter.com/ComposeBot)  		    | |
 
 Feel free to contribute!
@@ -146,6 +146,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 ### Find this project useful ? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
+## 
+
+<p>
+  <div style="vertical-align: baseline;">This project is proudly supported by JetBrains OSS License</div>
+  <a href="https://jb.gg/OpenSourceSupport"><img src="https://github.com/cherryleafroad/kmagick/blob/main/readme_files/jb_beam.png" height="150px" width="150px"/></a>
+</p>
 
 License
 -------

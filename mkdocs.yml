@@ -50,10 +50,10 @@ extra:
       link: 'https://github.com/foso'
     - icon: fontawesome/brands/twitter
       link: 'https://twitter.com/jklingenberg_'
-    - icon: fontawesome/solid/external-link-alt
+    - icon: fontawesome/solid/arrow-up-right-from-square
       link: 'https://jensklingenberg.de/'
 nav:
-  - 'Jetpack/JetBrains Compose':
+  - 'Jetpack Compose':
       - 'Overview': index.md
       - 'Components':
           - 'Cards':
@@ -182,10 +182,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.magiclink
-  - pymdownx.smartsymbols
-  - pymdownx.tabbed
-  - pymdownx.superfences
   - pymdownx.emoji
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - tables
   - admonition
 

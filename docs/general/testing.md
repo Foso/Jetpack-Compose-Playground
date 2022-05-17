@@ -81,7 +81,7 @@ The TestRule offers a lot of different methods. You can find a cheatSheet [here]
 
 ### TestTags
 The test above is only half correct, because it looks for the text inside the button and not the button itself.
-Composables have no resource ids so we cant just use **onView(withId(R.id.my_view))** to find a Composable in a test, also we can't find Compables of a specific "type" 
+Composables have no resource ids so we cant just use **onView(withId(R.id.my_view))** to find a Composable in a test, also we can't find Composables of a specific "type" 
 like a button, because everything is just a Composable function. 
 
 When you can't find a Composable by a text and you want to make it detectable in your test. Jetpack Compose offers the concept of a **TestTag**.

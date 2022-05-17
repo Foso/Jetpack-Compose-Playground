@@ -48,3 +48,5 @@ fun LazyRowDemo() {
 ## See also:
 * [Official Docs]({{ site.composedoc }}/foundation/lazy/package-summary#lazyrow)
 * [Full Example Code]({{ site.samplefolder }}/foundation/LazyRowDemo.kt)
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1ANt65eoNhQ" title="Lazy layouts in Compose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

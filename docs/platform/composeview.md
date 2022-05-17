@@ -1,8 +1,5 @@
 # ComposeView
 
-!!! info
-    This is the API of version 1.1.1. Newer versions may have a different one
-
 You can use ComposeView to use Compose inside a ViewGroup.
 This example will show you, how you can use ComposeView inside a FrameLayout. It should also work in other layouts like LinearLayout
 

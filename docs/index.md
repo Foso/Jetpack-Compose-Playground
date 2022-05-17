@@ -13,7 +13,7 @@ This is a community-driven collection of Jetpack/JetBrains Compose documentation
 [![jCenter](https://img.shields.io/badge/Compose-1.1.1-green.svg
 )](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 ![Android Weekly](https://androidweekly.net/issues/issue-431/badge)
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-range.svg?style=flat-square)](#contributors)
+[![Contributors](https://img.shields.io/github/contributors/Foso/Jetpack-Compose-Playground.svg)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 
@@ -22,7 +22,6 @@ This is a community-driven collection of Jetpack/JetBrains Compose documentation
 ## What is Jetpack Compose?
 "Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. "
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ef1xKWjA9E8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kLA1QwDjioc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
