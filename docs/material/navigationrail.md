@@ -1,20 +1,18 @@
-package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.navigationrail
+<!---
+This is the API of version 1.1.1
+-->
+# Navigation Rail 
 
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Icon
-import androidx.compose.material.NavigationRail
-import androidx.compose.material.NavigationRailItem
-import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.unit.dp
+"Navigation rails provide ergonomic movement between primary destinations in apps." 
 
+# Example
+<div>
+<video height="500" align="center" controls>
+  <source src="{{ site.images }}/material/navigationrail/navigationRail.webm" type="video/webm" align="center">
+</video>
+</div>
+
+``` kotlin
 enum class Page(val title:String, val content: String){
     HOME("home","Show only icon"),
     SEARCH("Search","Show icon with label"),
@@ -61,3 +59,9 @@ fun NavigationRailSample() {
         Text(pages[selectedItem].content, Modifier.padding(start = 8.dp))
     }
 }
+```
+
+## See also:
+* [Material.io](https://material.io/components/navigation-rail)
+* [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#NavigationRail)
+* [Full Example Code]({{ site.samplefolder }}/material/navigationrail/CardDemo.kt)

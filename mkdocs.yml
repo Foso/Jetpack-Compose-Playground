@@ -147,6 +147,7 @@ nav:
               - 'LinearProgressIndicator' : material/linearprogressindicator.md
               - 'ModalBottomSheetLayout': material/modalbottomsheetlayout.md
               - 'ModalDrawer': material/modaldrawer.md
+              - 'NavigationRail': material/navigationrail.md
               - 'OutlinedButton': material/button.md
               - 'RadioButton': material/radiobutton.md
               - 'Scaffold': material/scaffold.md
