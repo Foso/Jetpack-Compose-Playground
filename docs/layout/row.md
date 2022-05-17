@@ -31,6 +31,7 @@ You can use **horizontalArrangement** to set the horizontal arrangement of the c
     <p align="left">
       <img src ="{{ site.images }}/layout/row/row_arrangement_space_evenly.png" height=100 width=300  style="border: 1px solid black;" />
     </p>
+    
     ```kotlin
 
     @Composable
@@ -47,6 +48,7 @@ You can use **horizontalArrangement** to set the horizontal arrangement of the c
     <p align="left">
       <img src ="{{ site.images }}/layout/row/arrange_center.png" height=100 width=300  style="border: 1px solid black;" />
     </p>
+    
     ```kotlin
 
     @Composable
@@ -64,6 +66,7 @@ You can use **horizontalArrangement** to set the horizontal arrangement of the c
     <p align="left">
       <img src ="{{ site.images }}/layout/row/arrangement_end.png" height=100 width=300  style="border: 1px solid black;" />
     </p>
+    
     ```kotlin
 
     @Composable
