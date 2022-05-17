@@ -336,6 +336,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/navigationrail/</loc>
+         <lastmod>2022-05-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/radiobutton/</loc>
          <lastmod>2022-05-17</lastmod>
          <changefreq>daily</changefreq>
