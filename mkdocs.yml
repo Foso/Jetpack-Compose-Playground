@@ -186,8 +186,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.superfences
   - pymdownx.emoji
-  - pymdownx.tabbed:
-      alternate_style: true 
+  - pymdownx.tabbed
   - tables
   - admonition
 
