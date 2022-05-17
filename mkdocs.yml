@@ -53,7 +53,7 @@ extra:
     - icon: fontawesome/solid/arrow-up-right-from-square
       link: 'https://jensklingenberg.de/'
 nav:
-  - 'Jetpack/JetBrains Compose':
+  - 'Jetpack Compose':
       - 'Overview': index.md
       - 'Components':
           - 'Cards':
