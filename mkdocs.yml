@@ -184,6 +184,7 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.smartsymbols
   - pymdownx.emoji
+  - pymdownx.tabbed
   - tables
   - admonition
 
