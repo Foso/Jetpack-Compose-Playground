@@ -21,6 +21,5 @@ fun DividerExample(){
 ```
 
 ## See also:
-* [Material.io](https://material.io/components/divider)
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#divider)
 * [Full Example Code]({{ site.samplefolder }}/material/divider/DividerDemo.kt)
