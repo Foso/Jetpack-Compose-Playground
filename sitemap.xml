@@ -311,6 +311,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/divider/</loc>
+         <lastmod>2022-05-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/Foso/Jetpack-Compose-Playground/material/dropdownmenu/</loc>
          <lastmod>2022-05-18</lastmod>
          <changefreq>daily</changefreq>
