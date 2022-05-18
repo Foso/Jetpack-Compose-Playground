@@ -140,6 +140,7 @@ nav:
               - 'BadgeBox': material/badgedbox.md
               - 'Button': material/button.md
               - 'Card': material/card.md
+              - 'Divider': material/divider.md
               - 'CircularProgressIndicator': material/circularprogressindicator.md
               - 'DropdownMenu': material/dropdownmenu.md
               - 'Checkbox': material/checkbox.md
