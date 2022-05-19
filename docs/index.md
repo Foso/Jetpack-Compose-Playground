@@ -59,6 +59,8 @@ Check [Project Setup](general/getting_started.md) or [Hello World Compose](gener
 * [Button](material/button.md)
 * [Card](material/card.md)
 * [Checkbox](material/checkbox.md)
+* [CircularProgressIndicator](material/circularprogressindicator.md)
+* [DropdownMenu](material/dropdownmenu.md)
 * [FloatingActionButton](material/floatingactionbutton.md)
 * [ModalDrawerLayout](material/modaldrawer.md)
 * [RadioButton](material/radiobutton.md)
