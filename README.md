@@ -49,6 +49,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [Button](https://foso.github.io/Jetpack-Compose-Playground/material/button)
 * [Card](https://foso.github.io/Jetpack-Compose-Playground/material/card)
 * [Checkbox](https://foso.github.io/Jetpack-Compose-Playground/material/checkbox)
+* [Divider](https://foso.github.io/Jetpack-Compose-Playground/material/divider)
 * [ModalDrawerLayout](https://foso.github.io/Jetpack-Compose-Playground/material/modaldrawer)
 * [RadioButton](https://foso.github.io/Jetpack-Compose-Playground/material/radiobutton)
 * [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold)
