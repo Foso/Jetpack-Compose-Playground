@@ -26,7 +26,7 @@ fun EmbeddedAndroidViewDemo() {
         // widget.ImageView
         AndroidView(factory = { ctx ->
           
-            Initialize a View or View hierarchy here
+          //  Initialize a View or View hierarchy here
         
             ImageView(ctx).apply {
                 val drawable = ContextCompat.getDrawable(ctx, R.drawable.composelogo)
