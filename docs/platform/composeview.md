@@ -14,11 +14,15 @@ class ComposeFrameLayout @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     init {
-        ComposeView(context).setContent {
+        addView(
+            ComposeView(context).apply {
+                setContent {
                     Button(onClick = {}) {
                         Text("ComposeButton")
                     }
-        }
+                }
+            }
+        )
     }
 }
 ```
