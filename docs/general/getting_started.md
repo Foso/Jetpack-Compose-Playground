@@ -14,7 +14,7 @@ android{
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.1.1"
+        kotlinCompilerExtensionVersion = "1.2.0"
     }
 
 }
@@ -25,7 +25,7 @@ Below are some Compose dependencies that are online available, can find the othe
 ```kotlin
 
 dependencies {
-    val compose_version = "1.1.1"
+    val compose_version = "1.2.0"
 
     implementation("androidx.compose.animation:animation-core:$compose_version")
     implementation("androidx.compose.animation:animation:$compose_version")

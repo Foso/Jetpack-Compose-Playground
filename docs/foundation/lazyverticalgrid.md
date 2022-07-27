@@ -1,13 +1,8 @@
 <!---
-This is the API of version 1.1.1
+This is the API of version 1.2.0
 -->
 
 # LazyVerticalGrid
-
-
-!!! warning
-    Caution:  The API is still ***experimental***. Experimental APIs can change in the future or may be removed entirely.
-
 
 Jetpack Compose provides an API for displaying grid or grid elements.
 
@@ -23,13 +18,12 @@ The following example displays the items in a grid, using ``GridCells.Adaptive``
 </p>
 
 ```kotlin
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LazyVerticalGridDemo(){
     val list = (1..10).map { it.toString() }
 
     LazyVerticalGrid(
-        cells = GridCells.Adaptive(128.dp),
+        columns = GridCells.Adaptive(128.dp),
 
         // content padding
         contentPadding = PaddingValues(
@@ -64,7 +58,7 @@ fun LazyVerticalGridDemo(){
 
 Apart from ``GridCells.Adaptive`` there are other types of cells that provide the number of columns per row. As follows
 ```
-cells = GridCells.Fixed(2)
+colums = GridCells.Fixed(2)
 ```
 The above code will display 2 columns in 1 row.
 

@@ -1,11 +1,10 @@
 package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.GridCells
-import androidx.compose.foundation.lazy.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -16,13 +15,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LazyVerticalGridDemo(){
     val list = (1..10).map { it.toString() }
 
     LazyVerticalGrid(
-        cells = GridCells.Adaptive(128.dp),
+        columns = GridCells.Adaptive(128.dp),
 
         // content padding
         contentPadding = PaddingValues(

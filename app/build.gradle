@@ -25,11 +25,11 @@ android {
         exclude("win32-x86-64/attach_hotspot_windows.dll")
         pickFirst("META-INF/licenses/ASM")
     }
-    compileSdkVersion 31
+    compileSdkVersion 32
     defaultConfig {
         applicationId "de.jensklingenberg.jetpackcomposeplayground"
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -83,7 +83,7 @@ subprojects {
 }
 
 dependencies {
-    def compose_version = "1.1.1"
+    def compose_version = "1.2.0"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.appcompat:appcompat:1.4.2"
