@@ -120,3 +120,6 @@ fun TextWithUnderlineStrikeThroughAndBold(){
 
 ## See also:
 * [Full Example Code]({{ site.samplefolder }}/foundation/TextExample.kt)
+* [Write it down: Using text in Jetpack Compose](https://www.droidcon.com/2022/08/01/write-it-down-using-text-in-jetpack-compose/))
+
+
