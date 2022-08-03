@@ -59,3 +59,4 @@ With the value property you can get/set the value of the counterstate. In the on
 ## See also:
 * [Codelab: Using state in Jetpack Compose](https://developer.android.com/codelabs/jetpack-compose-state#0)
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PMMY23F0CFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+* [Invest in Real State: A workshop for State in Compose](https://www.droidcon.com/2022/08/02/invest-in-real-state-a-workshop-for-state-in-compose/)
