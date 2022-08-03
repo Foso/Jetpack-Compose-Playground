@@ -64,5 +64,3 @@ https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androi
 * [A Hitchhiker's Guide to Compose Compiler: Composers, Compiler Plugins, and Snapshots](https://www.droidcon.com/2022/06/28/ha-hitchhikers-guide-to-compose-compiler-composers-compiler-plugins-and-snapshots/)
 * [Explained: Compose Compiler and Runtime](https://www.droidcon.com/2022/08/02/explained-compose-compiler-and-runtime/)
 * [Using Compose Runtime to create a client library](https://www.droidcon.com/2022/08/02/using-compose-runtime-to-create-a-client-library/)
-* 
-
