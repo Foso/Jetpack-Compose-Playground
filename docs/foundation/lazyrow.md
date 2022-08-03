@@ -50,3 +50,5 @@ fun LazyRowDemo() {
 * [Full Example Code]({{ site.samplefolder }}/foundation/LazyRowDemo.kt)
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1ANt65eoNhQ" title="Lazy layouts in Compose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Lazy and amazy – Lazy layouts in Compose](https://www.droidcon.com/2022/08/01/lazy-and-amazy-lazy-layouts-in-compose/)
