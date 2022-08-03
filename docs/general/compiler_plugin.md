@@ -61,4 +61,5 @@ https://android.googlesource.com/platform/frameworks/support/+/refs/heads/androi
 ## See also:
 * Leland Richardson(@intelligibabble) started a series about the Compose Compiler https://www.youtube.com/watch?v=bg0R9-AUXQM
 * [Under the hood of Jetpack Compose — part 2 of 2](https://medium.com/androiddevelopers/under-the-hood-of-jetpack-compose-part-2-of-2-37b2c20c6cdd)
+* [A Hitchhiker's Guide to Compose Compiler: Composers, Compiler Plugins, and Snapshots](https://www.droidcon.com/2022/06/28/ha-hitchhikers-guide-to-compose-compiler-composers-compiler-plugins-and-snapshots/)
 
