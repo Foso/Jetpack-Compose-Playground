@@ -83,7 +83,7 @@ subprojects {
 }
 
 dependencies {
-    def compose_version = "1.2.0"
+    def compose_version = "1.2.1"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.appcompat:appcompat:1.4.2"
