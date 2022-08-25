@@ -132,6 +132,10 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 | [Compse UI Docu](https://developer.android.com/reference/kotlin/androidx/ui/packages)  		    | |
 | [Video - Jetpack compose - MVVM State management in a simple way](https://youtu.be/KTvP27FpXd0)  		    | |
 | [Jetpack Compose Twitter Bot](https://twitter.com/ComposeBot)  		    | |
+| [SSComposeCookBook](https://github.com/SimformSolutionsPvtLtd/SSComposeCookBook/)  		    | |
+| [SSJetPackComposeProgressButton](https://github.com/SimformSolutionsPvtLtd/SSJetPackComposeProgressButton/)  		    | |
+| [SSJetpackComposeSwipeableView](https://github.com/SimformSolutionsPvtLtd/SSJetpackComposeSwipeableView/)  		    | |
+| [SSComposeOTPPinView](https://github.com/SimformSolutionsPvtLtd/SSComposeOTPPinView)  		    | |
 
 Feel free to contribute!
 
