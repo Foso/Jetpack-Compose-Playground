@@ -10,7 +10,7 @@ This is a community-driven collection of Jetpack Compose documentation/examples/
 
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![jCenter](https://img.shields.io/badge/Compose-1.2.0-green.svg
+[![jCenter](https://img.shields.io/badge/Compose-1.2.1-green.svg
 )](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 ![Android Weekly](https://androidweekly.net/issues/issue-431/badge)
 [![Contributors](https://img.shields.io/github/contributors/Foso/Jetpack-Compose-Playground.svg)](#contributors)
