@@ -32,4 +32,4 @@ The simplest approach is to supply an onValueChange() callback to a TextField. W
 In this example, every time the TextField changes, the new text value will be saved in a state and set to the TextField and the Text.
 
 ## See also:
-* [Full Example Code]({{ site.samplefolder }}/textfield/TextFieldDemo.kt)
+* [Full Example Code]({{ site.samplefolder }}/material/textfield/TextFieldDemo.kt)
