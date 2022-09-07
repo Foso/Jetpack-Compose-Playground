@@ -31,6 +31,7 @@ You can use **horizontalAlignment** to set the horizontal alignment of the conte
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnCenterHorizontal() {
         Column(horizontalAlignment = Alignment.Start, modifier = Modifier.width(200.dp)) {
             Text("Hello World!")
@@ -40,7 +41,6 @@ You can use **horizontalAlignment** to set the horizontal alignment of the conte
     }
     ```
 
-
 === "Alignment.CenterHorizontally"
 
     <p align="left">
@@ -48,6 +48,7 @@ You can use **horizontalAlignment** to set the horizontal alignment of the conte
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnCenterHorizontal() {
         Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.width(200.dp)) {
             Text("Hello World!")
@@ -64,6 +65,7 @@ You can use **horizontalAlignment** to set the horizontal alignment of the conte
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnCenterHorizontal() {
         Column(horizontalAlignment = Alignment.End, modifier = Modifier.width(200.dp)) {
             Text("Hello World!")
@@ -82,6 +84,7 @@ You can also use the *align* modifier:
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnCenterHorizontal() {
         Column(modifier = Modifier.width(200.dp)) {
                 Text("Hello World!")
@@ -90,7 +93,6 @@ You can also use the *align* modifier:
     }
     ```
 
-
 === "Modifier.align(Alignment.CenterHorizontally)"
 
     <p align="left">
@@ -98,6 +100,7 @@ You can also use the *align* modifier:
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnCenterHorizontal() {
          Column(modifier = Modifier.width(200.dp)) {
                 Text("Hello World!")
@@ -113,6 +116,7 @@ You can also use the *align* modifier:
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnCenterHorizontal() {
         Column(modifier = Modifier.width(200.dp)) {
                 Text("Hello World!")
@@ -132,6 +136,7 @@ You can use **verticalArrangement** to set the vertical alignment of the content
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnVerticalTop() {
         Column(verticalArrangement = Arrangement.Top, modifier = Modifier.height(100.dp).background(Color.LightGray)) {
                 Text("Hello World!")
@@ -140,7 +145,6 @@ You can use **verticalArrangement** to set the vertical alignment of the content
     }
     ```
 
-
 === "Arrangement.Center"
 
     <p align="left">
@@ -148,6 +152,7 @@ You can use **verticalArrangement** to set the vertical alignment of the content
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnVerticalCenter() {
         Column(verticalArrangement = Arrangement.Center, modifier = Modifier.height(100.dp).background(Color.LightGray)) {
                 Text("Hello World!")
@@ -163,6 +168,7 @@ You can use **verticalArrangement** to set the vertical alignment of the content
     </p>
     ```kotlin
 
+    @Composable
     fun ColumnVerticalBottom() {
         Column(verticalArrangement = Arrangement.Bottom, modifier = Modifier.height(100.dp).background(Color.LightGray)) {
                 Text("Hello World!")
