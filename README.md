@@ -76,15 +76,12 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.7.00-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.7.10-green.svg)]()
 
 
 ### Project Structure
 
 * <kbd>app</kbd> - Android project directory
-* <kbd>desktop</kbd> - an example compose desktop app
-* <kbd>web</kbd> - an example compose web app
-
 
 # Resources
 
