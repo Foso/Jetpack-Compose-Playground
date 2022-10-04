@@ -31,6 +31,7 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.mod
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.radiobutton.RadioButtonSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.alertdialog.AlertDialogSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.appbar.topappbar.TopAppBarSample
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.button.ProgressButtonExample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.divider.DividerExample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modalBottomSheetLayout.ModalBottomSheetSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.navigationrail.NavigationRailSample
@@ -43,6 +44,7 @@ val MaterialDemos = DemoCategory(
     listOf(
         ComposableDemo("AlertDialogSample") { AlertDialogSample() },
         ComposableDemo("ButtonExample") { ButtonExample() },
+        ComposableDemo("ProgressButtonExample") { ProgressButtonExample() },
         ComposableDemo("CardDemo") { CardDemo() },
         ComposableDemo("CheckBoxDemo") { CheckBoxDemo() },
         ComposableDemo("CircularProgressIndicatorSample") { CircularProgressIndicatorSample() },
