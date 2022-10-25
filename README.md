@@ -55,6 +55,21 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 * [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold)
 * [Switch](https://foso.github.io/Jetpack-Compose-Playground/material/switch)
 * [TextField](https://foso.github.io/Jetpack-Compose-Playground/material/textfield)
+* [BadgeBox](https://foso.github.io/Jetpack-Compose-Playground/material/badgedbox/)
+* [CircularProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/circularprogressindicator/)
+* [DropdownMenu](https://foso.github.io/Jetpack-Compose-Playground/material/dropdownmenu/)
+* [FloatingActionButton](https://foso.github.io/Jetpack-Compose-Playground/material/floatingactionbutton/)
+* [LinearProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/linearprogressindicator/)
+* [ModalBottomSheetLayout](https://foso.github.io/Jetpack-Compose-Playground/material/modalbottomsheetlayout/)
+* [NavigationRail](https://foso.github.io/Jetpack-Compose-Playground/material/navigationrail/)
+* [OutlinedButton](https://foso.github.io/Jetpack-Compose-Playground/material/button/)
+* [Slider](https://foso.github.io/Jetpack-Compose-Playground/material/slider/)
+* [Snackbar](https://foso.github.io/Jetpack-Compose-Playground/material/snackbar/)
+* [Surface](https://foso.github.io/Jetpack-Compose-Playground/material/surface/)
+* [Text](https://foso.github.io/Jetpack-Compose-Playground/foundation/text/)
+* [TextButton](https://foso.github.io/Jetpack-Compose-Playground/material/button/)
+* [TopAppBar](https://foso.github.io/Jetpack-Compose-Playground/material/topappbar/)
+
 
 
 ### Cookbook
