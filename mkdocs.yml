@@ -160,6 +160,8 @@ nav:
               - 'TextButton': material/button.md
               - 'TextField': material/textfield.md
               - 'TopAppBar': material/topappbar.md
+          - 'UI':
+              - 'SubComposeLayout': ui//subcomposelayout.md
           - 'Platform':
               - 'ComposeView': platform/composeview.md
           - 'ViewInterop':
