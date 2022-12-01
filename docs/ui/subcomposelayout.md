@@ -98,6 +98,6 @@ enum class SlotsEnum {
 
 ## See also:
 * [Official Docs]({{ site.composedoc }}/ui/layout/package-summary#SubcomposeLayout(androidx.compose.ui.Modifier,kotlin.Function2))
-* [Full Example Code]({{ site.samplefolder }}/ui/layout/subcomposelayout.kt)
+* [Full Example Code]({{ site.samplefolder }}/ui/layout/SubComposeLayoutExample.kt)
 
 
