@@ -23,6 +23,7 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.general.Gene
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.layout.LayoutDemos
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.MaterialDemos
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.other.OtherDemos
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.ui.UIDemos
 
 
 /**
@@ -37,6 +38,7 @@ val AllDemosCategory = DemoCategory(
         MaterialDemos,
         GeneralDemos,
         OtherDemos,
-        ActivityDemos
+        ActivityDemos,
+        UIDemos
     )
 )
