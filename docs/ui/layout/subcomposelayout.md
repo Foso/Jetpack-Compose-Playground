@@ -15,7 +15,7 @@ And know you want to set the width of every composable to the width of the wides
    <img src ="../{{ site.images }}/ui/layout/chatafter.png"  height=100 width=200  />
 </p>
 
-You can use the SubcomposeLayout to get the height/width of every child composable and then you can resize 
+You can use the SubComposeLayout to get the height/width of every child composable and then you can resize 
 the values to the one that you want. 
 
 ```kotlin
@@ -32,6 +32,7 @@ fun SubComposeLayoutDemo() {
 
         Box(
             modifier = Modifier
+                .padding(top = 8.dp)
                 .background(Color.Red)
         ) {
             Text("This is a long messsage \n and its longer")
@@ -63,7 +64,6 @@ fun ResizeWidthColumn(modifier: Modifier, resize: Boolean, mainContent: @Composa
                      */
                     it.measure(
                         Constraints(
-                            minHeight = maxSize.height,
                             minWidth = maxSize.width
                         )
                     )
@@ -74,9 +74,10 @@ fun ResizeWidthColumn(modifier: Modifier, resize: Boolean, mainContent: @Composa
             }
 
         /**
-         * We can place the Compoables on the screen
+         * We can place the Composables on the screen
          * with layout() and the place() functions
          */
+
         layout(constraints.maxWidth, constraints.maxHeight) {
             resizedPlaceables.forEachIndexed { index, placeable ->
                 val widthStart = resizedPlaceables.take(index).sumOf { it.measuredHeight }
@@ -92,7 +93,6 @@ enum class SlotsEnum {
     Dependent
 
 }
-
 ```
 
 

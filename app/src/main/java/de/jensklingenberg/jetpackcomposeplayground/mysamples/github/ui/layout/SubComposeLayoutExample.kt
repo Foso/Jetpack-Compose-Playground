@@ -3,6 +3,7 @@ package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.ui.layout
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,6 +12,7 @@ import androidx.compose.ui.layout.Placeable
 import androidx.compose.ui.layout.SubcomposeLayout
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.IntSize
+import androidx.compose.ui.unit.dp
 
 
 @Composable
@@ -26,6 +28,7 @@ fun SubComposeLayoutDemo() {
 
         Box(
             modifier = Modifier
+                .padding(top = 8.dp)
                 .background(Color.Red)
         ) {
             Text("This is a long messsage \n and its longer")
@@ -57,7 +60,6 @@ fun ResizeWidthColumn(modifier: Modifier, resize: Boolean, mainContent: @Composa
                      */
                     it.measure(
                         Constraints(
-                            minHeight = maxSize.height,
                             minWidth = maxSize.width
                         )
                     )
