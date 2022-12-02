@@ -9,7 +9,7 @@ Let`s say you have a chat log this:
    <img src ="../{{ site.images }}/ui/layout/chatbefore.png"  height=100 width=200  />
 </p>
 
-And know you want to set the width of every composable to the width of the widest Composable 
+And now you want to set the width of every composable to the width of the widest Composable 
 
 <p align="center">
    <img src ="../{{ site.images }}/ui/layout/chatafter.png"  height=100 width=200  />
