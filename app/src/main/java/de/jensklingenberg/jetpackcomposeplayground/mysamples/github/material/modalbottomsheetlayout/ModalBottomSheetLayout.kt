@@ -1,4 +1,4 @@
-package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modalBottomSheetLayout
+package de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modalbottomsheetlayout
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn

@@ -33,7 +33,7 @@ import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.ale
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.appbar.topappbar.TopAppBarSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.button.ProgressButtonExample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.divider.DividerExample
-import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modalBottomSheetLayout.ModalBottomSheetSample
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.modalbottomsheetlayout.ModalBottomSheetSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.navigationrail.NavigationRailSample
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.scaffold.ScaffoldDemo
 import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.material.surface.SurfaceDemo
