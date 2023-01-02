@@ -6,7 +6,7 @@ This is an Jetpack Compose example project. I'm collecting a bunch of sample cod
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![Android Weekly](https://androidweekly.net/issues/issue-431/badge)
-[![jCenter](https://img.shields.io/badge/Compose-1.3.0-green.svg
+[![jCenter](https://img.shields.io/badge/Compose-1.3.2-green.svg
 )](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/Foso/Jetpack-Compose-Playground.svg)](#contributors)
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
@@ -91,7 +91,7 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 ## 🛠️ Built With
 ### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.7.10-green.svg)]()
+[![jCenter](https://img.shields.io/badge/Kotlin-1.7.20-green.svg)]()
 
 
 ### Project Structure
