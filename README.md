@@ -18,7 +18,7 @@ This is an Jetpack Compose example project. I'm collecting a bunch of sample cod
 
 
 ## Composable of the week!! 🎉
-The [BoxWithConstraints](https://foso.github.io/Jetpack-Compose-Playground/foundation/layout/boxwithconstraints/)
+The [SubComposeLayout](https://foso.github.io/Jetpack-Compose-Playground/ui/layout/subcomposelayout/)
 
 ## New to Compose?
 Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld/)
