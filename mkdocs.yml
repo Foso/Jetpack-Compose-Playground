@@ -7,7 +7,7 @@ docs_dir: 'docs'
 edit_uri: 'tree/master/docs/'
 
 # Copyright
-copyright: Copyright &copy; MIT License 2019 - 2022 Jens Klingenberg
+copyright: Copyright &copy; MIT License 2019 - 2023 Jens Klingenberg
 
 theme:
   name: 'material'
