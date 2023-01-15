@@ -3,7 +3,7 @@
 
 buildscript {
     ext {
-        compose_version = '1.3.2'
+        compose_version = '1.3.3'
         kotlin_version = "1.7.20"
     }
     repositories {
