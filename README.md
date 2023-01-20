@@ -1,22 +1,19 @@
 <h1 align="center">Jetpack Compose Playground</h1>
 
 ## Introduction 🙋‍♂️
-This is an Jetpack Compose example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the github page https://foso.github.io/compose.
+This is an Jetpack Compose example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the GitHub page https://foso.github.io/compose.
+
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.7.20-green.svg)]() [![Compose](https://img.shields.io/badge/Compose-1.3.3-green.svg)]()
 
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![Android Weekly](https://androidweekly.net/issues/issue-431/badge)
-[![jCenter](https://img.shields.io/badge/Compose-1.3.3-green.svg
-)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/Foso/Jetpack-Compose-Playground.svg)](#contributors)
-  <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
-"><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 
 ### Show some :heart: and star the repo to support the project
 
-[![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_)
-
-
+[![GitHub stars](https://img.shields.io/github/stars/Foso/Jetpack-Compose-Playground.svg?style=social&label=Star)](https://github.com/Foso/Jetpack-Compose-Playground) [![GitHub forks](https://img.shields.io/github/forks/Foso/Jetpack-Compose-Playground.svg?style=social&label=Fork)](https://github.com/Foso/Jetpack-Compose-Playground/fork) [![GitHub watchers](https://img.shields.io/github/watchers/Foso/Jetpack-Compose-Playground.svg?style=social&label=Watch)](https://github.com/Foso/Jetpack-Compose-Playground) [![Twitter Follow](https://img.shields.io/twitter/follow/jklingenberg_.svg?style=social)](https://twitter.com/jklingenberg_) <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
+"><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 ## Composable of the week!! 🎉
 The [SubComposeLayout](https://foso.github.io/Jetpack-Compose-Playground/ui/layout/subcomposelayout/)
 
@@ -24,7 +21,7 @@ The [SubComposeLayout](https://foso.github.io/Jetpack-Compose-Playground/ui/layo
 Check [Compose for Android Developers](https://foso.github.io/Jetpack-Compose-Playground/compose_for/android_devs/) or [Hello World Compose](https://foso.github.io/Jetpack-Compose-Playground/general/helloworld/)
 
 ## 📙 Jetpack Compose examples/tutorials and demos
-Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/app/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github) or take a look at the github page: https://foso.github.io/compose
+Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/app/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github) or take a look at the GitHub page: https://foso.github.io/compose
 
 ### Animation
 * [Crossfade](https://foso.github.io/Jetpack-Compose-Playground/animation/crossfade)
@@ -46,31 +43,23 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 ### Material
 * [AlertDialog](https://foso.github.io/Jetpack-Compose-Playground/material/alertdialog)
-* [Button](https://foso.github.io/Jetpack-Compose-Playground/material/button)
-* [Card](https://foso.github.io/Jetpack-Compose-Playground/material/card)
-* [Checkbox](https://foso.github.io/Jetpack-Compose-Playground/material/checkbox)
-* [Divider](https://foso.github.io/Jetpack-Compose-Playground/material/divider)
-* [ModalDrawerLayout](https://foso.github.io/Jetpack-Compose-Playground/material/modaldrawer)
-* [RadioButton](https://foso.github.io/Jetpack-Compose-Playground/material/radiobutton)
-* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold)
-* [Switch](https://foso.github.io/Jetpack-Compose-Playground/material/switch)
-* [TextField](https://foso.github.io/Jetpack-Compose-Playground/material/textfield)
 * [BadgeBox](https://foso.github.io/Jetpack-Compose-Playground/material/badgedbox/)
-* [CircularProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/circularprogressindicator/)
+* Buttons: [Button](https://foso.github.io/Jetpack-Compose-Playground/material/button), [FloatingActionButton](https://foso.github.io/Jetpack-Compose-Playground/material/floatingactionbutton/), [OutlinedButton](https://foso.github.io/Jetpack-Compose-Playground/material/button/), [TextButton](https://foso.github.io/Jetpack-Compose-Playground/material/button/)
+* [Card](https://foso.github.io/Jetpack-Compose-Playground/material/card)
+* [Divider](https://foso.github.io/Jetpack-Compose-Playground/material/divider)
 * [DropdownMenu](https://foso.github.io/Jetpack-Compose-Playground/material/dropdownmenu/)
-* [FloatingActionButton](https://foso.github.io/Jetpack-Compose-Playground/material/floatingactionbutton/)
-* [LinearProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/linearprogressindicator/)
 * [ModalBottomSheetLayout](https://foso.github.io/Jetpack-Compose-Playground/material/modalbottomsheetlayout/)
+* [ModalDrawerLayout](https://foso.github.io/Jetpack-Compose-Playground/material/modaldrawer)
 * [NavigationRail](https://foso.github.io/Jetpack-Compose-Playground/material/navigationrail/)
-* [OutlinedButton](https://foso.github.io/Jetpack-Compose-Playground/material/button/)
+* Progress Indicators: [CircularProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/circularprogressindicator), [LinearProgressIndicator](https://foso.github.io/Jetpack-Compose-Playground/material/linearprogressindicator/)
+* [Scaffold](https://foso.github.io/Jetpack-Compose-Playground/material/scaffold)
+* Selection Controls: [Checkbox](https://foso.github.io/Jetpack-Compose-Playground/material/checkbox), [RadioButton](https://foso.github.io/Jetpack-Compose-Playground/material/radiobutton), [Switch](https://foso.github.io/Jetpack-Compose-Playground/material/switch)
 * [Slider](https://foso.github.io/Jetpack-Compose-Playground/material/slider/)
 * [Snackbar](https://foso.github.io/Jetpack-Compose-Playground/material/snackbar/)
 * [Surface](https://foso.github.io/Jetpack-Compose-Playground/material/surface/)
 * [Text](https://foso.github.io/Jetpack-Compose-Playground/foundation/text/)
-* [TextButton](https://foso.github.io/Jetpack-Compose-Playground/material/button/)
+* [TextField](https://foso.github.io/Jetpack-Compose-Playground/material/textfield)
 * [TopAppBar](https://foso.github.io/Jetpack-Compose-Playground/material/topappbar/)
-
-
 
 ### Cookbook
 
@@ -86,17 +75,9 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 
 </p>
 
-
-# 🏠 Architecture
-
-## 🛠️ Built With
-### Kotlin
-[![jCenter](https://img.shields.io/badge/Kotlin-1.7.20-green.svg)]()
-
-
 ### Project Structure
 
-* <kbd>app</kbd> - Android project directory
+* <kbd>[/app](https://github.com/Foso/Jetpack-Compose-Playground/tree/master/app)</kbd> - Android project directory
 
 # Resources
 
@@ -120,13 +101,13 @@ Look in the [repo](https://github.com/Foso/Jetpack-Compose-Playground/tree/maste
 | [DevFest Kolkata 2019 - Let's Talk Composing UI](https://www.youtube.com/watch?v=kfNC-MKAGzc) 		    | |
 
 ## Podcasts
-| Name                                    | Description  |
-| ----------------------------------------- | ------------------------------------ |
-| [**Android Developer backstage** - Episode 147: Jetpack Compose Alpha](http://androidbackstage.blogspot.com/2020/08/episode-147-jetpack-compose-alpha.html)  		    | |
-| [**Android Developers Backstage** : Episode 131: Jetpack Compose and Declarative UIs](http://androidbackstage.blogspot.com/2020/01/episode-131-jetpack-compose-and.html) 		    | |
-| [**Android Developer backstage** - Episode 115: Jetpack Compose](http://androidbackstage.blogspot.com/2019/06/episode-115-jetpack-compose.html) 		    | |
-| [**Fragmented Podcast** - Episode 171: Jetpack Compose with Leland Richardson](https://fragmentedpodcast.com/episodes/172/) 		    | |
-| [**Google podcast** - Romain Guy – Podcast S09 E09](https://podcasts.google.com/?feed=aHR0cHM6Ly93d3cucmF5d2VuZGVybGljaC5jb20vY2F0ZWdvcnkvcG9kY2FzdC9mZWVk&episode=aHR0cHM6Ly93d3cucmF5d2VuZGVybGljaC5jb20vP3A9MjMxMjI0&hl=en-IN&ep=6&at=1567914736470) 		    | |
+| Name                                    | Episode | Description  |
+| ----------------------------------------- | ------------------------------------ | -- |
+| Android Developers Backstage | [Episode 147](http://androidbackstage.blogspot.com/2020/08/episode-147-jetpack-compose-alpha.html) | Jetpack Compose Alpha |
+| Android Developers Backstage | [Episode 131](http://androidbackstage.blogspot.com/2020/01/episode-131-jetpack-compose-and.html) | Jetpack Compose and Declarative UIs |
+| Android Developers Backstage | [Episode 115](http://androidbackstage.blogspot.com/2019/06/episode-115-jetpack-compose.html) 	| Jetpack Compose |
+| Fragmented Podcast | [Episode 171](https://fragmentedpodcast.com/episodes/172/) | Jetpack Compose with Leland Richardson |
+| The Kodeco Podcast | [S09 E09](https://podcasts.google.com/?feed=aHR0cHM6Ly93d3cucmF5d2VuZGVybGljaC5jb20vY2F0ZWdvcnkvcG9kY2FzdC9mZWVk&episode=aHR0cHM6Ly93d3cucmF5d2VuZGVybGljaC5jb20vP3A9MjMxMjI0&hl=en-IN&ep=6&at=1567914736470) | Google’s Android Toolkit Lead Developer Romain Guy |
 
 ## Other Links
 
@@ -153,14 +134,9 @@ Feel free to contribute!
 
 ## ✍️ Feedback
 
-If you want to improve Compose, join the [Kotlin Slack](https://slack.kotlinlang.org) and the #compose channel or file a bug at https://issuetracker.google.com/issues?q=componentid:612128
+If you want to improve Compose, join the [Kotlin Slack](https://slack.kotlinlang.org) and the #compose channel or file a Compose bug on the [Google Issue Tracker](https://issuetracker.google.com/issues?q=componentid:612128)
 
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE) file for details
-
-### Find this project useful ? :heart:
+### Find this project useful? :heart:
 * Support it by clicking the :star: button on the upper right of this page. :v:
 
 ## 
@@ -170,7 +146,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
   <a href="https://jb.gg/OpenSourceSupport"><img src="https://github.com/cherryleafroad/kmagick/blob/main/readme_files/jb_beam.png" height="150px" width="150px"/></a>
 </p>
 
-License
+[License](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 -------
 
  ```
