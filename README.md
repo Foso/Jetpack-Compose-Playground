@@ -3,7 +3,7 @@
 ## Introduction 🙋‍♂️
 This is an Jetpack Compose example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the GitHub page https://foso.github.io/compose.
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.7.20-green.svg)]() [![Compose](https://img.shields.io/badge/Compose-1.3.3-green.svg)]()
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.8.0-green.svg)]() [![Compose](https://img.shields.io/badge/Compose-1.3.3-green.svg)]()
 
 [![jCenter](https://img.shields.io/badge/MIT-green.svg)](https://github.com/Foso/Jetpack-Compose-Playground/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -177,4 +177,7 @@ SOFTWARE.
 Projects that helped me understand how to setup the project:
 * [Mishkun/try-compose
 ](https://github.com/Mishkun/try-compose)
+
+## Credits
+Jetpack-Compose-Playground is brought to you by these [contributors](https://github.com/Foso/Jetpack-Compose-Playground/graphs/contributors).
 
