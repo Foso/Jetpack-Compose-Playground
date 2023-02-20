@@ -127,7 +127,7 @@ dependencies {
     androidTestImplementation("org.mockito:mockito-core:5.1.1")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_version")
 
-    androidTestImplementation('com.adevinta.android:barista:4.2.0') {
+    androidTestImplementation('com.adevinta.android:barista:4.3.0') {
         exclude group: 'org.jetbrains.kotlin' // Only if you already use Kotlin in your project
     }
 
