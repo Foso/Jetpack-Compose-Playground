@@ -33,6 +33,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [Compose Navigation](https://github.com/mvarnagiris/compose-navigation)  		    |  |
 | [Compose Backstack](https://github.com/zach-klippenstein/compose-backstack)  		    | Simple composable for rendering transitions between backstacks.|
 | [SwipeReveal-Compose](https://github.com/kacmacuna/SwipeReveal-Compose)  		    | A layout that you can swipe to show action buttons.|
+| [Exploding Composable](https://github.com/omkar-tenkale/ExplodingComposable)  		    | Explosive dust effect animation for your composables!|
 | [Landscapist](https://github.com/skydoves/landscapist)  		    | 🍂 Jetpack Compose image loading library which can fetch and display network images using Glide, Coil, and Fresco.|
 
 
