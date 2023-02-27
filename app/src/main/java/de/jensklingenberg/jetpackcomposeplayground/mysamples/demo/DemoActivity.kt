@@ -38,6 +38,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.ComposeView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.FoundationDemos
+import de.jensklingenberg.jetpackcomposeplayground.mysamples.github.foundation.LazyVerticalGridDemo
 
 /**
  * Main [Activity] containing all Compose related demos.
@@ -99,6 +101,8 @@ class DemoActivity : ComponentActivity() {
                     }
                 )
             }
+            navigator.navigateTo(FoundationDemos.demos.get(5))
+
         }
     }
 }
