@@ -83,34 +83,34 @@ subprojects {
 }
 
 dependencies {
-    def compose_version = "1.3.1"
+    implementation 'androidx.paging:paging-common-ktx:3.1.1'
+    def compose_version = "1.3.3"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "androidx.appcompat:appcompat:1.5.1"
+    implementation "androidx.appcompat:appcompat:1.6.0"
     implementation "androidx.core:core-ktx:1.9.0"
     implementation 'com.google.android.material:material:1.7.0'
     implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
     implementation "androidx.activity:activity-compose:1.6.1"
     implementation "androidx.compose.animation:animation-core:$compose_version"
     implementation "androidx.compose.animation:animation:$compose_version"
     implementation("androidx.compose.ui:ui:$compose_version")
-    implementation "androidx.compose.foundation:foundation:$compose_version"
+    implementation "androidx.compose.foundation:foundation:1.3.1"
+    implementation "androidx.compose.foundation:foundation-layout:1.3.1"
     implementation "androidx.compose.ui:ui-geometry:$compose_version"
     implementation "androidx.compose.ui:ui-graphics:$compose_version"
-    implementation "androidx.compose.foundation:foundation-layout:$compose_version"
     implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.material:material-icons-core:$compose_version"
-    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+    implementation "androidx.compose.material:material:1.3.1"
+    implementation "androidx.compose.material:material-icons-core:1.3.1"
+    implementation "androidx.compose.material:material-icons-extended:1.3.1"
     implementation "androidx.compose.runtime:runtime-rxjava2:$compose_version"
     implementation("androidx.compose.ui:ui-text:$compose_version")
     implementation("androidx.compose.ui:ui-util:$compose_version")
     implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
     implementation "androidx.compose.ui:ui-tooling:$compose_version"
-
+    implementation 'com.jakewharton.timber:timber:5.0.1'
     //Compose Constraintlayout
     implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.1'
 
