@@ -52,4 +52,3 @@ fun ModalBottomSheetSample() {
 ## See also:
 * [Official Docs](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#modalbottomsheetlayout)
 * [Full Example Code]({{ site.samplefolder }}/material/modalbottomsheetlayout/ModalBottomSheetLayout.kt)
-  /Users/jens.klingenberg/Code/Jetpack-Compose-Playground/app/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/material/modalBottomSheetLayout/ModalBottomSheetLayout.kt
