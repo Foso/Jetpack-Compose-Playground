@@ -21,6 +21,7 @@ theme:
     - navigation.top
     - search.suggest
     - search.share
+    - content.code.copy
   palette:
     - scheme: default
       primary: deep-blue
