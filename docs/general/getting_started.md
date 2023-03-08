@@ -1,8 +1,5 @@
 # Project Setup
 
-## Android Studio
-To use Jetpack Compose you need to use at least a [version >= Android Studio Arctic Fox ](https://developer.android.com/studio/preview)
-
 ## Gradle Dependencies
 
 Add this inside in the **android{}** block your build.gradle
