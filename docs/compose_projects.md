@@ -45,6 +45,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [Jetpackcompose.app](https://Jetpackcompose.app)  		    |  |
 | [Jetpack Compose 中文文档](https://docs.compose.net.cn/) |
 | [JetpackComposeVersion.com](https://www.jetpackcomposeversion.com/) | A page to quickly check what the latest version of Jetpack Compose is and its dependencies. |
+| [Composables.co](https://www.composables.co) | Articles & resources for Jetpack Compose |
 
 # Compose for Web
 
