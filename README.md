@@ -1,7 +1,7 @@
 <h1 align="center">Jetpack Compose Playground</h1>
 
 ## Introduction 🙋‍♂️
-This is an Jetpack Compose example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect informations/tutorials on the GitHub page https://foso.github.io/compose.
+This is a Jetpack Compose example project. I'm collecting a bunch of sample codes for Jetpack Compose. I also collect information/tutorials on the GitHub page https://foso.github.io/compose.
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.8.0-green.svg)]() [![Compose](https://img.shields.io/badge/Compose-1.3.3-green.svg)]()
 
