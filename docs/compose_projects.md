@@ -15,7 +15,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [Full Compose Cookbook with Demo UIs](https://github.com/Gurupreet/ComposeCookBook)  		  | This project showcase all UI, Widgets, Animations and Demo UI samples.
 | [JetInstagram](https://github.com/vipulasri/JetInstagram)  		  | An Instagram UI clone app built with "Jetpack Compose" with Like Button Animation and instagram reels feature with exoplayer.
 | [DisneyCompose](https://github.com/skydoves/DisneyCompose) | A demo Disney app using compose and Hilt based on modern Android tech-stacks and MVVM architecture. Fetching data from the network and integrating persisted data in the database via repository pattern. Declarative UI version of the DisneyMotions using compose. 
-| [JetBrains Compose](https://github.com/JetBrains/compose-jb) | Compose Kotlin UI framework port for desktop platforms (macOS, Linux, Windows), components outside of the core .
+| [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform) | Compose Kotlin UI framework port for desktop platforms (macOS, Linux, Windows), components outside of the core.
 | [Compose Slack Desktop](https://github.com/vipulasri/ComposeSlackDesktop)  		  | A Slack demo app for desktop using Jetpack Compose UI toolkit
 | [FlappyBird](https://github.com/Nthily/FlappyBird) | FlappyBird made with Jetpack Compose.
 | [JetSpotify](https://github.com/sunny52525/JetSpotify) | This is a Spotify App made in Jetpack Compose having Spotify Android UI and functionality using Spotify SDK and web API.
