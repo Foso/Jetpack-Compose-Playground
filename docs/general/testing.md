@@ -4,7 +4,7 @@
 Add the Compose testing library to your dependencies in build.gradle
 
 ```kotlin
-androidTestImplementation("androidx.ui:ui-test:$compose_version")
+androidTestImplementation("androidx.compose.ui:ui-test:$compose_version")
 debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_version")
 ```
 
