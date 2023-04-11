@@ -9,4 +9,4 @@ In Android Projects you can use the [Jetpack Compose Navigation](https://develop
 ## Multiplatform
 When you need a multiplaform solution for Routing, you can use [Decompose](https://github.com/arkivanov/Decompose)
 
-[Decompose Router Overview](https://arkivanov.github.io/Decompose/router/overview/)
+[Decompose Navigation Overview](https://arkivanov.github.io/Decompose/navigation/overview/)
