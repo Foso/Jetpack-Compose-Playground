@@ -24,10 +24,9 @@ The Compose Compiler Plugin is a Kotlin Compiler Plugin that transforms all the 
 Jetpack Compose is a UI Toolkit for Android developed by Google.
 It is using **Compose Runtime/Compose Compiler Plugin** and **Compose UI**
 
-# Compose for Web
-[Compose for Web](https://compose-web.ui.pages.jetbrains.team/) is a UI Toolkit for Web developed by JetBrains written in Kotlin/JS.
+# Compose HTML
+Compose HTML is a UI Toolkit for Web developed by JetBrains written in Kotlin/JS.
 It is using the **Compose Runtime** and the **Compose Compiler Plugin**. It does not use Compose UI, because it uses Compose Wrappers for the HTML DOM UI Elements.
-
 
 # Compose for Desktop
 **Compose for Desktop** is a UI Toolkit developed by JetBrains. It runs on the JVM and it is using  **Compose Runtime**, **Compose Compiler Plugin** and a Compose UI version for desktop which is using Skia to target Windows, macOS, Linux. Additional it provides components for desktop specific apps like scrollbars or mouse support and Swing interop.
