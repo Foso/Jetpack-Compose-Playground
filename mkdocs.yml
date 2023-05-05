@@ -45,7 +45,7 @@ extra:
     composedoc: 'https://developer.android.com/reference/kotlin/androidx/compose'
     images: '../../images'
   compose:
-    release: "1.4.0"
+    release: "1.4.3"
   social:
     - icon: fontawesome/brands/github-alt
       link: 'https://github.com/foso'
@@ -171,6 +171,7 @@ nav:
       - 'Compose Projects': compose_projects.md
       - 'Contributing': contributing.md
       - 'Resources': resources.md
+      - 'iOS' : ios/overview.md
       - 'Web' : web/overview.md
 
 

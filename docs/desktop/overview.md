@@ -5,4 +5,4 @@ JetBrains released a Compose port for the desktop.
 
 You can find more information here https://www.jetbrains.com/lp/compose/ or on their Github Repo https://github.com/JetBrains/compose-multiplatform or in the Kotlin Slack  [#compose-desktop](https://kotlinlang.slack.com/archives/C01D6HTPATV)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ar2Wcr9or_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Mgf_9kxM1BA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

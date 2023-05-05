@@ -57,7 +57,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion "1.4.0"
+        kotlinCompilerExtensionVersion "1.4.6"
     }
 }
 
@@ -85,7 +85,7 @@ subprojects {
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "androidx.activity:activity-compose:1.6.1"
+    implementation "androidx.activity:activity-compose:1.7.1"
     implementation "androidx.appcompat:appcompat:1.6.1"
     implementation "androidx.compose.animation:animation-core:$compose_version"
     implementation "androidx.compose.animation:animation:$compose_version"
