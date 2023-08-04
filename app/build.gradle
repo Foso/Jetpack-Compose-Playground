@@ -35,6 +35,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    namespace "de.jensklingenberg.jetpackcomposeplayground"
+
 
     buildTypes {
         release {
