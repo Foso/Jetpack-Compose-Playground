@@ -126,7 +126,7 @@ dependencies {
     androidTestImplementation("androidx.test:rules:1.5.0")
     androidTestImplementation("androidx.test:runner:1.5.2")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
-    androidTestImplementation("org.mockito:mockito-core:5.3.1")
+    androidTestImplementation("org.mockito:mockito-core:5.5.0")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_version")
 
     androidTestImplementation('com.adevinta.android:barista:4.3.0') {
