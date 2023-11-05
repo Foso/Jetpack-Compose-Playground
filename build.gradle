@@ -3,7 +3,7 @@
 
 buildscript {
     ext {
-        compose_version = '1.5.1'
+        compose_version = '1.5.4'
         kotlin_version = "1.9.10"
     }
     repositories {
@@ -19,7 +19,7 @@ buildscript {
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
 
