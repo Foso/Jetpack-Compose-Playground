@@ -1,7 +1,7 @@
 # Compose on iOS
 
-JetBrains released a Compose port for iOS. It's currently in Alpha.
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FWVi4aV36d8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+JetBrains released a Compose port for iOS. It's currently in beta.
+(https://blog.jetbrains.com/kotlin/2024/05/compose-multiplatform-1-6-10-ios-beta/#compose-multiplatform-for-i-os-in-beta)
 
 https://github.com/JetBrains/compose-multiplatform#ios
 
