@@ -1,0 +1,8 @@
+[versions]
+kotlin = "2.0.0"
+compose_version = "1.6.7"
+[plugins]
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
