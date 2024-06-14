@@ -36,8 +36,7 @@ fun AlertDialogSample() {
                         Text("Here is a text ")
                     },
                     confirmButton = {
-                        Button(
-
+                        TextButton(
                             onClick = {
                                 openDialog.value = false
                             }) {
@@ -45,8 +44,7 @@ fun AlertDialogSample() {
                         }
                     },
                     dismissButton = {
-                        Button(
-
+                        TextButton(
                             onClick = {
                                 openDialog.value = false
                             }) {
