@@ -185,6 +185,8 @@ markdown_extensions:
   - pymdownx.emoji
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: app/src/main/java/de/jensklingenberg/jetpackcomposeplayground/mysamples/github/
   - pymdownx.tabbed:
       alternate_style: true
   - tables

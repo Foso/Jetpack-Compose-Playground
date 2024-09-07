@@ -4,6 +4,7 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 
+//# --8<-- [start:func]
 @Composable
 fun BackHandlerExample() {
     var backPressedCount by remember { mutableStateOf(0) }
@@ -12,3 +13,4 @@ fun BackHandlerExample() {
     })
     Text(text="Backbutton was pressed : $backPressedCount times")
 }
+//# --8<-- [end:func]

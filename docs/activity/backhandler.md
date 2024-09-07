@@ -8,14 +8,7 @@ You can use BackHandler to detect the presses on the device back button inside o
 
 ## Example
 ```kotlin
-@Composable
-fun BackHandlerExample() {
-    var backPressedCount by remember { mutableStateOf(0) }
-    BackHandler(enabled = true, onBack = {
-        backPressedCount += 1
-    })
-    Text(text="Backbutton was pressed : $backPressedCount times")
-}
+--8<-- "activity/backhandler/BackHandlerExample.kt:func"
 ```
 
 <p align="left">
