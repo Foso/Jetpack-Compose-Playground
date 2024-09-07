@@ -11,16 +11,7 @@ BasicTextField can be used to insert text. See [TextField](../material/textfield
 </p>
 
 ```kotlin
-@Composable
-fun BasicTextFieldDemo() {
-    var textState by remember { mutableStateOf(TextFieldValue("Hello World")) }
-    Column {
-        BasicTextField(value = textState, onValueChange = {
-            textState = it
-        })
-        Text("The textfield has this text: " + textState.text)
-    }
-}
+--8<-- "foundation/basictextfield/BasicTextFieldDemo.kt:func"
 ```
 
 -------------

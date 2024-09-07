@@ -54,10 +54,11 @@ tasks.withType<KotlinCompile>().configureEach {
         )
     }
 }
-val compose_version = "1.6.7"
+val compose_version = libs.versions.compose.version.get()
+
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("androidx.activity:activity-compose:1.9.0")
+    implementation("androidx.activity:activity-compose:1.9.2")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.compose.animation:animation-core:$compose_version")
     implementation("androidx.compose.animation:animation:$compose_version")
@@ -75,7 +76,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:$compose_version")
     implementation("androidx.compose.ui:ui:$compose_version")
     implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.5")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.compose.ui:ui-viewbinding:$compose_version")
     implementation("androidx.compose.ui:ui-text:$compose_version")
@@ -84,17 +85,17 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
+    androidTestImplementation("androidx.test:runner:1.6.2")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:$compose_version")
     androidTestImplementation("androidx.compose.ui:ui-test:$compose_version")
-    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test:core:1.5.0")
-    androidTestImplementation("androidx.test:rules:1.5.0")
-    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.6.1")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test:core:1.6.1")
+    androidTestImplementation("androidx.test:rules:1.6.1")
+    androidTestImplementation("androidx.test:runner:1.6.2")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
-    androidTestImplementation("org.mockito:mockito-core:5.3.1")
+    androidTestImplementation("org.mockito:mockito-core:5.12.0")
     debugImplementation("androidx.compose.ui:ui-test-manifest:$compose_version")
 
     androidTestImplementation("com.adevinta.android:barista:4.3.0") {
