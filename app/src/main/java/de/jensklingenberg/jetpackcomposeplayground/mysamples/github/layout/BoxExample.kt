@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 
 
 @Preview(showBackground = true)
+//# --8<-- [start:func]
 @Composable
 fun BoxExample() {
     Box(Modifier.fillMaxSize()) {
@@ -31,3 +32,4 @@ fun BoxExample() {
         }
     }
 }
+//# --8<-- [end:func]
