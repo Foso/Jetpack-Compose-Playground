@@ -17,10 +17,6 @@ This is a community-driven collection of Jetpack Compose documentation/examples/
   <a href="https://twitter.com/intent/tweet?text=Hey, check out Jetpack-Compose-Playground https://github.com/Foso/Jetpack-Compose-Playground via @jklingenberg_ #Android
 "><img src="https://img.shields.io/twitter/url/https/github.com/angular-medellin/meetup.svg?style=social" alt="Tweet"></a>
 
-```kotlin
---8<-- "activity/backhandler/BackHandlerExample.kt:func"
-```
-
 ## What is Jetpack Compose?
 "Jetpack Compose is a modern toolkit for building native Android UI. Jetpack Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs. "
 
