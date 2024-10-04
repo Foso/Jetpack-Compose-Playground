@@ -20,6 +20,7 @@ A list of projects that are related to Jetpack Compose. If you want to add an en
 | [FlappyBird](https://github.com/Nthily/FlappyBird) | FlappyBird made with Jetpack Compose.
 | [JetSpotify](https://github.com/sunny52525/JetSpotify) | This is a Spotify App made in Jetpack Compose having Spotify Android UI and functionality using Spotify SDK and web API.
 | [JetPic Express](https://github.com/la-colinares/JetPicExpress) | A simple photo editing app that allows you to apply stunning filters and share it to the world. This app was built using the latest Jetpack Compose UI for Modern Native Android UI development.
+| [CoolWheatherApp](https://github.com/markoeltiger/CoolWheatherApp) | A cool modern weather application build with (JetpackCompose UI , coroutine,retrofit , MVVM Architecture , LiveData)
 
 # Libraries
 
